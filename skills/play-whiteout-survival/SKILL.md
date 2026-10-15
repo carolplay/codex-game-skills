@@ -42,6 +42,8 @@ description: 通过 macOS 本地 Whiteout Survival 应用执行日常任务、�
 5. 收取并补训练、治疗、研究、空闲资源点采集队列。检查城镇供暖和幸存者健康。长期研究或较大资源开销需判断当前目标，避免随意升级。
 6. 周常和活动按剩余时间及实际收益处理；日常最高宝箱已领后优先维护队列，不为多余积分浪费稀缺材料。
 
+调用方加入雪原游历挂机、无尽试炼、银行、冰原巨兽自动加入或兵营定时策略时，读取 [references/optional-dailies.md](references/optional-dailies.md)。这些项目的授权与资源预算由调用方指定，不从任务名推断所有消耗均可接受。
+
 具体界面经验见 [references/ui-workflows.md](references/ui-workflows.md)，仅在相关操作时读取。坐标是历史示例，不是固定点击脚本。
 
 ## 界面与故障恢复
