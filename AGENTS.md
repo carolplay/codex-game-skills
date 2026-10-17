@@ -5,3 +5,4 @@
 - Read `local-data/README.md` for local paths and operating state when the directory exists.
 - The CrossMacro source repository is a separate project folder. Runtime dependencies and machine-specific launcher configuration live outside Git.
 - Preserve the existing pause state; filesystem maintenance does not authorize game actions or resuming schedules.
+- New WOS automation uses `skills/play-whiteout-survival-macros/` and its fixed visit plan. The unchanged `skills/play-whiteout-survival/` is V1 pure-agent knowledge/fallback. Read only the relevant references and current run checkpoint, rather than accumulating old prompts.
