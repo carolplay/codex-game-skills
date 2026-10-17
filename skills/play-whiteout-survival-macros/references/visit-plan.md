@@ -34,3 +34,9 @@
 - [现有开源bot任务目录](https://github.com/AminulIslamSifat/whiteout-survival-bot)：用于了解任务拆分和入口，不直接移植其Android坐标/账号登录。其自动购买VIP策略不沿用。
 - [社区日常攻略](https://www.whiteoutsurvival-community.com/en/daily-guide.html)：刷新分配的辅助参考，非官方保证；具体额度/时间仍读游戏。
 - V1 `free-rewards.md` 保留学院、实验室、宠物、募兵所、律令所、体力餐与储值免费箱的实操细节；V2按需引用，不把所有材料兑换称免费。
+
+## 版本与任务次数
+
+宏执行前应把“角色自设目标”和“游戏日常任务要求”分开。角色可能要求额外巨兽或试验次数，但任务面板的实际达成条件才决定日常积分是否完成。官方2026-07-06更新曾调整 Tundra Arms League 活动中每日/每周北极冰原巨兽集结任务次数（不是所有日常的统一改动），不把旧攻略次数写成永久条件。[官方更新说明](https://www.centurygames.com/whiteout-survival-wos-update/)。
+
+训练宏也不能只把“完成一批”当作兵种目标达成：逐兵种读取本轮目标、数量和层级；老低阶兵晋升与新训练分开记录。数量输入后必须读回确认再提交，避免键盘批处理未生效仍沿用旧值。
