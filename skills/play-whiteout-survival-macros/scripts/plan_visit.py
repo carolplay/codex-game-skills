@@ -20,9 +20,11 @@ def plan(config,instant,visit_key=None):
     for task in visit['tasks']:
         macro=catalog.get(task,{})
         supported=macro.get('status') in ('replay_verified','replay_verified_no_new_reward','real_claim_replay_verified')
-        tasks.append({'task':task,'executor':'macro' if supported else 'agent_check',
-                      'macro':macro.get('workflow') if supported else None,
-                      'reason':None if supported else macro.get('status','not_macroized')})
+        partial=macro.get('status') in ('inspection_only','cooldown_replay_verified','empty_replay_verified_help_inspection_only')
+        tasks.append({'task':task,'executor':'macro' if supported else ('macro_then_check' if partial else 'agent_check'),
+                      'macro':macro.get('workflow') if supported or partial else None,
+                      'verification_scope':macro.get('status','not_macroized'),
+                      'reason':macro.get('pending_validation') if partial else (None if supported else macro.get('status','not_macroized'))})
     return {'visit':visit['key'],'game_day_utc':instant.astimezone(timezone.utc).date().isoformat(),
             'planned_local':due.isoformat(),'planned_utc':due.astimezone(timezone.utc).isoformat(),
             'timezone':config['timezone'],'schedules_enabled':config.get('enabled',False),
