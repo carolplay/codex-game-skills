@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.2.2",
-  "package_version": "0.2.2",
+  "macro_version": "0.2.3",
+  "package_version": "0.2.3",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions"

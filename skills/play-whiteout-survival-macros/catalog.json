@@ -1,5 +1,5 @@
 {
-  "package_version": "0.2.2",
+  "package_version": "0.2.3",
   "executor_min_version": "0.1.4",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -103,7 +103,7 @@
       "period": "day",
       "utility": false,
       "verification_scope": "保留当前所选兵阶和界面数量；数值须读为1至9999，避免旧1200样本上限误拒绝实际1318。新增容量分支待本班试验号验证；不改数量、不点立即完成/加速。",
-      "current_evidence_note": "0.2.0在2827矛兵与射手通过；盾兵按钮全图OCR仅读到训。0.2.1仅容许该已观察到的部分标签，仍要求三兵营页、可读数量、无训练中及启动后队列验证。"
+      "current_evidence_note": "0.2.0在2827仅矛兵通过；盾兵和射手仍区域断言失败，盾兵按钮全图OCR仅读到训。0.2.1仅容许该已观察到的部分标签，仍要求三兵营页、可读数量、无训练中及启动后队列验证。"
     },
     "lancer": {
       "path": "actions/wos-training-lancer.json",
@@ -113,7 +113,7 @@
       "period": "day",
       "utility": false,
       "verification_scope": "保留当前所选兵阶和界面数量；数值须读为1至9999，避免旧1200样本上限误拒绝实际1318。新增容量分支待本班试验号验证；不改数量、不点立即完成/加速。",
-      "current_evidence_note": "0.2.0在2827矛兵与射手通过；盾兵按钮全图OCR仅读到训。0.2.1仅容许该已观察到的部分标签，仍要求三兵营页、可读数量、无训练中及启动后队列验证。"
+      "current_evidence_note": "0.2.0在2827仅矛兵通过；盾兵和射手仍区域断言失败，盾兵按钮全图OCR仅读到训。0.2.1仅容许该已观察到的部分标签，仍要求三兵营页、可读数量、无训练中及启动后队列验证。"
     },
     "marksman": {
       "path": "actions/wos-training-marksman.json",
@@ -123,7 +123,7 @@
       "period": "day",
       "utility": false,
       "verification_scope": "保留当前所选兵阶和界面数量；数值须读为1至9999，避免旧1200样本上限误拒绝实际1318。新增容量分支待本班试验号验证；不改数量、不点立即完成/加速。",
-      "current_evidence_note": "0.2.0在2827矛兵与射手通过；盾兵按钮全图OCR仅读到训。0.2.1仅容许该已观察到的部分标签，仍要求三兵营页、可读数量、无训练中及启动后队列验证。"
+      "current_evidence_note": "0.2.0在2827仅矛兵通过；盾兵和射手仍区域断言失败，盾兵按钮全图OCR仅读到训。0.2.1仅容许该已观察到的部分标签，仍要求三兵营页、可读数量、无训练中及启动后队列验证。"
     },
     "crystal": {
       "path": "actions/wos-crystal-ordinary.json",
