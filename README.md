@@ -1,0 +1,18 @@
+# WOS agent bot
+
+macOS 原生 Whiteout Survival 的本地宏实验。固定步骤由本地 OCR 和窗口绑定输入执行，agent 只启动与最终检查、记录偏差；不逐步调用模型，不自动补做日常。
+
+## 阅读顺序
+
+1. [V2 架构与当前实现](docs/WOS-AUTOMATION-V2.md)：执行路径、组件职责和实际限制。
+2. [V2 任务设计与实施安排](docs/WOS-V2-TASK-DESIGN.md)：六项宏现状、固定起止界面、失败隔离和下一步验收。
+3. [V2 执行技能](skills/play-whiteout-survival-macros/SKILL.md)：单次运行规则。
+4. [三周期任务资料](skills/play-whiteout-survival-macros/references/visit-plan.md)：游戏日常的开发资料，不是当前已覆盖任务清单。
+
+## 仓库边界
+
+- 本仓库保存通用技能、设计与规划脚本；[CrossMacro fork](https://github.com/carolplay/CrossMacro/tree/codex/macos-window-macros/tools/macos-window) 保存本地执行器和六项宏 JSON。
+- `skills/play-whiteout-survival/` 是原样保留的 V1 纯 agent 方案。V2 当前仅处于单次实验阶段，长期定时暂停。
+- 私有角色、账号策略、机器配置、截图、音频和运行记录位于 Git 忽略的 `local-data/`，不随代码上传。
+
+当前还不是完整日常机器人。六项宏的分支覆盖并不一致；固定界面恢复和任务级失败隔离尚待实现。锁屏自动运行也未通过验收。

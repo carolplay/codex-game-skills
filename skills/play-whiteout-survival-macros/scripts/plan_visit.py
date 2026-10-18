@@ -21,7 +21,8 @@ def plan(config,instant,visit_key=None):
         macro=catalog.get(task,{})
         supported=macro.get('status') in ('replay_verified','replay_verified_no_new_reward','real_claim_replay_verified')
         partial=macro.get('status') in ('inspection_only','cooldown_replay_verified','empty_replay_verified_help_inspection_only')
-        tasks.append({'task':task,'executor':'macro' if supported else ('macro_then_check' if partial else 'agent_check'),
+        if not (supported or partial):continue
+        tasks.append({'task':task,'executor':'macro',
                       'macro':macro.get('workflow') if supported or partial else None,
                       'verification_scope':macro.get('status','not_macroized'),
                       'reason':macro.get('pending_validation') if partial else (None if supported else macro.get('status','not_macroized'))})
@@ -29,7 +30,8 @@ def plan(config,instant,visit_key=None):
             'planned_local':due.isoformat(),'planned_utc':due.astimezone(timezone.utc).isoformat(),
             'timezone':config['timezone'],'schedules_enabled':config.get('enabled',False),
             'tasks':tasks,'automatic_game_actions':False,
-            'completion_rule':'Every task requires result evidence or an explicit unfinished/cooldown status.'}
+            'run_mode':'macro_only_record_deviations','agent_fallback':False,
+            'completion_rule':'Check only the selected existing macros once after execution; record deviations without repair or additional daily tasks.'}
 
 
 if __name__=='__main__':
