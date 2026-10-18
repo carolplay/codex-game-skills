@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-hero",
-  "action_version": "0.1.2",
+  "action_version": "0.1.3",
   "name": "WOS ordinary intelligence hero",
   "reference_size": [
     788,
@@ -4158,7 +4158,7 @@
         "name": "exit-world-npc-detail",
         "action": "click",
         "point": [
-          600,
+          180,
           650
         ],
         "before": {
@@ -4219,5 +4219,5 @@
       }
     ]
   },
-  "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry."
+  "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry. Nextdraft uses180,650 dismisspoint actuallysampled on mainHeroCard; no followup exploration performed."
 }

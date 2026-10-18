@@ -1,13 +1,13 @@
 {
   "action_id": "wos-store-free",
-  "action_version": "0.1.7",
+  "action_version": "0.1.8",
   "name": "WOS store_free",
   "reference_size": [
     788,
     1079
   ],
   "status": "candidate",
-  "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates. Mainstore1.6 failedbeforeclaim because observed LordStaminaPack lacks storeheading. Knownpack body/back sampled; close/reopen returned firstArtisan tab with cooldown. Nextrevision boundedone normalization reopen plus scopedbodytitle/globalrewardabsence; nextrole only, no same-roleclaimretry.",
+  "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates. Mainstore1.6 failedbeforeclaim because observed LordStaminaPack lacks storeheading. Knownpack body/back sampled; close/reopen returned firstArtisan tab with cooldown. Nextrevision boundedone normalization reopen plus scopedbodytitle/globalrewardabsence; nextrole only, no same-roleclaimretry. Nextdraft makesstore/root exclusion exactcomplement ofdeclaredrewardexit labels, so backgroundstoretitle cannot create ambiguousexit underrewardoverlay.",
   "steps": [
     {
       "name": "01-check-city",
@@ -136,7 +136,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -173,7 +176,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -221,7 +227,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -295,7 +304,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -319,7 +331,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -365,7 +380,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -423,7 +441,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -487,7 +508,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -525,7 +549,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -566,7 +593,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -626,7 +656,10 @@
         ],
         "none": [
           "获得奖励",
-          "恭喜获得"
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
         ],
         "page_text_regions": [
           [
@@ -750,7 +783,10 @@
           ],
           "none": [
             "获得奖励",
-            "恭喜获得"
+            "恭喜获得",
+            "点击空白",
+            "点击任意",
+            "点击屏幕"
           ],
           "page_text_regions": [
             [
@@ -800,7 +836,10 @@
           ],
           "none": [
             "获得奖励",
-            "恭喜获得"
+            "恭喜获得",
+            "点击空白",
+            "点击任意",
+            "点击屏幕"
           ],
           "page_text_regions": [
             [
