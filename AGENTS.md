@@ -14,3 +14,5 @@
 - Read `docs/PROJECT-CONTEXT.md` for user authorization and the low-cost game-resource experiment model. Do not add repeated project-level approvals for already-authorized game actions or treat virtual resources as real money. Game strategy belongs to the visit plan/local role configuration; system permissions and real payment remain separate. This does not override platform-enforced review, account scope, pause state or the no-payment boundary.
 
 - Use 三班 (UTC00/08/16) terminology and classify tasks by shift/day/week/four-week/event. Read `docs/V2-OPERATIONS.md` for pilot and fresh V2 worker boundaries. At the next user discussion, raise `docs/RESOURCE-TASK-PRIORITIES.md`; that discussion must not reduce daily coverage.
+
+- Coordinate all WOS input with the user-designated Orchestrator using local campaign/coordinator records; this V2 task has priority but should release idle time. Notify the Orchestrator after execution and lease release. An idle lease alone is not a coordinated slot. Capture suite/action versions and hashes in reports; failures do not justify repeated stable-flow testing.
