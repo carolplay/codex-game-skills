@@ -1,6 +1,6 @@
 {
   "action_id": "wos-alliance-donate",
-  "action_version": "0.1.3",
+  "action_version": "0.1.4",
   "name": "WOS — recommended alliance tech, at most25 ordinary-resource donations (1250 or10000), no gems",
   "reference_size": [
     788,
@@ -186,7 +186,8 @@
             40,
             660,
             80
-          ]
+          ],
+          "min_confidence": 0.3
         }
       ]
     },
@@ -2008,7 +2009,8 @@
             40,
             660,
             80
-          ]
+          ],
+          "min_confidence": 0.3
         }
       ],
       "observe_attempts": 5

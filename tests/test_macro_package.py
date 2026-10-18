@@ -18,6 +18,11 @@ class PackageTests(unittest.TestCase):
                 self.assertEqual('daily', tasks[-1][0])
                 self.assertEqual(pkg.read(ROOT / 'catalog.json')['package_version'], identity['package_version'])
 
+    def test_main_uses_same_current_actions_as_other_mature_roles(self):
+        for path in (ROOT / 'macros').glob('*.json'):
+            profiles=pkg.read(path)['profiles']
+            self.assertEqual(profiles['mature-test'],profiles['main'])
+
     def test_changed_action_rejected_before_backend_exists(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / 'package'; shutil.copytree(ROOT, root)
@@ -31,7 +36,7 @@ class PackageTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / 'package'; shutil.copytree(ROOT, root)
             path = root / 'macros/shift-3.json'; data = pkg.read(path)
-            data['profiles']['main']['excluded'].pop('recruit')
+            data['profiles']['main']['excluded'].pop('vip')
             path.write_text(json.dumps(data))
             with self.assertRaisesRegex(ValueError, 'explicitly excluded'):
                 pkg.load_manifest(path, 'main', root)
@@ -39,11 +44,11 @@ class PackageTests(unittest.TestCase):
     def test_empty_exclusion_and_reordered_daily_are_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'manifest.json'; data = pkg.read(ROOT / 'macros/shift-3.json')
-            data['profiles']['main']['excluded']['recruit'] = ''
+            data['profiles']['main']['excluded']['vip'] = ''
             path.write_text(json.dumps(data))
             with self.assertRaisesRegex(ValueError, 'reason'):
                 pkg.load_manifest(path, 'main')
-            data['profiles']['main']['excluded']['recruit'] = 'pending validation'
+            data['profiles']['main']['excluded']['vip'] = 'pending validation'
             data['profiles']['main']['actions'].reverse(); path.write_text(json.dumps(data))
             with self.assertRaisesRegex(ValueError, 'daily must follow'):
                 pkg.load_manifest(path, 'main')

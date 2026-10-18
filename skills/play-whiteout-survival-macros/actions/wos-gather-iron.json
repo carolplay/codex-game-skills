@@ -1,0 +1,706 @@
+{
+  "action_id": "wos-gather-iron",
+  "action_version": "0.1.0",
+  "name": "WOS gather_iron",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 240,
+  "status": "candidate",
+  "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending.",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "enter-world",
+      "action": "click",
+      "point": [
+        640,
+        1022
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-resource-search",
+      "action": "click",
+      "point": [
+        135,
+        747
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征"
+        ]
+      },
+      "observe_attempts": 5,
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              105,
+              180,
+              310,
+              227
+            ],
+            "pattern": "(?:行军)?[4-6]/6",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "select-resource",
+      "action": "click",
+      "text_target": {
+        "text": "铁矿",
+        "bounds": [
+          98,
+          750,
+          690,
+          835
+        ],
+        "offset": [
+          0,
+          -25
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征"
+        ]
+      },
+      "after": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "search-resource",
+      "action": "click",
+      "point": [
+        394,
+        1026
+      ],
+      "before": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征"
+        ]
+      },
+      "after": {
+        "all": [
+          "废弃炼铁场",
+          "采集者",
+          "采集"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              515,
+              411,
+              557,
+              446
+            ],
+            "pattern": "无",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-gather-deployment",
+      "action": "click",
+      "point": [
+        394,
+        545
+      ],
+      "before": {
+        "all": [
+          "废弃炼铁场",
+          "采集者",
+          "采集"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              515,
+              411,
+              557,
+              446
+            ],
+            "pattern": "无",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "出征",
+          "士兵比例"
+        ],
+        "any": [
+          "全部撤回",
+          "平均配置",
+          "比例分配"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "dispatch-gather",
+      "action": "click",
+      "point": [
+        551,
+        1027
+      ],
+      "before": {
+        "all": [
+          "出征",
+          "士兵比例"
+        ],
+        "any": [
+          "全部撤回",
+          "平均配置",
+          "比例分配"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "any": [
+          "行军",
+          "采集中"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "return-city",
+      "action": "click",
+      "point": [
+        640,
+        1022
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 5,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-overview",
+        "action": "click",
+        "point": [
+          482,
+          482
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "any": [
+            "城镇",
+            "日常",
+            "完成任务后是否隐藏"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-gather-deployment",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": [
+          "出征",
+          "士兵比例"
+        ],
+        "after": {
+          "all": [
+            "城镇",
+            "英雄",
+            "背包"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-search-or-site",
+        "action": "click",
+        "point": [
+          600,
+          650
+        ],
+        "before": {
+          "all": [
+            "搜索"
+          ],
+          "none": [
+            "出征"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "搜索",
+            "采集者",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-world",
+        "action": "click",
+        "point": [
+          640,
+          1022
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "搜索",
+            "采集者",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,515 @@
+{
+  "action_id": "wos-store-free",
+  "action_version": "0.1.2",
+  "name": "WOS store_free",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "status": "candidate",
+  "verification_scope": "Observed free small chest at upper right; never touches cash offer at bottom; claim and cooldown pending replay.",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-cash-store",
+      "action": "click",
+      "point": [
+        591,
+        87
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "工匠的宝库"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            120,
+            190,
+            380,
+            285
+          ],
+          [
+            560,
+            215,
+            665,
+            325
+          ]
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "claim-small-free-chest",
+      "action": "click",
+      "point": [
+        618,
+        262
+      ],
+      "before": {
+        "all": [
+          "工匠的宝库"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            120,
+            190,
+            380,
+            285
+          ],
+          [
+            560,
+            215,
+            665,
+            325
+          ]
+        ],
+        "red_regions": [
+          {
+            "bounds": [
+              636,
+              236,
+              650,
+              250
+            ],
+            "min": 0.2
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
+        ]
+      },
+      "observe_attempts": 4,
+      "skip_if": {
+        "all": [
+          "工匠的宝库"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            120,
+            190,
+            380,
+            285
+          ],
+          [
+            560,
+            215,
+            665,
+            325
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            565,
+            280,
+            670,
+            325
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      }
+    },
+    {
+      "name": "close-free-reward",
+      "action": "click",
+      "point": [
+        394,
+        790
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
+        ]
+      },
+      "after": {
+        "all": [
+          "工匠的宝库"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            120,
+            190,
+            380,
+            285
+          ],
+          [
+            560,
+            215,
+            665,
+            325
+          ]
+        ]
+      },
+      "observe_attempts": 4,
+      "skip_if": {
+        "all": [
+          "工匠的宝库"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            120,
+            190,
+            380,
+            285
+          ],
+          [
+            560,
+            215,
+            665,
+            325
+          ]
+        ]
+      }
+    },
+    {
+      "name": "exit-store",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "工匠的宝库"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            120,
+            190,
+            380,
+            285
+          ],
+          [
+            560,
+            215,
+            665,
+            325
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 4
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 4,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-store-reward",
+        "action": "click",
+        "point": [
+          394,
+          790
+        ],
+        "before": {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击空白",
+            "点击任意",
+            "点击屏幕"
+          ]
+        },
+        "after": {
+          "all": [
+            "工匠的宝库"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得"
+          ],
+          "page_text_regions": [
+            [
+              120,
+              190,
+              380,
+              285
+            ],
+            [
+              560,
+              215,
+              665,
+              325
+            ]
+          ]
+        },
+        "observe_attempts": 4
+      },
+      {
+        "name": "exit-store",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "工匠的宝库"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得"
+          ],
+          "page_text_regions": [
+            [
+              120,
+              190,
+              380,
+              285
+            ],
+            [
+              560,
+              215,
+              665,
+              325
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 4
+      }
+    ]
+  }
+}

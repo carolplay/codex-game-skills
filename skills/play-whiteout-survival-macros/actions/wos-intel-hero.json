@@ -1,0 +1,3927 @@
+{
+  "action_id": "wos-intel-hero",
+  "action_version": "0.1.1",
+  "name": "WOS ordinary intelligence hero",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 600,
+  "status": "candidate",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "enter-world",
+      "action": "click",
+      "point": [
+        640,
+        1022
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-intel",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "initial-claim",
+      "action": "click",
+      "point": [
+        394,
+        953
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "max": 0.17
+          }
+        ]
+      }
+    },
+    {
+      "name": "initial-close-reward",
+      "action": "click",
+      "point": [
+        394,
+        880
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "initial-settle",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-0-select",
+      "action": "click",
+      "image_target": {
+        "template": "intel-hero",
+        "bounds": [
+          145,
+          320,
+          620,
+          780
+        ],
+        "min_score": 0.85
+      },
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85
+          }
+        ]
+      },
+      "after": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "finish_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85,
+            "present": false
+          }
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "hero-0-goto",
+      "action": "click",
+      "text_target": {
+        "text": "前往查看",
+        "bounds": [
+          220,
+          700,
+          580,
+          850
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "after": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-0-explore",
+      "action": "click",
+      "point": [
+        394,
+        545
+      ],
+      "before": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-0-fight",
+      "action": "click",
+      "point": [
+        533,
+        1015
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-0-finish-battle",
+      "action": "click",
+      "point": [
+        394,
+        965
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-0-back-intel-nav-0",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-0-back-intel-nav-1",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-0-back-intel-nav-2",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-0-wait-complete",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-0-claim",
+      "action": "click",
+      "point": [
+        394,
+        953
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "max": 0.17
+          }
+        ]
+      }
+    },
+    {
+      "name": "hero-0-close-reward",
+      "action": "click",
+      "point": [
+        394,
+        880
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "hero-0-settle",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-1-select",
+      "action": "click",
+      "image_target": {
+        "template": "intel-hero",
+        "bounds": [
+          145,
+          320,
+          620,
+          780
+        ],
+        "min_score": 0.85
+      },
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85
+          }
+        ]
+      },
+      "after": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "finish_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85,
+            "present": false
+          }
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "hero-1-goto",
+      "action": "click",
+      "text_target": {
+        "text": "前往查看",
+        "bounds": [
+          220,
+          700,
+          580,
+          850
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "after": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-1-explore",
+      "action": "click",
+      "point": [
+        394,
+        545
+      ],
+      "before": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-1-fight",
+      "action": "click",
+      "point": [
+        533,
+        1015
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-1-finish-battle",
+      "action": "click",
+      "point": [
+        394,
+        965
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-1-back-intel-nav-0",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-1-back-intel-nav-1",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-1-back-intel-nav-2",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-1-wait-complete",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-1-claim",
+      "action": "click",
+      "point": [
+        394,
+        953
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "max": 0.17
+          }
+        ]
+      }
+    },
+    {
+      "name": "hero-1-close-reward",
+      "action": "click",
+      "point": [
+        394,
+        880
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "hero-1-settle",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-2-select",
+      "action": "click",
+      "image_target": {
+        "template": "intel-hero",
+        "bounds": [
+          145,
+          320,
+          620,
+          780
+        ],
+        "min_score": 0.85
+      },
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85
+          }
+        ]
+      },
+      "after": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "finish_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85,
+            "present": false
+          }
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "hero-2-goto",
+      "action": "click",
+      "text_target": {
+        "text": "前往查看",
+        "bounds": [
+          220,
+          700,
+          580,
+          850
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "after": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-2-explore",
+      "action": "click",
+      "point": [
+        394,
+        545
+      ],
+      "before": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-2-fight",
+      "action": "click",
+      "point": [
+        533,
+        1015
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-2-finish-battle",
+      "action": "click",
+      "point": [
+        394,
+        965
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-2-back-intel-nav-0",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-2-back-intel-nav-1",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-2-back-intel-nav-2",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-2-wait-complete",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-2-claim",
+      "action": "click",
+      "point": [
+        394,
+        953
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "max": 0.17
+          }
+        ]
+      }
+    },
+    {
+      "name": "hero-2-close-reward",
+      "action": "click",
+      "point": [
+        394,
+        880
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "hero-2-settle",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-3-select",
+      "action": "click",
+      "image_target": {
+        "template": "intel-hero",
+        "bounds": [
+          145,
+          320,
+          620,
+          780
+        ],
+        "min_score": 0.85
+      },
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85
+          }
+        ]
+      },
+      "after": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "finish_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85,
+            "present": false
+          }
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "hero-3-goto",
+      "action": "click",
+      "text_target": {
+        "text": "前往查看",
+        "bounds": [
+          220,
+          700,
+          580,
+          850
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "after": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-3-explore",
+      "action": "click",
+      "point": [
+        394,
+        545
+      ],
+      "before": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-3-fight",
+      "action": "click",
+      "point": [
+        533,
+        1015
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-3-finish-battle",
+      "action": "click",
+      "point": [
+        394,
+        965
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-3-back-intel-nav-0",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-3-back-intel-nav-1",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-3-back-intel-nav-2",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-3-wait-complete",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-3-claim",
+      "action": "click",
+      "point": [
+        394,
+        953
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "max": 0.17
+          }
+        ]
+      }
+    },
+    {
+      "name": "hero-3-close-reward",
+      "action": "click",
+      "point": [
+        394,
+        880
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "hero-3-settle",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-4-select",
+      "action": "click",
+      "image_target": {
+        "template": "intel-hero",
+        "bounds": [
+          145,
+          320,
+          620,
+          780
+        ],
+        "min_score": 0.85
+      },
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85
+          }
+        ]
+      },
+      "after": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "finish_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85,
+            "present": false
+          }
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "hero-4-goto",
+      "action": "click",
+      "text_target": {
+        "text": "前往查看",
+        "bounds": [
+          220,
+          700,
+          580,
+          850
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "after": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-4-explore",
+      "action": "click",
+      "point": [
+        394,
+        545
+      ],
+      "before": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-4-fight",
+      "action": "click",
+      "point": [
+        533,
+        1015
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-4-finish-battle",
+      "action": "click",
+      "point": [
+        394,
+        965
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-4-back-intel-nav-0",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-4-back-intel-nav-1",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-4-back-intel-nav-2",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-4-wait-complete",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-4-claim",
+      "action": "click",
+      "point": [
+        394,
+        953
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "max": 0.17
+          }
+        ]
+      }
+    },
+    {
+      "name": "hero-4-close-reward",
+      "action": "click",
+      "point": [
+        394,
+        880
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "hero-4-settle",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-5-select",
+      "action": "click",
+      "image_target": {
+        "template": "intel-hero",
+        "bounds": [
+          145,
+          320,
+          620,
+          780
+        ],
+        "min_score": 0.85
+      },
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85
+          }
+        ]
+      },
+      "after": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "finish_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85,
+            "present": false
+          }
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "hero-5-goto",
+      "action": "click",
+      "text_target": {
+        "text": "前往查看",
+        "bounds": [
+          220,
+          700,
+          580,
+          850
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "英雄之旅",
+        "情报失效",
+        "前往查看"
+      ],
+      "after": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-5-explore",
+      "action": "click",
+      "point": [
+        394,
+        545
+      ],
+      "before": {
+        "all": [
+          "城镇",
+          "英雄之旅",
+          "探险"
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-5-fight",
+      "action": "click",
+      "point": [
+        533,
+        1015
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-5-finish-battle",
+      "action": "click",
+      "point": [
+        394,
+        965
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            930,
+            590,
+            1055
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "hero-5-back-intel-nav-0",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-5-back-intel-nav-1",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "情报",
+          "城镇"
+        ],
+        "none": [
+          "出征",
+          "提示"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-5-back-intel-nav-2",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      }
+    },
+    {
+      "name": "hero-5-wait-complete",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "observe_attempts": 30
+    },
+    {
+      "name": "hero-5-claim",
+      "action": "click",
+      "point": [
+        394,
+        953
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "min": 0.18
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              280,
+              930,
+              505,
+              972
+            ],
+            "max": 0.17
+          }
+        ]
+      }
+    },
+    {
+      "name": "hero-5-close-reward",
+      "action": "click",
+      "point": [
+        394,
+        880
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "hero-5-settle",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "verify-type-drained",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "template_regions": [
+          {
+            "template": "intel-hero",
+            "bounds": [
+              145,
+              320,
+              620,
+              780
+            ],
+            "min_score": 0.85,
+            "present": false
+          }
+        ]
+      }
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 5,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-intel-reward",
+        "action": "click",
+        "point": [
+          394,
+          880
+        ],
+        "before": {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        },
+        "after": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-intel-detail",
+        "action": "click",
+        "point": [
+          394,
+          900
+        ],
+        "before": {
+          "all": [
+            "情报失效",
+            "前往查看"
+          ]
+        },
+        "after": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-intel-map",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-world",
+        "action": "click",
+        "point": [
+          640,
+          1022
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-battle",
+        "action": "click",
+        "point": [
+          394,
+          965
+        ],
+        "before": {
+          "any": [
+            "胜利",
+            "失败",
+            "战败"
+          ],
+          "all": [
+            "点击任意位置退出"
+          ],
+          "page_text_regions": [
+            [
+              200,
+              930,
+              590,
+              1055
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-formation",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": [
+          "小队设置",
+          "战斗",
+          "一键上阵"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-deployment",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": [
+          "出征",
+          "士兵比例"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-world-npc-detail",
+        "action": "click",
+        "point": [
+          600,
+          650
+        ],
+        "before": {
+          "all": [
+            "城镇",
+            "奖励"
+          ],
+          "any": [
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力"
+          ],
+          "none": [
+            "前往查看"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  },
+  "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role."
+}

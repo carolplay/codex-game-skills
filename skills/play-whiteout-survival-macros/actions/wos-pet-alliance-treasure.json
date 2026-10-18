@@ -1,0 +1,1205 @@
+{
+  "action_id": "wos-pet-alliance-treasure",
+  "action_version": "0.1.0",
+  "name": "WOS pet_alliance_treasure",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 240,
+  "status": "candidate",
+  "verification_scope": "Prior actual5 free shares batch claimed to0, no messaging/sharing action. Current replay pending.",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-overview",
+      "action": "click",
+      "point": [
+        109,
+        482
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "select-daily",
+      "action": "click",
+      "point": [
+        401,
+        248
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "seek-0",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "宠物寻宝"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-1",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "宠物寻宝"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-2",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "宠物寻宝"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-3",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "宠物寻宝"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-4",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "宠物寻宝"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-5",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "宠物寻宝"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-6",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "宠物寻宝"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-7",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "宠物寻宝"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-daily-entry",
+      "action": "click",
+      "text_target": {
+        "text": "宠物寻宝",
+        "exact": false,
+        "bounds": [
+          180,
+          280,
+          380,
+          740
+        ],
+        "offset": [
+          150,
+          10
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "日常",
+          "宠物寻宝"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "宠物寻宝",
+          "今日剩余寻宝次数"
+        ],
+        "none": [
+          "藏宝点",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出",
+          "我的分享"
+        ]
+      },
+      "observe_attempts": 10
+    },
+    {
+      "name": "open-alliance-treasure",
+      "action": "click",
+      "point": [
+        617,
+        1015
+      ],
+      "before": {
+        "all": [
+          "宠物寻宝",
+          "今日剩余寻宝次数"
+        ],
+        "none": [
+          "藏宝点",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出",
+          "我的分享"
+        ]
+      },
+      "after": {
+        "all": [
+          "联盟宝藏",
+          "我的分享",
+          "盟友分享"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "allies-tab",
+      "action": "click",
+      "point": [
+        526,
+        222
+      ],
+      "before": {
+        "all": [
+          "联盟宝藏",
+          "我的分享",
+          "盟友分享"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "联盟宝藏",
+          "我的分享",
+          "盟友分享"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "claim-allied-treasure",
+      "action": "click",
+      "point": [
+        390,
+        919
+      ],
+      "before": {
+        "all": [
+          "联盟宝藏",
+          "我的分享",
+          "盟友分享"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              300,
+              900,
+              490,
+              940
+            ],
+            "min": 0.2
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "联盟宝藏",
+          "我的分享",
+          "盟友分享"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              300,
+              900,
+              490,
+              940
+            ],
+            "max": 0.19
+          }
+        ]
+      }
+    },
+    {
+      "name": "close-allied-reward",
+      "action": "click",
+      "point": [
+        392,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "联盟宝藏",
+          "我的分享",
+          "盟友分享"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "联盟宝藏",
+          "我的分享",
+          "盟友分享"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "close-alliance",
+      "action": "click",
+      "point": [
+        645,
+        154
+      ],
+      "before": {
+        "all": [
+          "联盟宝藏",
+          "我的分享",
+          "盟友分享"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "宠物寻宝",
+          "今日剩余寻宝次数"
+        ],
+        "none": [
+          "藏宝点",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出",
+          "我的分享"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "exit-pet-map",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "宠物寻宝",
+          "今日剩余寻宝次数"
+        ],
+        "none": [
+          "藏宝点",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出",
+          "我的分享"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 5,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-overview",
+        "action": "click",
+        "point": [
+          482,
+          482
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "any": [
+            "城镇",
+            "日常",
+            "完成任务后是否隐藏"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-allied-reward",
+        "action": "click",
+        "point": [
+          392,
+          996
+        ],
+        "before": {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "联盟宝藏",
+            "我的分享",
+            "盟友分享"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-alliance",
+        "action": "click",
+        "point": [
+          645,
+          154
+        ],
+        "before": {
+          "all": [
+            "联盟宝藏",
+            "我的分享",
+            "盟友分享"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "宠物寻宝",
+            "今日剩余寻宝次数"
+          ],
+          "none": [
+            "藏宝点",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出",
+            "我的分享"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-pet-map",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "宠物寻宝",
+            "今日剩余寻宝次数"
+          ],
+          "none": [
+            "藏宝点",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出",
+            "我的分享"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  }
+}

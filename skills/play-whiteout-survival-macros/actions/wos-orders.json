@@ -1,0 +1,443 @@
+{
+  "action_id": "wos-orders",
+  "action_version": "0.1.1",
+  "name": "WOS orders",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 240,
+  "status": "candidate",
+  "verification_scope": "Production detail/cooldown and two-stage exit sampled; available use branch needs next-role calibration. Other decrees remain development gaps.",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-orders",
+      "action": "click",
+      "point": [
+        642,
+        812
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "领主指令"
+        ],
+        "none": [
+          "冷却时间"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-production",
+      "action": "click",
+      "point": [
+        500,
+        274
+      ],
+      "before": {
+        "all": [
+          "领主指令"
+        ],
+        "none": [
+          "冷却时间"
+        ]
+      },
+      "after": [
+        "立即生产",
+        "冷却时间"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "use-production-if-ready",
+      "action": "click",
+      "text_target": {
+        "text": "颁布",
+        "bounds": [
+          220,
+          700,
+          600,
+          900
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "立即生产",
+          "冷却时间"
+        ],
+        "any": [
+          "使用",
+          "颁布"
+        ],
+        "none": [
+          "冷却中"
+        ]
+      },
+      "after": {
+        "all": [
+          "立即生产",
+          "冷却时间",
+          "冷却中"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "立即生产",
+          "冷却时间",
+          "冷却中"
+        ]
+      },
+      "observe_attempts": 8
+    },
+    {
+      "name": "exit-production-detail",
+      "action": "click",
+      "point": [
+        135,
+        55
+      ],
+      "before": [
+        "立即生产",
+        "冷却时间"
+      ],
+      "after": {
+        "all": [
+          "领主指令"
+        ],
+        "none": [
+          "冷却时间"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "exit-orders",
+      "action": "click",
+      "point": [
+        135,
+        55
+      ],
+      "before": {
+        "all": [
+          "领主指令"
+        ],
+        "none": [
+          "冷却时间"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 5,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-overview",
+        "action": "click",
+        "point": [
+          482,
+          482
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "any": [
+            "城镇",
+            "日常",
+            "完成任务后是否隐藏"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-production-detail",
+        "action": "click",
+        "point": [
+          135,
+          55
+        ],
+        "before": [
+          "立即生产",
+          "冷却时间"
+        ],
+        "after": {
+          "all": [
+            "领主指令"
+          ],
+          "none": [
+            "冷却时间"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-orders",
+        "action": "click",
+        "point": [
+          135,
+          55
+        ],
+        "before": {
+          "all": [
+            "领主指令"
+          ],
+          "none": [
+            "冷却时间"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,1644 @@
+{
+  "action_id": "wos-npc-autojoin",
+  "action_version": "0.1.0",
+  "name": "WOS npc_autojoin",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 240,
+  "status": "candidate",
+  "verification_scope": "Prior three named NPC types enabled with one queue for8h; no proactive player war/rally. Existing correct active state retained; wrong quota/types reconfigured. Current replay pending.",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-alliance",
+      "action": "click",
+      "point": [
+        539,
+        1027
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "联盟宝箱",
+          "联盟科技",
+          "联盟互助"
+        ],
+        "none": [
+          "当前暂无战事",
+          "加入类型"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-war",
+      "action": "click",
+      "point": [
+        254,
+        578
+      ],
+      "before": {
+        "all": [
+          "联盟宝箱",
+          "联盟科技",
+          "联盟互助"
+        ],
+        "none": [
+          "当前暂无战事",
+          "加入类型"
+        ]
+      },
+      "after": {
+        "all": [
+          "联盟战争",
+          "集结",
+          "自动加入"
+        ],
+        "none": [
+          "加入类型"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-autojoin",
+      "action": "click",
+      "point": [
+        392,
+        1034
+      ],
+      "before": {
+        "all": [
+          "联盟战争",
+          "集结",
+          "自动加入"
+        ],
+        "none": [
+          "加入类型"
+        ]
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "stop-only-to-reconfigure",
+      "action": "click",
+      "point": [
+        250,
+        926
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "重新开启"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            315,
+            180,
+            485,
+            220
+          ],
+          "min": 1,
+          "max": 28800
+        }
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "暂未开启"
+          ]
+        },
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "重新开启"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              315,
+              180,
+              485,
+              220
+            ],
+            "min": 60,
+            "max": 28800
+          },
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                637,
+                188,
+                657
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                693,
+                188,
+                713
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                748,
+                188,
+                768
+              ],
+              "min": 0.12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "one-queue-0",
+      "action": "click",
+      "point": [
+        178,
+        515
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "重新开启"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              315,
+              180,
+              485,
+              220
+            ],
+            "min": 60,
+            "max": 28800
+          },
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                637,
+                188,
+                657
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                693,
+                188,
+                713
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                748,
+                188,
+                768
+              ],
+              "min": 0.12
+            }
+          ]
+        },
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "暂未开启"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "one-queue-1",
+      "action": "click",
+      "point": [
+        178,
+        515
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "重新开启"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              315,
+              180,
+              485,
+              220
+            ],
+            "min": 60,
+            "max": 28800
+          },
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                637,
+                188,
+                657
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                693,
+                188,
+                713
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                748,
+                188,
+                768
+              ],
+              "min": 0.12
+            }
+          ]
+        },
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "暂未开启"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "one-queue-2",
+      "action": "click",
+      "point": [
+        178,
+        515
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "重新开启"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              315,
+              180,
+              485,
+              220
+            ],
+            "min": 60,
+            "max": 28800
+          },
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                637,
+                188,
+                657
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                693,
+                188,
+                713
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                748,
+                188,
+                768
+              ],
+              "min": 0.12
+            }
+          ]
+        },
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "暂未开启"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "one-queue-3",
+      "action": "click",
+      "point": [
+        178,
+        515
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "重新开启"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              315,
+              180,
+              485,
+              220
+            ],
+            "min": 60,
+            "max": 28800
+          },
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                637,
+                188,
+                657
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                693,
+                188,
+                713
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                748,
+                188,
+                768
+              ],
+              "min": 0.12
+            }
+          ]
+        },
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "暂未开启"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "one-queue-4",
+      "action": "click",
+      "point": [
+        178,
+        515
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "重新开启"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              315,
+              180,
+              485,
+              220
+            ],
+            "min": 60,
+            "max": 28800
+          },
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                637,
+                188,
+                657
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                693,
+                188,
+                713
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                748,
+                188,
+                768
+              ],
+              "min": 0.12
+            }
+          ]
+        },
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "暂未开启"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "enable-npc-beast",
+      "action": "click",
+      "point": [
+        176,
+        647
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              164,
+              637,
+              188,
+              657
+            ],
+            "max": 0.119
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "重新开启"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              315,
+              180,
+              485,
+              220
+            ],
+            "min": 60,
+            "max": 28800
+          },
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                637,
+                188,
+                657
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                693,
+                188,
+                713
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                748,
+                188,
+                768
+              ],
+              "min": 0.12
+            }
+          ]
+        },
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "暂未开启"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                637,
+                188,
+                657
+              ],
+              "min": 0.12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "enable-npc-hero",
+      "action": "click",
+      "point": [
+        176,
+        703
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              164,
+              693,
+              188,
+              713
+            ],
+            "max": 0.119
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "重新开启"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              315,
+              180,
+              485,
+              220
+            ],
+            "min": 60,
+            "max": 28800
+          },
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                637,
+                188,
+                657
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                693,
+                188,
+                713
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                748,
+                188,
+                768
+              ],
+              "min": 0.12
+            }
+          ]
+        },
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "暂未开启"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                693,
+                188,
+                713
+              ],
+              "min": 0.12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "enable-npc-gina",
+      "action": "click",
+      "point": [
+        176,
+        758
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              164,
+              748,
+              188,
+              768
+            ],
+            "max": 0.119
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "重新开启"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              315,
+              180,
+              485,
+              220
+            ],
+            "min": 60,
+            "max": 28800
+          },
+          "text_regions": [
+            {
+              "bounds": [
+                540,
+                490,
+                630,
+                540
+              ],
+              "pattern": "1",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                637,
+                188,
+                657
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                693,
+                188,
+                713
+              ],
+              "min": 0.12
+            },
+            {
+              "bounds": [
+                164,
+                748,
+                188,
+                768
+              ],
+              "min": 0.12
+            }
+          ]
+        },
+        {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量",
+            "暂未开启"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                164,
+                748,
+                188,
+                768
+              ],
+              "min": 0.12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "enable-autojoin",
+      "action": "click",
+      "point": [
+        511,
+        926
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "暂未开启"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              540,
+              490,
+              630,
+              540
+            ],
+            "pattern": "1",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              164,
+              637,
+              188,
+              657
+            ],
+            "min": 0.12
+          },
+          {
+            "bounds": [
+              164,
+              693,
+              188,
+              713
+            ],
+            "min": 0.12
+          },
+          {
+            "bounds": [
+              164,
+              748,
+              188,
+              768
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "重新开启"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            315,
+            180,
+            485,
+            220
+          ],
+          "min": 1,
+          "max": 28800
+        }
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量",
+          "重新开启"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            315,
+            180,
+            485,
+            220
+          ],
+          "min": 60,
+          "max": 28800
+        },
+        "text_regions": [
+          {
+            "bounds": [
+              540,
+              490,
+              630,
+              540
+            ],
+            "pattern": "1",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              164,
+              637,
+              188,
+              657
+            ],
+            "min": 0.12
+          },
+          {
+            "bounds": [
+              164,
+              693,
+              188,
+              713
+            ],
+            "min": 0.12
+          },
+          {
+            "bounds": [
+              164,
+              748,
+              188,
+              768
+            ],
+            "min": 0.12
+          }
+        ]
+      }
+    },
+    {
+      "name": "close-autojoin",
+      "action": "click",
+      "point": [
+        645,
+        150
+      ],
+      "before": {
+        "all": [
+          "自动加入",
+          "加入类型",
+          "队列最大数量"
+        ]
+      },
+      "after": {
+        "all": [
+          "联盟战争",
+          "集结",
+          "自动加入"
+        ],
+        "none": [
+          "加入类型"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-war",
+      "action": "click",
+      "point": [
+        131,
+        59
+      ],
+      "before": {
+        "all": [
+          "联盟战争",
+          "集结",
+          "自动加入"
+        ],
+        "none": [
+          "加入类型"
+        ]
+      },
+      "after": {
+        "all": [
+          "联盟宝箱",
+          "联盟科技",
+          "联盟互助"
+        ],
+        "none": [
+          "当前暂无战事",
+          "加入类型"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "return-city",
+      "action": "click",
+      "point": [
+        132,
+        59
+      ],
+      "before": {
+        "all": [
+          "联盟宝箱",
+          "联盟科技",
+          "联盟互助"
+        ],
+        "none": [
+          "当前暂无战事",
+          "加入类型"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 5,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-overview",
+        "action": "click",
+        "point": [
+          482,
+          482
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "any": [
+            "城镇",
+            "日常",
+            "完成任务后是否隐藏"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-autojoin",
+        "action": "click",
+        "point": [
+          645,
+          150
+        ],
+        "before": {
+          "all": [
+            "自动加入",
+            "加入类型",
+            "队列最大数量"
+          ]
+        },
+        "after": {
+          "all": [
+            "联盟战争",
+            "集结",
+            "自动加入"
+          ],
+          "none": [
+            "加入类型"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-war",
+        "action": "click",
+        "point": [
+          131,
+          59
+        ],
+        "before": {
+          "all": [
+            "联盟战争",
+            "集结",
+            "自动加入"
+          ],
+          "none": [
+            "加入类型"
+          ]
+        },
+        "after": {
+          "all": [
+            "联盟宝箱",
+            "联盟科技",
+            "联盟互助"
+          ],
+          "none": [
+            "当前暂无战事",
+            "加入类型"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-alliance",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": {
+          "all": [
+            "联盟宝箱",
+            "联盟科技",
+            "联盟互助"
+          ],
+          "none": [
+            "当前暂无战事",
+            "加入类型"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,2094 @@
+{
+  "action_id": "wos-arena",
+  "action_version": "0.1.0",
+  "name": "WOS arena",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 600,
+  "status": "candidate",
+  "verification_scope": "One manual free battle sampled with5→4; five-attempt fixed macro pending next-role replay. Existing formation retained; no attempt purchase, cash or paid refresh.",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-overview",
+      "action": "click",
+      "point": [
+        109,
+        482
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "select-daily-tab",
+      "action": "click",
+      "point": [
+        401,
+        248
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "seek-0",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "竞技场"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-1",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "竞技场"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-2",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "竞技场"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-3",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "竞技场"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-4",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "竞技场"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-5",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "竞技场"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-6",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "竞技场"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "seek-7",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "竞技场"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-daily-entry",
+      "action": "click",
+      "text_target": {
+        "text": "竞技场",
+        "exact": false,
+        "bounds": [
+          180,
+          280,
+          380,
+          740
+        ],
+        "offset": [
+          150,
+          10
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "日常",
+          "竞技场"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "万国竞技场"
+        ],
+        "none": [
+          "挑战列表",
+          "小队设置",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 10
+    },
+    {
+      "name": "open-challenge-list",
+      "action": "click",
+      "point": [
+        394,
+        1025
+      ],
+      "before": {
+        "all": [
+          "万国竞技场"
+        ],
+        "none": [
+          "挑战列表",
+          "小队设置",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "choose-0",
+      "action": "click",
+      "point": [
+        612,
+        748
+      ],
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?[1-5]",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "fight-0",
+      "action": "click",
+      "point": [
+        530,
+        1016
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            210,
+            1005,
+            580,
+            1060
+          ]
+        ]
+      },
+      "observe_attempts": 30,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-0"
+    },
+    {
+      "name": "result-0",
+      "action": "click",
+      "point": [
+        394,
+        989
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            210,
+            1005,
+            580,
+            1060
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-0"
+    },
+    {
+      "name": "choose-1",
+      "action": "click",
+      "point": [
+        612,
+        748
+      ],
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?[1-5]",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "fight-1",
+      "action": "click",
+      "point": [
+        530,
+        1016
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            210,
+            1005,
+            580,
+            1060
+          ]
+        ]
+      },
+      "observe_attempts": 30,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-1"
+    },
+    {
+      "name": "result-1",
+      "action": "click",
+      "point": [
+        394,
+        989
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            210,
+            1005,
+            580,
+            1060
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-1"
+    },
+    {
+      "name": "choose-2",
+      "action": "click",
+      "point": [
+        612,
+        748
+      ],
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?[1-5]",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "fight-2",
+      "action": "click",
+      "point": [
+        530,
+        1016
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            210,
+            1005,
+            580,
+            1060
+          ]
+        ]
+      },
+      "observe_attempts": 30,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-2"
+    },
+    {
+      "name": "result-2",
+      "action": "click",
+      "point": [
+        394,
+        989
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            210,
+            1005,
+            580,
+            1060
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-2"
+    },
+    {
+      "name": "choose-3",
+      "action": "click",
+      "point": [
+        612,
+        748
+      ],
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?[1-5]",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "fight-3",
+      "action": "click",
+      "point": [
+        530,
+        1016
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            210,
+            1005,
+            580,
+            1060
+          ]
+        ]
+      },
+      "observe_attempts": 30,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-3"
+    },
+    {
+      "name": "result-3",
+      "action": "click",
+      "point": [
+        394,
+        989
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            210,
+            1005,
+            580,
+            1060
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-3"
+    },
+    {
+      "name": "choose-4",
+      "action": "click",
+      "point": [
+        612,
+        748
+      ],
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?[1-5]",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "after": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "fight-4",
+      "action": "click",
+      "point": [
+        530,
+        1016
+      ],
+      "before": [
+        "小队设置",
+        "战斗",
+        "一键上阵"
+      ],
+      "after": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            210,
+            1005,
+            580,
+            1060
+          ]
+        ]
+      },
+      "observe_attempts": 30,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-4"
+    },
+    {
+      "name": "result-4",
+      "action": "click",
+      "point": [
+        394,
+        989
+      ],
+      "before": {
+        "any": [
+          "胜利",
+          "失败",
+          "战败"
+        ],
+        "all": [
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            210,
+            1005,
+            580,
+            1060
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-4"
+    },
+    {
+      "name": "free-attempts-exhausted",
+      "action": "observe",
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "close-list",
+      "action": "click",
+      "point": [
+        644,
+        185
+      ],
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "万国竞技场"
+        ],
+        "none": [
+          "挑战列表",
+          "小队设置",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "exit-arena",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "万国竞技场"
+        ],
+        "none": [
+          "挑战列表",
+          "小队设置",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 5,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-overview",
+        "action": "click",
+        "point": [
+          482,
+          482
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "any": [
+            "城镇",
+            "日常",
+            "完成任务后是否隐藏"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-arena-result",
+        "action": "click",
+        "point": [
+          394,
+          989
+        ],
+        "before": {
+          "any": [
+            "胜利",
+            "失败",
+            "战败"
+          ],
+          "all": [
+            "点击任意位置退出"
+          ],
+          "page_text_regions": [
+            [
+              210,
+              1005,
+              580,
+              1060
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "挑战列表",
+            "今日剩余挑战次数"
+          ],
+          "page_text_regions": [
+            [
+              245,
+              800,
+              470,
+              850
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-arena-list",
+        "action": "click",
+        "point": [
+          644,
+          185
+        ],
+        "before": {
+          "all": [
+            "挑战列表",
+            "今日剩余挑战次数"
+          ],
+          "page_text_regions": [
+            [
+              245,
+              800,
+              470,
+              850
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "万国竞技场"
+          ],
+          "none": [
+            "挑战列表",
+            "小队设置",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-arena-formation",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": [
+          "小队设置",
+          "战斗",
+          "一键上阵"
+        ],
+        "after": {
+          "all": [
+            "挑战列表",
+            "今日剩余挑战次数"
+          ],
+          "page_text_regions": [
+            [
+              245,
+              800,
+              470,
+              850
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-arena-home",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "万国竞技场"
+          ],
+          "none": [
+            "挑战列表",
+            "小队设置",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  }
+}

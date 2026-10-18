@@ -1,0 +1,503 @@
+{
+  "action_id": "wos-pet-badger",
+  "action_version": "0.1.0",
+  "name": "WOS pet_badger",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "status": "candidate",
+  "verification_scope": "New candidate from observed skill selection and cooldown; use/reward branch pending role-by-role macro replay. No skill upgrades.",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-pet-skills",
+      "action": "click",
+      "point": [
+        645,
+        735
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "宠物技能"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            135,
+            650,
+            650,
+            960
+          ]
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "select-skill",
+      "action": "click",
+      "point": [
+        572,
+        276
+      ],
+      "before": {
+        "all": [
+          "宠物技能"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            135,
+            650,
+            650,
+            960
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "宠物技能",
+          "敏锐感官"
+        ],
+        "page_text_regions": [
+          [
+            135,
+            650,
+            650,
+            960
+          ]
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "use-if-ready",
+      "action": "click",
+      "point": [
+        394,
+        925
+      ],
+      "before": {
+        "all": [
+          "宠物技能",
+          "敏锐感官",
+          "使用"
+        ],
+        "page_text_regions": [
+          [
+            135,
+            650,
+            650,
+            960
+          ]
+        ],
+        "none": [
+          "冷却中"
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "冷却中"
+        ]
+      },
+      "observe_attempts": 4,
+      "skip_if": {
+        "all": [
+          "宠物技能",
+          "敏锐感官",
+          "冷却中"
+        ],
+        "page_text_regions": [
+          [
+            135,
+            650,
+            650,
+            960
+          ]
+        ]
+      }
+    },
+    {
+      "name": "close-reward-if-present",
+      "action": "click",
+      "point": [
+        394,
+        790
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕"
+        ]
+      },
+      "after": {
+        "all": [
+          "宠物技能"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            135,
+            650,
+            650,
+            960
+          ]
+        ]
+      },
+      "observe_attempts": 4,
+      "skip_if": {
+        "all": [
+          "宠物技能"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            135,
+            650,
+            650,
+            960
+          ]
+        ]
+      }
+    },
+    {
+      "name": "verify-cooldown",
+      "action": "observe",
+      "before": {
+        "all": [
+          "宠物技能",
+          "敏锐感官",
+          "冷却中"
+        ],
+        "page_text_regions": [
+          [
+            135,
+            650,
+            650,
+            960
+          ]
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "exit-pet-skills",
+      "action": "click",
+      "point": [
+        644,
+        151
+      ],
+      "before": {
+        "all": [
+          "宠物技能"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得"
+        ],
+        "page_text_regions": [
+          [
+            135,
+            650,
+            650,
+            960
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 4
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 4,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-pet-reward",
+        "action": "click",
+        "point": [
+          394,
+          790
+        ],
+        "before": {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击空白",
+            "点击任意",
+            "点击屏幕"
+          ]
+        },
+        "after": {
+          "all": [
+            "宠物技能"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得"
+          ],
+          "page_text_regions": [
+            [
+              135,
+              650,
+              650,
+              960
+            ]
+          ]
+        },
+        "observe_attempts": 4
+      },
+      {
+        "name": "exit-pet-skills",
+        "action": "click",
+        "point": [
+          644,
+          151
+        ],
+        "before": {
+          "all": [
+            "宠物技能"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得"
+          ],
+          "page_text_regions": [
+            [
+              135,
+              650,
+              650,
+              960
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 4
+      }
+    ]
+  }
+}

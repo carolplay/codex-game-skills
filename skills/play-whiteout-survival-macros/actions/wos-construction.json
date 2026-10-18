@@ -1,0 +1,1492 @@
+{
+  "action_id": "wos-construction",
+  "action_version": "0.1.0",
+  "name": "WOS construction",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 360,
+  "status": "candidate",
+  "verification_scope": "Current role manual sample: game idle queue navigated盾兵营7→8, ordinary upgrade108FC/9refined and common resources,1d6h queue. Max2 idle queues, existing timers preserved; no diamonds/acceleration. New-role replay pending.",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "queue-0-open-overview",
+      "action": "click",
+      "point": [
+        109,
+        482
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "queue-0-town-tab",
+      "action": "click",
+      "point": [
+        161,
+        249
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "queue-0-choose-idle-queue",
+      "action": "click",
+      "text_target": {
+        "text": "空闲中",
+        "select": "top-left",
+        "bounds": [
+          210,
+          320,
+          345,
+          430
+        ],
+        "offset": [
+          150,
+          -12
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "建筑队列"
+      ],
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "建筑队列"
+        ],
+        "timer_regions": [
+          {
+            "bounds": [
+              160,
+              325,
+              395,
+              365
+            ],
+            "min": 1,
+            "max": 359999
+          },
+          {
+            "bounds": [
+              160,
+              380,
+              395,
+              425
+            ],
+            "min": 1,
+            "max": 359999
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "queue-0-settle-camera",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "queue-0-settle-camera-2",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "queue-0-open-building-0",
+      "action": "click",
+      "point": [
+        394,
+        500
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": [
+        "详情",
+        "升级"
+      ]
+    },
+    {
+      "name": "queue-0-open-building-1",
+      "action": "click",
+      "point": [
+        394,
+        500
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": [
+        "详情",
+        "升级"
+      ]
+    },
+    {
+      "name": "queue-0-open-building-2",
+      "action": "click",
+      "point": [
+        394,
+        500
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": [
+        "详情",
+        "升级"
+      ]
+    },
+    {
+      "name": "queue-0-open-upgrade",
+      "action": "click",
+      "text_target": {
+        "text": "升级",
+        "bounds": [
+          200,
+          600,
+          650,
+          850
+        ],
+        "offset": [
+          0,
+          -40
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "详情",
+        "升级"
+      ],
+      "after": {
+        "all": [
+          "升级效果",
+          "需要条件",
+          "原始时间"
+        ],
+        "none": [
+          "科技研究"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "queue-0-ordinary-upgrade",
+      "action": "click",
+      "text_target": {
+        "text": "升级",
+        "bounds": [
+          380,
+          870,
+          670,
+          1040
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "升级效果",
+          "需要条件",
+          "原始时间"
+        ],
+        "none": [
+          "科技研究"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            300,
+            548,
+            490,
+            605
+          ],
+          "min": 1,
+          "max": 359999
+        }
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "queue-0-request-help",
+      "action": "click",
+      "point": [
+        394,
+        500
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "alliance-help-bubble",
+            "bounds": [
+              330,
+              425,
+              475,
+              565
+            ],
+            "mode": "grayscale",
+            "min_score": 0.85
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "alliance-help-bubble",
+            "bounds": [
+              330,
+              425,
+              475,
+              565
+            ],
+            "mode": "grayscale",
+            "min_score": 0.85,
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "queue-1-open-overview",
+      "action": "click",
+      "point": [
+        109,
+        482
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "queue-1-town-tab",
+      "action": "click",
+      "point": [
+        161,
+        249
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "queue-1-choose-idle-queue",
+      "action": "click",
+      "text_target": {
+        "text": "空闲中",
+        "select": "top-left",
+        "bounds": [
+          210,
+          320,
+          345,
+          430
+        ],
+        "offset": [
+          150,
+          -12
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "建筑队列"
+      ],
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "建筑队列"
+        ],
+        "timer_regions": [
+          {
+            "bounds": [
+              160,
+              325,
+              395,
+              365
+            ],
+            "min": 1,
+            "max": 359999
+          },
+          {
+            "bounds": [
+              160,
+              380,
+              395,
+              425
+            ],
+            "min": 1,
+            "max": 359999
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "queue-1-settle-camera",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "queue-1-settle-camera-2",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "queue-1-open-building-0",
+      "action": "click",
+      "point": [
+        394,
+        500
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": [
+        "详情",
+        "升级"
+      ]
+    },
+    {
+      "name": "queue-1-open-building-1",
+      "action": "click",
+      "point": [
+        394,
+        500
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": [
+        "详情",
+        "升级"
+      ]
+    },
+    {
+      "name": "queue-1-open-building-2",
+      "action": "click",
+      "point": [
+        394,
+        500
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": [
+        "详情",
+        "升级"
+      ]
+    },
+    {
+      "name": "queue-1-open-upgrade",
+      "action": "click",
+      "text_target": {
+        "text": "升级",
+        "bounds": [
+          200,
+          600,
+          650,
+          850
+        ],
+        "offset": [
+          0,
+          -40
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "详情",
+        "升级"
+      ],
+      "after": {
+        "all": [
+          "升级效果",
+          "需要条件",
+          "原始时间"
+        ],
+        "none": [
+          "科技研究"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "queue-1-ordinary-upgrade",
+      "action": "click",
+      "text_target": {
+        "text": "升级",
+        "bounds": [
+          380,
+          870,
+          670,
+          1040
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "升级效果",
+          "需要条件",
+          "原始时间"
+        ],
+        "none": [
+          "科技研究"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            300,
+            548,
+            490,
+            605
+          ],
+          "min": 1,
+          "max": 359999
+        }
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "queue-1-request-help",
+      "action": "click",
+      "point": [
+        394,
+        500
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "alliance-help-bubble",
+            "bounds": [
+              330,
+              425,
+              475,
+              565
+            ],
+            "mode": "grayscale",
+            "min_score": 0.85
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "alliance-help-bubble",
+            "bounds": [
+              330,
+              425,
+              475,
+              565
+            ],
+            "mode": "grayscale",
+            "min_score": 0.85,
+            "present": false
+          }
+        ]
+      }
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 5,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-overview",
+        "action": "click",
+        "point": [
+          482,
+          482
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "any": [
+            "城镇",
+            "日常",
+            "完成任务后是否隐藏"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-upgrade",
+        "action": "click",
+        "point": [
+          646,
+          119
+        ],
+        "before": {
+          "all": [
+            "升级效果",
+            "需要条件",
+            "原始时间"
+          ],
+          "none": [
+            "科技研究"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  }
+}
