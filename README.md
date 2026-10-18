@@ -4,6 +4,8 @@ macOS 原生 Whiteout Survival 的本地宏实验。固定步骤由本地 OCR �
 
 ## 阅读顺序
 
+先读 [项目背景与操作授权](docs/PROJECT-CONTEXT.md)：虚拟资源容错、游戏策略与系统审批职责、真实支付边界。
+
 1. [V2 架构与当前实现](docs/WOS-AUTOMATION-V2.md)：执行路径、组件职责和实际限制。
 2. [V2 任务设计与实施安排](docs/WOS-V2-TASK-DESIGN.md)：宏任务现状、固定起止界面、失败隔离和下一步验收。
 3. [V2 执行技能](skills/play-whiteout-survival-macros/SKILL.md)：单次运行规则。
