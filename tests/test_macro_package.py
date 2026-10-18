@@ -23,6 +23,16 @@ class PackageTests(unittest.TestCase):
             profiles=pkg.read(path)['profiles']
             self.assertEqual(profiles['mature-test'],profiles['main'])
 
+    def test_upgrades_remain_available_but_outside_every_daily_profile(self):
+        catalog, flows = pkg.load_actions()
+        for task in ('research', 'construction'):
+            self.assertIn(task, flows)
+            self.assertFalse(catalog['actions'][task]['include_in_daily'])
+            for path in (ROOT / 'macros').glob('shift-*.json'):
+                for profile in pkg.read(path)['profiles'].values():
+                    self.assertNotIn(task, [a['task'] for a in profile['actions']])
+                    self.assertTrue(profile['excluded'][task])
+
     def test_changed_action_rejected_before_backend_exists(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / 'package'; shutil.copytree(ROOT, root)

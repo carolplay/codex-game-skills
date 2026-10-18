@@ -29,8 +29,6 @@ status只表示实现与验证进度，不表示今天已完成。已验证必�
 |海岛树及产出|已验证|班/库存|小黄鸡宏实际收树、数字增量校验及完整返回主城通过；布局漂移仍按偏差退出|
 |四种普通资源采集|已做|班/队列|gather_meat/wood/coal/iron候选来自既有真实记录；必须读到采集者无，保留当前等级，留行军位；隐藏分类仍需回放校准|
 |治疗伤兵|已验证|班/队列|小黄鸡实际快速选择→普通治疗→正计时→主城通过；空/运行分支另验，不点钻石立即完成|
-|科研续队|已做|班/队列|当前成熟角色武器特训V普通研究与联盟帮助已采样；保留运行长队列，选战斗树未满级项目；宏回放待验收|
-|建筑续队|已做|班/队列|系统空队列定位盾兵营7→8普通升级已采样；小黄鸡定位大熔炉自动打开操作面板，尚不支持其退出；本轮偏差停批，未升级；最多填2空队列|
 |募兵所|已做|班/日|小黄鸡新回放未定位到募兵所；旧图坐标依赖医院后相机重心，下一轮修入口；召回未验证，与专家收益分开|
 |宠物寻宝完工领奖|已做|班|旧记录2箱真实领取生成候选，完成勾模板最多4项；新派遣仍缺|
 |联盟宝藏|已做|日/可领份额|旧记录5份一键领取至0生成候选；不执行分享或发消息|
@@ -50,13 +48,22 @@ status只表示实现与验证进度，不表示今天已完成。已验证必�
 |联盟周结算|没做|周|按游戏周及可领窗口，不混同个人每日活跃箱|
 |四周轮转奖励|没做|四周（月）|按服务器活动实例和倒计时，四周不等于自然月|
 
+## 保留的升级能力（不属于日常）
+
+科研和建筑升级只在单独的升级任务中显式调用，不纳入三班日常清单、覆盖分母或补漏要求。已有action与验证记录保留；空闲队列或红点不自动触发升级。训练、治疗仍属于日常。
+
+|项目|status|类别|当前动作与验证范围|
+|---|---|---|---|
+|科研续队|已做|升级/独立目标|当前成熟角色武器特训V普通研究与联盟帮助已采样；保留运行长队列，选战斗树未满级项目；宏回放待验收|
+|建筑续队|已做|升级/独立目标|系统空队列定位盾兵营7→8普通升级已采样；小黄鸡定位大熔炉自动打开操作面板，尚不支持其退出；本轮偏差停批，未升级；最多填2空队列|
+
 ## 当前线性动作列表与版本
 
-正式清单以catalog、actions与三份shift manifest为准；没有旧的默认六项/八项清单。当前包0.5.2，通用执行器最低0.2.1。主号与成熟角色清单相同；一班含VIP，二/三班不重复每日VIP。所有组合固定动作版本和SHA256，运行中的快照不热改。开发定向子集须标记targeted-development，不能冒充完整班次。
+正式清单以catalog、actions与三份shift manifest为准；没有旧的默认六项/八项清单。当前包0.5.3，通用执行器最低0.2.1。主号与成熟角色清单相同；一班含VIP，二/三班不重复每日VIP。所有组合固定动作版本和SHA256，运行中的快照不热改。开发定向子集须标记targeted-development，不能冒充完整班次。
 
 第三班成熟角色默认顺序：
 
-mail → idle → feast → academy → alliance → help → recruit → expert → refined → crystal → bank → shield → lancer → marksman → donate → pet_wolf → pet_badger → pet_deer → store_free → arena → island → orders → intel_rescue → intel_hero → intel_beast → gather_meat → gather_wood → gather_coal → gather_iron → healing → enlistment → pet_treasure_claim → pet_alliance_treasure → alliance_incentive → labyrinth → npc_autojoin → research → construction → daily。
+mail → idle → feast → academy → alliance → help → recruit → expert → refined → crystal → bank → shield → lancer → marksman → donate → pet_wolf → pet_badger → pet_deer → store_free → arena → island → orders → intel_rescue → intel_hero → intel_beast → gather_meat → gather_wood → gather_coal → gather_iron → healing → enlistment → pet_treasure_claim → pet_alliance_treasure → alliance_incentive → labyrinth → npc_autojoin → daily。
 
 每个动作统一从主城进入并返回主城，实际步骤与有界退出见对应JSON。每日任务领奖置尾，NPC自动加入/采集的行军位依赖显式维护。界面可组合不等于资源效果严格交换律。
 

@@ -1,5 +1,5 @@
 {
-  "package_version": "0.5.2",
+  "package_version": "0.5.3",
   "executor_min_version": "0.2.1",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -384,18 +384,22 @@
       "action_id": "wos-research",
       "action_version": "0.1.0",
       "sha256": "781120c797e89d8acdb4617553f175fc20b4ddc069dccc74d3a4dbe629dfccb8",
-      "period": "shift",
+      "period": "progression",
       "utility": false,
-      "verification_scope": "Current role manually sampled normal武器特训V5/6→6,11-day queue and help; no acceleration. Existing research is preserved. First visible non-MAX battle node, prerequisites/resources still checked by UI; generic selection needs next-role replay."
+      "verification_scope": "Current role manually sampled normal武器特训V5/6→6,11-day queue and help; no acceleration. Existing research is preserved. First visible non-MAX battle node, prerequisites/resources still checked by UI; generic selection needs next-role replay.",
+      "category": "upgrade",
+      "include_in_daily": false
     },
     "construction": {
       "path": "actions/wos-construction.json",
       "action_id": "wos-construction",
       "action_version": "0.1.0",
       "sha256": "ddf3472923c4e9c7e2c166cbbc7148ef8a5d12d98d904ca79bc9d3d243fe4c5f",
-      "period": "shift",
+      "period": "progression",
       "utility": false,
-      "verification_scope": "Current role manual sample: game idle queue navigated盾兵营7→8, ordinary upgrade108FC/9refined and common resources,1d6h queue. Max2 idle queues, existing timers preserved; no diamonds/acceleration. New-role replay pending."
+      "verification_scope": "Current role manual sample: game idle queue navigated盾兵营7→8, ordinary upgrade108FC/9refined and common resources,1d6h queue. Max2 idle queues, existing timers preserved; no diamonds/acceleration. New-role replay pending.",
+      "category": "upgrade",
+      "include_in_daily": false
     }
   },
   "not_implemented": [

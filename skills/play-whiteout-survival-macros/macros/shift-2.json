@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.5.2",
-  "package_version": "0.5.2",
+  "macro_version": "0.5.3",
+  "package_version": "0.5.3",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions"
@@ -226,18 +226,6 @@
           "sha256": "35ad06ffaec4ddece20f791c457acea701a535082dc094b0667324e982007673"
         },
         {
-          "task": "research",
-          "action_id": "wos-research",
-          "action_version": "0.1.0",
-          "sha256": "781120c797e89d8acdb4617553f175fc20b4ddc069dccc74d3a4dbe629dfccb8"
-        },
-        {
-          "task": "construction",
-          "action_id": "wos-construction",
-          "action_version": "0.1.0",
-          "sha256": "ddf3472923c4e9c7e2c166cbbc7148ef8a5d12d98d904ca79bc9d3d243fe4c5f"
-        },
-        {
           "task": "daily",
           "action_id": "wos-daily-earned",
           "action_version": "0.1.1",
@@ -245,7 +233,9 @@
         }
       ],
       "excluded": {
-        "vip": "每日首班核验VIP，本班不重复稳定检查"
+        "vip": "每日首班核验VIP，本班不重复稳定检查",
+        "research": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
+        "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用"
       }
     },
     "mature-test": {
@@ -467,18 +457,6 @@
           "sha256": "35ad06ffaec4ddece20f791c457acea701a535082dc094b0667324e982007673"
         },
         {
-          "task": "research",
-          "action_id": "wos-research",
-          "action_version": "0.1.0",
-          "sha256": "781120c797e89d8acdb4617553f175fc20b4ddc069dccc74d3a4dbe629dfccb8"
-        },
-        {
-          "task": "construction",
-          "action_id": "wos-construction",
-          "action_version": "0.1.0",
-          "sha256": "ddf3472923c4e9c7e2c166cbbc7148ef8a5d12d98d904ca79bc9d3d243fe4c5f"
-        },
-        {
           "task": "daily",
           "action_id": "wos-daily-earned",
           "action_version": "0.1.1",
@@ -486,7 +464,9 @@
         }
       ],
       "excluded": {
-        "vip": "每日首班核验VIP，本班不重复稳定检查"
+        "vip": "每日首班核验VIP，本班不重复稳定检查",
+        "research": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
+        "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用"
       }
     },
     "under30-test": {
@@ -630,18 +610,6 @@
           "sha256": "35ad06ffaec4ddece20f791c457acea701a535082dc094b0667324e982007673"
         },
         {
-          "task": "research",
-          "action_id": "wos-research",
-          "action_version": "0.1.0",
-          "sha256": "781120c797e89d8acdb4617553f175fc20b4ddc069dccc74d3a4dbe629dfccb8"
-        },
-        {
-          "task": "construction",
-          "action_id": "wos-construction",
-          "action_version": "0.1.0",
-          "sha256": "ddf3472923c4e9c7e2c166cbbc7148ef8a5d12d98d904ca79bc9d3d243fe4c5f"
-        },
-        {
           "task": "daily",
           "action_id": "wos-daily-earned",
           "action_version": "0.1.1",
@@ -662,7 +630,9 @@
         "pet_wolf": "宠物实际解锁待低等级采样；不假设已开放",
         "pet_badger": "宠物实际解锁待低等级采样；不假设已开放",
         "pet_deer": "宠物实际解锁待低等级采样；不假设已开放",
-        "orders": "低等级领主指令入口/可用状态待现场采样"
+        "orders": "低等级领主指令入口/可用状态待现场采样",
+        "research": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
+        "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用"
       }
     }
   }

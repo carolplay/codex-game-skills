@@ -16,3 +16,5 @@
 - Use 三班 (UTC00/08/16) terminology and classify tasks by shift/day/week/four-week/event. Read `docs/V2-OPERATIONS.md` for pilot and fresh V2 worker boundaries. At the next user discussion, raise `docs/RESOURCE-TASK-PRIORITIES.md`; that discussion must not reduce daily coverage.
 
 - The user cancelled the Orchestrator role on 2026-10-18 and grants this leader direct WOS control. No external slot or notification is required. Retain the actual single-executor lock and local lease. Capture suite/action versions and hashes in reports; failures do not justify repeated stable-flow testing.
+
+科研与建筑升级属于独立升级能力，不属于日常；保留action，但所有三班清单排除research/construction，不因空闲队列、红点或补日常而启动升级。训练和治疗仍在日常范围。用户明确于2026-10-18。
