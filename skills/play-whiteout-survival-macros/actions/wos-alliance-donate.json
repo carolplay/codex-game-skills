@@ -1,6 +1,6 @@
 {
   "action_id": "wos-alliance-donate",
-  "action_version": "0.1.4",
+  "action_version": "0.1.5",
   "name": "WOS — recommended alliance tech, at most25 ordinary-resource donations (1250 or10000), no gems",
   "reference_size": [
     788,
@@ -211,7 +211,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -220,8 +222,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -238,7 +241,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -255,7 +260,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -281,7 +288,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -290,8 +299,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -308,7 +318,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -325,7 +337,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -351,7 +365,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -360,8 +376,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -378,7 +395,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -395,7 +414,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -421,7 +442,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -430,8 +453,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -448,7 +472,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -465,7 +491,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -491,7 +519,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -500,8 +530,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -527,7 +558,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -565,7 +598,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -574,8 +609,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -601,7 +637,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -610,8 +648,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -628,7 +667,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -645,7 +686,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -671,7 +714,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -680,8 +725,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -698,7 +744,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -715,7 +763,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -741,7 +791,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -750,8 +802,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -768,7 +821,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -785,7 +840,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -811,7 +868,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -820,8 +879,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -838,7 +898,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -855,7 +917,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -881,7 +945,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -890,8 +956,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -908,7 +975,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -925,7 +994,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -951,7 +1022,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -960,8 +1033,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -978,7 +1052,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -995,7 +1071,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1021,7 +1099,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1030,8 +1110,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1048,7 +1129,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1065,7 +1148,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1091,7 +1176,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1100,8 +1187,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1118,7 +1206,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1135,7 +1225,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1161,7 +1253,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1170,8 +1264,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1188,7 +1283,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1205,7 +1302,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1231,7 +1330,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1240,8 +1341,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1258,7 +1360,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1275,7 +1379,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1301,7 +1407,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1310,8 +1418,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1328,7 +1437,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1345,7 +1456,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1371,7 +1484,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1380,8 +1495,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1398,7 +1514,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1415,7 +1533,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1441,7 +1561,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1450,8 +1572,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1468,7 +1591,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1485,7 +1610,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1511,7 +1638,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1520,8 +1649,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1538,7 +1668,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1555,7 +1687,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1581,7 +1715,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1590,8 +1726,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1608,7 +1745,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1625,7 +1764,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1651,7 +1792,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1660,8 +1803,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1678,7 +1822,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1695,7 +1841,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1721,7 +1869,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1730,8 +1880,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1748,7 +1899,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1765,7 +1918,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1791,7 +1946,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1800,8 +1957,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1818,7 +1976,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1835,7 +1995,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1861,7 +2023,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1870,8 +2034,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1888,7 +2053,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1905,7 +2072,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1931,7 +2100,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           },
           {
             "bounds": [
@@ -1940,8 +2111,9 @@
               600,
               907
             ],
-            "pattern": "(?:©)?(?:1,?250|10,?000)",
-            "min_confidence": 0.3
+            "pattern": "[1-9][0-9,]*",
+            "min_confidence": 0.3,
+            "crop_ocr": true
           }
         ]
       },
@@ -1958,7 +2130,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25"
+            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1975,7 +2149,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1997,7 +2173,9 @@
               600,
               840
             ],
-            "pattern": "(?:次数:)?0/25"
+            "pattern": "(?:次数:)?0/25",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -2269,7 +2447,7 @@
     ]
   },
   "status": "partial_verified",
-  "verification_scope": "0.1.2 includes explicit240s workflow budget. 0.1.1 performed24 donations and dispatched25th before old120s workflow deadline; final outcome must be audited without repeating consumption.",
+  "verification_scope": "Low role ordinary donation is4,000wood, not old1,250/10,000 whitelist; right ordinary resource button stays fixed, regional amount/count OCR is cropped. No diamonds button input; gem unchanged assertion retained. Next role replay pending.",
   "execution_timeout_seconds": 240,
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

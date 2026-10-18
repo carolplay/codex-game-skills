@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-rescue",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS ordinary intelligence rescue",
   "reference_size": [
     788,
@@ -336,9 +336,9 @@
         "template": "intel-rescue",
         "bounds": [
           145,
-          320,
-          620,
-          780
+          230,
+          640,
+          800
         ],
         "min_score": 0.85
       },
@@ -358,9 +358,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85
           }
@@ -387,9 +387,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85,
             "present": false
@@ -802,9 +802,9 @@
         "template": "intel-rescue",
         "bounds": [
           145,
-          320,
-          620,
-          780
+          230,
+          640,
+          800
         ],
         "min_score": 0.85
       },
@@ -824,9 +824,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85
           }
@@ -853,9 +853,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85,
             "present": false
@@ -1268,9 +1268,9 @@
         "template": "intel-rescue",
         "bounds": [
           145,
-          320,
-          620,
-          780
+          230,
+          640,
+          800
         ],
         "min_score": 0.85
       },
@@ -1290,9 +1290,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85
           }
@@ -1319,9 +1319,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85,
             "present": false
@@ -1734,9 +1734,9 @@
         "template": "intel-rescue",
         "bounds": [
           145,
-          320,
-          620,
-          780
+          230,
+          640,
+          800
         ],
         "min_score": 0.85
       },
@@ -1756,9 +1756,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85
           }
@@ -1785,9 +1785,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85,
             "present": false
@@ -2200,9 +2200,9 @@
         "template": "intel-rescue",
         "bounds": [
           145,
-          320,
-          620,
-          780
+          230,
+          640,
+          800
         ],
         "min_score": 0.85
       },
@@ -2222,9 +2222,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85
           }
@@ -2251,9 +2251,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85,
             "present": false
@@ -2666,9 +2666,9 @@
         "template": "intel-rescue",
         "bounds": [
           145,
-          320,
-          620,
-          780
+          230,
+          640,
+          800
         ],
         "min_score": 0.85
       },
@@ -2688,9 +2688,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85
           }
@@ -2717,9 +2717,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85,
             "present": false
@@ -3144,9 +3144,9 @@
             "template": "intel-rescue",
             "bounds": [
               145,
-              320,
-              620,
-              780
+              230,
+              640,
+              800
             ],
             "min_score": 0.85,
             "present": false
@@ -3539,5 +3539,5 @@
       }
     ]
   },
-  "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role."
+  "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Labubu old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending."
 }

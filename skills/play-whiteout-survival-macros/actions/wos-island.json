@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Manual main tree+5040 sampled; island UI and fixed tree/lumber leaf positions observed; layout/balance validation required, next-role macro replay pending. No decorations/upgrades.",
+  "verification_scope": "Tree fixed entry collected on mature and low roles. Low lumber failure was40,673 OCR4.0,673; widened saved crop resolves40,673. Candidate up to5 detected life-output bubbles instead of fixed lumber coordinates; full replay next role.",
   "steps": [
     {
       "name": "01-check-city",
@@ -839,7 +839,7 @@
       "observe_attempts": 6
     },
     {
-      "name": "balance-lumber",
+      "name": "output-0-balance",
       "action": "observe",
       "before": {
         "all": [
@@ -850,26 +850,56 @@
           "升级"
         ]
       },
+      "finish_if": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ],
+        "template_regions": [
+          {
+            "template": "island-life-bubble",
+            "bounds": [
+              160,
+              260,
+              650,
+              835
+            ],
+            "min_score": 0.88,
+            "mode": "grayscale",
+            "present": false
+          }
+        ]
+      },
       "remember_numbers": [
         {
           "name": "life",
           "bounds": [
-            580,
-            39,
-            653,
-            78
+            575,
+            38,
+            662,
+            76
           ],
           "min_confidence": 0.3
         }
       ]
     },
     {
-      "name": "collect-lumber",
+      "name": "output-0-collect",
       "action": "click",
-      "point": [
-        394,
-        641
-      ],
+      "image_target": {
+        "template": "island-life-bubble",
+        "bounds": [
+          160,
+          260,
+          650,
+          835
+        ],
+        "min_score": 0.88,
+        "mode": "grayscale"
+      },
       "before": {
         "all": [
           "我的海岛"
@@ -878,15 +908,17 @@
           "生命之树等级",
           "升级"
         ],
-        "green_regions": [
+        "template_regions": [
           {
+            "template": "island-life-bubble",
             "bounds": [
-              374,
-              619,
-              413,
-              658
+              160,
+              260,
+              650,
+              835
             ],
-            "min": 0.08
+            "min_score": 0.88,
+            "mode": "grayscale"
           }
         ]
       },
@@ -899,30 +931,10 @@
           "升级"
         ]
       },
-      "observe_attempts": 5,
-      "skip_if": {
-        "all": [
-          "我的海岛"
-        ],
-        "none": [
-          "生命之树等级",
-          "升级"
-        ],
-        "green_regions": [
-          {
-            "bounds": [
-              374,
-              619,
-              413,
-              658
-            ],
-            "max": 0.079
-          }
-        ]
-      }
+      "observe_attempts": 4
     },
     {
-      "name": "verify-lumber-gain",
+      "name": "output-0-verify",
       "action": "observe",
       "before": {
         "all": [
@@ -937,24 +949,19 @@
         {
           "name": "life",
           "bounds": [
-            580,
-            39,
-            653,
-            78
+            575,
+            38,
+            662,
+            76
           ],
           "min_confidence": 0.3
         }
       ],
-      "skip_if_step_skipped": "collect-lumber",
-      "observe_attempts": 6
+      "observe_attempts": 5
     },
     {
-      "name": "exit-island",
-      "action": "click",
-      "point": [
-        135,
-        52
-      ],
+      "name": "output-1-balance",
+      "action": "observe",
       "before": {
         "all": [
           "我的海岛"
@@ -964,30 +971,476 @@
           "升级"
         ]
       },
-      "after": {
+      "finish_if": {
         "all": [
-          "英雄",
-          "背包",
-          "野外"
+          "我的海岛"
         ],
         "none": [
-          "日常",
-          "建筑队列",
-          "游历补给",
-          "部队训练",
-          "技能学习",
-          "超级提炼优惠",
-          "提炼次数"
+          "生命之树等级",
+          "升级"
         ],
-        "page_text_regions": [
-          [
-            100,
-            995,
-            690,
-            1079
-          ]
+        "template_regions": [
+          {
+            "template": "island-life-bubble",
+            "bounds": [
+              160,
+              260,
+              650,
+              835
+            ],
+            "min_score": 0.88,
+            "mode": "grayscale",
+            "present": false
+          }
         ]
       },
+      "remember_numbers": [
+        {
+          "name": "life",
+          "bounds": [
+            575,
+            38,
+            662,
+            76
+          ],
+          "min_confidence": 0.3
+        }
+      ]
+    },
+    {
+      "name": "output-1-collect",
+      "action": "click",
+      "image_target": {
+        "template": "island-life-bubble",
+        "bounds": [
+          160,
+          260,
+          650,
+          835
+        ],
+        "min_score": 0.88,
+        "mode": "grayscale"
+      },
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ],
+        "template_regions": [
+          {
+            "template": "island-life-bubble",
+            "bounds": [
+              160,
+              260,
+              650,
+              835
+            ],
+            "min_score": 0.88,
+            "mode": "grayscale"
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "output-1-verify",
+      "action": "observe",
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "increased_numbers": [
+        {
+          "name": "life",
+          "bounds": [
+            575,
+            38,
+            662,
+            76
+          ],
+          "min_confidence": 0.3
+        }
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "output-2-balance",
+      "action": "observe",
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ],
+        "template_regions": [
+          {
+            "template": "island-life-bubble",
+            "bounds": [
+              160,
+              260,
+              650,
+              835
+            ],
+            "min_score": 0.88,
+            "mode": "grayscale",
+            "present": false
+          }
+        ]
+      },
+      "remember_numbers": [
+        {
+          "name": "life",
+          "bounds": [
+            575,
+            38,
+            662,
+            76
+          ],
+          "min_confidence": 0.3
+        }
+      ]
+    },
+    {
+      "name": "output-2-collect",
+      "action": "click",
+      "image_target": {
+        "template": "island-life-bubble",
+        "bounds": [
+          160,
+          260,
+          650,
+          835
+        ],
+        "min_score": 0.88,
+        "mode": "grayscale"
+      },
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ],
+        "template_regions": [
+          {
+            "template": "island-life-bubble",
+            "bounds": [
+              160,
+              260,
+              650,
+              835
+            ],
+            "min_score": 0.88,
+            "mode": "grayscale"
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "output-2-verify",
+      "action": "observe",
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "increased_numbers": [
+        {
+          "name": "life",
+          "bounds": [
+            575,
+            38,
+            662,
+            76
+          ],
+          "min_confidence": 0.3
+        }
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "output-3-balance",
+      "action": "observe",
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ],
+        "template_regions": [
+          {
+            "template": "island-life-bubble",
+            "bounds": [
+              160,
+              260,
+              650,
+              835
+            ],
+            "min_score": 0.88,
+            "mode": "grayscale",
+            "present": false
+          }
+        ]
+      },
+      "remember_numbers": [
+        {
+          "name": "life",
+          "bounds": [
+            575,
+            38,
+            662,
+            76
+          ],
+          "min_confidence": 0.3
+        }
+      ]
+    },
+    {
+      "name": "output-3-collect",
+      "action": "click",
+      "image_target": {
+        "template": "island-life-bubble",
+        "bounds": [
+          160,
+          260,
+          650,
+          835
+        ],
+        "min_score": 0.88,
+        "mode": "grayscale"
+      },
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ],
+        "template_regions": [
+          {
+            "template": "island-life-bubble",
+            "bounds": [
+              160,
+              260,
+              650,
+              835
+            ],
+            "min_score": 0.88,
+            "mode": "grayscale"
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "output-3-verify",
+      "action": "observe",
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "increased_numbers": [
+        {
+          "name": "life",
+          "bounds": [
+            575,
+            38,
+            662,
+            76
+          ],
+          "min_confidence": 0.3
+        }
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "output-4-balance",
+      "action": "observe",
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ],
+        "template_regions": [
+          {
+            "template": "island-life-bubble",
+            "bounds": [
+              160,
+              260,
+              650,
+              835
+            ],
+            "min_score": 0.88,
+            "mode": "grayscale",
+            "present": false
+          }
+        ]
+      },
+      "remember_numbers": [
+        {
+          "name": "life",
+          "bounds": [
+            575,
+            38,
+            662,
+            76
+          ],
+          "min_confidence": 0.3
+        }
+      ]
+    },
+    {
+      "name": "output-4-collect",
+      "action": "click",
+      "image_target": {
+        "template": "island-life-bubble",
+        "bounds": [
+          160,
+          260,
+          650,
+          835
+        ],
+        "min_score": 0.88,
+        "mode": "grayscale"
+      },
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ],
+        "template_regions": [
+          {
+            "template": "island-life-bubble",
+            "bounds": [
+              160,
+              260,
+              650,
+              835
+            ],
+            "min_score": 0.88,
+            "mode": "grayscale"
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "output-4-verify",
+      "action": "observe",
+      "before": {
+        "all": [
+          "我的海岛"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "increased_numbers": [
+        {
+          "name": "life",
+          "bounds": [
+            575,
+            38,
+            662,
+            76
+          ],
+          "min_confidence": 0.3
+        }
+      ],
       "observe_attempts": 5
     }
   ],
