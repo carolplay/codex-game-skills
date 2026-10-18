@@ -12,3 +12,5 @@
 - Main-account status is machine-local and must be honored. Use only explicitly marked test roles for new macro development; permission for a main account to finish an already-started batch does not make it a test role. Prefer targeted validation of new or changed actions over repeating stable full batches.
 
 - Read `docs/PROJECT-CONTEXT.md` for user authorization and the low-cost game-resource experiment model. Do not add repeated project-level approvals for already-authorized game actions or treat virtual resources as real money. Game strategy belongs to the visit plan/local role configuration; system permissions and real payment remain separate. This does not override platform-enforced review, account scope, pause state or the no-payment boundary.
+
+- Use 三班 (UTC00/08/16) terminology and classify tasks by shift/day/week/four-week/event. Read `docs/V2-OPERATIONS.md` for pilot and fresh V2 worker boundaries. At the next user discussion, raise `docs/RESOURCE-TASK-PRIORITIES.md`; that discussion must not reduce daily coverage.

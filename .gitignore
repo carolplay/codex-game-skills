@@ -1,3 +1,7 @@
 
 # Private accounts, screenshots and local execution records
 /local-data/
+
+# Python verification caches
+__pycache__/
+*.py[cod]
