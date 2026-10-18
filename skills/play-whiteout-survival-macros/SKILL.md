@@ -17,7 +17,9 @@ description: 用本地宏执行 Whiteout Survival 已支持的固定流程，结
 
 音效仅作为动作反馈候选；身份、奖励和付费边界仍需视觉证据。录音仅捕获目标游戏进程。输入不确定时不盲目重复领取。不现金购买、不聊天、不攻击玩家。普通/稀缺资源遵守账号预算。单次实验不恢复长期暂停的定时任务。
 
-`scripts/plan_visit.py --config <配置.json> --output <计划.json>` 只生成已有宏清单，不操作游戏或启用排程。未宏化项目排除；部分分支验证的宏标为 `macro` 并保留 `verification_scope`，不转给 agent 补做。
+正式执行清单由 `catalog.json`、`actions/` 和 `macros/shift-{1,2,3}.json` 组成，见 [发布包与运行入口](references/macro-package.md)。先调用 `scripts/macro_package.py` 校验，再通过 `scripts/run_visit.py --manifest ... --profile ...` 一次运行整批；默认只校验，`--execute` 才执行。角色身份、预算和租约由本地配置提供。包、组合宏和action分别记版本，组合固定action哈希，报告同时保留执行器版本。
+
+旧 `scripts/plan_visit.py` 仅兼容早期本地配置的离线规划，不能作为当前班次发布清单。未宏化项目记录覆盖缺口，部分验证候选保留分支标签，不转给agent补做。
 
 流程语义和录制维护按需读 [流程卡](references/recording-cards.md)、[三周期任务资料](references/visit-plan.md)；这些资料不扩大当前执行清单。
 

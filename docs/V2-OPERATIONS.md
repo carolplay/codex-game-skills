@@ -51,13 +51,15 @@ V1离线追踪已按run_id选正式报告，checkpoint/device文件不重复计�
 
 ## 宏与action版本
 
-当前V2宏套件从 `0.1.0` 建立版本基线；各action在CrossMacro JSON中声明稳定的 `action_id` 与 `action_version`。版本从引入之日起记录，旧日志标为未版本化，不回填推测版本。
+当前V2宏套件从 `0.1.0` 建立版本基线；各action在skill仓库的 `actions/` JSON中声明稳定的 `action_id` 与 `action_version`。版本从引入之日起记录，旧日志标为未版本化，不回填推测版本。
 
 每个批次开始记录清单顺序、套件版本、各action版本与SHA-256；逐项报告和未执行项保留相同标识。恢复步骤继承所属action版本，报告附退出步骤名与实际内容哈希。这样同名任务的不同修订和错误未升版本的改动都可追踪。
 
 OCR、时序或退出修复升patch；新增适用分支升minor；改变入口/出口或业务契约升major。每次发布动作或执行器变化同时更新套件版本，执行中的批次不得热改。版本不代替验收状态：失败要记录版本、分支、退出结果和证据；零奖励/冷却跳过与真实领取分开统计。
 
 下一班优先炼晶、低等级VIP及失败退出，定向验证“已知业务偏差→预定义有限退出→主城核验→后续action”。未知页不能靠盲退绕过，必须补齐可识别页面的退出覆盖。之后补银行和其他日常，不重复回归稳定流程。
+
+WOS动作的唯一维护来源现为 `skills/play-whiteout-survival-macros/`：`catalog.json` 注册动作身份，`macros/shift-{1,2,3}.json` 独立版本化组合与角色适用范围。发布包0.2.0与CrossMacro通用执行器0.1.3分别记录，不能混称一个suite版本。详见[发布包](../skills/play-whiteout-survival-macros/references/macro-package.md)。正式班次从固定manifest加载，新增action不得因旧本地六项清单而漏排；未纳入必须声明原因。银行尚未实现，保持覆盖缺口。
 
 ## WOS窗口协调
 
