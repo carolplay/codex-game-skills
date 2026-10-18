@@ -1,6 +1,6 @@
 {
   "action_id": "wos-alliance-incentive",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS alliance_incentive",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior actual personal daily chest captured. Weekly settlement is separate; this action does not call it collected.",
+  "verification_scope": "Role2944 overview group heading left of old bounds; expand target to verified header and arrow offset; not yet live replay.",
   "steps": [
     {
       "name": "01-check-city",
@@ -692,14 +692,14 @@
         "text": "联盟激励",
         "exact": false,
         "bounds": [
-          180,
+          98,
           280,
-          380,
+          390,
           740
         ],
         "offset": [
-          150,
-          10
+          270,
+          50
         ],
         "min_confidence": 0.3
       },

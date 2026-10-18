@@ -1,6 +1,6 @@
 {
   "action_id": "wos-orders",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS orders",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Production detail/cooldown and two-stage exit sampled; available use branch needs next-role calibration. Other decrees remain development gaps.",
+  "verification_scope": "Role2944 actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass.",
   "steps": [
     {
       "name": "01-check-city",
@@ -204,6 +204,46 @@
       "observe_attempts": 8
     },
     {
+      "name": "close-production-reward",
+      "action": "click",
+      "point": [
+        394,
+        998
+      ],
+      "before": {
+        "all": [
+          "获得奖励",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 30,
+      "skip_if_step_skipped": "use-production-if-ready"
+    },
+    {
       "name": "exit-production-detail",
       "action": "click",
       "point": [
@@ -222,7 +262,31 @@
           "冷却时间"
         ]
       },
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
     },
     {
       "name": "exit-orders",
@@ -263,7 +327,31 @@
           ]
         ]
       },
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
     }
   ],
   "task_contract": {
@@ -322,6 +410,45 @@
         },
         "observe_attempts": 3,
         "verify_identity": true
+      },
+      {
+        "name": "exit-production-reward",
+        "action": "click",
+        "point": [
+          394,
+          998
+        ],
+        "before": {
+          "all": [
+            "获得奖励",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
       },
       {
         "name": "exit-overview",
