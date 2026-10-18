@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.2.4",
-  "package_version": "0.2.4",
+  "macro_version": "0.2.6",
+  "package_version": "0.2.6",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions"
@@ -12,44 +12,44 @@
         {
           "task": "mail",
           "action_id": "wos-mail-rewards",
-          "action_version": "0.1.0",
-          "sha256": "dd48031a2ad7cb9ab9a718cbb9fcbf6d3bc8c230e77a9e4f67ce7c2459e4c396"
+          "action_version": "0.1.1",
+          "sha256": "fee8a45201bb2b1d871d7db85b6b777302e80342ec744cec4de29b3f9f591e16"
         },
         {
           "task": "idle",
           "action_id": "wos-idle-rewards",
-          "action_version": "0.1.0",
-          "sha256": "1cf99489ae1dcf8a07bc79a01ec51024b48058f3d68dbee1a0ac0c3384a5220e"
+          "action_version": "0.1.1",
+          "sha256": "7b28b7f11b6cfb876d613650aa435c48b2737cc5c2191920a18b44d6f8056d93"
         },
         {
           "task": "feast",
           "action_id": "wos-stamina-meal",
-          "action_version": "0.1.0",
-          "sha256": "bb3ccfe981dff318a8694c0339fd337d5b92a72b56c164c6639172f443076492"
+          "action_version": "0.1.1",
+          "sha256": "2a5b8775372e125f2984ca2cf675fc9da0499c302f45ff5ba89f0af5e2034992"
         },
         {
           "task": "academy",
           "action_id": "wos-academy-supply",
-          "action_version": "0.1.0",
-          "sha256": "215bef4725fa4cd5ae5945aed5e3b993846b3504336d3ce7062d4d972dcf91e1"
+          "action_version": "0.1.1",
+          "sha256": "9614f67ae5afcc4ffa1be0614293ec116c1dd30fe9150fc3823ee95032e4d39e"
         },
         {
           "task": "alliance",
           "action_id": "wos-alliance-free",
-          "action_version": "0.1.0",
-          "sha256": "c1ef0a074bee27e4ad3b1abbd741a3f7118451fde6dbe54c4189970e51f61f88"
+          "action_version": "0.1.1",
+          "sha256": "dc13891ca0e6e78a629db61df7ea461125caa722a96ad089973b63fe4e2bf37e"
         },
         {
           "task": "help",
           "action_id": "wos-alliance-help",
-          "action_version": "0.1.0",
-          "sha256": "fc099108d186fa77a279da4f79735b0b4b0d85b644f7e7550043a6d21b90cc5c"
+          "action_version": "0.1.1",
+          "sha256": "9a59f93d453edc02a2dd435a6c53e7ff3364892d0b8a3f54a17ef0068ad83fab"
         },
         {
           "task": "daily",
           "action_id": "wos-daily-earned",
-          "action_version": "0.1.0",
-          "sha256": "bb7e29e9a7b8d8d3ad5bc690927f6f266c2cf31d9c3ea060e53c913c449a0831"
+          "action_version": "0.1.1",
+          "sha256": "0436cd4f0d8754e02e5919e3c93bf84e61d4ae740f538e281f2c36b80d7fd20f"
         }
       ],
       "excluded": {
@@ -61,7 +61,8 @@
         "marksman": "主号暂限已验收动作；新增分支先在试验号验证",
         "crystal": "主号暂限已验收动作；新增分支先在试验号验证",
         "refined": "主号暂限已验收动作；新增分支先在试验号验证",
-        "expert": "主号暂限已验收动作；新增分支先在试验号验证"
+        "expert": "主号暂限已验收动作；新增分支先在试验号验证",
+        "bank": "新银行分支先在成熟试验角色验证；主号和低等级适用范围尚未验收"
       }
     },
     "mature-test": {
@@ -69,92 +70,98 @@
         {
           "task": "mail",
           "action_id": "wos-mail-rewards",
-          "action_version": "0.1.0",
-          "sha256": "dd48031a2ad7cb9ab9a718cbb9fcbf6d3bc8c230e77a9e4f67ce7c2459e4c396"
+          "action_version": "0.1.1",
+          "sha256": "fee8a45201bb2b1d871d7db85b6b777302e80342ec744cec4de29b3f9f591e16"
         },
         {
           "task": "idle",
           "action_id": "wos-idle-rewards",
-          "action_version": "0.1.0",
-          "sha256": "1cf99489ae1dcf8a07bc79a01ec51024b48058f3d68dbee1a0ac0c3384a5220e"
+          "action_version": "0.1.1",
+          "sha256": "7b28b7f11b6cfb876d613650aa435c48b2737cc5c2191920a18b44d6f8056d93"
         },
         {
           "task": "feast",
           "action_id": "wos-stamina-meal",
-          "action_version": "0.1.0",
-          "sha256": "bb3ccfe981dff318a8694c0339fd337d5b92a72b56c164c6639172f443076492"
+          "action_version": "0.1.1",
+          "sha256": "2a5b8775372e125f2984ca2cf675fc9da0499c302f45ff5ba89f0af5e2034992"
         },
         {
           "task": "academy",
           "action_id": "wos-academy-supply",
-          "action_version": "0.1.0",
-          "sha256": "215bef4725fa4cd5ae5945aed5e3b993846b3504336d3ce7062d4d972dcf91e1"
+          "action_version": "0.1.1",
+          "sha256": "9614f67ae5afcc4ffa1be0614293ec116c1dd30fe9150fc3823ee95032e4d39e"
         },
         {
           "task": "alliance",
           "action_id": "wos-alliance-free",
-          "action_version": "0.1.0",
-          "sha256": "c1ef0a074bee27e4ad3b1abbd741a3f7118451fde6dbe54c4189970e51f61f88"
+          "action_version": "0.1.1",
+          "sha256": "dc13891ca0e6e78a629db61df7ea461125caa722a96ad089973b63fe4e2bf37e"
         },
         {
           "task": "help",
           "action_id": "wos-alliance-help",
-          "action_version": "0.1.0",
-          "sha256": "fc099108d186fa77a279da4f79735b0b4b0d85b644f7e7550043a6d21b90cc5c"
+          "action_version": "0.1.1",
+          "sha256": "9a59f93d453edc02a2dd435a6c53e7ff3364892d0b8a3f54a17ef0068ad83fab"
         },
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.1",
-          "sha256": "73ea80d3bdbf6e418fefd7e0be203600b9395d3e29948bd68e7c60a21d232820"
+          "action_version": "0.1.2",
+          "sha256": "0591a34862bfafea1ffd93ac9140b877ceae329494f5a380edaab6b2a7fc152a"
         },
         {
           "task": "expert",
           "action_id": "wos-expert-camp-rewards",
-          "action_version": "0.1.0",
-          "sha256": "3a6b93923285342a0f94031ca45306bf6282e98d6c7d49204c2742d130ca46c9"
+          "action_version": "0.1.1",
+          "sha256": "d6e5cd7d7cc00405b1027b475bc79e807da0708587aca48fd2cb37e30b283b6d"
         },
         {
           "task": "refined",
           "action_id": "wos-crystal-half-price",
-          "action_version": "0.1.2",
-          "sha256": "d0a8b550ea41eb9424bc75dbe981dd8068c21b6f0772a81b2e1cb8d16c68b4ef"
+          "action_version": "0.1.3",
+          "sha256": "c648bbb80546bc2249abe9378206946350505227a504a25c7d697358fb1ea080"
         },
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.2",
-          "sha256": "37bb576d50b79670779c00245f22b51e8c961c8c30c689edfccc93dffb3a4bbd"
+          "action_version": "0.1.3",
+          "sha256": "0af6777d4d73d0c5741b5cebb1ad68919c6b1b2c460d313470eab883be3b11ab"
+        },
+        {
+          "task": "bank",
+          "action_id": "wos-bank-one-day",
+          "action_version": "0.1.1",
+          "sha256": "f1d3e49b0e2bc1d1fa4f6f527cec8371214e4eac36b1eaf156b7556267ee8fbb"
         },
         {
           "task": "shield",
           "action_id": "wos-training-shield",
-          "action_version": "0.2.1",
-          "sha256": "652c1f6ac8e57cb3c675c657008a5fac943c9b2965fe283ffa4b654cda10e61f"
+          "action_version": "0.2.2",
+          "sha256": "75957567f552de7384dd194923b0d744c9080595bbefca2a240609133114ede0"
         },
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.2.1",
-          "sha256": "4728789abdadc0caecdae0c544fe445dced962d7a6591d46ce19853a58375543"
+          "action_version": "0.2.2",
+          "sha256": "34afa70805b882c5ade2c210fedc010dc5f5f379b354283e527fc39845747afd"
         },
         {
           "task": "marksman",
           "action_id": "wos-training-marksman",
-          "action_version": "0.2.1",
-          "sha256": "79d57398b12792e43728be7a509a4470267656e9c6f7c126b9994a10f66f1d83"
+          "action_version": "0.2.2",
+          "sha256": "5e405b7548931656ef455babf200595ab4aaaa5f5c17c6d346674d728b331666"
         },
         {
           "task": "donate",
           "action_id": "wos-alliance-donate",
-          "action_version": "0.1.2",
-          "sha256": "3f7ba073bc45ad3154a02de00d3c8052ce8e1eccc9fe3bd60d6d55fa9a2f445f"
+          "action_version": "0.1.3",
+          "sha256": "bc3621d0563c4cbc9a3c304cae30115a2ed51d4da575a36a56d6efb531427fd7"
         },
         {
           "task": "daily",
           "action_id": "wos-daily-earned",
-          "action_version": "0.1.0",
-          "sha256": "bb7e29e9a7b8d8d3ad5bc690927f6f266c2cf31d9c3ea060e53c913c449a0831"
+          "action_version": "0.1.1",
+          "sha256": "0436cd4f0d8754e02e5919e3c93bf84e61d4ae740f538e281f2c36b80d7fd20f"
         }
       ],
       "excluded": {
@@ -166,44 +173,44 @@
         {
           "task": "mail",
           "action_id": "wos-mail-rewards",
-          "action_version": "0.1.0",
-          "sha256": "dd48031a2ad7cb9ab9a718cbb9fcbf6d3bc8c230e77a9e4f67ce7c2459e4c396"
+          "action_version": "0.1.1",
+          "sha256": "fee8a45201bb2b1d871d7db85b6b777302e80342ec744cec4de29b3f9f591e16"
         },
         {
           "task": "idle",
           "action_id": "wos-idle-rewards",
-          "action_version": "0.1.0",
-          "sha256": "1cf99489ae1dcf8a07bc79a01ec51024b48058f3d68dbee1a0ac0c3384a5220e"
+          "action_version": "0.1.1",
+          "sha256": "7b28b7f11b6cfb876d613650aa435c48b2737cc5c2191920a18b44d6f8056d93"
         },
         {
           "task": "feast",
           "action_id": "wos-stamina-meal",
-          "action_version": "0.1.0",
-          "sha256": "bb3ccfe981dff318a8694c0339fd337d5b92a72b56c164c6639172f443076492"
+          "action_version": "0.1.1",
+          "sha256": "2a5b8775372e125f2984ca2cf675fc9da0499c302f45ff5ba89f0af5e2034992"
         },
         {
           "task": "alliance",
           "action_id": "wos-alliance-free",
-          "action_version": "0.1.0",
-          "sha256": "c1ef0a074bee27e4ad3b1abbd741a3f7118451fde6dbe54c4189970e51f61f88"
+          "action_version": "0.1.1",
+          "sha256": "dc13891ca0e6e78a629db61df7ea461125caa722a96ad089973b63fe4e2bf37e"
         },
         {
           "task": "help",
           "action_id": "wos-alliance-help",
-          "action_version": "0.1.0",
-          "sha256": "fc099108d186fa77a279da4f79735b0b4b0d85b644f7e7550043a6d21b90cc5c"
+          "action_version": "0.1.1",
+          "sha256": "9a59f93d453edc02a2dd435a6c53e7ff3364892d0b8a3f54a17ef0068ad83fab"
         },
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.1",
-          "sha256": "73ea80d3bdbf6e418fefd7e0be203600b9395d3e29948bd68e7c60a21d232820"
+          "action_version": "0.1.2",
+          "sha256": "0591a34862bfafea1ffd93ac9140b877ceae329494f5a380edaab6b2a7fc152a"
         },
         {
           "task": "daily",
           "action_id": "wos-daily-earned",
-          "action_version": "0.1.0",
-          "sha256": "bb7e29e9a7b8d8d3ad5bc690927f6f266c2cf31d9c3ea060e53c913c449a0831"
+          "action_version": "0.1.1",
+          "sha256": "0436cd4f0d8754e02e5919e3c93bf84e61d4ae740f538e281f2c36b80d7fd20f"
         }
       ],
       "excluded": {
@@ -215,7 +222,8 @@
         "marksman": "未解锁或等级界面尚未验证，不假定成熟号流程适用",
         "crystal": "未解锁或等级界面尚未验证，不假定成熟号流程适用",
         "refined": "未解锁或等级界面尚未验证，不假定成熟号流程适用",
-        "expert": "未解锁或等级界面尚未验证，不假定成熟号流程适用"
+        "expert": "未解锁或等级界面尚未验证，不假定成熟号流程适用",
+        "bank": "新银行分支先在成熟试验角色验证；主号和低等级适用范围尚未验收"
       }
     }
   }

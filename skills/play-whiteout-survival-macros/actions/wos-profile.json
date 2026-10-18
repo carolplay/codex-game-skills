@@ -1,12 +1,92 @@
 {
   "action_id": "wos-profile",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS — profile round trip (background input)",
-  "reference_size": [788, 1079],
+  "reference_size": [
+    788,
+    1079
+  ],
   "steps": [
-    {"name": "01-check-city", "action": "observe", "before": ["英雄", "背包", "野外"]},
-    {"name": "02-open-profile", "action": "click", "point": [138, 65], "before": ["英雄", "背包", "野外"], "after": ["领主档案"]},
-    {"name": "03-verify-identity", "action": "observe", "before": ["领主档案"], "verify_identity": true},
-    {"name": "04-return-city", "action": "click", "point": [138, 65], "before": ["领主档案"], "verify_identity": true, "after": ["英雄", "背包", "野外"]}
-  ]
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    }
+  ],
+  "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

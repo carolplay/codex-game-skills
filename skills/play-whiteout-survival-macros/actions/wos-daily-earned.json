@@ -1,6 +1,6 @@
 {
   "action_id": "wos-daily-earned",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS — earned daily rewards and game-queued progress rewards",
   "reference_size": [
     788,
@@ -20,6 +20,14 @@
           "日常",
           "建造队列",
           "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
         ]
       }
     },
@@ -30,11 +38,21 @@
         138,
         65
       ],
-      "before": [
-        "英雄",
-        "背包",
-        "野外"
-      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
       "after": [
         "领主档案"
       ]
@@ -58,11 +76,21 @@
         "领主档案"
       ],
       "verify_identity": true,
-      "after": [
-        "英雄",
-        "背包",
-        "野外"
-      ]
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
     },
     {
       "name": "daily-open",
@@ -71,11 +99,21 @@
         137,
         892
       ],
-      "before": [
-        "英雄",
-        "背包",
-        "野外"
-      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
       "after": [
         "成长任务",
         "每日任务"
@@ -411,11 +449,21 @@
         "每日任务",
         "成长任务"
       ],
-      "after": [
-        "英雄",
-        "背包",
-        "野外"
-      ],
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
       "observe_attempts": 3
     }
   ],
@@ -434,6 +482,14 @@
         "技能学习",
         "超级提炼优惠",
         "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
       ]
     },
     "entry_anchor": "city",
@@ -477,11 +533,21 @@
           "每日任务",
           "成长任务"
         ],
-        "after": [
-          "英雄",
-          "背包",
-          "野外"
-        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
         "observe_attempts": 3
       },
       {
@@ -494,11 +560,21 @@
         "before": [
           "领主档案"
         ],
-        "after": [
-          "英雄",
-          "背包",
-          "野外"
-        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
         "observe_attempts": 3,
         "verify_identity": true
       },
@@ -525,6 +601,14 @@
             "竞技场",
             "生命之树",
             "联盟捐献"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
           ]
         },
         "after": {
@@ -537,6 +621,14 @@
             "日常",
             "建造队列",
             "游历补给"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
           ]
         },
         "observe_attempts": 5
@@ -544,5 +636,6 @@
     ]
   },
   "status": "real_claim_replay_verified",
-  "verification_scope": "Claimed already-earned daily tasks, dismissed two auto-queued reward layers and returned city. No explicit per-chest clicking; no incomplete tasks performed."
+  "verification_scope": "Claimed already-earned daily tasks, dismissed two auto-queued reward layers and returned city. No explicit per-chest clicking; no incomplete tasks performed.",
+  "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

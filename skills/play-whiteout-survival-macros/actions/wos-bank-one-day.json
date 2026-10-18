@@ -1,0 +1,744 @@
+{
+  "action_id": "wos-bank-one-day",
+  "action_version": "0.1.1",
+  "name": "WOS — mature bank withdrawal and one-day deposit under local cap",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 180,
+  "verification_status": "candidate",
+  "verification_scope": "银行入口与固定退出已宏回放；已到期收益为开发采样取出，非宏证明。0.1.0空存款期数字1漏读天字，提交前停止、0存入；0.1.1用左上格局部OCR确认一天，并修正弹窗退出排他条件，离线失败图验证，存入/活动存款/宏取出均待下一班。",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-deals",
+      "action": "click",
+      "point": [
+        644,
+        235
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "超值活动"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "find-bank-01",
+      "action": "click",
+      "point": [
+        656,
+        137
+      ],
+      "before": [
+        "超值活动"
+      ],
+      "after": [
+        "超值活动"
+      ],
+      "skip_if": [
+        "银行",
+        "存储周期"
+      ],
+      "observe_attempts": 3
+    },
+    {
+      "name": "find-bank-02",
+      "action": "click",
+      "point": [
+        656,
+        137
+      ],
+      "before": [
+        "超值活动"
+      ],
+      "after": [
+        "超值活动"
+      ],
+      "skip_if": [
+        "银行",
+        "存储周期"
+      ],
+      "observe_attempts": 3
+    },
+    {
+      "name": "find-bank-03",
+      "action": "click",
+      "point": [
+        656,
+        137
+      ],
+      "before": [
+        "超值活动"
+      ],
+      "after": [
+        "超值活动"
+      ],
+      "skip_if": [
+        "银行",
+        "存储周期"
+      ],
+      "observe_attempts": 3
+    },
+    {
+      "name": "find-bank-04",
+      "action": "click",
+      "point": [
+        656,
+        137
+      ],
+      "before": [
+        "超值活动"
+      ],
+      "after": [
+        "超值活动"
+      ],
+      "skip_if": [
+        "银行",
+        "存储周期"
+      ],
+      "observe_attempts": 3
+    },
+    {
+      "name": "find-bank-05",
+      "action": "click",
+      "point": [
+        656,
+        137
+      ],
+      "before": [
+        "超值活动"
+      ],
+      "after": [
+        "超值活动"
+      ],
+      "skip_if": [
+        "银行",
+        "存储周期"
+      ],
+      "observe_attempts": 3
+    },
+    {
+      "name": "find-bank-06",
+      "action": "click",
+      "point": [
+        656,
+        137
+      ],
+      "before": [
+        "超值活动"
+      ],
+      "after": [
+        "超值活动"
+      ],
+      "skip_if": [
+        "银行",
+        "存储周期"
+      ],
+      "observe_attempts": 3
+    },
+    {
+      "name": "bank-page",
+      "action": "observe",
+      "before": [
+        "银行",
+        "存储周期"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "bank-withdraw-matured",
+      "action": "click",
+      "point": [
+        254,
+        738
+      ],
+      "before": {
+        "all": [
+          "银行",
+          "已完成",
+          "取出钻石"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              180,
+              720,
+              325,
+              750
+            ],
+            "min": 0.2
+          }
+        ]
+      },
+      "after": [
+        "奖励",
+        "点击任意位置退出"
+      ],
+      "skip_if_any": [
+        {
+          "all": [
+            "银行",
+            "存储"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                150,
+                490,
+                365,
+                545
+              ],
+              "pattern": "存储周期:?[1Il](?:天)?",
+              "crop_ocr": true
+            }
+          ]
+        },
+        {
+          "all": [
+            "银行"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              140,
+              490,
+              360,
+              550
+            ],
+            "min": 1,
+            "max": 86400
+          }
+        }
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "bank-dismiss-reward",
+      "action": "click",
+      "point": [
+        394,
+        790
+      ],
+      "before": [
+        "奖励",
+        "点击任意位置退出"
+      ],
+      "after": [
+        "银行",
+        "存储周期"
+      ],
+      "skip_if": [
+        "银行",
+        "存储周期"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "bank-open-one-day",
+      "action": "click",
+      "point": [
+        254,
+        738
+      ],
+      "before": {
+        "all": [
+          "银行",
+          "存储"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              150,
+              490,
+              365,
+              545
+            ],
+            "pattern": "存储周期:?[1Il](?:天)?",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "日均收益",
+          "最高存储数量",
+          "最低存储数量"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              270,
+              300,
+              530,
+              355
+            ],
+            "pattern": "存储周期:?[1Il]天",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "银行"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            140,
+            490,
+            360,
+            550
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "bank-select-limit",
+      "action": "click",
+      "point": [
+        611,
+        650
+      ],
+      "before": {
+        "all": [
+          "日均收益",
+          "最高存储数量",
+          "最低存储数量"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              270,
+              300,
+              530,
+              355
+            ],
+            "pattern": "存储周期:?[1Il]天",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "日均收益",
+          "最高存储数量",
+          "最低存储数量"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              270,
+              300,
+              530,
+              355
+            ],
+            "pattern": "存储周期:?[1Il]天",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "银行"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            140,
+            490,
+            360,
+            550
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "bank-deposit-one-day",
+      "action": "click",
+      "point": [
+        519,
+        763
+      ],
+      "before": {
+        "all": [
+          "日均收益",
+          "最高存储数量",
+          "最低存储数量",
+          "5.0%"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              270,
+              300,
+              530,
+              355
+            ],
+            "pattern": "存储周期:?[1Il]天",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "银行"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            140,
+            490,
+            360,
+            550
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "skip_if": {
+        "all": [
+          "银行"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            140,
+            490,
+            360,
+            550
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "observe_attempts": 8,
+      "budget_checks": [
+        {
+          "bounds": [
+            475,
+            630,
+            580,
+            675
+          ],
+          "max_config": "bank_max_deposit",
+          "min": 100
+        }
+      ],
+      "once_per_game_day": "bank-one-day-deposit"
+    },
+    {
+      "name": "bank-active-one-day",
+      "action": "observe",
+      "before": {
+        "all": [
+          "银行"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            140,
+            490,
+            360,
+            550
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "bank-return-city",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": [
+        "银行",
+        "存储周期"
+      ],
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 3,
+    "exits": [
+      {
+        "name": "exit-bank-day-modal",
+        "action": "click",
+        "point": [
+          626,
+          325
+        ],
+        "before": {
+          "all": [
+            "日均收益",
+            "最高存储数量",
+            "最低存储数量"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                270,
+                300,
+                530,
+                355
+              ],
+              "pattern": "存储周期:?[1Il]天",
+              "crop_ocr": true
+            }
+          ]
+        },
+        "after": [
+          "银行",
+          "存储周期"
+        ],
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-bank-reward",
+        "action": "click",
+        "point": [
+          394,
+          790
+        ],
+        "before": [
+          "奖励",
+          "点击任意位置退出"
+        ],
+        "after": [
+          "银行",
+          "存储周期"
+        ],
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-bank",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "超值活动",
+            "银行"
+          ],
+          "none": [
+            "最高存储数量",
+            "最低存储数量",
+            "日均收益",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-other-deals-tab",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "超值活动"
+          ],
+          "none": [
+            "银行",
+            "存储周期:1天",
+            "最高存储数量",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "verify_identity": true,
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3
+      }
+    ]
+  }
+}

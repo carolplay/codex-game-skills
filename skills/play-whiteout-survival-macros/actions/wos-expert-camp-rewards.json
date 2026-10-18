@@ -1,6 +1,6 @@
 {
   "action_id": "wos-expert-camp-rewards",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS — shield camp expert badge rewards (trial)",
   "reference_size": [
     788,
@@ -22,6 +22,14 @@
           "日常",
           "建造队列",
           "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
         ]
       }
     },
@@ -32,11 +40,21 @@
         138,
         65
       ],
-      "before": [
-        "英雄",
-        "背包",
-        "野外"
-      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
       "after": [
         "领主档案"
       ]
@@ -60,11 +78,21 @@
         "领主档案"
       ],
       "verify_identity": true,
-      "after": [
-        "英雄",
-        "背包",
-        "野外"
-      ]
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
     },
     {
       "name": "open-overview",
@@ -73,11 +101,21 @@
         109,
         482
       ],
-      "before": [
-        "英雄",
-        "背包",
-        "野外"
-      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
       "after": {
         "all": [
           "英雄",
@@ -131,30 +169,60 @@
         "矛兵",
         "射手"
       ],
-      "after": [
-        "英雄",
-        "背包",
-        "野外"
-      ],
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
       "observe_attempts": 5
     },
     {
       "name": "settle-camp-camera-1",
       "action": "observe",
-      "before": [
-        "英雄",
-        "背包",
-        "野外"
-      ]
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
     },
     {
       "name": "settle-camp-camera-2",
       "action": "observe",
-      "before": [
-        "英雄",
-        "背包",
-        "野外"
-      ]
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
     },
     {
       "name": "claim-camp-badge-1",
@@ -179,6 +247,14 @@
             ],
             "min": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
         ]
       },
       "after": {
@@ -192,6 +268,14 @@
           "加雷斯",
           "为您",
           "获得"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
         ]
       },
       "observe_attempts": 5,
@@ -211,6 +295,14 @@
             ],
             "max": 0.025
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
         ]
       }
     },
@@ -237,6 +329,14 @@
             ],
             "min": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
         ]
       },
       "after": {
@@ -250,6 +350,14 @@
           "加雷斯",
           "为您",
           "获得"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
         ]
       },
       "observe_attempts": 5,
@@ -269,6 +377,14 @@
             ],
             "max": 0.025
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
         ]
       }
     },
@@ -291,6 +407,14 @@
             ],
             "max": 0.025
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
         ]
       },
       "observe_attempts": 5
@@ -313,6 +437,14 @@
         "技能学习",
         "超级提炼优惠",
         "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
       ]
     },
     "max_exit_steps": 4,
@@ -327,11 +459,21 @@
         "before": [
           "领主档案"
         ],
-        "after": [
-          "英雄",
-          "背包",
-          "野外"
-        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
         "observe_attempts": 3,
         "verify_identity": true
       },
@@ -373,11 +515,21 @@
             "今日联盟币奖励"
           ]
         },
-        "after": [
-          "英雄",
-          "背包",
-          "野外"
-        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
         "observe_attempts": 3
       },
       {
@@ -403,6 +555,14 @@
             "竞技场",
             "生命之树",
             "联盟捐献"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
           ]
         },
         "after": {
@@ -415,11 +575,20 @@
             "日常",
             "建造队列",
             "游历补给"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
           ]
         },
         "observe_attempts": 5
       }
     ]
   },
-  "verification_scope": "Trial role A passed two actual camp reward-badge claims with Gareth reward and Romulus troop-recruitment banners, then drained badge. Trial role B passed empty-badge branch. Only this camp entry; other Expert/enlistment-office rewards unverified."
+  "verification_scope": "Trial role A passed two actual camp reward-badge claims with Gareth reward and Romulus troop-recruitment banners, then drained badge. Trial role B passed empty-badge branch. Only this camp entry; other Expert/enlistment-office rewards unverified.",
+  "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }
