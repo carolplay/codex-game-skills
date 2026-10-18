@@ -1,6 +1,6 @@
 {
-  "package_version": "0.8.1",
-  "executor_min_version": "0.2.2",
+  "package_version": "0.8.2",
+  "executor_min_version": "0.2.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
     "mail": {
@@ -224,7 +224,7 @@
       "sha256": "2d70d08fb2d08dbbfccbae9af22a4c79eb8fa6671b5ababa49e615c45bb2e9da",
       "period": "day",
       "utility": false,
-      "verification_scope": "Actual role2944 click removed red dot and showed03:16:16 countdown without reward modal. Positive cooldown required after optional modal; next-role replay pending."
+      "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates."
     },
     "arena": {
       "path": "actions/wos-arena.json",
@@ -247,11 +247,11 @@
     "orders": {
       "path": "actions/wos-orders.json",
       "action_id": "wos-orders",
-      "action_version": "0.1.2",
-      "sha256": "06bf063d2e717106a7ad1351d8d98bad2ab7fe8cb57b71a98d38129fbea15935",
+      "action_version": "0.1.3",
+      "sha256": "4c63b924a3bc51f7152c703f7f4686896f8afd61f530368d63c395563a54fccb",
       "period": "day",
       "utility": false,
-      "verification_scope": "Role2944 actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass."
+      "verification_scope": "Role2944 actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass. Mature-role activeuse actually produced reward and recoveredcity; oldafterexpectedcooldown behindreward, false deviation. Nextrevision acceptsreward, thenexistingstrictrewardclose; cooldown skipbranch retained. Nextrole replay pending."
     },
     "intel_rescue": {
       "path": "actions/wos-intel-rescue.json",
@@ -292,29 +292,29 @@
     "gather_wood": {
       "path": "actions/wos-gather-wood.json",
       "action_id": "wos-gather-wood",
-      "action_version": "0.1.1",
-      "sha256": "f4176189ab090ed184ba351804f10fe3788628b5b506f467226ff118f25c6ad3",
+      "action_version": "0.1.2",
+      "sha256": "78ea3e19abbf4e565a048177e948b6009f12568db6efc1ae493d4e1e789d98ca",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending."
     },
     "gather_coal": {
       "path": "actions/wos-gather-coal.json",
       "action_id": "wos-gather-coal",
-      "action_version": "0.1.1",
-      "sha256": "b1be456a95023bfd6fd6f396de35d856b631c9fb70b46d14397ac78c5a60727c",
+      "action_version": "0.1.2",
+      "sha256": "326936b74079fe12051ccebab63222e04ae822442360cc522d6153dc77d212d9",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending."
     },
     "gather_iron": {
       "path": "actions/wos-gather-iron.json",
       "action_id": "wos-gather-iron",
-      "action_version": "0.1.1",
-      "sha256": "ed2d960e1c44bb17bb1cad08a41a8fd4ebed7e227a8e77e1c287401b25a028ab",
+      "action_version": "0.1.2",
+      "sha256": "81d71c11cb92340fc7ba2b945a8496b886fa3848b694a869da1510ffdf8d8f93",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending."
     },
     "healing": {
       "path": "actions/wos-healing.json",
@@ -431,11 +431,11 @@
     "war_academy_commission": {
       "path": "actions/wos-war-academy-commission.json",
       "action_id": "wos-war-academy-commission",
-      "action_version": "0.1.0",
-      "sha256": "c5ad89c0ccf81728784d522eaa3cff10a1ba28d16c907541c78201a361560547",
+      "action_version": "0.1.1",
+      "sha256": "267216f80726155f835b3a6be7c9ee08a5ac8fecf9f2f9ae4d08350031dbfbe2",
       "period": "event",
       "utility": false,
-      "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending."
+      "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. Role2827 actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending."
     }
   },
   "not_implemented": [
@@ -462,10 +462,10 @@
     "gathering": "four resource candidates based on previous recording; hidden category/layout/current level need replay",
     "healing": "ordinary heal candidate; current role empty/running/title/camera branches pending",
     "enlistment": "empty/recall candidate; additional expert rewards still missing",
-    "pet_treasure": "Completeclaims and alliedclaims plus newgold/blue dispatch candidate; purple skins/activepet branches pending.",
+    "pet_treasure": "Two completed sites claimed,1gold+2blue newlydispatched and alliedtreasure actualclaim/city exit on one mature role; running skip on another. Purple skins and insufficientpets pending.",
     "labyrinth": "Available-zone free sweep candidate; battles and cycle-specific progress rewards not yet covered",
     "alliance_incentive": "personal daily only; weekly settlement missing",
-    "travel": "Start/claim candidates;50-supply start/complete manual sample, new-role replay pending.",
+    "travel": "50existing supplies actual macrostart and later actual completedclaim/city exit on one mature role. Empty branch on another. Running/no-supplies branches pending.",
     "war_academy_commission": "FireCrystalDeepExploration free earned rows/milestones candidate; no exchange/research/upgrade or paid extension. New-role replay pending."
   }
 }

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-wood",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS gather_wood",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather.",
+  "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -248,7 +248,8 @@
           0,
           -25
         ],
-        "min_confidence": 0.3
+        "min_confidence": 0.3,
+        "crop_ocr": true
       },
       "before": {
         "all": [
@@ -387,7 +388,8 @@
           0,
           -25
         ],
-        "min_confidence": 0.3
+        "min_confidence": 0.3,
+        "crop_ocr": true
       },
       "before": {
         "all": [
