@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.8.2",
-  "package_version": "0.8.2",
+  "macro_version": "0.8.3",
+  "package_version": "0.8.3",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions"
@@ -90,8 +90,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.2.3",
-          "sha256": "ebcfe9ce1aedbcaaa247cc9846e6b2da4a317f71cea58586205a779ff765fda9"
+          "action_version": "0.2.4",
+          "sha256": "c132c0769ce3733a26c9b7598307a8053033ab043f01b612472df10d9834e014"
         },
         {
           "task": "marksman",
@@ -126,8 +126,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.6",
-          "sha256": "2d70d08fb2d08dbbfccbae9af22a4c79eb8fa6671b5ababa49e615c45bb2e9da"
+          "action_version": "0.1.7",
+          "sha256": "222d1a2445cfdb6454043805c8be2ad8ff234b15e33f11eccf991d5f453925a9"
         },
         {
           "task": "arena",
@@ -156,8 +156,8 @@
         {
           "task": "intel_hero",
           "action_id": "wos-intel-hero",
-          "action_version": "0.1.1",
-          "sha256": "26aae55f92b9dfaaf916fb6d4fdd00a0595f1448c7032416196a69b10d381204"
+          "action_version": "0.1.2",
+          "sha256": "705ca49f42899784f7816c9874cf47d5780d698d2d28f2e9f861be2219fedd2a"
         },
         {
           "task": "intel_beast",
@@ -198,8 +198,8 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.0",
-          "sha256": "cd95f9dd66ee21e9ab50042ac42db60df64bf9b497f556d1684a2c0c21066c60"
+          "action_version": "0.1.1",
+          "sha256": "23fa434f1dae1e26ba5f5715259ec1a5f73611d3ed510f9d043761841b5a2483"
         },
         {
           "task": "pet_treasure_claim",
@@ -345,8 +345,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.2.3",
-          "sha256": "ebcfe9ce1aedbcaaa247cc9846e6b2da4a317f71cea58586205a779ff765fda9"
+          "action_version": "0.2.4",
+          "sha256": "c132c0769ce3733a26c9b7598307a8053033ab043f01b612472df10d9834e014"
         },
         {
           "task": "marksman",
@@ -381,8 +381,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.6",
-          "sha256": "2d70d08fb2d08dbbfccbae9af22a4c79eb8fa6671b5ababa49e615c45bb2e9da"
+          "action_version": "0.1.7",
+          "sha256": "222d1a2445cfdb6454043805c8be2ad8ff234b15e33f11eccf991d5f453925a9"
         },
         {
           "task": "arena",
@@ -411,8 +411,8 @@
         {
           "task": "intel_hero",
           "action_id": "wos-intel-hero",
-          "action_version": "0.1.1",
-          "sha256": "26aae55f92b9dfaaf916fb6d4fdd00a0595f1448c7032416196a69b10d381204"
+          "action_version": "0.1.2",
+          "sha256": "705ca49f42899784f7816c9874cf47d5780d698d2d28f2e9f861be2219fedd2a"
         },
         {
           "task": "intel_beast",
@@ -453,8 +453,8 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.0",
-          "sha256": "cd95f9dd66ee21e9ab50042ac42db60df64bf9b497f556d1684a2c0c21066c60"
+          "action_version": "0.1.1",
+          "sha256": "23fa434f1dae1e26ba5f5715259ec1a5f73611d3ed510f9d043761841b5a2483"
         },
         {
           "task": "pet_treasure_claim",
@@ -558,8 +558,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.6",
-          "sha256": "2d70d08fb2d08dbbfccbae9af22a4c79eb8fa6671b5ababa49e615c45bb2e9da"
+          "action_version": "0.1.7",
+          "sha256": "222d1a2445cfdb6454043805c8be2ad8ff234b15e33f11eccf991d5f453925a9"
         },
         {
           "task": "arena",
@@ -582,8 +582,8 @@
         {
           "task": "intel_hero",
           "action_id": "wos-intel-hero",
-          "action_version": "0.1.1",
-          "sha256": "26aae55f92b9dfaaf916fb6d4fdd00a0595f1448c7032416196a69b10d381204"
+          "action_version": "0.1.2",
+          "sha256": "705ca49f42899784f7816c9874cf47d5780d698d2d28f2e9f861be2219fedd2a"
         },
         {
           "task": "intel_beast",
@@ -624,8 +624,8 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.0",
-          "sha256": "cd95f9dd66ee21e9ab50042ac42db60df64bf9b497f556d1684a2c0c21066c60"
+          "action_version": "0.1.1",
+          "sha256": "23fa434f1dae1e26ba5f5715259ec1a5f73611d3ed510f9d043761841b5a2483"
         },
         {
           "task": "pet_treasure_claim",

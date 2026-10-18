@@ -1,5 +1,5 @@
 {
-  "package_version": "0.8.2",
+  "package_version": "0.8.3",
   "executor_min_version": "0.2.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -119,11 +119,11 @@
     "lancer": {
       "path": "actions/wos-training-lancer.json",
       "action_id": "wos-training-lancer",
-      "action_version": "0.2.3",
-      "sha256": "ebcfe9ce1aedbcaaa247cc9846e6b2da4a317f71cea58586205a779ff765fda9",
+      "action_version": "0.2.4",
+      "sha256": "c132c0769ce3733a26c9b7598307a8053033ab043f01b612472df10d9834e014",
       "period": "day",
       "utility": false,
-      "verification_scope": "Training menu button varies with camp placement: resolve current OCR训练 label and calibrated icon offset instead of fixed495,726. Prior branches retained; new target pending next-role replay.",
+      "verification_scope": "Training menu button varies with camp placement: resolve current OCR训练 label and calibrated icon offset instead of fixed495,726. Prior branches retained; new target pending next-role replay. Mainlancer menu visuallycorrect but titleOCR readincorrectglyph; collectionnotproven. Croppedtitle on savedframe reads exactcampname; nextrevision usesexplicitcroppedtitle and croppedtrainlabel, renamesnavigationstep toavoidclaim implication. Nextrole replay pending.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -220,11 +220,11 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.6",
-      "sha256": "2d70d08fb2d08dbbfccbae9af22a4c79eb8fa6671b5ababa49e615c45bb2e9da",
+      "action_version": "0.1.7",
+      "sha256": "222d1a2445cfdb6454043805c8be2ad8ff234b15e33f11eccf991d5f453925a9",
       "period": "day",
       "utility": false,
-      "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates."
+      "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates. Mainstore1.6 failedbeforeclaim because observed LordStaminaPack lacks storeheading. Knownpack body/back sampled; close/reopen returned firstArtisan tab with cooldown. Nextrevision boundedone normalization reopen plus scopedbodytitle/globalrewardabsence; nextrole only, no same-roleclaimretry."
     },
     "arena": {
       "path": "actions/wos-arena.json",
@@ -265,11 +265,11 @@
     "intel_hero": {
       "path": "actions/wos-intel-hero.json",
       "action_id": "wos-intel-hero",
-      "action_version": "0.1.1",
-      "sha256": "26aae55f92b9dfaaf916fb6d4fdd00a0595f1448c7032416196a69b10d381204",
+      "action_version": "0.1.2",
+      "sha256": "705ca49f42899784f7816c9874cf47d5780d698d2d28f2e9f861be2219fedd2a",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role."
+      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry."
     },
     "intel_beast": {
       "path": "actions/wos-intel-beast.json",
@@ -328,11 +328,11 @@
     "enlistment": {
       "path": "actions/wos-enlistment.json",
       "action_id": "wos-enlistment",
-      "action_version": "0.1.0",
-      "sha256": "cd95f9dd66ee21e9ab50042ac42db60df64bf9b497f556d1684a2c0c21066c60",
+      "action_version": "0.1.1",
+      "sha256": "23fa434f1dae1e26ba5f5715259ec1a5f73611d3ed510f9d043761841b5a2483",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Recorded empty enlistment page and research-area entry. Recall label/capacity ROI are provisional, must be checked on next role; does not claim all expert rewards covered."
+      "verification_scope": "Freshresearchcamera oldcoordinate failed. Mainlive preparation proved hospitalcentered camera →224,394 opens actualEnlistmentOffice with zeroreserves. Revisedroute selectsHospital only, waitsbounded observations, thenoffice; doesnotstart healing. Macro newrole empty/recall replay pending; no purchase."
     },
     "pet_treasure_claim": {
       "path": "actions/wos-pet-treasure-claim.json",

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-enlistment",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS enlistment",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Recorded empty enlistment page and research-area entry. Recall label/capacity ROI are provisional, must be checked on next role; does not claim all expert rewards covered.",
+  "verification_scope": "Freshresearchcamera oldcoordinate failed. Mainlive preparation proved hospitalcentered camera →224,394 opens actualEnlistmentOffice with zeroreserves. Revisedroute selectsHospital only, waitsbounded observations, thenoffice; doesnotstart healing. Macro newrole empty/recall replay pending; no purchase.",
   "steps": [
     {
       "name": "01-check-city",
@@ -501,11 +501,11 @@
       }
     },
     {
-      "name": "open-enlistment",
+      "name": "normalize-hospital-camera",
       "action": "click",
       "point": [
-        224,
-        394
+        555,
+        391
       ],
       "before": {
         "all": [
@@ -529,6 +529,59 @@
             690,
             1079
           ]
+        ]
+      },
+      "after": {
+        "all": [
+          "军医所"
+        ],
+        "any": [
+          "治疗",
+          "加速"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "settle-hospital-camera-1",
+      "action": "observe",
+      "before": {
+        "all": [
+          "军医所"
+        ],
+        "any": [
+          "治疗",
+          "加速"
+        ]
+      }
+    },
+    {
+      "name": "settle-hospital-camera-2",
+      "action": "observe",
+      "before": {
+        "all": [
+          "军医所"
+        ],
+        "any": [
+          "治疗",
+          "加速"
+        ]
+      }
+    },
+    {
+      "name": "open-enlistment",
+      "action": "click",
+      "point": [
+        224,
+        394
+      ],
+      "before": {
+        "all": [
+          "军医所"
+        ],
+        "any": [
+          "治疗",
+          "加速"
         ]
       },
       "after": [

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-lancer",
-  "action_version": "0.2.3",
+  "action_version": "0.2.4",
   "name": "WOS — 矛兵 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -181,7 +181,7 @@
       "observe_attempts": 5
     },
     {
-      "name": "training-collect-visible",
+      "name": "training-normalize-camp",
       "action": "click",
       "point": [
         394,
@@ -218,11 +218,25 @@
         ]
       },
       "observe_attempts": 5,
-      "skip_if": [
-        "矛兵营",
-        "详情",
-        "训练"
-      ]
+      "skip_if": {
+        "all": [
+          "详情",
+          "训练"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              305,
+              445,
+              500,
+              520
+            ],
+            "pattern": ".*矛兵营.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
     },
     {
       "name": "training-open-menu-1",
@@ -262,11 +276,25 @@
         ]
       },
       "observe_attempts": 5,
-      "skip_if": [
-        "矛兵营",
-        "详情",
-        "训练"
-      ]
+      "skip_if": {
+        "all": [
+          "详情",
+          "训练"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              305,
+              445,
+              500,
+              520
+            ],
+            "pattern": ".*矛兵营.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
     },
     {
       "name": "training-open-menu-2",
@@ -306,11 +334,25 @@
         ]
       },
       "observe_attempts": 5,
-      "skip_if": [
-        "矛兵营",
-        "详情",
-        "训练"
-      ]
+      "skip_if": {
+        "all": [
+          "详情",
+          "训练"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              305,
+              445,
+              500,
+              520
+            ],
+            "pattern": ".*矛兵营.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
     },
     {
       "name": "training-open-menu-3",
@@ -350,20 +392,48 @@
         ]
       },
       "observe_attempts": 5,
-      "skip_if": [
-        "矛兵营",
-        "详情",
-        "训练"
-      ]
+      "skip_if": {
+        "all": [
+          "详情",
+          "训练"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              305,
+              445,
+              500,
+              520
+            ],
+            "pattern": ".*矛兵营.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
     },
     {
       "name": "training-open",
       "action": "click",
-      "before": [
-        "矛兵营",
-        "详情",
-        "训练"
-      ],
+      "before": {
+        "all": [
+          "详情",
+          "训练"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              305,
+              445,
+              500,
+              520
+            ],
+            "pattern": ".*矛兵营.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
       "after": [
         "盾兵营",
         "矛兵营",
@@ -382,7 +452,8 @@
           0,
           -40
         ],
-        "min_confidence": 0.3
+        "min_confidence": 0.3,
+        "crop_ocr": true
       }
     },
     {
@@ -615,6 +686,6 @@
       }
     ]
   },
-  "verification_scope": "Training menu button varies with camp placement: resolve current OCR训练 label and calibrated icon offset instead of fixed495,726. Prior branches retained; new target pending next-role replay.",
+  "verification_scope": "Training menu button varies with camp placement: resolve current OCR训练 label and calibrated icon offset instead of fixed495,726. Prior branches retained; new target pending next-role replay. Mainlancer menu visuallycorrect but titleOCR readincorrectglyph; collectionnotproven. Croppedtitle on savedframe reads exactcampname; nextrevision usesexplicitcroppedtitle and croppedtrainlabel, renamesnavigationstep toavoidclaim implication. Nextrole replay pending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }
