@@ -1,6 +1,6 @@
 {
-  "package_version": "0.2.1",
-  "executor_min_version": "0.1.3",
+  "package_version": "0.2.2",
+  "executor_min_version": "0.1.4",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
     "mail": {
@@ -69,11 +69,12 @@
     "recruit": {
       "path": "actions/wos-free-recruit.json",
       "action_id": "wos-free-recruit",
-      "action_version": "0.1.0",
-      "sha256": "8b402948a13a28ea1ed0144eb5b8382569fe8753314a2b3d1d25ded6a4507229",
+      "action_version": "0.1.1",
+      "sha256": "73ea80d3bdbf6e418fefd7e0be203600b9395d3e29948bd68e7c60a21d232820",
       "period": "day",
       "utility": false,
-      "verification_scope": "Advanced actual free draw, unchanged silver/gold keys, reward exit and epic cooldown skip passed in one complete workflow. Epic free and new-hero display remain unverified."
+      "verification_scope": "Advanced actual free draw, unchanged silver/gold keys, reward exit and epic cooldown skip passed in one complete workflow. Epic free and new-hero display remain unverified.",
+      "current_evidence_note": "2827英雄网格页全图OCR乱码，停止后续；同一失败图的标题和底部独立裁剪能明确读到英雄列表/英雄招募。0.1.1加入有界局部OCR，下一试验号验证，不重试2827失败项。"
     },
     "help": {
       "path": "actions/wos-alliance-help.json",
@@ -97,30 +98,32 @@
     "shield": {
       "path": "actions/wos-training-shield.json",
       "action_id": "wos-training-shield",
-      "action_version": "0.2.0",
-      "sha256": "37842a653fa9efbd3f0602df7833fcc7a860baae017104cc98316720e2d19f04",
+      "action_version": "0.2.1",
+      "sha256": "652c1f6ac8e57cb3c675c657008a5fac943c9b2965fe283ffa4b654cda10e61f",
       "period": "day",
       "utility": false,
-      "verification_scope": "保留当前所选兵阶和界面数量；数值须读为1至9999，避免旧1200样本上限误拒绝实际1318。新增容量分支待本班试验号验证；不改数量、不点立即完成/加速。"
+      "verification_scope": "保留当前所选兵阶和界面数量；数值须读为1至9999，避免旧1200样本上限误拒绝实际1318。新增容量分支待本班试验号验证；不改数量、不点立即完成/加速。",
+      "current_evidence_note": "0.2.0在2827矛兵与射手通过；盾兵按钮全图OCR仅读到训。0.2.1仅容许该已观察到的部分标签，仍要求三兵营页、可读数量、无训练中及启动后队列验证。"
     },
     "lancer": {
       "path": "actions/wos-training-lancer.json",
       "action_id": "wos-training-lancer",
-      "action_version": "0.2.0",
-      "sha256": "ae6fa43589fbc25dc265c3e4d30627c2e7b3d0c5cc63b228a828359ec5022d1a",
+      "action_version": "0.2.1",
+      "sha256": "4728789abdadc0caecdae0c544fe445dced962d7a6591d46ce19853a58375543",
       "period": "day",
       "utility": false,
-      "verification_scope": "保留当前所选兵阶和界面数量；数值须读为1至9999，避免旧1200样本上限误拒绝实际1318。新增容量分支待本班试验号验证；不改数量、不点立即完成/加速。"
+      "verification_scope": "保留当前所选兵阶和界面数量；数值须读为1至9999，避免旧1200样本上限误拒绝实际1318。新增容量分支待本班试验号验证；不改数量、不点立即完成/加速。",
+      "current_evidence_note": "0.2.0在2827矛兵与射手通过；盾兵按钮全图OCR仅读到训。0.2.1仅容许该已观察到的部分标签，仍要求三兵营页、可读数量、无训练中及启动后队列验证。"
     },
     "marksman": {
       "path": "actions/wos-training-marksman.json",
       "action_id": "wos-training-marksman",
-      "action_version": "0.2.0",
-      "sha256": "4a13ffa3d55f8ae7c142c44a224dc4d14cded435853c8feaed545f480aa9c59d",
+      "action_version": "0.2.1",
+      "sha256": "79d57398b12792e43728be7a509a4470267656e9c6f7c126b9994a10f66f1d83",
       "period": "day",
       "utility": false,
       "verification_scope": "保留当前所选兵阶和界面数量；数值须读为1至9999，避免旧1200样本上限误拒绝实际1318。新增容量分支待本班试验号验证；不改数量、不点立即完成/加速。",
-      "current_evidence_note": "第二班原图实际所选数量1318，超过旧样本上限1200；不是缺字。新版改为读取现有数量1至9999并局部OCR，待第三班验证。"
+      "current_evidence_note": "0.2.0在2827矛兵与射手通过；盾兵按钮全图OCR仅读到训。0.2.1仅容许该已观察到的部分标签，仍要求三兵营页、可读数量、无训练中及启动后队列验证。"
     },
     "crystal": {
       "path": "actions/wos-crystal-ordinary.json",

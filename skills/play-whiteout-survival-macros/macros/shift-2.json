@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.2.1",
-  "package_version": "0.2.1",
+  "macro_version": "0.2.2",
+  "package_version": "0.2.2",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions"
@@ -105,8 +105,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.0",
-          "sha256": "8b402948a13a28ea1ed0144eb5b8382569fe8753314a2b3d1d25ded6a4507229"
+          "action_version": "0.1.1",
+          "sha256": "73ea80d3bdbf6e418fefd7e0be203600b9395d3e29948bd68e7c60a21d232820"
         },
         {
           "task": "expert",
@@ -129,20 +129,20 @@
         {
           "task": "shield",
           "action_id": "wos-training-shield",
-          "action_version": "0.2.0",
-          "sha256": "37842a653fa9efbd3f0602df7833fcc7a860baae017104cc98316720e2d19f04"
+          "action_version": "0.2.1",
+          "sha256": "652c1f6ac8e57cb3c675c657008a5fac943c9b2965fe283ffa4b654cda10e61f"
         },
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.2.0",
-          "sha256": "ae6fa43589fbc25dc265c3e4d30627c2e7b3d0c5cc63b228a828359ec5022d1a"
+          "action_version": "0.2.1",
+          "sha256": "4728789abdadc0caecdae0c544fe445dced962d7a6591d46ce19853a58375543"
         },
         {
           "task": "marksman",
           "action_id": "wos-training-marksman",
-          "action_version": "0.2.0",
-          "sha256": "4a13ffa3d55f8ae7c142c44a224dc4d14cded435853c8feaed545f480aa9c59d"
+          "action_version": "0.2.1",
+          "sha256": "79d57398b12792e43728be7a509a4470267656e9c6f7c126b9994a10f66f1d83"
         },
         {
           "task": "donate",
@@ -196,8 +196,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.0",
-          "sha256": "8b402948a13a28ea1ed0144eb5b8382569fe8753314a2b3d1d25ded6a4507229"
+          "action_version": "0.1.1",
+          "sha256": "73ea80d3bdbf6e418fefd7e0be203600b9395d3e29948bd68e7c60a21d232820"
         },
         {
           "task": "daily",

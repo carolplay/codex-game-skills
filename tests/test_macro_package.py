@@ -61,7 +61,7 @@ class RunnerTests(unittest.TestCase):
         import run_visit
         executor = Mock(); executor.CuaMcp.return_value.start.side_effect = RuntimeError('locked startup fixture')
         batch = Mock(); checker = Mock(); checker.check.return_value = {'status':'passed','issues':[]}
-        version_module = Mock(); version_module.SUITE_VERSION = '0.1.3'
+        version_module = Mock(); version_module.SUITE_VERSION = pkg.read(ROOT / 'catalog.json')['executor_min_version']
         version_module.suite_identity.return_value = {'suite_version':'0.1.3','actions':['pinned-fixture']}
         modules = {'window_macro':executor, 'task_batch':batch, 'check_run':checker, 'workflow_versions':version_module}
         with tempfile.TemporaryDirectory() as directory:

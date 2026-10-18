@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-marksman",
-  "action_version": "0.2.0",
+  "action_version": "0.2.1",
   "name": "WOS — 射手 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -271,7 +271,7 @@
               625,
               955
             ],
-            "pattern": "训练"
+            "pattern": "训(?:练)?"
           },
           {
             "bounds": [
