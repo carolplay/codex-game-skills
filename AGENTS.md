@@ -6,3 +6,7 @@
 - The CrossMacro source repository is a separate project folder. Runtime dependencies and machine-specific launcher configuration live outside Git.
 - Preserve the existing pause state; filesystem maintenance does not authorize game actions or resuming schedules.
 - New WOS automation uses `skills/play-whiteout-survival-macros/` and its fixed visit plan. The unchanged `skills/play-whiteout-survival/` is V1 pure-agent knowledge/fallback. Read only the relevant references and current run checkpoint, rather than accumulating old prompts.
+
+- Preserve task composability: declare fixed entry/exit anchors, explicit business dependencies and bounded page-specific exits. A business deviation may continue only after local anchor verification; identity, permissions, lock or window-size failures stop the whole batch. Never use agent fallback to finish daily tasks.
+- Maintain `skills/play-whiteout-survival-macros/references/visit-plan.md` as the task backlog: status is 不知道要不要做 / 没做 / 已做 / 已验证; keep the current linear macro action list and state the verified branch/role scope.
+- Main-account status is machine-local and must be honored. Use only explicitly marked test roles for new macro development; permission for a main account to finish an already-started batch does not make it a test role. Prefer targeted validation of new or changed actions over repeating stable full batches.
