@@ -32,6 +32,9 @@ def load_actions(root=ROOT):
                 raise ValueError(f'{task}: {key} differs from catalog')
         if digest(flow) != item['sha256']:
             raise ValueError(f'{task}: action hash differs from catalog')
+        exit_conditions = [digest(step['before']) for step in flow.get('task_contract', {}).get('exits', [])]
+        if len(exit_conditions) != len(set(exit_conditions)):
+            raise ValueError(f'{task}: duplicate exit conditions would make recovery ambiguous')
         flows[task] = flow
         declared.add(path)
     if declared != set((root / 'actions').glob('*.json')):

@@ -1,5 +1,5 @@
 {
-  "package_version": "0.8.0",
+  "package_version": "0.8.1",
   "executor_min_version": "0.2.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -220,8 +220,8 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.5",
-      "sha256": "0d979d716d76bfec46f9daf8c72a2dc0c0bfc926fb07845ef260a2cee635fe2b",
+      "action_version": "0.1.6",
+      "sha256": "2d70d08fb2d08dbbfccbae9af22a4c79eb8fa6671b5ababa49e615c45bb2e9da",
       "period": "day",
       "utility": false,
       "verification_scope": "Actual role2944 click removed red dot and showed03:16:16 countdown without reward modal. Positive cooldown required after optional modal; next-role replay pending."

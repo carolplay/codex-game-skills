@@ -33,6 +33,19 @@ class PackageTests(unittest.TestCase):
                     self.assertNotIn(task, [a['task'] for a in profile['actions']])
                     self.assertTrue(profile['excluded'][task])
 
+    def test_duplicate_exit_conditions_are_rejected_offline(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / 'package'; shutil.copytree(ROOT, root)
+            path = root / 'actions/wos-store-free.json'; flow = pkg.read(path)
+            duplicate = dict(flow['task_contract']['exits'][-1], name='duplicate-close')
+            flow['task_contract']['exits'].append(duplicate)
+            path.write_text(json.dumps(flow))
+            catalog_path = root / 'catalog.json'; catalog = pkg.read(catalog_path)
+            catalog['actions']['store_free']['sha256'] = pkg.digest(flow)
+            catalog_path.write_text(json.dumps(catalog))
+            with self.assertRaisesRegex(ValueError, 'duplicate exit conditions'):
+                pkg.load_actions(root)
+
     def test_changed_action_rejected_before_backend_exists(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / 'package'; shutil.copytree(ROOT, root)

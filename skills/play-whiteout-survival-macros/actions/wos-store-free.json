@@ -1,13 +1,13 @@
 {
   "action_id": "wos-store-free",
-  "action_version": "0.1.5",
+  "action_version": "0.1.6",
   "name": "WOS store_free",
   "reference_size": [
     788,
     1079
   ],
   "status": "candidate",
-  "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons.",
+  "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates.",
   "steps": [
     {
       "name": "01-check-city",
@@ -182,7 +182,7 @@
               560,
               210,
               675,
-              290
+              325
             ],
             "pattern": "可领取",
             "crop_ocr": true,
@@ -546,57 +546,6 @@
           ]
         },
         "observe_attempts": 4
-      },
-      {
-        "name": "exit-known-remembered-store-tab",
-        "action": "click",
-        "point": [
-          133,
-          59
-        ],
-        "before": {
-          "all": [
-            "储值中心"
-          ],
-          "none": [
-            "获得奖励",
-            "恭喜获得"
-          ],
-          "page_text_regions": [
-            [
-              100,
-              30,
-              310,
-              100
-            ]
-          ],
-          "page_text_only": true
-        },
-        "after": {
-          "all": [
-            "英雄",
-            "背包",
-            "野外"
-          ],
-          "none": [
-            "日常",
-            "建筑队列",
-            "游历补给",
-            "部队训练",
-            "技能学习",
-            "超级提炼优惠",
-            "提炼次数"
-          ],
-          "page_text_regions": [
-            [
-              100,
-              995,
-              690,
-              1079
-            ]
-          ]
-        },
-        "observe_attempts": 5
       }
     ]
   }
