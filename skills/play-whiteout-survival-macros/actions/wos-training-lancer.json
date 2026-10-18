@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-lancer",
-  "action_version": "0.1.0",
+  "action_version": "0.2.0",
   "name": "WOS — 矛兵 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -280,7 +280,8 @@
               610,
               855
             ],
-            "pattern": "(?:[1-9][0-9]{0,2}|1[01][0-9]{2}|1200)"
+            "pattern": "[1-9][0-9]{0,3}",
+            "crop_ocr": true
           }
         ]
       },
@@ -431,5 +432,5 @@
       }
     ]
   },
-  "verification_scope": "Idle training startup and queue verification replayed on one trial role. Finished troops collected manually during recording, not evidence of macro full completed-state coverage."
+  "verification_scope": "保留当前所选兵阶和界面数量；数值须读为1至9999，避免旧1200样本上限误拒绝实际1318。新增容量分支待本班试验号验证；不改数量、不点立即完成/加速。"
 }

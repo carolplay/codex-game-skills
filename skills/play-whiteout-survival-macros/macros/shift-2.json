@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.2.0",
-  "package_version": "0.2.0",
+  "macro_version": "0.2.1",
+  "package_version": "0.2.1",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions"
@@ -129,20 +129,20 @@
         {
           "task": "shield",
           "action_id": "wos-training-shield",
-          "action_version": "0.1.0",
-          "sha256": "ece56dcb48ab955ca90b11986e07febd8af41ecfb9f22c9c720d3c21a3a241eb"
+          "action_version": "0.2.0",
+          "sha256": "37842a653fa9efbd3f0602df7833fcc7a860baae017104cc98316720e2d19f04"
         },
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.1.0",
-          "sha256": "d021dc67377598aa5f3b8219c87819c1ea3f9145a489465049d1d41298a9581d"
+          "action_version": "0.2.0",
+          "sha256": "ae6fa43589fbc25dc265c3e4d30627c2e7b3d0c5cc63b228a828359ec5022d1a"
         },
         {
           "task": "marksman",
           "action_id": "wos-training-marksman",
-          "action_version": "0.1.0",
-          "sha256": "a7e1abab0f97ee9df3f8247febdabd716b21f9a33e8e4d55304577d4ae978ebe"
+          "action_version": "0.2.0",
+          "sha256": "4a13ffa3d55f8ae7c142c44a224dc4d14cded435853c8feaed545f480aa9c59d"
         },
         {
           "task": "donate",

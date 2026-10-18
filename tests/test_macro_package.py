@@ -16,7 +16,7 @@ class PackageTests(unittest.TestCase):
             for profile in pkg.read(path)['profiles']:
                 tasks, identity = pkg.load_manifest(path, profile)
                 self.assertEqual('daily', tasks[-1][0])
-                self.assertEqual('0.2.0', identity['package_version'])
+                self.assertEqual(pkg.read(ROOT / 'catalog.json')['package_version'], identity['package_version'])
 
     def test_changed_action_rejected_before_backend_exists(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -74,7 +74,7 @@ class RunnerTests(unittest.TestCase):
                 self.assertEqual(1,run_visit.main())
             report = pkg.read(next((folder / 'runs').glob('*/summary.json')))
             self.assertEqual('wos-shift-3',report['package']['macro_id'])
-            self.assertEqual('0.2.0',report['package']['macro_version'])
+            self.assertEqual(pkg.read(ROOT / 'macros/shift-3.json')['macro_version'],report['package']['macro_version'])
             self.assertEqual(['pinned-fixture'],report['versions']['actions'])
             self.assertIn('locked startup fixture',report['startup_or_batch_error'])
             batch.run_batch.assert_not_called(); executor.CuaMcp.return_value.close.assert_called_once()
