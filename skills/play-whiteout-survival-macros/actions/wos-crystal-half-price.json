@@ -1,6 +1,6 @@
 {
   "action_id": "wos-crystal-half-price",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS — first daily half-price super refinement only",
   "reference_size": [
     788,
@@ -21,7 +21,8 @@
         "none": [
           "日常",
           "建造队列",
-          "游历补给"
+          "游历补给",
+          "完成任务后是否隐藏"
         ]
       }
     },
@@ -112,6 +113,75 @@
           "竞技场",
           "生命之树",
           "联盟捐献"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "show-completed-overview-items",
+      "action": "click",
+      "point": [
+        431,
+        773
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外",
+          "完成任务后是否隐藏"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              419,
+              760,
+              445,
+              787
+            ],
+            "min": 0.2,
+            "max": 1
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外",
+          "完成任务后是否隐藏"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              419,
+              760,
+              445,
+              787
+            ],
+            "min": 0,
+            "max": 0.1
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外",
+          "完成任务后是否隐藏"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              419,
+              760,
+              445,
+              787
+            ],
+            "min": 0,
+            "max": 0.1
+          }
         ]
       },
       "observe_attempts": 5
@@ -921,7 +991,8 @@
         "部队训练",
         "技能学习",
         "超级提炼优惠",
-        "提炼次数"
+        "提炼次数",
+        "完成任务后是否隐藏"
       ]
     },
     "max_exit_steps": 3,
@@ -984,7 +1055,8 @@
             "宠物寻宝",
             "竞技场",
             "生命之树",
-            "联盟捐献"
+            "联盟捐献",
+            "完成任务后是否隐藏"
           ]
         },
         "after": {
@@ -1003,5 +1075,5 @@
       }
     ]
   },
-  "verification_scope": "0.1.1: one trial role full actual first-half-price claim, price20 postcondition, ledger confirmation and city return passed. Other-role original-price skip remains to verify."
+  "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。"
 }

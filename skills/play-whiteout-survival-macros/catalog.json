@@ -1,5 +1,5 @@
 {
-  "package_version": "0.2.3",
+  "package_version": "0.2.4",
   "executor_min_version": "0.1.4",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -128,22 +128,22 @@
     "crystal": {
       "path": "actions/wos-crystal-ordinary.json",
       "action_id": "wos-crystal-ordinary",
-      "action_version": "0.1.1",
-      "sha256": "dd2d63fe1155eb7a1ae7281e814754e89d9a9281f525af6edb81e6589d251175",
+      "action_version": "0.1.2",
+      "sha256": "37bb576d50b79670779c00245f22b51e8c961c8c30c689edfccc93dffb3a4bbd",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.1: counter crop excludes info icon and reads saved-image count8. Live shift2 reached navigation but stopped on locked/unassociated standalone CUA before refinement; consumption and zero-count branch unverified.",
-      "current_evidence_note": "普通炼晶：试验号完整8次及剩余7次归零分支通过。原action内候选标签保留为迁移时历史元数据。"
+      "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。",
+      "current_evidence_note": "第三班2827概览勾选隐藏已完成，实验室行不见；旧anchor将这种底部面板误认主城。0.1.2加有界开关及footer排除/退出，下一班验收；不因入口缺失推断已完成。"
     },
     "refined": {
       "path": "actions/wos-crystal-half-price.json",
       "action_id": "wos-crystal-half-price",
-      "action_version": "0.1.1",
-      "sha256": "511b6bacedcfc48918a108bbb4bf98ad4adfbacc26299038983fac0e1e813c6d",
+      "action_version": "0.1.2",
+      "sha256": "d0a8b550ea41eb9424bc75dbe981dd8068c21b6f0772a81b2e1cb8d16c68b4ef",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.1: one trial role full actual first-half-price claim, price20 postcondition, ledger confirmation and city return passed. Other-role original-price skip remains to verify.",
-      "current_evidence_note": "每日首个半价实际提炼与20价格跳过均有试验号证据；本地日账本防重复。"
+      "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。",
+      "current_evidence_note": "第三班2827概览勾选隐藏已完成，实验室行不见；旧anchor将这种底部面板误认主城。0.1.2加有界开关及footer排除/退出，下一班验收；不因入口缺失推断已完成。"
     },
     "expert": {
       "path": "actions/wos-expert-camp-rewards.json",

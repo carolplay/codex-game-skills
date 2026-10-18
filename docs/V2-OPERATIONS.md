@@ -59,7 +59,7 @@ OCR、时序或退出修复升patch；新增适用分支升minor；改变入口/
 
 下一班优先炼晶、低等级VIP及失败退出，定向验证“已知业务偏差→预定义有限退出→主城核验→后续action”。未知页不能靠盲退绕过，必须补齐可识别页面的退出覆盖。之后补银行和其他日常，不重复回归稳定流程。
 
-WOS动作的唯一维护来源现为 `skills/play-whiteout-survival-macros/`：`catalog.json` 注册动作身份，`macros/shift-{1,2,3}.json` 独立版本化组合与角色适用范围。发布包0.2.3与CrossMacro通用执行器0.1.4分别记录，不能混称一个suite版本。详见[发布包](../skills/play-whiteout-survival-macros/references/macro-package.md)。正式班次从固定manifest加载，新增action不得因旧本地六项清单而漏排；未纳入必须声明原因。银行尚未实现，保持覆盖缺口。
+WOS动作的唯一维护来源现为 `skills/play-whiteout-survival-macros/`：`catalog.json` 注册动作身份，`macros/shift-{1,2,3}.json` 独立版本化组合与角色适用范围。发布包0.2.4与CrossMacro通用执行器0.1.4分别记录，不能混称一个suite版本。详见[发布包](../skills/play-whiteout-survival-macros/references/macro-package.md)。正式班次从固定manifest加载，新增action不得因旧本地六项清单而漏排；未纳入必须声明原因。银行尚未实现，保持覆盖缺口。
 
 ## WOS窗口协调
 
