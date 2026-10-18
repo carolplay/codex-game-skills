@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.5.3",
-  "package_version": "0.5.3",
+  "macro_version": "0.8.0",
+  "package_version": "0.8.0",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions"
@@ -38,6 +38,12 @@
           "action_id": "wos-academy-supply",
           "action_version": "0.1.1",
           "sha256": "9614f67ae5afcc4ffa1be0614293ec116c1dd30fe9150fc3823ee95032e4d39e"
+        },
+        {
+          "task": "travel_idle",
+          "action_id": "wos-travel-idle",
+          "action_version": "0.1.2",
+          "sha256": "80cd6a1e3f73be797276b67af7fedff3b0422e51da051f6c52bc485bfc948498"
         },
         {
           "task": "alliance",
@@ -126,8 +132,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.3",
-          "sha256": "53358d6ef01cb32ccdad36c7329be89ac6fddc208555e824c81d7673ab554b4b"
+          "action_version": "0.1.5",
+          "sha256": "0d979d716d76bfec46f9daf8c72a2dc0c0bfc926fb07845ef260a2cee635fe2b"
         },
         {
           "task": "arena",
@@ -162,8 +168,8 @@
         {
           "task": "intel_beast",
           "action_id": "wos-intel-beast",
-          "action_version": "0.1.1",
-          "sha256": "0944352d1b7dc5a92ce31c75cc733bbd0324bf49681dcb0a9ea666c9a19e4f46"
+          "action_version": "0.1.2",
+          "sha256": "dc9e18afa98a3ae148d484826c891c3c452f60d5e61fff8db9de027d8a83ed59"
         },
         {
           "task": "gather_meat",
@@ -174,20 +180,20 @@
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.0",
-          "sha256": "66dddc05a7f1054f348d02f40987db38d998d33da78e02b1cebfa03880edb73f"
+          "action_version": "0.1.1",
+          "sha256": "f4176189ab090ed184ba351804f10fe3788628b5b506f467226ff118f25c6ad3"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.0",
-          "sha256": "e240fdb8413bb7adba83cbccefa482a7979ef10368ec57a90953922450cb8b6e"
+          "action_version": "0.1.1",
+          "sha256": "b1be456a95023bfd6fd6f396de35d856b631c9fb70b46d14397ac78c5a60727c"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.0",
-          "sha256": "f7ab637130f25ff10077ca1f1b9f28753dd05ed512849c975756a9699932ce7d"
+          "action_version": "0.1.1",
+          "sha256": "ed2d960e1c44bb17bb1cad08a41a8fd4ebed7e227a8e77e1c287401b25a028ab"
         },
         {
           "task": "healing",
@@ -208,6 +214,12 @@
           "sha256": "30894a2c11d709981e5260db0c24e9c8419f9c51013561fed2a44b44f6faddae"
         },
         {
+          "task": "pet_treasure_dispatch",
+          "action_id": "wos-pet-treasure-dispatch",
+          "action_version": "0.1.1",
+          "sha256": "80a867220979ee6f33eaca04c5c7a366c94d68546d8cd6855ed0eb99273aa0a0"
+        },
+        {
           "task": "pet_alliance_treasure",
           "action_id": "wos-pet-alliance-treasure",
           "action_version": "0.1.0",
@@ -216,8 +228,8 @@
         {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
-          "action_version": "0.1.1",
-          "sha256": "fcc9052f3dcf8983ee029b50c9e33772199529150c1d7c49044623c9db73df7f"
+          "action_version": "0.1.2",
+          "sha256": "4dc66c8adf22071656403f69cbbaede18eeec33cc0d189e02c20548f3bc6acf2"
         },
         {
           "task": "labyrinth",
@@ -230,6 +242,18 @@
           "action_id": "wos-npc-autojoin",
           "action_version": "0.1.0",
           "sha256": "35ad06ffaec4ddece20f791c457acea701a535082dc094b0667324e982007673"
+        },
+        {
+          "task": "travel_idle_claim",
+          "action_id": "wos-travel-idle-claim",
+          "action_version": "0.1.1",
+          "sha256": "b40756cecda3cbe9288ad1754d79c8995120d9232ff52d49a781035a23120b55"
+        },
+        {
+          "task": "war_academy_commission",
+          "action_id": "wos-war-academy-commission",
+          "action_version": "0.1.0",
+          "sha256": "c5ad89c0ccf81728784d522eaa3cff10a1ba28d16c907541c78201a361560547"
         },
         {
           "task": "daily",
@@ -276,6 +300,12 @@
           "sha256": "9614f67ae5afcc4ffa1be0614293ec116c1dd30fe9150fc3823ee95032e4d39e"
         },
         {
+          "task": "travel_idle",
+          "action_id": "wos-travel-idle",
+          "action_version": "0.1.2",
+          "sha256": "80cd6a1e3f73be797276b67af7fedff3b0422e51da051f6c52bc485bfc948498"
+        },
+        {
           "task": "alliance",
           "action_id": "wos-alliance-free",
           "action_version": "0.1.1",
@@ -362,8 +392,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.3",
-          "sha256": "53358d6ef01cb32ccdad36c7329be89ac6fddc208555e824c81d7673ab554b4b"
+          "action_version": "0.1.5",
+          "sha256": "0d979d716d76bfec46f9daf8c72a2dc0c0bfc926fb07845ef260a2cee635fe2b"
         },
         {
           "task": "arena",
@@ -398,8 +428,8 @@
         {
           "task": "intel_beast",
           "action_id": "wos-intel-beast",
-          "action_version": "0.1.1",
-          "sha256": "0944352d1b7dc5a92ce31c75cc733bbd0324bf49681dcb0a9ea666c9a19e4f46"
+          "action_version": "0.1.2",
+          "sha256": "dc9e18afa98a3ae148d484826c891c3c452f60d5e61fff8db9de027d8a83ed59"
         },
         {
           "task": "gather_meat",
@@ -410,20 +440,20 @@
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.0",
-          "sha256": "66dddc05a7f1054f348d02f40987db38d998d33da78e02b1cebfa03880edb73f"
+          "action_version": "0.1.1",
+          "sha256": "f4176189ab090ed184ba351804f10fe3788628b5b506f467226ff118f25c6ad3"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.0",
-          "sha256": "e240fdb8413bb7adba83cbccefa482a7979ef10368ec57a90953922450cb8b6e"
+          "action_version": "0.1.1",
+          "sha256": "b1be456a95023bfd6fd6f396de35d856b631c9fb70b46d14397ac78c5a60727c"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.0",
-          "sha256": "f7ab637130f25ff10077ca1f1b9f28753dd05ed512849c975756a9699932ce7d"
+          "action_version": "0.1.1",
+          "sha256": "ed2d960e1c44bb17bb1cad08a41a8fd4ebed7e227a8e77e1c287401b25a028ab"
         },
         {
           "task": "healing",
@@ -444,6 +474,12 @@
           "sha256": "30894a2c11d709981e5260db0c24e9c8419f9c51013561fed2a44b44f6faddae"
         },
         {
+          "task": "pet_treasure_dispatch",
+          "action_id": "wos-pet-treasure-dispatch",
+          "action_version": "0.1.1",
+          "sha256": "80a867220979ee6f33eaca04c5c7a366c94d68546d8cd6855ed0eb99273aa0a0"
+        },
+        {
           "task": "pet_alliance_treasure",
           "action_id": "wos-pet-alliance-treasure",
           "action_version": "0.1.0",
@@ -452,8 +488,8 @@
         {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
-          "action_version": "0.1.1",
-          "sha256": "fcc9052f3dcf8983ee029b50c9e33772199529150c1d7c49044623c9db73df7f"
+          "action_version": "0.1.2",
+          "sha256": "4dc66c8adf22071656403f69cbbaede18eeec33cc0d189e02c20548f3bc6acf2"
         },
         {
           "task": "labyrinth",
@@ -466,6 +502,18 @@
           "action_id": "wos-npc-autojoin",
           "action_version": "0.1.0",
           "sha256": "35ad06ffaec4ddece20f791c457acea701a535082dc094b0667324e982007673"
+        },
+        {
+          "task": "travel_idle_claim",
+          "action_id": "wos-travel-idle-claim",
+          "action_version": "0.1.1",
+          "sha256": "b40756cecda3cbe9288ad1754d79c8995120d9232ff52d49a781035a23120b55"
+        },
+        {
+          "task": "war_academy_commission",
+          "action_id": "wos-war-academy-commission",
+          "action_version": "0.1.0",
+          "sha256": "c5ad89c0ccf81728784d522eaa3cff10a1ba28d16c907541c78201a361560547"
         },
         {
           "task": "daily",
@@ -526,8 +574,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.3",
-          "sha256": "53358d6ef01cb32ccdad36c7329be89ac6fddc208555e824c81d7673ab554b4b"
+          "action_version": "0.1.5",
+          "sha256": "0d979d716d76bfec46f9daf8c72a2dc0c0bfc926fb07845ef260a2cee635fe2b"
         },
         {
           "task": "arena",
@@ -556,8 +604,8 @@
         {
           "task": "intel_beast",
           "action_id": "wos-intel-beast",
-          "action_version": "0.1.1",
-          "sha256": "0944352d1b7dc5a92ce31c75cc733bbd0324bf49681dcb0a9ea666c9a19e4f46"
+          "action_version": "0.1.2",
+          "sha256": "dc9e18afa98a3ae148d484826c891c3c452f60d5e61fff8db9de027d8a83ed59"
         },
         {
           "task": "gather_meat",
@@ -568,20 +616,20 @@
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.0",
-          "sha256": "66dddc05a7f1054f348d02f40987db38d998d33da78e02b1cebfa03880edb73f"
+          "action_version": "0.1.1",
+          "sha256": "f4176189ab090ed184ba351804f10fe3788628b5b506f467226ff118f25c6ad3"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.0",
-          "sha256": "e240fdb8413bb7adba83cbccefa482a7979ef10368ec57a90953922450cb8b6e"
+          "action_version": "0.1.1",
+          "sha256": "b1be456a95023bfd6fd6f396de35d856b631c9fb70b46d14397ac78c5a60727c"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.0",
-          "sha256": "f7ab637130f25ff10077ca1f1b9f28753dd05ed512849c975756a9699932ce7d"
+          "action_version": "0.1.1",
+          "sha256": "ed2d960e1c44bb17bb1cad08a41a8fd4ebed7e227a8e77e1c287401b25a028ab"
         },
         {
           "task": "healing",
@@ -602,6 +650,12 @@
           "sha256": "30894a2c11d709981e5260db0c24e9c8419f9c51013561fed2a44b44f6faddae"
         },
         {
+          "task": "pet_treasure_dispatch",
+          "action_id": "wos-pet-treasure-dispatch",
+          "action_version": "0.1.1",
+          "sha256": "80a867220979ee6f33eaca04c5c7a366c94d68546d8cd6855ed0eb99273aa0a0"
+        },
+        {
           "task": "pet_alliance_treasure",
           "action_id": "wos-pet-alliance-treasure",
           "action_version": "0.1.0",
@@ -610,8 +664,8 @@
         {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
-          "action_version": "0.1.1",
-          "sha256": "fcc9052f3dcf8983ee029b50c9e33772199529150c1d7c49044623c9db73df7f"
+          "action_version": "0.1.2",
+          "sha256": "4dc66c8adf22071656403f69cbbaede18eeec33cc0d189e02c20548f3bc6acf2"
         },
         {
           "task": "labyrinth",
@@ -647,7 +701,10 @@
         "pet_deer": "宠物实际解锁待低等级采样；不假设已开放",
         "orders": "低等级领主指令入口/可用状态待现场采样",
         "research": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
-        "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用"
+        "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
+        "travel_idle": "当前低等级绑定角色未到25级，学院/游历尚未解锁；后续按实际解锁更新",
+        "travel_idle_claim": "当前低等级绑定角色未到25级，学院/游历尚未解锁；后续按实际解锁更新",
+        "war_academy_commission": "战争学院尚未解锁，按实际等级排除"
       }
     }
   }

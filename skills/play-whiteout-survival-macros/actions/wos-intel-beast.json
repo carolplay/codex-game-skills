@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-beast",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS ordinary intelligence beast",
   "reference_size": [
     788,
@@ -422,7 +422,6 @@
       ],
       "after": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -430,7 +429,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "observe_attempts": 5
     },
@@ -443,7 +451,6 @@
       ],
       "before": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -451,7 +458,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "after": [
         "出征",
@@ -915,7 +931,6 @@
       ],
       "after": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -923,7 +938,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "observe_attempts": 5
     },
@@ -936,7 +960,6 @@
       ],
       "before": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -944,7 +967,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "after": [
         "出征",
@@ -1408,7 +1440,6 @@
       ],
       "after": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -1416,7 +1447,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "observe_attempts": 5
     },
@@ -1429,7 +1469,6 @@
       ],
       "before": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -1437,7 +1476,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "after": [
         "出征",
@@ -1901,7 +1949,6 @@
       ],
       "after": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -1909,7 +1956,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "observe_attempts": 5
     },
@@ -1922,7 +1978,6 @@
       ],
       "before": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -1930,7 +1985,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "after": [
         "出征",
@@ -2394,7 +2458,6 @@
       ],
       "after": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -2402,7 +2465,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "observe_attempts": 5
     },
@@ -2415,7 +2487,6 @@
       ],
       "before": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -2423,7 +2494,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "after": [
         "出征",
@@ -2887,7 +2967,6 @@
       ],
       "after": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -2895,7 +2974,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "observe_attempts": 5
     },
@@ -2908,7 +2996,6 @@
       ],
       "before": {
         "all": [
-          "城镇",
           "推荐实力",
           "攻击"
         ],
@@ -2916,7 +3003,16 @@
           "侦察",
           "占领",
           "集结"
-        ]
+        ],
+        "page_text_regions": [
+          [
+            220,
+            220,
+            575,
+            590
+          ]
+        ],
+        "page_text_only": true
       },
       "after": [
         "出征",
@@ -3701,5 +3797,5 @@
       }
     ]
   },
-  "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role."
+  "verification_scope": "Main three real dispatch/claims; fourth proper NPC was falsely rejected by background集结队伍. New menu-only crop retains NPC recommended strength/attack and forbids player controls locally. Next role pending."
 }

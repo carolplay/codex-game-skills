@@ -1,6 +1,6 @@
 {
-  "package_version": "0.5.3",
-  "executor_min_version": "0.2.1",
+  "package_version": "0.8.0",
+  "executor_min_version": "0.2.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
     "mail": {
@@ -220,8 +220,8 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.3",
-      "sha256": "53358d6ef01cb32ccdad36c7329be89ac6fddc208555e824c81d7673ab554b4b",
+      "action_version": "0.1.5",
+      "sha256": "0d979d716d76bfec46f9daf8c72a2dc0c0bfc926fb07845ef260a2cee635fe2b",
       "period": "day",
       "utility": false,
       "verification_scope": "Actual role2944 click removed red dot and showed03:16:16 countdown without reward modal. Positive cooldown required after optional modal; next-role replay pending."
@@ -274,8 +274,8 @@
     "intel_beast": {
       "path": "actions/wos-intel-beast.json",
       "action_id": "wos-intel-beast",
-      "action_version": "0.1.1",
-      "sha256": "0944352d1b7dc5a92ce31c75cc733bbd0324bf49681dcb0a9ea666c9a19e4f46",
+      "action_version": "0.1.2",
+      "sha256": "dc9e18afa98a3ae148d484826c891c3c452f60d5e61fff8db9de027d8a83ed59",
       "period": "shift",
       "utility": false,
       "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role."
@@ -292,8 +292,8 @@
     "gather_wood": {
       "path": "actions/wos-gather-wood.json",
       "action_id": "wos-gather-wood",
-      "action_version": "0.1.0",
-      "sha256": "66dddc05a7f1054f348d02f40987db38d998d33da78e02b1cebfa03880edb73f",
+      "action_version": "0.1.1",
+      "sha256": "f4176189ab090ed184ba351804f10fe3788628b5b506f467226ff118f25c6ad3",
       "period": "shift",
       "utility": false,
       "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending."
@@ -301,8 +301,8 @@
     "gather_coal": {
       "path": "actions/wos-gather-coal.json",
       "action_id": "wos-gather-coal",
-      "action_version": "0.1.0",
-      "sha256": "e240fdb8413bb7adba83cbccefa482a7979ef10368ec57a90953922450cb8b6e",
+      "action_version": "0.1.1",
+      "sha256": "b1be456a95023bfd6fd6f396de35d856b631c9fb70b46d14397ac78c5a60727c",
       "period": "shift",
       "utility": false,
       "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending."
@@ -310,8 +310,8 @@
     "gather_iron": {
       "path": "actions/wos-gather-iron.json",
       "action_id": "wos-gather-iron",
-      "action_version": "0.1.0",
-      "sha256": "f7ab637130f25ff10077ca1f1b9f28753dd05ed512849c975756a9699932ce7d",
+      "action_version": "0.1.1",
+      "sha256": "ed2d960e1c44bb17bb1cad08a41a8fd4ebed7e227a8e77e1c287401b25a028ab",
       "period": "shift",
       "utility": false,
       "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending."
@@ -355,8 +355,8 @@
     "alliance_incentive": {
       "path": "actions/wos-alliance-incentive.json",
       "action_id": "wos-alliance-incentive",
-      "action_version": "0.1.1",
-      "sha256": "fcc9052f3dcf8983ee029b50c9e33772199529150c1d7c49044623c9db73df7f",
+      "action_version": "0.1.2",
+      "sha256": "4dc66c8adf22071656403f69cbbaede18eeec33cc0d189e02c20548f3bc6acf2",
       "period": "day",
       "utility": false,
       "verification_scope": "Role2944 overview group heading left of old bounds; expand target to verified header and arrow offset; not yet live replay."
@@ -400,16 +400,49 @@
       "verification_scope": "Current role manual sample: game idle queue navigated盾兵营7→8, ordinary upgrade108FC/9refined and common resources,1d6h queue. Max2 idle queues, existing timers preserved; no diamonds/acceleration. New-role replay pending.",
       "category": "upgrade",
       "include_in_daily": false
+    },
+    "travel_idle": {
+      "path": "actions/wos-travel-idle.json",
+      "action_id": "wos-travel-idle",
+      "action_version": "0.1.2",
+      "sha256": "80cd6a1e3f73be797276b67af7fedff3b0422e51da051f6c52bc485bfc948498",
+      "period": "shift",
+      "utility": false,
+      "verification_scope": "First settle old completed job if any, then use only existing1..100 Trek supplies; never purchases. Existing running job is left intact with deviation. Separate claim near visit end settles newly finished job. All new branches pending live replay. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending."
+    },
+    "travel_idle_claim": {
+      "path": "actions/wos-travel-idle-claim.json",
+      "action_id": "wos-travel-idle-claim",
+      "action_version": "0.1.1",
+      "sha256": "b40756cecda3cbe9288ad1754d79c8995120d9232ff52d49a781035a23120b55",
+      "period": "shift",
+      "utility": false,
+      "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending."
+    },
+    "pet_treasure_dispatch": {
+      "path": "actions/wos-pet-treasure-dispatch.json",
+      "action_id": "wos-pet-treasure-dispatch",
+      "action_version": "0.1.1",
+      "sha256": "80a867220979ee6f33eaca04c5c7a366c94d68546d8cd6855ed0eb99273aa0a0",
+      "period": "shift",
+      "utility": false,
+      "verification_scope": "Current小黄鸡 manualgold dispatch10stamina,5h,quota4→3; game auto-selects eligible availablepet. Candidate attempts1gold+2blue; existingrunningdetail is recognized and closed without redispatch. Gold/blue templates calibrated to available map; purple/other skins not covered. Actual macro replay pending."
+    },
+    "war_academy_commission": {
+      "path": "actions/wos-war-academy-commission.json",
+      "action_id": "wos-war-academy-commission",
+      "action_version": "0.1.0",
+      "sha256": "c5ad89c0ccf81728784d522eaa3cff10a1ba28d16c907541c78201a361560547",
+      "period": "event",
+      "utility": false,
+      "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending."
     }
   },
   "not_implemented": [
-    "pet_treasure_dispatch",
     "muskox_gather",
-    "war_academy_commission",
     "expert_other_entries",
     "island_ally_help",
     "sign_in_and_event_free_tiers",
-    "travel_idle",
     "endless_trials",
     "weekly_alliance_settlement",
     "four_week_event_rewards"
@@ -429,8 +462,10 @@
     "gathering": "four resource candidates based on previous recording; hidden category/layout/current level need replay",
     "healing": "ordinary heal candidate; current role empty/running/title/camera branches pending",
     "enlistment": "empty/recall candidate; additional expert rewards still missing",
-    "pet_treasure": "completed and allied claims candidates; fresh dispatch still missing",
+    "pet_treasure": "Completeclaims and alliedclaims plus newgold/blue dispatch candidate; purple skins/activepet branches pending.",
     "labyrinth": "Available-zone free sweep candidate; battles and cycle-specific progress rewards not yet covered",
-    "alliance_incentive": "personal daily only; weekly settlement missing"
+    "alliance_incentive": "personal daily only; weekly settlement missing",
+    "travel": "Start/claim candidates;50-supply start/complete manual sample, new-role replay pending.",
+    "war_academy_commission": "FireCrystalDeepExploration free earned rows/milestones candidate; no exchange/research/upgrade or paid extension. New-role replay pending."
   }
 }

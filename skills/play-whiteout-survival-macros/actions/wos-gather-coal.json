@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-coal",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS gather_coal",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending.",
+  "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather.",
   "steps": [
     {
       "name": "01-check-city",
@@ -232,6 +232,145 @@
           }
         ]
       }
+    },
+    {
+      "name": "recenter-select-生肉",
+      "action": "click",
+      "text_target": {
+        "text": "生肉",
+        "bounds": [
+          98,
+          750,
+          690,
+          835
+        ],
+        "offset": [
+          0,
+          -25
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征"
+        ]
+      },
+      "after": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征"
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "recenter-close-生肉",
+      "action": "click",
+      "point": [
+        394,
+        400
+      ],
+      "before": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "recenter-reopen-生肉",
+      "action": "click",
+      "point": [
+        135,
+        747
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征"
+        ]
+      },
+      "observe_attempts": 4
     },
     {
       "name": "select-resource",

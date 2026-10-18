@@ -1,0 +1,3246 @@
+{
+  "action_id": "wos-war-academy-commission",
+  "action_version": "0.1.0",
+  "name": "WOS war_academy_commission",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 480,
+  "status": "candidate",
+  "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending.",
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-town-overview",
+      "action": "click",
+      "point": [
+        109,
+        482
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "town-tab",
+      "action": "click",
+      "point": [
+        161,
+        249
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "seek-war-academy-0",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": [
+        "战争学院研究"
+      ]
+    },
+    {
+      "name": "seek-war-academy-1",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": [
+        "战争学院研究"
+      ]
+    },
+    {
+      "name": "seek-war-academy-2",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": [
+        "战争学院研究"
+      ]
+    },
+    {
+      "name": "seek-war-academy-3",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": [
+        "战争学院研究"
+      ]
+    },
+    {
+      "name": "seek-war-academy-4",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": [
+        "战争学院研究"
+      ]
+    },
+    {
+      "name": "seek-war-academy-5",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": [
+        "战争学院研究"
+      ]
+    },
+    {
+      "name": "seek-war-academy-6",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": [
+        "战争学院研究"
+      ]
+    },
+    {
+      "name": "seek-war-academy-7",
+      "action": "key",
+      "key": "Up",
+      "key_count": 5,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": [
+        "战争学院研究"
+      ]
+    },
+    {
+      "name": "locate-war-academy",
+      "action": "click",
+      "text_target": {
+        "text": "战争学院研究",
+        "bounds": [
+          160,
+          270,
+          390,
+          740
+        ],
+        "offset": [
+          150,
+          10
+        ],
+        "min_confidence": 0.3
+      },
+      "before": [
+        "战争学院研究"
+      ],
+      "after": {
+        "any": [
+          "英雄",
+          "火晶科技",
+          "战争学院研究"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-fire-tech",
+      "action": "click",
+      "text_target": {
+        "text": "火晶科技",
+        "bounds": [
+          180,
+          620,
+          650,
+          850
+        ],
+        "offset": [
+          0,
+          -40
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "战争学院",
+          "火晶科技",
+          "详情"
+        ]
+      },
+      "after": {
+        "any": [
+          "战争学院研究",
+          "火晶微粒兑换"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "战争学院研究",
+            "委托"
+          ],
+          "none": [
+            "火晶微粒兑换",
+            "火晶深度探秘"
+          ]
+        },
+        [
+          "火晶微粒兑换",
+          "点击空白处可关闭"
+        ]
+      ]
+    },
+    {
+      "name": "close-exchange-if-open",
+      "action": "click",
+      "point": [
+        394,
+        950
+      ],
+      "before": [
+        "火晶微粒兑换",
+        "点击空白处可关闭"
+      ],
+      "after": {
+        "all": [
+          "战争学院研究",
+          "委托"
+        ],
+        "none": [
+          "火晶微粒兑换",
+          "火晶深度探秘"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "战争学院研究",
+          "委托"
+        ],
+        "none": [
+          "火晶微粒兑换",
+          "火晶深度探秘"
+        ]
+      }
+    },
+    {
+      "name": "open-commission",
+      "action": "click",
+      "point": [
+        625,
+        266
+      ],
+      "before": {
+        "all": [
+          "战争学院研究",
+          "委托"
+        ],
+        "none": [
+          "火晶微粒兑换",
+          "火晶深度探秘"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "claim-visible-free-0",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-0",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-1",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-1",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-1",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-2",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-2",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-2",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-3",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-3",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-3",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-4",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-4",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-4",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-5",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-5",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-5",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-6",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-6",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-6",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-7",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-7",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-7",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-8",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-8",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-8",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-9",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-9",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-9",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-10",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-10",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-10",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "scroll-free-rows-11",
+      "action": "key",
+      "key": "Up",
+      "key_count": 20,
+      "duration_ms": 100,
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-visible-free-11",
+      "action": "click",
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "select": "top-left",
+        "bounds": [
+          500,
+          540,
+          675,
+          1070
+        ],
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "min": 0.02
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              515,
+              570,
+              660,
+              1070
+            ],
+            "max": 0.019
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-free-reward-11",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "claim-progress-2",
+      "action": "click",
+      "point": [
+        277,
+        443
+      ],
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              139,
+              480,
+              177,
+              525
+            ],
+            "pattern": "(?:[2-9]|[1-9][0-9]+)",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "火晶深度探秘"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                259,
+                426,
+                295,
+                463
+              ],
+              "min": 0.1
+            }
+          ]
+        },
+        {
+          "all": [
+            "火晶深度探秘"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                139,
+                480,
+                177,
+                525
+              ],
+              "pattern": "[0-1]",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "close-progress-reward-2",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "verify-progress-2",
+      "action": "observe",
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              259,
+              426,
+              295,
+              463
+            ],
+            "min": 0.1
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              139,
+              480,
+              177,
+              525
+            ],
+            "pattern": "[0-1]",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "claim-progress-4",
+      "action": "click",
+      "point": [
+        394,
+        443
+      ],
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              139,
+              480,
+              177,
+              525
+            ],
+            "pattern": "(?:[4-9]|[1-9][0-9]+)",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "火晶深度探秘"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                376,
+                426,
+                412,
+                463
+              ],
+              "min": 0.1
+            }
+          ]
+        },
+        {
+          "all": [
+            "火晶深度探秘"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                139,
+                480,
+                177,
+                525
+              ],
+              "pattern": "[0-3]",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "close-progress-reward-4",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "verify-progress-4",
+      "action": "observe",
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              376,
+              426,
+              412,
+              463
+            ],
+            "min": 0.1
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              139,
+              480,
+              177,
+              525
+            ],
+            "pattern": "[0-3]",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "claim-progress-6",
+      "action": "click",
+      "point": [
+        512,
+        443
+      ],
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              139,
+              480,
+              177,
+              525
+            ],
+            "pattern": "(?:[6-9]|[1-9][0-9]+)",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "火晶深度探秘"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                494,
+                426,
+                530,
+                463
+              ],
+              "min": 0.1
+            }
+          ]
+        },
+        {
+          "all": [
+            "火晶深度探秘"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                139,
+                480,
+                177,
+                525
+              ],
+              "pattern": "[0-5]",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "close-progress-reward-6",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "verify-progress-6",
+      "action": "observe",
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              494,
+              426,
+              530,
+              463
+            ],
+            "min": 0.1
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              139,
+              480,
+              177,
+              525
+            ],
+            "pattern": "[0-5]",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "claim-progress-8",
+      "action": "click",
+      "point": [
+        629,
+        443
+      ],
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              139,
+              480,
+              177,
+              525
+            ],
+            "pattern": "(?:[8-9]|[1-9][0-9]+)",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "火晶深度探秘",
+          "获得奖励",
+          "恭喜获得"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "火晶深度探秘"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                611,
+                426,
+                647,
+                463
+              ],
+              "min": 0.1
+            }
+          ]
+        },
+        {
+          "all": [
+            "火晶深度探秘"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                139,
+                480,
+                177,
+                525
+              ],
+              "pattern": "[0-7]",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "close-progress-reward-8",
+      "action": "click",
+      "point": [
+        394,
+        996
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      }
+    },
+    {
+      "name": "verify-progress-8",
+      "action": "observe",
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              611,
+              426,
+              647,
+              463
+            ],
+            "min": 0.1
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              139,
+              480,
+              177,
+              525
+            ],
+            "pattern": "[0-7]",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "exit-commission",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "火晶深度探秘"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "战争学院研究",
+          "委托"
+        ],
+        "none": [
+          "火晶微粒兑换",
+          "火晶深度探秘"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "exit-academy",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "战争学院研究",
+          "委托"
+        ],
+        "none": [
+          "火晶微粒兑换",
+          "火晶深度探秘"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 5,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-overview",
+        "action": "click",
+        "point": [
+          482,
+          482
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "any": [
+            "城镇",
+            "日常",
+            "完成任务后是否隐藏"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "close-commission-reward",
+        "action": "click",
+        "point": [
+          394,
+          996
+        ],
+        "before": {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "火晶深度探秘"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-commission",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "火晶深度探秘"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "战争学院研究",
+            "委托"
+          ],
+          "none": [
+            "火晶微粒兑换",
+            "火晶深度探秘"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "close-exchange",
+        "action": "click",
+        "point": [
+          394,
+          950
+        ],
+        "before": [
+          "火晶微粒兑换",
+          "点击空白处可关闭"
+        ],
+        "after": {
+          "all": [
+            "战争学院研究",
+            "委托"
+          ],
+          "none": [
+            "火晶微粒兑换",
+            "火晶深度探秘"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-academy",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "战争学院研究",
+            "委托"
+          ],
+          "none": [
+            "火晶微粒兑换",
+            "火晶深度探秘"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  }
+}
