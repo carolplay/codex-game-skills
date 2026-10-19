@@ -1,6 +1,6 @@
 {
   "action_id": "wos-travel-idle-claim",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS travel_idle_claim",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending.",
+  "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance.",
   "steps": [
     {
       "name": "01-check-city",
@@ -22,7 +22,8 @@
         "none": [
           "日常",
           "建造队列",
-          "游历补给"
+          "游历补给",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -30,6 +31,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -53,7 +60,16 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
+        ],
+        "none": [
+          "完成任务后是否隐藏"
         ]
       },
       "after": [
@@ -91,7 +107,16 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
+        ],
+        "none": [
+          "完成任务后是否隐藏"
         ]
       }
     },
@@ -115,7 +140,8 @@
           "部队训练",
           "技能学习",
           "超级提炼优惠",
-          "提炼次数"
+          "提炼次数",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -123,6 +149,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ],
         "text_regions": [
@@ -152,7 +184,8 @@
           "野外"
         ],
         "none": [
-          "/"
+          "/",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -166,6 +199,12 @@
             840,
             610,
             940
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ],
         "template_regions": [
@@ -208,7 +247,8 @@
           "野外"
         ],
         "none": [
-          "/"
+          "/",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -222,6 +262,12 @@
             840,
             610,
             940
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ],
         "template_regions": [
@@ -256,7 +302,8 @@
           "野外"
         ],
         "none": [
-          "/"
+          "/",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -270,6 +317,12 @@
             840,
             610,
             940
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ],
         "template_regions": [
@@ -319,7 +372,8 @@
           "野外"
         ],
         "none": [
-          "/"
+          "/",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -333,6 +387,12 @@
             840,
             610,
             940
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ],
         "template_regions": [
@@ -388,7 +448,8 @@
           "野外"
         ],
         "none": [
-          "/"
+          "/",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -402,6 +463,12 @@
             840,
             610,
             940
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ],
         "template_regions": [
@@ -451,7 +518,8 @@
           "部队训练",
           "技能学习",
           "超级提炼优惠",
-          "提炼次数"
+          "提炼次数",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -459,6 +527,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -476,7 +550,8 @@
           "部队训练",
           "技能学习",
           "超级提炼优惠",
-          "提炼次数"
+          "提炼次数",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -484,6 +559,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -505,7 +586,8 @@
         "部队训练",
         "技能学习",
         "超级提炼优惠",
-        "提炼次数"
+        "提炼次数",
+        "完成任务后是否隐藏"
       ],
       "page_text_regions": [
         [
@@ -513,6 +595,12 @@
           995,
           690,
           1079
+        ],
+        [
+          160,
+          745,
+          450,
+          800
         ]
       ]
     },
@@ -540,7 +628,16 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
+          ],
+          "none": [
+            "完成任务后是否隐藏"
           ]
         },
         "observe_attempts": 3,
@@ -561,7 +658,6 @@
           ],
           "any": [
             "城镇",
-            "日常",
             "完成任务后是否隐藏"
           ],
           "page_text_regions": [
@@ -570,6 +666,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },
@@ -586,7 +688,8 @@
             "部队训练",
             "技能学习",
             "超级提炼优惠",
-            "提炼次数"
+            "提炼次数",
+            "完成任务后是否隐藏"
           ],
           "page_text_regions": [
             [
@@ -594,6 +697,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },
@@ -648,7 +757,8 @@
             "部队训练",
             "技能学习",
             "超级提炼优惠",
-            "提炼次数"
+            "提炼次数",
+            "完成任务后是否隐藏"
           ],
           "page_text_regions": [
             [
@@ -656,6 +766,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },
@@ -721,7 +837,8 @@
             "部队训练",
             "技能学习",
             "超级提炼优惠",
-            "提炼次数"
+            "提炼次数",
+            "完成任务后是否隐藏"
           ],
           "page_text_regions": [
             [
@@ -729,6 +846,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },
@@ -746,7 +869,8 @@
             "部队训练",
             "技能学习",
             "超级提炼优惠",
-            "提炼次数"
+            "提炼次数",
+            "完成任务后是否隐藏"
           ],
           "page_text_regions": [
             [
@@ -754,6 +878,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         }

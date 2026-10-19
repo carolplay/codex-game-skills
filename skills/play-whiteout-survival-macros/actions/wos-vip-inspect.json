@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-inspect",
-  "action_version": "0.1.2",
+  "action_version": "0.1.3",
   "name": "WOS — free VIP gift or cooldown",
   "reference_size": [
     788,
@@ -267,7 +267,8 @@
             "pattern": "未激活"
           }
         ]
-      }
+      },
+      "observe_attempts": 10
     },
     {
       "name": "vip-close",
@@ -472,6 +473,6 @@
     ]
   },
   "status": "real_claim_replay_verified",
-  "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch.",
+  "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. Role2827 actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

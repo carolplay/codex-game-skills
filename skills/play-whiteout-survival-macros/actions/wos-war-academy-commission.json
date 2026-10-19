@@ -1,6 +1,6 @@
 {
   "action_id": "wos-war-academy-commission",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS war_academy_commission",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 480,
   "status": "candidate",
-  "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. Role2827 actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending.",
+  "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. Role2827 actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance.",
   "steps": [
     {
       "name": "01-check-city",
@@ -22,7 +22,8 @@
         "none": [
           "日常",
           "建造队列",
-          "游历补给"
+          "游历补给",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -30,6 +31,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -53,7 +60,16 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
+        ],
+        "none": [
+          "完成任务后是否隐藏"
         ]
       },
       "after": [
@@ -91,7 +107,16 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
+        ],
+        "none": [
+          "完成任务后是否隐藏"
         ]
       }
     },
@@ -115,7 +140,8 @@
           "部队训练",
           "技能学习",
           "超级提炼优惠",
-          "提炼次数"
+          "提炼次数",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -123,6 +149,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -134,7 +166,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -143,6 +174,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -163,7 +200,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -172,6 +208,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -183,7 +225,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -192,6 +233,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -211,7 +258,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -220,6 +266,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -231,7 +283,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -240,6 +291,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -261,7 +318,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -270,6 +326,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -281,7 +343,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -290,6 +351,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -311,7 +378,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -320,6 +386,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -331,7 +403,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -340,6 +411,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -361,7 +438,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -370,6 +446,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -381,7 +463,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -390,6 +471,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -411,7 +498,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -420,6 +506,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -431,7 +523,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -440,6 +531,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -461,7 +558,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -470,6 +566,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -481,7 +583,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -490,6 +591,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -511,7 +618,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -520,6 +626,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -531,7 +643,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -540,6 +651,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -561,7 +678,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -570,6 +686,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -581,7 +703,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -590,6 +711,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -3008,7 +3135,8 @@
           "部队训练",
           "技能学习",
           "超级提炼优惠",
-          "提炼次数"
+          "提炼次数",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -3016,6 +3144,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -3038,7 +3172,8 @@
         "部队训练",
         "技能学习",
         "超级提炼优惠",
-        "提炼次数"
+        "提炼次数",
+        "完成任务后是否隐藏"
       ],
       "page_text_regions": [
         [
@@ -3046,6 +3181,12 @@
           995,
           690,
           1079
+        ],
+        [
+          160,
+          745,
+          450,
+          800
         ]
       ]
     },
@@ -3073,7 +3214,16 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
+          ],
+          "none": [
+            "完成任务后是否隐藏"
           ]
         },
         "observe_attempts": 3,
@@ -3094,7 +3244,6 @@
           ],
           "any": [
             "城镇",
-            "日常",
             "完成任务后是否隐藏"
           ],
           "page_text_regions": [
@@ -3103,6 +3252,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },
@@ -3119,7 +3274,8 @@
             "部队训练",
             "技能学习",
             "超级提炼优惠",
-            "提炼次数"
+            "提炼次数",
+            "完成任务后是否隐藏"
           ],
           "page_text_regions": [
             [
@@ -3127,6 +3283,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },
@@ -3240,7 +3402,8 @@
             "部队训练",
             "技能学习",
             "超级提炼优惠",
-            "提炼次数"
+            "提炼次数",
+            "完成任务后是否隐藏"
           ],
           "page_text_regions": [
             [
@@ -3248,6 +3411,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },

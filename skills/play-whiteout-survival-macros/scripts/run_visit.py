@@ -75,6 +75,7 @@ def main():
             backend.close()
         summary.setdefault('versions', frozen_versions)
         summary['package'] = identity
+        summary['viewport_calibration'] = config.get('viewport_calibration')
         summary['started_unix'] = started
         summary['ended_unix'] = time.time()
         summary['elapsed_seconds'] = summary['ended_unix'] - started

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-shield",
-  "action_version": "0.2.3",
+  "action_version": "0.2.4",
   "name": "WOS — 盾兵 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -382,7 +382,8 @@
           0,
           -40
         ],
-        "min_confidence": 0.3
+        "min_confidence": 0.3,
+        "crop_ocr": true
       }
     },
     {
@@ -615,6 +616,6 @@
       }
     ]
   },
-  "verification_scope": "Training menu button varies with camp placement: resolve current OCR训练 label and calibrated icon offset instead of fixed495,726. Prior branches retained; new target pending next-role replay.",
+  "verification_scope": "Training menu button varies with camp placement: resolve current OCR训练 label and calibrated icon offset instead of fixed495,726. Prior branches retained; new target pending next-role replay. Role2827 runningqueue visible but wholeframe menuOCR lost Training;0.2.4 crop target validated on saved failureframe [531,696]; nextrole livepending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

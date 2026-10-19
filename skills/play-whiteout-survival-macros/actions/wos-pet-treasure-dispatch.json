@@ -1,6 +1,6 @@
 {
   "action_id": "wos-pet-treasure-dispatch",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS pet_treasure_dispatch",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 300,
   "status": "candidate",
-  "verification_scope": "Current小黄鸡 manualgold dispatch10stamina,5h,quota4→3; game auto-selects eligible availablepet. Candidate attempts1gold+2blue; existingrunningdetail is recognized and closed without redispatch. Gold/blue templates calibrated to available map; purple/other skins not covered. Actual macro replay pending. Newrole actual goldrunning skipped correctly, blue detail has no pet strength requirement line; removed high-tier-only predicate from available/exit. Nextrole dispatch replay pending.",
+  "verification_scope": "Current小黄鸡 manualgold dispatch10stamina,5h,quota4→3; game auto-selects eligible availablepet. Candidate attempts1gold+2blue; existingrunningdetail is recognized and closed without redispatch. Gold/blue templates calibrated to available map; purple/other skins not covered. Actual macro replay pending. Newrole actual goldrunning skipped correctly, blue detail has no pet strength requirement line; removed high-tier-only predicate from available/exit. Nextrole dispatch replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance.",
   "steps": [
     {
       "name": "01-check-city",
@@ -22,7 +22,8 @@
         "none": [
           "日常",
           "建造队列",
-          "游历补给"
+          "游历补给",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -30,6 +31,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -53,7 +60,16 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
+        ],
+        "none": [
+          "完成任务后是否隐藏"
         ]
       },
       "after": [
@@ -91,7 +107,16 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
+        ],
+        "none": [
+          "完成任务后是否隐藏"
         ]
       }
     },
@@ -115,7 +140,8 @@
           "部队训练",
           "技能学习",
           "超级提炼优惠",
-          "提炼次数"
+          "提炼次数",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -123,6 +149,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -134,7 +166,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -143,6 +174,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -163,7 +200,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -172,6 +208,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -183,7 +225,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -192,6 +233,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -211,7 +258,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -220,6 +266,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -231,7 +283,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -240,12 +291,18 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
       "skip_if": {
         "all": [
-          "日常",
+          "完成任务后是否隐藏",
           "宠物寻宝"
         ],
         "page_text_regions": [
@@ -254,6 +311,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -272,7 +335,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -281,6 +343,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -292,7 +360,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -301,12 +368,18 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
       "skip_if": {
         "all": [
-          "日常",
+          "完成任务后是否隐藏",
           "宠物寻宝"
         ],
         "page_text_regions": [
@@ -315,6 +388,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -333,7 +412,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -342,6 +420,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -353,7 +437,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -362,12 +445,18 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
       "skip_if": {
         "all": [
-          "日常",
+          "完成任务后是否隐藏",
           "宠物寻宝"
         ],
         "page_text_regions": [
@@ -376,6 +465,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -394,7 +489,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -403,6 +497,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -414,7 +514,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -423,12 +522,18 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
       "skip_if": {
         "all": [
-          "日常",
+          "完成任务后是否隐藏",
           "宠物寻宝"
         ],
         "page_text_regions": [
@@ -437,6 +542,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -455,7 +566,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -464,6 +574,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -475,7 +591,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -484,12 +599,18 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
       "skip_if": {
         "all": [
-          "日常",
+          "完成任务后是否隐藏",
           "宠物寻宝"
         ],
         "page_text_regions": [
@@ -498,6 +619,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -516,7 +643,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -525,6 +651,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -536,7 +668,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -545,12 +676,18 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
       "skip_if": {
         "all": [
-          "日常",
+          "完成任务后是否隐藏",
           "宠物寻宝"
         ],
         "page_text_regions": [
@@ -559,6 +696,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -577,7 +720,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -586,6 +728,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -597,7 +745,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -606,12 +753,18 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
       "skip_if": {
         "all": [
-          "日常",
+          "完成任务后是否隐藏",
           "宠物寻宝"
         ],
         "page_text_regions": [
@@ -620,6 +773,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -638,7 +797,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -647,6 +805,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -658,7 +822,6 @@
         ],
         "any": [
           "城镇",
-          "日常",
           "完成任务后是否隐藏"
         ],
         "page_text_regions": [
@@ -667,12 +830,18 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
       "skip_if": {
         "all": [
-          "日常",
+          "完成任务后是否隐藏",
           "宠物寻宝"
         ],
         "page_text_regions": [
@@ -681,6 +850,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -705,7 +880,7 @@
       },
       "before": {
         "all": [
-          "日常",
+          "完成任务后是否隐藏",
           "宠物寻宝"
         ],
         "page_text_regions": [
@@ -714,6 +889,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -1669,7 +1850,8 @@
           "部队训练",
           "技能学习",
           "超级提炼优惠",
-          "提炼次数"
+          "提炼次数",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -1677,6 +1859,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -1699,7 +1887,8 @@
         "部队训练",
         "技能学习",
         "超级提炼优惠",
-        "提炼次数"
+        "提炼次数",
+        "完成任务后是否隐藏"
       ],
       "page_text_regions": [
         [
@@ -1707,6 +1896,12 @@
           995,
           690,
           1079
+        ],
+        [
+          160,
+          745,
+          450,
+          800
         ]
       ]
     },
@@ -1734,7 +1929,16 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
+          ],
+          "none": [
+            "完成任务后是否隐藏"
           ]
         },
         "observe_attempts": 3,
@@ -1755,7 +1959,6 @@
           ],
           "any": [
             "城镇",
-            "日常",
             "完成任务后是否隐藏"
           ],
           "page_text_regions": [
@@ -1764,6 +1967,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },
@@ -1780,7 +1989,8 @@
             "部队训练",
             "技能学习",
             "超级提炼优惠",
-            "提炼次数"
+            "提炼次数",
+            "完成任务后是否隐藏"
           ],
           "page_text_regions": [
             [
@@ -1788,6 +1998,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },
@@ -1923,7 +2139,8 @@
             "部队训练",
             "技能学习",
             "超级提炼优惠",
-            "提炼次数"
+            "提炼次数",
+            "完成任务后是否隐藏"
           ],
           "page_text_regions": [
             [
@@ -1931,6 +2148,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },
