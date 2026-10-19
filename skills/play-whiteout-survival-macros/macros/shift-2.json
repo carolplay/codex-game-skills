@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.11.2",
-  "package_version": "0.11.2",
+  "macro_version": "0.11.3",
+  "package_version": "0.11.3",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -235,8 +235,8 @@
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.4",
-          "sha256": "40aefa798dd08d60c5b7c76b1b6787b6aa516916c1bf595ab4575c356ed31afa"
+          "action_version": "0.1.5",
+          "sha256": "1983fbd013de1b3763d2b7147e222b2b9845d7fd451f9912a4d6f11422ca6e77"
         },
         {
           "task": "daily",
@@ -483,8 +483,8 @@
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.4",
-          "sha256": "40aefa798dd08d60c5b7c76b1b6787b6aa516916c1bf595ab4575c356ed31afa"
+          "action_version": "0.1.5",
+          "sha256": "1983fbd013de1b3763d2b7147e222b2b9845d7fd451f9912a4d6f11422ca6e77"
         },
         {
           "task": "daily",
