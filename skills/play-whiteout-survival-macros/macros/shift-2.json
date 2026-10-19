@@ -1,10 +1,11 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.8.5",
-  "package_version": "0.8.5",
+  "macro_version": "0.9.2",
+  "package_version": "0.9.2",
   "refresh_utc_hour": 8,
   "dependencies": {
-    "daily": "last: claims newly completed tasks from earlier actions"
+    "daily": "last: claims newly completed tasks from earlier actions",
+    "intel_cycle": "Mixedtype tasks may appear afterclaims.12localrounds,max1800s; returncitybeforegathers; eventFirebeast onlywhen its markerpresent."
   },
   "profiles": {
     "main": {
@@ -126,8 +127,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.8",
-          "sha256": "ee9a4cff392d13415cb980c082bc1080c7815008669ec91c8961eeca125fa0b4"
+          "action_version": "0.1.10",
+          "sha256": "7c30d7b8f40c26c03488b602e0da02c29d56a0fc6b7f0772ef614da9a63f79a2"
         },
         {
           "task": "arena",
@@ -138,8 +139,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.2",
-          "sha256": "9a9117cabd138e203b3860c2a51bd15e9bc0cf006436abb6cb6c1271bcabf034"
+          "action_version": "0.1.4",
+          "sha256": "0110fc193532da8750667fbf3a961bd271f304cc194827d72211874eb4696d3f"
         },
         {
           "task": "orders",
@@ -148,22 +149,10 @@
           "sha256": "4c63b924a3bc51f7152c703f7f4686896f8afd61f530368d63c395563a54fccb"
         },
         {
-          "task": "intel_rescue",
-          "action_id": "wos-intel-rescue",
-          "action_version": "0.1.2",
-          "sha256": "971dc6e8ea0b3e78293b5254df7dd5a6765474fe5e60dafed487907ac1e4eae6"
-        },
-        {
-          "task": "intel_hero",
-          "action_id": "wos-intel-hero",
-          "action_version": "0.1.4",
-          "sha256": "62516e677ab3ba68a3f36a5bfb0cb8a7af46f59e0a4d1ed2f020f44d5125bb70"
-        },
-        {
-          "task": "intel_beast",
-          "action_id": "wos-intel-beast",
-          "action_version": "0.1.3",
-          "sha256": "2a1bdbb22784d672cece9141f6f0d365317cad15bff4547e439c50f78a4d4805"
+          "task": "intel_cycle",
+          "action_id": "wos-intel-cycle",
+          "action_version": "0.1.1",
+          "sha256": "7a23ac49a1cfa2495da7b28b9eff39e9a391a28df8a827a87c7014b305b098c5"
         },
         {
           "task": "gather_meat",
@@ -259,7 +248,11 @@
       "excluded": {
         "vip": "每日首班核验VIP，本班不重复稳定检查",
         "research": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
-        "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用"
+        "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
+        "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
       }
     },
     "mature-test": {
@@ -381,8 +374,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.8",
-          "sha256": "ee9a4cff392d13415cb980c082bc1080c7815008669ec91c8961eeca125fa0b4"
+          "action_version": "0.1.10",
+          "sha256": "7c30d7b8f40c26c03488b602e0da02c29d56a0fc6b7f0772ef614da9a63f79a2"
         },
         {
           "task": "arena",
@@ -393,8 +386,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.2",
-          "sha256": "9a9117cabd138e203b3860c2a51bd15e9bc0cf006436abb6cb6c1271bcabf034"
+          "action_version": "0.1.4",
+          "sha256": "0110fc193532da8750667fbf3a961bd271f304cc194827d72211874eb4696d3f"
         },
         {
           "task": "orders",
@@ -403,22 +396,10 @@
           "sha256": "4c63b924a3bc51f7152c703f7f4686896f8afd61f530368d63c395563a54fccb"
         },
         {
-          "task": "intel_rescue",
-          "action_id": "wos-intel-rescue",
-          "action_version": "0.1.2",
-          "sha256": "971dc6e8ea0b3e78293b5254df7dd5a6765474fe5e60dafed487907ac1e4eae6"
-        },
-        {
-          "task": "intel_hero",
-          "action_id": "wos-intel-hero",
-          "action_version": "0.1.4",
-          "sha256": "62516e677ab3ba68a3f36a5bfb0cb8a7af46f59e0a4d1ed2f020f44d5125bb70"
-        },
-        {
-          "task": "intel_beast",
-          "action_id": "wos-intel-beast",
-          "action_version": "0.1.3",
-          "sha256": "2a1bdbb22784d672cece9141f6f0d365317cad15bff4547e439c50f78a4d4805"
+          "task": "intel_cycle",
+          "action_id": "wos-intel-cycle",
+          "action_version": "0.1.1",
+          "sha256": "7a23ac49a1cfa2495da7b28b9eff39e9a391a28df8a827a87c7014b305b098c5"
         },
         {
           "task": "gather_meat",
@@ -514,7 +495,11 @@
       "excluded": {
         "vip": "每日首班核验VIP，本班不重复稳定检查",
         "research": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
-        "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用"
+        "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
+        "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
       }
     },
     "under30-test": {
@@ -594,8 +579,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.8",
-          "sha256": "ee9a4cff392d13415cb980c082bc1080c7815008669ec91c8961eeca125fa0b4"
+          "action_version": "0.1.10",
+          "sha256": "7c30d7b8f40c26c03488b602e0da02c29d56a0fc6b7f0772ef614da9a63f79a2"
         },
         {
           "task": "arena",
@@ -606,26 +591,14 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.2",
-          "sha256": "9a9117cabd138e203b3860c2a51bd15e9bc0cf006436abb6cb6c1271bcabf034"
-        },
-        {
-          "task": "intel_rescue",
-          "action_id": "wos-intel-rescue",
-          "action_version": "0.1.2",
-          "sha256": "971dc6e8ea0b3e78293b5254df7dd5a6765474fe5e60dafed487907ac1e4eae6"
-        },
-        {
-          "task": "intel_hero",
-          "action_id": "wos-intel-hero",
           "action_version": "0.1.4",
-          "sha256": "62516e677ab3ba68a3f36a5bfb0cb8a7af46f59e0a4d1ed2f020f44d5125bb70"
+          "sha256": "0110fc193532da8750667fbf3a961bd271f304cc194827d72211874eb4696d3f"
         },
         {
-          "task": "intel_beast",
-          "action_id": "wos-intel-beast",
-          "action_version": "0.1.3",
-          "sha256": "2a1bdbb22784d672cece9141f6f0d365317cad15bff4547e439c50f78a4d4805"
+          "task": "intel_cycle",
+          "action_id": "wos-intel-cycle",
+          "action_version": "0.1.1",
+          "sha256": "7a23ac49a1cfa2495da7b28b9eff39e9a391a28df8a827a87c7014b305b098c5"
         },
         {
           "task": "gather_meat",
@@ -719,7 +692,11 @@
         "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
         "travel_idle": "当前低等级绑定角色未到25级，学院/游历尚未解锁；后续按实际解锁更新",
         "travel_idle_claim": "当前低等级绑定角色未到25级，学院/游历尚未解锁；后续按实际解锁更新",
-        "war_academy_commission": "战争学院尚未解锁，按实际等级排除"
+        "war_academy_commission": "战争学院尚未解锁，按实际等级排除",
+        "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
       }
     }
   }

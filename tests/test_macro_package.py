@@ -18,6 +18,23 @@ class PackageTests(unittest.TestCase):
                 self.assertEqual('daily', tasks[-1][0])
                 self.assertEqual(pkg.read(ROOT / 'catalog.json')['package_version'], identity['package_version'])
 
+    def test_daily_profiles_use_mixed_cycle_without_repeating_components(self):
+        for path in (ROOT / 'macros').glob('shift-*.json'):
+            for profile in pkg.read(path)['profiles'].values():
+                tasks=[a['task'] for a in profile['actions']]
+                self.assertEqual(1,tasks.count('intel_cycle'))
+                for component in ('intel_rescue','intel_hero','intel_beast','intel_firebeast'):
+                    self.assertNotIn(component,tasks)
+                    self.assertTrue(profile['excluded'][component])
+
+    def test_generated_cycle_still_matches_current_component_content(self):
+        spec=importlib.util.spec_from_file_location('cycle_builder',ROOT / 'scripts/build_intel_cycle.py')
+        builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
+        flows={k:pkg.read(ROOT / f'actions/wos-intel-{k}.json') for k in ('beast','rescue','hero','firebeast')}
+        generated=builder.build(flows);published=pkg.read(ROOT / 'actions/wos-intel-cycle.json')
+        for key in ('steps','task_contract','component_versions','repeat_from'):
+            self.assertEqual(generated[key],published[key])
+
     def test_main_uses_same_current_actions_as_other_mature_roles(self):
         for path in (ROOT / 'macros').glob('*.json'):
             profiles=pkg.read(path)['profiles']

@@ -1,6 +1,6 @@
 {
-  "package_version": "0.8.5",
-  "executor_min_version": "0.2.4",
+  "package_version": "0.9.2",
+  "executor_min_version": "0.2.7",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
     "mail": {
@@ -220,8 +220,8 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.8",
-      "sha256": "ee9a4cff392d13415cb980c082bc1080c7815008669ec91c8961eeca125fa0b4",
+      "action_version": "0.1.10",
+      "sha256": "7c30d7b8f40c26c03488b602e0da02c29d56a0fc6b7f0772ef614da9a63f79a2",
       "period": "day",
       "utility": false,
       "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates. Mainstore1.6 failedbeforeclaim because observed LordStaminaPack lacks storeheading. Knownpack body/back sampled; close/reopen returned firstArtisan tab with cooldown. Nextrevision boundedone normalization reopen plus scopedbodytitle/globalrewardabsence; nextrole only, no same-roleclaimretry. Nextdraft makesstore/root exclusion exactcomplement ofdeclaredrewardexit labels, so backgroundstoretitle cannot create ambiguousexit underrewardoverlay."
@@ -238,8 +238,8 @@
     "island": {
       "path": "actions/wos-island.json",
       "action_id": "wos-island",
-      "action_version": "0.1.2",
-      "sha256": "9a9117cabd138e203b3860c2a51bd15e9bc0cf006436abb6cb6c1271bcabf034",
+      "action_version": "0.1.4",
+      "sha256": "0110fc193532da8750667fbf3a961bd271f304cc194827d72211874eb4696d3f",
       "period": "shift",
       "utility": false,
       "verification_scope": "Manual main tree+5040 sampled; island UI and fixed tree/lumber leaf positions observed; layout/balance validation required, next-role macro replay pending. No decorations/upgrades."
@@ -256,20 +256,26 @@
     "intel_rescue": {
       "path": "actions/wos-intel-rescue.json",
       "action_id": "wos-intel-rescue",
-      "action_version": "0.1.2",
-      "sha256": "971dc6e8ea0b3e78293b5254df7dd5a6765474fe5e60dafed487907ac1e4eae6",
+      "action_version": "0.1.3",
+      "sha256": "520dbe0912569dc1ff47b2faa01e8100be6c36f39a1a5b81f6520ccf2af18562",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role."
+      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role.",
+      "category": "component",
+      "include_in_daily": false,
+      "production_replacement": "intel_cycle"
     },
     "intel_hero": {
       "path": "actions/wos-intel-hero.json",
       "action_id": "wos-intel-hero",
-      "action_version": "0.1.4",
-      "sha256": "62516e677ab3ba68a3f36a5bfb0cb8a7af46f59e0a4d1ed2f020f44d5125bb70",
+      "action_version": "0.1.5",
+      "sha256": "a4a1535f726f780caa0d0c11925885a300479b076a7c428318a14fdb76f67df6",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry. Nextdraft uses180,650 dismisspoint actuallysampled on mainHeroCard; no followup exploration performed."
+      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry. Nextdraft uses180,650 dismisspoint actuallysampled on mainHeroCard; no followup exploration performed.",
+      "category": "component",
+      "include_in_daily": false,
+      "production_replacement": "intel_cycle"
     },
     "intel_beast": {
       "path": "actions/wos-intel-beast.json",
@@ -278,7 +284,10 @@
       "sha256": "2a1bdbb22784d672cece9141f6f0d365317cad15bff4547e439c50f78a4d4805",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role."
+      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role.",
+      "category": "component",
+      "include_in_daily": false,
+      "production_replacement": "intel_cycle"
     },
     "gather_meat": {
       "path": "actions/wos-gather-meat.json",
@@ -436,6 +445,26 @@
       "period": "event",
       "utility": false,
       "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. Role2827 actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending."
+    },
+    "intel_firebeast": {
+      "path": "actions/wos-intel-firebeast.json",
+      "action_id": "wos-intel-firebeast",
+      "action_version": "0.1.0",
+      "sha256": "14c682b7605c302dae567594634355158419bfe0e9ce161f27dea1dde417aacc",
+      "period": "event",
+      "utility": false,
+      "verification_scope": "Candidate; see visit-plan and local evidence. No all-branch guarantee.",
+      "category": "component",
+      "include_in_daily": false
+    },
+    "intel_cycle": {
+      "path": "actions/wos-intel-cycle.json",
+      "action_id": "wos-intel-cycle",
+      "action_version": "0.1.1",
+      "sha256": "7a23ac49a1cfa2495da7b28b9eff39e9a391a28df8a827a87c7014b305b098c5",
+      "period": "shift",
+      "utility": false,
+      "verification_scope": "Candidate; see visit-plan and local evidence. No all-branch guarantee."
     }
   },
   "not_implemented": [

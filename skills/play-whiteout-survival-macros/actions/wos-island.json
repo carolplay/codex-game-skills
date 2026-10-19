@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.2",
+  "action_version": "0.1.4",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Tree fixed entry collected on mature and low roles. Low lumber failure was40,673 OCR4.0,673; widened saved crop resolves40,673. Candidate up to5 detected life-output bubbles instead of fixed lumber coordinates; full replay next role.",
+  "verification_scope": "Tree fixed entry collected on mature and low roles. Low lumber failure was40,673 OCR4.0,673; widened saved crop resolves40,673. Candidate up to5 detected life-output bubbles instead of fixed lumber coordinates; full replay next role. One mature role overview opened at rememberedbottom; boundedseekDown never scansabovestart. Newcandidate resets listtop beforeseek unless targetalreadyvisible; missingentry stilldeviation, not assumedcomplete. Newrole listnormalization foundentry andtree+2205. Lumberactual+2000 popup with delayedcounter falselyfailed5reads. Increase observation-only delta retries to30; no repeatclicks. Native touchdirections confirmed: Up swipescontentup towardbottom; reset usesDown. Engine0.2.6 waits UIstate betweenrepeat gestures; earlierUp normalization was not a verifiedlisttop anchor.",
   "steps": [
     {
       "name": "01-check-city",
@@ -196,6 +196,68 @@
         ]
       },
       "observe_attempts": 5
+    },
+    {
+      "name": "normalize-daily-list-top",
+      "action": "key",
+      "key": "Down",
+      "key_count": 12,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "日常",
+          "生命之树"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ]
+        ]
+      },
+      "observe_attempts": 3
     },
     {
       "name": "seek-0",
@@ -836,7 +898,7 @@
         }
       ],
       "skip_if_step_skipped": "collect-tree",
-      "observe_attempts": 6
+      "observe_attempts": 30
     },
     {
       "name": "output-0-balance",
@@ -957,7 +1019,7 @@
           "min_confidence": 0.3
         }
       ],
-      "observe_attempts": 5
+      "observe_attempts": 30
     },
     {
       "name": "output-1-balance",
@@ -1078,7 +1140,7 @@
           "min_confidence": 0.3
         }
       ],
-      "observe_attempts": 5
+      "observe_attempts": 30
     },
     {
       "name": "output-2-balance",
@@ -1199,7 +1261,7 @@
           "min_confidence": 0.3
         }
       ],
-      "observe_attempts": 5
+      "observe_attempts": 30
     },
     {
       "name": "output-3-balance",
@@ -1320,7 +1382,7 @@
           "min_confidence": 0.3
         }
       ],
-      "observe_attempts": 5
+      "observe_attempts": 30
     },
     {
       "name": "output-4-balance",
@@ -1441,7 +1503,7 @@
           "min_confidence": 0.3
         }
       ],
-      "observe_attempts": 5
+      "observe_attempts": 30
     }
   ],
   "task_contract": {
