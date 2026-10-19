@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.6",
+  "action_version": "0.1.7",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 360,
   "status": "candidate",
-  "verification_scope": "0.1.5Labubu screenshotshows treevisible but cursoroccludes daily-tab label; required日常 falselytriggeredscroll.0.1.6uses visible tree+overviewfooter includingfreshcroppedOCR. Nextrole replaypending; retain actualpositivegain checks and boundedexit. City anchor now excludes visible overviewfooter, so cursor-occluded tab cannot falsely qualify ascity. No new liveclaimyet.",
+  "verification_scope": "0.1.6 main actual island entry/exit passed but tree inventory did not increase. Role2827 entry sample hit CUA30second timeout with20keys;0.1.7 splits normalization into at most5keys per observed chunk. Independent development sample clicked lower-left orange bubble [372,344]:392243→395848 (+3605), bubble disappeared. Collection point updated; inventory increase checks retained. This positive sample is not full macro replay;0.1.7 live replay pending. Other layouts still fail boundedly.",
   "steps": [
     {
       "name": "01-check-city",
@@ -212,10 +212,10 @@
       "observe_attempts": 5
     },
     {
-      "name": "normalize-daily-list-top",
+      "name": "normalize-daily-list-top-chunk-1",
       "action": "key",
       "key": "Down",
-      "key_count": 20,
+      "key_count": 5,
       "duration_ms": 600,
       "before": {
         "all": [
@@ -280,10 +280,418 @@
       "observe_attempts": 3
     },
     {
-      "name": "normalize-daily-list-top-2",
+      "name": "normalize-daily-list-top-chunk-2",
       "action": "key",
       "key": "Down",
-      "key_count": 20,
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "生命之树",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "normalize-daily-list-top-chunk-3",
+      "action": "key",
+      "key": "Down",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "生命之树",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "normalize-daily-list-top-chunk-4",
+      "action": "key",
+      "key": "Down",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "生命之树",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "normalize-daily-list-top-2-chunk-1",
+      "action": "key",
+      "key": "Down",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "生命之树",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "normalize-daily-list-top-2-chunk-2",
+      "action": "key",
+      "key": "Down",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "生命之树",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "normalize-daily-list-top-2-chunk-3",
+      "action": "key",
+      "key": "Down",
+      "key_count": 5,
+      "duration_ms": 600,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "日常",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "生命之树",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            160,
+            270,
+            430,
+            740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "normalize-daily-list-top-2-chunk-4",
+      "action": "key",
+      "key": "Down",
+      "key_count": 5,
       "duration_ms": 600,
       "before": {
         "all": [
@@ -961,8 +1369,8 @@
       "name": "collect-tree",
       "action": "click",
       "point": [
-        394,
-        321
+        372,
+        344
       ],
       "before": {
         "all": [

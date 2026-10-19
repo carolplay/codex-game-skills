@@ -1,5 +1,5 @@
 {
-  "package_version": "0.9.6",
+  "package_version": "0.9.7",
   "executor_min_version": "0.2.7",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -238,11 +238,11 @@
     "island": {
       "path": "actions/wos-island.json",
       "action_id": "wos-island",
-      "action_version": "0.1.6",
-      "sha256": "8898fffc6c3f3e4e93a17dbca6a2d07233ab7c6504252fd9e92d2e1169bb9d75",
+      "action_version": "0.1.7",
+      "sha256": "54bd618fbfc218cdcef33a542d3e7d1123f892ad6c101973e03adfd070ea1502",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Manual main tree+5040 sampled; island UI and fixed tree/lumber leaf positions observed; layout/balance validation required, next-role macro replay pending. No decorations/upgrades."
+      "verification_scope": "0.1.6 main actual island entry/exit passed but tree inventory did not increase. Role2827 entry sample hit CUA30second timeout with20keys;0.1.7 splits normalization into at most5keys per observed chunk. Independent development sample clicked lower-left orange bubble [372,344]:392243→395848 (+3605), bubble disappeared. Collection point updated; inventory increase checks retained. This positive sample is not full macro replay;0.1.7 live replay pending. Other layouts still fail boundedly."
     },
     "orders": {
       "path": "actions/wos-orders.json",
@@ -469,12 +469,12 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.1",
-      "sha256": "ee384be6680b46544636c241d3f20c9ba383a7a259b6c521c413d02d7c1bb907",
+      "action_version": "0.1.2",
+      "sha256": "48f418b332fcff7209f53030c515563d94e8935f4f496481b16e9d15dc159be0",
       "period": "day",
       "utility": false,
       "include_in_daily": false,
-      "verification_scope": "Developer sampled actual level4 Sabertooth initiation and initiator victory report. Component 0.1.0 failed before dispatch: category OCR read 冰原巨善 and exit shared the same exact label. 0.1.1 uses scoped stable prefix 冰原巨; search exit independently recognizes 搜索+自动狩猎. Saved failure frame offline validation only; no live replay of 0.1.1 yet. Not a daily ten-rally completion action; result and daily-count reconciliation remain pending."
+      "verification_scope": "0.1.1 role2827 search page recognized; category text_target used shortened label but retained default exact match (whole-frame OCR also inconsistent), no dispatch. Independent exit-search and exit-world restored city in2steps.0.1.2 enables bounded crop OCR and explicit prefix matching for category target; live replay pending. Development sample separately proved one actual level4Sabertooth initiated victory. Daily10counter/result reconciliation and level normalization still pending; default shifts exclude component."
     }
   },
   "not_implemented": [

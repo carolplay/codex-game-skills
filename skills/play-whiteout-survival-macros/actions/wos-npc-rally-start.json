@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Developer sampled actual level4 Sabertooth initiation and initiator victory report. Component 0.1.0 failed before dispatch: category OCR read 冰原巨善 and exit shared the same exact label. 0.1.1 uses scoped stable prefix 冰原巨; search exit independently recognizes 搜索+自动狩猎. Saved failure frame offline validation only; no live replay of 0.1.1 yet. Not a daily ten-rally completion action; result and daily-count reconciliation remain pending.",
+  "verification_scope": "0.1.1 role2827 search page recognized; category text_target used shortened label but retained default exact match (whole-frame OCR also inconsistent), no dispatch. Independent exit-search and exit-world restored city in2steps.0.1.2 enables bounded crop OCR and explicit prefix matching for category target; live replay pending. Development sample separately proved one actual level4Sabertooth initiated victory. Daily10counter/result reconciliation and level normalization still pending; default shifts exclude component.",
   "business_dependencies": [
     "Only NPC level4Sabertooth currentlysampled; failbeforeinput ifleveldiffers",
     "Keep at leastone marchslot; existingrally busy finish is no_action, not newdispatch",
@@ -258,7 +258,9 @@
           0,
           -25
         ],
-        "min_confidence": 0.3
+        "min_confidence": 0.3,
+        "crop_ocr": true,
+        "exact": false
       },
       "observe_attempts": 5,
       "after": {
