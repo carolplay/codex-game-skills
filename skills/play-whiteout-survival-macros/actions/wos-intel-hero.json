@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-hero",
-  "action_version": "0.1.5",
+  "action_version": "0.1.6",
   "name": "WOS ordinary intelligence hero",
   "reference_size": [
     788,
@@ -4219,5 +4219,5 @@
       }
     ]
   },
-  "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry. Nextdraft uses180,650 dismisspoint actuallysampled on mainHeroCard; no followup exploration performed. Labubu old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Additional sampled occluded glyph variant registered. Standalone remains bounded component; productionmixedcycle handles tasksrevealed byotherclasses and iconocclusion."
+  "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry. Nextdraft uses180,650 dismisspoint actuallysampled on mainHeroCard; no followup exploration performed. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Additional sampled occluded glyph variant registered. Standalone remains bounded component; productionmixedcycle handles tasksrevealed byotherclasses and iconocclusion."
 }

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-lancer",
-  "action_version": "0.2.4",
+  "action_version": "0.3.0",
   "name": "WOS — 矛兵 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -434,11 +434,32 @@
           }
         ]
       },
-      "after": [
-        "盾兵营",
-        "矛兵营",
-        "射手营"
-      ],
+      "after": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
       "observe_attempts": 5,
       "text_target": {
         "text": "训练",
@@ -457,6 +478,78 @@
       }
     },
     {
+      "name": "select-explicit-camp",
+      "action": "click",
+      "point": [
+        394,
+        1018
+      ],
+      "before": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ],
+        "white_regions": [
+          {
+            "bounds": [
+              330,
+              1002,
+              455,
+              1006
+            ],
+            "min": 0.5
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
       "name": "training-start",
       "action": "click",
       "point": [
@@ -464,15 +557,29 @@
         950
       ],
       "before": {
-        "all": [
+        "any": [
           "盾兵营",
           "矛兵营",
           "射手营"
         ],
         "none": [
-          "训练中"
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
         ],
         "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
           {
             "bounds": [
               480,
@@ -482,34 +589,250 @@
             ],
             "pattern": "[1-9][0-9]{0,3}",
             "crop_ocr": true
+          },
+          {
+            "bounds": [
+              455,
+              915,
+              640,
+              980
+            ],
+            "pattern": "训练",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ],
+        "white_regions": [
+          {
+            "bounds": [
+              330,
+              1002,
+              455,
+              1006
+            ],
+            "min": 0.5
           }
         ]
       },
-      "after": [
-        "盾兵营",
-        "矛兵营",
-        "射手营",
-        "训练中",
-        "加速"
-      ],
+      "after": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
       "observe_attempts": 5,
-      "skip_if": [
-        "盾兵营",
-        "矛兵营",
-        "射手营",
-        "训练中"
-      ]
+      "skip_if": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              455,
+              915,
+              640,
+              980
+            ],
+            "pattern": "加速",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ],
+        "white_regions": [
+          {
+            "bounds": [
+              330,
+              1002,
+              455,
+              1006
+            ],
+            "min": 0.5
+          }
+        ],
+        "timer_seconds": {
+          "bounds": [
+            440,
+            760,
+            610,
+            860
+          ],
+          "min": 1,
+          "max": 172800
+        }
+      }
+    },
+    {
+      "name": "reselect-camp-after-start",
+      "action": "click",
+      "point": [
+        394,
+        1018
+      ],
+      "before": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ],
+        "white_regions": [
+          {
+            "bounds": [
+              330,
+              1002,
+              455,
+              1006
+            ],
+            "min": 0.5
+          }
+        ]
+      },
+      "observe_attempts": 5
     },
     {
       "name": "training-queue-checked",
       "action": "observe",
-      "before": [
-        "盾兵营",
-        "矛兵营",
-        "射手营",
-        "训练中",
-        "加速"
-      ],
+      "before": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              455,
+              915,
+              640,
+              980
+            ],
+            "pattern": "加速",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ],
+        "white_regions": [
+          {
+            "bounds": [
+              330,
+              1002,
+              455,
+              1006
+            ],
+            "min": 0.5
+          }
+        ],
+        "timer_seconds": {
+          "bounds": [
+            440,
+            760,
+            610,
+            860
+          ],
+          "min": 1,
+          "max": 172800
+        }
+      },
       "observe_attempts": 5
     },
     {
@@ -519,12 +842,64 @@
         133,
         59
       ],
-      "before": [
-        "盾兵营",
-        "矛兵营",
-        "射手营",
-        "训练中"
-      ],
+      "before": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              455,
+              915,
+              640,
+              980
+            ],
+            "pattern": "加速",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ],
+        "white_regions": [
+          {
+            "bounds": [
+              330,
+              1002,
+              455,
+              1006
+            ],
+            "min": 0.5
+          }
+        ],
+        "timer_seconds": {
+          "bounds": [
+            440,
+            760,
+            610,
+            860
+          ],
+          "min": 1,
+          "max": 172800
+        }
+      },
       "after": {
         "all": [
           "英雄",
@@ -607,11 +982,31 @@
           133,
           59
         ],
-        "before": [
-          "盾兵营",
-          "矛兵营",
-          "射手营"
-        ],
+        "before": {
+          "any": [
+            "盾兵营",
+            "矛兵营",
+            "射手营"
+          ],
+          "none": [
+            "提示",
+            "获得奖励",
+            "确认晋升"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                110,
+                1000,
+                300,
+                1079
+              ],
+              "pattern": "盾兵.",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        },
         "after": {
           "all": [
             "英雄",
@@ -686,6 +1081,11 @@
       }
     ]
   },
-  "verification_scope": "Training menu button varies with camp placement: resolve current OCR训练 label and calibrated icon offset instead of fixed495,726. Prior branches retained; new target pending next-role replay. Mainlancer menu visuallycorrect but titleOCR readincorrectglyph; collectionnotproven. Croppedtitle on savedframe reads exactcampname; nextrevision usesexplicitcroppedtitle and croppedtrainlabel, renamesnavigationstep toavoidclaim implication. Nextrole replay pending.",
-  "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
+  "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending.",
+  "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
+  "business_dependencies": [
+    "Always select and verify expected camp footer before ordinary training input",
+    "Training is ordinary game resources only; never click instant diamonds or speedup",
+    "After start reselect same camp, require active timer and Accelerate state; a failed start is not retried"
+  ]
 }

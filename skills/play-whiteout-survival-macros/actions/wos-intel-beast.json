@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-beast",
-  "action_version": "0.1.3",
+  "action_version": "0.1.4",
   "name": "WOS ordinary intelligence beast",
   "reference_size": [
     788,
@@ -3797,5 +3797,5 @@
       }
     ]
   },
-  "verification_scope": "Main three real dispatch/claims; fourth proper NPC was falsely rejected by background集结队伍. New menu-only crop retains NPC recommended strength/attack and forbids player controls locally. Next role pending. Labubu old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending."
+  "verification_scope": "Main three real dispatch/claims; fourth proper NPC was falsely rejected by background集结队伍. New menu-only crop retains NPC recommended strength/attack and forbids player controls locally. Next role pending. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending."
 }

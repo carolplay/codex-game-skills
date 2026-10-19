@@ -1,6 +1,6 @@
 {
   "action_id": "wos-free-recruit",
-  "action_version": "0.1.2",
+  "action_version": "0.1.4",
   "name": "WOS — free advanced and epic recruitment, never spend keys",
   "reference_size": [
     788,
@@ -226,7 +226,8 @@
         "any": [
           "您已拥有该英雄",
           "解锁新英雄",
-          "点击任意位置退出"
+          "点击任意位置退出",
+          "奖励"
         ]
       },
       "skip_if": {
@@ -261,14 +262,29 @@
           "解锁新英雄"
         ]
       },
-      "after": [
-        "奖励",
-        "点击任意位置退出"
-      ],
+      "after": {
+        "all": [
+          "奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              220,
+              945,
+              580,
+              1010
+            ],
+            "pattern": "点击.*退出",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
       "skip_if": {
         "any": [
           "点击任意位置退出",
-          "高级招募"
+          "高级招募",
+          "奖励"
         ]
       },
       "observe_attempts": 10
@@ -280,10 +296,24 @@
         394,
         783
       ],
-      "before": [
-        "奖励",
-        "点击任意位置退出"
-      ],
+      "before": {
+        "all": [
+          "奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              220,
+              945,
+              580,
+              1010
+            ],
+            "pattern": "点击.*退出",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
       "after": [
         "高级招募",
         "史诗招募"
@@ -358,7 +388,8 @@
         "any": [
           "您已拥有该英雄",
           "解锁新英雄",
-          "点击任意位置退出"
+          "点击任意位置退出",
+          "奖励"
         ]
       },
       "skip_if": {
@@ -393,14 +424,29 @@
           "解锁新英雄"
         ]
       },
-      "after": [
-        "奖励",
-        "点击任意位置退出"
-      ],
+      "after": {
+        "all": [
+          "奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              220,
+              945,
+              580,
+              1010
+            ],
+            "pattern": "点击.*退出",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
       "skip_if": {
         "any": [
           "点击任意位置退出",
-          "高级招募"
+          "高级招募",
+          "奖励"
         ]
       },
       "observe_attempts": 10
@@ -412,10 +458,24 @@
         394,
         783
       ],
-      "before": [
-        "奖励",
-        "点击任意位置退出"
-      ],
+      "before": {
+        "all": [
+          "奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              220,
+              945,
+              580,
+              1010
+            ],
+            "pattern": "点击.*退出",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
       "after": [
         "高级招募",
         "史诗招募"
@@ -581,10 +641,24 @@
             "解锁新英雄"
           ]
         },
-        "after": [
-          "奖励",
-          "点击任意位置退出"
-        ],
+        "after": {
+          "all": [
+            "奖励"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                220,
+                945,
+                580,
+                1010
+              ],
+              "pattern": "点击.*退出",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        },
         "observe_attempts": 10
       },
       {
@@ -594,10 +668,24 @@
           394,
           783
         ],
-        "before": [
-          "奖励",
-          "点击任意位置退出"
-        ],
+        "before": {
+          "all": [
+            "奖励"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                220,
+                945,
+                580,
+                1010
+              ],
+              "pattern": "点击.*退出",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        },
         "after": [
           "高级招募",
           "史诗招募"
@@ -767,6 +855,6 @@
     ]
   },
   "status": "partial_verified",
-  "verification_scope": "Advanced actual free draw, unchanged silver/gold keys, reward exit and epic cooldown skip passed in one complete workflow. Epic free and new-hero display remain unverified.",
+  "verification_scope": "Advanced actual free draw, unchanged silver/gold keys, reward exit and epic cooldown skip passed in one complete workflow. Epic free and new-hero display remain unverified. a mature role advanced andepic freeclick occurred, epic reward footer literal OCRfailed andexitunmatched.0.1.3 accepts rewardheader withscoped footerregex 点击.*退出; freegreenbutton and unchangedkeys constraints retained, neverclick goldkey recruitagain. Nextrole replaypending; priorfailure not rewritten.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

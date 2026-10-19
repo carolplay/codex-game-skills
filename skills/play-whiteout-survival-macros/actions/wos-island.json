@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.7",
+  "action_version": "0.1.8",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 360,
   "status": "candidate",
-  "verification_scope": "0.1.6 main actual island entry/exit passed but tree inventory did not increase. Role2827 entry sample hit CUA30second timeout with20keys;0.1.7 splits normalization into at most5keys per observed chunk. Independent development sample clicked lower-left orange bubble [372,344]:392243→395848 (+3605), bubble disappeared. Collection point updated; inventory increase checks retained. This positive sample is not full macro replay;0.1.7 live replay pending. Other layouts still fail boundedly.",
+  "verification_scope": "0.1.6 main actual island entry/exit passed but tree inventory did not increase. a mature role entry sample hit CUA30second timeout with20keys;0.1.7 splits normalization into at most5keys per observed chunk. Independent development sample clicked lower-left orange bubble [372,344]:positive inventory delta, bubble disappeared. Collection point updated; inventory increase checks retained. This positive sample is not full macro replay;0.1.7 live replay pending. Other layouts still fail boundedly.",
   "steps": [
     {
       "name": "01-check-city",

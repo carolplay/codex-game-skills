@@ -1,26 +1,26 @@
 {
-  "package_version": "0.10.0",
+  "package_version": "0.11.1",
   "executor_min_version": "0.3.0",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
     "mail": {
       "path": "actions/wos-mail-rewards.json",
       "action_id": "wos-mail-rewards",
-      "action_version": "0.1.1",
-      "sha256": "fee8a45201bb2b1d871d7db85b6b777302e80342ec744cec4de29b3f9f591e16",
+      "action_version": "0.1.3",
+      "sha256": "43033d8dc668b365688f633e9d55ee9c79df1918bf2b21993c40c25dc2b7b78d",
       "period": "shift",
       "utility": false,
-      "verification_scope": "See visit-plan and local run evidence; no all-branch guarantee.",
+      "verification_scope": " a mature role reports-tab cursor occluded报告 causing no claim and exit failure;0.1.2 clicks tab bottomedge151 and recovery only needs mail/war/favorites independent of occluded report. Not rerun same role; nextrolepending.",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "vip": {
       "path": "actions/wos-vip-inspect.json",
       "action_id": "wos-vip-inspect",
-      "action_version": "0.1.3",
-      "sha256": "a07647470af9f839e3a5f0c7a2c0cea4e9e91eb10d8ae4c51195521e2884f978",
+      "action_version": "0.1.5",
+      "sha256": "e9a3e8ab668a3533098a5b778b75715d177abce0d2f9bff83eaddcb2988f557b",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. Role2827 actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending.",
+      "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. a mature role actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending. a mature role VIP8 title OCR每目 instead of每日;0.1.4 requires stable免费礼包 substring while preserving calibrated freeclaim greenbutton region. Exit only needs cropped VIP pageheader and known modal exclusions. Currentrole not retried; nextrolepending.",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "idle": {
@@ -76,11 +76,11 @@
     "recruit": {
       "path": "actions/wos-free-recruit.json",
       "action_id": "wos-free-recruit",
-      "action_version": "0.1.2",
-      "sha256": "0591a34862bfafea1ffd93ac9140b877ceae329494f5a380edaab6b2a7fc152a",
+      "action_version": "0.1.4",
+      "sha256": "46bcc757356172f982b150d278a6d702cc6f494b0482093d050e36a1a62ca5ed",
       "period": "day",
       "utility": false,
-      "verification_scope": "Advanced actual free draw, unchanged silver/gold keys, reward exit and epic cooldown skip passed in one complete workflow. Epic free and new-hero display remain unverified.",
+      "verification_scope": "Advanced actual free draw, unchanged silver/gold keys, reward exit and epic cooldown skip passed in one complete workflow. Epic free and new-hero display remain unverified. a mature role advanced andepic freeclick occurred, epic reward footer literal OCRfailed andexitunmatched.0.1.3 accepts rewardheader withscoped footerregex 点击.*退出; freegreenbutton and unchangedkeys constraints retained, neverclick goldkey recruitagain. Nextrole replaypending; priorfailure not rewritten.",
       "current_evidence_note": "成熟试验角色A英雄网格页全图OCR乱码，停止后续；同一失败图的标题和底部独立裁剪能明确读到英雄列表/英雄招募。0.1.1加入有界局部OCR，下一试验号验证，不重试成熟试验角色A失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -108,33 +108,33 @@
     "shield": {
       "path": "actions/wos-training-shield.json",
       "action_id": "wos-training-shield",
-      "action_version": "0.2.4",
-      "sha256": "b374589cd00ade632f450e044f35c366490d2115328a7e6ff1ae0694731e4e55",
+      "action_version": "0.3.0",
+      "sha256": "a890d5e9ff5f213e574e30bdc353f7698dfc26d7a0b9ad1500b326ea111e81f3",
       "period": "day",
       "utility": false,
-      "verification_scope": "Training menu button varies with camp placement: resolve current OCR训练 label and calibrated icon offset instead of fixed495,726. Prior branches retained; new target pending next-role replay. Role2827 runningqueue visible but wholeframe menuOCR lost Training;0.2.4 crop target validated on saved failureframe [531,696]; nextrole livepending.",
+      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "lancer": {
       "path": "actions/wos-training-lancer.json",
       "action_id": "wos-training-lancer",
-      "action_version": "0.2.4",
-      "sha256": "c132c0769ce3733a26c9b7598307a8053033ab043f01b612472df10d9834e014",
+      "action_version": "0.3.0",
+      "sha256": "86de940b5c6603ffe72edc8ed13675a33c25952ea261a3dbf6f94ef27d694f43",
       "period": "day",
       "utility": false,
-      "verification_scope": "Training menu button varies with camp placement: resolve current OCR训练 label and calibrated icon offset instead of fixed495,726. Prior branches retained; new target pending next-role replay. Mainlancer menu visuallycorrect but titleOCR readincorrectglyph; collectionnotproven. Croppedtitle on savedframe reads exactcampname; nextrevision usesexplicitcroppedtitle and croppedtrainlabel, renamesnavigationstep toavoidclaim implication. Nextrole replay pending.",
+      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "marksman": {
       "path": "actions/wos-training-marksman.json",
       "action_id": "wos-training-marksman",
-      "action_version": "0.2.3",
-      "sha256": "143616eb50c983d8b0920d8f681164a47b4107d2ea6e38fbbfc14e224feebf3c",
+      "action_version": "0.3.0",
+      "sha256": "7f46a9d119f59eee5533539bcf1f1802e45364cd9b3bf9f2986d5cb3de9cbcd8",
       "period": "day",
       "utility": false,
-      "verification_scope": "Training menu button varies with camp placement: resolve current OCR训练 label and calibrated icon offset instead of fixed495,726. Prior branches retained; new target pending next-role replay.",
+      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -163,11 +163,11 @@
     "expert": {
       "path": "actions/wos-expert-camp-rewards.json",
       "action_id": "wos-expert-camp-rewards",
-      "action_version": "0.1.1",
-      "sha256": "d6e5cd7d7cc00405b1027b475bc79e807da0708587aca48fd2cb37e30b283b6d",
+      "action_version": "0.1.3",
+      "sha256": "b483abd279821d1dedd5afa21ecf4d568ae5e1590625ad0d355e3c42fa08294e",
       "period": "day",
       "utility": false,
-      "verification_scope": "Trial role A passed two actual camp reward-badge claims with Gareth reward and Romulus troop-recruitment banners, then drained badge. Trial role B passed empty-badge branch. Only this camp entry; other Expert/enlistment-office rewards unverified.",
+      "verification_scope": "Trial role A passed two actual camp reward-badge claims with Gareth reward and Romulus troop-recruitment banners, then drained badge. Trial role B passed empty-badge branch. Only this camp entry; other Expert/enlistment-office rewards unverified. a mature role locating盾兵 wholeframeconfidence below0.5 causedzero target;0.1.2 cropped target with0.3minimum plus independent overview exit. No new claim; nextmature-role validationpending.",
       "current_evidence_note": "已验证盾兵营地专家徽章领取/空奖励；不代表所有专家奖励。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -229,38 +229,38 @@
     "arena": {
       "path": "actions/wos-arena.json",
       "action_id": "wos-arena",
-      "action_version": "0.1.1",
-      "sha256": "7b10440da6cf8229eefaf8761172a155ae53a122181757a87844de3c2573ad44",
+      "action_version": "0.1.2",
+      "sha256": "ca5c275910a8166e8db9befb0e8ca450453d55b250c60df211ae1cf61a9cac0d",
       "period": "day",
       "utility": false,
-      "verification_scope": "One manual free battle sampled with5→4; five-attempt fixed macro pending next-role replay. Existing formation retained; no attempt purchase, cash or paid refresh. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance."
+      "verification_scope": "One manual free battle sampled with5→4; five-attempt fixed macro pending next-role replay. Existing formation retained; no attempt purchase, cash or paid refresh. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
     },
     "island": {
       "path": "actions/wos-island.json",
       "action_id": "wos-island",
-      "action_version": "0.1.7",
-      "sha256": "54bd618fbfc218cdcef33a542d3e7d1123f892ad6c101973e03adfd070ea1502",
+      "action_version": "0.1.8",
+      "sha256": "44a69c52110ebd4825a767ed843c7fb0506d8f868e5e789601e13ed70c5f669c",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.6 main actual island entry/exit passed but tree inventory did not increase. Role2827 entry sample hit CUA30second timeout with20keys;0.1.7 splits normalization into at most5keys per observed chunk. Independent development sample clicked lower-left orange bubble [372,344]:392243→395848 (+3605), bubble disappeared. Collection point updated; inventory increase checks retained. This positive sample is not full macro replay;0.1.7 live replay pending. Other layouts still fail boundedly."
+      "verification_scope": "0.1.6 main actual island entry/exit passed but tree inventory did not increase. a mature role entry sample hit CUA30second timeout with20keys;0.1.7 splits normalization into at most5keys per observed chunk. Independent development sample clicked lower-left orange bubble [372,344]:positive inventory delta, bubble disappeared. Collection point updated; inventory increase checks retained. This positive sample is not full macro replay;0.1.7 live replay pending. Other layouts still fail boundedly."
     },
     "orders": {
       "path": "actions/wos-orders.json",
       "action_id": "wos-orders",
-      "action_version": "0.1.3",
-      "sha256": "4c63b924a3bc51f7152c703f7f4686896f8afd61f530368d63c395563a54fccb",
+      "action_version": "0.1.4",
+      "sha256": "854a22cf535a1be6c3bc54a814a9f1d035948401f64877214f8132cc37a44606",
       "period": "day",
       "utility": false,
-      "verification_scope": "Role2944 actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass. Mature-role activeuse actually produced reward and recoveredcity; oldafterexpectedcooldown behindreward, false deviation. Nextrevision acceptsreward, thenexistingstrictrewardclose; cooldown skipbranch retained. Nextrole replay pending."
+      "verification_scope": "a mature role actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass. Mature-role activeuse actually produced reward and recoveredcity; oldafterexpectedcooldown behindreward, false deviation. Nextrevision acceptsreward, thenexistingstrictrewardclose; cooldown skipbranch retained. Nextrole replay pending."
     },
     "intel_rescue": {
       "path": "actions/wos-intel-rescue.json",
       "action_id": "wos-intel-rescue",
-      "action_version": "0.1.3",
-      "sha256": "520dbe0912569dc1ff47b2faa01e8100be6c36f39a1a5b81f6520ccf2af18562",
+      "action_version": "0.1.4",
+      "sha256": "722ab8435d8864209af876de5f941cc3a039e9de2f3d2d8af01b40c0bc4f816c",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role.",
+      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Additional sampled blue glyph variant registered. Standalone remains bounded component; productionmixedcycle handles tasksrevealed byotherclasses and iconocclusion.",
       "category": "component",
       "include_in_daily": false,
       "production_replacement": "intel_cycle"
@@ -268,11 +268,11 @@
     "intel_hero": {
       "path": "actions/wos-intel-hero.json",
       "action_id": "wos-intel-hero",
-      "action_version": "0.1.5",
-      "sha256": "a4a1535f726f780caa0d0c11925885a300479b076a7c428318a14fdb76f67df6",
+      "action_version": "0.1.6",
+      "sha256": "5eb4fef385a59cad49903645f374eb70597d0c9e4382cfba9e7abb54c8891e97",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry. Nextdraft uses180,650 dismisspoint actuallysampled on mainHeroCard; no followup exploration performed.",
+      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry. Nextdraft uses180,650 dismisspoint actuallysampled on mainHeroCard; no followup exploration performed. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Additional sampled occluded glyph variant registered. Standalone remains bounded component; productionmixedcycle handles tasksrevealed byotherclasses and iconocclusion.",
       "category": "component",
       "include_in_daily": false,
       "production_replacement": "intel_cycle"
@@ -280,11 +280,11 @@
     "intel_beast": {
       "path": "actions/wos-intel-beast.json",
       "action_id": "wos-intel-beast",
-      "action_version": "0.1.3",
-      "sha256": "2a1bdbb22784d672cece9141f6f0d365317cad15bff4547e439c50f78a4d4805",
+      "action_version": "0.1.4",
+      "sha256": "04eaf4d481145b9cb0d164fdcf54c43bc65cc6a3fc0a5a0306297f99100bdaef",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role.",
+      "verification_scope": "Main three real dispatch/claims; fourth proper NPC was falsely rejected by background集结队伍. New menu-only crop retains NPC recommended strength/attack and forbids player controls locally. Next role pending. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending.",
       "category": "component",
       "include_in_daily": false,
       "production_replacement": "intel_cycle"
@@ -346,47 +346,47 @@
     "pet_treasure_claim": {
       "path": "actions/wos-pet-treasure-claim.json",
       "action_id": "wos-pet-treasure-claim",
-      "action_version": "0.1.1",
-      "sha256": "565e0c5dfe48f6f36ee83770ebb15a3f2dbf481de8a1c85e489ceb8b245d2924",
+      "action_version": "0.1.2",
+      "sha256": "6018f39b7f2ef7e8f45cbf31abadb0364d93358c7bf36bad1cb200df43b423f9",
       "period": "day",
       "utility": false,
-      "verification_scope": "Two completed boxes captured in prior run. Up to4 completion badges, no fresh dispatch yet; new-role replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance."
+      "verification_scope": "Two completed boxes captured in prior run. Up to4 completion badges, no fresh dispatch yet; new-role replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
     },
     "pet_alliance_treasure": {
       "path": "actions/wos-pet-alliance-treasure.json",
       "action_id": "wos-pet-alliance-treasure",
-      "action_version": "0.1.1",
-      "sha256": "749d1e1c14051205c0317c475d262496a1aa11879343781dc0f8a306e38e884d",
+      "action_version": "0.1.2",
+      "sha256": "28d5024dd61d649815027fee623775f11aa4cb5e40b20cac3afad7ee3bf4e8f3",
       "period": "day",
       "utility": false,
-      "verification_scope": "Prior actual5 free shares batch claimed to0, no messaging/sharing action. Current replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance."
+      "verification_scope": "Prior actual5 free shares batch claimed to0, no messaging/sharing action. Current replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
     },
     "alliance_incentive": {
       "path": "actions/wos-alliance-incentive.json",
       "action_id": "wos-alliance-incentive",
-      "action_version": "0.1.3",
-      "sha256": "7c4796dab60d22f91b63110288b0271f018ebc3b885bce2b7cfd5d19e53715da",
+      "action_version": "0.1.4",
+      "sha256": "212d9b05722ea3b51043cd602ecaa0bb9be261cb174ee85984571c5e1194a60f",
       "period": "day",
       "utility": false,
-      "verification_scope": "Main150/800 no reward; grayscale red-dot falsely matched orange gear. Color-only red threshold plus800/800 gate, known reward-help tooltip exit. Positive/negative calibrated on real frames; nextrole replay pending. Tight red-center positive1.0 and negative0.0494; counter accepts>=800 including1,800 rather than exactly800. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance."
+      "verification_scope": "Main150/800 no reward; grayscale red-dot falsely matched orange gear. Color-only red threshold plus800/800 gate, known reward-help tooltip exit. Positive/negative calibrated on real frames; nextrole replay pending. Tight red-center positive1.0 and negative0.0494; counter accepts>=800 including1,800 rather than exactly800. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
     },
     "npc_autojoin": {
       "path": "actions/wos-npc-autojoin.json",
       "action_id": "wos-npc-autojoin",
-      "action_version": "0.1.0",
-      "sha256": "35ad06ffaec4ddece20f791c457acea701a535082dc094b0667324e982007673",
+      "action_version": "0.1.2",
+      "sha256": "4deefc24e10d617f2888537f89496c3f32f6e03924fadfdc08ad71bdefc6fdbf",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Prior three named NPC types enabled with one queue for8h; no proactive player war/rally. Existing correct active state retained; wrong quota/types reconfigured. Current replay pending."
+      "verification_scope": "Prior three named NPC types enabled with one queue for8h; no proactive player war/rally. Existing correct active state retained; wrong quota/types reconfigured. Current replay pending. a mature role enabledonequeue8h actualstate, closepostcondition+exitfailed because集结 OCR㰍结.0.1.1 warpage uses stable联盟战争/单人/活动 labels; no reenabling same role; nextrole pending."
     },
     "labyrinth": {
       "path": "actions/wos-labyrinth-free-sweep.json",
       "action_id": "wos-labyrinth-free-sweep",
-      "action_version": "0.1.3",
-      "sha256": "81239977ba38a166cea565cafd316a6aed2aa1ddcaa7c24f81ec908c56e3b8f1",
+      "action_version": "0.1.5",
+      "sha256": "829074df27512fe4a5ce9c7527b90ab80804e7d00a1caab8914a109414a0c139",
       "utility": false,
       "period": "day/event",
-      "verification_scope": "0.1.1Labubu actual availablezone→sweep→claim passed; nextstage tutorial preventedbackarrow, batchstopped. DevelopercloseX returnedcity.0.1.2adds boundedX exit fornewstage page, nextrole replaypending; actualsweepclaim is not wholeactionpass. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance."
+      "verification_scope": "0.1.1under30 auxiliary actual availablezone→sweep→claim passed; nextstage tutorial preventedbackarrow, batchstopped. DevelopercloseX returnedcity.0.1.2adds boundedX exit fornewstage page, nextrole replaypending; actualsweepclaim is not wholeactionpass. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
     },
     "research": {
       "path": "actions/wos-research.json",
@@ -413,38 +413,38 @@
     "travel_idle": {
       "path": "actions/wos-travel-idle.json",
       "action_id": "wos-travel-idle",
-      "action_version": "0.1.3",
-      "sha256": "ebc811b015b264ba1700a0131bda169c9f1c8e69f27572eefd1e0ca22d80813d",
+      "action_version": "0.1.5",
+      "sha256": "670ef734c23c906a1fe38bc22691068a6583c604d321b887c68d8b6a26dc2919",
       "period": "shift",
       "utility": false,
-      "verification_scope": "First settle old completed job if any, then use only existing1..100 Trek supplies; never purchases. Existing running job is left intact with deviation. Separate claim near visit end settles newly finished job. All new branches pending live replay. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. 2944 cost image was OCR as$40 because bag icon included; no supplies spent. Remove redundant numeric gate: known existing-supplies modal and actual running counter remain required; no purchase control used. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance."
+      "verification_scope": "First settle old completed job if any, then use only existing1..100 Trek supplies; never purchases. Existing running job is left intact with deviation. Separate claim near visit end settles newly finished job. All new branches pending live replay. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. mature role cost image was OCR as$40 because bag icon included; no supplies spent. Remove redundant numeric gate: known existing-supplies modal and actual running counter remain required; no purchase control used. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
     },
     "travel_idle_claim": {
       "path": "actions/wos-travel-idle-claim.json",
       "action_id": "wos-travel-idle-claim",
-      "action_version": "0.1.2",
-      "sha256": "c682ab5a37f4b99a131ef6a156afd490b54f829927548e122740918787710285",
+      "action_version": "0.1.3",
+      "sha256": "7d05577ae2129b06ca20b9eedc8b5d99baca42d3932896bcabd4cf942c763275",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance."
+      "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
     },
     "pet_treasure_dispatch": {
       "path": "actions/wos-pet-treasure-dispatch.json",
       "action_id": "wos-pet-treasure-dispatch",
-      "action_version": "0.1.2",
-      "sha256": "c1303d2f7eb8e98efeebc8482916637cc0596e870bfd5f31a7145b06205d7034",
+      "action_version": "0.1.4",
+      "sha256": "0b088582d3df653e8742bdf787dfdbec6e9119aa09a1bb5773780edbe79cfdaf",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Current小黄鸡 manualgold dispatch10stamina,5h,quota4→3; game auto-selects eligible availablepet. Candidate attempts1gold+2blue; existingrunningdetail is recognized and closed without redispatch. Gold/blue templates calibrated to available map; purple/other skins not covered. Actual macro replay pending. Newrole actual goldrunning skipped correctly, blue detail has no pet strength requirement line; removed high-tier-only predicate from available/exit. Nextrole dispatch replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance."
+      "verification_scope": "Current成熟角色 manualgold dispatch10stamina,5h,quota4→3; game auto-selects eligible availablepet. Candidate attempts1gold+2blue; existingrunningdetail is recognized and closed without redispatch. Gold/blue templates calibrated to available map; purple/other skins not covered. Actual macro replay pending. Newrole actual goldrunning skipped correctly, blue detail has no pet strength requirement line; removed high-tier-only predicate from available/exit. Nextrole dispatch replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
     },
     "war_academy_commission": {
       "path": "actions/wos-war-academy-commission.json",
       "action_id": "wos-war-academy-commission",
-      "action_version": "0.1.2",
-      "sha256": "a7d9dafe6508bed03c2e6c53320cdda6790597781114f644d9ca3e8cbc0673e4",
+      "action_version": "0.1.4",
+      "sha256": "40aefa798dd08d60c5b7c76b1b6787b6aa516916c1bf595ab4575c356ed31afa",
       "period": "event",
       "utility": false,
-      "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. Role2827 actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance."
+      "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. a mature role actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
     },
     "intel_firebeast": {
       "path": "actions/wos-intel-firebeast.json",
@@ -460,21 +460,21 @@
     "intel_cycle": {
       "path": "actions/wos-intel-cycle.json",
       "action_id": "wos-intel-cycle",
-      "action_version": "0.1.1",
-      "sha256": "7a23ac49a1cfa2495da7b28b9eff39e9a391a28df8a827a87c7014b305b098c5",
+      "action_version": "0.1.2",
+      "sha256": "84338ca433d3ca9697ac4a556755245bad2674f373f22a827a7e6304cb10bde9",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Candidate; see visit-plan and local evidence. No all-branch guarantee."
+      "verification_scope": "Repeat mixed tasks until registered markers are absent; no task-count cap, 1800s watchdog; unknownskins and bounty not inferredcomplete. Standalone ordinarycomponents and Firebeast paths were sampled; fullcycle livepending."
     },
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.2",
-      "sha256": "48f418b332fcff7209f53030c515563d94e8935f4f496481b16e9d15dc159be0",
+      "action_version": "0.1.3",
+      "sha256": "fb2c613525e2c79215a1cf135312e22609fe86afe349d14182b2cb6e7234108d",
       "period": "day",
       "utility": false,
       "include_in_daily": false,
-      "verification_scope": "0.1.1 role2827 search page recognized; category text_target used shortened label but retained default exact match (whole-frame OCR also inconsistent), no dispatch. Independent exit-search and exit-world restored city in2steps.0.1.2 enables bounded crop OCR and explicit prefix matching for category target; live replay pending. Development sample separately proved one actual level4Sabertooth initiated victory. Daily10counter/result reconciliation and level normalization still pending; default shifts exclude component."
+      "verification_scope": "0.1.1 a mature role search page recognized; category text_target used shortened label but retained default exact match (whole-frame OCR also inconsistent), no dispatch. Independent exit-search and exit-world restored city in2steps.0.1.2 enables bounded crop OCR and explicit prefix matching for category target; live replay pending. Development sample separately proved one actual level4Sabertooth initiated victory. Daily10counter/result reconciliation and level normalization still pending; default shifts exclude component."
     }
   },
   "not_implemented": [

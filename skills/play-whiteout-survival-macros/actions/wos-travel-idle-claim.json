@@ -1,6 +1,6 @@
 {
   "action_id": "wos-travel-idle-claim",
-  "action_version": "0.1.2",
+  "action_version": "0.1.3",
   "name": "WOS travel_idle_claim",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance.",
+  "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -658,7 +658,8 @@
           ],
           "any": [
             "城镇",
-            "完成任务后是否隐藏"
+            "完成任务后是否隐藏",
+            "日常"
           ],
           "page_text_regions": [
             [
@@ -672,6 +673,12 @@
               745,
               450,
               800
+            ],
+            [
+              100,
+              220,
+              470,
+              275
             ]
           ]
         },

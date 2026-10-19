@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-autojoin",
-  "action_version": "0.1.0",
+  "action_version": "0.1.2",
   "name": "WOS npc_autojoin",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior three named NPC types enabled with one queue for8h; no proactive player war/rally. Existing correct active state retained; wrong quota/types reconfigured. Current replay pending.",
+  "verification_scope": "Prior three named NPC types enabled with one queue for8h; no proactive player war/rally. Existing correct active state retained; wrong quota/types reconfigured. Current replay pending. a mature role enabledonequeue8h actualstate, closepostcondition+exitfailed because集结 OCR㰍结.0.1.1 warpage uses stable联盟战争/单人/活动 labels; no reenabling same role; nextrole pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -160,8 +160,9 @@
       "after": {
         "all": [
           "联盟战争",
-          "集结",
-          "自动加入"
+          "自动加入",
+          "单人",
+          "活动"
         ],
         "none": [
           "加入类型"
@@ -179,8 +180,9 @@
       "before": {
         "all": [
           "联盟战争",
-          "集结",
-          "自动加入"
+          "自动加入",
+          "单人",
+          "活动"
         ],
         "none": [
           "加入类型"
@@ -1345,8 +1347,9 @@
       "after": {
         "all": [
           "联盟战争",
-          "集结",
-          "自动加入"
+          "自动加入",
+          "单人",
+          "活动"
         ],
         "none": [
           "加入类型"
@@ -1364,8 +1367,9 @@
       "before": {
         "all": [
           "联盟战争",
-          "集结",
-          "自动加入"
+          "自动加入",
+          "单人",
+          "活动"
         ],
         "none": [
           "加入类型"
@@ -1556,8 +1560,9 @@
         "after": {
           "all": [
             "联盟战争",
-            "集结",
-            "自动加入"
+            "自动加入",
+            "单人",
+            "活动"
           ],
           "none": [
             "加入类型"
@@ -1575,8 +1580,9 @@
         "before": {
           "all": [
             "联盟战争",
-            "集结",
-            "自动加入"
+            "自动加入",
+            "单人",
+            "活动"
           ],
           "none": [
             "加入类型"

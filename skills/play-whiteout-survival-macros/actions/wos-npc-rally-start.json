@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.2",
+  "action_version": "0.1.3",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.1.1 role2827 search page recognized; category text_target used shortened label but retained default exact match (whole-frame OCR also inconsistent), no dispatch. Independent exit-search and exit-world restored city in2steps.0.1.2 enables bounded crop OCR and explicit prefix matching for category target; live replay pending. Development sample separately proved one actual level4Sabertooth initiated victory. Daily10counter/result reconciliation and level normalization still pending; default shifts exclude component.",
+  "verification_scope": "0.1.1 a mature role search page recognized; category text_target used shortened label but retained default exact match (whole-frame OCR also inconsistent), no dispatch. Independent exit-search and exit-world restored city in2steps.0.1.2 enables bounded crop OCR and explicit prefix matching for category target; live replay pending. Development sample separately proved one actual level4Sabertooth initiated victory. Daily10counter/result reconciliation and level normalization still pending; default shifts exclude component.",
   "business_dependencies": [
     "Only NPC level4Sabertooth currentlysampled; failbeforeinput ifleveldiffers",
     "Keep at leastone marchslot; existingrally busy finish is no_action, not newdispatch",

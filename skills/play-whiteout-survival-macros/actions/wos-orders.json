@@ -1,6 +1,6 @@
 {
   "action_id": "wos-orders",
-  "action_version": "0.1.3",
+  "action_version": "0.1.4",
   "name": "WOS orders",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Role2944 actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass. Mature-role activeuse actually produced reward and recoveredcity; oldafterexpectedcooldown behindreward, false deviation. Nextrevision acceptsreward, thenexistingstrictrewardclose; cooldown skipbranch retained. Nextrole replay pending.",
+  "verification_scope": "a mature role actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass. Mature-role activeuse actually produced reward and recoveredcity; oldafterexpectedcooldown behindreward, false deviation. Nextrevision acceptsreward, thenexistingstrictrewardclose; cooldown skipbranch retained. Nextrole replay pending.",
   "steps": [
     {
       "name": "01-check-city",
