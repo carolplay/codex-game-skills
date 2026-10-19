@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.9.2",
-  "package_version": "0.9.2",
+  "macro_version": "0.9.4",
+  "package_version": "0.9.4",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -139,8 +139,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.4",
-          "sha256": "0110fc193532da8750667fbf3a961bd271f304cc194827d72211874eb4696d3f"
+          "action_version": "0.1.5",
+          "sha256": "a4b8adb701ba5681d9aedafa01a225b672f88502aecfd7a9167d7ed6fab522b8"
         },
         {
           "task": "orders",
@@ -217,8 +217,8 @@
         {
           "task": "labyrinth",
           "action_id": "wos-labyrinth-free-sweep",
-          "action_version": "0.1.0",
-          "sha256": "881eb96a92f8ee3b0bed8025d1ae190755c180fbdf185a5ae04f9ef9e7b9a315"
+          "action_version": "0.1.2",
+          "sha256": "743ebc333881c1b6b4924bf80220e89916d7b6662221bbe01bca16a04c23867a"
         },
         {
           "task": "npc_autojoin",
@@ -386,8 +386,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.4",
-          "sha256": "0110fc193532da8750667fbf3a961bd271f304cc194827d72211874eb4696d3f"
+          "action_version": "0.1.5",
+          "sha256": "a4b8adb701ba5681d9aedafa01a225b672f88502aecfd7a9167d7ed6fab522b8"
         },
         {
           "task": "orders",
@@ -464,8 +464,8 @@
         {
           "task": "labyrinth",
           "action_id": "wos-labyrinth-free-sweep",
-          "action_version": "0.1.0",
-          "sha256": "881eb96a92f8ee3b0bed8025d1ae190755c180fbdf185a5ae04f9ef9e7b9a315"
+          "action_version": "0.1.2",
+          "sha256": "743ebc333881c1b6b4924bf80220e89916d7b6662221bbe01bca16a04c23867a"
         },
         {
           "task": "npc_autojoin",
@@ -591,8 +591,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.4",
-          "sha256": "0110fc193532da8750667fbf3a961bd271f304cc194827d72211874eb4696d3f"
+          "action_version": "0.1.5",
+          "sha256": "a4b8adb701ba5681d9aedafa01a225b672f88502aecfd7a9167d7ed6fab522b8"
         },
         {
           "task": "intel_cycle",
@@ -663,8 +663,8 @@
         {
           "task": "labyrinth",
           "action_id": "wos-labyrinth-free-sweep",
-          "action_version": "0.1.0",
-          "sha256": "881eb96a92f8ee3b0bed8025d1ae190755c180fbdf185a5ae04f9ef9e7b9a315"
+          "action_version": "0.1.2",
+          "sha256": "743ebc333881c1b6b4924bf80220e89916d7b6662221bbe01bca16a04c23867a"
         },
         {
           "task": "npc_autojoin",

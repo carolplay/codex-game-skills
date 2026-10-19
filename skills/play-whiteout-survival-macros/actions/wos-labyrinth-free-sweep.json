@@ -1,6 +1,6 @@
 {
   "action_id": "wos-labyrinth-free-sweep",
-  "action_version": "0.1.0",
+  "action_version": "0.1.2",
   "name": "WOS available labyrinth free sweeps",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 600,
   "status": "candidate",
-  "verification_scope": "Prior forge sweep captured, current earth-heart entry/root return sampled. Detect available gold exclamation independent of zone name, up to6 zones; only扫荡, never挑战. Full replay pending.",
+  "verification_scope": "0.1.1Labubu actual availablezone→sweep→claim passed; nextstage tutorial preventedbackarrow, batchstopped. DevelopercloseX returnedcity.0.1.2adds boundedX exit fornewstage page, nextrole replaypending; actualsweepclaim is not wholeactionpass.",
   "steps": [
     {
       "name": "01-check-city",
@@ -761,8 +761,8 @@
         "template": "labyrinth-available",
         "bounds": [
           115,
-          350,
-          650,
+          150,
+          610,
           930
         ],
         "mode": "grayscale",
@@ -781,8 +781,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -815,8 +815,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -953,8 +953,8 @@
         "template": "labyrinth-available",
         "bounds": [
           115,
-          350,
-          650,
+          150,
+          610,
           930
         ],
         "mode": "grayscale",
@@ -973,8 +973,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -1007,8 +1007,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -1145,8 +1145,8 @@
         "template": "labyrinth-available",
         "bounds": [
           115,
-          350,
-          650,
+          150,
+          610,
           930
         ],
         "mode": "grayscale",
@@ -1165,8 +1165,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -1199,8 +1199,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -1337,8 +1337,8 @@
         "template": "labyrinth-available",
         "bounds": [
           115,
-          350,
-          650,
+          150,
+          610,
           930
         ],
         "mode": "grayscale",
@@ -1357,8 +1357,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -1391,8 +1391,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -1529,8 +1529,8 @@
         "template": "labyrinth-available",
         "bounds": [
           115,
-          350,
-          650,
+          150,
+          610,
           930
         ],
         "mode": "grayscale",
@@ -1549,8 +1549,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -1583,8 +1583,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -1721,8 +1721,8 @@
         "template": "labyrinth-available",
         "bounds": [
           115,
-          350,
-          650,
+          150,
+          610,
           930
         ],
         "mode": "grayscale",
@@ -1741,8 +1741,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -1775,8 +1775,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -1922,8 +1922,8 @@
             "template": "labyrinth-available",
             "bounds": [
               115,
-              350,
-              650,
+              150,
+              610,
               930
             ],
             "mode": "grayscale",
@@ -2097,7 +2097,8 @@
             "挑战"
           ],
           "none": [
-            "地心探险"
+            "地心探险",
+            "首胜奖励"
           ]
         },
         "after": {
@@ -2124,6 +2125,49 @@
           ],
           "none": [
             "在此战斗",
+            "领取"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-new-stage-zone",
+        "action": "click",
+        "point": [
+          659,
+          60
+        ],
+        "before": {
+          "all": [
+            "在此战斗",
+            "首胜奖励"
+          ],
+          "none": [
+            "地心探险",
             "领取"
           ]
         },

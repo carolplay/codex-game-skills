@@ -1,5 +1,5 @@
 {
-  "package_version": "0.9.2",
+  "package_version": "0.9.4",
   "executor_min_version": "0.2.7",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -238,8 +238,8 @@
     "island": {
       "path": "actions/wos-island.json",
       "action_id": "wos-island",
-      "action_version": "0.1.4",
-      "sha256": "0110fc193532da8750667fbf3a961bd271f304cc194827d72211874eb4696d3f",
+      "action_version": "0.1.5",
+      "sha256": "a4b8adb701ba5681d9aedafa01a225b672f88502aecfd7a9167d7ed6fab522b8",
       "period": "shift",
       "utility": false,
       "verification_scope": "Manual main tree+5040 sampled; island UI and fixed tree/lumber leaf positions observed; layout/balance validation required, next-role macro replay pending. No decorations/upgrades."
@@ -382,8 +382,8 @@
     "labyrinth": {
       "path": "actions/wos-labyrinth-free-sweep.json",
       "action_id": "wos-labyrinth-free-sweep",
-      "action_version": "0.1.0",
-      "sha256": "881eb96a92f8ee3b0bed8025d1ae190755c180fbdf185a5ae04f9ef9e7b9a315",
+      "action_version": "0.1.2",
+      "sha256": "743ebc333881c1b6b4924bf80220e89916d7b6662221bbe01bca16a04c23867a",
       "utility": false,
       "period": "day/event",
       "verification_scope": "Prior forge sweep captured, current earth-heart entry/root return sampled. Detect available gold exclamation independent of zone name, up to6 zones; only扫荡, never挑战. Full replay pending."
@@ -483,7 +483,7 @@
     "policy": "Action bytes unchanged during migration; subsequent revisions are maintained here."
   },
   "partial_coverage": {
-    "intelligence": "ordinary rescue/hero/beast candidate actions; all-role replay and crowded/in-progress icons pending",
+    "intelligence": "Mixedcycle actual2firebeast3beast2rescue3hero andmapemptyknownmarkers on one mature role; bounty and Agnes extraintel acquisition pending",
     "pets": "wolf/badger/deer skill actions; treasure and muskox gather pending",
     "experts": "camp only; other experts still missing",
     "orders": "immediate production only; available button pending calibration",
@@ -492,7 +492,7 @@
     "healing": "ordinary heal candidate; current role empty/running/title/camera branches pending",
     "enlistment": "empty/recall candidate; additional expert rewards still missing",
     "pet_treasure": "Two completed sites claimed,1gold+2blue newlydispatched and alliedtreasure actualclaim/city exit on one mature role; running skip on another. Purple skins and insufficientpets pending.",
-    "labyrinth": "Available-zone free sweep candidate; battles and cycle-specific progress rewards not yet covered",
+    "labyrinth": "0.1.0semanticfalseempty: availableupperzone outsideoldcrop;0.1.1expandedROI+upperglyphvariant, positive replaypending",
     "alliance_incentive": "personal daily only; weekly settlement missing",
     "travel": "50existing supplies actual macrostart and later actual completedclaim/city exit on one mature role. Empty branch on another. Running/no-supplies branches pending.",
     "war_academy_commission": "FireCrystalDeepExploration free earned rows/milestones candidate; no exchange/research/upgrade or paid extension. New-role replay pending."
