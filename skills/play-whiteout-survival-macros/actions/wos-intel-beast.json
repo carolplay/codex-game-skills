@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-beast",
-  "action_version": "0.1.4",
+  "action_version": "0.1.5",
   "name": "WOS ordinary intelligence beast",
   "reference_size": [
     788,
@@ -3794,8 +3794,41 @@
           ]
         },
         "observe_attempts": 5
+      },
+      {
+        "name": "exit-empty-deployment",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "出征",
+            "训练士兵"
+          ],
+          "none": [
+            "士兵比例"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
       }
     ]
   },
-  "verification_scope": "Main three real dispatch/claims; fourth proper NPC was falsely rejected by background集结队伍. New menu-only crop retains NPC recommended strength/attack and forbids player controls locally. Next role pending. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending."
+  "verification_scope": "Main three real dispatch/claims; fourth proper NPC was falsely rejected by background集结队伍. New menu-only crop retains NPC recommended strength/attack and forbids player controls locally. Next role pending. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Empty deployment page exit sampled live to world; bounded local recovery candidate, no troop dispatch when empty."
 }

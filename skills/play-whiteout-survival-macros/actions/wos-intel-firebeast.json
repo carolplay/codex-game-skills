@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-firebeast",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS Flame and Fangs Firebeast intelligence",
   "reference_size": [
     788,
@@ -2273,10 +2273,43 @@
           ]
         },
         "observe_attempts": 5
+      },
+      {
+        "name": "exit-empty-deployment",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "出征",
+            "训练士兵"
+          ],
+          "none": [
+            "士兵比例"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
       }
     ]
   },
-  "verification_scope": "Private draft from a mature role map/detail/worldNPC sampling. Completedicon gives10cores immediately, newdetail狩猎炽红巨兽, NPC等级20炽红巨兽 and recommendedstrength/attack10stamina. Actualmacro replay pending; no accountdata embedded.",
+  "verification_scope": "Private draft from a mature role map/detail/worldNPC sampling. Completedicon gives10cores immediately, newdetail狩猎炽红巨兽, NPC等级20炽红巨兽 and recommendedstrength/attack10stamina. Actualmacro replay pending; no accountdata embedded. Empty deployment page exit sampled live to world; bounded local recovery candidate, no troop dispatch when empty.",
   "event_period": "event/two-week",
   "business_dependencies": [
     "Runs only matchingFirebeast marker onintelmap; genericordinaryintelremain independent",
