@@ -1,0 +1,894 @@
+{
+  "action_id": "wos-npc-rally-start",
+  "action_version": "0.1.1",
+  "name": "WOS single NPC rally start component",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 240,
+  "status": "candidate",
+  "verification_scope": "Developer sampled actual level4 Sabertooth initiation and initiator victory report. Component 0.1.0 failed before dispatch: category OCR read 冰原巨善 and exit shared the same exact label. 0.1.1 uses scoped stable prefix 冰原巨; search exit independently recognizes 搜索+自动狩猎. Saved failure frame offline validation only; no live replay of 0.1.1 yet. Not a daily ten-rally completion action; result and daily-count reconciliation remain pending.",
+  "business_dependencies": [
+    "Only NPC level4Sabertooth currentlysampled; failbeforeinput ifleveldiffers",
+    "Keep at leastone marchslot; existingrally busy finish is no_action, not newdispatch",
+    "Do not repeat thiscomponent until actual battle result is verified and daily successfulinitiatorcount is known",
+    "Never treat autojoin/member50rewards as initiator10; special reward random absence is not defeat"
+  ],
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "enter-world",
+      "action": "click",
+      "point": [
+        640,
+        1022
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后是否隐藏"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-npc-search",
+      "action": "click",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "point": [
+        135,
+        747
+      ],
+      "observe_attempts": 10,
+      "finish_if": {
+        "all": [
+          "集结中"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            100,
+            220,
+            310,
+            280
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "搜索",
+          "冰原巨"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      }
+    },
+    {
+      "name": "select-polar-terror",
+      "action": "click",
+      "before": {
+        "all": [
+          "搜索",
+          "冰原巨"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "text_target": {
+        "text": "冰原巨",
+        "bounds": [
+          98,
+          750,
+          690,
+          835
+        ],
+        "offset": [
+          0,
+          -25
+        ],
+        "min_confidence": 0.3
+      },
+      "observe_attempts": 5,
+      "after": {
+        "all": [
+          "搜索",
+          "冰原巨"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      }
+    },
+    {
+      "name": "verify-sampled-level",
+      "action": "observe",
+      "before": {
+        "all": [
+          "搜索",
+          "冰原巨"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "budget_checks": [
+        {
+          "bounds": [
+            548,
+            872,
+            660,
+            917
+          ],
+          "min": 1,
+          "max_config": "max_npc_rally_level"
+        }
+      ]
+    },
+    {
+      "name": "search-npc",
+      "action": "click",
+      "before": {
+        "all": [
+          "搜索",
+          "冰原巨"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              548,
+              872,
+              660,
+              917
+            ],
+            "pattern": "4",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "point": [
+        394,
+        1026
+      ],
+      "observe_attempts": 20,
+      "after": {
+        "all": [
+          "等级4",
+          "剑齿虎",
+          "推荐实力",
+          "集结"
+        ],
+        "none": [
+          "侦察",
+          "援助"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            225,
+            225,
+            565,
+            470
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-rally-time",
+      "action": "click",
+      "before": {
+        "all": [
+          "等级4",
+          "剑齿虎",
+          "推荐实力",
+          "集结"
+        ],
+        "none": [
+          "侦察",
+          "援助"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            225,
+            225,
+            565,
+            470
+          ]
+        ]
+      },
+      "point": [
+        395,
+        430
+      ],
+      "observe_attempts": 8,
+      "after": {
+        "all": [
+          "发起集结",
+          "请设定集结时间",
+          "3分钟"
+        ],
+        "none": [
+          "出征"
+        ]
+      }
+    },
+    {
+      "name": "select-three-minutes",
+      "action": "click",
+      "before": {
+        "all": [
+          "发起集结",
+          "请设定集结时间",
+          "3分钟"
+        ],
+        "none": [
+          "出征"
+        ]
+      },
+      "point": [
+        206,
+        532
+      ],
+      "observe_attempts": 5,
+      "after": {
+        "all": [
+          "发起集结",
+          "请设定集结时间",
+          "3分钟"
+        ],
+        "none": [
+          "出征"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              190,
+              517,
+              221,
+              548
+            ],
+            "min": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "name": "open-rally-army",
+      "action": "click",
+      "before": {
+        "all": [
+          "发起集结",
+          "请设定集结时间",
+          "3分钟"
+        ],
+        "none": [
+          "出征"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              190,
+              517,
+              221,
+              548
+            ],
+            "min": 0.1
+          }
+        ]
+      },
+      "point": [
+        395,
+        695
+      ],
+      "observe_attempts": 8,
+      "after": {
+        "all": [
+          "目标",
+          "剑齿虎",
+          "出征",
+          "士兵比例"
+        ],
+        "none": [
+          "暂无空闲队列",
+          "兵力不足"
+        ]
+      }
+    },
+    {
+      "name": "dispatch-rally",
+      "action": "click",
+      "before": {
+        "all": [
+          "目标",
+          "剑齿虎",
+          "出征",
+          "士兵比例"
+        ],
+        "none": [
+          "暂无空闲队列",
+          "兵力不足"
+        ]
+      },
+      "point": [
+        549,
+        1026
+      ],
+      "observe_attempts": 12,
+      "budget_checks": [
+        {
+          "bounds": [
+            535,
+            1020,
+            585,
+            1065
+          ],
+          "min": 1,
+          "max_config": "max_npc_rally_stamina"
+        }
+      ],
+      "after": {
+        "all": [
+          "行军",
+          "集结中",
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            180,
+            310,
+            280
+          ],
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            145,
+            247,
+            255,
+            271
+          ],
+          "min": 1,
+          "max": 180
+        }
+      }
+    },
+    {
+      "name": "verify-rally-active",
+      "action": "observe",
+      "before": {
+        "all": [
+          "行军",
+          "集结中",
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            180,
+            310,
+            280
+          ],
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            145,
+            247,
+            255,
+            271
+          ],
+          "min": 1,
+          "max": 180
+        }
+      }
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数",
+        "完成任务后是否隐藏"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 6,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-army",
+        "action": "click",
+        "before": {
+          "all": [
+            "目标",
+            "剑齿虎",
+            "出征",
+            "士兵比例"
+          ],
+          "none": [
+            "暂无空闲队列",
+            "兵力不足"
+          ]
+        },
+        "point": [
+          133,
+          59
+        ],
+        "observe_attempts": 5,
+        "after": {
+          "any": [
+            "英雄",
+            "推荐实力",
+            "发起集结"
+          ]
+        }
+      },
+      {
+        "name": "exit-rally-time",
+        "action": "click",
+        "before": {
+          "all": [
+            "发起集结",
+            "请设定集结时间"
+          ],
+          "any": [
+            "3分钟",
+            "5分钟"
+          ],
+          "none": [
+            "出征"
+          ]
+        },
+        "point": [
+          646,
+          380
+        ],
+        "observe_attempts": 5,
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "搜索",
+            "采集者",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        }
+      },
+      {
+        "name": "exit-npc-card",
+        "action": "click",
+        "before": {
+          "all": [
+            "等级4",
+            "剑齿虎",
+            "推荐实力",
+            "集结"
+          ],
+          "none": [
+            "侦察",
+            "援助"
+          ],
+          "page_text_only": true,
+          "page_text_regions": [
+            [
+              225,
+              225,
+              565,
+              470
+            ]
+          ]
+        },
+        "point": [
+          610,
+          550
+        ],
+        "observe_attempts": 5,
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "搜索",
+            "采集者",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        }
+      },
+      {
+        "name": "exit-search",
+        "action": "click",
+        "before": {
+          "all": [
+            "搜索",
+            "自动狩猎"
+          ],
+          "none": [
+            "出征"
+          ],
+          "page_text_only": true,
+          "page_text_regions": [
+            [
+              100,
+              740,
+              690,
+              1065
+            ]
+          ]
+        },
+        "point": [
+          610,
+          550
+        ],
+        "observe_attempts": 5,
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "搜索",
+            "采集者",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        }
+      },
+      {
+        "name": "exit-world",
+        "action": "click",
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "搜索",
+            "采集者",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "point": [
+          640,
+          1022
+        ],
+        "observe_attempts": 8,
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "完成任务后是否隐藏"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

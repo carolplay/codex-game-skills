@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.9.5",
-  "package_version": "0.9.5",
+  "macro_version": "0.9.6",
+  "package_version": "0.9.6",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -257,7 +257,8 @@
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "npc_rally_start": "开发单次发起组件，尚非每日10次闭环；战斗结果和当日计数待接，不重复默认执行。"
       }
     },
     "mature-test": {
@@ -509,7 +510,8 @@
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "npc_rally_start": "开发单次发起组件，尚非每日10次闭环；战斗结果和当日计数待接，不重复默认执行。"
       }
     },
     "under30-test": {
@@ -711,7 +713,8 @@
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "npc_rally_start": "开发单次发起组件，尚非每日10次闭环；战斗结果和当日计数待接，不重复默认执行。"
       }
     }
   }

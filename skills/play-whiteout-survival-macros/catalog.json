@@ -1,5 +1,5 @@
 {
-  "package_version": "0.9.5",
+  "package_version": "0.9.6",
   "executor_min_version": "0.2.7",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -465,6 +465,16 @@
       "period": "shift",
       "utility": false,
       "verification_scope": "Candidate; see visit-plan and local evidence. No all-branch guarantee."
+    },
+    "npc_rally_start": {
+      "path": "actions/wos-npc-rally-start.json",
+      "action_id": "wos-npc-rally-start",
+      "action_version": "0.1.1",
+      "sha256": "ee384be6680b46544636c241d3f20c9ba383a7a259b6c521c413d02d7c1bb907",
+      "period": "day",
+      "utility": false,
+      "include_in_daily": false,
+      "verification_scope": "Developer sampled actual level4 Sabertooth initiation and initiator victory report. Component 0.1.0 failed before dispatch: category OCR read 冰原巨善 and exit shared the same exact label. 0.1.1 uses scoped stable prefix 冰原巨; search exit independently recognizes 搜索+自动狩猎. Saved failure frame offline validation only; no live replay of 0.1.1 yet. Not a daily ten-rally completion action; result and daily-count reconciliation remain pending."
     }
   },
   "not_implemented": [
@@ -495,6 +505,7 @@
     "labyrinth": "0.1.0semanticfalseempty: availableupperzone outsideoldcrop;0.1.1expandedROI+upperglyphvariant, positive replaypending",
     "alliance_incentive": "personal daily only; weekly settlement missing",
     "travel": "50existing supplies actual macrostart and later actual completedclaim/city exit on one mature role. Empty branch on another. Running/no-supplies branches pending.",
-    "war_academy_commission": "FireCrystalDeepExploration free earned rows/milestones candidate; no exchange/research/upgrade or paid extension. New-role replay pending."
+    "war_academy_commission": "FireCrystalDeepExploration free earned rows/milestones candidate; no exchange/research/upgrade or paid extension. New-role replay pending.",
+    "npc_rally": "Single-start developmentcomponent; actual victory/reward reconciliation and daily10quota pending. Excluded defaultshifts."
   }
 }
