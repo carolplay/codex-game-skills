@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-iron",
-  "action_version": "0.1.2",
+  "action_version": "0.1.3",
   "name": "WOS gather_iron",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending.",
+  "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate.",
   "steps": [
     {
       "name": "01-check-city",
@@ -970,6 +970,41 @@
             "技能学习",
             "超级提炼优惠",
             "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-empty-gather-deployment",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "训练士兵"
+          ],
+          "any": [
+            "铁矿"
+          ],
+          "none": [
+            "士兵比例"
+          ]
+        },
+        "after": {
+          "all": [
+            "城镇",
+            "英雄",
+            "背包"
           ],
           "page_text_regions": [
             [
