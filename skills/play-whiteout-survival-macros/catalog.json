@@ -1,5 +1,5 @@
 {
-  "package_version": "0.9.4",
+  "package_version": "0.9.5",
   "executor_min_version": "0.2.7",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -238,8 +238,8 @@
     "island": {
       "path": "actions/wos-island.json",
       "action_id": "wos-island",
-      "action_version": "0.1.5",
-      "sha256": "a4b8adb701ba5681d9aedafa01a225b672f88502aecfd7a9167d7ed6fab522b8",
+      "action_version": "0.1.6",
+      "sha256": "8898fffc6c3f3e4e93a17dbca6a2d07233ab7c6504252fd9e92d2e1169bb9d75",
       "period": "shift",
       "utility": false,
       "verification_scope": "Manual main tree+5040 sampled; island UI and fixed tree/lumber leaf positions observed; layout/balance validation required, next-role macro replay pending. No decorations/upgrades."

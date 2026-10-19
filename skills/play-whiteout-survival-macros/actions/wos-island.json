@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.5",
+  "action_version": "0.1.6",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 360,
   "status": "candidate",
-  "verification_scope": "Existing treeactualgain verified;0.1.4fullbottom list12Down gestures stoppedmidlist and missedisland.0.1.5twobounded20gesture normalization blocks skip once treevisible; numericgain observation retries30. Nextrolepending.",
+  "verification_scope": "0.1.5Labubu screenshotshows treevisible but cursoroccludes daily-tab label; required日常 falselytriggeredscroll.0.1.6uses visible tree+overviewfooter includingfreshcroppedOCR. Nextrole replaypending; retain actualpositivegain checks and boundedexit. City anchor now excludes visible overviewfooter, so cursor-occluded tab cannot falsely qualify ascity. No new liveclaimyet.",
   "steps": [
     {
       "name": "01-check-city",
@@ -22,7 +22,8 @@
         "none": [
           "日常",
           "建造队列",
-          "游历补给"
+          "游历补给",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -30,6 +31,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -115,7 +122,8 @@
           "部队训练",
           "技能学习",
           "超级提炼优惠",
-          "提炼次数"
+          "提炼次数",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -123,6 +131,12 @@
             995,
             690,
             1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -245,8 +259,8 @@
       },
       "skip_if": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -254,6 +268,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -307,8 +327,8 @@
       },
       "skip_if": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -316,6 +336,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -369,8 +395,8 @@
       },
       "skip_if": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -378,6 +404,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -430,8 +462,8 @@
       },
       "skip_if": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -439,6 +471,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -491,8 +529,8 @@
       },
       "skip_if": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -500,6 +538,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -552,8 +596,8 @@
       },
       "skip_if": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -561,6 +605,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -613,8 +663,8 @@
       },
       "skip_if": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -622,6 +672,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -674,8 +730,8 @@
       },
       "skip_if": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -683,6 +739,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -735,8 +797,8 @@
       },
       "skip_if": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -744,6 +806,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -796,8 +864,8 @@
       },
       "skip_if": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -805,6 +873,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       }
@@ -829,8 +903,8 @@
       },
       "before": {
         "all": [
-          "日常",
-          "生命之树"
+          "生命之树",
+          "完成任务后是否隐藏"
         ],
         "page_text_regions": [
           [
@@ -838,6 +912,12 @@
             270,
             430,
             740
+          ],
+          [
+            160,
+            745,
+            450,
+            800
           ]
         ]
       },
@@ -1584,7 +1664,8 @@
         "部队训练",
         "技能学习",
         "超级提炼优惠",
-        "提炼次数"
+        "提炼次数",
+        "完成任务后是否隐藏"
       ],
       "page_text_regions": [
         [
@@ -1592,6 +1673,12 @@
           995,
           690,
           1079
+        ],
+        [
+          160,
+          745,
+          450,
+          800
         ]
       ]
     },
@@ -1665,7 +1752,8 @@
             "部队训练",
             "技能学习",
             "超级提炼优惠",
-            "提炼次数"
+            "提炼次数",
+            "完成任务后是否隐藏"
           ],
           "page_text_regions": [
             [
@@ -1673,6 +1761,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },
@@ -1707,7 +1801,8 @@
             "部队训练",
             "技能学习",
             "超级提炼优惠",
-            "提炼次数"
+            "提炼次数",
+            "完成任务后是否隐藏"
           ],
           "page_text_regions": [
             [
@@ -1715,6 +1810,12 @@
               995,
               690,
               1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
             ]
           ]
         },

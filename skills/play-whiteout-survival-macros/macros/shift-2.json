@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.9.4",
-  "package_version": "0.9.4",
+  "macro_version": "0.9.5",
+  "package_version": "0.9.5",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -139,8 +139,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.5",
-          "sha256": "a4b8adb701ba5681d9aedafa01a225b672f88502aecfd7a9167d7ed6fab522b8"
+          "action_version": "0.1.6",
+          "sha256": "8898fffc6c3f3e4e93a17dbca6a2d07233ab7c6504252fd9e92d2e1169bb9d75"
         },
         {
           "task": "orders",
@@ -386,8 +386,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.5",
-          "sha256": "a4b8adb701ba5681d9aedafa01a225b672f88502aecfd7a9167d7ed6fab522b8"
+          "action_version": "0.1.6",
+          "sha256": "8898fffc6c3f3e4e93a17dbca6a2d07233ab7c6504252fd9e92d2e1169bb9d75"
         },
         {
           "task": "orders",
@@ -591,8 +591,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.5",
-          "sha256": "a4b8adb701ba5681d9aedafa01a225b672f88502aecfd7a9167d7ed6fab522b8"
+          "action_version": "0.1.6",
+          "sha256": "8898fffc6c3f3e4e93a17dbca6a2d07233ab7c6504252fd9e92d2e1169bb9d75"
         },
         {
           "task": "intel_cycle",

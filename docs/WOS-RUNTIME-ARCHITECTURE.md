@@ -78,3 +78,9 @@ App先提供生命周期、权限状态、开始/停止、运行状态与日志�
 - [Apple TN3127：代码签名与身份要求](https://developer.apple.com/documentation/technotes/tn3127-inside-code-signing-requirements)：稳定代码身份需要考虑签名要求，不只看App显示名。
 
 相关任务契约见[任务设计](WOS-V2-TASK-DESIGN.md)。资源/任务重要性另见[待讨论记录](RESOURCE-TASK-PRIORITIES.md)，不会因此减少日常覆盖。
+
+## 后续排查：受支持的对话调用入口
+
+官方[App Server 文档](https://learn.chatgpt.com/docs/app-server)明确提供`mcpServer/tool/call`，参数指定真实`threadId`及该线程配置的server/tool；`mcpServerStatus/list`也可复用该线程连接。这是值得接入验证的正式路径，不是向自启CUA填入猜测的信任元数据。
+
+本机只读探测发现CLI默认App Server控制socket不存在，尚未实际发出该方法调用；不能把文档存在写成已成功接入。当前对话自带CUA能够重新取得游戏窗口，随后尝试继续本地宏；这只证明一次访问恢复，独立锁屏与持续对话关联仍未验收。完整架构债记于[issue #1](https://github.com/carolplay/codex-game-skills/issues/1)，全面重构暂缓。
