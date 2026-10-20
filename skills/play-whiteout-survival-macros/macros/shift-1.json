@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.12",
-  "package_version": "0.12.12",
+  "macro_version": "0.12.13",
+  "package_version": "0.12.13",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -109,8 +109,8 @@
         {
           "task": "donate",
           "action_id": "wos-alliance-donate",
-          "action_version": "0.1.5",
-          "sha256": "26344a16ad826c4b98635f09ad1cedcbd52a3d5f7d32f8d29a2fd4dc3abed478"
+          "action_version": "0.1.6",
+          "sha256": "e94d6c23a12fb8950fb00695b2340aa895b47df20684f58d9f9e842ef3ad84eb"
         },
         {
           "task": "pet_wolf",
@@ -157,8 +157,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.4",
-          "sha256": "df37762669070cb4d930643cea5d13bd09af440e383de077d6a28a1201b3adf0"
+          "action_version": "0.2.5",
+          "sha256": "8b0c9017e2207d2fd4ac02370a75b667f39e3bc30615722f4ffb5cc4ba9ea182"
         },
         {
           "task": "gather_meat",
@@ -362,8 +362,8 @@
         {
           "task": "donate",
           "action_id": "wos-alliance-donate",
-          "action_version": "0.1.5",
-          "sha256": "26344a16ad826c4b98635f09ad1cedcbd52a3d5f7d32f8d29a2fd4dc3abed478"
+          "action_version": "0.1.6",
+          "sha256": "e94d6c23a12fb8950fb00695b2340aa895b47df20684f58d9f9e842ef3ad84eb"
         },
         {
           "task": "pet_wolf",
@@ -410,8 +410,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.4",
-          "sha256": "df37762669070cb4d930643cea5d13bd09af440e383de077d6a28a1201b3adf0"
+          "action_version": "0.2.5",
+          "sha256": "8b0c9017e2207d2fd4ac02370a75b667f39e3bc30615722f4ffb5cc4ba9ea182"
         },
         {
           "task": "gather_meat",
@@ -585,8 +585,8 @@
         {
           "task": "donate",
           "action_id": "wos-alliance-donate",
-          "action_version": "0.1.5",
-          "sha256": "26344a16ad826c4b98635f09ad1cedcbd52a3d5f7d32f8d29a2fd4dc3abed478"
+          "action_version": "0.1.6",
+          "sha256": "e94d6c23a12fb8950fb00695b2340aa895b47df20684f58d9f9e842ef3ad84eb"
         },
         {
           "task": "pet_wolf",
@@ -615,8 +615,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.4",
-          "sha256": "df37762669070cb4d930643cea5d13bd09af440e383de077d6a28a1201b3adf0"
+          "action_version": "0.2.5",
+          "sha256": "8b0c9017e2207d2fd4ac02370a75b667f39e3bc30615722f4ffb5cc4ba9ea182"
         },
         {
           "task": "gather_meat",

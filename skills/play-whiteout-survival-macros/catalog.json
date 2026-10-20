@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.12",
+  "package_version": "0.12.13",
   "executor_min_version": "0.3.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -97,11 +97,11 @@
     "donate": {
       "path": "actions/wos-alliance-donate.json",
       "action_id": "wos-alliance-donate",
-      "action_version": "0.1.5",
-      "sha256": "26344a16ad826c4b98635f09ad1cedcbd52a3d5f7d32f8d29a2fd4dc3abed478",
+      "action_version": "0.1.6",
+      "sha256": "e94d6c23a12fb8950fb00695b2340aa895b47df20684f58d9f9e842ef3ad84eb",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.2 includes explicit240s workflow budget. 0.1.1 performed24 donations and dispatched25th before old120s workflow deadline; final outcome must be audited without repeating consumption.",
+      "verification_scope": "0.1.2 includes explicit240s workflow budget. 0.1.1 performed24 donations and dispatched25th before old120s workflow deadline; final outcome must be audited without repeating consumption. Shift3 candidate: crop OCR fuses coal icon as >1,250; accept only optional observed > prefix for ordinary resource-cost display. Counts/diamond boundary/max240second budget unchanged. Nextrole pending.",
       "current_evidence_note": "第三班成熟试验角色A自然恢复次数至0整宏通过；成熟试验角色B第五次点击后出现点累了/试试长按操作吧提示，遮挡次数，原宏已三层退出。下一版仅识别该提示后点击无业务控件的说明空白区，再读次数；不重复捐献点击。新提示分支待下班验证。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -256,11 +256,11 @@
     "intel_rescue": {
       "path": "actions/wos-intel-rescue.json",
       "action_id": "wos-intel-rescue",
-      "action_version": "0.1.5",
-      "sha256": "35672cb52bac50305b5ebb3f90c001fabb6eb8f42d7039a63db6be621486846c",
+      "action_version": "0.1.6",
+      "sha256": "2ebba99ad9e6c414261990e8b0379ae9dfce59cfb22a2613511e3f367032e5cb",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Additional sampled blue glyph variant registered. Standalone remains bounded component; productionmixedcycle handles tasksrevealed byotherclasses and iconocclusion.",
+      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Additional sampled blue glyph variant registered. Standalone remains bounded component; productionmixedcycle handles tasksrevealed byotherclasses and iconocclusion. Shift3 candidate: single legacy claim button moved down to reference1017; green observation region moved correspondingly. Firebeast menu adds exact attackbutton crop, NPC title/player exclusions retained. Saved-frame validation then nextrole replay; not yet live.",
       "category": "component",
       "include_in_daily": false,
       "production_replacement": "intel_cycle"
@@ -268,11 +268,11 @@
     "intel_hero": {
       "path": "actions/wos-intel-hero.json",
       "action_id": "wos-intel-hero",
-      "action_version": "0.1.7",
-      "sha256": "9956ff2ab0f9a3dd9a451ba7b16c8a46b2e3324c9e63e5b73b11f39acf2fd1c0",
+      "action_version": "0.1.8",
+      "sha256": "99aa8f799b76678226eb446fc0a314fe2495b37f765a0ec53e5728fc40e0cc5e",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry. Nextdraft uses180,650 dismisspoint actuallysampled on mainHeroCard; no followup exploration performed. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Additional sampled occluded glyph variant registered. Standalone remains bounded component; productionmixedcycle handles tasksrevealed byotherclasses and iconocclusion.",
+      "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. Main2realhero missions passed; thirdgotoviewcorrect but fullOCR missedCitylabel, preventingknownexit too. Savedframe narrowbottomcropreadsCityexactly; appendedcrop toworld assertions and exits. Nextrole validates; no same-rolemissionretry. Nextdraft uses180,650 dismisspoint actuallysampled on mainHeroCard; no followup exploration performed. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Additional sampled occluded glyph variant registered. Standalone remains bounded component; productionmixedcycle handles tasksrevealed byotherclasses and iconocclusion. Shift3 candidate: single legacy claim button moved down to reference1017; green observation region moved correspondingly. Firebeast menu adds exact attackbutton crop, NPC title/player exclusions retained. Saved-frame validation then nextrole replay; not yet live.",
       "category": "component",
       "include_in_daily": false,
       "production_replacement": "intel_cycle"
@@ -280,11 +280,11 @@
     "intel_beast": {
       "path": "actions/wos-intel-beast.json",
       "action_id": "wos-intel-beast",
-      "action_version": "0.1.5",
-      "sha256": "ada13e34e7eb0ead397a5bebb905217f349e1169f8a438ec4c7f144554d7bd2f",
+      "action_version": "0.1.6",
+      "sha256": "b990a9023963b6dab7988694c125cf4f1a84bad9294dd3fd765beec539c333cb",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Main three real dispatch/claims; fourth proper NPC was falsely rejected by background集结队伍. New menu-only crop retains NPC recommended strength/attack and forbids player controls locally. Next role pending. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending.",
+      "verification_scope": "Main three real dispatch/claims; fourth proper NPC was falsely rejected by background集结队伍. New menu-only crop retains NPC recommended strength/attack and forbids player controls locally. Next role pending. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Shift3 candidate: single legacy claim button moved down to reference1017; green observation region moved correspondingly. Firebeast menu adds exact attackbutton crop, NPC title/player exclusions retained. Saved-frame validation then nextrole replay; not yet live.",
       "category": "component",
       "include_in_daily": false,
       "production_replacement": "intel_cycle"
@@ -449,22 +449,22 @@
     "intel_firebeast": {
       "path": "actions/wos-intel-firebeast.json",
       "action_id": "wos-intel-firebeast",
-      "action_version": "0.1.1",
-      "sha256": "8a63a226e41faed70bacec00f3090039b415ab514c3b16b9bff7923fd3428012",
+      "action_version": "0.1.2",
+      "sha256": "5a33f9a885c4b02803ffe42482233ac55ebbbea35c935696c7f6c694db69badf",
       "period": "event",
       "utility": false,
-      "verification_scope": "Candidate; see visit-plan and local evidence. No all-branch guarantee.",
+      "verification_scope": "Candidate; see visit-plan and local evidence. No all-branch guarantee. Shift3 candidate: single legacy claim button moved down to reference1017; green observation region moved correspondingly. Firebeast menu adds exact attackbutton crop, NPC title/player exclusions retained. Saved-frame validation then nextrole replay; not yet live.",
       "category": "component",
       "include_in_daily": false
     },
     "intel_cycle": {
       "path": "actions/wos-intel-cycle.json",
       "action_id": "wos-intel-cycle",
-      "action_version": "0.2.4",
-      "sha256": "df37762669070cb4d930643cea5d13bd09af440e383de077d6a28a1201b3adf0",
+      "action_version": "0.2.5",
+      "sha256": "8b0c9017e2207d2fd4ac02370a75b667f39e3bc30615722f4ffb5cc4ba9ea182",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.0.2.4 adds bounded known stamina-supply modal X exit to lighthouse and city after execute-all opens insufficient-stamina panel. No stamina bottles or diamonds used; old main failure preserved. Nextrole exit replay pending. 0.2.4 secondshift: yellow ordinary batch execution/wait/claim passed, then firebeast goto.after omitted visible attack in full-frame OCR; whole cycle deviation, predefined exit and nexttasks passed. Added insufficientstamina modal exit not triggered in this replay, remains candidate. Main old0.2.3 stopped when78stamina<92cost opened supply modal. Low legacy greenclaim condition remains failed."
+      "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.0.2.4 adds bounded known stamina-supply modal X exit to lighthouse and city after execute-all opens insufficient-stamina panel. No stamina bottles or diamonds used; old main failure preserved. Nextrole exit replay pending. 0.2.4 secondshift: yellow ordinary batch execution/wait/claim passed, then firebeast goto.after omitted visible attack in full-frame OCR; whole cycle deviation, predefined exit and nexttasks passed. Added insufficientstamina modal exit not triggered in this replay, remains candidate. Main old0.2.3 stopped when78stamina<92cost opened supply modal. Low legacy greenclaim condition remains failed.0.2.5 generated from revised four components: downshifted legacy singleclaim region, firebeast attack-menu crop. All actualbranches pending nextrole; no agent fallback."
     },
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",

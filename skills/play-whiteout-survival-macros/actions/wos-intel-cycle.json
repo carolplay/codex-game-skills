@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.4",
+  "action_version": "0.2.5",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -860,7 +860,6 @@
       "after": {
         "all": [
           "推荐实力",
-          "攻击",
           "炽红巨兽"
         ],
         "none": [
@@ -874,9 +873,28 @@
             220,
             575,
             590
+          ],
+          [
+            300,
+            515,
+            495,
+            575
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "text_regions": [
+          {
+            "bounds": [
+              350,
+              518,
+              445,
+              548
+            ],
+            "pattern": "攻击",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
       },
       "observe_attempts": 5,
       "skip_if_step_skipped": "event-firebeast-select"
@@ -891,7 +909,6 @@
       "before": {
         "all": [
           "推荐实力",
-          "攻击",
           "炽红巨兽"
         ],
         "none": [
@@ -905,9 +922,28 @@
             220,
             575,
             590
+          ],
+          [
+            300,
+            515,
+            495,
+            575
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "text_regions": [
+          {
+            "bounds": [
+              350,
+              518,
+              445,
+              548
+            ],
+            "pattern": "攻击",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
       },
       "after": [
         "出征",
@@ -1343,7 +1379,7 @@
       "action": "click",
       "point": [
         394,
-        953
+        1017
       ],
       "before": {
         "all": [
@@ -1360,9 +1396,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "min": 0.18
           }
@@ -1396,9 +1432,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "max": 0.17
           }
@@ -1649,7 +1685,6 @@
       "after": {
         "all": [
           "推荐实力",
-          "攻击",
           "炽红巨兽"
         ],
         "none": [
@@ -1663,9 +1698,28 @@
             220,
             575,
             590
+          ],
+          [
+            300,
+            515,
+            495,
+            575
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "text_regions": [
+          {
+            "bounds": [
+              350,
+              518,
+              445,
+              548
+            ],
+            "pattern": "攻击",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
       },
       "observe_attempts": 5,
       "skip_if_step_skipped": "legacy-cycle-0-firebeast-select"
@@ -1680,7 +1734,6 @@
       "before": {
         "all": [
           "推荐实力",
-          "攻击",
           "炽红巨兽"
         ],
         "none": [
@@ -1694,9 +1747,28 @@
             220,
             575,
             590
+          ],
+          [
+            300,
+            515,
+            495,
+            575
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "text_regions": [
+          {
+            "bounds": [
+              350,
+              518,
+              445,
+              548
+            ],
+            "pattern": "攻击",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
       },
       "after": [
         "出征",
@@ -1957,9 +2029,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "min": 0.18
           }
@@ -1973,7 +2045,7 @@
       "action": "click",
       "point": [
         394,
-        953
+        1017
       ],
       "before": {
         "all": [
@@ -1990,9 +2062,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "min": 0.18
           }
@@ -2026,9 +2098,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "max": 0.17
           }
@@ -2509,9 +2581,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "min": 0.18
           }
@@ -2525,7 +2597,7 @@
       "action": "click",
       "point": [
         394,
-        953
+        1017
       ],
       "before": {
         "all": [
@@ -2542,9 +2614,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "min": 0.18
           }
@@ -2578,9 +2650,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "max": 0.17
           }
@@ -3017,9 +3089,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "min": 0.18
           }
@@ -3033,7 +3105,7 @@
       "action": "click",
       "point": [
         394,
-        953
+        1017
       ],
       "before": {
         "all": [
@@ -3050,9 +3122,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "min": 0.18
           }
@@ -3086,9 +3158,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "max": 0.17
           }
@@ -3607,9 +3679,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "min": 0.18
           }
@@ -3623,7 +3695,7 @@
       "action": "click",
       "point": [
         394,
-        953
+        1017
       ],
       "before": {
         "all": [
@@ -3640,9 +3712,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "min": 0.18
           }
@@ -3676,9 +3748,9 @@
           {
             "bounds": [
               280,
-              930,
+              990,
               505,
-              972
+              1040
             ],
             "max": 0.17
           }
@@ -4253,23 +4325,23 @@
   "component_versions": {
     "beast": {
       "action_id": "wos-intel-beast",
-      "action_version": "0.1.5",
-      "sha256": "ada13e34e7eb0ead397a5bebb905217f349e1169f8a438ec4c7f144554d7bd2f"
+      "action_version": "0.1.6",
+      "sha256": "b990a9023963b6dab7988694c125cf4f1a84bad9294dd3fd765beec539c333cb"
     },
     "rescue": {
       "action_id": "wos-intel-rescue",
-      "action_version": "0.1.5",
-      "sha256": "35672cb52bac50305b5ebb3f90c001fabb6eb8f42d7039a63db6be621486846c"
+      "action_version": "0.1.6",
+      "sha256": "2ebba99ad9e6c414261990e8b0379ae9dfce59cfb22a2613511e3f367032e5cb"
     },
     "hero": {
       "action_id": "wos-intel-hero",
-      "action_version": "0.1.7",
-      "sha256": "9956ff2ab0f9a3dd9a451ba7b16c8a46b2e3324c9e63e5b73b11f39acf2fd1c0"
+      "action_version": "0.1.8",
+      "sha256": "99aa8f799b76678226eb446fc0a314fe2495b37f765a0ec53e5728fc40e0cc5e"
     },
     "firebeast": {
       "action_id": "wos-intel-firebeast",
-      "action_version": "0.1.1",
-      "sha256": "8a63a226e41faed70bacec00f3090039b415ab514c3b16b9bff7923fd3428012"
+      "action_version": "0.1.2",
+      "sha256": "5a33f9a885c4b02803ffe42482233ac55ebbbea35c935696c7f6c694db69badf"
     }
   }
 }
