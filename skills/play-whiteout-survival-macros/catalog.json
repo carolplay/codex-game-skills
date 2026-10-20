@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.9",
+  "package_version": "0.12.10",
   "executor_min_version": "0.3.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -184,11 +184,11 @@
     "bank": {
       "path": "actions/wos-bank-one-day.json",
       "action_id": "wos-bank-one-day",
-      "action_version": "0.1.2",
-      "sha256": "1e6b7a186affedee62760d8194c813fa39d41c6df241c7c90a94a6afcb112165",
+      "action_version": "0.1.3",
+      "sha256": "25f06feaaca185fa46acf319cfb47e08bcdf63c4900a0a0b2c075bee11ec97dc",
       "period": "day",
       "utility": false,
-      "verification_scope": "银行入口与固定退出已宏回放；已到期收益为开发采样取出，非宏证明。0.1.0空存款期数字1漏读天字，提交前停止、0存入；0.1.1用左上格局部OCR确认一天，并修正弹窗退出排他条件，离线失败图验证，存入/活动存款/宏取出均待下一班。 Actual current short-term deposit is23hours, prior1day-only label blocks before new deposit. Saved screenshot confirms same short-term tile and position; accept1day/23hours, retain amount/ROI checks and no other term. Next due role pending."
+      "verification_scope": "银行入口与固定退出已宏回放；已到期收益为开发采样取出，非宏证明。0.1.0空存款期数字1漏读天字，提交前停止、0存入；0.1.1用左上格局部OCR确认一天，并修正弹窗退出排他条件，离线失败图验证，存入/活动存款/宏取出均待下一班。 Actual current short-term deposit is23hours, prior1day-only label blocks before new deposit. Saved screenshot confirms same short-term tile and position; accept1day/23hours, retain amount/ROI checks and no other term. Next due role pending. Updated game modal shows 收益率 instead of 日均收益;0.1.3 updates claim checks and bounded modal exits consistently. Short23hour term, maxbudget and once-perday ledger unchanged. Yellow stopped before deposit; nextrole validation pending."
     },
     "pet_wolf": {
       "path": "actions/wos-pet-wolf.json",

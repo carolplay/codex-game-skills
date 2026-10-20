@@ -13,7 +13,7 @@
 
 - Read `docs/PROJECT-CONTEXT.md` for user authorization and the low-cost game-resource experiment model. Do not add repeated project-level approvals for already-authorized game actions or treat virtual resources as real money. Game strategy belongs to the visit plan/local role configuration; system permissions and real payment remain separate. This does not override platform-enforced review, account scope, pause state or the no-payment boundary.
 
-- Use 三班 (UTC00/08/16) terminology and classify tasks by shift/day/week/four-week/event. Read `docs/V2-OPERATIONS.md` for pilot and fresh V2 worker boundaries. At the next user discussion, raise `docs/RESOURCE-TASK-PRIORITIES.md`; that discussion must not reduce daily coverage.
+- Use 三班 (America/Vancouver local21:00/03:00/09:00; UTC game day tracked separately) terminology and classify tasks by shift/day/week/four-week/event. Read `docs/V2-OPERATIONS.md` for pilot and fresh V2 worker boundaries. At the next user discussion, raise `docs/RESOURCE-TASK-PRIORITIES.md`; that discussion must not reduce daily coverage.
 
 - The user cancelled the Orchestrator role on 2026-10-18 and grants this leader direct WOS control. No external slot or notification is required. Retain the actual single-executor lock and local lease. Capture suite/action versions and hashes in reports; failures do not justify repeated stable-flow testing.
 
