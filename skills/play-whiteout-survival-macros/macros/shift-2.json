@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.5",
-  "package_version": "0.12.5",
+  "macro_version": "0.12.6",
+  "package_version": "0.12.6",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -79,8 +79,8 @@
         {
           "task": "bank",
           "action_id": "wos-bank-one-day",
-          "action_version": "0.1.1",
-          "sha256": "f1d3e49b0e2bc1d1fa4f6f527cec8371214e4eac36b1eaf156b7556267ee8fbb"
+          "action_version": "0.1.2",
+          "sha256": "1e6b7a186affedee62760d8194c813fa39d41c6df241c7c90a94a6afcb112165"
         },
         {
           "task": "shield",
@@ -169,14 +169,14 @@
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.6",
-          "sha256": "6e4a2051b558566bd2001b9a906860a48cedbca20105556d530f9fa6593e1702"
+          "action_version": "0.1.7",
+          "sha256": "bb82634bd30c482b23c589a7ec5de613e6cf172f897bfbd6ccf4330359dfa8c1"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.6",
-          "sha256": "f34169909edd40c81d0cd34a38363c29805923c33770198e5c23d100705f93e6"
+          "action_version": "0.1.7",
+          "sha256": "86067ddcf1c2c5e08ae12c5e9803a2c08692cd2d5092fb4f088ba66a971c7090"
         },
         {
           "task": "healing",
@@ -327,8 +327,8 @@
         {
           "task": "bank",
           "action_id": "wos-bank-one-day",
-          "action_version": "0.1.1",
-          "sha256": "f1d3e49b0e2bc1d1fa4f6f527cec8371214e4eac36b1eaf156b7556267ee8fbb"
+          "action_version": "0.1.2",
+          "sha256": "1e6b7a186affedee62760d8194c813fa39d41c6df241c7c90a94a6afcb112165"
         },
         {
           "task": "shield",
@@ -417,14 +417,14 @@
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.6",
-          "sha256": "6e4a2051b558566bd2001b9a906860a48cedbca20105556d530f9fa6593e1702"
+          "action_version": "0.1.7",
+          "sha256": "bb82634bd30c482b23c589a7ec5de613e6cf172f897bfbd6ccf4330359dfa8c1"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.6",
-          "sha256": "f34169909edd40c81d0cd34a38363c29805923c33770198e5c23d100705f93e6"
+          "action_version": "0.1.7",
+          "sha256": "86067ddcf1c2c5e08ae12c5e9803a2c08692cd2d5092fb4f088ba66a971c7090"
         },
         {
           "task": "healing",
@@ -545,8 +545,8 @@
         {
           "task": "bank",
           "action_id": "wos-bank-one-day",
-          "action_version": "0.1.1",
-          "sha256": "f1d3e49b0e2bc1d1fa4f6f527cec8371214e4eac36b1eaf156b7556267ee8fbb"
+          "action_version": "0.1.2",
+          "sha256": "1e6b7a186affedee62760d8194c813fa39d41c6df241c7c90a94a6afcb112165"
         },
         {
           "task": "shield",
@@ -617,14 +617,14 @@
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.6",
-          "sha256": "6e4a2051b558566bd2001b9a906860a48cedbca20105556d530f9fa6593e1702"
+          "action_version": "0.1.7",
+          "sha256": "bb82634bd30c482b23c589a7ec5de613e6cf172f897bfbd6ccf4330359dfa8c1"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.6",
-          "sha256": "f34169909edd40c81d0cd34a38363c29805923c33770198e5c23d100705f93e6"
+          "action_version": "0.1.7",
+          "sha256": "86067ddcf1c2c5e08ae12c5e9803a2c08692cd2d5092fb4f088ba66a971c7090"
         },
         {
           "task": "healing",

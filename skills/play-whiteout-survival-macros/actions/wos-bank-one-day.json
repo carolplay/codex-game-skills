@@ -1,6 +1,6 @@
 {
   "action_id": "wos-bank-one-day",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS — mature bank withdrawal and one-day deposit under local cap",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 180,
   "verification_status": "candidate",
-  "verification_scope": "银行入口与固定退出已宏回放；已到期收益为开发采样取出，非宏证明。0.1.0空存款期数字1漏读天字，提交前停止、0存入；0.1.1用左上格局部OCR确认一天，并修正弹窗退出排他条件，离线失败图验证，存入/活动存款/宏取出均待下一班。",
+  "verification_scope": "银行入口与固定退出已宏回放；已到期收益为开发采样取出，非宏证明。0.1.0空存款期数字1漏读天字，提交前停止、0存入；0.1.1用左上格局部OCR确认一天，并修正弹窗退出排他条件，离线失败图验证，存入/活动存款/宏取出均待下一班。 Actual current short-term deposit is23hours, prior1day-only label blocks before new deposit. Saved screenshot confirms same short-term tile and position; accept1day/23hours, retain amount/ROI checks and no other term. Next due role pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -283,7 +283,7 @@
                 365,
                 545
               ],
-              "pattern": "存储周期:?[1Il](?:天)?",
+              "pattern": "存储周期:?(?:[1Il]天|23小时)",
               "crop_ocr": true
             }
           ]
@@ -347,7 +347,7 @@
               365,
               545
             ],
-            "pattern": "存储周期:?[1Il](?:天)?",
+            "pattern": "存储周期:?(?:[1Il]天|23小时)",
             "crop_ocr": true
           }
         ]
@@ -366,7 +366,7 @@
               530,
               355
             ],
-            "pattern": "存储周期:?[1Il]天",
+            "pattern": "存储周期:?(?:[1Il]天|23小时)",
             "crop_ocr": true
           }
         ]
@@ -409,7 +409,7 @@
               530,
               355
             ],
-            "pattern": "存储周期:?[1Il]天",
+            "pattern": "存储周期:?(?:[1Il]天|23小时)",
             "crop_ocr": true
           }
         ]
@@ -428,7 +428,7 @@
               530,
               355
             ],
-            "pattern": "存储周期:?[1Il]天",
+            "pattern": "存储周期:?(?:[1Il]天|23小时)",
             "crop_ocr": true
           }
         ]
@@ -472,7 +472,7 @@
               530,
               355
             ],
-            "pattern": "存储周期:?[1Il]天",
+            "pattern": "存储周期:?(?:[1Il]天|23小时)",
             "crop_ocr": true
           }
         ]
@@ -612,7 +612,7 @@
                 530,
                 355
               ],
-              "pattern": "存储周期:?[1Il]天",
+              "pattern": "存储周期:?(?:[1Il]天|23小时)",
               "crop_ocr": true
             }
           ]

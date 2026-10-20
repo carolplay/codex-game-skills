@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.5",
+  "package_version": "0.12.6",
   "executor_min_version": "0.3.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -184,11 +184,11 @@
     "bank": {
       "path": "actions/wos-bank-one-day.json",
       "action_id": "wos-bank-one-day",
-      "action_version": "0.1.1",
-      "sha256": "f1d3e49b0e2bc1d1fa4f6f527cec8371214e4eac36b1eaf156b7556267ee8fbb",
+      "action_version": "0.1.2",
+      "sha256": "1e6b7a186affedee62760d8194c813fa39d41c6df241c7c90a94a6afcb112165",
       "period": "day",
       "utility": false,
-      "verification_scope": "银行入口与固定退出已宏回放；已到期收益为开发采样取出，非宏证明。0.1.0空存款期数字1漏读天字，提交前停止、0存入；0.1.1用左上格局部OCR确认一天，并修正弹窗退出排他条件，离线失败图验证，存入/活动存款/宏取出均待下一班。"
+      "verification_scope": "银行入口与固定退出已宏回放；已到期收益为开发采样取出，非宏证明。0.1.0空存款期数字1漏读天字，提交前停止、0存入；0.1.1用左上格局部OCR确认一天，并修正弹窗退出排他条件，离线失败图验证，存入/活动存款/宏取出均待下一班。 Actual current short-term deposit is23hours, prior1day-only label blocks before new deposit. Saved screenshot confirms same short-term tile and position; accept1day/23hours, retain amount/ROI checks and no other term. Next due role pending."
     },
     "pet_wolf": {
       "path": "actions/wos-pet-wolf.json",
@@ -310,20 +310,20 @@
     "gather_coal": {
       "path": "actions/wos-gather-coal.json",
       "action_id": "wos-gather-coal",
-      "action_version": "0.1.6",
-      "sha256": "6e4a2051b558566bd2001b9a906860a48cedbca20105556d530f9fa6593e1702",
+      "action_version": "0.1.7",
+      "sha256": "bb82634bd30c482b23c589a7ec5de613e6cf172f897bfbd6ccf4330359dfa8c1",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. Resource strip coal at right edge missed local OCR while meat/wood read. Add explicit wood selection and reopen before existing coal/iron selection to center next category. Next role pending, no coordinate fallback."
     },
     "gather_iron": {
       "path": "actions/wos-gather-iron.json",
       "action_id": "wos-gather-iron",
-      "action_version": "0.1.6",
-      "sha256": "f34169909edd40c81d0cd34a38363c29805923c33770198e5c23d100705f93e6",
+      "action_version": "0.1.7",
+      "sha256": "86067ddcf1c2c5e08ae12c5e9803a2c08692cd2d5092fb4f088ba66a971c7090",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. Resource strip coal at right edge missed local OCR while meat/wood read. Add explicit wood selection and reopen before existing coal/iron selection to center next category. Next role pending, no coordinate fallback."
     },
     "healing": {
       "path": "actions/wos-healing.json",
