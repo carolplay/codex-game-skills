@@ -1,6 +1,6 @@
 {
   "action_id": "wos-war-academy-commission",
-  "action_version": "0.1.9",
+  "action_version": "0.1.10",
   "name": "WOS war_academy_commission",
   "reference_size": [
     788,
@@ -266,10 +266,82 @@
       "observe_attempts": 5
     },
     {
+      "name": "normalize-town-list-top",
+      "action": "key",
+      "key": "Down",
+      "key_count": 3,
+      "duration_ms": 400,
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
       "name": "seek-war-academy-0",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
+      "key_count": 1,
       "duration_ms": 100,
       "before": {
         "all": [
@@ -366,17 +438,17 @@
             275
           ]
         ],
-        "template_regions": [
+        "text_regions": [
           {
-            "template": "war-academy-overview-icon",
             "bounds": [
-              110,
-              275,
-              158,
-              740
+              145,
+              270,
+              390,
+              600
             ],
-            "mode": "grayscale",
-            "min_score": 0.9
+            "pattern": "科技研究",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       }
@@ -385,7 +457,7 @@
       "name": "seek-war-academy-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
+      "key_count": 1,
       "duration_ms": 100,
       "before": {
         "all": [
@@ -482,17 +554,17 @@
             275
           ]
         ],
-        "template_regions": [
+        "text_regions": [
           {
-            "template": "war-academy-overview-icon",
             "bounds": [
-              110,
-              275,
-              158,
-              740
+              145,
+              270,
+              390,
+              600
             ],
-            "mode": "grayscale",
-            "min_score": 0.9
+            "pattern": "科技研究",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       }
@@ -501,7 +573,7 @@
       "name": "seek-war-academy-2",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
+      "key_count": 1,
       "duration_ms": 100,
       "before": {
         "all": [
@@ -598,17 +670,17 @@
             275
           ]
         ],
-        "template_regions": [
+        "text_regions": [
           {
-            "template": "war-academy-overview-icon",
             "bounds": [
-              110,
-              275,
-              158,
-              740
+              145,
+              270,
+              390,
+              600
             ],
-            "mode": "grayscale",
-            "min_score": 0.9
+            "pattern": "科技研究",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       }
@@ -617,7 +689,7 @@
       "name": "seek-war-academy-3",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
+      "key_count": 1,
       "duration_ms": 100,
       "before": {
         "all": [
@@ -714,17 +786,17 @@
             275
           ]
         ],
-        "template_regions": [
+        "text_regions": [
           {
-            "template": "war-academy-overview-icon",
             "bounds": [
-              110,
-              275,
-              158,
-              740
+              145,
+              270,
+              390,
+              600
             ],
-            "mode": "grayscale",
-            "min_score": 0.9
+            "pattern": "科技研究",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       }
@@ -733,7 +805,7 @@
       "name": "seek-war-academy-4",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
+      "key_count": 1,
       "duration_ms": 100,
       "before": {
         "all": [
@@ -830,17 +902,17 @@
             275
           ]
         ],
-        "template_regions": [
+        "text_regions": [
           {
-            "template": "war-academy-overview-icon",
             "bounds": [
-              110,
-              275,
-              158,
-              740
+              145,
+              270,
+              390,
+              600
             ],
-            "mode": "grayscale",
-            "min_score": 0.9
+            "pattern": "科技研究",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       }
@@ -849,7 +921,7 @@
       "name": "seek-war-academy-5",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
+      "key_count": 1,
       "duration_ms": 100,
       "before": {
         "all": [
@@ -946,17 +1018,17 @@
             275
           ]
         ],
-        "template_regions": [
+        "text_regions": [
           {
-            "template": "war-academy-overview-icon",
             "bounds": [
-              110,
-              275,
-              158,
-              740
+              145,
+              270,
+              390,
+              600
             ],
-            "mode": "grayscale",
-            "min_score": 0.9
+            "pattern": "科技研究",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       }
@@ -965,7 +1037,7 @@
       "name": "seek-war-academy-6",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
+      "key_count": 1,
       "duration_ms": 100,
       "before": {
         "all": [
@@ -1062,17 +1134,17 @@
             275
           ]
         ],
-        "template_regions": [
+        "text_regions": [
           {
-            "template": "war-academy-overview-icon",
             "bounds": [
-              110,
-              275,
-              158,
-              740
+              145,
+              270,
+              390,
+              600
             ],
-            "mode": "grayscale",
-            "min_score": 0.9
+            "pattern": "科技研究",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1081,7 +1153,7 @@
       "name": "seek-war-academy-7",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
+      "key_count": 1,
       "duration_ms": 100,
       "before": {
         "all": [
@@ -1178,17 +1250,17 @@
             275
           ]
         ],
-        "template_regions": [
+        "text_regions": [
           {
-            "template": "war-academy-overview-icon",
             "bounds": [
-              110,
-              275,
-              158,
-              740
+              145,
+              270,
+              390,
+              600
             ],
-            "mode": "grayscale",
-            "min_score": 0.9
+            "pattern": "科技研究",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1227,42 +1299,54 @@
             275
           ]
         ],
-        "template_regions": [
+        "text_regions": [
           {
-            "template": "war-academy-overview-icon",
             "bounds": [
-              110,
-              275,
-              158,
-              740
+              145,
+              270,
+              390,
+              600
             ],
-            "mode": "grayscale",
-            "min_score": 0.9
+            "pattern": "科技研究",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
       "after": {
-        "any": [
-          "英雄",
-          "火晶科技",
-          "战争学院研究"
+        "all": [
+          "详情"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              300,
+              440,
+              520,
+              510
+            ],
+            "pattern": ".*战争学院.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       },
       "observe_attempts": 5,
-      "image_target": {
-        "template": "war-academy-overview-icon",
+      "text_target": {
+        "text": "科技研究",
+        "exact": false,
+        "crop_ocr": true,
         "bounds": [
-          110,
-          275,
-          158,
-          740
+          145,
+          270,
+          390,
+          600
         ],
-        "mode": "grayscale",
-        "min_score": 0.9,
         "offset": [
-          295,
-          0
-        ]
+          236,
+          104
+        ],
+        "min_confidence": 0.3
       }
     },
     {
@@ -1270,16 +1354,20 @@
       "action": "click",
       "before": {
         "all": [
-          "战争学院",
           "详情"
         ],
-        "page_text_regions": [
-          [
-            300,
-            440,
-            520,
-            510
-          ]
+        "text_regions": [
+          {
+            "bounds": [
+              300,
+              440,
+              520,
+              510
+            ],
+            "pattern": ".*战争学院.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       },
       "after": {

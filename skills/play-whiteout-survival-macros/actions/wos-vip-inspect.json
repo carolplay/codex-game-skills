@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-inspect",
-  "action_version": "0.1.7",
+  "action_version": "0.1.8",
   "name": "WOS — free VIP gift or cooldown",
   "reference_size": [
     788,
@@ -134,7 +134,7 @@
               490,
               680
             ],
-            "pattern": ".*每日[免兔]费礼包.*",
+            "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -187,7 +187,7 @@
               490,
               680
             ],
-            "pattern": ".*每日[免兔]费礼包.*",
+            "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -242,7 +242,7 @@
                 490,
                 680
               ],
-              "pattern": ".*每日[免兔]费礼包.*",
+              "pattern": ".*每[日目][免兔]费礼包.*",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -269,7 +269,7 @@
                 490,
                 680
               ],
-              "pattern": ".*每日[免兔]费礼包.*",
+              "pattern": ".*每[日目][免兔]费礼包.*",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -321,7 +321,7 @@
               490,
               680
             ],
-            "pattern": ".*每日[免兔]费礼包.*",
+            "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -355,7 +355,7 @@
               490,
               680
             ],
-            "pattern": ".*每日[免兔]费礼包.*",
+            "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -395,7 +395,7 @@
               490,
               680
             ],
-            "pattern": ".*每日[免兔]费礼包.*",
+            "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -422,7 +422,7 @@
               490,
               680
             ],
-            "pattern": ".*每日[免兔]费礼包.*",
+            "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -465,7 +465,7 @@
               490,
               680
             ],
-            "pattern": ".*每日[免兔]费礼包.*",
+            "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -582,7 +582,7 @@
                 490,
                 680
               ],
-              "pattern": ".*每日[免兔]费礼包.*",
+              "pattern": ".*每[日目][免兔]费礼包.*",
               "crop_ocr": true,
               "min_confidence": 0.3
             }

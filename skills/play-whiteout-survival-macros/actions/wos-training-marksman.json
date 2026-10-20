@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-marksman",
-  "action_version": "0.3.1",
+  "action_version": "0.3.2",
   "name": "WOS — 射手 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -355,6 +355,116 @@
         "详情",
         "训练"
       ]
+    },
+    {
+      "name": "training-existing-queue-exit",
+      "action": "click",
+      "point": [
+        600,
+        650
+      ],
+      "before": {
+        "all": [
+          "射手营",
+          "详情",
+          "加速"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            330,
+            550,
+            470,
+            610
+          ],
+          "min": 1,
+          "max": 359999
+        }
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给",
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "射手营",
+          "详情",
+          "训练"
+        ],
+        "none": [
+          "加速"
+        ]
+      }
+    },
+    {
+      "name": "training-existing-queue-complete",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给",
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给",
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if_step_skipped": "training-existing-queue-exit"
     },
     {
       "name": "training-open",

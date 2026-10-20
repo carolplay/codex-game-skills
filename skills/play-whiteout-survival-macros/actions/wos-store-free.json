@@ -1,6 +1,6 @@
 {
   "action_id": "wos-store-free",
-  "action_version": "0.1.13",
+  "action_version": "0.1.14",
   "name": "WOS store_free",
   "reference_size": [
     788,
@@ -164,7 +164,7 @@
       "name": "seek-known-free-tab-0",
       "action": "click",
       "point": [
-        205,
+        130,
         155
       ],
       "before": {
@@ -255,7 +255,7 @@
       "name": "seek-known-free-tab-1",
       "action": "click",
       "point": [
-        205,
+        130,
         155
       ],
       "before": {
@@ -346,7 +346,7 @@
       "name": "seek-known-free-tab-2",
       "action": "click",
       "point": [
-        205,
+        130,
         155
       ],
       "before": {
@@ -437,7 +437,7 @@
       "name": "seek-known-free-tab-3",
       "action": "click",
       "point": [
-        205,
+        130,
         155
       ],
       "before": {
@@ -528,7 +528,7 @@
       "name": "seek-known-free-tab-4",
       "action": "click",
       "point": [
-        205,
+        130,
         155
       ],
       "before": {
@@ -619,7 +619,7 @@
       "name": "seek-known-free-tab-5",
       "action": "click",
       "point": [
-        205,
+        130,
         155
       ],
       "before": {

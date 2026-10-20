@@ -1,6 +1,6 @@
 {
   "action_id": "wos-travel-idle",
-  "action_version": "0.1.8",
+  "action_version": "0.1.9",
   "name": "WOS travel_idle",
   "reference_size": [
     788,
@@ -355,13 +355,25 @@
       ],
       "after": {
         "all": [
-          "专家列表",
           "挂机",
           "自动"
         ],
         "none": [
           "游历挂机",
           "游历结束"
+        ],
+        "template_regions": [
+          {
+            "template": "experts-list-icon",
+            "bounds": [
+              580,
+              100,
+              690,
+              175
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
         ]
       },
       "observe_attempts": 5,
@@ -421,13 +433,25 @@
       ],
       "before": {
         "all": [
-          "专家列表",
           "挂机",
           "自动"
         ],
         "none": [
           "游历挂机",
           "游历结束"
+        ],
+        "template_regions": [
+          {
+            "template": "experts-list-icon",
+            "bounds": [
+              580,
+              100,
+              690,
+              175
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
         ]
       },
       "after": {
@@ -497,7 +521,6 @@
       ],
       "before": {
         "all": [
-          "无尽的旅途",
           "天险游历",
           "雪原游历"
         ],
@@ -1482,13 +1505,25 @@
       },
       "after": {
         "all": [
-          "专家列表",
           "挂机",
           "自动"
         ],
         "none": [
           "游历挂机",
           "游历结束"
+        ],
+        "template_regions": [
+          {
+            "template": "experts-list-icon",
+            "bounds": [
+              580,
+              100,
+              690,
+              175
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
         ]
       },
       "observe_attempts": 10
@@ -1502,13 +1537,25 @@
       ],
       "before": {
         "all": [
-          "专家列表",
           "挂机",
           "自动"
         ],
         "none": [
           "游历挂机",
           "游历结束"
+        ],
+        "template_regions": [
+          {
+            "template": "experts-list-icon",
+            "bounds": [
+              580,
+              100,
+              690,
+              175
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
         ]
       },
       "after": {
@@ -1520,7 +1567,6 @@
       "observe_attempts": 5,
       "finish_if": {
         "all": [
-          "专家列表",
           "挂机",
           "自动"
         ],
@@ -1539,6 +1585,19 @@
             "pattern": "(?<![0-9])0/100(?![0-9])",
             "crop_ocr": true,
             "min_confidence": 0.3
+          }
+        ],
+        "template_regions": [
+          {
+            "template": "experts-list-icon",
+            "bounds": [
+              580,
+              100,
+              690,
+              175
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
           }
         ]
       }
@@ -1817,13 +1876,25 @@
         },
         "after": {
           "all": [
-            "专家列表",
             "挂机",
             "自动"
           ],
           "none": [
             "游历挂机",
             "游历结束"
+          ],
+          "template_regions": [
+            {
+              "template": "experts-list-icon",
+              "bounds": [
+                580,
+                100,
+                690,
+                175
+              ],
+              "mode": "grayscale",
+              "min_score": 0.9
+            }
           ]
         },
         "observe_attempts": 5
@@ -1841,13 +1912,25 @@
         ],
         "after": {
           "all": [
-            "专家列表",
             "挂机",
             "自动"
           ],
           "none": [
             "游历挂机",
             "游历结束"
+          ],
+          "template_regions": [
+            {
+              "template": "experts-list-icon",
+              "bounds": [
+                580,
+                100,
+                690,
+                175
+              ],
+              "mode": "grayscale",
+              "min_score": 0.9
+            }
           ]
         },
         "observe_attempts": 5
@@ -1906,13 +1989,25 @@
         ],
         "before": {
           "all": [
-            "专家列表",
             "挂机",
             "自动"
           ],
           "none": [
             "游历挂机",
             "游历结束"
+          ],
+          "template_regions": [
+            {
+              "template": "experts-list-icon",
+              "bounds": [
+                580,
+                100,
+                690,
+                175
+              ],
+              "mode": "grayscale",
+              "min_score": 0.9
+            }
           ]
         },
         "after": {
@@ -1936,7 +2031,6 @@
         ],
         "before": {
           "all": [
-            "无尽的旅途",
             "天险游历",
             "雪原游历"
           ],

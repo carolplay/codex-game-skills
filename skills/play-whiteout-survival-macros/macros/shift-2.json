@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.14",
-  "package_version": "0.12.14",
+  "macro_version": "0.12.15",
+  "package_version": "0.12.15",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -31,14 +31,14 @@
         {
           "task": "academy",
           "action_id": "wos-academy-supply",
-          "action_version": "0.1.1",
-          "sha256": "9614f67ae5afcc4ffa1be0614293ec116c1dd30fe9150fc3823ee95032e4d39e"
+          "action_version": "0.1.2",
+          "sha256": "69cc0552ab3281dccdb02b71bc0724d824ce328ab55997f27901b643d0daeb80"
         },
         {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.8",
-          "sha256": "6ecfe863faff2dffc1f47490654a929e16fd66dfd346a9610e4ba1195005db92"
+          "action_version": "0.1.9",
+          "sha256": "84ee3cbff9648f240208cd670260efcaa78e9e4d545265457bb5ca462dea32b8"
         },
         {
           "task": "alliance",
@@ -85,20 +85,20 @@
         {
           "task": "shield",
           "action_id": "wos-training-shield",
-          "action_version": "0.3.1",
-          "sha256": "95c0e0623421d5d2cfd76a51e67eae5336a3deeacd50da90e619e87e6d8e77c8"
+          "action_version": "0.3.2",
+          "sha256": "20d72c93e8afab5dabf397e98b82420aa31d53ee4096257138af202ff5495619"
         },
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.1",
-          "sha256": "af0399a8ec314a95b077f7efa697e681e44b6c0a614254fd803766e0efcf2f58"
+          "action_version": "0.3.2",
+          "sha256": "0c660ab567ab628b08a4236b21be33de64022e46ba1419115fe91d562de83f4e"
         },
         {
           "task": "marksman",
           "action_id": "wos-training-marksman",
-          "action_version": "0.3.1",
-          "sha256": "9e0c3f41bbcc2261b33abfe5442a731b951b037a68750a56c0028a33e85f07c5"
+          "action_version": "0.3.2",
+          "sha256": "f7aa6276772b54ef38d030cd51e5b2850430e4ba53e2d31e6cc36ba1ed6bb5e3"
         },
         {
           "task": "donate",
@@ -127,8 +127,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.13",
-          "sha256": "64d8695d5c43721176503a112e2110a28977b43e855d0889fb684c7d4e4ae959"
+          "action_version": "0.1.14",
+          "sha256": "a0efee24691f34dd8fd8d96b081b7dcd46215fa65c392e2aabc9e064e8c6a663"
         },
         {
           "task": "arena",
@@ -229,14 +229,14 @@
         {
           "task": "travel_idle_claim",
           "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.5",
-          "sha256": "95c1ac333d05267241a1de4e614d592272a46ff11152e48393f15b630cb2c130"
+          "action_version": "0.1.6",
+          "sha256": "8ef92b6eab2356aa95f44c76b3c525e23550817a979b4698f6b242ae9b2188da"
         },
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.9",
-          "sha256": "279ddebcb7109de1c38bc48cd8f3c0d580d44878ff478f642fd2b48aa10dc286"
+          "action_version": "0.1.10",
+          "sha256": "6c610866cecdf98c559aa404c25b69ae761f38968317828c635e7c48e0cab236"
         },
         {
           "task": "daily",
@@ -279,14 +279,14 @@
         {
           "task": "academy",
           "action_id": "wos-academy-supply",
-          "action_version": "0.1.1",
-          "sha256": "9614f67ae5afcc4ffa1be0614293ec116c1dd30fe9150fc3823ee95032e4d39e"
+          "action_version": "0.1.2",
+          "sha256": "69cc0552ab3281dccdb02b71bc0724d824ce328ab55997f27901b643d0daeb80"
         },
         {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.8",
-          "sha256": "6ecfe863faff2dffc1f47490654a929e16fd66dfd346a9610e4ba1195005db92"
+          "action_version": "0.1.9",
+          "sha256": "84ee3cbff9648f240208cd670260efcaa78e9e4d545265457bb5ca462dea32b8"
         },
         {
           "task": "alliance",
@@ -333,20 +333,20 @@
         {
           "task": "shield",
           "action_id": "wos-training-shield",
-          "action_version": "0.3.1",
-          "sha256": "95c0e0623421d5d2cfd76a51e67eae5336a3deeacd50da90e619e87e6d8e77c8"
+          "action_version": "0.3.2",
+          "sha256": "20d72c93e8afab5dabf397e98b82420aa31d53ee4096257138af202ff5495619"
         },
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.1",
-          "sha256": "af0399a8ec314a95b077f7efa697e681e44b6c0a614254fd803766e0efcf2f58"
+          "action_version": "0.3.2",
+          "sha256": "0c660ab567ab628b08a4236b21be33de64022e46ba1419115fe91d562de83f4e"
         },
         {
           "task": "marksman",
           "action_id": "wos-training-marksman",
-          "action_version": "0.3.1",
-          "sha256": "9e0c3f41bbcc2261b33abfe5442a731b951b037a68750a56c0028a33e85f07c5"
+          "action_version": "0.3.2",
+          "sha256": "f7aa6276772b54ef38d030cd51e5b2850430e4ba53e2d31e6cc36ba1ed6bb5e3"
         },
         {
           "task": "donate",
@@ -375,8 +375,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.13",
-          "sha256": "64d8695d5c43721176503a112e2110a28977b43e855d0889fb684c7d4e4ae959"
+          "action_version": "0.1.14",
+          "sha256": "a0efee24691f34dd8fd8d96b081b7dcd46215fa65c392e2aabc9e064e8c6a663"
         },
         {
           "task": "arena",
@@ -477,14 +477,14 @@
         {
           "task": "travel_idle_claim",
           "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.5",
-          "sha256": "95c1ac333d05267241a1de4e614d592272a46ff11152e48393f15b630cb2c130"
+          "action_version": "0.1.6",
+          "sha256": "8ef92b6eab2356aa95f44c76b3c525e23550817a979b4698f6b242ae9b2188da"
         },
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.9",
-          "sha256": "279ddebcb7109de1c38bc48cd8f3c0d580d44878ff478f642fd2b48aa10dc286"
+          "action_version": "0.1.10",
+          "sha256": "6c610866cecdf98c559aa404c25b69ae761f38968317828c635e7c48e0cab236"
         },
         {
           "task": "daily",
@@ -551,20 +551,20 @@
         {
           "task": "shield",
           "action_id": "wos-training-shield",
-          "action_version": "0.3.1",
-          "sha256": "95c0e0623421d5d2cfd76a51e67eae5336a3deeacd50da90e619e87e6d8e77c8"
+          "action_version": "0.3.2",
+          "sha256": "20d72c93e8afab5dabf397e98b82420aa31d53ee4096257138af202ff5495619"
         },
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.1",
-          "sha256": "af0399a8ec314a95b077f7efa697e681e44b6c0a614254fd803766e0efcf2f58"
+          "action_version": "0.3.2",
+          "sha256": "0c660ab567ab628b08a4236b21be33de64022e46ba1419115fe91d562de83f4e"
         },
         {
           "task": "marksman",
           "action_id": "wos-training-marksman",
-          "action_version": "0.3.1",
-          "sha256": "9e0c3f41bbcc2261b33abfe5442a731b951b037a68750a56c0028a33e85f07c5"
+          "action_version": "0.3.2",
+          "sha256": "f7aa6276772b54ef38d030cd51e5b2850430e4ba53e2d31e6cc36ba1ed6bb5e3"
         },
         {
           "task": "donate",
@@ -581,8 +581,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.13",
-          "sha256": "64d8695d5c43721176503a112e2110a28977b43e855d0889fb684c7d4e4ae959"
+          "action_version": "0.1.14",
+          "sha256": "a0efee24691f34dd8fd8d96b081b7dcd46215fa65c392e2aabc9e064e8c6a663"
         },
         {
           "task": "arena",
