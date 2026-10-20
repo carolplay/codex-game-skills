@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.3",
+  "action_version": "0.1.4",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -33,7 +33,7 @@
           "技能学习",
           "超级提炼优惠",
           "提炼次数",
-          "完成任务后是否隐藏"
+          "完成任务后"
         ],
         "page_text_regions": [
           [
@@ -127,7 +127,7 @@
           "技能学习",
           "超级提炼优惠",
           "提炼次数",
-          "完成任务后是否隐藏"
+          "完成任务后"
         ],
         "page_text_regions": [
           [
@@ -617,7 +617,7 @@
         "技能学习",
         "超级提炼优惠",
         "提炼次数",
-        "完成任务后是否隐藏"
+        "完成任务后"
       ],
       "page_text_regions": [
         [
@@ -879,7 +879,7 @@
             "技能学习",
             "超级提炼优惠",
             "提炼次数",
-            "完成任务后是否隐藏"
+            "完成任务后"
           ],
           "page_text_regions": [
             [
@@ -892,5 +892,6 @@
         }
       }
     ]
-  }
+  },
+  "overview_footer_compatibility": "Stable prefix supports both旧完成任务后是否隐藏 and新版完成任务后隐藏; only page-anchor semantics changed, not game strategy. Nextrole live pending."
 }

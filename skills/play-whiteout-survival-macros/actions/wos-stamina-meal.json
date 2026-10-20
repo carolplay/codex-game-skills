@@ -1,12 +1,12 @@
 {
   "action_id": "wos-stamina-meal",
-  "action_version": "0.1.1",
-  "name": "WOS — free stamina meal (trial)",
+  "action_version": "0.2.0",
+  "name": "WOS free stamina meal via lighthouse",
   "reference_size": [
     788,
     1079
   ],
-  "status": "real_claim_replay_verified",
+  "status": "candidate",
   "steps": [
     {
       "name": "01-check-city",
@@ -67,19 +67,162 @@
       "verify_identity": true
     },
     {
-      "name": "feast-open",
+      "name": "04-return-city",
       "action": "click",
       "point": [
-        289,
-        944
+        138,
+        65
       ],
       "before": [
         "领主档案"
       ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "enter-world",
+      "action": "click",
+      "point": [
+        640,
+        1022
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-intel",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "feast-open-from-lighthouse",
+      "action": "click",
+      "point": [
+        665,
+        62
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
       "after": [
+        "获取更多",
         "丰盛的招待"
       ],
-      "observe_attempts": 3
+      "observe_attempts": 5
     },
     {
       "name": "feast-claim",
@@ -176,26 +319,55 @@
       "before": [
         "丰盛的招待"
       ],
-      "after": [
-        "领主档案"
-      ],
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
       "observe_attempts": 3
     },
     {
-      "name": "feast-city",
+      "name": "exit-intel-map",
       "action": "click",
       "point": [
-        132,
+        133,
         59
       ],
-      "before": [
-        "领主档案"
-      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
       "after": {
         "all": [
           "英雄",
           "背包",
-          "野外"
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
         ],
         "page_text_regions": [
           [
@@ -206,7 +378,66 @@
           ]
         ]
       },
-      "observe_attempts": 3
+      "observe_attempts": 5
+    },
+    {
+      "name": "exit-world",
+      "action": "click",
+      "point": [
+        640,
+        1022
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
     }
   ],
   "task_contract": {
@@ -236,8 +467,33 @@
         ]
       ]
     },
-    "max_exit_steps": 4,
+    "max_exit_steps": 5,
     "exits": [
+      {
+        "name": "exit-feast",
+        "action": "click",
+        "point": [
+          645,
+          137
+        ],
+        "before": [
+          "获取更多",
+          "丰盛的招待"
+        ],
+        "after": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 3
+      },
       {
         "name": "exit-profile",
         "action": "click",
@@ -267,44 +523,135 @@
         "verify_identity": true
       },
       {
-        "name": "exit-feast",
+        "name": "exit-intel-reward",
         "action": "click",
         "point": [
-          645,
-          137
+          394,
+          880
         ],
-        "before": [
-          "获取更多",
-          "丰盛的招待"
-        ],
-        "after": [
-          "领主档案"
-        ],
-        "observe_attempts": 3
+        "before": {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        },
+        "after": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 5
       },
       {
-        "name": "exit-city-overview",
+        "name": "exit-intel-detail",
         "action": "click",
         "point": [
-          482,
-          482
+          394,
+          900
+        ],
+        "before": {
+          "all": [
+            "情报失效",
+            "前往查看"
+          ]
+        },
+        "after": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-intel-map",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-world",
+        "action": "click",
+        "point": [
+          640,
+          1022
         ],
         "before": {
           "all": [
             "英雄",
             "背包",
-            "野外"
+            "城镇"
           ],
-          "any": [
-            "游历补给",
-            "部队训练",
-            "技能学习",
-            "超级提炼优惠",
-            "提炼次数",
-            "宠物寻宝",
-            "竞技场",
-            "生命之树",
-            "联盟捐献"
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
           ],
           "page_text_regions": [
             [
@@ -323,8 +670,204 @@
           ],
           "none": [
             "日常",
-            "建造队列",
-            "游历补给"
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-battle",
+        "action": "click",
+        "point": [
+          394,
+          965
+        ],
+        "before": {
+          "any": [
+            "胜利",
+            "失败",
+            "战败"
+          ],
+          "all": [
+            "点击任意位置退出"
+          ],
+          "page_text_regions": [
+            [
+              200,
+              930,
+              590,
+              1055
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-formation",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": [
+          "小队设置",
+          "战斗",
+          "一键上阵"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-deployment",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": [
+          "出征",
+          "士兵比例"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-world-npc-detail",
+        "action": "click",
+        "point": [
+          600,
+          650
+        ],
+        "before": {
+          "all": [
+            "城镇",
+            "奖励"
+          ],
+          "any": [
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力"
+          ],
+          "none": [
+            "前往查看"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-empty-deployment",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "出征",
+            "训练士兵"
+          ],
+          "none": [
+            "士兵比例"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
           ],
           "page_text_regions": [
             [
@@ -339,6 +882,6 @@
       }
     ]
   },
-  "verification_scope": "Real free meal and cooldown replayed.",
+  "verification_scope": "Development sample: lighthouse top stamina plus opens feast, actual160gain and cooldown, closes to lighthouse. Complete city-to-city macro pending replay.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

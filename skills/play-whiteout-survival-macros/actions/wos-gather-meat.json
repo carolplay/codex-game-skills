@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-meat",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS gather_meat",
   "reference_size": [
     788,
@@ -540,7 +540,7 @@
           "any": [
             "城镇",
             "日常",
-            "完成任务后是否隐藏"
+            "完成任务后"
           ],
           "page_text_regions": [
             [
@@ -739,5 +739,6 @@
         "observe_attempts": 5
       }
     ]
-  }
+  },
+  "overview_footer_compatibility": "Stable prefix supports both旧完成任务后是否隐藏 and新版完成任务后隐藏; only page-anchor semantics changed, not game strategy. Nextrole live pending."
 }
