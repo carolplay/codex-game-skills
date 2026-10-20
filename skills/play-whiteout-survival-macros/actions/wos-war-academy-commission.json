@@ -1,6 +1,6 @@
 {
   "action_id": "wos-war-academy-commission",
-  "action_version": "0.1.8",
+  "action_version": "0.1.9",
   "name": "WOS war_academy_commission",
   "reference_size": [
     788,
@@ -335,9 +335,51 @@
           ]
         ]
       },
-      "skip_if": [
-        "战争学院研究"
-      ]
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "war-academy-overview-icon",
+            "bounds": [
+              110,
+              275,
+              158,
+              740
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
+        ]
+      }
     },
     {
       "name": "seek-war-academy-1",
@@ -409,9 +451,51 @@
           ]
         ]
       },
-      "skip_if": [
-        "战争学院研究"
-      ]
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "war-academy-overview-icon",
+            "bounds": [
+              110,
+              275,
+              158,
+              740
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
+        ]
+      }
     },
     {
       "name": "seek-war-academy-2",
@@ -483,9 +567,51 @@
           ]
         ]
       },
-      "skip_if": [
-        "战争学院研究"
-      ]
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "war-academy-overview-icon",
+            "bounds": [
+              110,
+              275,
+              158,
+              740
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
+        ]
+      }
     },
     {
       "name": "seek-war-academy-3",
@@ -557,9 +683,51 @@
           ]
         ]
       },
-      "skip_if": [
-        "战争学院研究"
-      ]
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "war-academy-overview-icon",
+            "bounds": [
+              110,
+              275,
+              158,
+              740
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
+        ]
+      }
     },
     {
       "name": "seek-war-academy-4",
@@ -631,9 +799,51 @@
           ]
         ]
       },
-      "skip_if": [
-        "战争学院研究"
-      ]
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "war-academy-overview-icon",
+            "bounds": [
+              110,
+              275,
+              158,
+              740
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
+        ]
+      }
     },
     {
       "name": "seek-war-academy-5",
@@ -705,9 +915,51 @@
           ]
         ]
       },
-      "skip_if": [
-        "战争学院研究"
-      ]
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "war-academy-overview-icon",
+            "bounds": [
+              110,
+              275,
+              158,
+              740
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
+        ]
+      }
     },
     {
       "name": "seek-war-academy-6",
@@ -779,9 +1031,51 @@
           ]
         ]
       },
-      "skip_if": [
-        "战争学院研究"
-      ]
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "war-academy-overview-icon",
+            "bounds": [
+              110,
+              275,
+              158,
+              740
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
+        ]
+      }
     },
     {
       "name": "seek-war-academy-7",
@@ -853,30 +1147,100 @@
           ]
         ]
       },
-      "skip_if": [
-        "战争学院研究"
-      ]
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "war-academy-overview-icon",
+            "bounds": [
+              110,
+              275,
+              158,
+              740
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
+        ]
+      }
     },
     {
       "name": "locate-war-academy",
       "action": "click",
-      "text_target": {
-        "text": "战争学院研究",
-        "bounds": [
-          160,
-          270,
-          390,
-          740
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
         ],
-        "offset": [
-          150,
-          10
+        "any": [
+          "城镇",
+          "完成任务后",
+          "日常"
         ],
-        "min_confidence": 0.3
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ],
+          [
+            100,
+            220,
+            470,
+            275
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "war-academy-overview-icon",
+            "bounds": [
+              110,
+              275,
+              158,
+              740
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
+        ]
       },
-      "before": [
-        "战争学院研究"
-      ],
       "after": {
         "any": [
           "英雄",
@@ -884,7 +1248,22 @@
           "战争学院研究"
         ]
       },
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "image_target": {
+        "template": "war-academy-overview-icon",
+        "bounds": [
+          110,
+          275,
+          158,
+          740
+        ],
+        "mode": "grayscale",
+        "min_score": 0.9,
+        "offset": [
+          295,
+          0
+        ]
+      }
     },
     {
       "name": "open-fire-tech",
@@ -2532,15 +2911,15 @@
         ],
         "template_regions": [
           {
-            "template": "commission-progress-2",
+            "template": "commission-filled-prefix",
             "bounds": [
-              250,
+              251,
               478,
-              304,
+              275,
               504
             ],
             "mode": "grayscale",
-            "min_score": 0.92,
+            "min_score": 0.9,
             "present": true
           }
         ]
@@ -2586,15 +2965,15 @@
           ],
           "template_regions": [
             {
-              "template": "commission-progress-2",
+              "template": "commission-filled-prefix",
               "bounds": [
-                250,
+                251,
                 478,
-                304,
+                275,
                 504
               ],
               "mode": "grayscale",
-              "min_score": 0.75,
+              "min_score": 0.9,
               "present": false
             }
           ]
@@ -2672,15 +3051,15 @@
         ],
         "template_regions": [
           {
-            "template": "commission-progress-2",
+            "template": "commission-filled-prefix",
             "bounds": [
-              250,
+              251,
               478,
-              304,
+              275,
               504
             ],
             "mode": "grayscale",
-            "min_score": 0.75,
+            "min_score": 0.9,
             "present": false
           }
         ]
@@ -2705,15 +3084,15 @@
         ],
         "template_regions": [
           {
-            "template": "commission-progress-4",
+            "template": "commission-filled-prefix",
             "bounds": [
-              367,
+              368,
               478,
-              421,
+              392,
               504
             ],
             "mode": "grayscale",
-            "min_score": 0.92,
+            "min_score": 0.9,
             "present": true
           }
         ]
@@ -2759,15 +3138,15 @@
           ],
           "template_regions": [
             {
-              "template": "commission-progress-4",
+              "template": "commission-filled-prefix",
               "bounds": [
-                367,
+                368,
                 478,
-                421,
+                392,
                 504
               ],
               "mode": "grayscale",
-              "min_score": 0.75,
+              "min_score": 0.9,
               "present": false
             }
           ]
@@ -2845,15 +3224,15 @@
         ],
         "template_regions": [
           {
-            "template": "commission-progress-4",
+            "template": "commission-filled-prefix",
             "bounds": [
-              367,
+              368,
               478,
-              421,
+              392,
               504
             ],
             "mode": "grayscale",
-            "min_score": 0.75,
+            "min_score": 0.9,
             "present": false
           }
         ]
@@ -2878,15 +3257,15 @@
         ],
         "template_regions": [
           {
-            "template": "commission-progress-6",
+            "template": "commission-filled-prefix",
             "bounds": [
-              485,
+              486,
               478,
-              539,
+              510,
               504
             ],
             "mode": "grayscale",
-            "min_score": 0.92,
+            "min_score": 0.9,
             "present": true
           }
         ]
@@ -2932,15 +3311,15 @@
           ],
           "template_regions": [
             {
-              "template": "commission-progress-6",
+              "template": "commission-filled-prefix",
               "bounds": [
-                485,
+                486,
                 478,
-                539,
+                510,
                 504
               ],
               "mode": "grayscale",
-              "min_score": 0.75,
+              "min_score": 0.9,
               "present": false
             }
           ]
@@ -3018,15 +3397,15 @@
         ],
         "template_regions": [
           {
-            "template": "commission-progress-6",
+            "template": "commission-filled-prefix",
             "bounds": [
-              485,
+              486,
               478,
-              539,
+              510,
               504
             ],
             "mode": "grayscale",
-            "min_score": 0.75,
+            "min_score": 0.9,
             "present": false
           }
         ]
@@ -3051,15 +3430,15 @@
         ],
         "template_regions": [
           {
-            "template": "commission-progress-8",
+            "template": "commission-filled-prefix",
             "bounds": [
-              576,
+              603,
               478,
-              642,
+              627,
               504
             ],
             "mode": "grayscale",
-            "min_score": 0.92,
+            "min_score": 0.9,
             "present": true
           }
         ]
@@ -3105,15 +3484,15 @@
           ],
           "template_regions": [
             {
-              "template": "commission-progress-8",
+              "template": "commission-filled-prefix",
               "bounds": [
-                576,
+                603,
                 478,
-                642,
+                627,
                 504
               ],
               "mode": "grayscale",
-              "min_score": 0.75,
+              "min_score": 0.9,
               "present": false
             }
           ]
@@ -3191,15 +3570,15 @@
         ],
         "template_regions": [
           {
-            "template": "commission-progress-8",
+            "template": "commission-filled-prefix",
             "bounds": [
-              576,
+              603,
               478,
-              642,
+              627,
               504
             ],
             "mode": "grayscale",
-            "min_score": 0.75,
+            "min_score": 0.9,
             "present": false
           }
         ]

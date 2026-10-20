@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.13",
-  "package_version": "0.12.13",
+  "macro_version": "0.12.14",
+  "package_version": "0.12.14",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -55,8 +55,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.4",
-          "sha256": "46bcc757356172f982b150d278a6d702cc6f494b0482093d050e36a1a62ca5ed"
+          "action_version": "0.1.5",
+          "sha256": "b9c1e56816d41ea3e3e8c13b7d80cfe3a3be5f0bf13a50f9344c35c32b31a1f7"
         },
         {
           "task": "expert",
@@ -235,8 +235,8 @@
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.8",
-          "sha256": "34eb7f2ac0a897cdffac00def2446140d2f9be89eb6b4a050761eb0f432e3252"
+          "action_version": "0.1.9",
+          "sha256": "279ddebcb7109de1c38bc48cd8f3c0d580d44878ff478f642fd2b48aa10dc286"
         },
         {
           "task": "daily",
@@ -303,8 +303,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.4",
-          "sha256": "46bcc757356172f982b150d278a6d702cc6f494b0482093d050e36a1a62ca5ed"
+          "action_version": "0.1.5",
+          "sha256": "b9c1e56816d41ea3e3e8c13b7d80cfe3a3be5f0bf13a50f9344c35c32b31a1f7"
         },
         {
           "task": "expert",
@@ -483,8 +483,8 @@
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.8",
-          "sha256": "34eb7f2ac0a897cdffac00def2446140d2f9be89eb6b4a050761eb0f432e3252"
+          "action_version": "0.1.9",
+          "sha256": "279ddebcb7109de1c38bc48cd8f3c0d580d44878ff478f642fd2b48aa10dc286"
         },
         {
           "task": "daily",
@@ -539,8 +539,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.4",
-          "sha256": "46bcc757356172f982b150d278a6d702cc6f494b0482093d050e36a1a62ca5ed"
+          "action_version": "0.1.5",
+          "sha256": "b9c1e56816d41ea3e3e8c13b7d80cfe3a3be5f0bf13a50f9344c35c32b31a1f7"
         },
         {
           "task": "bank",
