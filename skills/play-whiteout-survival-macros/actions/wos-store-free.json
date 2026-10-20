@@ -1,13 +1,13 @@
 {
   "action_id": "wos-store-free",
-  "action_version": "0.1.11",
+  "action_version": "0.1.12",
   "name": "WOS store_free",
   "reference_size": [
     788,
     1079
   ],
   "status": "candidate",
-  "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates. Mainstore1.6 failedbeforeclaim because observed LordStaminaPack lacks storeheading. Knownpack body/back sampled; close/reopen returned firstArtisan tab with cooldown. Nextrevision boundedone normalization reopen plus scopedbodytitle/globalrewardabsence; nextrole only, no same-roleclaimretry. Nextdraft makesstore/root exclusion exactcomplement ofdeclaredrewardexit labels, so backgroundstoretitle cannot create ambiguousexit underrewardoverlay. New currentstoreheader匠心自选 was falsely rejected aftervalidreopen; accepts explicitbodytitle andsamefreeboxlabel/ROI. Only currentpage freebox; not proof allstoretabs claimed. Nextrole replay pending. Previouspatch extendedtitlelist but missed duplicatedcroppedbodyregex. Allbodyregex nowincludechoicepage consistently; offlinefailedframe predicate toverify, nextrole only. New recorded campaign title supported: free chest remains at known upper-right slot; replay pending next role.",
+  "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates. Mainstore1.6 failedbeforeclaim because observed LordStaminaPack lacks storeheading. Knownpack body/back sampled; close/reopen returned firstArtisan tab with cooldown. Nextrevision boundedone normalization reopen plus scopedbodytitle/globalrewardabsence; nextrole only, no same-roleclaimretry. Nextdraft makesstore/root exclusion exactcomplement ofdeclaredrewardexit labels, so backgroundstoretitle cannot create ambiguousexit underrewardoverlay. New currentstoreheader匠心自选 was falsely rejected aftervalidreopen; accepts explicitbodytitle andsamefreeboxlabel/ROI. Only currentpage freebox; not proof allstoretabs claimed. Nextrole replay pending. Previouspatch extendedtitlelist but missed duplicatedcroppedbodyregex. Allbodyregex nowincludechoicepage consistently; offlinefailedframe predicate toverify, nextrole only. New recorded campaign title supported: free chest remains at known upper-right slot; replay pending next role. 0.1.11 actual new-campaign chest opened and cooldown visible, but cursor at prior claim point occluded HH:MM:SS;0.1.12 clicks chest upper area230 rather than timer262. Next role pending; no repeat claim on failed role.",
   "steps": [
     {
       "name": "01-check-city",
@@ -381,7 +381,7 @@
       "action": "click",
       "point": [
         618,
-        262
+        230
       ],
       "before": {
         "any": [

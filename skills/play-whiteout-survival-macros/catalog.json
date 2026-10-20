@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.4",
+  "package_version": "0.12.5",
   "executor_min_version": "0.3.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -16,11 +16,11 @@
     "vip": {
       "path": "actions/wos-vip-inspect.json",
       "action_id": "wos-vip-inspect",
-      "action_version": "0.1.5",
-      "sha256": "e9a3e8ab668a3533098a5b778b75715d177abce0d2f9bff83eaddcb2988f557b",
+      "action_version": "0.1.6",
+      "sha256": "513b5fdc9fc90c3b71a80734209f1c105bf74a9a86cde065974bdeeb2de98ec7",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. a mature role actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending. a mature role VIP8 title OCR每目 instead of每日;0.1.4 requires stable免费礼包 substring while preserving calibrated freeclaim greenbutton region. Exit only needs cropped VIP pageheader and known modal exclusions. Currentrole not retried; nextrolepending.",
+      "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. a mature role actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending. a mature role VIP8 title OCR每目 instead of每日;0.1.4 requires stable免费礼包 substring while preserving calibrated freeclaim greenbutton region. Exit only needs cropped VIP pageheader and known modal exclusions. Currentrole not retried; nextrolepending. Main VIP12 free label full-frame OCR read wrong first character; same saved frame cropped label reads correctly. Add same-frame daily gift title crop to existing free predicates; no changed claim or cash coordinates. Next applicable replay pending.",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "idle": {
@@ -220,11 +220,11 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.11",
-      "sha256": "9c17ebc7d4ff97a96aac4301ea7b43155870db832152444afa9857388f7ed392",
+      "action_version": "0.1.12",
+      "sha256": "f7812a4e39cd334ed5980afb15efd0988087c5cb5771717399aaa9ca32eb27dd",
       "period": "day",
       "utility": false,
-      "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates. Mainstore1.6 failedbeforeclaim because observed LordStaminaPack lacks storeheading. Knownpack body/back sampled; close/reopen returned firstArtisan tab with cooldown. Nextrevision boundedone normalization reopen plus scopedbodytitle/globalrewardabsence; nextrole only, no same-roleclaimretry. Nextdraft makesstore/root exclusion exactcomplement ofdeclaredrewardexit labels, so backgroundstoretitle cannot create ambiguousexit underrewardoverlay. New currentstoreheader匠心自选 was falsely rejected aftervalidreopen; accepts explicitbodytitle andsamefreeboxlabel/ROI. Only currentpage freebox; not proof allstoretabs claimed. Nextrole replay pending. Previouspatch extendedtitlelist but missed duplicatedcroppedbodyregex. Allbodyregex nowincludechoicepage consistently; offlinefailedframe predicate toverify, nextrole only. New recorded campaign title supported: free chest remains at known upper-right slot; replay pending next role."
+      "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates. Mainstore1.6 failedbeforeclaim because observed LordStaminaPack lacks storeheading. Knownpack body/back sampled; close/reopen returned firstArtisan tab with cooldown. Nextrevision boundedone normalization reopen plus scopedbodytitle/globalrewardabsence; nextrole only, no same-roleclaimretry. Nextdraft makesstore/root exclusion exactcomplement ofdeclaredrewardexit labels, so backgroundstoretitle cannot create ambiguousexit underrewardoverlay. New currentstoreheader匠心自选 was falsely rejected aftervalidreopen; accepts explicitbodytitle andsamefreeboxlabel/ROI. Only currentpage freebox; not proof allstoretabs claimed. Nextrole replay pending. Previouspatch extendedtitlelist but missed duplicatedcroppedbodyregex. Allbodyregex nowincludechoicepage consistently; offlinefailedframe predicate toverify, nextrole only. New recorded campaign title supported: free chest remains at known upper-right slot; replay pending next role. 0.1.11 actual new-campaign chest opened and cooldown visible, but cursor at prior claim point occluded HH:MM:SS;0.1.12 clicks chest upper area230 rather than timer262. Next role pending; no repeat claim on failed role."
     },
     "arena": {
       "path": "actions/wos-arena.json",
@@ -292,38 +292,38 @@
     "gather_meat": {
       "path": "actions/wos-gather-meat.json",
       "action_id": "wos-gather-meat",
-      "action_version": "0.1.3",
-      "sha256": "036d86b819d982df9fbcc1556e2152609581d97114a67596bfb08f23d8ed697b",
+      "action_version": "0.1.4",
+      "sha256": "9e241e5f0af8f02f24629d303bd8247c044066e592563bdbd54fee9a0fca58d6",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending."
+      "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending."
     },
     "gather_wood": {
       "path": "actions/wos-gather-wood.json",
       "action_id": "wos-gather-wood",
-      "action_version": "0.1.5",
-      "sha256": "88e71321d58bbc011e8f0ae9f279317bb17ef0798c0c0129d94f52a7933bf7fb",
+      "action_version": "0.1.6",
+      "sha256": "e68b69452e3c30772c7e4270c22c534a48087728f1a643355de51ef4f759ce33",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending."
     },
     "gather_coal": {
       "path": "actions/wos-gather-coal.json",
       "action_id": "wos-gather-coal",
-      "action_version": "0.1.5",
-      "sha256": "1a40df341161a90e4e890a6b13823d717a2f5591b16369a5e4f00cd151e0e64d",
+      "action_version": "0.1.6",
+      "sha256": "6e4a2051b558566bd2001b9a906860a48cedbca20105556d530f9fa6593e1702",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending."
     },
     "gather_iron": {
       "path": "actions/wos-gather-iron.json",
       "action_id": "wos-gather-iron",
-      "action_version": "0.1.5",
-      "sha256": "c3faf7b285e2daa56e42e3815eaf3d7cc5298e921be8596e129e1ccbe69219af",
+      "action_version": "0.1.6",
+      "sha256": "f34169909edd40c81d0cd34a38363c29805923c33770198e5c23d100705f93e6",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending."
     },
     "healing": {
       "path": "actions/wos-healing.json",
@@ -440,11 +440,11 @@
     "war_academy_commission": {
       "path": "actions/wos-war-academy-commission.json",
       "action_id": "wos-war-academy-commission",
-      "action_version": "0.1.6",
-      "sha256": "87edf04bbaa3377571e1c6e0730c4a67d3dd1af68a6fb66ae9e249c057d52962",
+      "action_version": "0.1.7",
+      "sha256": "ab68637deb65eaeb25148d2aace7e3e67a4ad6d07ad541f75c76a9c4d46979e2",
       "period": "event",
       "utility": false,
-      "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. a mature role actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
+      "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. a mature role actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Batched row gestures split into at most5 per JS call after two20-gesture calls exceeded runtime. Offline candidate; no live recovery claim. 0.1.6 still spends excessive time on 220 short scroll gestures. Candidate replaces each 20x100ms scan with2x600ms and per-gesture observations, keeping per-section reward checks, finite11sections and predefined exits. Next role replay pending; does not assert all free rewards claimed."
     },
     "intel_firebeast": {
       "path": "actions/wos-intel-firebeast.json",

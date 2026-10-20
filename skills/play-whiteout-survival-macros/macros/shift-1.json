@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.4",
-  "package_version": "0.12.4",
+  "macro_version": "0.12.5",
+  "package_version": "0.12.5",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -19,8 +19,8 @@
         {
           "task": "vip",
           "action_id": "wos-vip-inspect",
-          "action_version": "0.1.5",
-          "sha256": "e9a3e8ab668a3533098a5b778b75715d177abce0d2f9bff83eaddcb2988f557b"
+          "action_version": "0.1.6",
+          "sha256": "513b5fdc9fc90c3b71a80734209f1c105bf74a9a86cde065974bdeeb2de98ec7"
         },
         {
           "task": "idle",
@@ -133,8 +133,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.11",
-          "sha256": "9c17ebc7d4ff97a96aac4301ea7b43155870db832152444afa9857388f7ed392"
+          "action_version": "0.1.12",
+          "sha256": "f7812a4e39cd334ed5980afb15efd0988087c5cb5771717399aaa9ca32eb27dd"
         },
         {
           "task": "arena",
@@ -163,26 +163,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.3",
-          "sha256": "036d86b819d982df9fbcc1556e2152609581d97114a67596bfb08f23d8ed697b"
+          "action_version": "0.1.4",
+          "sha256": "9e241e5f0af8f02f24629d303bd8247c044066e592563bdbd54fee9a0fca58d6"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.5",
-          "sha256": "88e71321d58bbc011e8f0ae9f279317bb17ef0798c0c0129d94f52a7933bf7fb"
+          "action_version": "0.1.6",
+          "sha256": "e68b69452e3c30772c7e4270c22c534a48087728f1a643355de51ef4f759ce33"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.5",
-          "sha256": "1a40df341161a90e4e890a6b13823d717a2f5591b16369a5e4f00cd151e0e64d"
+          "action_version": "0.1.6",
+          "sha256": "6e4a2051b558566bd2001b9a906860a48cedbca20105556d530f9fa6593e1702"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.5",
-          "sha256": "c3faf7b285e2daa56e42e3815eaf3d7cc5298e921be8596e129e1ccbe69219af"
+          "action_version": "0.1.6",
+          "sha256": "f34169909edd40c81d0cd34a38363c29805923c33770198e5c23d100705f93e6"
         },
         {
           "task": "healing",
@@ -241,8 +241,8 @@
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.6",
-          "sha256": "87edf04bbaa3377571e1c6e0730c4a67d3dd1af68a6fb66ae9e249c057d52962"
+          "action_version": "0.1.7",
+          "sha256": "ab68637deb65eaeb25148d2aace7e3e67a4ad6d07ad541f75c76a9c4d46979e2"
         },
         {
           "task": "daily",
@@ -272,8 +272,8 @@
         {
           "task": "vip",
           "action_id": "wos-vip-inspect",
-          "action_version": "0.1.5",
-          "sha256": "e9a3e8ab668a3533098a5b778b75715d177abce0d2f9bff83eaddcb2988f557b"
+          "action_version": "0.1.6",
+          "sha256": "513b5fdc9fc90c3b71a80734209f1c105bf74a9a86cde065974bdeeb2de98ec7"
         },
         {
           "task": "idle",
@@ -386,8 +386,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.11",
-          "sha256": "9c17ebc7d4ff97a96aac4301ea7b43155870db832152444afa9857388f7ed392"
+          "action_version": "0.1.12",
+          "sha256": "f7812a4e39cd334ed5980afb15efd0988087c5cb5771717399aaa9ca32eb27dd"
         },
         {
           "task": "arena",
@@ -416,26 +416,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.3",
-          "sha256": "036d86b819d982df9fbcc1556e2152609581d97114a67596bfb08f23d8ed697b"
+          "action_version": "0.1.4",
+          "sha256": "9e241e5f0af8f02f24629d303bd8247c044066e592563bdbd54fee9a0fca58d6"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.5",
-          "sha256": "88e71321d58bbc011e8f0ae9f279317bb17ef0798c0c0129d94f52a7933bf7fb"
+          "action_version": "0.1.6",
+          "sha256": "e68b69452e3c30772c7e4270c22c534a48087728f1a643355de51ef4f759ce33"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.5",
-          "sha256": "1a40df341161a90e4e890a6b13823d717a2f5591b16369a5e4f00cd151e0e64d"
+          "action_version": "0.1.6",
+          "sha256": "6e4a2051b558566bd2001b9a906860a48cedbca20105556d530f9fa6593e1702"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.5",
-          "sha256": "c3faf7b285e2daa56e42e3815eaf3d7cc5298e921be8596e129e1ccbe69219af"
+          "action_version": "0.1.6",
+          "sha256": "f34169909edd40c81d0cd34a38363c29805923c33770198e5c23d100705f93e6"
         },
         {
           "task": "healing",
@@ -494,8 +494,8 @@
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.6",
-          "sha256": "87edf04bbaa3377571e1c6e0730c4a67d3dd1af68a6fb66ae9e249c057d52962"
+          "action_version": "0.1.7",
+          "sha256": "ab68637deb65eaeb25148d2aace7e3e67a4ad6d07ad541f75c76a9c4d46979e2"
         },
         {
           "task": "daily",
@@ -525,8 +525,8 @@
         {
           "task": "vip",
           "action_id": "wos-vip-inspect",
-          "action_version": "0.1.5",
-          "sha256": "e9a3e8ab668a3533098a5b778b75715d177abce0d2f9bff83eaddcb2988f557b"
+          "action_version": "0.1.6",
+          "sha256": "513b5fdc9fc90c3b71a80734209f1c105bf74a9a86cde065974bdeeb2de98ec7"
         },
         {
           "task": "idle",
@@ -597,8 +597,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.11",
-          "sha256": "9c17ebc7d4ff97a96aac4301ea7b43155870db832152444afa9857388f7ed392"
+          "action_version": "0.1.12",
+          "sha256": "f7812a4e39cd334ed5980afb15efd0988087c5cb5771717399aaa9ca32eb27dd"
         },
         {
           "task": "arena",
@@ -621,26 +621,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.3",
-          "sha256": "036d86b819d982df9fbcc1556e2152609581d97114a67596bfb08f23d8ed697b"
+          "action_version": "0.1.4",
+          "sha256": "9e241e5f0af8f02f24629d303bd8247c044066e592563bdbd54fee9a0fca58d6"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.5",
-          "sha256": "88e71321d58bbc011e8f0ae9f279317bb17ef0798c0c0129d94f52a7933bf7fb"
+          "action_version": "0.1.6",
+          "sha256": "e68b69452e3c30772c7e4270c22c534a48087728f1a643355de51ef4f759ce33"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.5",
-          "sha256": "1a40df341161a90e4e890a6b13823d717a2f5591b16369a5e4f00cd151e0e64d"
+          "action_version": "0.1.6",
+          "sha256": "6e4a2051b558566bd2001b9a906860a48cedbca20105556d530f9fa6593e1702"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.5",
-          "sha256": "c3faf7b285e2daa56e42e3815eaf3d7cc5298e921be8596e129e1ccbe69219af"
+          "action_version": "0.1.6",
+          "sha256": "f34169909edd40c81d0cd34a38363c29805923c33770198e5c23d100705f93e6"
         },
         {
           "task": "healing",

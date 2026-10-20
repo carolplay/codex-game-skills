@@ -1,6 +1,6 @@
 {
   "action_id": "wos-war-academy-commission",
-  "action_version": "0.1.6",
+  "action_version": "0.1.7",
   "name": "WOS war_academy_commission",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 480,
   "status": "candidate",
-  "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. a mature role actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Batched row gestures split into at most5 per JS call after two20-gesture calls exceeded runtime. Offline candidate; no live recovery claim.",
+  "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. a mature role actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Batched row gestures split into at most5 per JS call after two20-gesture calls exceeded runtime. Offline candidate; no live recovery claim. 0.1.6 still spends excessive time on 220 short scroll gestures. Candidate replaces each 20x100ms scan with2x600ms and per-gesture observations, keeping per-section reward checks, finite11sections and predefined exits. Next role replay pending; does not assert all free rewards claimed.",
   "steps": [
     {
       "name": "01-check-city",
@@ -1102,89 +1102,8 @@
       "name": "scroll-free-rows-1-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-1-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-1-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-1-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"
@@ -1312,89 +1231,8 @@
       "name": "scroll-free-rows-2-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-2-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-2-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-2-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"
@@ -1522,89 +1360,8 @@
       "name": "scroll-free-rows-3-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-3-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-3-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-3-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"
@@ -1732,89 +1489,8 @@
       "name": "scroll-free-rows-4-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-4-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-4-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-4-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"
@@ -1942,89 +1618,8 @@
       "name": "scroll-free-rows-5-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-5-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-5-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-5-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"
@@ -2152,89 +1747,8 @@
       "name": "scroll-free-rows-6-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-6-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-6-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-6-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"
@@ -2362,89 +1876,8 @@
       "name": "scroll-free-rows-7-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-7-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-7-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-7-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"
@@ -2572,89 +2005,8 @@
       "name": "scroll-free-rows-8-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-8-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-8-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-8-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"
@@ -2782,89 +2134,8 @@
       "name": "scroll-free-rows-9-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-9-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-9-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-9-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"
@@ -2992,89 +2263,8 @@
       "name": "scroll-free-rows-10-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-10-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-10-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-10-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"
@@ -3202,89 +2392,8 @@
       "name": "scroll-free-rows-11-chunk-1",
       "action": "key",
       "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-11-chunk-2",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-11-chunk-3",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
-      "before": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      },
-      "after": {
-        "all": [
-          "火晶深度探秘"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
-        ]
-      }
-    },
-    {
-      "name": "scroll-free-rows-11-chunk-4",
-      "action": "key",
-      "key": "Up",
-      "key_count": 5,
-      "duration_ms": 100,
+      "key_count": 2,
+      "duration_ms": 600,
       "before": {
         "all": [
           "火晶深度探秘"

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-inspect",
-  "action_version": "0.1.5",
+  "action_version": "0.1.6",
   "name": "WOS — free VIP gift or cooldown",
   "reference_size": [
     788,
@@ -114,10 +114,20 @@
           ]
         ]
       },
-      "after": [
-        "VIP",
-        "免费礼包"
-      ],
+      "after": {
+        "all": [
+          "VIP",
+          "免费礼包"
+        ],
+        "page_text_regions": [
+          [
+            240,
+            630,
+            490,
+            680
+          ]
+        ]
+      },
       "observe_attempts": 3
     },
     {
@@ -149,6 +159,14 @@
             ],
             "min": 0.12
           }
+        ],
+        "page_text_regions": [
+          [
+            240,
+            630,
+            490,
+            680
+          ]
         ]
       },
       "after": {
@@ -158,6 +176,14 @@
           "恭喜获得",
           "点击任意",
           "点击空白"
+        ],
+        "page_text_regions": [
+          [
+            240,
+            630,
+            490,
+            680
+          ]
         ]
       },
       "observe_attempts": 3,
@@ -176,7 +202,15 @@
             ],
             "min": 1,
             "max": 86400
-          }
+          },
+          "page_text_regions": [
+            [
+              240,
+              630,
+              490,
+              680
+            ]
+          ]
         },
         {
           "all": [
@@ -193,6 +227,14 @@
               ],
               "pattern": "未激活"
             }
+          ],
+          "page_text_regions": [
+            [
+              240,
+              630,
+              490,
+              680
+            ]
           ]
         }
       ]
@@ -213,10 +255,20 @@
           "点击屏幕"
         ]
       },
-      "after": [
-        "VIP",
-        "免费礼包"
-      ],
+      "after": {
+        "all": [
+          "VIP",
+          "免费礼包"
+        ],
+        "page_text_regions": [
+          [
+            240,
+            630,
+            490,
+            680
+          ]
+        ]
+      },
       "observe_attempts": 3,
       "skip_if": {
         "all": [
@@ -229,6 +281,14 @@
           "点击任意",
           "点击空白",
           "点击屏幕"
+        ],
+        "page_text_regions": [
+          [
+            240,
+            630,
+            490,
+            680
+          ]
         ]
       }
     },
@@ -249,7 +309,15 @@
           ],
           "min": 1,
           "max": 86400
-        }
+        },
+        "page_text_regions": [
+          [
+            240,
+            630,
+            490,
+            680
+          ]
+        ]
       },
       "skip_if": {
         "all": [
@@ -266,6 +334,14 @@
             ],
             "pattern": "未激活"
           }
+        ],
+        "page_text_regions": [
+          [
+            240,
+            630,
+            490,
+            680
+          ]
         ]
       },
       "observe_attempts": 10
@@ -277,10 +353,20 @@
         133,
         59
       ],
-      "before": [
-        "VIP",
-        "免费礼包"
-      ],
+      "before": {
+        "all": [
+          "VIP",
+          "免费礼包"
+        ],
+        "page_text_regions": [
+          [
+            240,
+            630,
+            490,
+            680
+          ]
+        ]
+      },
       "after": {
         "all": [
           "英雄",
@@ -372,10 +458,20 @@
             "点击屏幕"
           ]
         },
-        "after": [
-          "VIP",
-          "免费礼包"
-        ],
+        "after": {
+          "all": [
+            "VIP",
+            "免费礼包"
+          ],
+          "page_text_regions": [
+            [
+              240,
+              630,
+              490,
+              680
+            ]
+          ]
+        },
         "observe_attempts": 3
       },
       {
@@ -485,6 +581,6 @@
     ]
   },
   "status": "real_claim_replay_verified",
-  "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. a mature role actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending. a mature role VIP8 title OCR每目 instead of每日;0.1.4 requires stable免费礼包 substring while preserving calibrated freeclaim greenbutton region. Exit only needs cropped VIP pageheader and known modal exclusions. Currentrole not retried; nextrolepending.",
+  "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. a mature role actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending. a mature role VIP8 title OCR每目 instead of每日;0.1.4 requires stable免费礼包 substring while preserving calibrated freeclaim greenbutton region. Exit only needs cropped VIP pageheader and known modal exclusions. Currentrole not retried; nextrolepending. Main VIP12 free label full-frame OCR read wrong first character; same saved frame cropped label reads correctly. Add same-frame daily gift title crop to existing free predicates; no changed claim or cash coordinates. Next applicable replay pending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }
