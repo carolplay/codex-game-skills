@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.16",
-  "package_version": "0.12.16",
+  "macro_version": "0.12.17",
+  "package_version": "0.12.17",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -193,20 +193,20 @@
         {
           "task": "pet_treasure_claim",
           "action_id": "wos-pet-treasure-claim",
-          "action_version": "0.1.3",
-          "sha256": "6fe2d632badac1a785d205fd3c716b0c3c2fa20d7a55272772a057a4a7e48163"
+          "action_version": "0.1.4",
+          "sha256": "33109ef0d1bf5acc42d2e2efd8f66a35c903e6a7a279bfc34b5a56d002d86f4d"
         },
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.5",
-          "sha256": "3de48c4d4ee3bf210465c2432845fcf942fdb94acf476717d2a8f18c1491a74d"
+          "action_version": "0.1.6",
+          "sha256": "0c07740e10cb261efef6306257986462ca1080b707eb9cbd24047141c398fb85"
         },
         {
           "task": "pet_alliance_treasure",
           "action_id": "wos-pet-alliance-treasure",
-          "action_version": "0.1.3",
-          "sha256": "c79d2ac448be174f4f09b0a54925f58efbcb439a0ea4356ed324c7f6391aa9b8"
+          "action_version": "0.1.4",
+          "sha256": "5bb9542ae858ad0a4b3b9656de16a3e1c37bcd55bf6eae6c9860b9ed2a2c50de"
         },
         {
           "task": "alliance_incentive",
@@ -441,20 +441,20 @@
         {
           "task": "pet_treasure_claim",
           "action_id": "wos-pet-treasure-claim",
-          "action_version": "0.1.3",
-          "sha256": "6fe2d632badac1a785d205fd3c716b0c3c2fa20d7a55272772a057a4a7e48163"
+          "action_version": "0.1.4",
+          "sha256": "33109ef0d1bf5acc42d2e2efd8f66a35c903e6a7a279bfc34b5a56d002d86f4d"
         },
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.5",
-          "sha256": "3de48c4d4ee3bf210465c2432845fcf942fdb94acf476717d2a8f18c1491a74d"
+          "action_version": "0.1.6",
+          "sha256": "0c07740e10cb261efef6306257986462ca1080b707eb9cbd24047141c398fb85"
         },
         {
           "task": "pet_alliance_treasure",
           "action_id": "wos-pet-alliance-treasure",
-          "action_version": "0.1.3",
-          "sha256": "c79d2ac448be174f4f09b0a54925f58efbcb439a0ea4356ed324c7f6391aa9b8"
+          "action_version": "0.1.4",
+          "sha256": "5bb9542ae858ad0a4b3b9656de16a3e1c37bcd55bf6eae6c9860b9ed2a2c50de"
         },
         {
           "task": "alliance_incentive",
@@ -641,20 +641,20 @@
         {
           "task": "pet_treasure_claim",
           "action_id": "wos-pet-treasure-claim",
-          "action_version": "0.1.3",
-          "sha256": "6fe2d632badac1a785d205fd3c716b0c3c2fa20d7a55272772a057a4a7e48163"
+          "action_version": "0.1.4",
+          "sha256": "33109ef0d1bf5acc42d2e2efd8f66a35c903e6a7a279bfc34b5a56d002d86f4d"
         },
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.5",
-          "sha256": "3de48c4d4ee3bf210465c2432845fcf942fdb94acf476717d2a8f18c1491a74d"
+          "action_version": "0.1.6",
+          "sha256": "0c07740e10cb261efef6306257986462ca1080b707eb9cbd24047141c398fb85"
         },
         {
           "task": "pet_alliance_treasure",
           "action_id": "wos-pet-alliance-treasure",
-          "action_version": "0.1.3",
-          "sha256": "c79d2ac448be174f4f09b0a54925f58efbcb439a0ea4356ed324c7f6391aa9b8"
+          "action_version": "0.1.4",
+          "sha256": "5bb9542ae858ad0a4b3b9656de16a3e1c37bcd55bf6eae6c9860b9ed2a2c50de"
         },
         {
           "task": "alliance_incentive",
