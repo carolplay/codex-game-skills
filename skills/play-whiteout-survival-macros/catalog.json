@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.7",
+  "package_version": "0.12.8",
   "executor_min_version": "0.3.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -108,33 +108,33 @@
     "shield": {
       "path": "actions/wos-training-shield.json",
       "action_id": "wos-training-shield",
-      "action_version": "0.3.0",
-      "sha256": "a890d5e9ff5f213e574e30bdc353f7698dfc26d7a0b9ad1500b326ea111e81f3",
+      "action_version": "0.3.1",
+      "sha256": "95c0e0623421d5d2cfd76a51e67eae5336a3deeacd50da90e619e87e6d8e77c8",
       "period": "day",
       "utility": false,
-      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending.",
+      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending. Current training tab visibly correct but4pixel selected strip fails. Replace selected-tab color test with scoped active troop header text, preserving queue/rank/resource checks and known exits. Next role replay pending.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "lancer": {
       "path": "actions/wos-training-lancer.json",
       "action_id": "wos-training-lancer",
-      "action_version": "0.3.0",
-      "sha256": "86de940b5c6603ffe72edc8ed13675a33c25952ea261a3dbf6f94ef27d694f43",
+      "action_version": "0.3.1",
+      "sha256": "af0399a8ec314a95b077f7efa697e681e44b6c0a614254fd803766e0efcf2f58",
       "period": "day",
       "utility": false,
-      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending.",
+      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending. Current training tab visibly correct but4pixel selected strip fails. Replace selected-tab color test with scoped active troop header text, preserving queue/rank/resource checks and known exits. Next role replay pending.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "marksman": {
       "path": "actions/wos-training-marksman.json",
       "action_id": "wos-training-marksman",
-      "action_version": "0.3.0",
-      "sha256": "7f46a9d119f59eee5533539bcf1f1802e45364cd9b3bf9f2986d5cb3de9cbcd8",
+      "action_version": "0.3.1",
+      "sha256": "9e0c3f41bbcc2261b33abfe5442a731b951b037a68750a56c0028a33e85f07c5",
       "period": "day",
       "utility": false,
-      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending.",
+      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending. Current training tab visibly correct but4pixel selected strip fails. Replace selected-tab color test with scoped active troop header text, preserving queue/rank/resource checks and known exits. Next role replay pending.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -247,11 +247,11 @@
     "orders": {
       "path": "actions/wos-orders.json",
       "action_id": "wos-orders",
-      "action_version": "0.1.5",
-      "sha256": "bc7de1cc57134b707ba5642c919c67f9884f99c58d7633576d568dc29bea41de",
+      "action_version": "0.1.6",
+      "sha256": "e9d49e96262b39a681c92340c2b6f63383aef36e2fe85b4241bd279f059f679c",
       "period": "day",
       "utility": false,
-      "verification_scope": "a mature role actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass. Mature-role activeuse actually produced reward and recoveredcity; oldafterexpectedcooldown behindreward, false deviation. Nextrevision acceptsreward, thenexistingstrictrewardclose; cooldown skipbranch retained. Nextrole replay pending."
+      "verification_scope": "a mature role actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass. Mature-role activeuse actually produced reward and recoveredcity; oldafterexpectedcooldown behindreward, false deviation. Nextrevision acceptsreward, thenexistingstrictrewardclose; cooldown skipbranch retained. Nextrole replay pending. Shift2 cooldown detail full-frame OCR missed cooldown label and failed exit. Same saved final frame scoped crop reads production title and23hour cooldown. Add same-frame detail crop to predicates and exits; no extra use/retry. Next role pending."
     },
     "intel_rescue": {
       "path": "actions/wos-intel-rescue.json",
@@ -413,11 +413,11 @@
     "travel_idle": {
       "path": "actions/wos-travel-idle.json",
       "action_id": "wos-travel-idle",
-      "action_version": "0.1.6",
-      "sha256": "c0fef15f1a3ae61f51053aba20ac78001e58f80d3d87df998702b861d7437d58",
+      "action_version": "0.1.7",
+      "sha256": "f8e5ec862cc04cfb6adf49316e065075729fb310b7a8bf251420e7b9fd56d6f6",
       "period": "shift",
       "utility": false,
-      "verification_scope": "First settle old completed job if any, then use only existing1..100 Trek supplies; never purchases. Existing running job is left intact with deviation. Separate claim near visit end settles newly finished job. All new branches pending live replay. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. mature role cost image was OCR as$40 because bag icon included; no supplies spent. Remove redundant numeric gate: known existing-supplies modal and actual running counter remain required; no purchase control used. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
+      "verification_scope": "First settle old completed job if any, then use only existing1..100 Trek supplies; never purchases. Existing running job is left intact with deviation. Separate claim near visit end settles newly finished job. All new branches pending live replay. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. mature role cost image was OCR as$40 because bag icon included; no supplies spent. Remove redundant numeric gate: known existing-supplies modal and actual running counter remain required; no purchase control used. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Shift2 saved launch frame explicitly shows game started-idle toast; tiny progress fraction OCR reads ONO. Verify launch by explicit game toast plus city anchor rather than unreadable tiny fraction; no repeated start. Next role pending."
     },
     "travel_idle_claim": {
       "path": "actions/wos-travel-idle-claim.json",

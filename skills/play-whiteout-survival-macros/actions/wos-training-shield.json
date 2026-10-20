@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-shield",
-  "action_version": "0.3.0",
+  "action_version": "0.3.1",
   "name": "WOS — 盾兵 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -463,17 +463,17 @@
             "pattern": "盾兵.",
             "crop_ocr": true,
             "min_confidence": 0.3
-          }
-        ],
-        "white_regions": [
+          },
           {
             "bounds": [
-              145,
-              1002,
-              270,
-              1006
+              230,
+              35,
+              575,
+              95
             ],
-            "min": 0.5
+            "pattern": ".*盾兵.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -530,17 +530,17 @@
             "pattern": "训练",
             "crop_ocr": true,
             "min_confidence": 0.3
-          }
-        ],
-        "white_regions": [
+          },
           {
             "bounds": [
-              145,
-              1002,
-              270,
-              1006
+              230,
+              35,
+              575,
+              95
             ],
-            "min": 0.5
+            "pattern": ".*盾兵.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -605,17 +605,17 @@
             "pattern": "加速",
             "crop_ocr": true,
             "min_confidence": 0.3
-          }
-        ],
-        "white_regions": [
+          },
           {
             "bounds": [
-              145,
-              1002,
-              270,
-              1006
+              230,
+              35,
+              575,
+              95
             ],
-            "min": 0.5
+            "pattern": ".*盾兵.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ],
         "timer_seconds": {
@@ -686,17 +686,17 @@
             "pattern": "盾兵.",
             "crop_ocr": true,
             "min_confidence": 0.3
-          }
-        ],
-        "white_regions": [
+          },
           {
             "bounds": [
-              145,
-              1002,
-              270,
-              1006
+              230,
+              35,
+              575,
+              95
             ],
-            "min": 0.5
+            "pattern": ".*盾兵.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       },
@@ -739,17 +739,17 @@
             "pattern": "加速",
             "crop_ocr": true,
             "min_confidence": 0.3
-          }
-        ],
-        "white_regions": [
+          },
           {
             "bounds": [
-              145,
-              1002,
-              270,
-              1006
+              230,
+              35,
+              575,
+              95
             ],
-            "min": 0.5
+            "pattern": ".*盾兵.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ],
         "timer_seconds": {
@@ -806,17 +806,17 @@
             "pattern": "加速",
             "crop_ocr": true,
             "min_confidence": 0.3
-          }
-        ],
-        "white_regions": [
+          },
           {
             "bounds": [
-              145,
-              1002,
-              270,
-              1006
+              230,
+              35,
+              575,
+              95
             ],
-            "min": 0.5
+            "pattern": ".*盾兵.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
           }
         ],
         "timer_seconds": {
@@ -1011,7 +1011,7 @@
       }
     ]
   },
-  "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending.",
+  "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending. Current training tab visibly correct but4pixel selected strip fails. Replace selected-tab color test with scoped active troop header text, preserving queue/rank/resource checks and known exits. Next role replay pending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
   "business_dependencies": [
     "Always select and verify expected camp footer before ordinary training input",

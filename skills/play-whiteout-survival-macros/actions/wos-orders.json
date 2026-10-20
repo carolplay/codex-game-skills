@@ -1,6 +1,6 @@
 {
   "action_id": "wos-orders",
-  "action_version": "0.1.5",
+  "action_version": "0.1.6",
   "name": "WOS orders",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "a mature role actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass. Mature-role activeuse actually produced reward and recoveredcity; oldafterexpectedcooldown behindreward, false deviation. Nextrevision acceptsreward, thenexistingstrictrewardclose; cooldown skipbranch retained. Nextrole replay pending.",
+  "verification_scope": "a mature role actual颁布 reachedcooldown then book animation then earned resource reward overlay directly above city. Added bounded30-observation close and city skips; previous run was real use but exit deviation, not pass. Mature-role activeuse actually produced reward and recoveredcity; oldafterexpectedcooldown behindreward, false deviation. Nextrevision acceptsreward, thenexistingstrictrewardclose; cooldown skipbranch retained. Nextrole replay pending. Shift2 cooldown detail full-frame OCR missed cooldown label and failed exit. Same saved final frame scoped crop reads production title and23hour cooldown. Add same-frame detail crop to predicates and exits; no extra use/retry. Next role pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -132,6 +132,14 @@
         ],
         "none": [
           "冷却时间"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            470,
+            650,
+            680
+          ]
         ]
       },
       "observe_attempts": 5
@@ -149,12 +157,30 @@
         ],
         "none": [
           "冷却时间"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            470,
+            650,
+            680
+          ]
         ]
       },
-      "after": [
-        "立即生产",
-        "冷却时间"
-      ],
+      "after": {
+        "all": [
+          "立即生产",
+          "冷却时间"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            470,
+            650,
+            680
+          ]
+        ]
+      },
       "observe_attempts": 5
     },
     {
@@ -185,6 +211,14 @@
         ],
         "none": [
           "冷却中"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            470,
+            650,
+            680
+          ]
         ]
       },
       "after": {
@@ -198,6 +232,14 @@
           "立即生产",
           "冷却时间",
           "冷却中"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            470,
+            650,
+            680
+          ]
         ]
       },
       "observe_attempts": 8
@@ -249,16 +291,34 @@
         135,
         55
       ],
-      "before": [
-        "立即生产",
-        "冷却时间"
-      ],
+      "before": {
+        "all": [
+          "立即生产",
+          "冷却时间"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            470,
+            650,
+            680
+          ]
+        ]
+      },
       "after": {
         "all": [
           "领主指令"
         ],
         "none": [
           "冷却时间"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            470,
+            650,
+            680
+          ]
         ]
       },
       "observe_attempts": 5,
@@ -300,6 +360,14 @@
         ],
         "none": [
           "冷却时间"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            470,
+            650,
+            680
+          ]
         ]
       },
       "after": {
@@ -509,16 +577,34 @@
           135,
           55
         ],
-        "before": [
-          "立即生产",
-          "冷却时间"
-        ],
+        "before": {
+          "all": [
+            "立即生产",
+            "冷却时间"
+          ],
+          "page_text_regions": [
+            [
+              170,
+              470,
+              650,
+              680
+            ]
+          ]
+        },
         "after": {
           "all": [
             "领主指令"
           ],
           "none": [
             "冷却时间"
+          ],
+          "page_text_regions": [
+            [
+              170,
+              470,
+              650,
+              680
+            ]
           ]
         },
         "observe_attempts": 5
@@ -536,6 +622,14 @@
           ],
           "none": [
             "冷却时间"
+          ],
+          "page_text_regions": [
+            [
+              170,
+              470,
+              650,
+              680
+            ]
           ]
         },
         "after": {

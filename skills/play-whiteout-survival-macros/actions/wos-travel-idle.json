@@ -1,6 +1,6 @@
 {
   "action_id": "wos-travel-idle",
-  "action_version": "0.1.6",
+  "action_version": "0.1.7",
   "name": "WOS travel_idle",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 300,
   "status": "candidate",
-  "verification_scope": "First settle old completed job if any, then use only existing1..100 Trek supplies; never purchases. Existing running job is left intact with deviation. Separate claim near visit end settles newly finished job. All new branches pending live replay. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. mature role cost image was OCR as$40 because bag icon included; no supplies spent. Remove redundant numeric gate: known existing-supplies modal and actual running counter remain required; no purchase control used. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending.",
+  "verification_scope": "First settle old completed job if any, then use only existing1..100 Trek supplies; never purchases. Existing running job is left intact with deviation. Separate claim near visit end settles newly finished job. All new branches pending live replay. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. mature role cost image was OCR as$40 because bag icon included; no supplies spent. Remove redundant numeric gate: known existing-supplies modal and actual running counter remain required; no purchase control used. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Shift2 saved launch frame explicitly shows game started-idle toast; tiny progress fraction OCR reads ONO. Verify launch by explicit game toast plus city anchor rather than unreadable tiny fraction; no repeated start. Next role pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -1585,7 +1585,8 @@
         "all": [
           "英雄",
           "背包",
-          "野外"
+          "野外",
+          "已开始挂机游历"
         ],
         "none": [
           "日常",
@@ -1609,23 +1610,16 @@
             745,
             450,
             800
+          ],
+          [
+            250,
+            350,
+            680,
+            425
           ]
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              520,
-              900,
-              600,
-              940
-            ],
-            "pattern": "[0-9]{1,3}/[1-9][0-9]{0,2}",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
         ]
       },
-      "observe_attempts": 5
+      "observe_attempts": 3
     },
     {
       "name": "verify-city-return",
