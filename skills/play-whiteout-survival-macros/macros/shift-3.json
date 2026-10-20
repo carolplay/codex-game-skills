@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.6",
-  "package_version": "0.12.6",
+  "macro_version": "0.12.7",
+  "package_version": "0.12.7",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -169,14 +169,14 @@
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.7",
-          "sha256": "bb82634bd30c482b23c589a7ec5de613e6cf172f897bfbd6ccf4330359dfa8c1"
+          "action_version": "0.1.8",
+          "sha256": "8a6a9aae24ba1bf8a96ef29985a318f39195bee75386a05a79bfd4065d3067f2"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.7",
-          "sha256": "86067ddcf1c2c5e08ae12c5e9803a2c08692cd2d5092fb4f088ba66a971c7090"
+          "action_version": "0.1.8",
+          "sha256": "81d50c9d911b8a693387d8f97cdfd9d5578f5c49a75611d1413eb6675b44fa96"
         },
         {
           "task": "healing",
@@ -417,14 +417,14 @@
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.7",
-          "sha256": "bb82634bd30c482b23c589a7ec5de613e6cf172f897bfbd6ccf4330359dfa8c1"
+          "action_version": "0.1.8",
+          "sha256": "8a6a9aae24ba1bf8a96ef29985a318f39195bee75386a05a79bfd4065d3067f2"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.7",
-          "sha256": "86067ddcf1c2c5e08ae12c5e9803a2c08692cd2d5092fb4f088ba66a971c7090"
+          "action_version": "0.1.8",
+          "sha256": "81d50c9d911b8a693387d8f97cdfd9d5578f5c49a75611d1413eb6675b44fa96"
         },
         {
           "task": "healing",
@@ -617,14 +617,14 @@
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.7",
-          "sha256": "bb82634bd30c482b23c589a7ec5de613e6cf172f897bfbd6ccf4330359dfa8c1"
+          "action_version": "0.1.8",
+          "sha256": "8a6a9aae24ba1bf8a96ef29985a318f39195bee75386a05a79bfd4065d3067f2"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.7",
-          "sha256": "86067ddcf1c2c5e08ae12c5e9803a2c08692cd2d5092fb4f088ba66a971c7090"
+          "action_version": "0.1.8",
+          "sha256": "81d50c9d911b8a693387d8f97cdfd9d5578f5c49a75611d1413eb6675b44fa96"
         },
         {
           "task": "healing",
