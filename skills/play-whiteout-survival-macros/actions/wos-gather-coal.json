@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-coal",
-  "action_version": "0.1.9",
+  "action_version": "0.1.10",
   "name": "WOS gather_coal",
   "reference_size": [
     788,
@@ -870,6 +870,74 @@
     "max_exit_steps": 5,
     "exits": [
       {
+        "name": "exit-site-over-search",
+        "action": "click",
+        "point": [
+          600,
+          650
+        ],
+        "before": {
+          "all": [
+            "搜索",
+            "采集者"
+          ],
+          "none": [
+            "出征"
+          ]
+        },
+        "after": {
+          "all": [
+            "搜索"
+          ],
+          "none": [
+            "采集者",
+            "出征"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-site-without-search",
+        "action": "click",
+        "point": [
+          600,
+          650
+        ],
+        "before": {
+          "all": [
+            "采集者"
+          ],
+          "none": [
+            "搜索",
+            "出征"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "搜索",
+            "采集者",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
         "name": "exit-profile",
         "action": "click",
         "point": [
@@ -990,7 +1058,8 @@
             "搜索"
           ],
           "none": [
-            "出征"
+            "出征",
+            "采集者"
           ]
         },
         "after": {

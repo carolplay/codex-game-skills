@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.15",
-  "package_version": "0.12.15",
+  "macro_version": "0.12.16",
+  "package_version": "0.12.16",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -157,26 +157,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.4",
-          "sha256": "9e241e5f0af8f02f24629d303bd8247c044066e592563bdbd54fee9a0fca58d6"
+          "action_version": "0.1.5",
+          "sha256": "c6021d74ee3f9a572124bd1e473dcd3ae7036e06f6a56cb198c496a5c3a6b6d5"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.6",
-          "sha256": "e68b69452e3c30772c7e4270c22c534a48087728f1a643355de51ef4f759ce33"
+          "action_version": "0.1.7",
+          "sha256": "b2adaffa8d7005274b1406cfbf049b3f06d71f5ad90677491c90a62daf91cba5"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.9",
-          "sha256": "7089bcfa86a506e2c7677c5d60238e3be8e6d1efe57991a0fa28a37a46aebf02"
+          "action_version": "0.1.10",
+          "sha256": "2e3597eba7b5bf5c0fc8d13a34d0ed85e159dac7c7125e1741c94179c8ca9462"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.9",
-          "sha256": "40d85cf21e0df16a12d9669fb954bda42f1d6bf5cde897b6d07a31b88ddd63b9"
+          "action_version": "0.1.10",
+          "sha256": "0bd8c7966c7fcc06e098d813dea711bbd2e798a5fb478c5df35b1822c1658888"
         },
         {
           "task": "healing",
@@ -405,26 +405,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.4",
-          "sha256": "9e241e5f0af8f02f24629d303bd8247c044066e592563bdbd54fee9a0fca58d6"
+          "action_version": "0.1.5",
+          "sha256": "c6021d74ee3f9a572124bd1e473dcd3ae7036e06f6a56cb198c496a5c3a6b6d5"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.6",
-          "sha256": "e68b69452e3c30772c7e4270c22c534a48087728f1a643355de51ef4f759ce33"
+          "action_version": "0.1.7",
+          "sha256": "b2adaffa8d7005274b1406cfbf049b3f06d71f5ad90677491c90a62daf91cba5"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.9",
-          "sha256": "7089bcfa86a506e2c7677c5d60238e3be8e6d1efe57991a0fa28a37a46aebf02"
+          "action_version": "0.1.10",
+          "sha256": "2e3597eba7b5bf5c0fc8d13a34d0ed85e159dac7c7125e1741c94179c8ca9462"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.9",
-          "sha256": "40d85cf21e0df16a12d9669fb954bda42f1d6bf5cde897b6d07a31b88ddd63b9"
+          "action_version": "0.1.10",
+          "sha256": "0bd8c7966c7fcc06e098d813dea711bbd2e798a5fb478c5df35b1822c1658888"
         },
         {
           "task": "healing",
@@ -605,26 +605,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.4",
-          "sha256": "9e241e5f0af8f02f24629d303bd8247c044066e592563bdbd54fee9a0fca58d6"
+          "action_version": "0.1.5",
+          "sha256": "c6021d74ee3f9a572124bd1e473dcd3ae7036e06f6a56cb198c496a5c3a6b6d5"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.6",
-          "sha256": "e68b69452e3c30772c7e4270c22c534a48087728f1a643355de51ef4f759ce33"
+          "action_version": "0.1.7",
+          "sha256": "b2adaffa8d7005274b1406cfbf049b3f06d71f5ad90677491c90a62daf91cba5"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.9",
-          "sha256": "7089bcfa86a506e2c7677c5d60238e3be8e6d1efe57991a0fa28a37a46aebf02"
+          "action_version": "0.1.10",
+          "sha256": "2e3597eba7b5bf5c0fc8d13a34d0ed85e159dac7c7125e1741c94179c8ca9462"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.9",
-          "sha256": "40d85cf21e0df16a12d9669fb954bda42f1d6bf5cde897b6d07a31b88ddd63b9"
+          "action_version": "0.1.10",
+          "sha256": "0bd8c7966c7fcc06e098d813dea711bbd2e798a5fb478c5df35b1822c1658888"
         },
         {
           "task": "healing",
