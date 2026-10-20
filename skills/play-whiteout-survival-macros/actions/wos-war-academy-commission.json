@@ -1,6 +1,6 @@
 {
   "action_id": "wos-war-academy-commission",
-  "action_version": "0.1.7",
+  "action_version": "0.1.8",
   "name": "WOS war_academy_commission",
   "reference_size": [
     788,
@@ -889,25 +889,18 @@
     {
       "name": "open-fire-tech",
       "action": "click",
-      "text_target": {
-        "text": "火晶科技",
-        "bounds": [
-          180,
-          620,
-          650,
-          850
-        ],
-        "offset": [
-          0,
-          -40
-        ],
-        "min_confidence": 0.3
-      },
       "before": {
         "all": [
           "战争学院",
-          "火晶科技",
           "详情"
+        ],
+        "page_text_regions": [
+          [
+            300,
+            440,
+            520,
+            510
+          ]
         ]
       },
       "after": {
@@ -932,6 +925,10 @@
           "火晶微粒兑换",
           "点击空白处可关闭"
         ]
+      ],
+      "point": [
+        500,
+        735
       ]
     },
     {

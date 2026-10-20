@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.10",
-  "package_version": "0.12.10",
+  "macro_version": "0.12.11",
+  "package_version": "0.12.11",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -229,14 +229,14 @@
         {
           "task": "travel_idle_claim",
           "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.4",
-          "sha256": "07bc68fe16d75065b608a1d04ebca7c179b477498802cf9d0573463720516799"
+          "action_version": "0.1.5",
+          "sha256": "95c1ac333d05267241a1de4e614d592272a46ff11152e48393f15b630cb2c130"
         },
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.7",
-          "sha256": "ab68637deb65eaeb25148d2aace7e3e67a4ad6d07ad541f75c76a9c4d46979e2"
+          "action_version": "0.1.8",
+          "sha256": "34eb7f2ac0a897cdffac00def2446140d2f9be89eb6b4a050761eb0f432e3252"
         },
         {
           "task": "daily",
@@ -477,14 +477,14 @@
         {
           "task": "travel_idle_claim",
           "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.4",
-          "sha256": "07bc68fe16d75065b608a1d04ebca7c179b477498802cf9d0573463720516799"
+          "action_version": "0.1.5",
+          "sha256": "95c1ac333d05267241a1de4e614d592272a46ff11152e48393f15b630cb2c130"
         },
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.7",
-          "sha256": "ab68637deb65eaeb25148d2aace7e3e67a4ad6d07ad541f75c76a9c4d46979e2"
+          "action_version": "0.1.8",
+          "sha256": "34eb7f2ac0a897cdffac00def2446140d2f9be89eb6b4a050761eb0f432e3252"
         },
         {
           "task": "daily",
