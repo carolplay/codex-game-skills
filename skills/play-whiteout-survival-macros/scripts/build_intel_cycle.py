@@ -34,6 +34,7 @@ def build_legacy(flows):
 def build(flows):
  """New game-owned bulk execution; keep the event-only firebeast path."""
  legacy=build_legacy(flows)
+ legacy['task_contract']['exits'].insert(0,{'name':'exit-intel-stamina-supply','action':'click','point':[645,137],'before':['获取更多','领主体力','丰盛的招待'],'after':{'all':['情报','下次刷新'],'none':['获取更多','前往查看']},'observe_attempts':5})
  map_page={'all':['情报','下次刷新'],'none':['前往查看','获得奖励','恭喜获得','点击任意位置退出']}
  left=[125,980,380,1047];right=[410,980,665,1047]
  def counter(bounds,pattern):return {'bounds':bounds,'pattern':pattern,'crop_ocr':True,'min_confidence':.3}

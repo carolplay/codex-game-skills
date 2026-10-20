@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.3",
+  "action_version": "0.2.4",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -3780,6 +3780,30 @@
     },
     "max_exit_steps": 5,
     "exits": [
+      {
+        "name": "exit-intel-stamina-supply",
+        "action": "click",
+        "point": [
+          645,
+          137
+        ],
+        "before": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "after": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "获取更多",
+            "前往查看"
+          ]
+        },
+        "observe_attempts": 5
+      },
       {
         "name": "exit-profile",
         "action": "click",
