@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-meat",
-  "action_version": "0.1.2",
+  "action_version": "0.1.3",
   "name": "WOS gather_meat",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate.",
+  "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -193,6 +193,14 @@
         ],
         "none": [
           "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            700,
+            690,
+            1079
+          ]
         ]
       },
       "observe_attempts": 5,
