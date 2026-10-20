@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.2",
+  "package_version": "0.12.3",
   "executor_min_version": "0.3.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -229,11 +229,11 @@
     "arena": {
       "path": "actions/wos-arena.json",
       "action_id": "wos-arena",
-      "action_version": "0.1.3",
-      "sha256": "10b65d9b2ea356133b571d60475e32b4a47e787f77a33948d4faf78113c572a6",
+      "action_version": "0.1.4",
+      "sha256": "2613c3e975e25e75928737efc41f229cb97ffb4b12e631337ff12fac93bd81ab",
       "period": "day",
       "utility": false,
-      "verification_scope": "One manual free battle sampled with5→4; five-attempt fixed macro pending next-role replay. Existing formation retained; no attempt purchase, cash or paid refresh. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
+      "verification_scope": "Post-update actual header changed to optional exploration qualifier; bounded header OCR accepts both titles and excludes city overview. Old main failed entry and exit preserved; nextrole pending."
     },
     "island": {
       "path": "actions/wos-island.json",

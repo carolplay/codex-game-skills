@@ -1,6 +1,6 @@
 {
   "action_id": "wos-arena",
-  "action_version": "0.1.3",
+  "action_version": "0.1.4",
   "name": "WOS arena",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 600,
   "status": "candidate",
-  "verification_scope": "One manual free battle sampled with5→4; five-attempt fixed macro pending next-role replay. Existing formation retained; no attempt purchase, cash or paid refresh. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending.",
+  "verification_scope": "Post-update actual header changed to optional exploration qualifier; bounded header OCR accepts both titles and excludes city overview. Old main failed entry and exit preserved; nextrole pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -1033,12 +1033,26 @@
       },
       "after": {
         "all": [
-          "万国竞技场"
+          "竞技场"
         ],
         "none": [
           "挑战列表",
           "小队设置",
-          "点击任意位置退出"
+          "点击任意位置退出",
+          "完成任务后"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              35,
+              685,
+              110
+            ],
+            "pattern": "万国(?:探险)?竞技场",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       },
       "observe_attempts": 10
@@ -1052,12 +1066,26 @@
       ],
       "before": {
         "all": [
-          "万国竞技场"
+          "竞技场"
         ],
         "none": [
           "挑战列表",
           "小队设置",
-          "点击任意位置退出"
+          "点击任意位置退出",
+          "完成任务后"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              35,
+              685,
+              110
+            ],
+            "pattern": "万国(?:探险)?竞技场",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       },
       "after": {
@@ -2094,12 +2122,26 @@
       },
       "after": {
         "all": [
-          "万国竞技场"
+          "竞技场"
         ],
         "none": [
           "挑战列表",
           "小队设置",
-          "点击任意位置退出"
+          "点击任意位置退出",
+          "完成任务后"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              35,
+              685,
+              110
+            ],
+            "pattern": "万国(?:探险)?竞技场",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       },
       "observe_attempts": 5
@@ -2113,12 +2155,26 @@
       ],
       "before": {
         "all": [
-          "万国竞技场"
+          "竞技场"
         ],
         "none": [
           "挑战列表",
           "小队设置",
-          "点击任意位置退出"
+          "点击任意位置退出",
+          "完成任务后"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              35,
+              685,
+              110
+            ],
+            "pattern": "万国(?:探险)?竞技场",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       },
       "after": {
@@ -2364,12 +2420,26 @@
         },
         "after": {
           "all": [
-            "万国竞技场"
+            "竞技场"
           ],
           "none": [
             "挑战列表",
             "小队设置",
-            "点击任意位置退出"
+            "点击任意位置退出",
+            "完成任务后"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                100,
+                35,
+                685,
+                110
+              ],
+              "pattern": "万国(?:探险)?竞技场",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
           ]
         },
         "observe_attempts": 5
@@ -2411,12 +2481,26 @@
         ],
         "before": {
           "all": [
-            "万国竞技场"
+            "竞技场"
           ],
           "none": [
             "挑战列表",
             "小队设置",
-            "点击任意位置退出"
+            "点击任意位置退出",
+            "完成任务后"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                100,
+                35,
+                685,
+                110
+              ],
+              "pattern": "万国(?:探险)?竞技场",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
           ]
         },
         "after": {
