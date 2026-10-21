@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.23",
-  "package_version": "0.12.23",
+  "macro_version": "0.12.24",
+  "package_version": "0.12.24",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -26,8 +26,8 @@
         {
           "task": "feast",
           "action_id": "wos-stamina-meal",
-          "action_version": "0.2.0",
-          "sha256": "eae66360d7bed7903429e9f3993f21c94d238ee31cb694b45c472ccb28aa1251"
+          "action_version": "0.2.1",
+          "sha256": "68e7db6b39871bfffe605286b00708079f2cb5e8428fd9248cb9d38610416575"
         },
         {
           "task": "alliance",
@@ -164,8 +164,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.5",
-          "sha256": "8b0c9017e2207d2fd4ac02370a75b667f39e3bc30615722f4ffb5cc4ba9ea182"
+          "action_version": "0.2.6",
+          "sha256": "c78cd4381d1316c2ab6f390fdb7e6ae0654cc151d09aeb0ebc2aaf7978165543"
         },
         {
           "task": "gather_meat",
@@ -274,8 +274,8 @@
         {
           "task": "feast",
           "action_id": "wos-stamina-meal",
-          "action_version": "0.2.0",
-          "sha256": "eae66360d7bed7903429e9f3993f21c94d238ee31cb694b45c472ccb28aa1251"
+          "action_version": "0.2.1",
+          "sha256": "68e7db6b39871bfffe605286b00708079f2cb5e8428fd9248cb9d38610416575"
         },
         {
           "task": "alliance",
@@ -412,8 +412,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.5",
-          "sha256": "8b0c9017e2207d2fd4ac02370a75b667f39e3bc30615722f4ffb5cc4ba9ea182"
+          "action_version": "0.2.6",
+          "sha256": "c78cd4381d1316c2ab6f390fdb7e6ae0654cc151d09aeb0ebc2aaf7978165543"
         },
         {
           "task": "gather_meat",
@@ -522,8 +522,8 @@
         {
           "task": "feast",
           "action_id": "wos-stamina-meal",
-          "action_version": "0.2.0",
-          "sha256": "eae66360d7bed7903429e9f3993f21c94d238ee31cb694b45c472ccb28aa1251"
+          "action_version": "0.2.1",
+          "sha256": "68e7db6b39871bfffe605286b00708079f2cb5e8428fd9248cb9d38610416575"
         },
         {
           "task": "alliance",
@@ -618,8 +618,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.5",
-          "sha256": "8b0c9017e2207d2fd4ac02370a75b667f39e3bc30615722f4ffb5cc4ba9ea182"
+          "action_version": "0.2.6",
+          "sha256": "c78cd4381d1316c2ab6f390fdb7e6ae0654cc151d09aeb0ebc2aaf7978165543"
         },
         {
           "task": "gather_meat",

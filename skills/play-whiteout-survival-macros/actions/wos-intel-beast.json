@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-beast",
-  "action_version": "0.1.6",
+  "action_version": "0.1.7",
   "name": "WOS ordinary intelligence beast",
   "reference_size": [
     788,
@@ -707,7 +707,8 @@
           }
         ]
       },
-      "observe_attempts": 30
+      "observe_attempts": 30,
+      "observe_interval_seconds": 5
     },
     {
       "name": "beast-0-claim",
@@ -1216,7 +1217,8 @@
           }
         ]
       },
-      "observe_attempts": 30
+      "observe_attempts": 30,
+      "observe_interval_seconds": 5
     },
     {
       "name": "beast-1-claim",
@@ -1725,7 +1727,8 @@
           }
         ]
       },
-      "observe_attempts": 30
+      "observe_attempts": 30,
+      "observe_interval_seconds": 5
     },
     {
       "name": "beast-2-claim",
@@ -2234,7 +2237,8 @@
           }
         ]
       },
-      "observe_attempts": 30
+      "observe_attempts": 30,
+      "observe_interval_seconds": 5
     },
     {
       "name": "beast-3-claim",
@@ -2743,7 +2747,8 @@
           }
         ]
       },
-      "observe_attempts": 30
+      "observe_attempts": 30,
+      "observe_interval_seconds": 5
     },
     {
       "name": "beast-4-claim",
@@ -3252,7 +3257,8 @@
           }
         ]
       },
-      "observe_attempts": 30
+      "observe_attempts": 30,
+      "observe_interval_seconds": 5
     },
     {
       "name": "beast-5-claim",
@@ -3830,5 +3836,5 @@
       }
     ]
   },
-  "verification_scope": "Main three real dispatch/claims; fourth proper NPC was falsely rejected by background集结队伍. New menu-only crop retains NPC recommended strength/attack and forbids player controls locally. Next role pending. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Empty deployment page exit sampled live to world; bounded local recovery candidate, no troop dispatch when empty."
+  "verification_scope": "0.1.7 spaces observe-only completion polling by5seconds, up to30reads and the existing total workflow deadline. Prior low-level dispatch returned to map while claim was still disabled0; fast repeated screenshots exhausted polling before arrival. No repeated dispatch; live return/claim verification pending."
 }

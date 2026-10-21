@@ -1,6 +1,6 @@
 {
   "action_id": "wos-stamina-meal",
-  "action_version": "0.2.0",
+  "action_version": "0.2.1",
   "name": "WOS free stamina meal via lighthouse",
   "reference_size": [
     788,
@@ -307,7 +307,9 @@
             "max": 0.08
           }
         ]
-      }
+      },
+      "observe_attempts": 10,
+      "observe_interval_seconds": 1
     },
     {
       "name": "feast-close",
@@ -882,6 +884,6 @@
       }
     ]
   },
-  "verification_scope": "Development sample: lighthouse top stamina plus opens feast, actual160gain and cooldown, closes to lighthouse. Complete city-to-city macro pending replay.",
+  "verification_scope": "0.2.1 retries the observe-only postclaim cooldown check for reward animation occlusion. Prior actual160stamina increase and claim confirmation succeeded; next frame title was obscured. Input and reward predicates unchanged; live postanimation branch pending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

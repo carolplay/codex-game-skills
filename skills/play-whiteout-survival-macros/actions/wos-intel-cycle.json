@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.5",
+  "action_version": "0.2.6",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -2590,6 +2590,7 @@
         ]
       },
       "observe_attempts": 30,
+      "observe_interval_seconds": 5,
       "skip_if_step_skipped": "legacy-cycle-0-beast-select"
     },
     {
@@ -4314,7 +4315,7 @@
       }
     ]
   },
-  "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.",
+  "verification_scope": "0.2.6 includes ordinarybeast0.1.7 observe-only spaced completion polling for the legacy UI; mature execute-all and event branches unchanged. Existing dispatch is never repeated while polling. Live low-level completion replay pending.",
   "business_dependencies": [
     "City entry and exit; stamina meal uses lighthouse plus before this action",
     "Game execute-all handles ordinary intel; repeat after claim reveals queued tasks",
@@ -4325,8 +4326,8 @@
   "component_versions": {
     "beast": {
       "action_id": "wos-intel-beast",
-      "action_version": "0.1.6",
-      "sha256": "b990a9023963b6dab7988694c125cf4f1a84bad9294dd3fd765beec539c333cb"
+      "action_version": "0.1.7",
+      "sha256": "32ac0bfefc4ad53723b9449d3da9a55fdc40a8ea44dbfe540472ce78a5dd773e"
     },
     "rescue": {
       "action_id": "wos-intel-rescue",

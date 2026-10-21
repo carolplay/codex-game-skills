@@ -1,6 +1,6 @@
 {
-  "package_version": "0.12.23",
-  "executor_min_version": "0.3.2",
+  "package_version": "0.12.24",
+  "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
     "mail": {
@@ -36,11 +36,11 @@
     "feast": {
       "path": "actions/wos-stamina-meal.json",
       "action_id": "wos-stamina-meal",
-      "action_version": "0.2.0",
-      "sha256": "eae66360d7bed7903429e9f3993f21c94d238ee31cb694b45c472ccb28aa1251",
+      "action_version": "0.2.1",
+      "sha256": "68e7db6b39871bfffe605286b00708079f2cb5e8428fd9248cb9d38610416575",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Development sample: lighthouse top stamina plus opens feast, actual160gain and cooldown, closes to lighthouse. Complete city-to-city macro pending replay.",
+      "verification_scope": "0.2.1 retries the observe-only postclaim cooldown check for reward animation occlusion. Prior actual160stamina increase and claim confirmation succeeded; next frame title was obscured. Input and reward predicates unchanged; live postanimation branch pending.",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "academy": {
@@ -280,11 +280,11 @@
     "intel_beast": {
       "path": "actions/wos-intel-beast.json",
       "action_id": "wos-intel-beast",
-      "action_version": "0.1.6",
-      "sha256": "b990a9023963b6dab7988694c125cf4f1a84bad9294dd3fd765beec539c333cb",
+      "action_version": "0.1.7",
+      "sha256": "32ac0bfefc4ad53723b9449d3da9a55fdc40a8ea44dbfe540472ce78a5dd773e",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Main three real dispatch/claims; fourth proper NPC was falsely rejected by background集结队伍. New menu-only crop retains NPC recommended strength/attack and forbids player controls locally. Next role pending. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Shift3 candidate: single legacy claim button moved down to reference1017; green observation region moved correspondingly. Firebeast menu adds exact attackbutton crop, NPC title/player exclusions retained. Saved-frame validation then nextrole replay; not yet live.",
+      "verification_scope": "0.1.7 spaces observe-only completion polling by5seconds, up to30reads and the existing total workflow deadline. Prior low-level dispatch returned to map while claim was still disabled0; fast repeated screenshots exhausted polling before arrival. No repeated dispatch; live return/claim verification pending.",
       "category": "component",
       "include_in_daily": false,
       "production_replacement": "intel_cycle"
@@ -460,11 +460,11 @@
     "intel_cycle": {
       "path": "actions/wos-intel-cycle.json",
       "action_id": "wos-intel-cycle",
-      "action_version": "0.2.5",
-      "sha256": "8b0c9017e2207d2fd4ac02370a75b667f39e3bc30615722f4ffb5cc4ba9ea182",
+      "action_version": "0.2.6",
+      "sha256": "c78cd4381d1316c2ab6f390fdb7e6ae0654cc151d09aeb0ebc2aaf7978165543",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.0.2.4 adds bounded known stamina-supply modal X exit to lighthouse and city after execute-all opens insufficient-stamina panel. No stamina bottles or diamonds used; old main failure preserved. Nextrole exit replay pending. 0.2.4 secondshift: yellow ordinary batch execution/wait/claim passed, then firebeast goto.after omitted visible attack in full-frame OCR; whole cycle deviation, predefined exit and nexttasks passed. Added insufficientstamina modal exit not triggered in this replay, remains candidate. Main old0.2.3 stopped when78stamina<92cost opened supply modal. Low legacy greenclaim condition remains failed.0.2.5 generated from revised four components: downshifted legacy singleclaim region, firebeast attack-menu crop. All actualbranches pending nextrole; no agent fallback."
+      "verification_scope": "0.2.6 includes ordinarybeast0.1.7 observe-only spaced completion polling for the legacy UI; mature execute-all and event branches unchanged. Existing dispatch is never repeated while polling. Live low-level completion replay pending."
     },
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
