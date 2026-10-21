@@ -59,6 +59,8 @@ status只表示实现与验证进度，不表示今天已完成。已验证必�
 
 ### 本轮审计与下一版待验
 
+UTC2026-10-21一班主号0.12.18首批34通过、普通炼晶/募兵所/地心3偏差、后续3项未执行。地心停在扫荡奖励层，整屏OCR漏领取；0.1.7候选以奖励标题、局部放大领取及绿色按钮验证，离线正例/扫荡前负例通过，下一角色现场待验。未点击模型补领；Esc及空白关闭无效，正常退出恢复遭平台审批拒绝，等待用户明确确认。此系统审批事件不等同macOS权限或锁屏。
+
 UTC2026-10-20三班维护：0.12.17宠物三项共同入口改为有限归一和单步观察，主号三项完整回放与退出通过，低等级旧导航失败留待下班复测。四类采集新嵌套出口在主号铁矿偏差实际通过“详情→搜索→野外→主城”，后续项目继续；这不是采集派遣成功。主号0.1.6地心扫荡及退出通过，低等级根页断言仍偏差。VIP未激活passed不能采用为同日已领取证据；本班已更正并做当前状态核验。
 
 二班已结案，四角色逐号尝试及未执行项续跑完成，失败项目不重跑。学院0.1.8成熟角色入口通过但进度2图案仍失败；另一成熟角色科研队列让概览标题变成项目名，定位待兼容。灯塔0.2.4普通批量执行与领取通过，但火兽菜单实际可见攻击按钮被整屏OCR漏读，整宏偏差且退出正常；低等级旧绿态仍偏差。体力不足补给页新有限退出待适用状态验收。游历结算0.1.5只有无气泡分支通过，不把登录自动结算算新分支验收。
@@ -117,11 +119,11 @@ UTC2026-10-20一班续跑验证：竞技场0.1.4新标题在低等级及两个�
 
 ## 当前线性动作列表与版本
 
-正式清单以catalog、actions与三份shift manifest为准；没有旧的默认六项/八项清单。当前包0.12.18，通用执行器最低0.3.2。主号与成熟角色清单相同；一班含VIP，二/三班不重复每日VIP。所有组合固定动作版本和SHA256，运行中的快照不热改。开发定向子集须标记targeted-development，不能冒充完整班次。
+正式清单以catalog、actions与三份shift manifest为准；没有旧的默认六项/八项清单。当前包0.12.19，通用执行器最低0.3.2。主号与成熟角色清单相同；一班含VIP，二/三班不重复每日VIP。所有组合固定动作版本和SHA256，运行中的快照不热改。开发定向子集须标记targeted-development，不能冒充完整班次。
 
 第三班成熟角色默认顺序（稳定段→开发/修复末段→daily；动作适用范围未减少）：
 
-mail → idle → feast → alliance → help → expert → refined → crystal → bank → shield → lancer → donate → pet_wolf → pet_badger → pet_deer → arena → orders → healing → enlistment → alliance_incentive → npc_autojoin → academy → travel_idle → recruit → marksman → store_free → island → intel_cycle → gather_meat → gather_wood → gather_coal → gather_iron → pet_treasure_claim → pet_treasure_dispatch → pet_alliance_treasure → labyrinth → travel_idle_claim → war_academy_commission → daily。
+mail → idle → feast → alliance → help → expert → refined → bank → shield → lancer → donate → pet_wolf → pet_badger → pet_deer → arena → orders → healing → alliance_incentive → npc_autojoin → academy → travel_idle → recruit → marksman → store_free → island → intel_cycle → gather_meat → gather_wood → gather_coal → gather_iron → pet_treasure_claim → pet_treasure_dispatch → pet_alliance_treasure → labyrinth → travel_idle_claim → war_academy_commission → crystal → enlistment → daily。
 
 每个动作统一从主城进入并返回主城，实际步骤与有界退出见对应JSON。每日任务领奖置尾，NPC自动加入/采集的行军位依赖显式维护。界面可组合不等于资源效果严格交换律。
 

@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.18",
+  "package_version": "0.12.19",
   "executor_min_version": "0.3.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -382,11 +382,11 @@
     "labyrinth": {
       "path": "actions/wos-labyrinth-free-sweep.json",
       "action_id": "wos-labyrinth-free-sweep",
-      "action_version": "0.1.6",
-      "sha256": "57abda9356d138d5539f7d8c6594f35c1301fa5d2a93a3332412f650c06f1907",
+      "action_version": "0.1.7",
+      "sha256": "ea7743b9309ae135aa640126fa48bb090fb68ff5a6480717607d40456528a482",
       "utility": false,
       "period": "day/event",
-      "verification_scope": "0.1.1under30 auxiliary actual availablezone→sweep→claim passed; nextstage tutorial preventedbackarrow, batchstopped. DevelopercloseX returnedcity.0.1.2adds boundedX exit fornewstage page, nextrole replaypending; actualsweepclaim is not wholeactionpass. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending."
+      "verification_scope": "0.1.1under30 auxiliary actual availablezone→sweep→claim passed; nextstage tutorial preventedbackarrow, batchstopped. DevelopercloseX returnedcity.0.1.2adds boundedX exit fornewstage page, nextrole replaypending; actualsweepclaim is not wholeactionpass. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. UTC2026-10-21 candidate0.1.7: savedmain rewardframe localcrop reads claim withgreen.859; pre-sweepnegative rejected. Exact rewardtitle and localclaim required, no relaxedexit, not livevalidated."
     },
     "research": {
       "path": "actions/wos-research.json",

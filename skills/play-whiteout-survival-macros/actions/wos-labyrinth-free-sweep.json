@@ -1,6 +1,6 @@
 {
   "action_id": "wos-labyrinth-free-sweep",
-  "action_version": "0.1.6",
+  "action_version": "0.1.7",
   "name": "WOS available labyrinth free sweeps",
   "reference_size": [
     788,
@@ -1156,7 +1156,20 @@
       },
       "after": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -1190,7 +1203,20 @@
       ],
       "before": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -1348,7 +1374,20 @@
       },
       "after": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -1382,7 +1421,20 @@
       ],
       "before": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -1540,7 +1592,20 @@
       },
       "after": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -1574,7 +1639,20 @@
       ],
       "before": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -1732,7 +1810,20 @@
       },
       "after": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -1766,7 +1857,20 @@
       ],
       "before": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -1924,7 +2028,20 @@
       },
       "after": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -1958,7 +2075,20 @@
       ],
       "before": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -2116,7 +2246,20 @@
       },
       "after": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
@@ -2150,7 +2293,20 @@
       ],
       "before": {
         "all": [
-          "领取"
+          "扫荡奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              285,
+              700,
+              505,
+              780
+            ],
+            "pattern": "领取",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ],
         "green_regions": [
           {
