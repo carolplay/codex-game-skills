@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.19",
+  "package_version": "0.12.21",
   "executor_min_version": "0.3.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -141,11 +141,11 @@
     "crystal": {
       "path": "actions/wos-crystal-ordinary.json",
       "action_id": "wos-crystal-ordinary",
-      "action_version": "0.1.4",
-      "sha256": "8e939e9debc2f7a7223527d1dcab9110d176452ab9c87357d5998992a5adc4e7",
+      "action_version": "0.1.5",
+      "sha256": "2efd2e9d912d5376bf99aa04723d2a5077ec36323ce9375084019007ed46164d",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。",
+      "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。 Candidate0.1.5: main row室/窒 OCR scopedregex unique, plaincitynegative; reverseoverview日幣 literal failed entry/exit, nowpositive actualqueue/research/dailycontent headings withfooter, citynegative rejects. Boundsandbudgetunchanged; nextrolelivepending.",
       "current_evidence_note": "第三班成熟试验角色A概览勾选隐藏已完成，实验室行不见；旧anchor将这种底部面板误认主城。0.1.2加有界开关及footer排除/退出，下一班验收；不因入口缺失推断已完成。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -382,11 +382,11 @@
     "labyrinth": {
       "path": "actions/wos-labyrinth-free-sweep.json",
       "action_id": "wos-labyrinth-free-sweep",
-      "action_version": "0.1.7",
-      "sha256": "ea7743b9309ae135aa640126fa48bb090fb68ff5a6480717607d40456528a482",
+      "action_version": "0.1.8",
+      "sha256": "96f9437c887a4ee767d1b3166d64e32f5f8ff0684f1c3623af8a0f6203f00357",
       "utility": false,
       "period": "day/event",
-      "verification_scope": "0.1.1under30 auxiliary actual availablezone→sweep→claim passed; nextstage tutorial preventedbackarrow, batchstopped. DevelopercloseX returnedcity.0.1.2adds boundedX exit fornewstage page, nextrole replaypending; actualsweepclaim is not wholeactionpass. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. UTC2026-10-21 candidate0.1.7: savedmain rewardframe localcrop reads claim withgreen.859; pre-sweepnegative rejected. Exact rewardtitle and localclaim required, no relaxedexit, not livevalidated."
+      "verification_scope": "0.1.1under30 auxiliary actual availablezone→sweep→claim passed; nextstage tutorial preventedbackarrow, batchstopped. DevelopercloseX returnedcity.0.1.2adds boundedX exit fornewstage page, nextrole replaypending; actualsweepclaim is not wholeactionpass. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. UTC2026-10-21 candidate0.1.7: savedmain rewardframe localcrop reads claim withgreen.859; pre-sweepnegative rejected. Exact rewardtitle and localclaim required, no relaxedexit, not livevalidated. Candidate0.1.8 adds currentgroupmarker thirdvariant. Oldalias .435 missed actualavailablegroup and endedaftergem; newactualcrop1.0, emptygem .441, city .506 atthreshold.8. Per-zonecount remainsbounded6; new fullmulti-zone replay pending, previous0.1.7 claim-onlypassed not allzones."
     },
     "research": {
       "path": "actions/wos-research.json",

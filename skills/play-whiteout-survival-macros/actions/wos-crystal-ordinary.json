@@ -1,6 +1,6 @@
 {
   "action_id": "wos-crystal-ordinary",
-  "action_version": "0.1.4",
+  "action_version": "0.1.5",
   "name": "WOS — ordinary fire crystal refinements (up to8)",
   "reference_size": [
     788,
@@ -117,10 +117,29 @@
           ]
         ]
       },
-      "after": [
-        "日常",
-        "野外"
-      ],
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "any": [
+          "建筑队列",
+          "科技研究",
+          "部队训练",
+          "日常",
+          "提炼次数",
+          "超级提炼优惠"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
       "observe_attempts": 5
     },
     {
@@ -135,6 +154,14 @@
           "英雄",
           "背包",
           "野外"
+        ],
+        "any": [
+          "建筑队列",
+          "科技研究",
+          "部队训练",
+          "日常",
+          "提炼次数",
+          "超级提炼优惠"
         ],
         "page_text_regions": [
           [
@@ -1206,19 +1233,21 @@
       "name": "locate-lab",
       "action": "click",
       "text_target": {
-        "text": "炼晶实验室",
+        "text": "炼晶实验[室窒].?提炼",
         "exact": false,
         "bounds": [
-          210,
+          160,
           280,
-          410,
-          740
+          440,
+          780
         ],
         "offset": [
           150,
           10
         ],
-        "min_confidence": 0.3
+        "min_confidence": 0.3,
+        "regex": true,
+        "crop_ocr": true
       },
       "before": {
         "all": [
@@ -1940,16 +1969,12 @@
             "野外"
           ],
           "any": [
-            "游历补给",
+            "建筑队列",
+            "科技研究",
             "部队训练",
-            "技能学习",
-            "超级提炼优惠",
+            "日常",
             "提炼次数",
-            "宠物寻宝",
-            "竞技场",
-            "生命之树",
-            "联盟捐献",
-            "完成任务后"
+            "超级提炼优惠"
           ],
           "page_text_regions": [
             [
@@ -1968,8 +1993,10 @@
           ],
           "none": [
             "日常",
+            "建筑队列",
             "建造队列",
-            "游历补给"
+            "游历补给",
+            "完成任务后隐藏"
           ],
           "page_text_regions": [
             [

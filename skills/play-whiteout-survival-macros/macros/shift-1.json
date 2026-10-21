@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.19",
-  "package_version": "0.12.19",
+  "macro_version": "0.12.21",
+  "package_version": "0.12.21",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -218,8 +218,8 @@
         {
           "task": "labyrinth",
           "action_id": "wos-labyrinth-free-sweep",
-          "action_version": "0.1.7",
-          "sha256": "ea7743b9309ae135aa640126fa48bb090fb68ff5a6480717607d40456528a482"
+          "action_version": "0.1.8",
+          "sha256": "96f9437c887a4ee767d1b3166d64e32f5f8ff0684f1c3623af8a0f6203f00357"
         },
         {
           "task": "travel_idle_claim",
@@ -236,8 +236,8 @@
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.4",
-          "sha256": "8e939e9debc2f7a7223527d1dcab9110d176452ab9c87357d5998992a5adc4e7"
+          "action_version": "0.1.5",
+          "sha256": "2efd2e9d912d5376bf99aa04723d2a5077ec36323ce9375084019007ed46164d"
         },
         {
           "task": "enlistment",
@@ -471,8 +471,8 @@
         {
           "task": "labyrinth",
           "action_id": "wos-labyrinth-free-sweep",
-          "action_version": "0.1.7",
-          "sha256": "ea7743b9309ae135aa640126fa48bb090fb68ff5a6480717607d40456528a482"
+          "action_version": "0.1.8",
+          "sha256": "96f9437c887a4ee767d1b3166d64e32f5f8ff0684f1c3623af8a0f6203f00357"
         },
         {
           "task": "travel_idle_claim",
@@ -489,8 +489,8 @@
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.4",
-          "sha256": "8e939e9debc2f7a7223527d1dcab9110d176452ab9c87357d5998992a5adc4e7"
+          "action_version": "0.1.5",
+          "sha256": "2efd2e9d912d5376bf99aa04723d2a5077ec36323ce9375084019007ed46164d"
         },
         {
           "task": "enlistment",
@@ -682,8 +682,8 @@
         {
           "task": "labyrinth",
           "action_id": "wos-labyrinth-free-sweep",
-          "action_version": "0.1.7",
-          "sha256": "ea7743b9309ae135aa640126fa48bb090fb68ff5a6480717607d40456528a482"
+          "action_version": "0.1.8",
+          "sha256": "96f9437c887a4ee767d1b3166d64e32f5f8ff0684f1c3623af8a0f6203f00357"
         },
         {
           "task": "enlistment",
