@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.21",
-  "package_version": "0.12.21",
+  "macro_version": "0.12.22",
+  "package_version": "0.12.22",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -74,8 +74,8 @@
         {
           "task": "donate",
           "action_id": "wos-alliance-donate",
-          "action_version": "0.1.6",
-          "sha256": "e94d6c23a12fb8950fb00695b2340aa895b47df20684f58d9f9e842ef3ad84eb"
+          "action_version": "0.1.7",
+          "sha256": "a5e8bbc7f7bee1fe78abc6235bfa91c56d4a4b86a81a73ccfb939af2aeb5fdb2"
         },
         {
           "task": "pet_wolf",
@@ -322,8 +322,8 @@
         {
           "task": "donate",
           "action_id": "wos-alliance-donate",
-          "action_version": "0.1.6",
-          "sha256": "e94d6c23a12fb8950fb00695b2340aa895b47df20684f58d9f9e842ef3ad84eb"
+          "action_version": "0.1.7",
+          "sha256": "a5e8bbc7f7bee1fe78abc6235bfa91c56d4a4b86a81a73ccfb939af2aeb5fdb2"
         },
         {
           "task": "pet_wolf",
@@ -558,8 +558,8 @@
         {
           "task": "donate",
           "action_id": "wos-alliance-donate",
-          "action_version": "0.1.6",
-          "sha256": "e94d6c23a12fb8950fb00695b2340aa895b47df20684f58d9f9e842ef3ad84eb"
+          "action_version": "0.1.7",
+          "sha256": "a5e8bbc7f7bee1fe78abc6235bfa91c56d4a4b86a81a73ccfb939af2aeb5fdb2"
         },
         {
           "task": "pet_wolf",
