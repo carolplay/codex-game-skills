@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.22",
+  "package_version": "0.12.23",
   "executor_min_version": "0.3.2",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -101,7 +101,7 @@
       "sha256": "a5e8bbc7f7bee1fe78abc6235bfa91c56d4a4b86a81a73ccfb939af2aeb5fdb2",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.7 removes exact ordinary-resource amount OCR as an input gate: transient reward overlays make the same numeric cost unreadable. Donation page title, regional remaining count, fixed ordinary donation target, post-click count, gems telemetry, bounded exits and 240-second budget retained. Saved positive/negative frames tested; live replay pending.",
+      "verification_scope": "0.1.7 removes exact ordinary-resource amount OCR as an input gate: transient reward overlays make the same numeric cost unreadable. Donation page title, regional remaining count, fixed ordinary donation target, post-click count, gems telemetry, bounded exits and 240-second budget retained. Saved positive/negative frames tested; live replay pending. 0.1.7 live lower-level role completed25 actual ordinary donations to0/25, unchanged gem count and city exit; this does not imply daily40-count target complete.",
       "current_evidence_note": "第三班成熟试验角色A自然恢复次数至0整宏通过；成熟试验角色B第五次点击后出现点累了/试试长按操作吧提示，遮挡次数，原宏已三层退出。下一版仅识别该提示后点击无业务控件的说明空白区，再读次数；不重复捐献点击。新提示分支待下班验证。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -382,11 +382,11 @@
     "labyrinth": {
       "path": "actions/wos-labyrinth-free-sweep.json",
       "action_id": "wos-labyrinth-free-sweep",
-      "action_version": "0.1.8",
-      "sha256": "96f9437c887a4ee767d1b3166d64e32f5f8ff0684f1c3623af8a0f6203f00357",
+      "action_version": "0.1.9",
+      "sha256": "1cf4b30679a3da2ff86aeb05823b64636e0f36722e7d7fee4e865f1341f70d00",
       "utility": false,
       "period": "day/event",
-      "verification_scope": "0.1.1under30 auxiliary actual availablezone→sweep→claim passed; nextstage tutorial preventedbackarrow, batchstopped. DevelopercloseX returnedcity.0.1.2adds boundedX exit fornewstage page, nextrole replaypending; actualsweepclaim is not wholeactionpass. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. UTC2026-10-21 candidate0.1.7: savedmain rewardframe localcrop reads claim withgreen.859; pre-sweepnegative rejected. Exact rewardtitle and localclaim required, no relaxedexit, not livevalidated. Candidate0.1.8 adds currentgroupmarker thirdvariant. Oldalias .435 missed actualavailablegroup and endedaftergem; newactualcrop1.0, emptygem .441, city .506 atthreshold.8. Per-zonecount remainsbounded6; new fullmulti-zone replay pending, previous0.1.7 claim-onlypassed not allzones."
+      "verification_scope": "0.1.9 deploys fourth available-marker template focusing on the stable exclamation glyph. Old template scored0.795 on a visibly available zone and prematurely finished; glyph scores0.983 on that exact saved failure frame, unchanged0.8 threshold. Actual additional-zone replay pending. 0.1.8 real one-zone sweep/claim and return passed, not full category clearance."
     },
     "research": {
       "path": "actions/wos-research.json",

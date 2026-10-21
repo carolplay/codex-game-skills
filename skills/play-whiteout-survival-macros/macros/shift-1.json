@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.22",
-  "package_version": "0.12.22",
+  "macro_version": "0.12.23",
+  "package_version": "0.12.23",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -218,8 +218,8 @@
         {
           "task": "labyrinth",
           "action_id": "wos-labyrinth-free-sweep",
-          "action_version": "0.1.8",
-          "sha256": "96f9437c887a4ee767d1b3166d64e32f5f8ff0684f1c3623af8a0f6203f00357"
+          "action_version": "0.1.9",
+          "sha256": "1cf4b30679a3da2ff86aeb05823b64636e0f36722e7d7fee4e865f1341f70d00"
         },
         {
           "task": "travel_idle_claim",
@@ -471,8 +471,8 @@
         {
           "task": "labyrinth",
           "action_id": "wos-labyrinth-free-sweep",
-          "action_version": "0.1.8",
-          "sha256": "96f9437c887a4ee767d1b3166d64e32f5f8ff0684f1c3623af8a0f6203f00357"
+          "action_version": "0.1.9",
+          "sha256": "1cf4b30679a3da2ff86aeb05823b64636e0f36722e7d7fee4e865f1341f70d00"
         },
         {
           "task": "travel_idle_claim",
@@ -682,8 +682,8 @@
         {
           "task": "labyrinth",
           "action_id": "wos-labyrinth-free-sweep",
-          "action_version": "0.1.8",
-          "sha256": "96f9437c887a4ee767d1b3166d64e32f5f8ff0684f1c3623af8a0f6203f00357"
+          "action_version": "0.1.9",
+          "sha256": "1cf4b30679a3da2ff86aeb05823b64636e0f36722e7d7fee4e865f1341f70d00"
         },
         {
           "task": "enlistment",

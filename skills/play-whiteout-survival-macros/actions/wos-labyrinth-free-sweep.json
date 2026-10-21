@@ -1,6 +1,6 @@
 {
   "action_id": "wos-labyrinth-free-sweep",
-  "action_version": "0.1.8",
+  "action_version": "0.1.9",
   "name": "WOS available labyrinth free sweeps",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 600,
   "status": "candidate",
-  "verification_scope": "0.1.1under30 auxiliary actual availablezone→sweep→claim passed; nextstage tutorial preventedbackarrow, batchstopped. DevelopercloseX returnedcity.0.1.2adds boundedX exit fornewstage page, nextrole replaypending; actualsweepclaim is not wholeactionpass. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending.",
+  "verification_scope": "0.1.9 deploys fourth available-marker template focusing on the stable exclamation glyph. Old template scored0.795 on a visibly available zone and prematurely finished; glyph scores0.983 on that exact saved failure frame, unchanged0.8 threshold. Actual additional-zone replay pending. 0.1.8 real one-zone sweep/claim and return passed, not full category clearance.",
   "steps": [
     {
       "name": "01-check-city",
