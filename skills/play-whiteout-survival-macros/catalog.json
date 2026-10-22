@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.38",
+  "package_version": "0.12.39",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -337,11 +337,11 @@
     "enlistment": {
       "path": "actions/wos-enlistment.json",
       "action_id": "wos-enlistment",
-      "action_version": "0.1.4",
-      "sha256": "1a28f917ccfc61d9ac536329e194b8d285a77bfb4d7c7be4aac5a17c86818ba5",
+      "action_version": "0.1.5",
+      "sha256": "106d565ed43ae70b63043ae49507dbfa09839ec8936e2b1963fe4ebd5b3004e8",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Reserve-empty and city exits replayed on mature and low-level roles.0.1.3 adds independent Romulus reward-bubble claim after normal enlistment exit, including emptyreserve. Manual known-portrait claim showed reward and bubble cleared; saved before/after template scores pass positive/negative. New automated image-claim branch pending live. Absent portrait is not fresh reward; no fixed currency gain. 0.1.4: Rselectedhospital actual治疗 controlpresent; title军医所 dropped insettle frame. Replace hospitalnamerepeat withcityfooter+scoped治疗 control; no changedinput, actualenlistmenttitle+loyalty stillrequired. Savedfailedframepositive andplaincitynegativepassed; nexttargetlivepending."
+      "verification_scope": "Reserve-empty and city exits replayed on mature and low-level roles.0.1.3 adds independent Romulus reward-bubble claim after normal enlistment exit, including emptyreserve. Manual known-portrait claim showed reward and bubble cleared; saved before/after template scores pass positive/negative. New automated image-claim branch pending live. Absent portrait is not fresh reward; no fixed currency gain. 0.1.4: Rselectedhospital actual治疗 controlpresent; title军医所 dropped insettle frame. Replace hospitalnamerepeat withcityfooter+scoped治疗 control; no changedinput, actualenlistmenttitle+loyalty stillrequired. Savedfailedframepositive andplaincitynegativepassed; nexttargetlivepending.; 0.1.5 hospital treatment crop extends left to450 to retain full 治疗 label on2944 normalmenu (old490crop clippedfirstglyph). Target enlistment postcondition unchanged."
     },
     "pet_treasure_claim": {
       "path": "actions/wos-pet-treasure-claim.json",
@@ -431,11 +431,11 @@
     "pet_treasure_dispatch": {
       "path": "actions/wos-pet-treasure-dispatch.json",
       "action_id": "wos-pet-treasure-dispatch",
-      "action_version": "0.1.7",
-      "sha256": "4b4422e1045355c0afc1becfe4b5e2a5f847f7ddf1e8bd8c3ea8de37ee463107",
+      "action_version": "0.1.8",
+      "sha256": "14309c96ea6468ec40c986a6048d3d8bd294929295b24359fb5c9530a4a16e4c",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Original mature role stopped because开始 was read开姶 beforetreasurestart; exit also depended on samebuttontext. Agent separately startedone4hsearch andreturnedcity.0.1.7 keeps title/list andexact10stamina checks, localizes observed始/姶glyph for businessbutton; selectionexit usesunambiguous title+petlist withoutbuttonliteral. Savedselection positive anddetailnegative offline checks; new fullreplaypending."
+      "verification_scope": "Original mature role stopped because开始 was read开姶 beforetreasurestart; exit also depended on samebuttontext. Agent separately startedone4hsearch andreturnedcity.0.1.7 keeps title/list andexact10stamina checks, localizes observed始/姶glyph for businessbutton; selectionexit usesunambiguous title+petlist withoutbuttonliteral. Savedselection positive anddetailnegative offline checks; new fullreplaypending.; 0.1.8 detail predicates use personal/alliance treasure + dispatch/running states, independent of OCR-confused rare title 藏→蒹. Actual second dispatch pending."
     },
     "war_academy_commission": {
       "path": "actions/wos-war-academy-commission.json",
@@ -481,9 +481,9 @@
       "period": "day",
       "utility": false,
       "action_id": "wos-vip-calendar",
-      "action_version": "0.1.3",
-      "sha256": "765532a38ecd20dbdfca4f3061a25f78c6afbb69f529a5aa9334b0ad0375237d",
-      "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1. 0.1.3: VIPcalendar neednotread dailygifttext; RgiftOCR每圓 causedvip-open failure. Replaceunrelatedgiftcondition withscopedupperleftVIPheader, preservescalendarred/controlstates. ActualfailedVIPpositive+citybadge negative offline passed; nexttargetedreplaypending."
+      "action_version": "0.1.4",
+      "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05",
+      "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1. 0.1.3: VIPcalendar neednotread dailygifttext; RgiftOCR每圓 causedvip-open failure. Replaceunrelatedgiftcondition withscopedupperleftVIPheader, preservescalendarred/controlstates. ActualfailedVIPpositive+citybadge negative offline passed; nexttargetedreplaypending.; 0.1.4 remove illegal empty page_text_regions left by0.1.3; consistent cropped header across followup and exits. Earlier schema-check acceptance did not catch executor schema error; live pending."
     },
     "warehouse": {
       "path": "actions/wos-warehouse-supply.json",

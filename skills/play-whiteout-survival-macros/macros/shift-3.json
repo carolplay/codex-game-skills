@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.38",
-  "package_version": "0.12.38",
+  "macro_version": "0.12.39",
+  "package_version": "0.12.39",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -188,8 +188,8 @@
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.7",
-          "sha256": "4b4422e1045355c0afc1becfe4b5e2a5f847f7ddf1e8bd8c3ea8de37ee463107"
+          "action_version": "0.1.8",
+          "sha256": "14309c96ea6468ec40c986a6048d3d8bd294929295b24359fb5c9530a4a16e4c"
         },
         {
           "task": "pet_alliance_treasure",
@@ -224,14 +224,14 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.4",
-          "sha256": "1a28f917ccfc61d9ac536329e194b8d285a77bfb4d7c7be4aac5a17c86818ba5"
+          "action_version": "0.1.5",
+          "sha256": "106d565ed43ae70b63043ae49507dbfa09839ec8936e2b1963fe4ebd5b3004e8"
         },
         {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
-          "action_version": "0.1.3",
-          "sha256": "765532a38ecd20dbdfca4f3061a25f78c6afbb69f529a5aa9334b0ad0375237d"
+          "action_version": "0.1.4",
+          "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05"
         },
         {
           "task": "store_free",
@@ -448,8 +448,8 @@
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.7",
-          "sha256": "4b4422e1045355c0afc1becfe4b5e2a5f847f7ddf1e8bd8c3ea8de37ee463107"
+          "action_version": "0.1.8",
+          "sha256": "14309c96ea6468ec40c986a6048d3d8bd294929295b24359fb5c9530a4a16e4c"
         },
         {
           "task": "pet_alliance_treasure",
@@ -484,14 +484,14 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.4",
-          "sha256": "1a28f917ccfc61d9ac536329e194b8d285a77bfb4d7c7be4aac5a17c86818ba5"
+          "action_version": "0.1.5",
+          "sha256": "106d565ed43ae70b63043ae49507dbfa09839ec8936e2b1963fe4ebd5b3004e8"
         },
         {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
-          "action_version": "0.1.3",
-          "sha256": "765532a38ecd20dbdfca4f3061a25f78c6afbb69f529a5aa9334b0ad0375237d"
+          "action_version": "0.1.4",
+          "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05"
         },
         {
           "task": "store_free",
@@ -666,8 +666,8 @@
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.7",
-          "sha256": "4b4422e1045355c0afc1becfe4b5e2a5f847f7ddf1e8bd8c3ea8de37ee463107"
+          "action_version": "0.1.8",
+          "sha256": "14309c96ea6468ec40c986a6048d3d8bd294929295b24359fb5c9530a4a16e4c"
         },
         {
           "task": "pet_alliance_treasure",
@@ -684,14 +684,14 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.4",
-          "sha256": "1a28f917ccfc61d9ac536329e194b8d285a77bfb4d7c7be4aac5a17c86818ba5"
+          "action_version": "0.1.5",
+          "sha256": "106d565ed43ae70b63043ae49507dbfa09839ec8936e2b1963fe4ebd5b3004e8"
         },
         {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
-          "action_version": "0.1.3",
-          "sha256": "765532a38ecd20dbdfca4f3061a25f78c6afbb69f529a5aa9334b0ad0375237d"
+          "action_version": "0.1.4",
+          "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05"
         },
         {
           "task": "store_free",

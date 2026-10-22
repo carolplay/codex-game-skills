@@ -1,6 +1,6 @@
 {
   "action_id": "wos-enlistment",
-  "action_version": "0.1.4",
+  "action_version": "0.1.5",
   "name": "WOS enlistment",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Reserve-empty and city exits replayed on mature and low-level roles.0.1.3 adds independent Romulus reward-bubble claim after normal enlistment exit, including emptyreserve. Manual known-portrait claim showed reward and bubble cleared; saved before/after template scores pass positive/negative. New automated image-claim branch pending live. Absent portrait is not fresh reward; no fixed currency gain. 0.1.4: Rselectedhospital actual治疗 controlpresent; title军医所 dropped insettle frame. Replace hospitalnamerepeat withcityfooter+scoped治疗 control; no changedinput, actualenlistmenttitle+loyalty stillrequired. Savedfailedframepositive andplaincitynegativepassed; nexttargetlivepending.",
+  "verification_scope": "Reserve-empty and city exits replayed on mature and low-level roles.0.1.3 adds independent Romulus reward-bubble claim after normal enlistment exit, including emptyreserve. Manual known-portrait claim showed reward and bubble cleared; saved before/after template scores pass positive/negative. New automated image-claim branch pending live. Absent portrait is not fresh reward; no fixed currency gain. 0.1.4: Rselectedhospital actual治疗 controlpresent; title军医所 dropped insettle frame. Replace hospitalnamerepeat withcityfooter+scoped治疗 control; no changedinput, actualenlistmenttitle+loyalty stillrequired. Savedfailedframepositive andplaincitynegativepassed; nexttargetlivepending.; 0.1.5 hospital treatment crop extends left to450 to retain full 治疗 label on2944 normalmenu (old490crop clippedfirstglyph). Target enlistment postcondition unchanged.",
   "steps": [
     {
       "name": "01-check-city",
@@ -552,10 +552,10 @@
         "text_regions": [
           {
             "bounds": [
-              490,
+              450,
               680,
               590,
-              780
+              800
             ],
             "pattern": ".*治疗.*",
             "crop_ocr": true,
@@ -589,10 +589,10 @@
         "text_regions": [
           {
             "bounds": [
-              490,
+              450,
               680,
               590,
-              780
+              800
             ],
             "pattern": ".*治疗.*",
             "crop_ocr": true,
@@ -626,10 +626,10 @@
         "text_regions": [
           {
             "bounds": [
-              490,
+              450,
               680,
               590,
-              780
+              800
             ],
             "pattern": ".*治疗.*",
             "crop_ocr": true,
@@ -667,10 +667,10 @@
         "text_regions": [
           {
             "bounds": [
-              490,
+              450,
               680,
               590,
-              780
+              800
             ],
             "pattern": ".*治疗.*",
             "crop_ocr": true,

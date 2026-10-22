@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-calendar",
-  "action_version": "0.1.3",
+  "action_version": "0.1.4",
   "name": "VIP consecutive login calendar daily reward",
   "reference_size": [
     788,
@@ -119,7 +119,6 @@
         "all": [
           "VIP"
         ],
-        "page_text_regions": [],
         "text_regions": [
           {
             "bounds": [
@@ -146,14 +145,14 @@
         "text_regions": [
           {
             "bounds": [
-              160,
-              32,
-              255,
+              150,
+              35,
+              260,
               90
             ],
-            "pattern": "VIP",
+            "pattern": ".*VIP.*",
             "crop_ocr": true,
-            "min_confidence": 0.5
+            "min_confidence": 0.3
           }
         ]
       },
@@ -164,14 +163,14 @@
         "text_regions": [
           {
             "bounds": [
-              160,
-              32,
-              255,
+              150,
+              35,
+              260,
               90
             ],
-            "pattern": "VIP",
+            "pattern": ".*VIP.*",
             "crop_ocr": true,
-            "min_confidence": 0.5
+            "min_confidence": 0.3
           }
         ],
         "red_regions": [
@@ -201,14 +200,14 @@
         "text_regions": [
           {
             "bounds": [
-              160,
-              32,
-              255,
+              150,
+              35,
+              260,
               90
             ],
-            "pattern": "VIP",
+            "pattern": ".*VIP.*",
             "crop_ocr": true,
-            "min_confidence": 0.5
+            "min_confidence": 0.3
           }
         ],
         "red_regions": [
@@ -251,14 +250,14 @@
         "text_regions": [
           {
             "bounds": [
-              160,
-              32,
-              255,
+              150,
+              35,
+              260,
               90
             ],
-            "pattern": "VIP",
+            "pattern": ".*VIP.*",
             "crop_ocr": true,
-            "min_confidence": 0.5
+            "min_confidence": 0.3
           }
         ]
       },
@@ -274,14 +273,14 @@
         "text_regions": [
           {
             "bounds": [
-              160,
-              32,
-              255,
+              150,
+              35,
+              260,
               90
             ],
-            "pattern": "VIP",
+            "pattern": ".*VIP.*",
             "crop_ocr": true,
-            "min_confidence": 0.5
+            "min_confidence": 0.3
           }
         ],
         "red_regions": [
@@ -312,14 +311,14 @@
         "text_regions": [
           {
             "bounds": [
-              160,
-              32,
-              255,
+              150,
+              35,
+              260,
               90
             ],
-            "pattern": "VIP",
+            "pattern": ".*VIP.*",
             "crop_ocr": true,
-            "min_confidence": 0.5
+            "min_confidence": 0.3
           }
         ]
       },
@@ -418,14 +417,14 @@
           "text_regions": [
             {
               "bounds": [
-                160,
-                32,
-                255,
+                150,
+                35,
+                260,
                 90
               ],
-              "pattern": "VIP",
+              "pattern": ".*VIP.*",
               "crop_ocr": true,
-              "min_confidence": 0.5
+              "min_confidence": 0.3
             }
           ]
         },
@@ -451,7 +450,6 @@
           "all": [
             "VIP"
           ],
-          "page_text_regions": [],
           "text_regions": [
             {
               "bounds": [
@@ -491,14 +489,14 @@
           "text_regions": [
             {
               "bounds": [
-                160,
-                32,
-                255,
+                150,
+                35,
+                260,
                 90
               ],
-              "pattern": "VIP",
+              "pattern": ".*VIP.*",
               "crop_ocr": true,
-              "min_confidence": 0.5
+              "min_confidence": 0.3
             }
           ]
         },
@@ -577,5 +575,5 @@
     ]
   },
   "status": "candidate",
-  "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1. 0.1.3: VIPcalendar neednotread dailygifttext; RgiftOCR每圓 causedvip-open failure. Replaceunrelatedgiftcondition withscopedupperleftVIPheader, preservescalendarred/controlstates. ActualfailedVIPpositive+citybadge negative offline passed; nexttargetedreplaypending."
+  "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1. 0.1.3: VIPcalendar neednotread dailygifttext; RgiftOCR每圓 causedvip-open failure. Replaceunrelatedgiftcondition withscopedupperleftVIPheader, preservescalendarred/controlstates. ActualfailedVIPpositive+citybadge negative offline passed; nexttargetedreplaypending.; 0.1.4 remove illegal empty page_text_regions left by0.1.3; consistent cropped header across followup and exits. Earlier schema-check acceptance did not catch executor schema error; live pending."
 }
