@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.27",
+  "package_version": "0.12.28",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -238,11 +238,11 @@
     "island": {
       "path": "actions/wos-island.json",
       "action_id": "wos-island",
-      "action_version": "0.1.9",
-      "sha256": "8238a57b0041d8ad3667f838881baad8630845b1ccadeb21a275c382d078752d",
+      "action_version": "0.1.10",
+      "sha256": "472bf69a3c2f3f082afaf8bc40c0c891050bb9991e21320a53cbd6e86f289acf",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.6 main actual island entry/exit passed but tree inventory did not increase. a mature role entry sample hit CUA30second timeout with20keys;0.1.7 splits normalization into at most5keys per observed chunk. Independent development sample clicked lower-left orange bubble [372,344]:positive inventory delta, bubble disappeared. Collection point updated; inventory increase checks retained. This positive sample is not full macro replay;0.1.7 live replay pending. Other layouts still fail boundedly."
+      "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit."
     },
     "orders": {
       "path": "actions/wos-orders.json",

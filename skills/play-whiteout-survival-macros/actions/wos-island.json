@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.9",
+  "action_version": "0.1.10",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 360,
   "status": "candidate",
-  "verification_scope": "0.1.6 main actual island entry/exit passed but tree inventory did not increase. a mature role entry sample hit CUA30second timeout with20keys;0.1.7 splits normalization into at most5keys per observed chunk. Independent development sample clicked lower-left orange bubble [372,344]:positive inventory delta, bubble disappeared. Collection point updated; inventory increase checks retained. This positive sample is not full macro replay;0.1.7 live replay pending. Other layouts still fail boundedly.",
+  "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit.",
   "steps": [
     {
       "name": "01-check-city",
@@ -2194,6 +2194,57 @@
           "none": [
             "生命之树等级",
             "升级"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "完成任务后"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-unexpected-labyrinth-root",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": {
+          "all": [
+            "地心探险",
+            "群兽洞窟",
+            "宝石矿洞"
+          ],
+          "none": [
+            "扫荡奖励",
+            "首胜奖励"
           ]
         },
         "after": {
