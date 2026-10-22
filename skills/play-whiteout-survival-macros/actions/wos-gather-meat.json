@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-meat",
-  "action_version": "0.1.6",
+  "action_version": "0.1.7",
   "name": "WOS gather_meat",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior captured8-level search and ordinary dispatch. Current level retained; require exact无 occupier. At4+ marching slots keep room for intel. Target category must be visibly OCR-resolved; hidden category is a deviation, not a blind click. New role replay pending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. 2026-10-21 user policy: gathering carries no heroes. Added3 independently guarded red-minus removals and all3absent gate before dispatch; same-frame color samples0.835–0.85; live no-hero gathering branch pending. Do not treat historical hero-carrying dispatch as this version validation.",
+  "verification_scope": "0.12.30 candidate adds native Equalize before hero removal, preventing default allocation from consuming all low-level troops in first gather. Existing no-hero and dispatch checks remain. Known menu screenshot validates control; actual allocation and multi-resource replay pending. No formation save.",
   "steps": [
     {
       "name": "01-check-city",
@@ -395,6 +395,35 @@
         ]
       },
       "observe_attempts": 5
+    },
+    {
+      "name": "gather-equalize-troops",
+      "action": "click",
+      "point": [
+        260,
+        1022
+      ],
+      "before": {
+        "all": [
+          "士兵比例",
+          "平均配置"
+        ],
+        "none": [
+          "训练士兵"
+        ]
+      },
+      "after": {
+        "all": [
+          "士兵比例",
+          "平均配置"
+        ],
+        "none": [
+          "确定",
+          "取消",
+          "训练士兵"
+        ]
+      },
+      "observe_attempts": 3
     },
     {
       "name": "gather-remove-hero-1",
