@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.6",
+  "action_version": "0.2.7",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -2274,8 +2274,7 @@
       ],
       "after": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -2290,7 +2289,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "observe_attempts": 5,
       "skip_if_step_skipped": "legacy-cycle-0-beast-select"
@@ -2304,8 +2314,7 @@
       ],
       "before": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -2320,7 +2329,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "after": [
         "出征",
@@ -4315,7 +4335,7 @@
       }
     ]
   },
-  "verification_scope": "0.2.6 includes ordinarybeast0.1.7 observe-only spaced completion polling for the legacy UI; mature execute-all and event branches unchanged. Existing dispatch is never repeated while polling. Live low-level completion replay pending.",
+  "verification_scope": "0.2.7 regenerates ordinary NPC color-guard component0.1.8; bulk andeventfirebeast branches unchanged. Currentlowcropconfidencefailure positivevalidated; fulllegacycycle nexttarget pending.",
   "business_dependencies": [
     "City entry and exit; stamina meal uses lighthouse plus before this action",
     "Game execute-all handles ordinary intel; repeat after claim reveals queued tasks",
@@ -4326,8 +4346,8 @@
   "component_versions": {
     "beast": {
       "action_id": "wos-intel-beast",
-      "action_version": "0.1.7",
-      "sha256": "32ac0bfefc4ad53723b9449d3da9a55fdc40a8ea44dbfe540472ce78a5dd773e"
+      "action_version": "0.1.8",
+      "sha256": "e19b9105671c8ea1da9acb867672e3f99dba8cdec16d793384c6023bb84df9a0"
     },
     "rescue": {
       "action_id": "wos-intel-rescue",

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-coal",
-  "action_version": "0.1.13",
+  "action_version": "0.1.14",
   "name": "WOS gather_coal",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.12.30 candidate adds native Equalize before hero removal, preventing default allocation from consuming all low-level troops in first gather. Existing no-hero and dispatch checks remain. Known menu screenshot validates control; actual allocation and multi-resource replay pending. No formation save.",
+  "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained.",
   "steps": [
     {
       "name": "01-check-city",
@@ -750,35 +750,6 @@
       "observe_attempts": 5
     },
     {
-      "name": "gather-equalize-troops",
-      "action": "click",
-      "point": [
-        260,
-        1022
-      ],
-      "before": {
-        "all": [
-          "士兵比例",
-          "平均配置"
-        ],
-        "none": [
-          "训练士兵"
-        ]
-      },
-      "after": {
-        "all": [
-          "士兵比例",
-          "平均配置"
-        ],
-        "none": [
-          "确定",
-          "取消",
-          "训练士兵"
-        ]
-      },
-      "observe_attempts": 3
-    },
-    {
       "name": "gather-remove-hero-1",
       "action": "click",
       "point": [
@@ -1002,6 +973,35 @@
         ]
       },
       "observe_attempts": 5
+    },
+    {
+      "name": "gather-equalize-troops",
+      "action": "click",
+      "point": [
+        260,
+        1022
+      ],
+      "before": {
+        "all": [
+          "士兵比例",
+          "平均配置"
+        ],
+        "none": [
+          "训练士兵"
+        ]
+      },
+      "after": {
+        "all": [
+          "士兵比例",
+          "平均配置"
+        ],
+        "none": [
+          "确定",
+          "取消",
+          "训练士兵"
+        ]
+      },
+      "observe_attempts": 3
     },
     {
       "name": "gather-no-heroes-verified",
@@ -1520,5 +1520,8 @@
       }
     ]
   },
-  "overview_footer_compatibility": "Stable prefix supports both旧完成任务后是否隐藏 and新版完成任务后隐藏; only page-anchor semantics changed, not game strategy. Nextrole live pending."
+  "overview_footer_compatibility": "Stable prefix supports both旧完成任务后是否隐藏 and新版完成任务后隐藏; only page-anchor semantics changed, not game strategy. Nextrole live pending.",
+  "business_dependencies": [
+    "Hero removal can refill selected troops: remove all heroes -> Equalize -> verify no heroes -> dispatch. Do not commute these inner steps."
+  ]
 }

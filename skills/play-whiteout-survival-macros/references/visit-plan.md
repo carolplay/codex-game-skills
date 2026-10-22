@@ -139,11 +139,11 @@ UTC2026-10-20一班续跑验证：竞技场0.1.4新标题在低等级及两个�
 
 ## 当前线性动作列表与版本
 
-正式清单以catalog、actions与三份shift manifest为准；没有旧的默认六项/八项清单。当前包0.12.27，通用执行器最低0.3.3。主号与成熟角色清单相同；一班含VIP，二/三班不重复每日VIP。所有组合固定动作版本和SHA256，运行中的快照不热改。开发定向子集须标记targeted-development，不能冒充完整班次。
+正式清单以catalog、actions与三份shift manifest为准；没有旧的默认六项/八项清单。当前包0.12.31，通用执行器最低0.3.3。主号与成熟角色清单相同；一班含VIP，二/三班不重复每日VIP。所有组合固定动作版本和SHA256，运行中的快照不热改。开发定向子集须标记targeted-development，不能冒充完整班次。
 
 第三班成熟角色默认顺序（稳定段→开发/修复末段→daily；动作适用范围未减少）：
 
-mail → idle → feast → alliance → help → expert → refined → bank → shield → lancer → donate → pet_wolf → pet_badger → pet_deer → arena → orders → healing → alliance_incentive → npc_autojoin → academy → travel_idle → recruit → marksman → store_free → island → intel_cycle → gather_meat → gather_wood → gather_coal → gather_iron → pet_treasure_claim → pet_treasure_dispatch → pet_alliance_treasure → labyrinth → travel_idle_claim → war_academy_commission → crystal → enlistment → vip_calendar → daily。
+mail → idle → feast → alliance → help → expert → refined → bank → shield → lancer → donate → pet_wolf → pet_badger → pet_deer → arena → orders → healing → alliance_incentive → npc_autojoin → academy → travel_idle → recruit → marksman → intel_cycle → gather_meat → gather_wood → gather_coal → gather_iron → pet_treasure_claim → pet_treasure_dispatch → pet_alliance_treasure → labyrinth → travel_idle_claim → war_academy_commission → crystal → enlistment → vip_calendar → store_free → island → daily。
 
 每个动作统一从主城进入并返回主城，实际步骤与有界退出见对应JSON。每日任务领奖置尾，NPC自动加入/采集的行军位依赖显式维护。界面可组合不等于资源效果严格交换律。
 
@@ -161,3 +161,9 @@ mail → idle → feast → alliance → help → expert → refined → bank �
 - 已有开源bot的任务目录用于补漏，不照搬Android坐标或账号配置。
 
 本轮最新结案：主号地心0.1.2实际扫荡、领奖、返回主城通过；海岛0.1.6入口与退出通过但库存未增长。集结完成一次开发胜利采样；另一成熟角色0.1.0宏在搜索OCR与退出条件偏差停批，未派出。0.1.1离线修订待现场验，不重复失败角色或稳定整批；完整证据、版本和哈希留本地。锁屏持久关联仍未验收。 后续反方向的鸡集结0.1.1在分类定位偏差后两步恢复主城；海岛开发采样新热区实际领取并有库存正增量。包0.9.7包含集结0.1.2与海岛0.1.7待回放修订，未重复稳定任务。
+
+## 0.12.29—0.12.31定向修订
+
+捐献0.1.8以已知捐献页＋局部蓝/灰按钮判定重复点击，结尾才读取次数；成熟与低等级角色实际灰态及回城通过，不以按钮变灰推断40次日常已满。治疗0.1.2改用队列正文锚点；普通治疗、空队列分支均有现场证据。商店0.1.15仅修复新礼包页退出，入口仍偏差，不能写作免费箱已领取。日历0.1.2已在低等级VIP未激活状态实际打开、关闭并清除红点；VIP礼包不可领不等于日历不可用。
+
+0.12.30的低等级采集采样发现：先平均配置再移除英雄会自动重新填满兵力，导致末队缺兵。0.12.31改为移除英雄→平均配置→无英雄核验→派遣，四种资源动作分别升版；新顺序尚待实际回放，原始失败保留。普通灯塔野兽0.1.8、混合循环0.2.7将低置信“攻击”文字门槛改为NPC推荐实力、菜单内玩家控件排除与橙色按钮区域；保存的失败帧及负向条件离线通过，现场分支待验。颜色用于已知页面的局部状态，身份、数字、冷却和未知页仍使用文字；执行器仍有整帧OCR，尚非无OCR运行。

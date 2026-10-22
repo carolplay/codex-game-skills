@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-beast",
-  "action_version": "0.1.7",
+  "action_version": "0.1.8",
   "name": "WOS ordinary intelligence beast",
   "reference_size": [
     788,
@@ -422,8 +422,7 @@
       ],
       "after": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -438,7 +437,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "observe_attempts": 5
     },
@@ -451,8 +461,7 @@
       ],
       "before": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -467,7 +476,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "after": [
         "出征",
@@ -932,8 +952,7 @@
       ],
       "after": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -948,7 +967,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "observe_attempts": 5
     },
@@ -961,8 +991,7 @@
       ],
       "before": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -977,7 +1006,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "after": [
         "出征",
@@ -1442,8 +1482,7 @@
       ],
       "after": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -1458,7 +1497,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "observe_attempts": 5
     },
@@ -1471,8 +1521,7 @@
       ],
       "before": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -1487,7 +1536,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "after": [
         "出征",
@@ -1952,8 +2012,7 @@
       ],
       "after": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -1968,7 +2027,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "observe_attempts": 5
     },
@@ -1981,8 +2051,7 @@
       ],
       "before": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -1997,7 +2066,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "after": [
         "出征",
@@ -2462,8 +2542,7 @@
       ],
       "after": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -2478,7 +2557,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "observe_attempts": 5
     },
@@ -2491,8 +2581,7 @@
       ],
       "before": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -2507,7 +2596,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "after": [
         "出征",
@@ -2972,8 +3072,7 @@
       ],
       "after": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -2988,7 +3087,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "observe_attempts": 5
     },
@@ -3001,8 +3111,7 @@
       ],
       "before": {
         "all": [
-          "推荐实力",
-          "攻击"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -3017,7 +3126,18 @@
             590
           ]
         ],
-        "page_text_only": true
+        "page_text_only": true,
+        "red_regions": [
+          {
+            "bounds": [
+              320,
+              530,
+              470,
+              555
+            ],
+            "min": 0.35
+          }
+        ]
       },
       "after": [
         "出征",
@@ -3836,5 +3956,5 @@
       }
     ]
   },
-  "verification_scope": "0.1.7 spaces observe-only completion polling by5seconds, up to30reads and the existing total workflow deadline. Prior low-level dispatch returned to map while claim was still disabled0; fast repeated screenshots exhausted polling before arrival. No repeated dispatch; live return/claim verification pending."
+  "verification_scope": "0.1.8 candidate: ordinary NPC recommendation panel + calibrated orange/red attack region replace attack-word gate. Actual low-level crop reads attack at0.3confidence and prior page filter discards it; recommendation0.5 remains. Scoped player scout/occupy/rally exclusions retained. Saved failure positive/playercontrol negative; new dispatch/wait/claim replay pending."
 }

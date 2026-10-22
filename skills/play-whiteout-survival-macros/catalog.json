@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.30",
+  "package_version": "0.12.31",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -280,11 +280,11 @@
     "intel_beast": {
       "path": "actions/wos-intel-beast.json",
       "action_id": "wos-intel-beast",
-      "action_version": "0.1.7",
-      "sha256": "32ac0bfefc4ad53723b9449d3da9a55fdc40a8ea44dbfe540472ce78a5dd773e",
+      "action_version": "0.1.8",
+      "sha256": "e19b9105671c8ea1da9acb867672e3f99dba8cdec16d793384c6023bb84df9a0",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.7 spaces observe-only completion polling by5seconds, up to30reads and the existing total workflow deadline. Prior low-level dispatch returned to map while claim was still disabled0; fast repeated screenshots exhausted polling before arrival. No repeated dispatch; live return/claim verification pending.",
+      "verification_scope": "0.1.8 candidate: ordinary NPC recommendation panel + calibrated orange/red attack region replace attack-word gate. Actual low-level crop reads attack at0.3confidence and prior page filter discards it; recommendation0.5 remains. Scoped player scout/occupy/rally exclusions retained. Saved failure positive/playercontrol negative; new dispatch/wait/claim replay pending.",
       "category": "component",
       "include_in_daily": false,
       "production_replacement": "intel_cycle"
@@ -292,38 +292,38 @@
     "gather_meat": {
       "path": "actions/wos-gather-meat.json",
       "action_id": "wos-gather-meat",
-      "action_version": "0.1.7",
-      "sha256": "683d8ffb5226e6bdcc536958a6caa773c075967a9878cacb33458d6e95fa05da",
+      "action_version": "0.1.8",
+      "sha256": "58e153b0b13f7c36cface06abe95fc76d274c1cb0591c3aed0ffe11c7df85aa8",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.30 candidate adds native Equalize before hero removal, preventing default allocation from consuming all low-level troops in first gather. Existing no-hero and dispatch checks remain. Known menu screenshot validates control; actual allocation and multi-resource replay pending. No formation save."
+      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained."
     },
     "gather_wood": {
       "path": "actions/wos-gather-wood.json",
       "action_id": "wos-gather-wood",
-      "action_version": "0.1.10",
-      "sha256": "a8f7414e34db60143e549a596a15bbba22c3e377b0e6d10286f3586f051b605a",
+      "action_version": "0.1.11",
+      "sha256": "1e7f8fe98c25b4936ea30e19bb22316d1e0c98803a33324c77cc2b871d9c3053",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.30 candidate adds native Equalize before hero removal, preventing default allocation from consuming all low-level troops in first gather. Existing no-hero and dispatch checks remain. Known menu screenshot validates control; actual allocation and multi-resource replay pending. No formation save."
+      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained."
     },
     "gather_coal": {
       "path": "actions/wos-gather-coal.json",
       "action_id": "wos-gather-coal",
-      "action_version": "0.1.13",
-      "sha256": "737f51edadc7bbfe7050c7aeae93f0388983858ae70436a5ee8bcc4febf3b3a9",
+      "action_version": "0.1.14",
+      "sha256": "f5362339bf212b39e156bd004d984ad8c862c6052c94183a51d3ea8dfed3f485",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.30 candidate adds native Equalize before hero removal, preventing default allocation from consuming all low-level troops in first gather. Existing no-hero and dispatch checks remain. Known menu screenshot validates control; actual allocation and multi-resource replay pending. No formation save."
+      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained."
     },
     "gather_iron": {
       "path": "actions/wos-gather-iron.json",
       "action_id": "wos-gather-iron",
-      "action_version": "0.1.13",
-      "sha256": "ba91c0a59e3b612fe19afccc9813ff788c363756e06ac791a584c272d9ce7dcc",
+      "action_version": "0.1.14",
+      "sha256": "7f3cabfcad48632da288c6bd40f6f76c92b8c7cb320338706442557c27ebdbae",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.30 candidate adds native Equalize before hero removal, preventing default allocation from consuming all low-level troops in first gather. Existing no-hero and dispatch checks remain. Known menu screenshot validates control; actual allocation and multi-resource replay pending. No formation save."
+      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained."
     },
     "healing": {
       "path": "actions/wos-healing.json",
@@ -460,11 +460,11 @@
     "intel_cycle": {
       "path": "actions/wos-intel-cycle.json",
       "action_id": "wos-intel-cycle",
-      "action_version": "0.2.6",
-      "sha256": "c78cd4381d1316c2ab6f390fdb7e6ae0654cc151d09aeb0ebc2aaf7978165543",
+      "action_version": "0.2.7",
+      "sha256": "9955f50fc0696e110db0d97bec918cf90344c9ae0c6ad1889b497bd550b0ceb4",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.2.6 includes ordinarybeast0.1.7 observe-only spaced completion polling for the legacy UI; mature execute-all and event branches unchanged. Existing dispatch is never repeated while polling. Live low-level completion replay pending."
+      "verification_scope": "0.2.7 regenerates ordinary NPC color-guard component0.1.8; bulk andeventfirebeast branches unchanged. Currentlowcropconfidencefailure positivevalidated; fulllegacycycle nexttarget pending."
     },
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
