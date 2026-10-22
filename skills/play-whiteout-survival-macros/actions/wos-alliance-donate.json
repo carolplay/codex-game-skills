@@ -1,6 +1,6 @@
 {
   "action_id": "wos-alliance-donate",
-  "action_version": "0.1.7",
+  "action_version": "0.1.8",
   "name": "WOS — recommended alliance tech, at most25 ordinary-resource donations (1250 or10000), no gems",
   "reference_size": [
     788,
@@ -200,58 +200,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -266,58 +246,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -332,58 +292,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -398,58 +338,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -464,103 +384,42 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
           "捐献奖励"
-        ],
-        "any": [
-          "次数",
-          "点累了"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
       "observe_attempts": 3
-    },
-    {
-      "name": "dismiss-known-longpress-tip",
-      "action": "click",
-      "point": [
-        385,
-        300
-      ],
-      "before": [
-        "捐献奖励",
-        "点累了"
-      ],
-      "skip_if": {
-        "all": [
-          "捐献奖励"
-        ],
-        "none": [
-          "点累了"
-        ]
-      },
-      "after": {
-        "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          },
-          {
-            "bounds": [
-              490,
-              875,
-              600,
-              907
-            ],
-            "pattern": ">?[1-9][0-9,]*",
-            "min_confidence": 0.3,
-            "crop_ocr": true
-          }
-        ]
-      },
-      "observe_attempts": 5
     },
     {
       "name": "ordinary-donate-06",
@@ -571,58 +430,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -637,58 +476,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -703,58 +522,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -769,58 +568,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -835,58 +614,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -901,58 +660,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -967,58 +706,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1033,58 +752,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1099,58 +798,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1165,58 +844,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1231,58 +890,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1297,58 +936,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1363,58 +982,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1429,58 +1028,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1495,58 +1074,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1561,58 +1120,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1627,58 +1166,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1693,58 +1212,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1759,58 +1258,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1825,58 +1304,38 @@
       ],
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?(?:[1-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "min": 0.5
           }
         ]
       },
       "after": {
         "all": [
-          "捐献奖励",
-          "次数"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              440,
-              795,
-              600,
-              840
-            ],
-            "pattern": "(?:次数:)?(?:[0-9]|1[0-9]|2[0-5])/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
+          "捐献奖励"
         ]
       },
       "skip_if": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
         ]
       },
@@ -1887,21 +1346,26 @@
       "action": "observe",
       "before": {
         "all": [
-          "捐献奖励",
-          "次数"
+          "捐献奖励"
         ],
-        "text_regions": [
+        "blue_regions": [
           {
             "bounds": [
-              440,
-              795,
-              600,
-              840
+              570,
+              850,
+              610,
+              868
             ],
-            "pattern": "(?:次数:)?0/25",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "max": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            440,
+            795,
+            600,
+            840
+          ]
         ]
       },
       "unchanged_numbers": [
@@ -2172,7 +1636,7 @@
     ]
   },
   "status": "partial_verified",
-  "verification_scope": "0.1.7 removes exact ordinary-resource amount OCR as an input gate: transient reward overlays make the same numeric cost unreadable. Donation page title, regional remaining count, fixed ordinary donation target, post-click count, gems telemetry, bounded exits and 240-second budget retained. Saved positive/negative frames tested; live replay pending.",
+  "verification_scope": "0.1.8 candidate: known donation page + fixed right ordinary-resource blue/gray button controls bounded25clicks. Ignore sticky longpress tooltip; counter OCR logged once at completion rather than gating every click. Final ordinary button disabled and gems unchanged required; disabled may also mean resource shortage, so actual daily count needs audit. Saved frames validated, live pending.",
   "execution_timeout_seconds": 240,
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

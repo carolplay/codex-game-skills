@@ -1,13 +1,13 @@
 {
   "action_id": "wos-store-free",
-  "action_version": "0.1.14",
+  "action_version": "0.1.15",
   "name": "WOS store_free",
   "reference_size": [
     788,
     1079
   ],
   "status": "candidate",
-  "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates. Mainstore1.6 failedbeforeclaim because observed LordStaminaPack lacks storeheading. Knownpack body/back sampled; close/reopen returned firstArtisan tab with cooldown. Nextrevision boundedone normalization reopen plus scopedbodytitle/globalrewardabsence; nextrole only, no same-roleclaimretry. Nextdraft makesstore/root exclusion exactcomplement ofdeclaredrewardexit labels, so backgroundstoretitle cannot create ambiguousexit underrewardoverlay. New currentstoreheader匠心自选 was falsely rejected aftervalidreopen; accepts explicitbodytitle andsamefreeboxlabel/ROI. Only currentpage freebox; not proof allstoretabs claimed. Nextrole replay pending. Previouspatch extendedtitlelist but missed duplicatedcroppedbodyregex. Allbodyregex nowincludechoicepage consistently; offlinefailedframe predicate toverify, nextrole only. New recorded campaign title supported: free chest remains at known upper-right slot; replay pending next role. 0.1.11 actual new-campaign chest opened and cooldown visible, but cursor at prior claim point occluded HH:MM:SS;0.1.12 clicks chest upper area230 rather than timer262. Next role pending; no repeat claim on failed role. Current role opens remembered Daily Specials tab; back/reopen preserves it. Replace ineffective reopen with6bounded left-neighbor tab selections inside known store header, skip as soon as known free-campaign title matches. Existing freebox position/title/cooldown checks retained; unknown page exits without claim. Next applicable role pending.",
+  "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -1190,7 +1190,8 @@
             "工匠的宝库",
             "曙光市集",
             "匠心自选",
-            "曙光智慧"
+            "曙光智慧",
+            "科技风暴礼包"
           ],
           "none": [
             "获得奖励",

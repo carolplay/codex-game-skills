@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.28",
-  "package_version": "0.12.28",
+  "macro_version": "0.12.29",
+  "package_version": "0.12.29",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -74,8 +74,8 @@
         {
           "task": "donate",
           "action_id": "wos-alliance-donate",
-          "action_version": "0.1.7",
-          "sha256": "a5e8bbc7f7bee1fe78abc6235bfa91c56d4a4b86a81a73ccfb939af2aeb5fdb2"
+          "action_version": "0.1.8",
+          "sha256": "afc344c13e463e30a69d124f43e97573158f862a27750ae2682e77995d0c93ef"
         },
         {
           "task": "pet_wolf",
@@ -110,8 +110,8 @@
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.1",
-          "sha256": "3cfba894868fd41d734eaa2b57ae269cdd2ca95532cdca36c4c21675391740e6"
+          "action_version": "0.1.2",
+          "sha256": "4ea6fabbf7ed15290e996c9076d73f3c984068428c75eae1d5ddf1f2f01e8b9d"
         },
         {
           "task": "alliance_incentive",
@@ -148,12 +148,6 @@
           "action_id": "wos-training-marksman",
           "action_version": "0.3.4",
           "sha256": "a8a362bafa2b3536a13d2c201bc2922527a222c4ab045d58f3d296d13a6dde10"
-        },
-        {
-          "task": "store_free",
-          "action_id": "wos-store-free",
-          "action_version": "0.1.14",
-          "sha256": "a0efee24691f34dd8fd8d96b081b7dcd46215fa65c392e2aabc9e064e8c6a663"
         },
         {
           "task": "intel_cycle",
@@ -238,6 +232,12 @@
           "action_id": "wos-vip-calendar",
           "action_version": "0.1.2",
           "sha256": "9507f567bd082b91aeb1d8b755a4de7b23df1084a694252cd02c9cfb543cd41a"
+        },
+        {
+          "task": "store_free",
+          "action_id": "wos-store-free",
+          "action_version": "0.1.15",
+          "sha256": "a0331577039c4331228550395c028fffddf9fcc6400820ec2ed82130e17a163b"
         },
         {
           "task": "island",
@@ -328,8 +328,8 @@
         {
           "task": "donate",
           "action_id": "wos-alliance-donate",
-          "action_version": "0.1.7",
-          "sha256": "a5e8bbc7f7bee1fe78abc6235bfa91c56d4a4b86a81a73ccfb939af2aeb5fdb2"
+          "action_version": "0.1.8",
+          "sha256": "afc344c13e463e30a69d124f43e97573158f862a27750ae2682e77995d0c93ef"
         },
         {
           "task": "pet_wolf",
@@ -364,8 +364,8 @@
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.1",
-          "sha256": "3cfba894868fd41d734eaa2b57ae269cdd2ca95532cdca36c4c21675391740e6"
+          "action_version": "0.1.2",
+          "sha256": "4ea6fabbf7ed15290e996c9076d73f3c984068428c75eae1d5ddf1f2f01e8b9d"
         },
         {
           "task": "alliance_incentive",
@@ -402,12 +402,6 @@
           "action_id": "wos-training-marksman",
           "action_version": "0.3.4",
           "sha256": "a8a362bafa2b3536a13d2c201bc2922527a222c4ab045d58f3d296d13a6dde10"
-        },
-        {
-          "task": "store_free",
-          "action_id": "wos-store-free",
-          "action_version": "0.1.14",
-          "sha256": "a0efee24691f34dd8fd8d96b081b7dcd46215fa65c392e2aabc9e064e8c6a663"
         },
         {
           "task": "intel_cycle",
@@ -494,6 +488,12 @@
           "sha256": "9507f567bd082b91aeb1d8b755a4de7b23df1084a694252cd02c9cfb543cd41a"
         },
         {
+          "task": "store_free",
+          "action_id": "wos-store-free",
+          "action_version": "0.1.15",
+          "sha256": "a0331577039c4331228550395c028fffddf9fcc6400820ec2ed82130e17a163b"
+        },
+        {
           "task": "island",
           "action_id": "wos-island",
           "action_version": "0.1.10",
@@ -570,8 +570,8 @@
         {
           "task": "donate",
           "action_id": "wos-alliance-donate",
-          "action_version": "0.1.7",
-          "sha256": "a5e8bbc7f7bee1fe78abc6235bfa91c56d4a4b86a81a73ccfb939af2aeb5fdb2"
+          "action_version": "0.1.8",
+          "sha256": "afc344c13e463e30a69d124f43e97573158f862a27750ae2682e77995d0c93ef"
         },
         {
           "task": "pet_wolf",
@@ -588,8 +588,8 @@
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.1",
-          "sha256": "3cfba894868fd41d734eaa2b57ae269cdd2ca95532cdca36c4c21675391740e6"
+          "action_version": "0.1.2",
+          "sha256": "4ea6fabbf7ed15290e996c9076d73f3c984068428c75eae1d5ddf1f2f01e8b9d"
         },
         {
           "task": "alliance_incentive",
@@ -614,12 +614,6 @@
           "action_id": "wos-training-marksman",
           "action_version": "0.3.4",
           "sha256": "a8a362bafa2b3536a13d2c201bc2922527a222c4ab045d58f3d296d13a6dde10"
-        },
-        {
-          "task": "store_free",
-          "action_id": "wos-store-free",
-          "action_version": "0.1.14",
-          "sha256": "a0efee24691f34dd8fd8d96b081b7dcd46215fa65c392e2aabc9e064e8c6a663"
         },
         {
           "task": "intel_cycle",
@@ -686,6 +680,12 @@
           "action_id": "wos-vip-calendar",
           "action_version": "0.1.2",
           "sha256": "9507f567bd082b91aeb1d8b755a4de7b23df1084a694252cd02c9cfb543cd41a"
+        },
+        {
+          "task": "store_free",
+          "action_id": "wos-store-free",
+          "action_version": "0.1.15",
+          "sha256": "a0331577039c4331228550395c028fffddf9fcc6400820ec2ed82130e17a163b"
         },
         {
           "task": "island",

@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.28",
+  "package_version": "0.12.29",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -97,11 +97,11 @@
     "donate": {
       "path": "actions/wos-alliance-donate.json",
       "action_id": "wos-alliance-donate",
-      "action_version": "0.1.7",
-      "sha256": "a5e8bbc7f7bee1fe78abc6235bfa91c56d4a4b86a81a73ccfb939af2aeb5fdb2",
+      "action_version": "0.1.8",
+      "sha256": "afc344c13e463e30a69d124f43e97573158f862a27750ae2682e77995d0c93ef",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.7 removes exact ordinary-resource amount OCR as an input gate: transient reward overlays make the same numeric cost unreadable. Donation page title, regional remaining count, fixed ordinary donation target, post-click count, gems telemetry, bounded exits and 240-second budget retained. Saved positive/negative frames tested; live replay pending. 0.1.7 live lower-level role completed25 actual ordinary donations to0/25, unchanged gem count and city exit; this does not imply daily40-count target complete.",
+      "verification_scope": "0.1.8 candidate: known donation page + fixed right ordinary-resource blue/gray button controls bounded25clicks. Ignore sticky longpress tooltip; counter OCR logged once at completion rather than gating every click. Final ordinary button disabled and gems unchanged required; disabled may also mean resource shortage, so actual daily count needs audit. Saved frames validated, live pending.",
       "current_evidence_note": "第三班成熟试验角色A自然恢复次数至0整宏通过；成熟试验角色B第五次点击后出现点累了/试试长按操作吧提示，遮挡次数，原宏已三层退出。下一版仅识别该提示后点击无业务控件的说明空白区，再读次数；不重复捐献点击。新提示分支待下班验证。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -220,11 +220,11 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.14",
-      "sha256": "a0efee24691f34dd8fd8d96b081b7dcd46215fa65c392e2aabc9e064e8c6a663",
+      "action_version": "0.1.15",
+      "sha256": "a0331577039c4331228550395c028fffddf9fcc6400820ec2ed82130e17a163b",
       "period": "day",
       "utility": false,
-      "verification_scope": "Cashstore cart entered; main rememberedtabs recovered. Othermature role曙光市集 freechest actuallyclaimed100diamonds but cooldown croppedwrong; nextrevision scopes bodytitles, exact可领取 and covers both timerpositions. Generic储值中心 back recovery. Newrole replay pending; no purchase buttons. Nextrevision extends可领取crop to325 and removes duplicate identicalrootexit that made recoveryambiguous. Failedrole not retried; nextrole validates. Mainstore1.6 failedbeforeclaim because observed LordStaminaPack lacks storeheading. Knownpack body/back sampled; close/reopen returned firstArtisan tab with cooldown. Nextrevision boundedone normalization reopen plus scopedbodytitle/globalrewardabsence; nextrole only, no same-roleclaimretry. Nextdraft makesstore/root exclusion exactcomplement ofdeclaredrewardexit labels, so backgroundstoretitle cannot create ambiguousexit underrewardoverlay. New currentstoreheader匠心自选 was falsely rejected aftervalidreopen; accepts explicitbodytitle andsamefreeboxlabel/ROI. Only currentpage freebox; not proof allstoretabs claimed. Nextrole replay pending. Previouspatch extendedtitlelist but missed duplicatedcroppedbodyregex. Allbodyregex nowincludechoicepage consistently; offlinefailedframe predicate toverify, nextrole only. New recorded campaign title supported: free chest remains at known upper-right slot; replay pending next role. 0.1.11 actual new-campaign chest opened and cooldown visible, but cursor at prior claim point occluded HH:MM:SS;0.1.12 clicks chest upper area230 rather than timer262. Next role pending; no repeat claim on failed role. Current role opens remembered Daily Specials tab; back/reopen preserves it. Replace ineffective reopen with6bounded left-neighbor tab selections inside known store header, skip as soon as known free-campaign title matches. Existing freebox position/title/cooldown checks retained; unknown page exits without claim. Next applicable role pending. 0.1.13 secondshift: low current known campaign actual claim/cooldown/city passed; normalization left-tab branch skipped, not liveverified.0.1.14 candidate: saved tabstrip has currentselected tile at205, only previous neighbor edge at130; repeated205 selectedsame tile. Move bounded navigation to visible leftneighbor edge, header and known freebox campaign predicates remain. No cash region changes; next applicable run pending."
+      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending."
     },
     "arena": {
       "path": "actions/wos-arena.json",
@@ -328,11 +328,11 @@
     "healing": {
       "path": "actions/wos-healing.json",
       "action_id": "wos-healing",
-      "action_version": "0.1.1",
-      "sha256": "3cfba894868fd41d734eaa2b57ae269cdd2ca95532cdca36c4c21675391740e6",
+      "action_version": "0.1.2",
+      "sha256": "4ea6fabbf7ed15290e996c9076d73f3c984068428c75eae1d5ddf1f2f01e8b9d",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Prior captured134 wounded ordinary treatment,6min17 timer. Never left diamond immediate finish. Research-area camera and running/empty branches pending current role replay."
+      "verification_scope": "0.1.2 candidate: overview small daily tab misread; town aftercondition uses actual three camp labels, general overview accepts known queue headers. Saved failedframe positive and citynegative checked. No research/building upgrade input; live nextrole pending."
     },
     "enlistment": {
       "path": "actions/wos-enlistment.json",

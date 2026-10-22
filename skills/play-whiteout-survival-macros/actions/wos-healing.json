@@ -1,6 +1,6 @@
 {
   "action_id": "wos-healing",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS healing",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior captured134 wounded ordinary treatment,6min17 timer. Never left diamond immediate finish. Research-area camera and running/empty branches pending current role replay.",
+  "verification_scope": "0.1.2 candidate: overview small daily tab misread; town aftercondition uses actual three camp labels, general overview accepts known queue headers. Saved failedframe positive and citynegative checked. No research/building upgrade input; live nextrole pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -135,7 +135,11 @@
         "any": [
           "城镇",
           "日常",
-          "完成任务后"
+          "完成任务后",
+          "建筑队列",
+          "建造队列",
+          "部队训练",
+          "科技研究"
         ],
         "page_text_regions": [
           [
@@ -164,7 +168,11 @@
         "any": [
           "城镇",
           "日常",
-          "完成任务后"
+          "完成任务后",
+          "建筑队列",
+          "建造队列",
+          "部队训练",
+          "科技研究"
         ],
         "page_text_regions": [
           [
@@ -175,26 +183,11 @@
           ]
         ]
       },
-      "after": {
-        "all": [
-          "英雄",
-          "背包",
-          "野外"
-        ],
-        "any": [
-          "城镇",
-          "日常",
-          "完成任务后"
-        ],
-        "page_text_regions": [
-          [
-            100,
-            995,
-            690,
-            1079
-          ]
-        ]
-      },
+      "after": [
+        "盾兵",
+        "矛兵",
+        "射手"
+      ],
       "observe_attempts": 5
     },
     {
@@ -212,7 +205,11 @@
         "any": [
           "城镇",
           "日常",
-          "完成任务后"
+          "完成任务后",
+          "建筑队列",
+          "建造队列",
+          "部队训练",
+          "科技研究"
         ],
         "page_text_regions": [
           [
@@ -232,7 +229,11 @@
         "any": [
           "城镇",
           "日常",
-          "完成任务后"
+          "完成任务后",
+          "建筑队列",
+          "建造队列",
+          "部队训练",
+          "科技研究"
         ],
         "page_text_regions": [
           [
@@ -262,7 +263,11 @@
         "any": [
           "城镇",
           "日常",
-          "完成任务后"
+          "完成任务后",
+          "建筑队列",
+          "建造队列",
+          "部队训练",
+          "科技研究"
         ],
         "page_text_regions": [
           [
@@ -282,7 +287,11 @@
         "any": [
           "城镇",
           "日常",
-          "完成任务后"
+          "完成任务后",
+          "建筑队列",
+          "建造队列",
+          "部队训练",
+          "科技研究"
         ],
         "page_text_regions": [
           [
@@ -312,7 +321,11 @@
         "any": [
           "城镇",
           "日常",
-          "完成任务后"
+          "完成任务后",
+          "建筑队列",
+          "建造队列",
+          "部队训练",
+          "科技研究"
         ],
         "page_text_regions": [
           [
@@ -332,7 +345,11 @@
         "any": [
           "城镇",
           "日常",
-          "完成任务后"
+          "完成任务后",
+          "建筑队列",
+          "建造队列",
+          "部队训练",
+          "科技研究"
         ],
         "page_text_regions": [
           [
@@ -362,7 +379,11 @@
         "any": [
           "城镇",
           "日常",
-          "完成任务后"
+          "完成任务后",
+          "建筑队列",
+          "建造队列",
+          "部队训练",
+          "科技研究"
         ],
         "page_text_regions": [
           [
@@ -382,7 +403,11 @@
         "any": [
           "城镇",
           "日常",
-          "完成任务后"
+          "完成任务后",
+          "建筑队列",
+          "建造队列",
+          "部队训练",
+          "科技研究"
         ],
         "page_text_regions": [
           [
@@ -833,7 +858,11 @@
           "any": [
             "城镇",
             "日常",
-            "完成任务后"
+            "完成任务后",
+            "建筑队列",
+            "建造队列",
+            "部队训练",
+            "科技研究"
           ],
           "page_text_regions": [
             [
