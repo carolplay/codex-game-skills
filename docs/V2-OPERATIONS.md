@@ -43,3 +43,7 @@ V1离线追踪继续按正式run_id报告收尾，缺正式报告进入followups
 ## 当前授权与开发模式
 
 2026-10-21用户更新：以[项目沙盒背景](PROJECT-CONTEXT.md)为准，取消旧版仅观察、禁止补做和禁止同轮复测的开发限制。游戏资源预算是策略参数；可按试验需要调整并记录，不额外申请游戏审批。
+
+## 双日猎熊与采集英雄
+
+2026-10-21用户指定普通采集不带英雄，保留战斗编队可用。双日猎熊America/Vancouver17:55准备、18:00开始，具体锚点与排程记录local-data/orchestration/bear-hunt-recurring.json；不替代三班。仅用现有Bea开5分钟集结，回城后继续；只要界面允许直接开，不按剩余时间计算跳过末轮。用户确认最近一场末轮赶上，与模型未刷到第四条战报分别记录。规格见skills/play-whiteout-survival-macros/references/bear-hunt.md。
