@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-iron",
-  "action_version": "0.1.14",
+  "action_version": "0.1.15",
   "name": "WOS gather_iron",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained.",
+  "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -150,6 +150,51 @@
         ]
       },
       "observe_attempts": 5
+    },
+    {
+      "name": "gather-check-march-capacity",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "行军"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              190,
+              320,
+              250
+            ],
+            "pattern": "([1-6])/\\1",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
     },
     {
       "name": "open-resource-search",
@@ -1385,8 +1430,8 @@
         "name": "exit-site-over-search",
         "action": "click",
         "point": [
-          600,
-          650
+          138,
+          65
         ],
         "before": {
           "all": [
@@ -1397,23 +1442,17 @@
             "出征"
           ]
         },
-        "after": {
-          "all": [
-            "搜索"
-          ],
-          "none": [
-            "采集者",
-            "出征"
-          ]
-        },
+        "after": [
+          "领主档案"
+        ],
         "observe_attempts": 5
       },
       {
         "name": "exit-site-without-search",
         "action": "click",
         "point": [
-          600,
-          650
+          138,
+          65
         ],
         "before": {
           "all": [
@@ -1424,29 +1463,9 @@
             "出征"
           ]
         },
-        "after": {
-          "all": [
-            "英雄",
-            "背包",
-            "城镇"
-          ],
-          "none": [
-            "搜索",
-            "采集者",
-            "小队设置",
-            "出征",
-            "获得奖励",
-            "提示"
-          ],
-          "page_text_regions": [
-            [
-              100,
-              995,
-              690,
-              1079
-            ]
-          ]
-        },
+        "after": [
+          "领主档案"
+        ],
         "observe_attempts": 5
       },
       {
@@ -1462,8 +1481,16 @@
         "after": {
           "all": [
             "英雄",
-            "背包",
+            "背包"
+          ],
+          "any": [
+            "城镇",
             "野外"
+          ],
+          "none": [
+            "领主档案",
+            "搜索",
+            "采集者"
           ],
           "page_text_regions": [
             [
@@ -1562,8 +1589,8 @@
         "name": "exit-search-or-site",
         "action": "click",
         "point": [
-          600,
-          650
+          138,
+          65
         ],
         "before": {
           "all": [
@@ -1574,29 +1601,9 @@
             "采集者"
           ]
         },
-        "after": {
-          "all": [
-            "英雄",
-            "背包",
-            "城镇"
-          ],
-          "none": [
-            "搜索",
-            "采集者",
-            "小队设置",
-            "出征",
-            "获得奖励",
-            "提示"
-          ],
-          "page_text_regions": [
-            [
-              100,
-              995,
-              690,
-              1079
-            ]
-          ]
-        },
+        "after": [
+          "领主档案"
+        ],
         "observe_attempts": 5
       },
       {

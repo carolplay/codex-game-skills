@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.33",
-  "package_version": "0.12.33",
+  "macro_version": "0.12.34",
+  "package_version": "0.12.34",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -122,8 +122,8 @@
         {
           "task": "npc_autojoin",
           "action_id": "wos-npc-autojoin",
-          "action_version": "0.1.3",
-          "sha256": "ba83b6ef20a18252ddf0208465504a8dd60b6d898dd62cc4a9eb68bed21142f0"
+          "action_version": "0.1.4",
+          "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73"
         },
         {
           "task": "academy",
@@ -158,26 +158,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.8",
-          "sha256": "58e153b0b13f7c36cface06abe95fc76d274c1cb0591c3aed0ffe11c7df85aa8"
+          "action_version": "0.1.9",
+          "sha256": "8eafc1a12e535577e1da2d21db09e31d5fdf7d59d38273aadcbd9e9355a8326a"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.11",
-          "sha256": "1e7f8fe98c25b4936ea30e19bb22316d1e0c98803a33324c77cc2b871d9c3053"
+          "action_version": "0.1.12",
+          "sha256": "7ce5783d30ba6c091c78ee42ddf45d62f688534a3962aea9780da33ff277b12a"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.14",
-          "sha256": "f5362339bf212b39e156bd004d984ad8c862c6052c94183a51d3ea8dfed3f485"
+          "action_version": "0.1.15",
+          "sha256": "3560f70aeee8c81a4c442694bf32514552216c7bd398ca937f1a3d76ed90e0ec"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.14",
-          "sha256": "7f3cabfcad48632da288c6bd40f6f76c92b8c7cb320338706442557c27ebdbae"
+          "action_version": "0.1.15",
+          "sha256": "52d1ef8b47aab9a9d4381eb45ce62d6c2bddc0b81e14282d15d7fb8e6cbdcc32"
         },
         {
           "task": "pet_treasure_claim",
@@ -244,6 +244,12 @@
           "action_id": "wos-island",
           "action_version": "0.1.10",
           "sha256": "472bf69a3c2f3f082afaf8bc40c0c891050bb9991e21320a53cbd6e86f289acf"
+        },
+        {
+          "task": "warehouse",
+          "action_id": "wos-warehouse-supply",
+          "action_version": "0.1.0",
+          "sha256": "99187b7c86c1eb91e26945197742aa67472f17cc5746ca15f92024d2b2ac9a79"
         },
         {
           "task": "daily",
@@ -376,8 +382,8 @@
         {
           "task": "npc_autojoin",
           "action_id": "wos-npc-autojoin",
-          "action_version": "0.1.3",
-          "sha256": "ba83b6ef20a18252ddf0208465504a8dd60b6d898dd62cc4a9eb68bed21142f0"
+          "action_version": "0.1.4",
+          "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73"
         },
         {
           "task": "academy",
@@ -412,26 +418,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.8",
-          "sha256": "58e153b0b13f7c36cface06abe95fc76d274c1cb0591c3aed0ffe11c7df85aa8"
+          "action_version": "0.1.9",
+          "sha256": "8eafc1a12e535577e1da2d21db09e31d5fdf7d59d38273aadcbd9e9355a8326a"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.11",
-          "sha256": "1e7f8fe98c25b4936ea30e19bb22316d1e0c98803a33324c77cc2b871d9c3053"
+          "action_version": "0.1.12",
+          "sha256": "7ce5783d30ba6c091c78ee42ddf45d62f688534a3962aea9780da33ff277b12a"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.14",
-          "sha256": "f5362339bf212b39e156bd004d984ad8c862c6052c94183a51d3ea8dfed3f485"
+          "action_version": "0.1.15",
+          "sha256": "3560f70aeee8c81a4c442694bf32514552216c7bd398ca937f1a3d76ed90e0ec"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.14",
-          "sha256": "7f3cabfcad48632da288c6bd40f6f76c92b8c7cb320338706442557c27ebdbae"
+          "action_version": "0.1.15",
+          "sha256": "52d1ef8b47aab9a9d4381eb45ce62d6c2bddc0b81e14282d15d7fb8e6cbdcc32"
         },
         {
           "task": "pet_treasure_claim",
@@ -498,6 +504,12 @@
           "action_id": "wos-island",
           "action_version": "0.1.10",
           "sha256": "472bf69a3c2f3f082afaf8bc40c0c891050bb9991e21320a53cbd6e86f289acf"
+        },
+        {
+          "task": "warehouse",
+          "action_id": "wos-warehouse-supply",
+          "action_version": "0.1.0",
+          "sha256": "99187b7c86c1eb91e26945197742aa67472f17cc5746ca15f92024d2b2ac9a79"
         },
         {
           "task": "daily",
@@ -600,8 +612,8 @@
         {
           "task": "npc_autojoin",
           "action_id": "wos-npc-autojoin",
-          "action_version": "0.1.3",
-          "sha256": "ba83b6ef20a18252ddf0208465504a8dd60b6d898dd62cc4a9eb68bed21142f0"
+          "action_version": "0.1.4",
+          "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73"
         },
         {
           "task": "recruit",
@@ -624,26 +636,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.8",
-          "sha256": "58e153b0b13f7c36cface06abe95fc76d274c1cb0591c3aed0ffe11c7df85aa8"
+          "action_version": "0.1.9",
+          "sha256": "8eafc1a12e535577e1da2d21db09e31d5fdf7d59d38273aadcbd9e9355a8326a"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.11",
-          "sha256": "1e7f8fe98c25b4936ea30e19bb22316d1e0c98803a33324c77cc2b871d9c3053"
+          "action_version": "0.1.12",
+          "sha256": "7ce5783d30ba6c091c78ee42ddf45d62f688534a3962aea9780da33ff277b12a"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.14",
-          "sha256": "f5362339bf212b39e156bd004d984ad8c862c6052c94183a51d3ea8dfed3f485"
+          "action_version": "0.1.15",
+          "sha256": "3560f70aeee8c81a4c442694bf32514552216c7bd398ca937f1a3d76ed90e0ec"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.14",
-          "sha256": "7f3cabfcad48632da288c6bd40f6f76c92b8c7cb320338706442557c27ebdbae"
+          "action_version": "0.1.15",
+          "sha256": "52d1ef8b47aab9a9d4381eb45ce62d6c2bddc0b81e14282d15d7fb8e6cbdcc32"
         },
         {
           "task": "pet_treasure_claim",
@@ -692,6 +704,12 @@
           "action_id": "wos-island",
           "action_version": "0.1.10",
           "sha256": "472bf69a3c2f3f082afaf8bc40c0c891050bb9991e21320a53cbd6e86f289acf"
+        },
+        {
+          "task": "warehouse",
+          "action_id": "wos-warehouse-supply",
+          "action_version": "0.1.0",
+          "sha256": "99187b7c86c1eb91e26945197742aa67472f17cc5746ca15f92024d2b2ac9a79"
         },
         {
           "task": "daily",
