@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-calendar",
-  "action_version": "0.1.2",
+  "action_version": "0.1.3",
   "name": "VIP consecutive login calendar daily reward",
   "reference_size": [
     788,
@@ -119,23 +119,16 @@
         "all": [
           "VIP"
         ],
-        "page_text_regions": [
-          [
-            240,
-            630,
-            490,
-            680
-          ]
-        ],
+        "page_text_regions": [],
         "text_regions": [
           {
             "bounds": [
-              240,
-              630,
-              490,
-              680
+              150,
+              35,
+              260,
+              90
             ],
-            "pattern": ".*每[日目][免兔]费礼包.*",
+            "pattern": ".*VIP.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -458,23 +451,16 @@
           "all": [
             "VIP"
           ],
-          "page_text_regions": [
-            [
-              240,
-              630,
-              490,
-              680
-            ]
-          ],
+          "page_text_regions": [],
           "text_regions": [
             {
               "bounds": [
-                240,
-                630,
-                490,
-                680
+                150,
+                35,
+                260,
+                90
               ],
-              "pattern": ".*每[日目][免兔]费礼包.*",
+              "pattern": ".*VIP.*",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -591,5 +577,5 @@
     ]
   },
   "status": "candidate",
-  "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1."
+  "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1. 0.1.3: VIPcalendar neednotread dailygifttext; RgiftOCR每圓 causedvip-open failure. Replaceunrelatedgiftcondition withscopedupperleftVIPheader, preservescalendarred/controlstates. ActualfailedVIPpositive+citybadge negative offline passed; nexttargetedreplaypending."
 }

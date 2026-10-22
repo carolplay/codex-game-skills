@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.35",
+  "package_version": "0.12.36",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -337,11 +337,11 @@
     "enlistment": {
       "path": "actions/wos-enlistment.json",
       "action_id": "wos-enlistment",
-      "action_version": "0.1.3",
-      "sha256": "0a04fe2c7ea831ee0f168e95de9fdf09a3adf2aec4926a623f58e1797296775d",
+      "action_version": "0.1.4",
+      "sha256": "1a28f917ccfc61d9ac536329e194b8d285a77bfb4d7c7be4aac5a17c86818ba5",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Reserve-empty and city exits replayed on mature and low-level roles.0.1.3 adds independent Romulus reward-bubble claim after normal enlistment exit, including emptyreserve. Manual known-portrait claim showed reward and bubble cleared; saved before/after template scores pass positive/negative. New automated image-claim branch pending live. Absent portrait is not fresh reward; no fixed currency gain."
+      "verification_scope": "Reserve-empty and city exits replayed on mature and low-level roles.0.1.3 adds independent Romulus reward-bubble claim after normal enlistment exit, including emptyreserve. Manual known-portrait claim showed reward and bubble cleared; saved before/after template scores pass positive/negative. New automated image-claim branch pending live. Absent portrait is not fresh reward; no fixed currency gain. 0.1.4: Rselectedhospital actual治疗 controlpresent; title军医所 dropped insettle frame. Replace hospitalnamerepeat withcityfooter+scoped治疗 control; no changedinput, actualenlistmenttitle+loyalty stillrequired. Savedfailedframepositive andplaincitynegativepassed; nexttargetlivepending."
     },
     "pet_treasure_claim": {
       "path": "actions/wos-pet-treasure-claim.json",
@@ -481,18 +481,18 @@
       "period": "day",
       "utility": false,
       "action_id": "wos-vip-calendar",
-      "action_version": "0.1.2",
-      "sha256": "9507f567bd082b91aeb1d8b755a4de7b23df1084a694252cd02c9cfb543cd41a",
-      "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1."
+      "action_version": "0.1.3",
+      "sha256": "765532a38ecd20dbdfca4f3061a25f78c6afbb69f529a5aa9334b0ad0375237d",
+      "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1. 0.1.3: VIPcalendar neednotread dailygifttext; RgiftOCR每圓 causedvip-open failure. Replaceunrelatedgiftcondition withscopedupperleftVIPheader, preservescalendarred/controlstates. ActualfailedVIPpositive+citybadge negative offline passed; nexttargetedreplaypending."
     },
     "warehouse": {
       "path": "actions/wos-warehouse-supply.json",
       "action_id": "wos-warehouse-supply",
-      "action_version": "0.1.1",
-      "sha256": "9480b12aed4f4732b3bd617aa039caf11c337030798a41840d77561d8abee00b",
+      "action_version": "0.1.2",
+      "sha256": "ca85480978bc988e932513a8b5a12cf61dc507e3ba9222f052d50fc180bbe43f",
       "period": "day",
       "utility": false,
-      "verification_scope": "Agent samples: guidedentry native490793→crate320440, claimstarts90s cooldown, main2/3→3/3 taskclaimed315points next3/5; Y0/1→1/1 next1/3. Newmacro offlinecandidate; no formalreplay yet. Imageassetonlycratebubble withoutidentity. Waitactualtemplate notharddelay; 30observations/5sec bounded by900s. Activitycompleteonly5/5; rewardtierautoearned separate inheriteddailylogic. 0.1.1 offline: mainbottompartlyvisiblewarehouse row resolved588911 belowinnerclip908; constrain rowOCR/target to840 so55offset remainsinside895, scroll beforeclick. Toprow579500 remainsvalid. Waitcurrent34batchend beforedeployment. Guidedhand occludesreadycrate:4 croppedvariants calibrated on10 savedframes, minimum .8505, two negatives maximum .5117; threshold.84 in tighterguidedarea. Firstmacroclaimed1, secondlookupfailed; no5/5claimyet."
+      "verification_scope": "Agent samples: guidedentry native490793→crate320440, claimstarts90s cooldown, main2/3→3/3 taskclaimed315points next3/5; Y0/1→1/1 next1/3. Newmacro offlinecandidate; no formalreplay yet. Imageassetonlycratebubble withoutidentity. Waitactualtemplate notharddelay; 30observations/5sec bounded by900s. Activitycompleteonly5/5; rewardtierautoearned separate inheriteddailylogic. 0.1.1 offline: mainbottompartlyvisiblewarehouse row resolved588911 belowinnerclip908; constrain rowOCR/target to840 so55offset remainsinside895, scroll beforeclick. Toprow579500 remainsvalid. Waitcurrent34batchend beforedeployment. Guidedhand occludesreadycrate:4 croppedvariants calibrated on10 savedframes, minimum .8505, two negatives maximum .5117; threshold.84 in tighterguidedarea. Firstmacroclaimed1, secondlookupfailed; no5/5claimyet. 0.1.2: Lowround3 correctbluebutton491680 firstclick no effect; oneexplicitfresh pendingrowretry, cityskipsretry, strictcitypostcondition retained. Prior2actualpackages remainpartialproof, no5/5yet."
     }
   },
   "not_implemented": [
