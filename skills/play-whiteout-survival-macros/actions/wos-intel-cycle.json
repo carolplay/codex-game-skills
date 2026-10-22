@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.7",
+  "action_version": "0.2.8",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -377,7 +377,8 @@
         "any": [
           "获得奖励",
           "恭喜获得",
-          "点击任意位置退出"
+          "点击任意位置退出",
+          "情报"
         ],
         "none": [
           "胜利",
@@ -419,6 +420,107 @@
         ]
       },
       "observe_attempts": 10,
+      "skip_if_step_skipped": "batch-mode"
+    },
+    {
+      "name": "batch-claim-existing-retry",
+      "action": "click",
+      "point": [
+        532,
+        1017
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if_any": [
+        {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        },
+        {
+          "all": [
+            "情报",
+            "下次刷新",
+            "全部执行",
+            "一键领取"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                425,
+                1000,
+                650,
+                1040
+              ],
+              "max": 0.08
+            }
+          ]
+        }
+      ],
       "skip_if_step_skipped": "batch-mode"
     },
     {
@@ -647,7 +749,8 @@
         "any": [
           "获得奖励",
           "恭喜获得",
-          "点击任意位置退出"
+          "点击任意位置退出",
+          "情报"
         ],
         "none": [
           "胜利",
@@ -689,6 +792,107 @@
         ]
       },
       "observe_attempts": 10,
+      "skip_if_step_skipped": "batch-mode"
+    },
+    {
+      "name": "batch-claim-completed-retry",
+      "action": "click",
+      "point": [
+        532,
+        1017
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if_any": [
+        {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        },
+        {
+          "all": [
+            "情报",
+            "下次刷新",
+            "全部执行",
+            "一键领取"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                425,
+                1000,
+                650,
+                1040
+              ],
+              "max": 0.08
+            }
+          ]
+        }
+      ],
       "skip_if_step_skipped": "batch-mode"
     },
     {
@@ -4335,7 +4539,7 @@
       }
     ]
   },
-  "verification_scope": "0.2.7 regenerates ordinary NPC color-guard component0.1.8; bulk andeventfirebeast branches unchanged. Currentlowcropconfidencefailure positivevalidated; fulllegacycycle nexttarget pending.",
+  "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback. 0.2.8: mainbulkexecute8 completed but firstclaimclick had no effect; allow unchanged claimpage only asintermediate, one explicitfreshgreen retry, strictrewardpostcondition preserved. Retryskips reward/disabled; no unboundedclickloop. Savedfailureframepositive; nextrolelivepending. Retryusesknownmap+leftbutton+greenregion, notcursoroccluded rightbuttonlabel.",
   "business_dependencies": [
     "City entry and exit; stamina meal uses lighthouse plus before this action",
     "Game execute-all handles ordinary intel; repeat after claim reveals queued tasks",

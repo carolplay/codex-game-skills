@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.32",
-  "package_version": "0.12.32",
+  "macro_version": "0.12.33",
+  "package_version": "0.12.33",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -152,8 +152,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.7",
-          "sha256": "9955f50fc0696e110db0d97bec918cf90344c9ae0c6ad1889b497bd550b0ceb4"
+          "action_version": "0.2.8",
+          "sha256": "2d2d0307f4328aac9d10a76ec65dd84f615b29eb9a52eea09ee24f449f673472"
         },
         {
           "task": "gather_meat",
@@ -236,8 +236,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.15",
-          "sha256": "a0331577039c4331228550395c028fffddf9fcc6400820ec2ed82130e17a163b"
+          "action_version": "0.1.16",
+          "sha256": "117d3f648eb043c1f37aeca9cc0bf2d68217698adf2e04ce3b6f4933a5f27e64"
         },
         {
           "task": "island",
@@ -406,8 +406,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.7",
-          "sha256": "9955f50fc0696e110db0d97bec918cf90344c9ae0c6ad1889b497bd550b0ceb4"
+          "action_version": "0.2.8",
+          "sha256": "2d2d0307f4328aac9d10a76ec65dd84f615b29eb9a52eea09ee24f449f673472"
         },
         {
           "task": "gather_meat",
@@ -490,8 +490,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.15",
-          "sha256": "a0331577039c4331228550395c028fffddf9fcc6400820ec2ed82130e17a163b"
+          "action_version": "0.1.16",
+          "sha256": "117d3f648eb043c1f37aeca9cc0bf2d68217698adf2e04ce3b6f4933a5f27e64"
         },
         {
           "task": "island",
@@ -618,8 +618,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.7",
-          "sha256": "9955f50fc0696e110db0d97bec918cf90344c9ae0c6ad1889b497bd550b0ceb4"
+          "action_version": "0.2.8",
+          "sha256": "2d2d0307f4328aac9d10a76ec65dd84f615b29eb9a52eea09ee24f449f673472"
         },
         {
           "task": "gather_meat",
@@ -684,8 +684,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.15",
-          "sha256": "a0331577039c4331228550395c028fffddf9fcc6400820ec2ed82130e17a163b"
+          "action_version": "0.1.16",
+          "sha256": "117d3f648eb043c1f37aeca9cc0bf2d68217698adf2e04ce3b6f4933a5f27e64"
         },
         {
           "task": "island",

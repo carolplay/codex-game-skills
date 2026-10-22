@@ -54,10 +54,19 @@ def build(flows):
   before['green_regions']=[{'bounds':green_box,'min':.12}]
   return {'name':name,'action':'click','point':[532,1017],'before':before,'after':reward,'skip_if':zero_right,'observe_attempts':10}
  def dismiss(name):return {'name':name,'action':'click','point':[394,960],'before':reward,'after':map_page,'skip_if':map_page,'observe_attempts':10}
- steps.extend([claim('batch-claim-existing'),dismiss('batch-dismiss-existing'),
+ def bounded_claim(name):
+  first=claim(name)
+  # An unchanged green claim button is intermediate evidence, not success.
+  first['after']={'any':reward['any']+['情报'],'none':reward['none']}
+  second=claim(name+'-retry')
+  second.pop('skip_if')
+  second['before']['all']=[label for label in second['before']['all'] if label!='一键领取']
+  second['skip_if_any']=[copy.deepcopy(reward),copy.deepcopy(zero_right)]
+  return [first,second]
+ steps.extend([*bounded_claim('batch-claim-existing'),dismiss('batch-dismiss-existing'),
   {'name':'batch-execute','action':'click','text_target':{'text':'全部执行','bounds':left,'exact':False,'crop_ocr':True,'min_confidence':.3,'offset':[0,30]},'before':{**copy.deepcopy(button_page),'blue_regions':[{'bounds':blue_box,'min':.4}],'none':map_page['none']+['全部执行中']},'skip_if':zero_left,'after':['情报','下次刷新'],'observe_attempts':10},
   {'name':'batch-wait-complete','action':'observe','before':{**copy.deepcopy(button_page),'none':map_page['none']+['全部执行中']},'observe_attempts':30},
-  claim('batch-claim-completed'),dismiss('batch-dismiss-completed'),
+  *bounded_claim('batch-claim-completed'),dismiss('batch-dismiss-completed'),
   {'name':'batch-settle-map','action':'observe','before':map_page,'observe_attempts':10}])
  for s in steps[8:]:s['skip_if_step_skipped']='batch-mode'
  # Bulk execution leaves the event firebeast on the map. Its already-known

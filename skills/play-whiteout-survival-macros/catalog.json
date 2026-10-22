@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.32",
+  "package_version": "0.12.33",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -220,11 +220,11 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.15",
-      "sha256": "a0331577039c4331228550395c028fffddf9fcc6400820ec2ed82130e17a163b",
+      "action_version": "0.1.16",
+      "sha256": "117d3f648eb043c1f37aeca9cc0bf2d68217698adf2e04ce3b6f4933a5f27e64",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending."
+      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility."
     },
     "arena": {
       "path": "actions/wos-arena.json",
@@ -460,11 +460,11 @@
     "intel_cycle": {
       "path": "actions/wos-intel-cycle.json",
       "action_id": "wos-intel-cycle",
-      "action_version": "0.2.7",
-      "sha256": "9955f50fc0696e110db0d97bec918cf90344c9ae0c6ad1889b497bd550b0ceb4",
+      "action_version": "0.2.8",
+      "sha256": "2d2d0307f4328aac9d10a76ec65dd84f615b29eb9a52eea09ee24f449f673472",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.2.7 regenerates ordinary NPC color-guard component0.1.8; bulk andeventfirebeast branches unchanged. Currentlowcropconfidencefailure positivevalidated; fulllegacycycle nexttarget pending."
+      "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback. 0.2.8: mainbulkexecute8 completed but firstclaimclick had no effect; allow unchanged claimpage only asintermediate, one explicitfreshgreen retry, strictrewardpostcondition preserved. Retryskips reward/disabled; no unboundedclickloop. Savedfailureframepositive; nextrolelivepending. Retryusesknownmap+leftbutton+greenregion, notcursoroccluded rightbuttonlabel."
     },
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",

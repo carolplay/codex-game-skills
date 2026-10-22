@@ -1,13 +1,13 @@
 {
   "action_id": "wos-store-free",
-  "action_version": "0.1.15",
+  "action_version": "0.1.16",
   "name": "WOS store_free",
   "reference_size": [
     788,
     1079
   ],
   "status": "candidate",
-  "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending.",
+  "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility.",
   "steps": [
     {
       "name": "01-check-city",
@@ -134,7 +134,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -212,7 +213,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -243,7 +245,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -303,7 +305,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -334,7 +337,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -394,7 +397,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -425,7 +429,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -485,7 +489,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -516,7 +521,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -576,7 +581,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -607,7 +613,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -667,7 +673,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -698,7 +705,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -718,7 +725,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -749,7 +757,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           },
@@ -774,7 +782,8 @@
           "恭喜获得",
           "点击任意",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ]
       },
       "observe_attempts": 8,
@@ -783,7 +792,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -814,7 +824,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -852,7 +862,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -883,7 +894,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -895,7 +906,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -926,7 +938,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -941,7 +953,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -972,7 +985,7 @@
               400,
               245
             ],
-            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+            "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -1006,7 +1019,8 @@
           "工匠的宝库",
           "曙光市集",
           "匠心自选",
-          "曙光智慧"
+          "曙光智慧",
+          "武备自选"
         ],
         "none": [
           "获得奖励",
@@ -1135,7 +1149,8 @@
             "工匠的宝库",
             "曙光市集",
             "匠心自选",
-            "曙光智慧"
+            "曙光智慧",
+            "武备自选"
           ],
           "none": [
             "获得奖励",
@@ -1166,7 +1181,7 @@
                 400,
                 245
               ],
-              "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧).*",
+              "pattern": ".*(?:工匠的宝库|曙光市集|匠心自选|曙光智慧|武备自选).*",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -1191,7 +1206,9 @@
             "曙光市集",
             "匠心自选",
             "曙光智慧",
-            "科技风暴礼包"
+            "科技风暴礼包",
+            "武备自选",
+            "冰原旅者"
           ],
           "none": [
             "获得奖励",
