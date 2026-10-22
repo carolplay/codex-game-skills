@@ -1,6 +1,6 @@
 {
   "action_id": "wos-warehouse-supply",
-  "action_version": "0.1.2",
+  "action_version": "0.1.3",
   "name": "WOS warehouse daily package chain",
   "reference_size": [
     788,
@@ -125,6 +125,1159 @@
     },
     {
       "name": "daily-tab",
+      "action": "click",
+      "point": [
+        495,
+        961
+      ],
+      "before": [
+        "成长任务",
+        "每日任务"
+      ],
+      "after": [
+        "每日任务",
+        "成长任务"
+      ],
+      "observe_attempts": 3
+    },
+    {
+      "name": "initial-warehouse-round",
+      "action": "observe",
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "initial-warehouse-daily-earned-claim",
+      "action": "click",
+      "point": [
+        393,
+        875
+      ],
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              315,
+              856,
+              470,
+              895
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "每日任务",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              315,
+              856,
+              470,
+              895
+            ],
+            "max": 0.08
+          }
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "initial-warehouse-daily-dismiss-1",
+      "action": "click",
+      "point": [
+        392,
+        933
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "after": {
+        "any": [
+          "每日任务",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "initial-warehouse-daily-dismiss-2",
+      "action": "click",
+      "point": [
+        392,
+        933
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "after": {
+        "any": [
+          "每日任务",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "initial-warehouse-daily-dismiss-3",
+      "action": "click",
+      "point": [
+        392,
+        933
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "after": {
+        "any": [
+          "每日任务",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "initial-warehouse-daily-dismiss-4",
+      "action": "click",
+      "point": [
+        392,
+        933
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "after": {
+        "any": [
+          "每日任务",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "initial-warehouse-daily-dismiss-5",
+      "action": "click",
+      "point": [
+        392,
+        933
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "after": {
+        "any": [
+          "每日任务",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "initial-warehouse-daily-dismiss-6",
+      "action": "click",
+      "point": [
+        392,
+        933
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "after": {
+        "any": [
+          "每日任务",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意",
+          "点击空白"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "initial-warehouse-daily-verified",
+      "action": "observe",
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              315,
+              856,
+              470,
+              895
+            ],
+            "max": 0.08
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "initial-warehouse-seek-0",
+      "action": "key",
+      "key": "Up",
+      "duration_ms": 600,
+      "key_count": 2,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "initial-warehouse-seek-1",
+      "action": "key",
+      "key": "Up",
+      "duration_ms": 600,
+      "key_count": 2,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "initial-warehouse-seek-2",
+      "action": "key",
+      "key": "Up",
+      "duration_ms": 600,
+      "key_count": 2,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "initial-warehouse-seek-3",
+      "action": "key",
+      "key": "Up",
+      "duration_ms": 600,
+      "key_count": 2,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "initial-warehouse-seek-4",
+      "action": "key",
+      "key": "Up",
+      "duration_ms": 600,
+      "key_count": 2,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "initial-warehouse-seek-5",
+      "action": "key",
+      "key": "Up",
+      "duration_ms": 600,
+      "key_count": 2,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "initial-warehouse-seek-6",
+      "action": "key",
+      "key": "Up",
+      "duration_ms": 600,
+      "key_count": 2,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "initial-warehouse-open-guided-entry",
+      "action": "click",
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "text_target": {
+        "text": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
+        "regex": true,
+        "exact": false,
+        "crop_ocr": true,
+        "bounds": [
+          130,
+          400,
+          680,
+          840
+        ],
+        "offset": [
+          300,
+          55
+        ],
+        "min_confidence": 0.3,
+        "select": "top-left"
+      },
+      "after": {
+        "any": [
+          "每日任务",
+          "野外"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "initial-warehouse-open-guided-entry-retry",
+      "action": "click",
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              840
+            ],
+            "pattern": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "text_target": {
+        "text": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
+        "regex": true,
+        "exact": false,
+        "crop_ocr": true,
+        "bounds": [
+          130,
+          400,
+          680,
+          840
+        ],
+        "offset": [
+          300,
+          55
+        ],
+        "min_confidence": 0.3,
+        "select": "top-left"
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "每日任务",
+          "成长任务",
+          "距离下个包裹"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "每日任务",
+          "成长任务",
+          "距离下个包裹"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "initial-verify-warehouse-camera",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "每日任务",
+          "成长任务",
+          "距离下个包裹"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "warehouse-supply-bubble",
+            "bounds": [
+              340,
+              400,
+              450,
+              560
+            ],
+            "mode": "grayscale",
+            "min_score": 0.84
+          }
+        ]
+      },
+      "observe_attempts": 30,
+      "observe_interval_seconds": 5
+    },
+    {
+      "name": "initial-warehouse-next-daily-open",
+      "action": "click",
+      "point": [
+        137,
+        892
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "成长任务",
+        "每日任务"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "initial-warehouse-next-daily-tab",
       "action": "click",
       "point": [
         495,
@@ -1020,8 +2173,12 @@
       }
     },
     {
-      "name": "warehouse-open-guided-entry",
+      "name": "warehouse-return-to-anchored-city",
       "action": "click",
+      "point": [
+        663,
+        129
+      ],
       "before": {
         "all": [
           "每日任务",
@@ -1046,161 +2203,34 @@
           }
         ]
       },
-      "finish_if": {
-        "all": [
-          "每日任务",
-          "成长任务"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              130,
-              400,
-              680,
-              840
-            ],
-            "pattern": ".*仓库.*5次补给.*5/5.*",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
-        ]
-      },
-      "text_target": {
-        "text": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
-        "regex": true,
-        "exact": false,
-        "crop_ocr": true,
-        "bounds": [
-          130,
-          400,
-          680,
-          840
-        ],
-        "offset": [
-          300,
-          55
-        ],
-        "min_confidence": 0.3,
-        "select": "top-left"
-      },
       "after": {
-        "any": [
-          "每日任务",
+        "all": [
+          "英雄",
+          "背包",
           "野外"
         ],
         "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意"
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "每日任务",
+          "成长任务",
+          "距离下个包裹"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
         ]
       },
       "observe_attempts": 5
-    },
-    {
-      "name": "warehouse-open-guided-entry-retry",
-      "action": "click",
-      "before": {
-        "all": [
-          "每日任务",
-          "成长任务"
-        ],
-        "none": [
-          "获得奖励",
-          "恭喜获得",
-          "点击任意"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              130,
-              400,
-              680,
-              840
-            ],
-            "pattern": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
-        ]
-      },
-      "text_target": {
-        "text": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
-        "regex": true,
-        "exact": false,
-        "crop_ocr": true,
-        "bounds": [
-          130,
-          400,
-          680,
-          840
-        ],
-        "offset": [
-          300,
-          55
-        ],
-        "min_confidence": 0.3,
-        "select": "top-left"
-      },
-      "after": {
-        "all": [
-          "英雄",
-          "背包",
-          "野外"
-        ],
-        "none": [
-          "日常",
-          "建筑队列",
-          "游历补给",
-          "部队训练",
-          "技能学习",
-          "超级提炼优惠",
-          "提炼次数",
-          "每日任务",
-          "成长任务",
-          "距离下个包裹"
-        ],
-        "page_text_regions": [
-          [
-            100,
-            995,
-            690,
-            1079
-          ]
-        ]
-      },
-      "observe_attempts": 5,
-      "skip_if": {
-        "all": [
-          "英雄",
-          "背包",
-          "野外"
-        ],
-        "none": [
-          "日常",
-          "建筑队列",
-          "游历补给",
-          "部队训练",
-          "技能学习",
-          "超级提炼优惠",
-          "提炼次数",
-          "每日任务",
-          "成长任务",
-          "距离下个包裹"
-        ],
-        "page_text_regions": [
-          [
-            100,
-            995,
-            690,
-            1079
-          ]
-        ]
-      }
     },
     {
       "name": "warehouse-wait-actual-ready",
@@ -1621,11 +2651,12 @@
       }
     ]
   },
-  "verification_scope": "Agent samples: guidedentry native490793→crate320440, claimstarts90s cooldown, main2/3→3/3 taskclaimed315points next3/5; Y0/1→1/1 next1/3. Newmacro offlinecandidate; no formalreplay yet. Imageassetonlycratebubble withoutidentity. Waitactualtemplate notharddelay; 30observations/5sec bounded by900s. Activitycompleteonly5/5; rewardtierautoearned separate inheriteddailylogic. 0.1.1 offline: mainbottompartlyvisiblewarehouse row resolved588911 belowinnerclip908; constrain rowOCR/target to840 so55offset remainsinside895, scroll beforeclick. Toprow579500 remainsvalid. Waitcurrent34batchend beforedeployment. Guidedhand occludesreadycrate:4 croppedvariants calibrated on10 savedframes, minimum .8505, two negatives maximum .5117; threshold.84 in tighterguidedarea. Firstmacroclaimed1, secondlookupfailed; no5/5claimyet. 0.1.2: Lowround3 correctbluebutton491680 firstclick no effect; oneexplicitfresh pendingrowretry, cityskipsretry, strictcitypostcondition retained. Prior2actualpackages remainpartialproof, no5/5yet.",
+  "verification_scope": "Agent samples: guidedentry native490793→crate320440, claimstarts90s cooldown, main2/3→3/3 taskclaimed315points next3/5; Y0/1→1/1 next1/3. Newmacro offlinecandidate; no formalreplay yet. Imageassetonlycratebubble withoutidentity. Waitactualtemplate notharddelay; 30observations/5sec bounded by900s. Activitycompleteonly5/5; rewardtierautoearned separate inheriteddailylogic. 0.1.1 offline: mainbottompartlyvisiblewarehouse row resolved588911 belowinnerclip908; constrain rowOCR/target to840 so55offset remainsinside895, scroll beforeclick. Toprow579500 remainsvalid. Waitcurrent34batchend beforedeployment. Guidedhand occludesreadycrate:4 croppedvariants calibrated on10 savedframes, minimum .8505, two negatives maximum .5117; threshold.84 in tighterguidedarea. Firstmacroclaimed1, secondlookupfailed; no5/5claimyet. 0.1.2: Lowround3 correctbluebutton491680 firstclick no effect; oneexplicitfresh pendingrowretry, cityskipsretry, strictcitypostcondition retained. Prior2actualpackages remainpartialproof, no5/5yet. 0.1.3: repeated前往 withinwarehouse cooldown remainedunchanged despitecorrectpoint+retry. Establishguided warehousecamera once, verifybubble, then dailyclose returns samecamera andwaitsrealcrate eachround; pendingcount stillread everyround,5/5onlycompletion. No changetoactualclaimpoint. Newfullchainlivepending.",
   "business_dependencies": [
     "Cityentry/exit andfreshroleidentity; no research/construction",
     "Dailyearnedclaim precedes readingwarehouse nexttier 1→3→5",
     "Guidedcityentry centers warehouse; calibratedtemplate mustappear beforeclaim; actualcooldownexpires beforefurtherclaim",
-    "Repeatuntilactual5/5 or900s budget; points325 notcompletionevidence"
+    "Repeatuntilactual5/5 or900s budget; points325 notcompletionevidence",
+    "Initialdailyguide+template establishescamera; later dailyoverlays neverpan city. Closepanelthenverifycrate beforeinput; no repeated前往 whilecooldown."
   ]
 }

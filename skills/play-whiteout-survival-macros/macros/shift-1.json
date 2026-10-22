@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.36",
-  "package_version": "0.12.36",
+  "macro_version": "0.12.37",
+  "package_version": "0.12.37",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -254,8 +254,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.2",
-          "sha256": "ca85480978bc988e932513a8b5a12cf61dc507e3ba9222f052d50fc180bbe43f"
+          "action_version": "0.1.3",
+          "sha256": "af99feced646ea1993e97cd120e6d90a64f6c574e2af31ffb522a0f7119e5fce"
         },
         {
           "task": "daily",
@@ -519,8 +519,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.2",
-          "sha256": "ca85480978bc988e932513a8b5a12cf61dc507e3ba9222f052d50fc180bbe43f"
+          "action_version": "0.1.3",
+          "sha256": "af99feced646ea1993e97cd120e6d90a64f6c574e2af31ffb522a0f7119e5fce"
         },
         {
           "task": "daily",
@@ -724,8 +724,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.2",
-          "sha256": "ca85480978bc988e932513a8b5a12cf61dc507e3ba9222f052d50fc180bbe43f"
+          "action_version": "0.1.3",
+          "sha256": "af99feced646ea1993e97cd120e6d90a64f6c574e2af31ffb522a0f7119e5fce"
         },
         {
           "task": "daily",
