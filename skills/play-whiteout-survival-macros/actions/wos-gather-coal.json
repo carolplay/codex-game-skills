@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-coal",
-  "action_version": "0.1.11",
+  "action_version": "0.1.12",
   "name": "WOS gather_coal",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. Resource strip coal at right edge missed local OCR while meat/wood read. Add explicit wood selection and reopen before existing coal/iron selection to center next category. Next role pending, no coordinate fallback. Saved coal label OCR has unique first glyph while narrower crop returns none. Accept coal glyph prefix only inside existing category strip after explicit recentering; retain strict coal site title and unoccupied checks before dispatch. Offline saved OCR matches one target; next shift replay pending. Coal label OCR sometimes absent entirely. Replace only coal category text target with bounded calibrated coal icon template after explicit wood recentering. Two role saved frames match; wood negative fails threshold. Strict coal site/unoccupied checks remain; next role replay pending. 2026-10-21 user policy: gathering carries no heroes. Added3 independently guarded red-minus removals and all3absent gate before dispatch; same-frame color samples0.835–0.85; live no-hero gathering branch pending. Do not treat historical hero-carrying dispatch as this version validation.",
+  "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. Resource strip coal at right edge missed local OCR while meat/wood read. Add explicit wood selection and reopen before existing coal/iron selection to center next category. Next role pending, no coordinate fallback. Saved coal label OCR has unique first glyph while narrower crop returns none. Accept coal glyph prefix only inside existing category strip after explicit recentering; retain strict coal site title and unoccupied checks before dispatch. Offline saved OCR matches one target; next shift replay pending. Coal label OCR sometimes absent entirely. Replace only coal category text target with bounded calibrated coal icon template after explicit wood recentering. Two role saved frames match; wood negative fails threshold. Strict coal site/unoccupied checks remain; next role replay pending. 2026-10-21 user policy: gathering carries no heroes. Added3 independently guarded red-minus removals and all3absent gate before dispatch; same-frame color samples0.835–0.85; live no-hero gathering branch pending. Do not treat historical hero-carrying dispatch as this version validation.0.12.26 candidate retains existing生肉recenter then isolates right-adjacent木材 caption and verifies centered生肉. Wide rowcrop onlyreadselected生肉, omittedunselectedlabel; all3savedfailureframes uniquecorrecttarget pass. Noheroessteps retained; livepending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -419,10 +419,10 @@
       "text_target": {
         "text": "木材",
         "bounds": [
-          98,
-          750,
-          690,
-          835
+          485,
+          785,
+          575,
+          832
         ],
         "offset": [
           0,
@@ -451,6 +451,19 @@
             690,
             1079
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              350,
+              780,
+              440,
+              835
+            ],
+            "pattern": "生肉",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       },
       "after": {

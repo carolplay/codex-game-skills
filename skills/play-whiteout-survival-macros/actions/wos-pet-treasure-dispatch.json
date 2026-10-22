@@ -1,6 +1,6 @@
 {
   "action_id": "wos-pet-treasure-dispatch",
-  "action_version": "0.1.6",
+  "action_version": "0.1.7",
   "name": "WOS pet_treasure_dispatch",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 300,
   "status": "candidate",
-  "verification_scope": "Current成熟角色 manualgold dispatch10stamina,5h,quota4→3; game auto-selects eligible availablepet. Candidate attempts1gold+2blue; existingrunningdetail is recognized and closed without redispatch. Gold/blue templates calibrated to available map; purple/other skins not covered. Actual macro replay pending. Newrole actual goldrunning skipped correctly, blue detail has no pet strength requirement line; removed high-tier-only predicate from available/exit. Nextrole dispatch replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending.",
+  "verification_scope": "Original mature role stopped because开始 was read开姶 beforetreasurestart; exit also depended on samebuttontext. Agent separately startedone4hsearch andreturnedcity.0.1.7 keeps title/list andexact10stamina checks, localizes observed始/姶glyph for businessbutton; selectionexit usesunambiguous title+petlist withoutbuttonliteral. Savedselection positive anddetailnegative offline checks; new fullreplaypending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -1614,8 +1614,7 @@
       "after": {
         "all": [
           "寻宝派遣",
-          "宠物列表",
-          "开始寻宝"
+          "宠物列表"
         ],
         "text_regions": [
           {
@@ -1626,6 +1625,17 @@
               887
             ],
             "pattern": "10",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              320,
+              815,
+              480,
+              855
+            ],
+            "pattern": "开[始姶]寻宝",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -1675,8 +1685,7 @@
       "before": {
         "all": [
           "寻宝派遣",
-          "宠物列表",
-          "开始寻宝"
+          "宠物列表"
         ],
         "text_regions": [
           {
@@ -1687,6 +1696,17 @@
               887
             ],
             "pattern": "10",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              320,
+              815,
+              480,
+              855
+            ],
+            "pattern": "开[始姶]寻宝",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -1916,8 +1936,7 @@
       "after": {
         "all": [
           "寻宝派遣",
-          "宠物列表",
-          "开始寻宝"
+          "宠物列表"
         ],
         "text_regions": [
           {
@@ -1928,6 +1947,17 @@
               887
             ],
             "pattern": "10",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              320,
+              815,
+              480,
+              855
+            ],
+            "pattern": "开[始姶]寻宝",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -1977,8 +2007,7 @@
       "before": {
         "all": [
           "寻宝派遣",
-          "宠物列表",
-          "开始寻宝"
+          "宠物列表"
         ],
         "text_regions": [
           {
@@ -1989,6 +2018,17 @@
               887
             ],
             "pattern": "10",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              320,
+              815,
+              480,
+              855
+            ],
+            "pattern": "开[始姶]寻宝",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -2218,8 +2258,7 @@
       "after": {
         "all": [
           "寻宝派遣",
-          "宠物列表",
-          "开始寻宝"
+          "宠物列表"
         ],
         "text_regions": [
           {
@@ -2230,6 +2269,17 @@
               887
             ],
             "pattern": "10",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              320,
+              815,
+              480,
+              855
+            ],
+            "pattern": "开[始姶]寻宝",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -2279,8 +2329,7 @@
       "before": {
         "all": [
           "寻宝派遣",
-          "宠物列表",
-          "开始寻宝"
+          "宠物列表"
         ],
         "text_regions": [
           {
@@ -2291,6 +2340,17 @@
               887
             ],
             "pattern": "10",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              320,
+              815,
+              480,
+              855
+            ],
+            "pattern": "开[始姶]寻宝",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -2606,8 +2666,7 @@
         ],
         "before": [
           "寻宝派遣",
-          "宠物列表",
-          "开始寻宝"
+          "宠物列表"
         ],
         "after": {
           "all": [

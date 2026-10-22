@@ -1,6 +1,6 @@
 {
   "action_id": "wos-free-recruit",
-  "action_version": "0.1.5",
+  "action_version": "0.1.7",
   "name": "WOS — free advanced and epic recruitment, never spend keys",
   "reference_size": [
     788,
@@ -184,7 +184,8 @@
             40,
             340,
             80
-          ]
+          ],
+          "min_confidence": 0.3
         },
         {
           "name": "gold_keys",
@@ -345,7 +346,8 @@
             40,
             340,
             80
-          ]
+          ],
+          "min_confidence": 0.3
         },
         {
           "name": "gold_keys",
@@ -507,7 +509,8 @@
             40,
             340,
             80
-          ]
+          ],
+          "min_confidence": 0.3
         },
         {
           "name": "gold_keys",
@@ -855,6 +858,6 @@
     ]
   },
   "status": "partial_verified",
-  "verification_scope": "Advanced actual free draw, unchanged silver/gold keys, reward exit and epic cooldown skip passed in one complete workflow. Epic free and new-hero display remain unverified. a mature role advanced andepic freeclick occurred, epic reward footer literal OCRfailed andexitunmatched.0.1.3 accepts rewardheader withscoped footerregex 点击.*退[出幽]; freegreenbutton and unchangedkeys constraints retained, neverclick goldkey recruitagain. Nextrole replaypending; priorfailure not rewritten.",
+  "verification_scope": "Advanced free draw and unchanged silver/gold inventory replayed on a mature role in0.1.6. Silver-key narrow integer check accepts confidence0.3; saved failure reproduces old rejection and correct integer read, without decimal coercion. Epic cooldown passed; other epic/free/newhero states keep prior evidence only. Metadata-only patch relative to0.1.6; private balances excluded.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

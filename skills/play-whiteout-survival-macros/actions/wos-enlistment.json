@@ -1,6 +1,6 @@
 {
   "action_id": "wos-enlistment",
-  "action_version": "0.1.2",
+  "action_version": "0.1.3",
   "name": "WOS enlistment",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Freshresearchcamera oldcoordinate failed. Mainlive preparation proved hospitalcentered camera →224,394 opens actualEnlistmentOffice with zeroreserves. Revisedroute selectsHospital only, waitsbounded observations, thenoffice; doesnotstart healing. Macro newrole empty/recall replay pending; no purchase.",
+  "verification_scope": "Reserve-empty and city exits replayed on mature and low-level roles.0.1.3 adds independent Romulus reward-bubble claim after normal enlistment exit, including emptyreserve. Manual known-portrait claim showed reward and bubble cleared; saved before/after template scores pass positive/negative. New automated image-claim branch pending live. Absent portrait is not fresh reward; no fixed currency gain.",
   "steps": [
     {
       "name": "01-check-city",
@@ -669,6 +669,135 @@
             690,
             1079
           ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "claim-romulus-reward-bubble",
+      "action": "click",
+      "image_target": {
+        "template": "romulus-reward-bubble",
+        "bounds": [
+          120,
+          240,
+          330,
+          440
+        ],
+        "min_score": 0.85,
+        "mode": "grayscale"
+      },
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "romulus-reward-bubble",
+            "bounds": [
+              120,
+              240,
+              330,
+              440
+            ],
+            "min_score": 0.85,
+            "mode": "grayscale"
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "romulus-reward-bubble",
+            "bounds": [
+              120,
+              240,
+              330,
+              440
+            ],
+            "min_score": 0.85,
+            "mode": "grayscale",
+            "present": false
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "romulus-reward-bubble",
+            "bounds": [
+              120,
+              240,
+              330,
+              440
+            ],
+            "min_score": 0.85,
+            "mode": "grayscale",
+            "present": false
+          }
         ]
       },
       "observe_attempts": 5

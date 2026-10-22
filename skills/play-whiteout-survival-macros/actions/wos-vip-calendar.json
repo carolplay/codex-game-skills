@@ -1,0 +1,595 @@
+{
+  "action_id": "wos-vip-calendar",
+  "action_version": "0.1.2",
+  "name": "VIP consecutive login calendar daily reward",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "execution_timeout_seconds": 180,
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "vip-open",
+      "action": "click",
+      "point": [
+        492,
+        84
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "VIP"
+        ],
+        "page_text_regions": [
+          [
+            240,
+            630,
+            490,
+            680
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              240,
+              630,
+              490,
+              680
+            ],
+            "pattern": ".*每[日目][免兔]费礼包.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "calendar-state",
+      "action": "observe",
+      "before": {
+        "all": [
+          "VIP"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              160,
+              32,
+              255,
+              90
+            ],
+            "pattern": "VIP",
+            "crop_ocr": true,
+            "min_confidence": 0.5
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "VIP"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              160,
+              32,
+              255,
+              90
+            ],
+            "pattern": "VIP",
+            "crop_ocr": true,
+            "min_confidence": 0.5
+          }
+        ],
+        "red_regions": [
+          {
+            "bounds": [
+              638,
+              220,
+              650,
+              232
+            ],
+            "max": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "name": "calendar-open",
+      "action": "click",
+      "point": [
+        613,
+        257
+      ],
+      "before": {
+        "all": [
+          "VIP"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              160,
+              32,
+              255,
+              90
+            ],
+            "pattern": "VIP",
+            "crop_ocr": true,
+            "min_confidence": 0.5
+          }
+        ],
+        "red_regions": [
+          {
+            "bounds": [
+              638,
+              220,
+              650,
+              232
+            ],
+            "min": 0.3
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "连续登录",
+          "累计登录"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "calendar-close",
+      "action": "click",
+      "point": [
+        620,
+        269
+      ],
+      "before": {
+        "any": [
+          "连续登录",
+          "累计登录"
+        ]
+      },
+      "after": {
+        "all": [
+          "VIP"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              160,
+              32,
+              255,
+              90
+            ],
+            "pattern": "VIP",
+            "crop_ocr": true,
+            "min_confidence": 0.5
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "calendar-red-cleared",
+      "action": "observe",
+      "before": {
+        "all": [
+          "VIP"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              160,
+              32,
+              255,
+              90
+            ],
+            "pattern": "VIP",
+            "crop_ocr": true,
+            "min_confidence": 0.5
+          }
+        ],
+        "red_regions": [
+          {
+            "bounds": [
+              638,
+              220,
+              650,
+              232
+            ],
+            "max": 0.05
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "calendar-return-city",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "VIP"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              160,
+              32,
+              255,
+              90
+            ],
+            "pattern": "VIP",
+            "crop_ocr": true,
+            "min_confidence": 0.5
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 4,
+    "exits": [
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-calendar",
+        "action": "click",
+        "point": [
+          620,
+          269
+        ],
+        "before": {
+          "any": [
+            "连续登录",
+            "累计登录"
+          ]
+        },
+        "after": {
+          "all": [
+            "VIP"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                160,
+                32,
+                255,
+                90
+              ],
+              "pattern": "VIP",
+              "crop_ocr": true,
+              "min_confidence": 0.5
+            }
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-vip-reward",
+        "action": "click",
+        "point": [
+          391,
+          930
+        ],
+        "before": {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意",
+            "点击空白",
+            "点击屏幕"
+          ]
+        },
+        "after": {
+          "all": [
+            "VIP"
+          ],
+          "page_text_regions": [
+            [
+              240,
+              630,
+              490,
+              680
+            ]
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                240,
+                630,
+                490,
+                680
+              ],
+              "pattern": ".*每[日目][免兔]费礼包.*",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        },
+        "observe_attempts": 3
+      },
+      {
+        "name": "exit-vip",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "VIP"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意",
+            "点击空白",
+            "点击屏幕",
+            "连续登录",
+            "累计登录"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                160,
+                32,
+                255,
+                90
+              ],
+              "pattern": "VIP",
+              "crop_ocr": true,
+              "min_confidence": 0.5
+            }
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3
+      },
+      {
+        "name": "exit-city-overview",
+        "action": "click",
+        "point": [
+          482,
+          482
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "any": [
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "宠物寻宝",
+            "竞技场",
+            "生命之树",
+            "联盟捐献"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建造队列",
+            "游历补给"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  },
+  "status": "candidate",
+  "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1."
+}

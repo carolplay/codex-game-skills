@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-shield",
-  "action_version": "0.3.2",
+  "action_version": "0.3.4",
   "name": "WOS — 盾兵 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -116,10 +116,26 @@
           ]
         ]
       },
-      "after": [
-        "日常",
-        "野外"
-      ],
+      "after": {
+        "all": [
+          "野外"
+        ],
+        "any": [
+          "日常",
+          "城镇",
+          "部队训练",
+          "建造队列",
+          "建筑队列"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            220,
+            480,
+            275
+          ]
+        ]
+      },
       "observe_attempts": 5
     },
     {
@@ -129,10 +145,26 @@
         161,
         249
       ],
-      "before": [
-        "日常",
-        "野外"
-      ],
+      "before": {
+        "all": [
+          "野外"
+        ],
+        "any": [
+          "日常",
+          "城镇",
+          "部队训练",
+          "建造队列",
+          "建筑队列"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            220,
+            480,
+            275
+          ]
+        ]
+      },
       "after": [
         "盾兵",
         "矛兵",
@@ -157,12 +189,21 @@
         ],
         "min_confidence": 0.5
       },
-      "before": [
-        "日常",
-        "盾兵",
-        "矛兵",
-        "射手"
-      ],
+      "before": {
+        "all": [
+          "盾兵",
+          "矛兵",
+          "射手"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            220,
+            480,
+            275
+          ]
+        ]
+      },
       "after": {
         "all": [
           "英雄",
@@ -1121,7 +1162,7 @@
       }
     ]
   },
-  "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending. Current training tab visibly correct but4pixel selected strip fails. Replace selected-tab color test with scoped active troop header text, preserving queue/rank/resource checks and known exits. Next role replay pending.",
+  "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
   "business_dependencies": [
     "Always select and verify expected camp footer before ordinary training input",

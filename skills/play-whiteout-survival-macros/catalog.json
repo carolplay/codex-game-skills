@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.25",
+  "package_version": "0.12.27",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -76,11 +76,11 @@
     "recruit": {
       "path": "actions/wos-free-recruit.json",
       "action_id": "wos-free-recruit",
-      "action_version": "0.1.5",
-      "sha256": "b9c1e56816d41ea3e3e8c13b7d80cfe3a3be5f0bf13a50f9344c35c32b31a1f7",
+      "action_version": "0.1.7",
+      "sha256": "514e47817ec749b05eb1aeb390a3a4685d14ad48a1b48580dcd7035bb7a39718",
       "period": "day",
       "utility": false,
-      "verification_scope": "Advanced actual free draw, unchanged silver/gold keys, reward exit and epic cooldown skip passed in one complete workflow. Epic free and new-hero display remain unverified. a mature role advanced andepic freeclick occurred, epic reward footer literal OCRfailed andexitunmatched.0.1.3 accepts rewardheader withscoped footerregex 点击.*退出; freegreenbutton and unchangedkeys constraints retained, neverclick goldkey recruitagain. Nextrole replaypending; priorfailure not rewritten.0.1.5 candidate: reward footer crop reads finalexit glyph as 幽. Accept only observed 出/幽 variation after 点击 and 退; reward title and free counters/key inventory checks retained. Applies to normal close and boundedexit; nextrole pending.",
+      "verification_scope": "Advanced free draw and unchanged silver/gold inventory replayed on a mature role in0.1.6. Silver-key narrow integer check accepts confidence0.3; saved failure reproduces old rejection and correct integer read, without decimal coercion. Epic cooldown passed; other epic/free/newhero states keep prior evidence only. Metadata-only patch relative to0.1.6; private balances excluded.",
       "current_evidence_note": "成熟试验角色A英雄网格页全图OCR乱码，停止后续；同一失败图的标题和底部独立裁剪能明确读到英雄列表/英雄招募。0.1.1加入有界局部OCR，下一试验号验证，不重试成熟试验角色A失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -108,33 +108,33 @@
     "shield": {
       "path": "actions/wos-training-shield.json",
       "action_id": "wos-training-shield",
-      "action_version": "0.3.2",
-      "sha256": "20d72c93e8afab5dabf397e98b82420aa31d53ee4096257138af202ff5495619",
+      "action_version": "0.3.4",
+      "sha256": "3938e710f295cb21af42d5b3798b7736dd865f9cf527b6812e1b2d623392b2e9",
       "period": "day",
       "utility": false,
-      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending. Current training tab visibly correct but4pixel selected strip fails. Replace selected-tab color test with scoped active troop header text, preserving queue/rank/resource checks and known exits. Next role replay pending. 0.3.1 secondshift: mature and low threecamp queue checks and city exits passed; only observed camp/tier branches.0.3.2 candidate: named camp world-menu with explicit accelerate and positive local timer is existing-queue evidence. Close menu and confirmcity before early completion; idle queues keep current explicit training path. Avoid guide hand covering training label; nextrole pending.",
+      "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "lancer": {
       "path": "actions/wos-training-lancer.json",
       "action_id": "wos-training-lancer",
-      "action_version": "0.3.2",
-      "sha256": "0c660ab567ab628b08a4236b21be33de64022e46ba1419115fe91d562de83f4e",
+      "action_version": "0.3.4",
+      "sha256": "8f40600a531f5262bd6e15c3d436b34adfdf714bc62c85c07ac13affc5b310f0",
       "period": "day",
       "utility": false,
-      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending. Current training tab visibly correct but4pixel selected strip fails. Replace selected-tab color test with scoped active troop header text, preserving queue/rank/resource checks and known exits. Next role replay pending. 0.3.1 secondshift: mature and low threecamp queue checks and city exits passed; only observed camp/tier branches.0.3.2 candidate: named camp world-menu with explicit accelerate and positive local timer is existing-queue evidence. Close menu and confirmcity before early completion; idle queues keep current explicit training path. Avoid guide hand covering training label; nextrole pending.",
+      "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "marksman": {
       "path": "actions/wos-training-marksman.json",
       "action_id": "wos-training-marksman",
-      "action_version": "0.3.2",
-      "sha256": "f7aa6276772b54ef38d030cd51e5b2850430e4ba53e2d31e6cc36ba1ed6bb5e3",
+      "action_version": "0.3.4",
+      "sha256": "a8a362bafa2b3536a13d2c201bc2922527a222c4ab045d58f3d296d13a6dde10",
       "period": "day",
       "utility": false,
-      "verification_scope": "Earlier low-level replay had training-state/footer OCR deviations; source did not explicitly select expected camp.0.3.0 selects the exact footer camp before start and before verification, guards the positive Training button, skips only a verified running camp, and verifies its active timer plus Accelerate label. Footer-based bounded exit remains independent. Candidate: saved running lancer frame validates correct selected camp and rejects wrong camp; next mature-role live validation pending. Current training tab visibly correct but4pixel selected strip fails. Replace selected-tab color test with scoped active troop header text, preserving queue/rank/resource checks and known exits. Next role replay pending. 0.3.1 secondshift: mature and low threecamp queue checks and city exits passed; only observed camp/tier branches.0.3.2 candidate: named camp world-menu with explicit accelerate and positive local timer is existing-queue evidence. Close menu and confirmcity before early completion; idle queues keep current explicit training path. Avoid guide hand covering training label; nextrole pending.",
+      "verification_scope": "Existing positive-queue exit passed on a mature role in0.3.3. Overview-tab candidate passes original low-level missing日常 frame and rejects city; other camp/tier branches bounded by actual local reports.0.3.4 businesssteps unchanged and metadata sanitized.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -152,11 +152,11 @@
     "refined": {
       "path": "actions/wos-crystal-half-price.json",
       "action_id": "wos-crystal-half-price",
-      "action_version": "0.1.5",
-      "sha256": "27897b4e9400346026071e7459b7b4f6902f9837f43b9f2c643a8c5fd9844c47",
+      "action_version": "0.1.6",
+      "sha256": "625c10e7ef91efc1fcee671ca37ad6c5ddf96ce18a12ddde336ffaad6ca9c97b",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。",
+      "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。0.12.26 candidate reuses ordinarycrystal localized实验[室窒].?提炼 locator, oldhalfprice stillglobalexact causedmiss. Currentfailedframe resolvesuniquely; actualhalfpricebudget/dailyoperationguard unchanged; livepending.",
       "current_evidence_note": "第三班成熟试验角色A概览勾选隐藏已完成，实验室行不见；旧anchor将这种底部面板误认主城。0.1.2加有界开关及footer排除/退出，下一班验收；不因入口缺失推断已完成。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -301,29 +301,29 @@
     "gather_wood": {
       "path": "actions/wos-gather-wood.json",
       "action_id": "wos-gather-wood",
-      "action_version": "0.1.8",
-      "sha256": "12f2b899741922e1e602b560b5c2c365ff6997fb45fa267cd1729465b0cc18be",
+      "action_version": "0.1.9",
+      "sha256": "fe447378a334388042bea4b134f87d4e0ae2826f8b2fa4e3b8c5aee06b908cb9",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. 2026-10-21 user policy: gathering carries no heroes. Added3 independently guarded red-minus removals and all3absent gate before dispatch; same-frame color samples0.835–0.85; live no-hero gathering branch pending. Do not treat historical hero-carrying dispatch as this version validation."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. 2026-10-21 user policy: gathering carries no heroes. Added3 independently guarded red-minus removals and all3absent gate before dispatch; same-frame color samples0.835–0.85; live no-hero gathering branch pending. Do not treat historical hero-carrying dispatch as this version validation.0.12.26 candidate retains existing生肉recenter then isolates right-adjacent木材 caption and verifies centered生肉. Wide rowcrop onlyreadselected生肉, omittedunselectedlabel; all3savedfailureframes uniquecorrecttarget pass. Noheroessteps retained; livepending."
     },
     "gather_coal": {
       "path": "actions/wos-gather-coal.json",
       "action_id": "wos-gather-coal",
-      "action_version": "0.1.11",
-      "sha256": "3c877467512b25ec9435b2033c01a2393959a5bf5c6441c233cb8f0c8360dbb8",
+      "action_version": "0.1.12",
+      "sha256": "266679211c76cacbc7a526a1f9a06731e84d252e2364470815cdabc196fcb1b5",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. Resource strip coal at right edge missed local OCR while meat/wood read. Add explicit wood selection and reopen before existing coal/iron selection to center next category. Next role pending, no coordinate fallback. Saved coal label OCR has unique first glyph while narrower crop returns none. Accept coal glyph prefix only inside existing category strip after explicit recentering; retain strict coal site title and unoccupied checks before dispatch. Offline saved OCR matches one target; next shift replay pending. Coal label OCR sometimes absent entirely. Replace only coal category text target with bounded calibrated coal icon template after explicit wood recentering. Two role saved frames match; wood negative fails threshold. Strict coal site/unoccupied checks remain; next role replay pending. 2026-10-21 user policy: gathering carries no heroes. Added3 independently guarded red-minus removals and all3absent gate before dispatch; same-frame color samples0.835–0.85; live no-hero gathering branch pending. Do not treat historical hero-carrying dispatch as this version validation."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. Resource strip coal at right edge missed local OCR while meat/wood read. Add explicit wood selection and reopen before existing coal/iron selection to center next category. Next role pending, no coordinate fallback. Saved coal label OCR has unique first glyph while narrower crop returns none. Accept coal glyph prefix only inside existing category strip after explicit recentering; retain strict coal site title and unoccupied checks before dispatch. Offline saved OCR matches one target; next shift replay pending. Coal label OCR sometimes absent entirely. Replace only coal category text target with bounded calibrated coal icon template after explicit wood recentering. Two role saved frames match; wood negative fails threshold. Strict coal site/unoccupied checks remain; next role replay pending. 2026-10-21 user policy: gathering carries no heroes. Added3 independently guarded red-minus removals and all3absent gate before dispatch; same-frame color samples0.835–0.85; live no-hero gathering branch pending. Do not treat historical hero-carrying dispatch as this version validation.0.12.26 candidate retains existing生肉recenter then isolates right-adjacent木材 caption and verifies centered生肉. Wide rowcrop onlyreadselected生肉, omittedunselectedlabel; all3savedfailureframes uniquecorrecttarget pass. Noheroessteps retained; livepending."
     },
     "gather_iron": {
       "path": "actions/wos-gather-iron.json",
       "action_id": "wos-gather-iron",
-      "action_version": "0.1.11",
-      "sha256": "f5c6b072dc55f073d59ac59cc494628de7669620ee73929f7bc763ff21dfa4a1",
+      "action_version": "0.1.12",
+      "sha256": "524336e765f6b89916e4057b44675f701a9db11216f45a8d983c46bf1d196ab9",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. Resource strip coal at right edge missed local OCR while meat/wood read. Add explicit wood selection and reopen before existing coal/iron selection to center next category. Next role pending, no coordinate fallback. Saved coal label OCR has unique first glyph while narrower crop returns none. Accept coal glyph prefix only inside existing category strip after explicit recentering; retain strict coal site title and unoccupied checks before dispatch. Offline saved OCR matches one target; next shift replay pending. Coal label OCR sometimes absent entirely. Replace only coal category text target with bounded calibrated coal icon template after explicit wood recentering. Two role saved frames match; wood negative fails threshold. Strict coal site/unoccupied checks remain; next role replay pending. 2026-10-21 user policy: gathering carries no heroes. Added3 independently guarded red-minus removals and all3absent gate before dispatch; same-frame color samples0.835–0.85; live no-hero gathering branch pending. Do not treat historical hero-carrying dispatch as this version validation."
+      "verification_scope": "Search carousel offscreen failure observed on mature role; select visiblemeat then close/reopen recenters; iron additionally recenterscoal. Navigation manually sampled; actualnextrole dispatch pending. Fullmarch skip distinct from actualgather. Recentered labels werevisible but fullframeOCR missed them. Explicit croppedtexttargets resolve savedfailedframes; actualnextrole dispatchpending. Empty deployment exits only on resource title plus train-soldiers panel and no troop-ratio controls. Coal page sampled in preparation; other titles remain candidate. Search panel header uses same-frame lower panel OCR; saved low-level frame shows resource tabs missed by full-frame OCR. Next role replay pending. 0.12.4 search-open passed but next resource-select reused full-frame predicates. Apply lower-panel OCR to all resource-search predicates and crop resource target. Next role pending. Resource strip coal at right edge missed local OCR while meat/wood read. Add explicit wood selection and reopen before existing coal/iron selection to center next category. Next role pending, no coordinate fallback. Saved coal label OCR has unique first glyph while narrower crop returns none. Accept coal glyph prefix only inside existing category strip after explicit recentering; retain strict coal site title and unoccupied checks before dispatch. Offline saved OCR matches one target; next shift replay pending. Coal label OCR sometimes absent entirely. Replace only coal category text target with bounded calibrated coal icon template after explicit wood recentering. Two role saved frames match; wood negative fails threshold. Strict coal site/unoccupied checks remain; next role replay pending. 2026-10-21 user policy: gathering carries no heroes. Added3 independently guarded red-minus removals and all3absent gate before dispatch; same-frame color samples0.835–0.85; live no-hero gathering branch pending. Do not treat historical hero-carrying dispatch as this version validation.0.12.26 candidate retains existing生肉recenter then isolates right-adjacent木材 caption and verifies centered生肉. Wide rowcrop onlyreadselected生肉, omittedunselectedlabel; all3savedfailureframes uniquecorrecttarget pass. Noheroessteps retained; livepending."
     },
     "healing": {
       "path": "actions/wos-healing.json",
@@ -337,11 +337,11 @@
     "enlistment": {
       "path": "actions/wos-enlistment.json",
       "action_id": "wos-enlistment",
-      "action_version": "0.1.2",
-      "sha256": "4238c0a8d13104d6b6ab36a274461d45e1a69110a315894191577f34dbaeb5ea",
+      "action_version": "0.1.3",
+      "sha256": "0a04fe2c7ea831ee0f168e95de9fdf09a3adf2aec4926a623f58e1797296775d",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Freshresearchcamera oldcoordinate failed. Mainlive preparation proved hospitalcentered camera →224,394 opens actualEnlistmentOffice with zeroreserves. Revisedroute selectsHospital only, waitsbounded observations, thenoffice; doesnotstart healing. Macro newrole empty/recall replay pending; no purchase."
+      "verification_scope": "Reserve-empty and city exits replayed on mature and low-level roles.0.1.3 adds independent Romulus reward-bubble claim after normal enlistment exit, including emptyreserve. Manual known-portrait claim showed reward and bubble cleared; saved before/after template scores pass positive/negative. New automated image-claim branch pending live. Absent portrait is not fresh reward; no fixed currency gain."
     },
     "pet_treasure_claim": {
       "path": "actions/wos-pet-treasure-claim.json",
@@ -431,11 +431,11 @@
     "pet_treasure_dispatch": {
       "path": "actions/wos-pet-treasure-dispatch.json",
       "action_id": "wos-pet-treasure-dispatch",
-      "action_version": "0.1.6",
-      "sha256": "0c07740e10cb261efef6306257986462ca1080b707eb9cbd24047141c398fb85",
+      "action_version": "0.1.7",
+      "sha256": "4b4422e1045355c0afc1becfe4b5e2a5f847f7ddf1e8bd8c3ea8de37ee463107",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Current成熟角色 manualgold dispatch10stamina,5h,quota4→3; game auto-selects eligible availablepet. Candidate attempts1gold+2blue; existingrunningdetail is recognized and closed without redispatch. Gold/blue templates calibrated to available map; purple/other skins not covered. Actual macro replay pending. Newrole actual goldrunning skipped correctly, blue detail has no pet strength requirement line; removed high-tier-only predicate from available/exit. Nextrole dispatch replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Shift3 candidate: lowrole actual2completedchests proves featureunlocked, subsequent dispatch/alliedentry missed remembered list. Normalize upward only while targetabsent, then bounded singlekey scans with same-frame labelcrop; old5keysperstep could pass target without observation. No unlock exclusion or repeated treasure action. Nextmature role remaining-first attempt pending."
+      "verification_scope": "Original mature role stopped because开始 was read开姶 beforetreasurestart; exit also depended on samebuttontext. Agent separately startedone4hsearch andreturnedcity.0.1.7 keeps title/list andexact10stamina checks, localizes observed始/姶glyph for businessbutton; selectionexit usesunambiguous title+petlist withoutbuttonliteral. Savedselection positive anddetailnegative offline checks; new fullreplaypending."
     },
     "war_academy_commission": {
       "path": "actions/wos-war-academy-commission.json",
@@ -475,6 +475,15 @@
       "utility": false,
       "include_in_daily": false,
       "verification_scope": "0.1.1 a mature role search page recognized; category text_target used shortened label but retained default exact match (whole-frame OCR also inconsistent), no dispatch. Independent exit-search and exit-world restored city in2steps.0.1.2 enables bounded crop OCR and explicit prefix matching for category target; live replay pending. Development sample separately proved one actual level4Sabertooth initiated victory. Daily10counter/result reconciliation and level normalization still pending; default shifts exclude component."
+    },
+    "vip_calendar": {
+      "path": "actions/wos-vip-calendar.json",
+      "period": "day",
+      "utility": false,
+      "action_id": "wos-vip-calendar",
+      "action_version": "0.1.2",
+      "sha256": "9507f567bd082b91aeb1d8b755a4de7b23df1084a694252cd02c9cfb543cd41a",
+      "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1."
     }
   },
   "not_implemented": [
