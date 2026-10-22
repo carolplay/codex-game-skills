@@ -1,6 +1,6 @@
 {
   "action_id": "wos-warehouse-supply",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS warehouse daily package chain",
   "reference_size": [
     788,
@@ -170,7 +170,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
@@ -524,7 +524,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
@@ -548,7 +548,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
@@ -601,7 +601,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
@@ -625,7 +625,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
@@ -678,7 +678,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
@@ -702,7 +702,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
@@ -755,7 +755,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
@@ -779,7 +779,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
@@ -832,7 +832,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
@@ -856,7 +856,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
@@ -909,7 +909,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
@@ -933,7 +933,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
@@ -986,7 +986,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
@@ -1010,7 +1010,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
@@ -1038,7 +1038,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
             "crop_ocr": true,
@@ -1062,7 +1062,7 @@
               130,
               400,
               680,
-              920
+              840
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
@@ -1079,7 +1079,7 @@
           130,
           400,
           680,
-          920
+          840
         ],
         "offset": [
           300,
@@ -1150,13 +1150,13 @@
           {
             "template": "warehouse-supply-bubble",
             "bounds": [
-              290,
-              350,
-              500,
-              660
+              340,
+              400,
+              450,
+              560
             ],
             "mode": "grayscale",
-            "min_score": 0.88
+            "min_score": 0.84
           }
         ]
       },
@@ -1196,26 +1196,26 @@
           {
             "template": "warehouse-supply-bubble",
             "bounds": [
-              290,
-              350,
-              500,
-              660
+              340,
+              400,
+              450,
+              560
             ],
             "mode": "grayscale",
-            "min_score": 0.88
+            "min_score": 0.84
           }
         ]
       },
       "image_target": {
         "template": "warehouse-supply-bubble",
         "bounds": [
-          290,
-          350,
-          500,
-          660
+          340,
+          400,
+          450,
+          560
         ],
         "mode": "grayscale",
-        "min_score": 0.88
+        "min_score": 0.84
       },
       "after": [
         "距离下个包裹"
@@ -1536,7 +1536,7 @@
       }
     ]
   },
-  "verification_scope": "Agent samples: guidedentry native490793→crate320440, claimstarts90s cooldown, main2/3→3/3 taskclaimed315points next3/5; Y0/1→1/1 next1/3. Newmacro offlinecandidate; no formalreplay yet. Imageassetonlycratebubble withoutidentity. Waitactualtemplate notharddelay; 30observations/5sec bounded by900s. Activitycompleteonly5/5; rewardtierautoearned separate inheriteddailylogic.",
+  "verification_scope": "Agent samples: guidedentry native490793→crate320440, claimstarts90s cooldown, main2/3→3/3 taskclaimed315points next3/5; Y0/1→1/1 next1/3. Newmacro offlinecandidate; no formalreplay yet. Imageassetonlycratebubble withoutidentity. Waitactualtemplate notharddelay; 30observations/5sec bounded by900s. Activitycompleteonly5/5; rewardtierautoearned separate inheriteddailylogic. 0.1.1 offline: mainbottompartlyvisiblewarehouse row resolved588911 belowinnerclip908; constrain rowOCR/target to840 so55offset remainsinside895, scroll beforeclick. Toprow579500 remainsvalid. Waitcurrent34batchend beforedeployment. Guidedhand occludesreadycrate:4 croppedvariants calibrated on10 savedframes, minimum .8505, two negatives maximum .5117; threshold.84 in tighterguidedarea. Firstmacroclaimed1, secondlookupfailed; no5/5claimyet.",
   "business_dependencies": [
     "Cityentry/exit andfreshroleidentity; no research/construction",
     "Dailyearnedclaim precedes readingwarehouse nexttier 1→3→5",
