@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.41",
+  "package_version": "0.12.42",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -108,33 +108,33 @@
     "shield": {
       "path": "actions/wos-training-shield.json",
       "action_id": "wos-training-shield",
-      "action_version": "0.3.4",
-      "sha256": "3938e710f295cb21af42d5b3798b7736dd865f9cf527b6812e1b2d623392b2e9",
+      "action_version": "0.3.5",
+      "sha256": "eb4e918dbf3f659180a37b11a086169e43c56418c9b0b962c13ecae482a9d183",
       "period": "day",
       "utility": false,
-      "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.",
+      "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "lancer": {
       "path": "actions/wos-training-lancer.json",
       "action_id": "wos-training-lancer",
-      "action_version": "0.3.4",
-      "sha256": "8f40600a531f5262bd6e15c3d436b34adfdf714bc62c85c07ac13affc5b310f0",
+      "action_version": "0.3.5",
+      "sha256": "b2892c260582928e70df24fc9bfaae2230fc829c2e2aa5e24a81c9849992bbc4",
       "period": "day",
       "utility": false,
-      "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.",
+      "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "marksman": {
       "path": "actions/wos-training-marksman.json",
       "action_id": "wos-training-marksman",
-      "action_version": "0.3.4",
-      "sha256": "a8a362bafa2b3536a13d2c201bc2922527a222c4ab045d58f3d296d13a6dde10",
+      "action_version": "0.3.5",
+      "sha256": "b295dc5550d497b37d5ba07208d1693517aad191c6ba33a7c67f8b9f69e4a868",
       "period": "day",
       "utility": false,
-      "verification_scope": "Existing positive-queue exit passed on a mature role in0.3.3. Overview-tab candidate passes original low-level missing日常 frame and rejects city; other camp/tier branches bounded by actual local reports.0.3.4 businesssteps unchanged and metadata sanitized.",
+      "verification_scope": "Existing positive-queue exit passed on a mature role in0.3.3. Overview-tab candidate passes original low-level missing日常 frame and rejects city; other camp/tier branches bounded by actual local reports.0.3.4 businesssteps unchanged and metadata sanitized.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },

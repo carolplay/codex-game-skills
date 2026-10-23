@@ -3,6 +3,7 @@
 - Public, reusable game skills live in `skills/`.
 - Machine-local account settings, execution records and experiments live in `local-data/`, which is Git-ignored. Never commit that directory or copy private account data into public skills.
 - Read `local-data/README.md` for local paths and operating state when the directory exists.
+- V3 follows the user-confirmed three-layer architecture: general execution backend + game-specific capability packages + MCP interface. Prove it with WOS first, then expand to Uncharted Waters Online and WoW; see `docs/WOS-V3-NATIVE-RUNTIME.md`. Native permissions and target acceptance precede production migration; MCP is an optional Agent entry, not a per-step model loop.
 - The CrossMacro source repository is a separate project folder. Runtime dependencies and machine-specific launcher configuration live outside Git.
 - Preserve the existing pause state; filesystem maintenance does not authorize game actions or resuming schedules.
 - New WOS automation uses `skills/play-whiteout-survival-macros/` and its fixed visit plan. The unchanged `skills/play-whiteout-survival/` is V1 pure-agent knowledge/fallback. Read only the relevant references and current run checkpoint, rather than accumulating old prompts.

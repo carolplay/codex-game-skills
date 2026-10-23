@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-shield",
-  "action_version": "0.3.4",
+  "action_version": "0.3.5",
   "name": "WOS — 盾兵 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -406,7 +406,6 @@
       ],
       "before": {
         "all": [
-          "盾兵营",
           "详情",
           "加速"
         ],
@@ -419,7 +418,20 @@
           ],
           "min": 1,
           "max": 359999
-        }
+        },
+        "text_regions": [
+          {
+            "bounds": [
+              305,
+              445,
+              500,
+              520
+            ],
+            "pattern": ".*盾兵营.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
       },
       "after": {
         "all": [
@@ -447,12 +459,24 @@
       "observe_attempts": 5,
       "skip_if": {
         "all": [
-          "盾兵营",
           "详情",
           "训练"
         ],
         "none": [
           "加速"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              305,
+              445,
+              500,
+              520
+            ],
+            "pattern": ".*盾兵营.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -1162,7 +1186,7 @@
       }
     ]
   },
-  "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.",
+  "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
   "business_dependencies": [
     "Always select and verify expected camp footer before ordinary training input",
