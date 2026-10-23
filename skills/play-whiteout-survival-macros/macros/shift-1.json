@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.40",
-  "package_version": "0.12.40",
+  "macro_version": "0.12.41",
+  "package_version": "0.12.41",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -224,8 +224,8 @@
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.5",
-          "sha256": "2efd2e9d912d5376bf99aa04723d2a5077ec36323ce9375084019007ed46164d"
+          "action_version": "0.1.6",
+          "sha256": "0c413e3ab63c57c29a219485e0b8bbff52bdabbadbfa1558d86fcd6f34cdd80d"
         },
         {
           "task": "enlistment",
@@ -489,8 +489,8 @@
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.5",
-          "sha256": "2efd2e9d912d5376bf99aa04723d2a5077ec36323ce9375084019007ed46164d"
+          "action_version": "0.1.6",
+          "sha256": "0c413e3ab63c57c29a219485e0b8bbff52bdabbadbfa1558d86fcd6f34cdd80d"
         },
         {
           "task": "enlistment",

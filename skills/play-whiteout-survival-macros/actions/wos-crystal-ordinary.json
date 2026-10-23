@@ -1,6 +1,6 @@
 {
   "action_id": "wos-crystal-ordinary",
-  "action_version": "0.1.5",
+  "action_version": "0.1.6",
   "name": "WOS — ordinary fire crystal refinements (up to8)",
   "reference_size": [
     788,
@@ -2008,10 +2008,45 @@
           ]
         },
         "observe_attempts": 5
+      },
+      {
+        "name": "exit-unexpected-travel-root",
+        "action": "click",
+        "point": [
+          138,
+          65
+        ],
+        "before": {
+          "all": [
+            "天险游历",
+            "雪原游历"
+          ],
+          "none": [
+            "领主档案",
+            "今日剩余次数",
+            "完成任务后"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
       }
     ]
   },
-  "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。",
+  "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。; 0.1.6 bounded exit for observed accidentaltravelroot duringoverviewkeysearch. Actualagentbackarrow recoveredcity; newexit macro validationpending. Navigationrootcause remains, no falseclaim ofrefiningfix.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
   "overview_footer_compatibility": "Stable prefix supports both旧完成任务后是否隐藏 and新版完成任务后隐藏; only page-anchor semantics changed, not game strategy. Nextrole live pending."
 }
