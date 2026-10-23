@@ -1,6 +1,6 @@
 {
   "action_id": "wos-free-recruit",
-  "action_version": "0.1.7",
+  "action_version": "0.1.8",
   "name": "WOS — free advanced and epic recruitment, never spend keys",
   "reference_size": [
     788,
@@ -315,6 +315,53 @@
           }
         ]
       },
+      "after": {
+        "any": [
+          "高级招募",
+          "奖励"
+        ],
+        "none": [
+          "您已拥有该英雄",
+          "解锁新英雄"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "高级招募",
+          "史诗招募"
+        ],
+        "none": [
+          "点击任意位置退出",
+          "您已拥有该英雄"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "advanced-reward-exit-retry",
+      "action": "click",
+      "point": [
+        394,
+        783
+      ],
+      "before": {
+        "all": [
+          "奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              220,
+              945,
+              580,
+              1010
+            ],
+            "pattern": "点击.*退[出幽]",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
       "after": [
         "高级招募",
         "史诗招募"
@@ -455,6 +502,53 @@
     },
     {
       "name": "epic-reward-exit",
+      "action": "click",
+      "point": [
+        394,
+        783
+      ],
+      "before": {
+        "all": [
+          "奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              220,
+              945,
+              580,
+              1010
+            ],
+            "pattern": "点击.*退[出幽]",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "高级招募",
+          "奖励"
+        ],
+        "none": [
+          "您已拥有该英雄",
+          "解锁新英雄"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "高级招募",
+          "史诗招募"
+        ],
+        "none": [
+          "点击任意位置退出",
+          "您已拥有该英雄"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "epic-reward-exit-retry",
       "action": "click",
       "point": [
         394,

@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.44",
-  "package_version": "0.12.44",
+  "macro_version": "0.12.45",
+  "package_version": "0.12.45",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -140,8 +140,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.7",
-          "sha256": "514e47817ec749b05eb1aeb390a3a4685d14ad48a1b48580dcd7035bb7a39718"
+          "action_version": "0.1.8",
+          "sha256": "48dcd6068370edde3f070d1bad514fbbd4e0f9f26ae40d1fb947c1e00e6416ce"
         },
         {
           "task": "marksman",
@@ -400,8 +400,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.7",
-          "sha256": "514e47817ec749b05eb1aeb390a3a4685d14ad48a1b48580dcd7035bb7a39718"
+          "action_version": "0.1.8",
+          "sha256": "48dcd6068370edde3f070d1bad514fbbd4e0f9f26ae40d1fb947c1e00e6416ce"
         },
         {
           "task": "marksman",
@@ -618,8 +618,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.7",
-          "sha256": "514e47817ec749b05eb1aeb390a3a4685d14ad48a1b48580dcd7035bb7a39718"
+          "action_version": "0.1.8",
+          "sha256": "48dcd6068370edde3f070d1bad514fbbd4e0f9f26ae40d1fb947c1e00e6416ce"
         },
         {
           "task": "marksman",

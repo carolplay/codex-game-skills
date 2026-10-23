@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.44",
+  "package_version": "0.12.45",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -76,13 +76,14 @@
     "recruit": {
       "path": "actions/wos-free-recruit.json",
       "action_id": "wos-free-recruit",
-      "action_version": "0.1.7",
-      "sha256": "514e47817ec749b05eb1aeb390a3a4685d14ad48a1b48580dcd7035bb7a39718",
+      "action_version": "0.1.8",
+      "sha256": "48dcd6068370edde3f070d1bad514fbbd4e0f9f26ae40d1fb947c1e00e6416ce",
       "period": "day",
       "utility": false,
       "verification_scope": "Advanced free draw and unchanged silver/gold inventory replayed on a mature role in0.1.6. Silver-key narrow integer check accepts confidence0.3; saved failure reproduces old rejection and correct integer read, without decimal coercion. Epic cooldown passed; other epic/free/newhero states keep prior evidence only. Metadata-only patch relative to0.1.6; private balances excluded.",
       "current_evidence_note": "成熟试验角色A英雄网格页全图OCR乱码，停止后续；同一失败图的标题和底部独立裁剪能明确读到英雄列表/英雄招募。0.1.1加入有界局部OCR，下一试验号验证，不重试成熟试验角色A失败项。",
-      "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
+      "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
+      "reward_exit_revision": "ActualYreward stayedafterfirstblankclick; oneconditionalfresh reward-only retry, finalrootassertion retained. Modelsecondblankexitactualpassed; newmacroretry livepending."
     },
     "help": {
       "path": "actions/wos-alliance-help.json",
