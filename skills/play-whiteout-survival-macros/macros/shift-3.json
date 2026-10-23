@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.39",
-  "package_version": "0.12.39",
+  "macro_version": "0.12.40",
+  "package_version": "0.12.40",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -116,8 +116,8 @@
         {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
-          "action_version": "0.1.5",
-          "sha256": "0d0bfa81c03750d7cecb29f4ad261cc1e14078e1d885211ec2f49e6d09467f4d"
+          "action_version": "0.1.6",
+          "sha256": "50718337097a044889185577f8ec5e8a762d1f730a7f0db21ca2e07dd1049a93"
         },
         {
           "task": "npc_autojoin",
@@ -128,8 +128,8 @@
         {
           "task": "academy",
           "action_id": "wos-academy-supply",
-          "action_version": "0.1.2",
-          "sha256": "69cc0552ab3281dccdb02b71bc0724d824ce328ab55997f27901b643d0daeb80"
+          "action_version": "0.1.3",
+          "sha256": "295d3e9f4f81315d745da2746258a13fa634171816a41b2b9b26eae9de24384b"
         },
         {
           "task": "travel_idle",
@@ -376,8 +376,8 @@
         {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
-          "action_version": "0.1.5",
-          "sha256": "0d0bfa81c03750d7cecb29f4ad261cc1e14078e1d885211ec2f49e6d09467f4d"
+          "action_version": "0.1.6",
+          "sha256": "50718337097a044889185577f8ec5e8a762d1f730a7f0db21ca2e07dd1049a93"
         },
         {
           "task": "npc_autojoin",
@@ -388,8 +388,8 @@
         {
           "task": "academy",
           "action_id": "wos-academy-supply",
-          "action_version": "0.1.2",
-          "sha256": "69cc0552ab3281dccdb02b71bc0724d824ce328ab55997f27901b643d0daeb80"
+          "action_version": "0.1.3",
+          "sha256": "295d3e9f4f81315d745da2746258a13fa634171816a41b2b9b26eae9de24384b"
         },
         {
           "task": "travel_idle",
@@ -606,8 +606,8 @@
         {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
-          "action_version": "0.1.5",
-          "sha256": "0d0bfa81c03750d7cecb29f4ad261cc1e14078e1d885211ec2f49e6d09467f4d"
+          "action_version": "0.1.6",
+          "sha256": "50718337097a044889185577f8ec5e8a762d1f730a7f0db21ca2e07dd1049a93"
         },
         {
           "task": "npc_autojoin",

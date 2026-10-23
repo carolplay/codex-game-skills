@@ -1,6 +1,6 @@
 {
   "action_id": "wos-alliance-incentive",
-  "action_version": "0.1.5",
+  "action_version": "0.1.6",
   "name": "WOS alliance_incentive",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Main150/800 no reward; grayscale red-dot falsely matched orange gear. Color-only red threshold plus800/800 gate, known reward-help tooltip exit. Positive/negative calibrated on real frames; nextrole replay pending. Tight red-center positive1.0 and negative0.0494; counter accepts>=800 including1,800 rather than exactly800. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending.",
+  "verification_scope": "Main150/800 no reward; grayscale red-dot falsely matched orange gear. Color-only red threshold plus800/800 gate, known reward-help tooltip exit. Positive/negative calibrated on real frames; nextrole replay pending. Tight red-center positive1.0 and negative0.0494; counter accepts>=800 including1,800 rather than exactly800. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending.; 0.1.6 rejects clipped bottom overview header beforeforwardoffset couldhit hidecompleted. Currentclient savedfailure titley705,target755 provesoldmisclick. Nextfullvisible branch pendinglive.",
   "steps": [
     {
       "name": "01-check-city",
@@ -353,6 +353,19 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              280,
+              390,
+              680
+            ],
+            "pattern": ".*联盟激励.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -444,6 +457,19 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              280,
+              390,
+              680
+            ],
+            "pattern": ".*联盟激励.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -535,6 +561,19 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              280,
+              390,
+              680
+            ],
+            "pattern": ".*联盟激励.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -626,6 +665,19 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              280,
+              390,
+              680
+            ],
+            "pattern": ".*联盟激励.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -717,6 +769,19 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              280,
+              390,
+              680
+            ],
+            "pattern": ".*联盟激励.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -808,6 +873,19 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              280,
+              390,
+              680
+            ],
+            "pattern": ".*联盟激励.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -899,6 +977,19 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              280,
+              390,
+              680
+            ],
+            "pattern": ".*联盟激励.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -990,6 +1081,19 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              280,
+              390,
+              680
+            ],
+            "pattern": ".*联盟激励.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -1000,10 +1104,10 @@
         "text": "联盟激励",
         "exact": false,
         "bounds": [
-          98,
+          100,
           280,
           390,
-          740
+          680
         ],
         "offset": [
           270,
@@ -1029,6 +1133,19 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              280,
+              390,
+              680
+            ],
+            "pattern": ".*联盟激励.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       },
       "after": {
