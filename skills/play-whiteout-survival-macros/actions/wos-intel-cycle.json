@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.8",
+  "action_version": "0.2.9",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -3054,6 +3054,14 @@
           "城镇",
           "营救幸存者",
           "营救"
+        ],
+        "page_text_regions": [
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
         ]
       },
       "observe_attempts": 5,
@@ -3071,6 +3079,14 @@
           "城镇",
           "营救幸存者",
           "营救"
+        ],
+        "page_text_regions": [
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
         ]
       },
       "after": {
@@ -4555,8 +4571,8 @@
     },
     "rescue": {
       "action_id": "wos-intel-rescue",
-      "action_version": "0.1.6",
-      "sha256": "2ebba99ad9e6c414261990e8b0379ae9dfce59cfb22a2613511e3f367032e5cb"
+      "action_version": "0.1.7",
+      "sha256": "645d0124338dbee3fdca58cd3a1e21d459d84c91b05c33abe1d9be26baf88049"
     },
     "hero": {
       "action_id": "wos-intel-hero",

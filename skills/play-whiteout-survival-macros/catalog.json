@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.42",
+  "package_version": "0.12.43",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -256,14 +256,15 @@
     "intel_rescue": {
       "path": "actions/wos-intel-rescue.json",
       "action_id": "wos-intel-rescue",
-      "action_version": "0.1.6",
-      "sha256": "2ebba99ad9e6c414261990e8b0379ae9dfce59cfb22a2613511e3f367032e5cb",
+      "action_version": "0.1.7",
+      "sha256": "645d0124338dbee3fdca58cd3a1e21d459d84c91b05c33abe1d9be26baf88049",
       "period": "shift",
       "utility": false,
       "verification_scope": "Manual route sampled; local white-glyph matching calibrated from saved map across several rarity colors. Bounded6 ordinary missions then require absent marker; no NPC bounty, no player targets, no stamina purchases. Full macro pending next role. under30 auxiliary old paw/sword/tent skin false-empty found by saved-map audit; added alternate glyph assets and widened map search incl upper markers. New variants offline only; next role full replay pending. Additional sampled blue glyph variant registered. Standalone remains bounded component; productionmixedcycle handles tasksrevealed byotherclasses and iconocclusion. Shift3 candidate: single legacy claim button moved down to reference1017; green observation region moved correspondingly. Firebeast menu adds exact attackbutton crop, NPC title/player exclusions retained. Saved-frame validation then nextrole replay; not yet live.",
       "category": "component",
       "include_in_daily": false,
-      "production_replacement": "intel_cycle"
+      "production_replacement": "intel_cycle",
+      "rescue_world_anchor_revision": "Saved low-role rescue-world screenshot whole OCR drops城镇, footer crop reads it. Preserve exact title/button/next-state assertions and bounded exits. Live replay pending."
     },
     "intel_hero": {
       "path": "actions/wos-intel-hero.json",
@@ -460,11 +461,12 @@
     "intel_cycle": {
       "path": "actions/wos-intel-cycle.json",
       "action_id": "wos-intel-cycle",
-      "action_version": "0.2.8",
-      "sha256": "2d2d0307f4328aac9d10a76ec65dd84f615b29eb9a52eea09ee24f449f673472",
+      "action_version": "0.2.9",
+      "sha256": "1a5e9f5573f85602c0cc4eae3233765700c54d2c1f952dde0702c76284975237",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback. 0.2.8: mainbulkexecute8 completed but firstclaimclick had no effect; allow unchanged claimpage only asintermediate, one explicitfreshgreen retry, strictrewardpostcondition preserved. Retryskips reward/disabled; no unboundedclickloop. Savedfailureframepositive; nextrolelivepending. Retryusesknownmap+leftbutton+greenregion, notcursoroccluded rightbuttonlabel."
+      "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback. 0.2.8: mainbulkexecute8 completed but firstclaimclick had no effect; allow unchanged claimpage only asintermediate, one explicitfreshgreen retry, strictrewardpostcondition preserved. Retryskips reward/disabled; no unboundedclickloop. Savedfailureframepositive; nextrolelivepending. Retryusesknownmap+leftbutton+greenregion, notcursoroccluded rightbuttonlabel.",
+      "rescue_world_anchor_revision": "Saved low-role rescue-world screenshot whole OCR drops城镇, footer crop reads it. Preserve exact title/button/next-state assertions and bounded exits. Live replay pending."
     },
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
