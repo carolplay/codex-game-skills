@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.9",
+  "action_version": "0.2.10",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -1854,12 +1854,21 @@
           }
         ]
       },
+      "skip_if_step_skipped": "legacy-mode",
       "skip_if_any": [
         {
           "all": [
             "情报",
             "下次刷新",
             "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
           ]
         }
       ]
@@ -2444,12 +2453,21 @@
           }
         ]
       },
+      "skip_if_step_skipped": "legacy-mode",
       "skip_if_any": [
         {
           "all": [
             "情报",
             "下次刷新",
             "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
           ]
         }
       ]
@@ -3017,12 +3035,21 @@
           }
         ]
       },
+      "skip_if_step_skipped": "legacy-mode",
       "skip_if_any": [
         {
           "all": [
             "情报",
             "下次刷新",
             "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
           ]
         }
       ]
@@ -3541,12 +3568,21 @@
           }
         ]
       },
+      "skip_if_step_skipped": "legacy-mode",
       "skip_if_any": [
         {
           "all": [
             "情报",
             "下次刷新",
             "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
           ]
         }
       ]

@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.45",
-  "package_version": "0.12.45",
+  "macro_version": "0.12.47",
+  "package_version": "0.12.47",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -158,8 +158,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.9",
-          "sha256": "1a5e9f5573f85602c0cc4eae3233765700c54d2c1f952dde0702c76284975237"
+          "action_version": "0.2.10",
+          "sha256": "52ab26f10c3d2abaeda98432942df32f1785d790f0c0e22fbc4678a48c2944e2"
         },
         {
           "task": "gather_meat",
@@ -254,8 +254,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.4",
-          "sha256": "795cb3f4d45774a7c3994593788fa6eb15f8b3b88f2be5012c625fe35c715d92"
+          "action_version": "0.1.5",
+          "sha256": "2ca995c1022fca09a70d2de51a84b9c223d8442df54c17ebc9c397da0f32e6a1"
         },
         {
           "task": "daily",
@@ -423,8 +423,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.9",
-          "sha256": "1a5e9f5573f85602c0cc4eae3233765700c54d2c1f952dde0702c76284975237"
+          "action_version": "0.2.10",
+          "sha256": "52ab26f10c3d2abaeda98432942df32f1785d790f0c0e22fbc4678a48c2944e2"
         },
         {
           "task": "gather_meat",
@@ -519,8 +519,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.4",
-          "sha256": "795cb3f4d45774a7c3994593788fa6eb15f8b3b88f2be5012c625fe35c715d92"
+          "action_version": "0.1.5",
+          "sha256": "2ca995c1022fca09a70d2de51a84b9c223d8442df54c17ebc9c397da0f32e6a1"
         },
         {
           "task": "daily",
@@ -646,8 +646,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.9",
-          "sha256": "1a5e9f5573f85602c0cc4eae3233765700c54d2c1f952dde0702c76284975237"
+          "action_version": "0.2.10",
+          "sha256": "52ab26f10c3d2abaeda98432942df32f1785d790f0c0e22fbc4678a48c2944e2"
         },
         {
           "task": "gather_meat",
@@ -724,8 +724,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.4",
-          "sha256": "795cb3f4d45774a7c3994593788fa6eb15f8b3b88f2be5012c625fe35c715d92"
+          "action_version": "0.1.5",
+          "sha256": "2ca995c1022fca09a70d2de51a84b9c223d8442df54c17ebc9c397da0f32e6a1"
         },
         {
           "task": "daily",

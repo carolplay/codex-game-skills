@@ -90,7 +90,11 @@ def build(flows):
  for source in legacy['steps'][10:]:
   s=copy.deepcopy(source);s['name']='legacy-'+s['name']
   if s.get('skip_if_step_skipped'):s['skip_if_step_skipped']='legacy-'+s['skip_if_step_skipped']
-  else:s.setdefault('skip_if_any',[]).append({'all':['情报','下次刷新','全部执行']})
+  else:
+   # Chain every legacy selector to the already observed layout decision.
+   # Whole-frame OCR can omit the bulk label on a later frame.
+   s['skip_if_step_skipped']='legacy-mode'
+   s.setdefault('skip_if_any',[]).append({'all':['情报','下次刷新','全部执行'],'page_text_regions':[[110,970,680,1060]]})
   steps.append(s)
  return {**legacy,'name':'WOS bulk intelligence execution plus event firebeast','steps':steps,'repeat_from':'batch-round-anchor','verification_scope':'0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.','business_dependencies':['City entry and exit; stamina meal uses lighthouse plus before this action','Game execute-all handles ordinary intel; repeat after claim reveals queued tasks','Event firebeast remains separate; no claim that bulk clears event tasks','Explicit zero execute/claim counts, disabled buttons, not executing and no firebeast required for bulk completion','If bulk button absent, use fixed local legacy branches; actual UI determines availability']}
 
