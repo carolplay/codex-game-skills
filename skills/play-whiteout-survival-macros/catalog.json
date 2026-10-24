@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.56",
+  "package_version": "0.12.57",
   "executor_min_version": "0.4.6",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -242,8 +242,8 @@
     "island": {
       "path": "actions/wos-island.json",
       "action_id": "wos-island",
-      "action_version": "0.1.11",
-      "sha256": "3e79376a7c062f01542b7e38162e64c8875d5f37bc5cf59ccf06b9e8b6ed2b0f",
+      "action_version": "0.1.12",
+      "sha256": "78d0ff69ac19b35d40270fd2a3dde5b7742fb2b184a95395251127cd0c8db4be",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit. Adds bounded normalback from observed experttravel root (expertlist/nextstation/idle/auto); savedfailure andcitynegative checked, agentbackcityactual. Doesnotclaimislandentryfixed. Newexit macrolivepending."

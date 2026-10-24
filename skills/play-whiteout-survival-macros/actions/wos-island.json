@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.11",
+  "action_version": "0.1.12",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 360,
   "status": "candidate",
-  "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit. Adds bounded normalback from observed experttravel root (expertlist/nextstation/idle/auto); savedfailure andcitynegative checked, agentbackcityactual. Doesnotclaimislandentryfixed. Newexit macrolivepending.",
+  "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit. Adds bounded normalback from observed experttravel root (expertlist/nextstation/idle/auto); savedfailure andcitynegative checked, agentbackcityactual. Doesnotclaimislandentryfixed. Newexit macrolivepending. 0.1.12 aligns existing labyrinth-root bounded exit for rotating zone labels after Y2944 detour; actual agent back returned city. Saved labyrinth positive/city negative checked; macro exit live pending; island entry still unreliable.",
   "steps": [
     {
       "name": "01-check-city",
@@ -2239,6 +2239,12 @@
         "before": {
           "all": [
             "地心探险",
+            "规则",
+            "排行榜"
+          ],
+          "any": [
+            "地下科研所",
+            "装备锻炉",
             "群兽洞窟",
             "宝石矿洞"
           ],
