@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.65",
+  "package_version": "0.12.66",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -50,7 +50,7 @@
       "sha256": "4f54cf07bb6cd69931c0dd216b6a713502f2dca7383c7bf72f0df7f8129b2076",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Real claim occurred; one reward-animation assertion deviation recovered to city and next task continued. Cooldown full replay passed.; 0.1.3 overviewfilter +boundedtop/find normalization. Oldincentivemisclick enabledhidecompleted; supplymissing in unnormalizedlist. Freeclaim/cooldown/cityexit behaviorunchanged; livepending. 0.1.4 adds bounded exit from observed labyrinth root with research/forge or cave zones; agent normalback recovered, savedpositive/citynegative tested; navigationitself notfixed. Movefailedacademy beforedaily tail, notmiddleofstablebatch. Newexit macrolivepending. 0.1.5 adds bounded completed-travel modal/summary exits. Saved positive/negative checked; summary blank exit agent observed; completed modal blank exit pending live. Academy entry/reward remains partial.",
+      "verification_scope": "Real claim occurred; one reward-animation assertion deviation recovered to city and next task continued. Cooldown full replay passed.; 0.1.3 overviewfilter +boundedtop/find normalization. Oldincentivemisclick enabledhidecompleted; supplymissing in unnormalizedlist. Freeclaim/cooldown/cityexit behaviorunchanged; livepending. 0.1.4 adds bounded exit from observed labyrinth root with research/forge or cave zones; agent normalback recovered, savedpositive/citynegative tested; navigationitself notfixed. Movefailedacademy beforedaily tail, notmiddleofstablebatch. Newexit macrolivepending. 0.1.5 adds bounded completed-travel modal/summary exits. Saved positive/negative checked; summary blank exit agent observed; completed modal blank exit pending live. Academy entry/reward remains partial. 0.1.5 supply workflow passed one mature-role third batch; completed-idle exit not exercised in that run.",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "alliance": {
@@ -171,7 +171,7 @@
       "sha256": "9841822cf7ee3c6401cf4bec85f3f6ec4ea8be8a58c6bf896846e7c476d7dddf",
       "period": "day",
       "utility": false,
-      "verification_scope": "Trial role A passed two actual camp reward-badge claims with Gareth reward and Romulus troop-recruitment banners, then drained badge. Trial role B passed empty-badge branch. Only this camp entry; other Expert/enlistment-office rewards unverified. a mature role locating盾兵 wholeframeconfidence below0.5 causedzero target;0.1.2 cropped target with0.3minimum plus independent overview exit. No new claim; nextmature-role validationpending. 0.1.4 prefers unique inbounds fullframe shield-camp label before sameimage crop; saved previous-role oldcrop misread/newpoint432487 and city fullframe negative checked, live pending. Shield0.3.7 same mechanism fully passed previous mature role; not assumed expert acceptance.",
+      "verification_scope": "Trial role A passed two actual camp reward-badge claims with Gareth reward and Romulus troop-recruitment banners, then drained badge. Trial role B passed empty-badge branch. Only this camp entry; other Expert/enlistment-office rewards unverified. a mature role locating盾兵 wholeframeconfidence below0.5 causedzero target;0.1.2 cropped target with0.3minimum plus independent overview exit. No new claim; nextmature-role validationpending. 0.1.4 prefers unique inbounds fullframe shield-camp label before sameimage crop; saved previous-role oldcrop misread/newpoint432487 and city fullframe negative checked, live pending. Shield0.3.7 same mechanism fully passed previous mature role; not assumed expert acceptance. 0.1.4 full workflow passed one mature-role third batch; actualbranch documented locally, not native acceptance.",
       "current_evidence_note": "已验证盾兵营地专家徽章领取/空奖励；不代表所有专家奖励。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -333,11 +333,11 @@
     "healing": {
       "path": "actions/wos-healing.json",
       "action_id": "wos-healing",
-      "action_version": "0.1.4",
-      "sha256": "c130458f023ed9a2bf270897f74702c845243daec1538e7564c67e518f1dec48",
+      "action_version": "0.1.5",
+      "sha256": "641d4898058f131ffb8ed462c512b45fbc778f5c2de92c9b1446afd031fc9d1d",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.3: existing treatment queue page had same title as empty selection; quickselect clicked cancel treatment. Add existingqueue predicate to both business clicks and bounded cancel-confirm dismissal. Agent recovery and savedframe checks separate from pending macro replay. 0.1.4 hospital radial-menu anchor uses visible details/treatment-or-accelerate/upgrade labels; does not click upgrade. Full hospital title was occluded in saved Main frame. Treatment-page and queue checks unchanged; live pending."
+      "verification_scope": "0.1.3: existing treatment queue page had same title as empty selection; quickselect clicked cancel treatment. Add existingqueue predicate to both business clicks and bounded cancel-confirm dismissal. Agent recovery and savedframe checks separate from pending macro replay. 0.1.4 hospital radial-menu anchor uses visible details/treatment-or-accelerate/upgrade labels; does not click upgrade. Full hospital title was occluded in saved Main frame. Treatment-page and queue checks unchanged; live pending. 0.1.5 does not require Upgrade menu item during hospital timer; details+treatment/speed context retained. Explicit hospital radial-menu exit and anchor exclusion prevent accepting visible detail menu as bare city. SavedMain/Y menu positives and city negative; new exit point pending live."
     },
     "enlistment": {
       "path": "actions/wos-enlistment.json",
@@ -496,11 +496,11 @@
     "warehouse": {
       "path": "actions/wos-warehouse-supply.json",
       "action_id": "wos-warehouse-supply",
-      "action_version": "0.1.6",
-      "sha256": "430cf219531257053f85ffc322fadb5b6abe900122cccd214fbce47cf8b94be6",
+      "action_version": "0.1.7",
+      "sha256": "c8e69770c3af7f9670b1262c6a56ecc31d5743fb44c84f0d9bb0a6fd82c11b36",
       "period": "day",
       "utility": false,
-      "verification_scope": "Agent samples: guidedentry native490793→crate320440, claimstarts90s cooldown, main2/3→3/3 taskclaimed315points next3/5; Y0/1→1/1 next1/3. Newmacro offlinecandidate; no formalreplay yet. Imageassetonlycratebubble withoutidentity. Waitactualtemplate notharddelay; 30observations/5sec bounded by900s. Activitycompleteonly5/5; rewardtierautoearned separate inheriteddailylogic. 0.1.1 offline: mainbottompartlyvisiblewarehouse row resolved588911 belowinnerclip908; constrain rowOCR/target to840 so55offset remainsinside895, scroll beforeclick. Toprow579500 remainsvalid. Waitcurrent34batchend beforedeployment. Guidedhand occludesreadycrate:4 croppedvariants calibrated on10 savedframes, minimum .8505, two negatives maximum .5117; threshold.84 in tighterguidedarea. Firstmacroclaimed1, secondlookupfailed; no5/5claimyet. 0.1.2: Lowround3 correctbluebutton491680 firstclick no effect; oneexplicitfresh pendingrowretry, cityskipsretry, strictcitypostcondition retained. Prior2actualpackages remainpartialproof, no5/5yet. 0.1.3: repeated前往 withinwarehouse cooldown remainedunchanged despitecorrectpoint+retry. Establishguided warehousecamera once, verifybubble, then dailyclose returns samecamera andwaitsrealcrate eachround; pendingcount stillread everyround,5/5onlycompletion. No changetoactualclaimpoint. Newfullchainlivepending.; 0.1.4 ready alias includes actual larger stable crate, .80 threshold saved positive/negative separation; initial guide alias unchanged. Full 5/5 pending live. 0.1.5 currentunder30 role actuallyclaimed3packages andobservedday5/5 inthirdshift; priorlonglist failures retained. 0.1.6 extends warehouse label bounds400-870, prefers unique fullframe label beforecrop, guidedbuttonoffset45 andshort200ms seeks. Savedbottomrow oldreject/newaccept, targetinsidebluegoto andcitynegativepassed; fullnewbranch livepending.",
+      "verification_scope": "Agent samples: guidedentry native490793→crate320440, claimstarts90s cooldown, main2/3→3/3 taskclaimed315points next3/5; Y0/1→1/1 next1/3. Newmacro offlinecandidate; no formalreplay yet. Imageassetonlycratebubble withoutidentity. Waitactualtemplate notharddelay; 30observations/5sec bounded by900s. Activitycompleteonly5/5; rewardtierautoearned separate inheriteddailylogic. 0.1.1 offline: mainbottompartlyvisiblewarehouse row resolved588911 belowinnerclip908; constrain rowOCR/target to840 so55offset remainsinside895, scroll beforeclick. Toprow579500 remainsvalid. Waitcurrent34batchend beforedeployment. Guidedhand occludesreadycrate:4 croppedvariants calibrated on10 savedframes, minimum .8505, two negatives maximum .5117; threshold.84 in tighterguidedarea. Firstmacroclaimed1, secondlookupfailed; no5/5claimyet. 0.1.2: Lowround3 correctbluebutton491680 firstclick no effect; oneexplicitfresh pendingrowretry, cityskipsretry, strictcitypostcondition retained. Prior2actualpackages remainpartialproof, no5/5yet. 0.1.3: repeated前往 withinwarehouse cooldown remainedunchanged despitecorrectpoint+retry. Establishguided warehousecamera once, verifybubble, then dailyclose returns samecamera andwaitsrealcrate eachround; pendingcount stillread everyround,5/5onlycompletion. No changetoactualclaimpoint. Newfullchainlivepending.; 0.1.4 ready alias includes actual larger stable crate, .80 threshold saved positive/negative separation; initial guide alias unchanged. Full 5/5 pending live. 0.1.5 currentunder30 role actuallyclaimed3packages andobservedday5/5 inthirdshift; priorlonglist failures retained. 0.1.6 extends warehouse label bounds400-870, prefers unique fullframe label beforecrop, guidedbuttonoffset45 andshort200ms seeks. Savedbottomrow oldreject/newaccept, targetinsidebluegoto andcitynegativepassed; fullnewbranch livepending. 0.1.7 chains identical seek skips after first found row. Actual saved-frame search-only replay reduces20 observations to1 without input; completion checks and next-input fresh observation retained; repeat round isolation checked. Livepending.",
       "scroll_revision": "ActualRpendingwarehouse0/1 wasovershot by2x600ms Up; slow1x1000ms observed~1.5rows while250ms flung~7rows. Up to20slowobservedsearches; originalclick/counter/cooldown/completionunchanged. Newmacro livepending."
     }
   },

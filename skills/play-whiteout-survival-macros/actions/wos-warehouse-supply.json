@@ -1,6 +1,6 @@
 {
   "action_id": "wos-warehouse-supply",
-  "action_version": "0.1.6",
+  "action_version": "0.1.7",
   "name": "WOS warehouse daily package chain",
   "reference_size": [
     788,
@@ -637,7 +637,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-0"
     },
     {
       "name": "initial-warehouse-seek-2",
@@ -716,7 +717,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-1"
     },
     {
       "name": "initial-warehouse-seek-3",
@@ -795,7 +797,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-2"
     },
     {
       "name": "initial-warehouse-seek-4",
@@ -874,7 +877,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-3"
     },
     {
       "name": "initial-warehouse-seek-5",
@@ -953,7 +957,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-4"
     },
     {
       "name": "initial-warehouse-seek-6",
@@ -1032,7 +1037,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-5"
     },
     {
       "name": "initial-warehouse-seek-7",
@@ -1111,7 +1117,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-6"
     },
     {
       "name": "initial-warehouse-seek-8",
@@ -1190,7 +1197,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-7"
     },
     {
       "name": "initial-warehouse-seek-9",
@@ -1269,7 +1277,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-8"
     },
     {
       "name": "initial-warehouse-seek-10",
@@ -1348,7 +1357,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-9"
     },
     {
       "name": "initial-warehouse-seek-11",
@@ -1427,7 +1437,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-10"
     },
     {
       "name": "initial-warehouse-seek-12",
@@ -1506,7 +1517,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-11"
     },
     {
       "name": "initial-warehouse-seek-13",
@@ -1585,7 +1597,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-12"
     },
     {
       "name": "initial-warehouse-seek-14",
@@ -1664,7 +1677,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-13"
     },
     {
       "name": "initial-warehouse-seek-15",
@@ -1743,7 +1757,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-14"
     },
     {
       "name": "initial-warehouse-seek-16",
@@ -1822,7 +1837,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-15"
     },
     {
       "name": "initial-warehouse-seek-17",
@@ -1901,7 +1917,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-16"
     },
     {
       "name": "initial-warehouse-seek-18",
@@ -1980,7 +1997,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-17"
     },
     {
       "name": "initial-warehouse-seek-19",
@@ -2059,7 +2077,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-18"
     },
     {
       "name": "initial-warehouse-open-guided-entry",
@@ -2835,7 +2854,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-0"
     },
     {
       "name": "warehouse-seek-2",
@@ -2914,7 +2934,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-1"
     },
     {
       "name": "warehouse-seek-3",
@@ -2993,7 +3014,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-2"
     },
     {
       "name": "warehouse-seek-4",
@@ -3072,7 +3094,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-3"
     },
     {
       "name": "warehouse-seek-5",
@@ -3151,7 +3174,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-4"
     },
     {
       "name": "warehouse-seek-6",
@@ -3230,7 +3254,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-5"
     },
     {
       "name": "warehouse-seek-7",
@@ -3309,7 +3334,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-6"
     },
     {
       "name": "warehouse-seek-8",
@@ -3388,7 +3414,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-7"
     },
     {
       "name": "warehouse-seek-9",
@@ -3467,7 +3494,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-8"
     },
     {
       "name": "warehouse-seek-10",
@@ -3546,7 +3574,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-9"
     },
     {
       "name": "warehouse-seek-11",
@@ -3625,7 +3654,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-10"
     },
     {
       "name": "warehouse-seek-12",
@@ -3704,7 +3734,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-11"
     },
     {
       "name": "warehouse-seek-13",
@@ -3783,7 +3814,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-12"
     },
     {
       "name": "warehouse-seek-14",
@@ -3862,7 +3894,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-13"
     },
     {
       "name": "warehouse-seek-15",
@@ -3941,7 +3974,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-14"
     },
     {
       "name": "warehouse-seek-16",
@@ -4020,7 +4054,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-15"
     },
     {
       "name": "warehouse-seek-17",
@@ -4099,7 +4134,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-16"
     },
     {
       "name": "warehouse-seek-18",
@@ -4178,7 +4214,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-17"
     },
     {
       "name": "warehouse-seek-19",
@@ -4257,7 +4294,8 @@
             "prefer_frame_ocr": true
           }
         ]
-      }
+      },
+      "skip_if_step_skipped": "warehouse-seek-18"
     },
     {
       "name": "warehouse-return-to-anchored-city",

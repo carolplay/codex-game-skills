@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.65",
-  "package_version": "0.12.65",
+  "macro_version": "0.12.66",
+  "package_version": "0.12.66",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -206,14 +206,14 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.6",
-          "sha256": "430cf219531257053f85ffc322fadb5b6abe900122cccd214fbce47cf8b94be6"
+          "action_version": "0.1.7",
+          "sha256": "c8e69770c3af7f9670b1262c6a56ecc31d5743fb44c84f0d9bb0a6fd82c11b36"
         },
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.4",
-          "sha256": "c130458f023ed9a2bf270897f74702c845243daec1538e7564c67e518f1dec48"
+          "action_version": "0.1.5",
+          "sha256": "641d4898058f131ffb8ed462c512b45fbc778f5c2de92c9b1446afd031fc9d1d"
         },
         {
           "task": "academy",
@@ -466,14 +466,14 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.6",
-          "sha256": "430cf219531257053f85ffc322fadb5b6abe900122cccd214fbce47cf8b94be6"
+          "action_version": "0.1.7",
+          "sha256": "c8e69770c3af7f9670b1262c6a56ecc31d5743fb44c84f0d9bb0a6fd82c11b36"
         },
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.4",
-          "sha256": "c130458f023ed9a2bf270897f74702c845243daec1538e7564c67e518f1dec48"
+          "action_version": "0.1.5",
+          "sha256": "641d4898058f131ffb8ed462c512b45fbc778f5c2de92c9b1446afd031fc9d1d"
         },
         {
           "task": "academy",
@@ -690,14 +690,14 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.6",
-          "sha256": "430cf219531257053f85ffc322fadb5b6abe900122cccd214fbce47cf8b94be6"
+          "action_version": "0.1.7",
+          "sha256": "c8e69770c3af7f9670b1262c6a56ecc31d5743fb44c84f0d9bb0a6fd82c11b36"
         },
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.4",
-          "sha256": "c130458f023ed9a2bf270897f74702c845243daec1538e7564c67e518f1dec48"
+          "action_version": "0.1.5",
+          "sha256": "641d4898058f131ffb8ed462c512b45fbc778f5c2de92c9b1446afd031fc9d1d"
         },
         {
           "task": "island",
