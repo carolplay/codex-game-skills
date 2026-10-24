@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.57",
+  "package_version": "0.12.58",
   "executor_min_version": "0.4.6",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -156,8 +156,8 @@
     "refined": {
       "path": "actions/wos-crystal-half-price.json",
       "action_id": "wos-crystal-half-price",
-      "action_version": "0.1.6",
-      "sha256": "625c10e7ef91efc1fcee671ca37ad6c5ddf96ce18a12ddde336ffaad6ca9c97b",
+      "action_version": "0.1.7",
+      "sha256": "aa0cc6e6351d476940c8496d76af2ad2d5a4b465f50fca7c8c4357ad2fe99ba6",
       "period": "day",
       "utility": false,
       "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。0.12.26 candidate reuses ordinarycrystal localized实验[室窒].?提炼 locator, oldhalfprice stillglobalexact causedmiss. Currentfailedframe resolvesuniquely; actualhalfpricebudget/dailyoperationguard unchanged; livepending.",
