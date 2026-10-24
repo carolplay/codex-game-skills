@@ -1,6 +1,6 @@
 {
   "action_id": "wos-store-free",
-  "action_version": "0.1.18",
+  "action_version": "0.1.19",
   "name": "WOS store_free",
   "reference_size": [
     788,
@@ -136,7 +136,9 @@
           "匠心自选",
           "曙光智慧",
           "武备自选",
-          "每日特惠"
+          "每日特惠",
+          "火晶微粒周卡",
+          "火晶周卡"
         ],
         "none": [
           "获得奖励",
@@ -161,6 +163,109 @@
         ]
       },
       "observe_attempts": 8
+    },
+    {
+      "name": "normalize-weekcard-dailydeal-tab",
+      "action": "click",
+      "point": [
+        230,
+        145
+      ],
+      "before": {
+        "all": [
+          "火晶微粒周卡",
+          "火晶周卡",
+          "购买立得"
+        ],
+        "none": [
+          "领取成功",
+          "点击任意",
+          "获得奖励"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日特惠"
+        ],
+        "none": [
+          "领取成功",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              120,
+              190,
+              360,
+              245
+            ],
+            "pattern": ".*每日特惠.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 6,
+      "skip_if_any": [
+        {
+          "any": [
+            "储值中心",
+            "领主体力礼包",
+            "战地医生礼包",
+            "萌宠定制礼包",
+            "工匠的宝库",
+            "曙光市集",
+            "匠心自选",
+            "曙光智慧",
+            "武备自选"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击空白",
+            "点击任意",
+            "点击屏幕"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              30,
+              330,
+              100
+            ],
+            [
+              120,
+              190,
+              460,
+              285
+            ]
+          ]
+        },
+        {
+          "all": [
+            "每日特惠"
+          ],
+          "none": [
+            "领取成功",
+            "点击任意"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                120,
+                190,
+                360,
+                245
+              ],
+              "pattern": ".*每日特惠.*",
+              "crop_ocr": true,
+              "prefer_frame_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "dailydeal-free-chest",

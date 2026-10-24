@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-shield",
-  "action_version": "0.3.6",
+  "action_version": "0.3.7",
   "name": "WOS — 盾兵 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -188,7 +188,8 @@
           10
         ],
         "min_confidence": 0.5,
-        "crop_ocr": true
+        "crop_ocr": true,
+        "prefer_frame_ocr": true
       },
       "before": {
         "all": [

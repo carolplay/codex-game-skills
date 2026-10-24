@@ -87,3 +87,31 @@ App自行执行窗口枚举、截图、OCR和实验性的进程定向点击/方�
 共享执行器0.4.8将本地action时间预算与系统/传输失败分开：业务预算耗尽记偏差，重新观察并只走声明的页面出口；整个退出阶段默认60秒、共享绝对截止时间，失败后不重新分配退出预算。确认主城才继续下一任务，锁屏/权限/身份/尺寸/传输超时仍停。131项引擎测试与原生客户端16项测试通过；这不是现场原生测试通过。
 
 新增游戏侧`capabilities/ui-contracts.json`版本0.1.0，抽取主城、地心根页、专家游历根页、商店周卡根页与其有限出口。CrossMacro提供通用`capability_contracts.py`解析页/出口引用，禁止循环、未知引用或覆盖字段；编译快照同时记录原始action及registry哈希。原生入口通过显式`--contract-registry`离线编译，不修改现有V2 action或生产manifest。三班main/mature-test各41项、under30-test31项完整离线载入已通过；新增五项引用解析测试使原生端测试总数为21。保存帧/离线结构、共享引擎V2现场、原生App现场三类证据保持分开。
+
+## 当前实现与生产接线
+
+```mermaid
+flowchart TB
+  Agent[开发Agent：录制、修订、最终检查] --> MCP[只读MCP：能力发现与班次计划]
+  MCP --> Pack[WOS包：catalog / actions / manifests]
+  Pages[游戏侧UI契约：页面和有限出口] --> Compile[可选离线编译与哈希快照]
+  Pack --> Compile
+  Timer[现有三班排程] --> Runner[固定版本批处理]
+  Pack --> Runner
+  Compile -. 原生入口可选 .-> Runner
+  Runner --> Engine[通用流程引擎：条件、预算、恢复、日志]
+  Engine --> V2[V2设备通道：CUA / 本地Vision]
+  Engine --> Native[NativeBackend：明确类型的本地请求]
+  V2 --> WOS[WOS窗口]
+  Native --> App[Macro Studio.app：截图、Vision、进程定向事件]
+  App -. 等待系统授权与目标验收 .-> WOS
+  Runner --> Evidence[动作结果 / 版本哈希 / 班次检查点]
+  Evidence --> Agent
+  MCP -. 未来执行工具，当前未开放 .-> Runner
+```
+
+生产仍走V2设备通道。共享引擎修订可以先通过V2验证业务执行和退出，但不会因此证明原生截图、后台输入或独立光标有效。原生App固定0.1.0和既有签名未重建；诊断客户端已迭代到0.1.3，并能识别其他执行器占用的真实共享锁，而非只看App自身run_id。原生客户端/契约测试24项。
+
+0.4.9共享引擎把同帧全图优先扩展到点击坐标的text_target：唯一、区域内、达到原置信度才直接采用，否则保持原裁区回退。默认行为不变，开关要求同时保留crop_ocr。136项引擎测试通过；本轮盾兵保存帧全图正确而裁区漏读，候选定位已离线通过，下一角色现场范围另记。当前运行中的旧引擎快照不因源码修订而回写版本。原生权限、测试窗、WOS身份往返和一个完整能力的真实验收仍不可被离线测试或V2结果替代。
+
+原生runner0.1.1在App已取得真实flock后才登记本地lease，活动刷新元数据，清理时核验实际锁释放；run_id仅属于本地原生会话，与ChatGPT身份无关。真实临时flock与runner集成测试使原生客户端/契约/lease测试增至29项。已在V2持锁时实测doctor识别shared_lock_busy；这不是原生输入通过。UI契约0.1.1加入实操发现的游历完成弹层与总结页出口，原生仍只离线编译。

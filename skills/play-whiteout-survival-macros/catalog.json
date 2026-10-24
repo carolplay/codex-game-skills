@@ -1,6 +1,6 @@
 {
-  "package_version": "0.12.63",
-  "executor_min_version": "0.4.6",
+  "package_version": "0.12.64",
+  "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
     "mail": {
@@ -46,11 +46,11 @@
     "academy": {
       "path": "actions/wos-academy-supply.json",
       "action_id": "wos-academy-supply",
-      "action_version": "0.1.4",
-      "sha256": "28561c2132b20745651775fa6f46d7467ef9384fad4aadbcfff0d892f40731d1",
+      "action_version": "0.1.5",
+      "sha256": "4f54cf07bb6cd69931c0dd216b6a713502f2dca7383c7bf72f0df7f8129b2076",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Real claim occurred; one reward-animation assertion deviation recovered to city and next task continued. Cooldown full replay passed.; 0.1.3 overviewfilter +boundedtop/find normalization. Oldincentivemisclick enabledhidecompleted; supplymissing in unnormalizedlist. Freeclaim/cooldown/cityexit behaviorunchanged; livepending. 0.1.4 adds bounded exit from observed labyrinth root with research/forge or cave zones; agent normalback recovered, savedpositive/citynegative tested; navigationitself notfixed. Movefailedacademy beforedaily tail, notmiddleofstablebatch. Newexit macrolivepending.",
+      "verification_scope": "Real claim occurred; one reward-animation assertion deviation recovered to city and next task continued. Cooldown full replay passed.; 0.1.3 overviewfilter +boundedtop/find normalization. Oldincentivemisclick enabledhidecompleted; supplymissing in unnormalizedlist. Freeclaim/cooldown/cityexit behaviorunchanged; livepending. 0.1.4 adds bounded exit from observed labyrinth root with research/forge or cave zones; agent normalback recovered, savedpositive/citynegative tested; navigationitself notfixed. Movefailedacademy beforedaily tail, notmiddleofstablebatch. Newexit macrolivepending. 0.1.5 adds bounded completed-travel modal/summary exits. Saved positive/negative checked; summary blank exit agent observed; completed modal blank exit pending live. Academy entry/reward remains partial.",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "alliance": {
@@ -109,11 +109,11 @@
     "shield": {
       "path": "actions/wos-training-shield.json",
       "action_id": "wos-training-shield",
-      "action_version": "0.3.6",
-      "sha256": "9904bd5ac748a86a423ad1e37869a7a4a98161fadcdfc181619163df87fdbf1d",
+      "action_version": "0.3.7",
+      "sha256": "8d570077ac23e32d149f9f54b73736baf48701da114194a735804750d474e4b5",
       "period": "day",
       "utility": false,
-      "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.",
+      "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained. 0.3.7 fullframe uniqueinbounds trooplabel preferred before sameframe crop, with unchanged0.5confidence/scope/offset andcropfallback. SavedMainframe oldcropmissing whilefullframecorrect; oldreject/newpoint432487 andcityfullframe negativechecked; livebranchpending.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
       "overview_revision": "Traininglocate uses localcrop samebounds/offset/confidence. Knownoverviewexit adds tabs/trainingrow crops; savedmainpositive andcitynegative required. Livepending."
@@ -224,11 +224,11 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.18",
-      "sha256": "7d562e444b8cb99294fdcc5054de177446f0722e4bf819cd6b2d8fa8527287bb",
+      "action_version": "0.1.19",
+      "sha256": "c2233635f3935d481d68c7752cd952fa05f4b7803559771fe652798f71660c01",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.18 adds bounded back-to-city exit from observed selected-weekcard store root (both fire-crystal titles and purchase-immediate label, excludes rewards). Entry normalization/free claim on this selected tab remains unresolved. Saved root positive/city negative checked; automatic exit live pending."
+      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.18 adds bounded back-to-city exit from observed selected-weekcard store root (both fire-crystal titles and purchase-immediate label, excludes rewards). Entry normalization/free claim on this selected tab remains unresolved. Saved root positive/city negative checked; automatic exit live pending. 0.1.19 normalizes known weekcard root via Daily Deal tab before existing free chest checks; scoped Daily Deal body prevents top-tab false acceptance. Known weekcard exit retained; tab normalization live pending."
     },
     "arena": {
       "path": "actions/wos-arena.json",
@@ -333,11 +333,11 @@
     "healing": {
       "path": "actions/wos-healing.json",
       "action_id": "wos-healing",
-      "action_version": "0.1.3",
-      "sha256": "7651148ad5095d68985a4fe1d0f5a5935cb1bd0c9c9f2b54010ab3a49a7e6a58",
+      "action_version": "0.1.4",
+      "sha256": "c130458f023ed9a2bf270897f74702c845243daec1538e7564c67e518f1dec48",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.3: existing treatment queue page had same title as empty selection; quickselect clicked cancel treatment. Add existingqueue predicate to both business clicks and bounded cancel-confirm dismissal. Agent recovery and savedframe checks separate from pending macro replay."
+      "verification_scope": "0.1.3: existing treatment queue page had same title as empty selection; quickselect clicked cancel treatment. Add existingqueue predicate to both business clicks and bounded cancel-confirm dismissal. Agent recovery and savedframe checks separate from pending macro replay. 0.1.4 hospital radial-menu anchor uses visible details/treatment-or-accelerate/upgrade labels; does not click upgrade. Full hospital title was occluded in saved Main frame. Treatment-page and queue checks unchanged; live pending."
     },
     "enlistment": {
       "path": "actions/wos-enlistment.json",

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-academy-supply",
-  "action_version": "0.1.4",
+  "action_version": "0.1.5",
   "name": "wos-academy-supply (trial)",
   "reference_size": [
     788,
@@ -1182,6 +1182,86 @@
           "none": [
             "扫荡奖励",
             "首胜奖励"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-completed-travel-modal",
+        "action": "click",
+        "point": [
+          600,
+          980
+        ],
+        "before": {
+          "all": [
+            "游历挂机已完成",
+            "结束挂机",
+            "点击任意位置关闭"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-travel-summary",
+        "action": "click",
+        "point": [
+          600,
+          980
+        ],
+        "before": {
+          "all": [
+            "游历结束",
+            "专家好感度",
+            "点击任意位置退出"
           ]
         },
         "after": {

@@ -1,6 +1,6 @@
 {
   "registry_id": "wos-ui-contracts",
-  "registry_version": "0.1.0",
+  "registry_version": "0.1.1",
   "pages": {
     "city": {
       "all": [
@@ -74,6 +74,20 @@
         "获得奖励",
         "恭喜获得"
       ]
+    },
+    "completed-travel-modal": {
+      "all": [
+        "游历挂机已完成",
+        "结束挂机",
+        "点击任意位置关闭"
+      ]
+    },
+    "travel-summary": {
+      "all": [
+        "游历结束",
+        "专家好感度",
+        "点击任意位置退出"
+      ]
     }
   },
   "exits": {
@@ -116,6 +130,36 @@
       ],
       "before": {
         "$page": "store-weekcard-root"
+      },
+      "after": {
+        "$page": "city"
+      },
+      "observe_attempts": 5
+    },
+    "exit-completed-travel-modal": {
+      "name": "exit-completed-travel-modal",
+      "action": "click",
+      "point": [
+        600,
+        980
+      ],
+      "before": {
+        "$page": "completed-travel-modal"
+      },
+      "after": {
+        "$page": "city"
+      },
+      "observe_attempts": 5
+    },
+    "exit-travel-summary": {
+      "name": "exit-travel-summary",
+      "action": "click",
+      "point": [
+        600,
+        980
+      ],
+      "before": {
+        "$page": "travel-summary"
       },
       "after": {
         "$page": "city"

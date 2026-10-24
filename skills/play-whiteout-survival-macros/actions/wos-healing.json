@@ -1,6 +1,6 @@
 {
   "action_id": "wos-healing",
-  "action_version": "0.1.3",
+  "action_version": "0.1.4",
   "name": "WOS healing",
   "reference_size": [
     788,
@@ -557,12 +557,13 @@
         ]
       },
       "after": {
-        "all": [
-          "军医所"
-        ],
         "any": [
           "治疗",
           "加速"
+        ],
+        "all": [
+          "详情",
+          "升级"
         ]
       },
       "observe_attempts": 5
@@ -585,12 +586,13 @@
         "min_confidence": 0.3
       },
       "before": {
-        "all": [
-          "军医所"
-        ],
         "any": [
           "治疗",
           "加速"
+        ],
+        "all": [
+          "详情",
+          "升级"
         ]
       },
       "after": [
