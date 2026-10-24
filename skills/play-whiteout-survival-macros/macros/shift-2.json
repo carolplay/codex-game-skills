@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.55",
-  "package_version": "0.12.55",
+  "macro_version": "0.12.56",
+  "package_version": "0.12.56",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -194,8 +194,8 @@
         {
           "task": "travel_idle_claim",
           "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.6",
-          "sha256": "8ef92b6eab2356aa95f44c76b3c525e23550817a979b4698f6b242ae9b2188da"
+          "action_version": "0.1.7",
+          "sha256": "58367217d914f237211c6c85172b0d7b230bf598d55248038c2ebe94eb759502"
         },
         {
           "task": "war_academy_commission",
@@ -454,8 +454,8 @@
         {
           "task": "travel_idle_claim",
           "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.6",
-          "sha256": "8ef92b6eab2356aa95f44c76b3c525e23550817a979b4698f6b242ae9b2188da"
+          "action_version": "0.1.7",
+          "sha256": "58367217d914f237211c6c85172b0d7b230bf598d55248038c2ebe94eb759502"
         },
         {
           "task": "war_academy_commission",

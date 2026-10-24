@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.55",
+  "package_version": "0.12.56",
   "executor_min_version": "0.4.6",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -427,8 +427,8 @@
     "travel_idle_claim": {
       "path": "actions/wos-travel-idle-claim.json",
       "action_id": "wos-travel-idle-claim",
-      "action_version": "0.1.6",
-      "sha256": "8ef92b6eab2356aa95f44c76b3c525e23550817a979b4698f6b242ae9b2188da",
+      "action_version": "0.1.7",
+      "sha256": "58367217d914f237211c6c85172b0d7b230bf598d55248038c2ebe94eb759502",
       "period": "shift",
       "utility": false,
       "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Replace unreadable tiny progress fraction prerequisite with existing calibrated travelbubble positive match. Saved failureframe match0.9666; completed-dialog and reward checks unchanged; next applicable role replaypending. 0.1.5 secondshift: main and yellow no-bubble skip and city passed; actual bubble/completed-claim new branch not triggered because login auto-settled, not inferredverified. Shift3 candidate: root uses both large travel signposts instead of tiny decorative title; travel page requires idle/auto controls plus calibrated expert-hat icon instead of unreliable small label. Saved correct travel1.0 versus rootnegative.425; nextrole livepending."
