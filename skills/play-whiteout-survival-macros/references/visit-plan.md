@@ -223,3 +223,7 @@ VIP日历0.1.3只核验左上VIP页面标题，不再依赖无关的“每日免
 仓库0.1.7把两段各20步的同条件搜索串成找到即停：保存帧搜索片段回放由20次观察降为1次，无输入，重复轮次依赖隔离通过；领取、次数与下一次输入前的新观察不变，现场范围另记。医院0.1.5不再要求出现升级项，适配已在治疗计时的菜单；已实际进入治疗页识别治疗中并正常回主城，不新启动治疗。主城出口排除详情/治疗页，增加菜单专用关闭分支，该新增恢复点仍待现场触发。
 
 学院0.1.5已有一次真实免费领取与主城退出；专家0.1.4已验证完整入口和无可领徽章分支。商店0.1.19在储值中心横向找页仍有偏差，但已回主城继续下一项；不能把周卡与储值中心布局混为同一分支。
+
+### 0.12.66 live scope
+
+Warehouse0.1.7 completed a mature-profile replay: four new claims, day total5/5,95 inherited skips without another observation. The20-to1 measurement applies only to an already-found search fragment, not total action speed. Hospital0.1.5 passed the ongoing-treatment branch and normal city exit; its new radial-menu recovery point remains unexercised. Academy0.1.5 has an actual free-claim replay. Store weekcard-to-DailyDeal normalization still needs a live branch test; another cash-store layout remains unresolved. Island inventory OCR passed one mature profile and failed another. Native screen/input permission and WOS acceptance remain pending; all live results here use the existing device channel.
