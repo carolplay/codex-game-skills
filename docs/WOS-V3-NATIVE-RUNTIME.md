@@ -79,3 +79,11 @@ App自行执行窗口枚举、截图、OCR和实验性的进程定向点击/方�
 启动方式：用本机Python运行上述脚本；MCP客户端command设为Python，args设为脚本绝对路径。包目录由启动者的`--root`配置固定，工具参数不能传文件路径、账号或执行选项。未添加到用户MCP配置，也未启用新排程。协议固定支持2025-03-26的初始化、tools/list、tools/call及换行JSON stdio；这是最小原型，不宣称所有MCP客户端互操作已验收。[MCP工具规范](https://modelcontextprotocol.io/specification/2025-03-26/server/tools)、[生命周期](https://modelcontextprotocol.io/specification/2025-03-26/basic/lifecycle)、[stdio传输](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports)。
 
 五项离线测试覆盖所有公开班次/profile、被篡改action拒绝、参数路径/执行注入拒绝、初始化与只读工具集合，以及真实子进程stdio往返；仅证明离线发现接口，不代替原生权限、WOS输入、背景/光标隔离或锁屏测试。后续执行工具必须接唯一Worker和真实锁，并在原生目标验收后另行开放。
+
+## 2026-10-24下午：三班验证与原生授权边界
+
+用户重新授权继续V3与三班测试，覆盖此前暂缓原生实测的安排。Macro Studio.app已通过当前对话正常打开，实际诊断仍为屏幕录制/辅助功能未授予；已提供固定App路径等待用户手动授权。App仍0.1.0，未重编以免授权主体漂移，也未把原生拒绝改成CUA自动降级。当前三班生产继续使用既有V2设备通道，单独记录共享引擎的现场结果；原生测试窗与WOS验收仍待进行。
+
+共享执行器0.4.8将本地action时间预算与系统/传输失败分开：业务预算耗尽记偏差，重新观察并只走声明的页面出口；整个退出阶段默认60秒、共享绝对截止时间，失败后不重新分配退出预算。确认主城才继续下一任务，锁屏/权限/身份/尺寸/传输超时仍停。131项引擎测试与原生客户端16项测试通过；这不是现场原生测试通过。
+
+新增游戏侧`capabilities/ui-contracts.json`版本0.1.0，抽取主城、地心根页、专家游历根页、商店周卡根页与其有限出口。CrossMacro提供通用`capability_contracts.py`解析页/出口引用，禁止循环、未知引用或覆盖字段；编译快照同时记录原始action及registry哈希。原生入口通过显式`--contract-registry`离线编译，不修改现有V2 action或生产manifest。三班main/mature-test各41项、under30-test31项完整离线载入已通过；新增五项引用解析测试使原生端测试总数为21。保存帧/离线结构、共享引擎V2现场、原生App现场三类证据保持分开。

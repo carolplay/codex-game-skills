@@ -1,0 +1,126 @@
+{
+  "registry_id": "wos-ui-contracts",
+  "registry_version": "0.1.0",
+  "pages": {
+    "city": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数",
+        "完成任务后"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ],
+        [
+          160,
+          745,
+          450,
+          800
+        ]
+      ]
+    },
+    "labyrinth-root": {
+      "all": [
+        "地心探险",
+        "规则",
+        "排行榜"
+      ],
+      "any": [
+        "地下科研所",
+        "装备锻炉",
+        "群兽洞窟",
+        "宝石矿洞"
+      ],
+      "none": [
+        "扫荡奖励",
+        "首胜奖励"
+      ]
+    },
+    "expert-travel-root": {
+      "all": [
+        "专家列表",
+        "下一站",
+        "挂机",
+        "自动"
+      ],
+      "none": [
+        "获得奖励",
+        "游历总结"
+      ]
+    },
+    "store-weekcard-root": {
+      "all": [
+        "火晶微粒周卡",
+        "火晶周卡",
+        "购买立得"
+      ],
+      "none": [
+        "领取成功",
+        "点击任意位置退出",
+        "获得奖励",
+        "恭喜获得"
+      ]
+    }
+  },
+  "exits": {
+    "exit-unexpected-labyrinth-root": {
+      "name": "exit-unexpected-labyrinth-root",
+      "action": "click",
+      "point": [
+        132,
+        59
+      ],
+      "before": {
+        "$page": "labyrinth-root"
+      },
+      "after": {
+        "$page": "city"
+      },
+      "observe_attempts": 5
+    },
+    "exit-unexpected-expert-travel-root": {
+      "name": "exit-unexpected-expert-travel-root",
+      "action": "click",
+      "point": [
+        132,
+        59
+      ],
+      "before": {
+        "$page": "expert-travel-root"
+      },
+      "after": {
+        "$page": "city"
+      },
+      "observe_attempts": 5
+    },
+    "exit-store-weekcard-root": {
+      "name": "exit-store-weekcard-root",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "$page": "store-weekcard-root"
+      },
+      "after": {
+        "$page": "city"
+      },
+      "observe_attempts": 5
+    }
+  }
+}
