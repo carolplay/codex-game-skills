@@ -1,6 +1,6 @@
 {
   "action_id": "wos-warehouse-supply",
-  "action_version": "0.1.5",
+  "action_version": "0.1.6",
   "name": "WOS warehouse daily package chain",
   "reference_size": [
     788,
@@ -170,11 +170,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -484,7 +485,7 @@
       "name": "initial-warehouse-seek-0",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -524,11 +525,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -548,11 +550,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -561,7 +564,7 @@
       "name": "initial-warehouse-seek-1",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -601,11 +604,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -625,11 +629,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -638,7 +643,7 @@
       "name": "initial-warehouse-seek-2",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -678,11 +683,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -702,11 +708,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -715,7 +722,7 @@
       "name": "initial-warehouse-seek-3",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -755,11 +762,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -779,11 +787,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -792,7 +801,7 @@
       "name": "initial-warehouse-seek-4",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -832,11 +841,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -856,11 +866,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -869,7 +880,7 @@
       "name": "initial-warehouse-seek-5",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -909,11 +920,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -933,11 +945,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -946,7 +959,7 @@
       "name": "initial-warehouse-seek-6",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -986,11 +999,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1010,11 +1024,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1023,7 +1038,7 @@
       "name": "initial-warehouse-seek-7",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1063,11 +1078,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1087,11 +1103,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1100,7 +1117,7 @@
       "name": "initial-warehouse-seek-8",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1140,11 +1157,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1164,11 +1182,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1177,7 +1196,7 @@
       "name": "initial-warehouse-seek-9",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1217,11 +1236,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1241,11 +1261,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1254,7 +1275,7 @@
       "name": "initial-warehouse-seek-10",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1294,11 +1315,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1318,11 +1340,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1331,7 +1354,7 @@
       "name": "initial-warehouse-seek-11",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1371,11 +1394,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1395,11 +1419,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1408,7 +1433,7 @@
       "name": "initial-warehouse-seek-12",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1448,11 +1473,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1472,11 +1498,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1485,7 +1512,7 @@
       "name": "initial-warehouse-seek-13",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1525,11 +1552,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1549,11 +1577,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1562,7 +1591,7 @@
       "name": "initial-warehouse-seek-14",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1602,11 +1631,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1626,11 +1656,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1639,7 +1670,7 @@
       "name": "initial-warehouse-seek-15",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1679,11 +1710,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1703,11 +1735,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1716,7 +1749,7 @@
       "name": "initial-warehouse-seek-16",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1756,11 +1789,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1780,11 +1814,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1793,7 +1828,7 @@
       "name": "initial-warehouse-seek-17",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1833,11 +1868,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1857,11 +1893,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1870,7 +1907,7 @@
       "name": "initial-warehouse-seek-18",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1910,11 +1947,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -1934,11 +1972,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -1947,7 +1986,7 @@
       "name": "initial-warehouse-seek-19",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -1987,11 +2026,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -2011,11 +2051,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -2039,11 +2080,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -2063,11 +2105,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -2080,11 +2123,11 @@
           130,
           400,
           680,
-          840
+          870
         ],
         "offset": [
           300,
-          55
+          45
         ],
         "min_confidence": 0.3,
         "select": "top-left"
@@ -2121,11 +2164,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -2138,11 +2182,11 @@
           130,
           400,
           680,
-          840
+          870
         ],
         "offset": [
           300,
-          55
+          45
         ],
         "min_confidence": 0.3,
         "select": "top-left"
@@ -2324,11 +2368,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -2638,7 +2683,7 @@
       "name": "warehouse-seek-0",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -2678,11 +2723,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -2702,11 +2748,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -2715,7 +2762,7 @@
       "name": "warehouse-seek-1",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -2755,11 +2802,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -2779,11 +2827,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -2792,7 +2841,7 @@
       "name": "warehouse-seek-2",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -2832,11 +2881,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -2856,11 +2906,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -2869,7 +2920,7 @@
       "name": "warehouse-seek-3",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -2909,11 +2960,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -2933,11 +2985,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -2946,7 +2999,7 @@
       "name": "warehouse-seek-4",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -2986,11 +3039,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3010,11 +3064,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3023,7 +3078,7 @@
       "name": "warehouse-seek-5",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3063,11 +3118,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3087,11 +3143,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3100,7 +3157,7 @@
       "name": "warehouse-seek-6",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3140,11 +3197,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3164,11 +3222,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3177,7 +3236,7 @@
       "name": "warehouse-seek-7",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3217,11 +3276,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3241,11 +3301,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3254,7 +3315,7 @@
       "name": "warehouse-seek-8",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3294,11 +3355,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3318,11 +3380,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3331,7 +3394,7 @@
       "name": "warehouse-seek-9",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3371,11 +3434,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3395,11 +3459,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3408,7 +3473,7 @@
       "name": "warehouse-seek-10",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3448,11 +3513,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3472,11 +3538,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3485,7 +3552,7 @@
       "name": "warehouse-seek-11",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3525,11 +3592,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3549,11 +3617,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3562,7 +3631,7 @@
       "name": "warehouse-seek-12",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3602,11 +3671,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3626,11 +3696,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3639,7 +3710,7 @@
       "name": "warehouse-seek-13",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3679,11 +3750,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3703,11 +3775,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3716,7 +3789,7 @@
       "name": "warehouse-seek-14",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3756,11 +3829,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3780,11 +3854,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3793,7 +3868,7 @@
       "name": "warehouse-seek-15",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3833,11 +3908,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3857,11 +3933,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3870,7 +3947,7 @@
       "name": "warehouse-seek-16",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3910,11 +3987,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -3934,11 +4012,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -3947,7 +4026,7 @@
       "name": "warehouse-seek-17",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -3987,11 +4066,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -4011,11 +4091,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -4024,7 +4105,7 @@
       "name": "warehouse-seek-18",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -4064,11 +4145,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -4088,11 +4170,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -4101,7 +4184,7 @@
       "name": "warehouse-seek-19",
       "action": "key",
       "key": "Up",
-      "duration_ms": 1000,
+      "duration_ms": 200,
       "key_count": 1,
       "before": {
         "all": [
@@ -4141,11 +4224,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -4165,11 +4249,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*5次补给.*5/5.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -4197,11 +4282,12 @@
               130,
               400,
               680,
-              840
+              870
             ],
             "pattern": ".*仓库.*补给.*(?:0/[135]|[12]/3|[0-4]/5).*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
