@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.47",
-  "package_version": "0.12.47",
+  "macro_version": "0.12.48",
+  "package_version": "0.12.48",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -152,8 +152,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.10",
-          "sha256": "52ab26f10c3d2abaeda98432942df32f1785d790f0c0e22fbc4678a48c2944e2"
+          "action_version": "0.2.11",
+          "sha256": "524cb8dbf95fb51b8064997a42af45ee2d8158b14382222b44271d4f31249cd1"
         },
         {
           "task": "gather_meat",
@@ -412,8 +412,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.10",
-          "sha256": "52ab26f10c3d2abaeda98432942df32f1785d790f0c0e22fbc4678a48c2944e2"
+          "action_version": "0.2.11",
+          "sha256": "524cb8dbf95fb51b8064997a42af45ee2d8158b14382222b44271d4f31249cd1"
         },
         {
           "task": "gather_meat",
@@ -630,8 +630,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.10",
-          "sha256": "52ab26f10c3d2abaeda98432942df32f1785d790f0c0e22fbc4678a48c2944e2"
+          "action_version": "0.2.11",
+          "sha256": "524cb8dbf95fb51b8064997a42af45ee2d8158b14382222b44271d4f31249cd1"
         },
         {
           "task": "gather_meat",

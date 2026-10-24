@@ -34,6 +34,8 @@ def build_legacy(flows):
 def build(flows):
  """New game-owned bulk execution; keep the event-only firebeast path."""
  legacy=build_legacy(flows)
+ level_page={'all':['探照灯升级','情报品质','最大情报刷新数量','点击任意位置继续'],'page_text_regions':[[200,180,590,270]]}
+ legacy['task_contract']['exits'].insert(0,{'name':'exit-lighthouse-level-up','action':'click','point':[394,985],'before':copy.deepcopy(level_page),'after':{'all':['情报','下次刷新'],'none':['探照灯升级','前往查看']},'observe_attempts':5})
  legacy['task_contract']['exits'].insert(0,{'name':'exit-intel-stamina-supply','action':'click','point':[645,137],'before':['获取更多','领主体力','丰盛的招待'],'after':{'all':['情报','下次刷新'],'none':['获取更多','前往查看']},'observe_attempts':5})
  map_page={'all':['情报','下次刷新'],'none':['前往查看','获得奖励','恭喜获得','点击任意位置退出']}
  left=[125,980,380,1047];right=[410,980,665,1047]
@@ -96,6 +98,19 @@ def build(flows):
    s['skip_if_step_skipped']='legacy-mode'
    s.setdefault('skip_if_any',[]).append({'all':['情报','下次刷新','全部执行'],'page_text_regions':[[110,970,680,1060]]})
   steps.append(s)
+ # Rewards can unlock a level-up overlay before the map is visible again.
+ # Each optional dismissal retains the original map postcondition.
+ expanded=[]
+ for s in steps:
+  if s.get('action')=='click' and ('close-reward' in s['name'] or s['name'].startswith('batch-dismiss-')):
+   after=copy.deepcopy(s.get('after'))
+   if isinstance(after,dict) and '下次刷新' in after.get('all',[]):
+    s['after']={'any':['下次刷新','探照灯升级'],'page_text_regions':[[200,180,590,270]],'none':['胜利','失败','战败']}
+    follow={'name':s['name']+'-level-up','action':'click','point':[394,985],'before':copy.deepcopy(level_page),'after':after,'skip_if':copy.deepcopy(after),'observe_attempts':5}
+    if s.get('skip_if_step_skipped'):follow['skip_if_step_skipped']=s['skip_if_step_skipped']
+    expanded.extend([s,follow]);continue
+  expanded.append(s)
+ steps=expanded
  return {**legacy,'name':'WOS bulk intelligence execution plus event firebeast','steps':steps,'repeat_from':'batch-round-anchor','verification_scope':'0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.','business_dependencies':['City entry and exit; stamina meal uses lighthouse plus before this action','Game execute-all handles ordinary intel; repeat after claim reveals queued tasks','Event firebeast remains separate; no claim that bulk clears event tasks','Explicit zero execute/claim counts, disabled buttons, not executing and no firebeast required for bulk completion','If bulk button absent, use fixed local legacy branches; actual UI determines availability']}
 
 if __name__=='__main__':

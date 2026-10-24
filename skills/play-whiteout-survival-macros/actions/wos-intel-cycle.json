@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.10",
+  "action_version": "0.2.11",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -543,6 +543,63 @@
         ]
       },
       "after": {
+        "any": [
+          "下次刷新",
+          "探照灯升级"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if_step_skipped": "batch-mode"
+    },
+    {
+      "name": "batch-dismiss-existing-level-up",
+      "action": "click",
+      "point": [
+        394,
+        985
+      ],
+      "before": {
+        "all": [
+          "探照灯升级",
+          "情报品质",
+          "最大情报刷新数量",
+          "点击任意位置继续"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ]
+      },
+      "after": {
         "all": [
           "情报",
           "下次刷新"
@@ -566,7 +623,7 @@
           "点击任意位置退出"
         ]
       },
-      "observe_attempts": 10,
+      "observe_attempts": 5,
       "skip_if_step_skipped": "batch-mode"
     },
     {
@@ -915,6 +972,63 @@
         ]
       },
       "after": {
+        "any": [
+          "下次刷新",
+          "探照灯升级"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if_step_skipped": "batch-mode"
+    },
+    {
+      "name": "batch-dismiss-completed-level-up",
+      "action": "click",
+      "point": [
+        394,
+        985
+      ],
+      "before": {
+        "all": [
+          "探照灯升级",
+          "情报品质",
+          "最大情报刷新数量",
+          "点击任意位置继续"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ]
+      },
+      "after": {
         "all": [
           "情报",
           "下次刷新"
@@ -938,7 +1052,7 @@
           "点击任意位置退出"
         ]
       },
-      "observe_attempts": 10,
+      "observe_attempts": 5,
       "skip_if_step_skipped": "batch-mode"
     },
     {
@@ -1503,15 +1617,22 @@
         ]
       },
       "after": {
-        "all": [
-          "情报",
-          "下次刷新"
+        "any": [
+          "下次刷新",
+          "探照灯升级"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
         ],
         "none": [
-          "前往查看",
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
+          "胜利",
+          "失败",
+          "战败"
         ]
       },
       "observe_attempts": 5,
@@ -1527,6 +1648,56 @@
           "点击任意位置退出"
         ]
       },
+      "skip_if_step_skipped": "event-firebeast-select"
+    },
+    {
+      "name": "event-firebeast-close-reward-level-up",
+      "action": "click",
+      "point": [
+        394,
+        985
+      ],
+      "before": {
+        "all": [
+          "探照灯升级",
+          "情报品质",
+          "最大情报刷新数量",
+          "点击任意位置继续"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
       "skip_if_step_skipped": "event-firebeast-select"
     },
     {
@@ -1666,15 +1837,22 @@
         ]
       },
       "after": {
-        "all": [
-          "情报",
-          "下次刷新"
+        "any": [
+          "下次刷新",
+          "探照灯升级"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
         ],
         "none": [
-          "前往查看",
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
+          "胜利",
+          "失败",
+          "战败"
         ]
       },
       "observe_attempts": 5,
@@ -1690,6 +1868,56 @@
           "点击任意位置退出"
         ]
       },
+      "skip_if_step_skipped": "legacy-mode"
+    },
+    {
+      "name": "legacy-initial-close-reward-level-up",
+      "action": "click",
+      "point": [
+        394,
+        985
+      ],
+      "before": {
+        "all": [
+          "探照灯升级",
+          "情报品质",
+          "最大情报刷新数量",
+          "点击任意位置继续"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
       "skip_if_step_skipped": "legacy-mode"
     },
     {
@@ -2341,15 +2569,22 @@
         ]
       },
       "after": {
-        "all": [
-          "情报",
-          "下次刷新"
+        "any": [
+          "下次刷新",
+          "探照灯升级"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
         ],
         "none": [
-          "前往查看",
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
+          "胜利",
+          "失败",
+          "战败"
         ]
       },
       "observe_attempts": 5,
@@ -2365,6 +2600,56 @@
           "点击任意位置退出"
         ]
       },
+      "skip_if_step_skipped": "legacy-cycle-0-firebeast-select"
+    },
+    {
+      "name": "legacy-cycle-0-firebeast-close-reward-level-up",
+      "action": "click",
+      "point": [
+        394,
+        985
+      ],
+      "before": {
+        "all": [
+          "探照灯升级",
+          "情报品质",
+          "最大情报刷新数量",
+          "点击任意位置继续"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
       "skip_if_step_skipped": "legacy-cycle-0-firebeast-select"
     },
     {
@@ -2923,15 +3208,22 @@
         ]
       },
       "after": {
-        "all": [
-          "情报",
-          "下次刷新"
+        "any": [
+          "下次刷新",
+          "探照灯升级"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
         ],
         "none": [
-          "前往查看",
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
+          "胜利",
+          "失败",
+          "战败"
         ]
       },
       "observe_attempts": 5,
@@ -2947,6 +3239,56 @@
           "点击任意位置退出"
         ]
       },
+      "skip_if_step_skipped": "legacy-cycle-0-beast-select"
+    },
+    {
+      "name": "legacy-cycle-0-beast-close-reward-level-up",
+      "action": "click",
+      "point": [
+        394,
+        985
+      ],
+      "before": {
+        "all": [
+          "探照灯升级",
+          "情报品质",
+          "最大情报刷新数量",
+          "点击任意位置继续"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
       "skip_if_step_skipped": "legacy-cycle-0-beast-select"
     },
     {
@@ -3456,15 +3798,22 @@
         ]
       },
       "after": {
-        "all": [
-          "情报",
-          "下次刷新"
+        "any": [
+          "下次刷新",
+          "探照灯升级"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
         ],
         "none": [
-          "前往查看",
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
+          "胜利",
+          "失败",
+          "战败"
         ]
       },
       "observe_attempts": 5,
@@ -3480,6 +3829,56 @@
           "点击任意位置退出"
         ]
       },
+      "skip_if_step_skipped": "legacy-cycle-0-rescue-select"
+    },
+    {
+      "name": "legacy-cycle-0-rescue-close-reward-level-up",
+      "action": "click",
+      "point": [
+        394,
+        985
+      ],
+      "before": {
+        "all": [
+          "探照灯升级",
+          "情报品质",
+          "最大情报刷新数量",
+          "点击任意位置继续"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
       "skip_if_step_skipped": "legacy-cycle-0-rescue-select"
     },
     {
@@ -4055,15 +4454,22 @@
         ]
       },
       "after": {
-        "all": [
-          "情报",
-          "下次刷新"
+        "any": [
+          "下次刷新",
+          "探照灯升级"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
         ],
         "none": [
-          "前往查看",
-          "获得奖励",
-          "恭喜获得",
-          "点击任意位置退出"
+          "胜利",
+          "失败",
+          "战败"
         ]
       },
       "observe_attempts": 5,
@@ -4079,6 +4485,56 @@
           "点击任意位置退出"
         ]
       },
+      "skip_if_step_skipped": "legacy-cycle-0-hero-select"
+    },
+    {
+      "name": "legacy-cycle-0-hero-close-reward-level-up",
+      "action": "click",
+      "point": [
+        394,
+        985
+      ],
+      "before": {
+        "all": [
+          "探照灯升级",
+          "情报品质",
+          "最大情报刷新数量",
+          "点击任意位置继续"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
       "skip_if_step_skipped": "legacy-cycle-0-hero-select"
     },
     {
@@ -4148,6 +4604,41 @@
           ],
           "none": [
             "获取更多",
+            "前往查看"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-lighthouse-level-up",
+        "action": "click",
+        "point": [
+          394,
+          985
+        ],
+        "before": {
+          "all": [
+            "探照灯升级",
+            "情报品质",
+            "最大情报刷新数量",
+            "点击任意位置继续"
+          ],
+          "page_text_regions": [
+            [
+              200,
+              180,
+              590,
+              270
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "探照灯升级",
             "前往查看"
           ]
         },
