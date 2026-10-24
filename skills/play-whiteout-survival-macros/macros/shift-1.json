@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.48",
-  "package_version": "0.12.48",
+  "macro_version": "0.12.49",
+  "package_version": "0.12.49",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -14,8 +14,8 @@
         {
           "task": "mail",
           "action_id": "wos-mail-rewards",
-          "action_version": "0.1.3",
-          "sha256": "43033d8dc668b365688f633e9d55ee9c79df1918bf2b21993c40c25dc2b7b78d"
+          "action_version": "0.1.4",
+          "sha256": "17d202fbfb5d15a23826a9b13e598e3a3a3f7b05204e903dba31fe174f4a1a08"
         },
         {
           "task": "idle",
@@ -279,8 +279,8 @@
         {
           "task": "mail",
           "action_id": "wos-mail-rewards",
-          "action_version": "0.1.3",
-          "sha256": "43033d8dc668b365688f633e9d55ee9c79df1918bf2b21993c40c25dc2b7b78d"
+          "action_version": "0.1.4",
+          "sha256": "17d202fbfb5d15a23826a9b13e598e3a3a3f7b05204e903dba31fe174f4a1a08"
         },
         {
           "task": "idle",
@@ -544,8 +544,8 @@
         {
           "task": "mail",
           "action_id": "wos-mail-rewards",
-          "action_version": "0.1.3",
-          "sha256": "43033d8dc668b365688f633e9d55ee9c79df1918bf2b21993c40c25dc2b7b78d"
+          "action_version": "0.1.4",
+          "sha256": "17d202fbfb5d15a23826a9b13e598e3a3a3f7b05204e903dba31fe174f4a1a08"
         },
         {
           "task": "idle",

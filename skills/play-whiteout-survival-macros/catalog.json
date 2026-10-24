@@ -1,13 +1,13 @@
 {
-  "package_version": "0.12.48",
+  "package_version": "0.12.49",
   "executor_min_version": "0.3.3",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
     "mail": {
       "path": "actions/wos-mail-rewards.json",
       "action_id": "wos-mail-rewards",
-      "action_version": "0.1.3",
-      "sha256": "43033d8dc668b365688f633e9d55ee9c79df1918bf2b21993c40c25dc2b7b78d",
+      "action_version": "0.1.4",
+      "sha256": "17d202fbfb5d15a23826a9b13e598e3a3a3f7b05204e903dba31fe174f4a1a08",
       "period": "shift",
       "utility": false,
       "verification_scope": " a mature role reports-tab cursor occluded报告 causing no claim and exit failure;0.1.2 clicks tab bottomedge151 and recovery only needs mail/war/favorites independent of occluded report. Not rerun same role; nextrolepending.",
