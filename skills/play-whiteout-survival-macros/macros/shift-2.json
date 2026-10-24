@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.51",
-  "package_version": "0.12.51",
+  "macro_version": "0.12.52",
+  "package_version": "0.12.52",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -108,12 +108,6 @@
           "sha256": "e9d49e96262b39a681c92340c2b6f63383aef36e2fe85b4241bd279f059f679c"
         },
         {
-          "task": "healing",
-          "action_id": "wos-healing",
-          "action_version": "0.1.3",
-          "sha256": "7651148ad5095d68985a4fe1d0f5a5935cb1bd0c9c9f2b54010ab3a49a7e6a58"
-        },
-        {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
           "action_version": "0.1.6",
@@ -124,12 +118,6 @@
           "action_id": "wos-npc-autojoin",
           "action_version": "0.1.4",
           "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73"
-        },
-        {
-          "task": "academy",
-          "action_id": "wos-academy-supply",
-          "action_version": "0.1.3",
-          "sha256": "295d3e9f4f81315d745da2746258a13fa634171816a41b2b9b26eae9de24384b"
         },
         {
           "task": "travel_idle",
@@ -250,6 +238,18 @@
           "action_id": "wos-warehouse-supply",
           "action_version": "0.1.5",
           "sha256": "2ca995c1022fca09a70d2de51a84b9c223d8442df54c17ebc9c397da0f32e6a1"
+        },
+        {
+          "task": "healing",
+          "action_id": "wos-healing",
+          "action_version": "0.1.3",
+          "sha256": "7651148ad5095d68985a4fe1d0f5a5935cb1bd0c9c9f2b54010ab3a49a7e6a58"
+        },
+        {
+          "task": "academy",
+          "action_id": "wos-academy-supply",
+          "action_version": "0.1.4",
+          "sha256": "28561c2132b20745651775fa6f46d7467ef9384fad4aadbcfff0d892f40731d1"
         },
         {
           "task": "daily",
@@ -368,12 +368,6 @@
           "sha256": "e9d49e96262b39a681c92340c2b6f63383aef36e2fe85b4241bd279f059f679c"
         },
         {
-          "task": "healing",
-          "action_id": "wos-healing",
-          "action_version": "0.1.3",
-          "sha256": "7651148ad5095d68985a4fe1d0f5a5935cb1bd0c9c9f2b54010ab3a49a7e6a58"
-        },
-        {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
           "action_version": "0.1.6",
@@ -384,12 +378,6 @@
           "action_id": "wos-npc-autojoin",
           "action_version": "0.1.4",
           "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73"
-        },
-        {
-          "task": "academy",
-          "action_id": "wos-academy-supply",
-          "action_version": "0.1.3",
-          "sha256": "295d3e9f4f81315d745da2746258a13fa634171816a41b2b9b26eae9de24384b"
         },
         {
           "task": "travel_idle",
@@ -512,6 +500,18 @@
           "sha256": "2ca995c1022fca09a70d2de51a84b9c223d8442df54c17ebc9c397da0f32e6a1"
         },
         {
+          "task": "healing",
+          "action_id": "wos-healing",
+          "action_version": "0.1.3",
+          "sha256": "7651148ad5095d68985a4fe1d0f5a5935cb1bd0c9c9f2b54010ab3a49a7e6a58"
+        },
+        {
+          "task": "academy",
+          "action_id": "wos-academy-supply",
+          "action_version": "0.1.4",
+          "sha256": "28561c2132b20745651775fa6f46d7467ef9384fad4aadbcfff0d892f40731d1"
+        },
+        {
           "task": "daily",
           "action_id": "wos-daily-earned",
           "action_version": "0.1.1",
@@ -596,12 +596,6 @@
           "action_id": "wos-arena",
           "action_version": "0.1.5",
           "sha256": "568147d3749b6c763e262b544c90c78ead9ef67fe629585818063c1a3298d8a9"
-        },
-        {
-          "task": "healing",
-          "action_id": "wos-healing",
-          "action_version": "0.1.3",
-          "sha256": "7651148ad5095d68985a4fe1d0f5a5935cb1bd0c9c9f2b54010ab3a49a7e6a58"
         },
         {
           "task": "alliance_incentive",
@@ -710,6 +704,12 @@
           "action_id": "wos-warehouse-supply",
           "action_version": "0.1.5",
           "sha256": "2ca995c1022fca09a70d2de51a84b9c223d8442df54c17ebc9c397da0f32e6a1"
+        },
+        {
+          "task": "healing",
+          "action_id": "wos-healing",
+          "action_version": "0.1.3",
+          "sha256": "7651148ad5095d68985a4fe1d0f5a5935cb1bd0c9c9f2b54010ab3a49a7e6a58"
         },
         {
           "task": "daily",
