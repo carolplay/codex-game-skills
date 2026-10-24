@@ -1,6 +1,6 @@
 {
   "action_id": "wos-arena",
-  "action_version": "0.1.4",
+  "action_version": "0.1.5",
   "name": "WOS arena",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 600,
   "status": "candidate",
-  "verification_scope": "Post-update actual header changed to optional exploration qualifier; bounded header OCR accepts both titles and excludes city overview. Old main failed entry and exit preserved; nextrole pending.",
+  "verification_scope": "0.1.5 adds independent five-challenge chest after free attempts; five-of-five and already-claimed countdown branches are distinct. Development agent actually claimed100arena coins and observed timer; fixed macro branch live pending next role. Prior arena battles preserved.",
   "steps": [
     {
       "name": "01-check-city",
@@ -2100,6 +2100,143 @@
       }
     },
     {
+      "name": "claim-five-challenge-reward",
+      "action": "click",
+      "point": [
+        191,
+        855
+      ],
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              145,
+              899,
+              250,
+              934
+            ],
+            "pattern": "5\\s*/\\s*5",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": [
+        "获得奖励"
+      ],
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            145,
+            899,
+            250,
+            934
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "dismiss-five-challenge-reward",
+      "action": "click",
+      "point": [
+        518,
+        990
+      ],
+      "before": {
+        "all": [
+          "获得奖励",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "after": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            145,
+            899,
+            250,
+            934
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "skip_if_step_skipped": "claim-five-challenge-reward",
+      "observe_attempts": 5
+    },
+    {
+      "name": "verify-five-challenge-reward-cooldown",
+      "action": "observe",
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            145,
+            899,
+            250,
+            934
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "observe_attempts": 5
+    },
+    {
       "name": "close-list",
       "action": "click",
       "point": [
@@ -2247,6 +2384,40 @@
     },
     "max_exit_steps": 5,
     "exits": [
+      {
+        "name": "exit-five-challenge-reward",
+        "action": "click",
+        "point": [
+          518,
+          990
+        ],
+        "before": {
+          "all": [
+            "获得奖励",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        },
+        "after": {
+          "all": [
+            "挑战列表",
+            "今日剩余挑战次数"
+          ],
+          "page_text_regions": [
+            [
+              245,
+              800,
+              470,
+              850
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
       {
         "name": "exit-profile",
         "action": "click",
