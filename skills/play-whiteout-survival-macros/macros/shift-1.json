@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.53",
-  "package_version": "0.12.53",
+  "macro_version": "0.12.54",
+  "package_version": "0.12.54",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -234,12 +234,6 @@
           "sha256": "117d3f648eb043c1f37aeca9cc0bf2d68217698adf2e04ce3b6f4933a5f27e64"
         },
         {
-          "task": "island",
-          "action_id": "wos-island",
-          "action_version": "0.1.10",
-          "sha256": "472bf69a3c2f3f082afaf8bc40c0c891050bb9991e21320a53cbd6e86f289acf"
-        },
-        {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
           "action_version": "0.1.5",
@@ -256,6 +250,12 @@
           "action_id": "wos-academy-supply",
           "action_version": "0.1.4",
           "sha256": "28561c2132b20745651775fa6f46d7467ef9384fad4aadbcfff0d892f40731d1"
+        },
+        {
+          "task": "island",
+          "action_id": "wos-island",
+          "action_version": "0.1.11",
+          "sha256": "3e79376a7c062f01542b7e38162e64c8875d5f37bc5cf59ccf06b9e8b6ed2b0f"
         },
         {
           "task": "daily",
@@ -499,12 +499,6 @@
           "sha256": "117d3f648eb043c1f37aeca9cc0bf2d68217698adf2e04ce3b6f4933a5f27e64"
         },
         {
-          "task": "island",
-          "action_id": "wos-island",
-          "action_version": "0.1.10",
-          "sha256": "472bf69a3c2f3f082afaf8bc40c0c891050bb9991e21320a53cbd6e86f289acf"
-        },
-        {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
           "action_version": "0.1.5",
@@ -521,6 +515,12 @@
           "action_id": "wos-academy-supply",
           "action_version": "0.1.4",
           "sha256": "28561c2132b20745651775fa6f46d7467ef9384fad4aadbcfff0d892f40731d1"
+        },
+        {
+          "task": "island",
+          "action_id": "wos-island",
+          "action_version": "0.1.11",
+          "sha256": "3e79376a7c062f01542b7e38162e64c8875d5f37bc5cf59ccf06b9e8b6ed2b0f"
         },
         {
           "task": "daily",
@@ -710,12 +710,6 @@
           "sha256": "117d3f648eb043c1f37aeca9cc0bf2d68217698adf2e04ce3b6f4933a5f27e64"
         },
         {
-          "task": "island",
-          "action_id": "wos-island",
-          "action_version": "0.1.10",
-          "sha256": "472bf69a3c2f3f082afaf8bc40c0c891050bb9991e21320a53cbd6e86f289acf"
-        },
-        {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
           "action_version": "0.1.5",
@@ -726,6 +720,12 @@
           "action_id": "wos-healing",
           "action_version": "0.1.3",
           "sha256": "7651148ad5095d68985a4fe1d0f5a5935cb1bd0c9c9f2b54010ab3a49a7e6a58"
+        },
+        {
+          "task": "island",
+          "action_id": "wos-island",
+          "action_version": "0.1.11",
+          "sha256": "3e79376a7c062f01542b7e38162e64c8875d5f37bc5cf59ccf06b9e8b6ed2b0f"
         },
         {
           "task": "daily",

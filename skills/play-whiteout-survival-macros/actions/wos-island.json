@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.10",
+  "action_version": "0.1.11",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 360,
   "status": "candidate",
-  "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit.",
+  "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit. Adds bounded normalback from observed experttravel root (expertlist/nextstation/idle/auto); savedfailure andcitynegative checked, agentbackcityactual. Doesnotclaimislandentryfixed. Newexit macrolivepending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -2245,6 +2245,58 @@
           "none": [
             "扫荡奖励",
             "首胜奖励"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "完成任务后"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-unexpected-expert-travel-root",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": {
+          "all": [
+            "专家列表",
+            "下一站",
+            "挂机",
+            "自动"
+          ],
+          "none": [
+            "获得奖励",
+            "游历总结"
           ]
         },
         "after": {

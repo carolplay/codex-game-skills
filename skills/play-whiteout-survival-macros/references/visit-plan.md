@@ -143,11 +143,11 @@ UTC2026-10-20一班续跑验证：竞技场0.1.4新标题在低等级及两个�
 
 ## 当前线性动作列表与版本
 
-正式清单以catalog、actions与三份shift manifest为准；没有旧的默认六项/八项清单。当前包0.12.53，通用执行器最低0.3.3；本轮实际执行器0.4.5，旧批次版本保留在各自报告。主号与成熟角色清单相同；一班含VIP，二/三班不重复每日VIP。所有组合固定动作版本和SHA256，运行中的快照不热改。开发定向子集须标记targeted-development，不能冒充完整班次。
+正式清单以catalog、actions与三份shift manifest为准；没有旧的默认六项/八项清单。当前包0.12.54，通用执行器最低0.3.3；本轮实际执行器0.4.5，旧批次版本保留在各自报告。主号与成熟角色清单相同；一班含VIP，二/三班不重复每日VIP。所有组合固定动作版本和SHA256，运行中的快照不热改。开发定向子集须标记targeted-development，不能冒充完整班次。
 
 第三班成熟角色默认顺序（稳定段→开发/修复末段→daily；动作适用范围未减少）：
 
-mail → idle → feast → alliance → help → expert → refined → bank → shield → lancer → donate → pet_wolf → pet_badger → pet_deer → arena → orders → alliance_incentive → npc_autojoin → travel_idle → recruit → marksman → intel_cycle → gather_meat → gather_wood → gather_coal → gather_iron → pet_treasure_claim → pet_treasure_dispatch → pet_alliance_treasure → labyrinth → travel_idle_claim → war_academy_commission → crystal → enlistment → vip_calendar → store_free → island → warehouse → healing → academy → daily。
+mail → idle → feast → alliance → help → expert → refined → bank → shield → lancer → donate → pet_wolf → pet_badger → pet_deer → arena → orders → alliance_incentive → npc_autojoin → travel_idle → recruit → marksman → intel_cycle → gather_meat → gather_wood → gather_coal → gather_iron → pet_treasure_claim → pet_treasure_dispatch → pet_alliance_treasure → labyrinth → travel_idle_claim → war_academy_commission → crystal → enlistment → vip_calendar → store_free → warehouse → healing → academy → island → daily。
 
 每个动作统一从主城进入并返回主城，实际步骤与有界退出见对应JSON。每日任务领奖置尾，NPC自动加入/采集的行军位依赖显式维护。界面可组合不等于资源效果严格交换律。
 
