@@ -69,3 +69,13 @@ App自行执行窗口枚举、截图、OCR和实验性的进程定向点击/方�
 默认本地临时签名不保证重新构建后TCC权限保持；稳定发布签名与macOS权限主体需实测。屏幕录制和辅助功能由用户给新App手动授权。不会自动修改系统锁屏或节能设置。锁屏、熄屏、休眠分别验收，不把去掉CUA等同于解决所有锁定问题。
 
 原V2三班与双日熊排程未切换，V1继续暂停。今天二三班已按用户要求通过V2合并补欠，逐号实际结果和剩余缺口以本地检查点为准；原定时启动的锁屏阻断记录不回写为按时成功。没有启用第二套调度器。V3通过测试窗、目标App、共享互斥与分离时段测试后，再明确选择唯一生产入口。
+
+## 离线MCP能力发现原型0.1.0
+
+新增`skills/play-whiteout-survival-macros/scripts/capability_mcp.py`，提供本地stdio的`wos_capabilities`和`wos_shift_plan`两个只读工具。前者列出动作版本、哈希与声明的验证范围，后者读取一至三班的公开profile，校验catalog、action与manifest一致性，返回固定顺序、排除项及依赖。它复用现有包校验器，不复制另一份任务清单；不读取本地账号绑定、截图或余额。
+
+接口只提供能力查询与离线计划，不导入设备后端、连接原生App、取得执行锁或操作WOS。所有返回明确标识原生WOS验收pending、无执行工具。即使V2某动作已通过，也不转化为V3验收。当前是WOS能力包的发现适配器；通用设备后端仍位于CrossMacro，尚未接入生产Worker。
+
+启动方式：用本机Python运行上述脚本；MCP客户端command设为Python，args设为脚本绝对路径。包目录由启动者的`--root`配置固定，工具参数不能传文件路径、账号或执行选项。未添加到用户MCP配置，也未启用新排程。协议固定支持2025-03-26的初始化、tools/list、tools/call及换行JSON stdio；这是最小原型，不宣称所有MCP客户端互操作已验收。[MCP工具规范](https://modelcontextprotocol.io/specification/2025-03-26/server/tools)、[生命周期](https://modelcontextprotocol.io/specification/2025-03-26/basic/lifecycle)、[stdio传输](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports)。
+
+五项离线测试覆盖所有公开班次/profile、被篡改action拒绝、参数路径/执行注入拒绝、初始化与只读工具集合，以及真实子进程stdio往返；仅证明离线发现接口，不代替原生权限、WOS输入、背景/光标隔离或锁屏测试。后续执行工具必须接唯一Worker和真实锁，并在原生目标验收后另行开放。

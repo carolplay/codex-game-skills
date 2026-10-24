@@ -1,6 +1,6 @@
 {
-  "package_version": "0.12.49",
-  "executor_min_version": "0.3.3",
+  "package_version": "0.12.62",
+  "executor_min_version": "0.4.6",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
     "mail": {
@@ -16,11 +16,11 @@
     "vip": {
       "path": "actions/wos-vip-inspect.json",
       "action_id": "wos-vip-inspect",
-      "action_version": "0.1.8",
-      "sha256": "2d67a1e00950c96bb69494ed22ce69e0f33d036af732cc6fa153727cadb16a2a",
+      "action_version": "0.1.9",
+      "sha256": "fe1b417e489ae8075b6de0ebda0cc53b5fd28f85997e3592977cce33cb24fcfb",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. a mature role actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending. a mature role VIP8 title OCR每目 instead of每日;0.1.4 requires stable免费礼包 substring while preserving calibrated freeclaim greenbutton region. Exit only needs cropped VIP pageheader and known modal exclusions. Currentrole not retried; nextrolepending. Main VIP12 free label full-frame OCR read wrong first character; same saved frame cropped label reads correctly. Add same-frame daily gift title crop to existing free predicates; no changed claim or cash coordinates. Next applicable replay pending. VIP9 cropped label still reads rabbit-glyph for free. Accept only observed free/rabbit-glyph variation within calibrated daily-gift title, maintain VIP header, upper green claim target, cooldown and no cash action. Current role not retried; next applicable role pending. 0.1.7 secondshift: main actual freeclaim, dismissreward, cooldown and city return passed. Shift3 candidate: reverse cropped title reads VIP9每目兔费礼包. Accept observed 日/目 plus existing免/兔 only within dailygift title; free button/cooldown constraints retained. Reverse not retried this shift; next applicable daily claim pending.",
+      "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. a mature role actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending. a mature role VIP8 title OCR每目 instead of每日;0.1.4 requires stable免费礼包 substring while preserving calibrated freeclaim greenbutton region. Exit only needs cropped VIP pageheader and known modal exclusions. Currentrole not retried; nextrolepending. Main VIP12 free label full-frame OCR read wrong first character; same saved frame cropped label reads correctly. Add same-frame daily gift title crop to existing free predicates; no changed claim or cash coordinates. Next applicable replay pending. VIP9 cropped label still reads rabbit-glyph for free. Accept only observed free/rabbit-glyph variation within calibrated daily-gift title, maintain VIP header, upper green claim target, cooldown and no cash action. Current role not retried; next applicable role pending. 0.1.9 VIP8 fullframe title correct but forcedcrop failed. Freegift title regions prefer a unique confident in-bounds fullframe match, otherwise sameframe cropped OCR. Remove duplicate supplementaltitlecrop, retain exacttitlepattern/freebutton bounds/greenstate/cooldown/inactive andcash isolation. Newbranch savedframes checked; livepending. Current0.1.9 matureVIP8 actualfreeclaim, rewarddismiss, cooldowncheck andcityexit passed; doesnotextend toallVIPlevels.",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "idle": {
@@ -46,11 +46,11 @@
     "academy": {
       "path": "actions/wos-academy-supply.json",
       "action_id": "wos-academy-supply",
-      "action_version": "0.1.3",
-      "sha256": "295d3e9f4f81315d745da2746258a13fa634171816a41b2b9b26eae9de24384b",
+      "action_version": "0.1.4",
+      "sha256": "28561c2132b20745651775fa6f46d7467ef9384fad4aadbcfff0d892f40731d1",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Real claim occurred; one reward-animation assertion deviation recovered to city and next task continued. Cooldown full replay passed.; 0.1.3 overviewfilter +boundedtop/find normalization. Oldincentivemisclick enabledhidecompleted; supplymissing in unnormalizedlist. Freeclaim/cooldown/cityexit behaviorunchanged; livepending.",
+      "verification_scope": "Real claim occurred; one reward-animation assertion deviation recovered to city and next task continued. Cooldown full replay passed.; 0.1.3 overviewfilter +boundedtop/find normalization. Oldincentivemisclick enabledhidecompleted; supplymissing in unnormalizedlist. Freeclaim/cooldown/cityexit behaviorunchanged; livepending. 0.1.4 adds bounded exit from observed labyrinth root with research/forge or cave zones; agent normalback recovered, savedpositive/citynegative tested; navigationitself notfixed. Movefailedacademy beforedaily tail, notmiddleofstablebatch. Newexit macrolivepending.",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
     "alliance": {
@@ -145,8 +145,8 @@
     "crystal": {
       "path": "actions/wos-crystal-ordinary.json",
       "action_id": "wos-crystal-ordinary",
-      "action_version": "0.1.6",
-      "sha256": "0c413e3ab63c57c29a219485e0b8bbff52bdabbadbfa1558d86fcd6f34cdd80d",
+      "action_version": "0.1.7",
+      "sha256": "87db26ae555959d1cc555d4ba06d47d4e7a353a425dcfa367e4f71185a12d9f7",
       "period": "day",
       "utility": false,
       "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。; 0.1.6 bounded exit for observed accidentaltravelroot duringoverviewkeysearch. Actualagentbackarrow recoveredcity; newexit macro validationpending. Navigationrootcause remains, no falseclaim ofrefiningfix.",
@@ -156,8 +156,8 @@
     "refined": {
       "path": "actions/wos-crystal-half-price.json",
       "action_id": "wos-crystal-half-price",
-      "action_version": "0.1.6",
-      "sha256": "625c10e7ef91efc1fcee671ca37ad6c5ddf96ce18a12ddde336ffaad6ca9c97b",
+      "action_version": "0.1.7",
+      "sha256": "aa0cc6e6351d476940c8496d76af2ad2d5a4b465f50fca7c8c4357ad2fe99ba6",
       "period": "day",
       "utility": false,
       "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。0.12.26 candidate reuses ordinarycrystal localized实验[室窒].?提炼 locator, oldhalfprice stillglobalexact causedmiss. Currentfailedframe resolvesuniquely; actualhalfpricebudget/dailyoperationguard unchanged; livepending.",
@@ -224,17 +224,17 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.16",
-      "sha256": "117d3f648eb043c1f37aeca9cc0bf2d68217698adf2e04ce3b6f4933a5f27e64",
+      "action_version": "0.1.18",
+      "sha256": "7d562e444b8cb99294fdcc5054de177446f0722e4bf819cd6b2d8fa8527287bb",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility."
+      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.18 adds bounded back-to-city exit from observed selected-weekcard store root (both fire-crystal titles and purchase-immediate label, excludes rewards). Entry normalization/free claim on this selected tab remains unresolved. Saved root positive/city negative checked; automatic exit live pending."
     },
     "arena": {
       "path": "actions/wos-arena.json",
       "action_id": "wos-arena",
-      "action_version": "0.1.4",
-      "sha256": "2613c3e975e25e75928737efc41f229cb97ffb4b12e631337ff12fac93bd81ab",
+      "action_version": "0.1.5",
+      "sha256": "568147d3749b6c763e262b544c90c78ead9ef67fe629585818063c1a3298d8a9",
       "period": "day",
       "utility": false,
       "verification_scope": "Post-update actual header changed to optional exploration qualifier; bounded header OCR accepts both titles and excludes city overview. Old main failed entry and exit preserved; nextrole pending."
@@ -242,11 +242,11 @@
     "island": {
       "path": "actions/wos-island.json",
       "action_id": "wos-island",
-      "action_version": "0.1.10",
-      "sha256": "472bf69a3c2f3f082afaf8bc40c0c891050bb9991e21320a53cbd6e86f289acf",
+      "action_version": "0.1.12",
+      "sha256": "78d0ff69ac19b35d40270fd2a3dde5b7742fb2b184a95395251127cd0c8db4be",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit."
+      "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit. Adds bounded normalback from observed experttravel root (expertlist/nextstation/idle/auto); savedfailure andcitynegative checked, agentbackcityactual. Doesnotclaimislandentryfixed. Newexit macrolivepending."
     },
     "orders": {
       "path": "actions/wos-orders.json",
@@ -306,38 +306,38 @@
     "gather_wood": {
       "path": "actions/wos-gather-wood.json",
       "action_id": "wos-gather-wood",
-      "action_version": "0.1.12",
-      "sha256": "7ce5783d30ba6c091c78ee42ddf45d62f688534a3962aea9780da33ff277b12a",
+      "action_version": "0.1.13",
+      "sha256": "894cdc8471e14a5260967b36d960c77235141a48e860cbccda1d88d8dda5a05e",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending."
+      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending."
     },
     "gather_coal": {
       "path": "actions/wos-gather-coal.json",
       "action_id": "wos-gather-coal",
-      "action_version": "0.1.15",
-      "sha256": "3560f70aeee8c81a4c442694bf32514552216c7bd398ca937f1a3d76ed90e0ec",
+      "action_version": "0.1.16",
+      "sha256": "c28846d5589cc7b32bf1f986c8937215def78e57ecf491844cb859a8da8647ac",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending."
+      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending."
     },
     "gather_iron": {
       "path": "actions/wos-gather-iron.json",
       "action_id": "wos-gather-iron",
-      "action_version": "0.1.15",
-      "sha256": "52d1ef8b47aab9a9d4381eb45ce62d6c2bddc0b81e14282d15d7fb8e6cbdcc32",
+      "action_version": "0.1.16",
+      "sha256": "e3d9876b7649f05b085313b8ef62a33a89181428ee1b957d2f3844e49dfc63e2",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending."
+      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending."
     },
     "healing": {
       "path": "actions/wos-healing.json",
       "action_id": "wos-healing",
-      "action_version": "0.1.2",
-      "sha256": "4ea6fabbf7ed15290e996c9076d73f3c984068428c75eae1d5ddf1f2f01e8b9d",
+      "action_version": "0.1.3",
+      "sha256": "7651148ad5095d68985a4fe1d0f5a5935cb1bd0c9c9f2b54010ab3a49a7e6a58",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.2 candidate: overview small daily tab misread; town aftercondition uses actual three camp labels, general overview accepts known queue headers. Saved failedframe positive and citynegative checked. No research/building upgrade input; live nextrole pending."
+      "verification_scope": "0.1.3: existing treatment queue page had same title as empty selection; quickselect clicked cancel treatment. Add existingqueue predicate to both business clicks and bounded cancel-confirm dismissal. Agent recovery and savedframe checks separate from pending macro replay."
     },
     "enlistment": {
       "path": "actions/wos-enlistment.json",
@@ -369,8 +369,8 @@
     "alliance_incentive": {
       "path": "actions/wos-alliance-incentive.json",
       "action_id": "wos-alliance-incentive",
-      "action_version": "0.1.6",
-      "sha256": "50718337097a044889185577f8ec5e8a762d1f730a7f0db21ca2e07dd1049a93",
+      "action_version": "0.1.7",
+      "sha256": "c229352a2cb24139a5f397193675f6833fb809a9de85b3955956df4d4c00c270",
       "period": "day",
       "utility": false,
       "verification_scope": "Main150/800 no reward; grayscale red-dot falsely matched orange gear. Color-only red threshold plus800/800 gate, known reward-help tooltip exit. Positive/negative calibrated on real frames; nextrole replay pending. Tight red-center positive1.0 and negative0.0494; counter accepts>=800 including1,800 rather than exactly800. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending.; 0.1.6 rejects clipped bottom overview header beforeforwardoffset couldhit hidecompleted. Currentclient savedfailure titley705,target755 provesoldmisclick. Nextfullvisible branch pendinglive."
@@ -427,8 +427,8 @@
     "travel_idle_claim": {
       "path": "actions/wos-travel-idle-claim.json",
       "action_id": "wos-travel-idle-claim",
-      "action_version": "0.1.6",
-      "sha256": "8ef92b6eab2356aa95f44c76b3c525e23550817a979b4698f6b242ae9b2188da",
+      "action_version": "0.1.7",
+      "sha256": "58367217d914f237211c6c85172b0d7b230bf598d55248038c2ebe94eb759502",
       "period": "shift",
       "utility": false,
       "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Replace unreadable tiny progress fraction prerequisite with existing calibrated travelbubble positive match. Saved failureframe match0.9666; completed-dialog and reward checks unchanged; next applicable role replaypending. 0.1.5 secondshift: main and yellow no-bubble skip and city passed; actual bubble/completed-claim new branch not triggered because login auto-settled, not inferredverified. Shift3 candidate: root uses both large travel signposts instead of tiny decorative title; travel page requires idle/auto controls plus calibrated expert-hat icon instead of unreliable small label. Saved correct travel1.0 versus rootnegative.425; nextrole livepending."
@@ -445,8 +445,8 @@
     "war_academy_commission": {
       "path": "actions/wos-war-academy-commission.json",
       "action_id": "wos-war-academy-commission",
-      "action_version": "0.1.11",
-      "sha256": "6751f14de5cd0f360c4911bbdde7d26cca2a8754170b2e06c902900b355cc4af",
+      "action_version": "0.1.12",
+      "sha256": "efa15f9b80d9567a9d1534ea23c4533998aaee5df9fd2d0e883521c6e7c70bb9",
       "period": "event",
       "utility": false,
       "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. a mature role actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Batched row gestures split into at most5 per JS call after two20-gesture calls exceeded runtime. Offline candidate; no live recovery claim. 0.1.6 still spends excessive time on 220 short scroll gestures. Candidate replaces each 20x100ms scan with2x600ms and per-gesture observations, keeping per-section reward checks, finite11sections and predefined exits. Next role replay pending; does not assert all free rewards claimed. 0.1.11: saved main/othermature cropped title firstglyph misreads戈/我/成, stable争学院 suffix retained within same bounded title and详情page. Onlytitlepredicate revised; navigation unchanged. Savedpositive+unrelatednegative offline; livepending."

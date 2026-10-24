@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-inspect",
-  "action_version": "0.1.8",
+  "action_version": "0.1.9",
   "name": "WOS — free VIP gift or cooldown",
   "reference_size": [
     788,
@@ -118,14 +118,6 @@
         "all": [
           "VIP"
         ],
-        "page_text_regions": [
-          [
-            240,
-            630,
-            490,
-            680
-          ]
-        ],
         "text_regions": [
           {
             "bounds": [
@@ -136,7 +128,8 @@
             ],
             "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -171,14 +164,6 @@
             "min": 0.12
           }
         ],
-        "page_text_regions": [
-          [
-            240,
-            630,
-            490,
-            680
-          ]
-        ],
         "text_regions": [
           {
             "bounds": [
@@ -189,7 +174,8 @@
             ],
             "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -226,14 +212,6 @@
             "min": 1,
             "max": 86400
           },
-          "page_text_regions": [
-            [
-              240,
-              630,
-              490,
-              680
-            ]
-          ],
           "text_regions": [
             {
               "bounds": [
@@ -244,7 +222,8 @@
               ],
               "pattern": ".*每[日目][免兔]费礼包.*",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ]
         },
@@ -271,16 +250,9 @@
               ],
               "pattern": ".*每[日目][免兔]费礼包.*",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
-          ],
-          "page_text_regions": [
-            [
-              240,
-              630,
-              490,
-              680
-            ]
           ]
         }
       ]
@@ -305,14 +277,6 @@
         "all": [
           "VIP"
         ],
-        "page_text_regions": [
-          [
-            240,
-            630,
-            490,
-            680
-          ]
-        ],
         "text_regions": [
           {
             "bounds": [
@@ -323,7 +287,8 @@
             ],
             "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -339,14 +304,6 @@
           "点击空白",
           "点击屏幕"
         ],
-        "page_text_regions": [
-          [
-            240,
-            630,
-            490,
-            680
-          ]
-        ],
         "text_regions": [
           {
             "bounds": [
@@ -357,7 +314,8 @@
             ],
             "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -379,14 +337,6 @@
           "min": 1,
           "max": 86400
         },
-        "page_text_regions": [
-          [
-            240,
-            630,
-            490,
-            680
-          ]
-        ],
         "text_regions": [
           {
             "bounds": [
@@ -397,7 +347,8 @@
             ],
             "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -424,16 +375,9 @@
             ],
             "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
-        ],
-        "page_text_regions": [
-          [
-            240,
-            630,
-            490,
-            680
-          ]
         ]
       },
       "observe_attempts": 10
@@ -449,14 +393,6 @@
         "all": [
           "VIP"
         ],
-        "page_text_regions": [
-          [
-            240,
-            630,
-            490,
-            680
-          ]
-        ],
         "text_regions": [
           {
             "bounds": [
@@ -467,7 +403,8 @@
             ],
             "pattern": ".*每[日目][免兔]费礼包.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -566,14 +503,6 @@
           "all": [
             "VIP"
           ],
-          "page_text_regions": [
-            [
-              240,
-              630,
-              490,
-              680
-            ]
-          ],
           "text_regions": [
             {
               "bounds": [
@@ -584,7 +513,8 @@
               ],
               "pattern": ".*每[日目][免兔]费礼包.*",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ]
         },
@@ -697,6 +627,6 @@
     ]
   },
   "status": "real_claim_replay_verified",
-  "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. a mature role actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending. a mature role VIP8 title OCR每目 instead of每日;0.1.4 requires stable免费礼包 substring while preserving calibrated freeclaim greenbutton region. Exit only needs cropped VIP pageheader and known modal exclusions. Currentrole not retried; nextrolepending. Main VIP12 free label full-frame OCR read wrong first character; same saved frame cropped label reads correctly. Add same-frame daily gift title crop to existing free predicates; no changed claim or cash coordinates. Next applicable replay pending. VIP9 cropped label still reads rabbit-glyph for free. Accept only observed free/rabbit-glyph variation within calibrated daily-gift title, maintain VIP header, upper green claim target, cooldown and no cash action. Current role not retried; next applicable role pending.",
+  "verification_scope": "0.1.1: under30 inactive free-gift branch skipped without activation; city exit and following tasks passed. Prior version fire-crystal roles free claim/cooldown passed; no inference that all states validated at this patch. a mature role actual freeclaim then flyingrewardicons occluded dailylabel at subsequentcheck;0.1.3 adds10 bounded observereads, neverreclick claim. Nextrole replaypending. a mature role VIP8 title OCR每目 instead of每日;0.1.4 requires stable免费礼包 substring while preserving calibrated freeclaim greenbutton region. Exit only needs cropped VIP pageheader and known modal exclusions. Currentrole not retried; nextrolepending. Main VIP12 free label full-frame OCR read wrong first character; same saved frame cropped label reads correctly. Add same-frame daily gift title crop to existing free predicates; no changed claim or cash coordinates. Next applicable replay pending. VIP9 cropped label still reads rabbit-glyph for free. Accept only observed free/rabbit-glyph variation within calibrated daily-gift title, maintain VIP header, upper green claim target, cooldown and no cash action. Current role not retried; next applicable role pending. 0.1.9 VIP8 fullframe title correct but forcedcrop failed. Freegift title regions prefer a unique confident in-bounds fullframe match, otherwise sameframe cropped OCR. Remove duplicate supplementaltitlecrop, retain exacttitlepattern/freebutton bounds/greenstate/cooldown/inactive andcash isolation. Newbranch savedframes checked; livepending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }
