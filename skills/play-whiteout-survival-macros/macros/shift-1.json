@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.54",
-  "package_version": "0.12.54",
+  "macro_version": "0.12.55",
+  "package_version": "0.12.55",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -122,8 +122,8 @@
         {
           "task": "vip",
           "action_id": "wos-vip-inspect",
-          "action_version": "0.1.8",
-          "sha256": "2d67a1e00950c96bb69494ed22ce69e0f33d036af732cc6fa153727cadb16a2a"
+          "action_version": "0.1.9",
+          "sha256": "fe1b417e489ae8075b6de0ebda0cc53b5fd28f85997e3592977cce33cb24fcfb"
         },
         {
           "task": "travel_idle",
@@ -387,8 +387,8 @@
         {
           "task": "vip",
           "action_id": "wos-vip-inspect",
-          "action_version": "0.1.8",
-          "sha256": "2d67a1e00950c96bb69494ed22ce69e0f33d036af732cc6fa153727cadb16a2a"
+          "action_version": "0.1.9",
+          "sha256": "fe1b417e489ae8075b6de0ebda0cc53b5fd28f85997e3592977cce33cb24fcfb"
         },
         {
           "task": "travel_idle",
@@ -622,8 +622,8 @@
         {
           "task": "vip",
           "action_id": "wos-vip-inspect",
-          "action_version": "0.1.8",
-          "sha256": "2d67a1e00950c96bb69494ed22ce69e0f33d036af732cc6fa153727cadb16a2a"
+          "action_version": "0.1.9",
+          "sha256": "fe1b417e489ae8075b6de0ebda0cc53b5fd28f85997e3592977cce33cb24fcfb"
         },
         {
           "task": "recruit",
