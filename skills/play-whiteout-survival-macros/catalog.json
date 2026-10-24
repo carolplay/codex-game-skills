@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.58",
+  "package_version": "0.12.59",
   "executor_min_version": "0.4.6",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -369,8 +369,8 @@
     "alliance_incentive": {
       "path": "actions/wos-alliance-incentive.json",
       "action_id": "wos-alliance-incentive",
-      "action_version": "0.1.6",
-      "sha256": "50718337097a044889185577f8ec5e8a762d1f730a7f0db21ca2e07dd1049a93",
+      "action_version": "0.1.7",
+      "sha256": "c229352a2cb24139a5f397193675f6833fb809a9de85b3955956df4d4c00c270",
       "period": "day",
       "utility": false,
       "verification_scope": "Main150/800 no reward; grayscale red-dot falsely matched orange gear. Color-only red threshold plus800/800 gate, known reward-help tooltip exit. Positive/negative calibrated on real frames; nextrole replay pending. Tight red-center positive1.0 and negative0.0494; counter accepts>=800 including1,800 rather than exactly800. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending.; 0.1.6 rejects clipped bottom overview header beforeforwardoffset couldhit hidecompleted. Currentclient savedfailure titley705,target755 provesoldmisclick. Nextfullvisible branch pendinglive."
