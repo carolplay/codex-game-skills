@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.67",
-  "package_version": "0.12.67",
+  "macro_version": "0.12.68",
+  "package_version": "0.12.68",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -204,12 +204,6 @@
           "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05"
         },
         {
-          "task": "store_free",
-          "action_id": "wos-store-free",
-          "action_version": "0.1.19",
-          "sha256": "c2233635f3935d481d68c7752cd952fa05f4b7803559771fe652798f71660c01"
-        },
-        {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
           "action_version": "0.1.7",
@@ -256,6 +250,12 @@
           "action_id": "wos-crystal-half-price",
           "action_version": "0.1.7",
           "sha256": "aa0cc6e6351d476940c8496d76af2ad2d5a4b465f50fca7c8c4357ad2fe99ba6"
+        },
+        {
+          "task": "store_free",
+          "action_id": "wos-store-free",
+          "action_version": "0.1.20",
+          "sha256": "ba9e1dbbb77563cadf2054b71012de209b88156d6c2a07828dde70ac457ec58f"
         },
         {
           "task": "daily",
@@ -469,12 +469,6 @@
           "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05"
         },
         {
-          "task": "store_free",
-          "action_id": "wos-store-free",
-          "action_version": "0.1.19",
-          "sha256": "c2233635f3935d481d68c7752cd952fa05f4b7803559771fe652798f71660c01"
-        },
-        {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
           "action_version": "0.1.7",
@@ -521,6 +515,12 @@
           "action_id": "wos-crystal-half-price",
           "action_version": "0.1.7",
           "sha256": "aa0cc6e6351d476940c8496d76af2ad2d5a4b465f50fca7c8c4357ad2fe99ba6"
+        },
+        {
+          "task": "store_free",
+          "action_id": "wos-store-free",
+          "action_version": "0.1.20",
+          "sha256": "ba9e1dbbb77563cadf2054b71012de209b88156d6c2a07828dde70ac457ec58f"
         },
         {
           "task": "daily",
@@ -698,12 +698,6 @@
           "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05"
         },
         {
-          "task": "store_free",
-          "action_id": "wos-store-free",
-          "action_version": "0.1.19",
-          "sha256": "c2233635f3935d481d68c7752cd952fa05f4b7803559771fe652798f71660c01"
-        },
-        {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
           "action_version": "0.1.7",
@@ -726,6 +720,12 @@
           "action_id": "wos-alliance-incentive",
           "action_version": "0.1.7",
           "sha256": "c229352a2cb24139a5f397193675f6833fb809a9de85b3955956df4d4c00c270"
+        },
+        {
+          "task": "store_free",
+          "action_id": "wos-store-free",
+          "action_version": "0.1.20",
+          "sha256": "ba9e1dbbb77563cadf2054b71012de209b88156d6c2a07828dde70ac457ec58f"
         },
         {
           "task": "daily",

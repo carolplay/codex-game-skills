@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.67",
+  "package_version": "0.12.68",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -224,11 +224,11 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.19",
-      "sha256": "c2233635f3935d481d68c7752cd952fa05f4b7803559771fe652798f71660c01",
+      "action_version": "0.1.20",
+      "sha256": "ba9e1dbbb77563cadf2054b71012de209b88156d6c2a07828dde70ac457ec58f",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.18 adds bounded back-to-city exit from observed selected-weekcard store root (both fire-crystal titles and purchase-immediate label, excludes rewards). Entry normalization/free claim on this selected tab remains unresolved. Saved root positive/city negative checked; automatic exit live pending. 0.1.19 normalizes known weekcard root via Daily Deal tab before existing free chest checks; scoped Daily Deal body prevents top-tab false acceptance. Known weekcard exit retained; tab normalization live pending."
+      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.18 adds bounded back-to-city exit from observed selected-weekcard store root (both fire-crystal titles and purchase-immediate label, excludes rewards). Entry normalization/free claim on this selected tab remains unresolved. Saved root positive/city negative checked; automatic exit live pending. 0.1.19 normalizes known weekcard root via Daily Deal tab before existing free chest checks; scoped Daily Deal body prevents top-tab false acceptance. Known weekcard exit retained; tab normalization live pending. 0.1.20 sets explicit240s action and120s shared bounded exit budgets after Low0.1.19 default120s exhausted during observed knownstore checks. No new clicks or price logic; originalfailure kept. Store moved tofinal development slot beforedaily. Livepending."
     },
     "arena": {
       "path": "actions/wos-arena.json",
