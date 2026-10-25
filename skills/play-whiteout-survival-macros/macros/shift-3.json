@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.69",
-  "package_version": "0.12.69",
+  "macro_version": "0.12.70",
+  "package_version": "0.12.70",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -242,8 +242,8 @@
         {
           "task": "refined",
           "action_id": "wos-crystal-half-price",
-          "action_version": "0.1.7",
-          "sha256": "aa0cc6e6351d476940c8496d76af2ad2d5a4b465f50fca7c8c4357ad2fe99ba6"
+          "action_version": "0.1.8",
+          "sha256": "d6305029ebd8cff836ccc332986eccd9b9487f80e240e23d947555ca3c9b913f"
         },
         {
           "task": "store_free",
@@ -502,8 +502,8 @@
         {
           "task": "refined",
           "action_id": "wos-crystal-half-price",
-          "action_version": "0.1.7",
-          "sha256": "aa0cc6e6351d476940c8496d76af2ad2d5a4b465f50fca7c8c4357ad2fe99ba6"
+          "action_version": "0.1.8",
+          "sha256": "d6305029ebd8cff836ccc332986eccd9b9487f80e240e23d947555ca3c9b913f"
         },
         {
           "task": "store_free",
