@@ -227,3 +227,16 @@ VIP日历0.1.3只核验左上VIP页面标题，不再依赖无关的“每日免
 ### 0.12.66 live scope
 
 Warehouse0.1.7 completed a mature-profile replay: four new claims, day total5/5,95 inherited skips without another observation. The20-to1 measurement applies only to an already-found search fragment, not total action speed. Hospital0.1.5 passed the ongoing-treatment branch and normal city exit; its new radial-menu recovery point remains unexercised. Academy0.1.5 has an actual free-claim replay. Store weekcard-to-DailyDeal normalization still needs a live branch test; another cash-store layout remains unresolved. Island inventory OCR passed one mature profile and failed another. Native screen/input permission and WOS acceptance remain pending; all live results here use the existing device channel.
+
+### 0.12.69：合并补班与专家持续状态
+
+当前包0.12.69，执行器0.4.10。专家营地0.1.5以局部奖励气泡模板判断可领取，并以气泡消失核验结束，不再依赖短暂奖励文字；离线正负帧和跨角色空位样本通过，小黄鸡现场仅验证无可领气泡与主城出口，实际可领分支仍待宏验收。反方向角色旧0.1.4的原偏差保留，后续模型补做不改写旧宏结果。
+
+商店免费箱0.1.20保持原领奖边界，显式总预算240秒与有限退出120秒，置于daily之前；反方向角色本次由模型实际领取100钻石，不能算该新版宏通过。执行器0.4.10在发出请求前检查已过期预算，未发送即按本地超时处理；已发送后响应丢失仍停批，不能重试未知效果输入。138项离线测试通过，现场结果另记。
+
+漏班合并按当前游戏日真实状态处理，不重复运行三份相同日内奖励。先处理日重置损失项，持续收益暂缓项目仍保留原覆盖分母；每日325分宝箱完成不代表巨兽集结、专家额外情报、持续收益等均完成。历史班次缺失、迟完成、人工完成、宏首次失败分别留本地证据。
+
+### 0.12.70：首次半价数字识别
+
+精炼火晶0.1.8保留10/25首次优惠与20/50后续价格边界，同一价格区域优先采用唯一高置信全帧数字，再回退局部OCR。实际失败帧全图10被局部放大误读19；保存帧复现修订通过，随后主号正式宏回放首次半价领取与主城退出通过。小黄鸡旧0.1.7偏差及模型补领分别留证据，不改写旧结果。
+
