@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.68",
+  "package_version": "0.12.69",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -167,11 +167,11 @@
     "expert": {
       "path": "actions/wos-expert-camp-rewards.json",
       "action_id": "wos-expert-camp-rewards",
-      "action_version": "0.1.4",
-      "sha256": "9841822cf7ee3c6401cf4bec85f3f6ec4ea8be8a58c6bf896846e7c476d7dddf",
+      "action_version": "0.1.5",
+      "sha256": "8e89569803d93d6a77daa59faeda4612b14dfaf820edcfbc2874d63cd67dfded",
       "period": "day",
       "utility": false,
-      "verification_scope": "Trial role A passed two actual camp reward-badge claims with Gareth reward and Romulus troop-recruitment banners, then drained badge. Trial role B passed empty-badge branch. Only this camp entry; other Expert/enlistment-office rewards unverified. a mature role locating盾兵 wholeframeconfidence below0.5 causedzero target;0.1.2 cropped target with0.3minimum plus independent overview exit. No new claim; nextmature-role validationpending. 0.1.4 prefers unique inbounds fullframe shield-camp label before sameimage crop; saved previous-role oldcrop misread/newpoint432487 and city fullframe negative checked, live pending. Shield0.3.7 same mechanism fully passed previous mature role; not assumed expert acceptance. 0.1.4 full workflow passed one mature-role third batch; actualbranch documented locally, not native acceptance.",
+      "verification_scope": "Trial role A passed two actual camp reward-badge claims with Gareth reward and Romulus troop-recruitment banners, then drained badge. Trial role B passed empty-badge branch. Only this camp entry; other Expert/enlistment-office rewards unverified. a mature role locating盾兵 wholeframeconfidence below0.5 causedzero target;0.1.2 cropped target with0.3minimum plus independent overview exit. No new claim; nextmature-role validationpending. 0.1.5 candidate replaces coarsewhitepresence with boundedNPCportraitlower-template and persistent city+finalbubbleabsence; transient rewardtext no longer required. Real saved positive .869..1.0, two-role absent .154..418, threshold .8; livepending. Original0.1.4 failure retained.",
       "current_evidence_note": "已验证盾兵营地专家徽章领取/空奖励；不代表所有专家奖励。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },

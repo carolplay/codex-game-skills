@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.68",
-  "package_version": "0.12.68",
+  "macro_version": "0.12.69",
+  "package_version": "0.12.69",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -44,8 +44,8 @@
         {
           "task": "expert",
           "action_id": "wos-expert-camp-rewards",
-          "action_version": "0.1.4",
-          "sha256": "9841822cf7ee3c6401cf4bec85f3f6ec4ea8be8a58c6bf896846e7c476d7dddf"
+          "action_version": "0.1.5",
+          "sha256": "8e89569803d93d6a77daa59faeda4612b14dfaf820edcfbc2874d63cd67dfded"
         },
         {
           "task": "bank",
@@ -304,8 +304,8 @@
         {
           "task": "expert",
           "action_id": "wos-expert-camp-rewards",
-          "action_version": "0.1.4",
-          "sha256": "9841822cf7ee3c6401cf4bec85f3f6ec4ea8be8a58c6bf896846e7c476d7dddf"
+          "action_version": "0.1.5",
+          "sha256": "8e89569803d93d6a77daa59faeda4612b14dfaf820edcfbc2874d63cd67dfded"
         },
         {
           "task": "bank",

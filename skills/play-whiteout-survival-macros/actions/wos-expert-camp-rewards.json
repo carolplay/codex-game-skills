@@ -1,6 +1,6 @@
 {
   "action_id": "wos-expert-camp-rewards",
-  "action_version": "0.1.4",
+  "action_version": "0.1.5",
   "name": "WOS — shield camp expert badge rewards (trial)",
   "reference_size": [
     788,
@@ -239,17 +239,6 @@
           "背包",
           "野外"
         ],
-        "white_regions": [
-          {
-            "bounds": [
-              361,
-              460,
-              433,
-              540
-            ],
-            "min": 0.05
-          }
-        ],
         "page_text_regions": [
           [
             100,
@@ -257,6 +246,20 @@
             690,
             1079
           ]
+        ],
+        "template_regions": [
+          {
+            "template": "expert-camp-reward",
+            "bounds": [
+              360,
+              460,
+              435,
+              545
+            ],
+            "mode": "grayscale",
+            "min_score": 0.8,
+            "present": true
+          }
         ]
       },
       "after": {
@@ -264,12 +267,6 @@
           "英雄",
           "背包",
           "野外"
-        ],
-        "any": [
-          "罗慕路斯",
-          "加雷斯",
-          "为您",
-          "获得"
         ],
         "page_text_regions": [
           [
@@ -287,17 +284,6 @@
           "背包",
           "野外"
         ],
-        "white_regions": [
-          {
-            "bounds": [
-              361,
-              460,
-              433,
-              540
-            ],
-            "max": 0.025
-          }
-        ],
         "page_text_regions": [
           [
             100,
@@ -305,6 +291,20 @@
             690,
             1079
           ]
+        ],
+        "template_regions": [
+          {
+            "template": "expert-camp-reward",
+            "bounds": [
+              360,
+              460,
+              435,
+              545
+            ],
+            "mode": "grayscale",
+            "min_score": 0.8,
+            "present": false
+          }
         ]
       }
     },
@@ -321,17 +321,6 @@
           "背包",
           "野外"
         ],
-        "white_regions": [
-          {
-            "bounds": [
-              361,
-              460,
-              433,
-              540
-            ],
-            "min": 0.05
-          }
-        ],
         "page_text_regions": [
           [
             100,
@@ -339,6 +328,20 @@
             690,
             1079
           ]
+        ],
+        "template_regions": [
+          {
+            "template": "expert-camp-reward",
+            "bounds": [
+              360,
+              460,
+              435,
+              545
+            ],
+            "mode": "grayscale",
+            "min_score": 0.8,
+            "present": true
+          }
         ]
       },
       "after": {
@@ -346,12 +349,6 @@
           "英雄",
           "背包",
           "野外"
-        ],
-        "any": [
-          "罗慕路斯",
-          "加雷斯",
-          "为您",
-          "获得"
         ],
         "page_text_regions": [
           [
@@ -369,17 +366,6 @@
           "背包",
           "野外"
         ],
-        "white_regions": [
-          {
-            "bounds": [
-              361,
-              460,
-              433,
-              540
-            ],
-            "max": 0.025
-          }
-        ],
         "page_text_regions": [
           [
             100,
@@ -387,6 +373,20 @@
             690,
             1079
           ]
+        ],
+        "template_regions": [
+          {
+            "template": "expert-camp-reward",
+            "bounds": [
+              360,
+              460,
+              435,
+              545
+            ],
+            "mode": "grayscale",
+            "min_score": 0.8,
+            "present": false
+          }
         ]
       }
     },
@@ -399,17 +399,6 @@
           "背包",
           "野外"
         ],
-        "white_regions": [
-          {
-            "bounds": [
-              361,
-              460,
-              433,
-              540
-            ],
-            "max": 0.025
-          }
-        ],
         "page_text_regions": [
           [
             100,
@@ -417,9 +406,24 @@
             690,
             1079
           ]
+        ],
+        "template_regions": [
+          {
+            "template": "expert-camp-reward",
+            "bounds": [
+              360,
+              460,
+              435,
+              545
+            ],
+            "mode": "grayscale",
+            "min_score": 0.8,
+            "present": false
+          }
         ]
       },
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "observe_interval_seconds": 1
     }
   ],
   "task_contract": {
@@ -592,6 +596,6 @@
       }
     ]
   },
-  "verification_scope": "Trial role A passed two actual camp reward-badge claims with Gareth reward and Romulus troop-recruitment banners, then drained badge. Trial role B passed empty-badge branch. Only this camp entry; other Expert/enlistment-office rewards unverified. a mature role locating盾兵 wholeframeconfidence below0.5 causedzero target;0.1.2 cropped target with0.3minimum plus independent overview exit. No new claim; nextmature-role validationpending.",
+  "verification_scope": "Trial role A passed two actual camp reward-badge claims with Gareth reward and Romulus troop-recruitment banners, then drained badge. Trial role B passed empty-badge branch. Only this camp entry; other Expert/enlistment-office rewards unverified. a mature role locating盾兵 wholeframeconfidence below0.5 causedzero target;0.1.2 cropped target with0.3minimum plus independent overview exit. No new claim; nextmature-role validationpending. 0.1.5 candidate replaces coarsewhitepresence with boundedNPCportraitlower-template and persistent city+finalbubbleabsence; transient rewardtext no longer required. Real saved positive .869..1.0, two-role absent .154..418, threshold .8; livepending. Original0.1.4 failure retained.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }
