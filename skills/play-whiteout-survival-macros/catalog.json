@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.72",
+  "package_version": "0.12.73",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -418,8 +418,8 @@
     "travel_idle": {
       "path": "actions/wos-travel-idle.json",
       "action_id": "wos-travel-idle",
-      "action_version": "0.1.9",
-      "sha256": "84ee3cbff9648f240208cd670260efcaa78e9e4d545265457bb5ca462dea32b8",
+      "action_version": "0.1.10",
+      "sha256": "6b05141cec36f941794ba1a59b1d1d714a017f890be4f4b6c894abffe490ceab",
       "period": "shift",
       "utility": false,
       "verification_scope": "First settle old completed job if any, then use only existing1..100 Trek supplies; never purchases. Existing running job is left intact with deviation. Separate claim near visit end settles newly finished job. All new branches pending live replay. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. mature role cost image was OCR as$40 because bag icon included; no supplies spent. Remove redundant numeric gate: known existing-supplies modal and actual running counter remain required; no purchase control used. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Shift2 saved launch frame explicitly shows game started-idle toast; tiny progress fraction OCR reads ONO. Verify launch by explicit game toast plus city anchor rather than unreadable tiny fraction; no repeated start. Next role pending. 0.1.7 launch toast verification passed on next role but final city observation duplicated obsolete tiny fraction assertion. Remove only duplicate fraction from final city check; explicit start toast and all city anchor checks remain. Next role pending, no repeat launch on current role. 0.1.8 secondshift: yellow actual launch toast and full city exit passed. Login may automatically show completed settlement; preparation evidence separate. Shift3 candidate: root uses both large travel signposts instead of tiny decorative title; travel page requires idle/auto controls plus calibrated expert-hat icon instead of unreliable small label. Saved correct travel1.0 versus rootnegative.425; nextrole livepending."
@@ -496,8 +496,8 @@
     "warehouse": {
       "path": "actions/wos-warehouse-supply.json",
       "action_id": "wos-warehouse-supply",
-      "action_version": "0.1.8",
-      "sha256": "f9bbf0415c2bed5a3411be994b5107fa44ab1777b7d81e037176bf1b8e18c4cc",
+      "action_version": "0.1.9",
+      "sha256": "e4469ec316c27a6569b1b990ab97a00f1d57175bb35ec49d7adde90206cdd804",
       "period": "day",
       "utility": false,
       "verification_scope": "Agent samples: guidedentry native490793→crate320440, claimstarts90s cooldown, main2/3→3/3 taskclaimed315points next3/5; Y0/1→1/1 next1/3. Newmacro offlinecandidate; no formalreplay yet. Imageassetonlycratebubble withoutidentity. Waitactualtemplate notharddelay; 30observations/5sec bounded by900s. Activitycompleteonly5/5; rewardtierautoearned separate inheriteddailylogic. 0.1.1 offline: mainbottompartlyvisiblewarehouse row resolved588911 belowinnerclip908; constrain rowOCR/target to840 so55offset remainsinside895, scroll beforeclick. Toprow579500 remainsvalid. Waitcurrent34batchend beforedeployment. Guidedhand occludesreadycrate:4 croppedvariants calibrated on10 savedframes, minimum .8505, two negatives maximum .5117; threshold.84 in tighterguidedarea. Firstmacroclaimed1, secondlookupfailed; no5/5claimyet. 0.1.2: Lowround3 correctbluebutton491680 firstclick no effect; oneexplicitfresh pendingrowretry, cityskipsretry, strictcitypostcondition retained. Prior2actualpackages remainpartialproof, no5/5yet. 0.1.3: repeated前往 withinwarehouse cooldown remainedunchanged despitecorrectpoint+retry. Establishguided warehousecamera once, verifybubble, then dailyclose returns samecamera andwaitsrealcrate eachround; pendingcount stillread everyround,5/5onlycompletion. No changetoactualclaimpoint. Newfullchainlivepending.; 0.1.4 ready alias includes actual larger stable crate, .80 threshold saved positive/negative separation; initial guide alias unchanged. Full 5/5 pending live. 0.1.5 currentunder30 role actuallyclaimed3packages andobservedday5/5 inthirdshift; priorlonglist failures retained. 0.1.6 extends warehouse label bounds400-870, prefers unique fullframe label beforecrop, guidedbuttonoffset45 andshort200ms seeks. Savedbottomrow oldreject/newaccept, targetinsidebluegoto andcitynegativepassed; fullnewbranch livepending. 0.1.7 chains identical seek skips after first found row. Actual saved-frame search-only replay reduces20 observations to1 without input; completion checks and next-input fresh observation retained; repeat round isolation checked. Livepending.",

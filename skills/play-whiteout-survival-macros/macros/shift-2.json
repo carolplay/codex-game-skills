@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.72",
-  "package_version": "0.12.72",
+  "macro_version": "0.12.73",
+  "package_version": "0.12.73",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -110,8 +110,8 @@
         {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.9",
-          "sha256": "84ee3cbff9648f240208cd670260efcaa78e9e4d545265457bb5ca462dea32b8"
+          "action_version": "0.1.10",
+          "sha256": "6b05141cec36f941794ba1a59b1d1d714a017f890be4f4b6c894abffe490ceab"
         },
         {
           "task": "recruit",
@@ -200,8 +200,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.8",
-          "sha256": "f9bbf0415c2bed5a3411be994b5107fa44ab1777b7d81e037176bf1b8e18c4cc"
+          "action_version": "0.1.9",
+          "sha256": "e4469ec316c27a6569b1b990ab97a00f1d57175bb35ec49d7adde90206cdd804"
         },
         {
           "task": "healing",
@@ -370,8 +370,8 @@
         {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.9",
-          "sha256": "84ee3cbff9648f240208cd670260efcaa78e9e4d545265457bb5ca462dea32b8"
+          "action_version": "0.1.10",
+          "sha256": "6b05141cec36f941794ba1a59b1d1d714a017f890be4f4b6c894abffe490ceab"
         },
         {
           "task": "recruit",
@@ -460,8 +460,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.8",
-          "sha256": "f9bbf0415c2bed5a3411be994b5107fa44ab1777b7d81e037176bf1b8e18c4cc"
+          "action_version": "0.1.9",
+          "sha256": "e4469ec316c27a6569b1b990ab97a00f1d57175bb35ec49d7adde90206cdd804"
         },
         {
           "task": "healing",
@@ -684,8 +684,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.8",
-          "sha256": "f9bbf0415c2bed5a3411be994b5107fa44ab1777b7d81e037176bf1b8e18c4cc"
+          "action_version": "0.1.9",
+          "sha256": "e4469ec316c27a6569b1b990ab97a00f1d57175bb35ec49d7adde90206cdd804"
         },
         {
           "task": "healing",
