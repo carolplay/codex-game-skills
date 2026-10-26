@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.70",
-  "package_version": "0.12.70",
+  "macro_version": "0.12.72",
+  "package_version": "0.12.72",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -62,8 +62,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.6",
-          "sha256": "7f820e4bc1b1dfa6111c2d9aece656eaaa212637ec15083feaa8b6a39e806cc2"
+          "action_version": "0.3.7",
+          "sha256": "72744266f391e1282d6abd0b5e4fd1edb4645b197335f3353e002e2131bbb6bd"
         },
         {
           "task": "donate",
@@ -134,8 +134,8 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.9",
-          "sha256": "8eafc1a12e535577e1da2d21db09e31d5fdf7d59d38273aadcbd9e9355a8326a"
+          "action_version": "0.1.10",
+          "sha256": "e1cad80e3b28ca0db530e360f346f00293609851b0eb26168959505a1519978d"
         },
         {
           "task": "gather_wood",
@@ -200,8 +200,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.7",
-          "sha256": "c8e69770c3af7f9670b1262c6a56ecc31d5743fb44c84f0d9bb0a6fd82c11b36"
+          "action_version": "0.1.8",
+          "sha256": "f9bbf0415c2bed5a3411be994b5107fa44ab1777b7d81e037176bf1b8e18c4cc"
         },
         {
           "task": "healing",
@@ -248,8 +248,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.20",
-          "sha256": "ba9e1dbbb77563cadf2054b71012de209b88156d6c2a07828dde70ac457ec58f"
+          "action_version": "0.1.21",
+          "sha256": "eb1eea947986c3d6d0af0ab8482c00381be2bf143df51cdbd066de03f5ebbc1a"
         },
         {
           "task": "daily",
@@ -322,8 +322,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.6",
-          "sha256": "7f820e4bc1b1dfa6111c2d9aece656eaaa212637ec15083feaa8b6a39e806cc2"
+          "action_version": "0.3.7",
+          "sha256": "72744266f391e1282d6abd0b5e4fd1edb4645b197335f3353e002e2131bbb6bd"
         },
         {
           "task": "donate",
@@ -394,8 +394,8 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.9",
-          "sha256": "8eafc1a12e535577e1da2d21db09e31d5fdf7d59d38273aadcbd9e9355a8326a"
+          "action_version": "0.1.10",
+          "sha256": "e1cad80e3b28ca0db530e360f346f00293609851b0eb26168959505a1519978d"
         },
         {
           "task": "gather_wood",
@@ -460,8 +460,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.7",
-          "sha256": "c8e69770c3af7f9670b1262c6a56ecc31d5743fb44c84f0d9bb0a6fd82c11b36"
+          "action_version": "0.1.8",
+          "sha256": "f9bbf0415c2bed5a3411be994b5107fa44ab1777b7d81e037176bf1b8e18c4cc"
         },
         {
           "task": "healing",
@@ -508,8 +508,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.20",
-          "sha256": "ba9e1dbbb77563cadf2054b71012de209b88156d6c2a07828dde70ac457ec58f"
+          "action_version": "0.1.21",
+          "sha256": "eb1eea947986c3d6d0af0ab8482c00381be2bf143df51cdbd066de03f5ebbc1a"
         },
         {
           "task": "daily",
@@ -576,8 +576,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.6",
-          "sha256": "7f820e4bc1b1dfa6111c2d9aece656eaaa212637ec15083feaa8b6a39e806cc2"
+          "action_version": "0.3.7",
+          "sha256": "72744266f391e1282d6abd0b5e4fd1edb4645b197335f3353e002e2131bbb6bd"
         },
         {
           "task": "donate",
@@ -624,8 +624,8 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.9",
-          "sha256": "8eafc1a12e535577e1da2d21db09e31d5fdf7d59d38273aadcbd9e9355a8326a"
+          "action_version": "0.1.10",
+          "sha256": "e1cad80e3b28ca0db530e360f346f00293609851b0eb26168959505a1519978d"
         },
         {
           "task": "gather_wood",
@@ -684,8 +684,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.7",
-          "sha256": "c8e69770c3af7f9670b1262c6a56ecc31d5743fb44c84f0d9bb0a6fd82c11b36"
+          "action_version": "0.1.8",
+          "sha256": "f9bbf0415c2bed5a3411be994b5107fa44ab1777b7d81e037176bf1b8e18c4cc"
         },
         {
           "task": "healing",
@@ -708,8 +708,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.20",
-          "sha256": "ba9e1dbbb77563cadf2054b71012de209b88156d6c2a07828dde70ac457ec58f"
+          "action_version": "0.1.21",
+          "sha256": "eb1eea947986c3d6d0af0ab8482c00381be2bf143df51cdbd066de03f5ebbc1a"
         },
         {
           "task": "daily",

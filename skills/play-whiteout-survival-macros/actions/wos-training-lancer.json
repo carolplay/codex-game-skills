@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-lancer",
-  "action_version": "0.3.6",
+  "action_version": "0.3.7",
   "name": "WOS — 矛兵 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -273,7 +273,7 @@
               500,
               520
             ],
-            "pattern": ".*矛兵营.*",
+            "pattern": ".*[矛予]兵营.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -331,7 +331,7 @@
               500,
               520
             ],
-            "pattern": ".*矛兵营.*",
+            "pattern": ".*[矛予]兵营.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -389,7 +389,7 @@
               500,
               520
             ],
-            "pattern": ".*矛兵营.*",
+            "pattern": ".*[矛予]兵营.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -447,7 +447,7 @@
               500,
               520
             ],
-            "pattern": ".*矛兵营.*",
+            "pattern": ".*[矛予]兵营.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -484,7 +484,7 @@
               500,
               520
             ],
-            "pattern": ".*矛兵营.*",
+            "pattern": ".*[矛予]兵营.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -530,7 +530,7 @@
               500,
               520
             ],
-            "pattern": ".*矛兵营.*",
+            "pattern": ".*[矛予]兵营.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -604,7 +604,7 @@
               500,
               520
             ],
-            "pattern": ".*矛兵营.*",
+            "pattern": ".*[矛予]兵营.*",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -1269,7 +1269,7 @@
       }
     ]
   },
-  "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.",
+  "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.;0.3.7: Lowemptycamp radial title cropactuallyreads予兵营 withconfidence.5; acceptknownfontvariant矛/予 onlybefore兵营. Existingidle/train,active/timer,explicitcamp andcityexit checks unchanged. Savedfailedframecandidatepositive andshieldnegativeverified; livepending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
   "business_dependencies": [
     "Always select and verify expected camp footer before ordinary training input",

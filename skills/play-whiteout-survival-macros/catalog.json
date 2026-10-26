@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.70",
+  "package_version": "0.12.72",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -121,8 +121,8 @@
     "lancer": {
       "path": "actions/wos-training-lancer.json",
       "action_id": "wos-training-lancer",
-      "action_version": "0.3.6",
-      "sha256": "7f820e4bc1b1dfa6111c2d9aece656eaaa212637ec15083feaa8b6a39e806cc2",
+      "action_version": "0.3.7",
+      "sha256": "72744266f391e1282d6abd0b5e4fd1edb4645b197335f3353e002e2131bbb6bd",
       "period": "day",
       "utility": false,
       "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.",
@@ -224,8 +224,8 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.20",
-      "sha256": "ba9e1dbbb77563cadf2054b71012de209b88156d6c2a07828dde70ac457ec58f",
+      "action_version": "0.1.21",
+      "sha256": "eb1eea947986c3d6d0af0ab8482c00381be2bf143df51cdbd066de03f5ebbc1a",
       "period": "day",
       "utility": false,
       "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.18 adds bounded back-to-city exit from observed selected-weekcard store root (both fire-crystal titles and purchase-immediate label, excludes rewards). Entry normalization/free claim on this selected tab remains unresolved. Saved root positive/city negative checked; automatic exit live pending. 0.1.19 normalizes known weekcard root via Daily Deal tab before existing free chest checks; scoped Daily Deal body prevents top-tab false acceptance. Known weekcard exit retained; tab normalization live pending. 0.1.20 sets explicit240s action and120s shared bounded exit budgets after Low0.1.19 default120s exhausted during observed knownstore checks. No new clicks or price logic; originalfailure kept. Store moved tofinal development slot beforedaily. Livepending."
@@ -297,8 +297,8 @@
     "gather_meat": {
       "path": "actions/wos-gather-meat.json",
       "action_id": "wos-gather-meat",
-      "action_version": "0.1.9",
-      "sha256": "8eafc1a12e535577e1da2d21db09e31d5fdf7d59d38273aadcbd9e9355a8326a",
+      "action_version": "0.1.10",
+      "sha256": "e1cad80e3b28ca0db530e360f346f00293609851b0eb26168959505a1519978d",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending."
@@ -496,8 +496,8 @@
     "warehouse": {
       "path": "actions/wos-warehouse-supply.json",
       "action_id": "wos-warehouse-supply",
-      "action_version": "0.1.7",
-      "sha256": "c8e69770c3af7f9670b1262c6a56ecc31d5743fb44c84f0d9bb0a6fd82c11b36",
+      "action_version": "0.1.8",
+      "sha256": "f9bbf0415c2bed5a3411be994b5107fa44ab1777b7d81e037176bf1b8e18c4cc",
       "period": "day",
       "utility": false,
       "verification_scope": "Agent samples: guidedentry native490793→crate320440, claimstarts90s cooldown, main2/3→3/3 taskclaimed315points next3/5; Y0/1→1/1 next1/3. Newmacro offlinecandidate; no formalreplay yet. Imageassetonlycratebubble withoutidentity. Waitactualtemplate notharddelay; 30observations/5sec bounded by900s. Activitycompleteonly5/5; rewardtierautoearned separate inheriteddailylogic. 0.1.1 offline: mainbottompartlyvisiblewarehouse row resolved588911 belowinnerclip908; constrain rowOCR/target to840 so55offset remainsinside895, scroll beforeclick. Toprow579500 remainsvalid. Waitcurrent34batchend beforedeployment. Guidedhand occludesreadycrate:4 croppedvariants calibrated on10 savedframes, minimum .8505, two negatives maximum .5117; threshold.84 in tighterguidedarea. Firstmacroclaimed1, secondlookupfailed; no5/5claimyet. 0.1.2: Lowround3 correctbluebutton491680 firstclick no effect; oneexplicitfresh pendingrowretry, cityskipsretry, strictcitypostcondition retained. Prior2actualpackages remainpartialproof, no5/5yet. 0.1.3: repeated前往 withinwarehouse cooldown remainedunchanged despitecorrectpoint+retry. Establishguided warehousecamera once, verifybubble, then dailyclose returns samecamera andwaitsrealcrate eachround; pendingcount stillread everyround,5/5onlycompletion. No changetoactualclaimpoint. Newfullchainlivepending.; 0.1.4 ready alias includes actual larger stable crate, .80 threshold saved positive/negative separation; initial guide alias unchanged. Full 5/5 pending live. 0.1.5 currentunder30 role actuallyclaimed3packages andobservedday5/5 inthirdshift; priorlonglist failures retained. 0.1.6 extends warehouse label bounds400-870, prefers unique fullframe label beforecrop, guidedbuttonoffset45 andshort200ms seeks. Savedbottomrow oldreject/newaccept, targetinsidebluegoto andcitynegativepassed; fullnewbranch livepending. 0.1.7 chains identical seek skips after first found row. Actual saved-frame search-only replay reduces20 observations to1 without input; completion checks and next-input fresh observation retained; repeat round isolation checked. Livepending.",
