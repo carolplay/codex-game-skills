@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.73",
+  "package_version": "0.12.74",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -109,8 +109,8 @@
     "shield": {
       "path": "actions/wos-training-shield.json",
       "action_id": "wos-training-shield",
-      "action_version": "0.3.7",
-      "sha256": "8d570077ac23e32d149f9f54b73736baf48701da114194a735804750d474e4b5",
+      "action_version": "0.3.8",
+      "sha256": "9cd0540f5ab6dc7c79b3f0cbec442566455bb9897558008ff3e43e20e8231997",
       "period": "day",
       "utility": false,
       "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained. 0.3.7 fullframe uniqueinbounds trooplabel preferred before sameframe crop, with unchanged0.5confidence/scope/offset andcropfallback. SavedMainframe oldcropmissing whilefullframecorrect; oldreject/newpoint432487 andcityfullframe negativechecked; livebranchpending. 0.3.7 full workflow passed one mature-role third batch using full-frame-preferred432487; not native input validation.",
@@ -121,8 +121,8 @@
     "lancer": {
       "path": "actions/wos-training-lancer.json",
       "action_id": "wos-training-lancer",
-      "action_version": "0.3.7",
-      "sha256": "72744266f391e1282d6abd0b5e4fd1edb4645b197335f3353e002e2131bbb6bd",
+      "action_version": "0.3.8",
+      "sha256": "b6818fb91f9d927df95e132e4597a5d3d3e13dbea9cb66209ef4ea49efd043e8",
       "period": "day",
       "utility": false,
       "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.",
@@ -133,8 +133,8 @@
     "marksman": {
       "path": "actions/wos-training-marksman.json",
       "action_id": "wos-training-marksman",
-      "action_version": "0.3.6",
-      "sha256": "73b0d615968c531f6c8566c11126ae9926a0043f674c58270bff46f16c6650cf",
+      "action_version": "0.3.7",
+      "sha256": "a7c2236a72620fcf4616705ae9fad4eae26d35ca4264fd309bb447bd97722819",
       "period": "day",
       "utility": false,
       "verification_scope": "Existing positive-queue exit passed on a mature role in0.3.3. Overview-tab candidate passes original low-level missing日常 frame and rejects city; other camp/tier branches bounded by actual local reports.0.3.4 businesssteps unchanged and metadata sanitized.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.",
