@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.75",
-  "package_version": "0.12.75",
+  "macro_version": "0.12.76",
+  "package_version": "0.12.76",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -170,8 +170,8 @@
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.8",
-          "sha256": "14309c96ea6468ec40c986a6048d3d8bd294929295b24359fb5c9530a4a16e4c"
+          "action_version": "0.1.9",
+          "sha256": "1c467d3b345761da95c99bd04e7f7a6ba506119c0dfa5c221068e7872988fc78"
         },
         {
           "task": "pet_alliance_treasure",
@@ -206,8 +206,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.10",
-          "sha256": "c288c74681455654f412001db498eaa9420a083d9b4adc47c49e4221fbe1d2ca"
+          "action_version": "0.1.11",
+          "sha256": "ca0e08adbcff7d23c47bd523a85db0c442a22840622b3fdec2eb5b193c52615e"
         },
         {
           "task": "healing",
@@ -435,8 +435,8 @@
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.8",
-          "sha256": "14309c96ea6468ec40c986a6048d3d8bd294929295b24359fb5c9530a4a16e4c"
+          "action_version": "0.1.9",
+          "sha256": "1c467d3b345761da95c99bd04e7f7a6ba506119c0dfa5c221068e7872988fc78"
         },
         {
           "task": "pet_alliance_treasure",
@@ -471,8 +471,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.10",
-          "sha256": "c288c74681455654f412001db498eaa9420a083d9b4adc47c49e4221fbe1d2ca"
+          "action_version": "0.1.11",
+          "sha256": "ca0e08adbcff7d23c47bd523a85db0c442a22840622b3fdec2eb5b193c52615e"
         },
         {
           "task": "healing",
@@ -670,8 +670,8 @@
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.8",
-          "sha256": "14309c96ea6468ec40c986a6048d3d8bd294929295b24359fb5c9530a4a16e4c"
+          "action_version": "0.1.9",
+          "sha256": "1c467d3b345761da95c99bd04e7f7a6ba506119c0dfa5c221068e7872988fc78"
         },
         {
           "task": "pet_alliance_treasure",
@@ -700,8 +700,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.10",
-          "sha256": "c288c74681455654f412001db498eaa9420a083d9b4adc47c49e4221fbe1d2ca"
+          "action_version": "0.1.11",
+          "sha256": "ca0e08adbcff7d23c47bd523a85db0c442a22840622b3fdec2eb5b193c52615e"
         },
         {
           "task": "healing",

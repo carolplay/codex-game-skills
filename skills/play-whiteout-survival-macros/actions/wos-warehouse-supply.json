@@ -1,6 +1,6 @@
 {
   "action_id": "wos-warehouse-supply",
-  "action_version": "0.1.10",
+  "action_version": "0.1.11",
   "name": "WOS warehouse daily package chain",
   "reference_size": [
     788,
@@ -2080,6 +2080,1606 @@
       "skip_if_step_skipped": "initial-warehouse-seek-18"
     },
     {
+      "name": "initial-warehouse-reverse-seek-0",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-seek-19"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-1",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-0"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-2",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-1"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-3",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-2"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-4",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-3"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-5",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-4"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-6",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-5"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-7",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-6"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-8",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-7"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-9",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-8"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-10",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-9"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-11",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-10"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-12",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-11"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-13",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-12"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-14",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-13"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-15",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-14"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-16",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-15"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-17",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-16"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-18",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-17"
+    },
+    {
+      "name": "initial-warehouse-reverse-seek-19",
+      "action": "key",
+      "key": "Down",
+      "duration_ms": 1000,
+      "key_count": 1,
+      "before": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*补给.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "每日任务",
+          "成长任务"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              130,
+              400,
+              680,
+              870
+            ],
+            "pattern": ".*仓库.*5次补给.*5/5.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "initial-warehouse-reverse-seek-18"
+    },
+    {
       "name": "initial-warehouse-open-guided-entry",
       "action": "click",
       "before": {
@@ -3261,7 +4861,7 @@
       }
     ]
   },
-  "verification_scope": "Candidate: retain identity and initial daily guided camera; once bubble located, claim five actual ready packages using existing image target and cooldown evidence, without repeated daily-sidebar search between claims. Each wait30x5sec, wholeaction900sec. Saved original a mature profile at0.1.9 reachedcamera then failed repeatedsidebarsearch beforeanycrateclaim. Candidate schema and existingtemplatefixtures only; no live replay yet.",
+  "verification_scope": "Candidate: retain identity and initial daily guided camera; once bubble located, claim five actual ready packages using existing image target and cooldown evidence, without repeated daily-sidebar search between claims. Each wait30x5sec, wholeaction900sec. Saved original a mature profile at0.1.9 reachedcamera then failed repeatedsidebarsearch beforeanycrateclaim. Candidate schema and existingtemplatefixtures only; no live replay yet.; Undeployed candidate adds bounded reverse search after forward list exhausted, preserving found-chain skips; intended for entry overshoot states. No live replay.",
   "business_dependencies": [
     "Cityentry/exit andfreshroleidentity; no research/construction",
     "Dailyearnedclaim precedes readingwarehouse nexttier 1→3→5",

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-pet-treasure-dispatch",
-  "action_version": "0.1.8",
+  "action_version": "0.1.9",
   "name": "WOS pet_treasure_dispatch",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 300,
   "status": "candidate",
-  "verification_scope": "Original mature role stopped because开始 was read开姶 beforetreasurestart; exit also depended on samebuttontext. Agent separately startedone4hsearch andreturnedcity.0.1.7 keeps title/list andexact10stamina checks, localizes observed始/姶glyph for businessbutton; selectionexit usesunambiguous title+petlist withoutbuttonliteral. Savedselection positive anddetailnegative offline checks; new fullreplaypending.; 0.1.8 detail predicates use personal/alliance treasure + dispatch/running states, independent of OCR-confused rare title 藏→蒹. Actual second dispatch pending.",
+  "verification_scope": "Original mature role stopped because开始 was read开姶 beforetreasurestart; exit also depended on samebuttontext. Agent separately startedone4hsearch andreturnedcity.0.1.7 keeps title/list andexact10stamina checks, localizes observed始/姶glyph for businessbutton; selectionexit usesunambiguous title+petlist withoutbuttonliteral. Savedselection positive anddetailnegative offline checks; new fullreplaypending.; 0.1.8 detail predicates use personal/alliance treasure + dispatch/running states, independent of OCR-confused rare title 藏→蒹. Actual second dispatch pending.; Candidate0.1.9: one clean-ready alias covers gold, blue and purple chests in all three dispatch iterations. Earlier grayscale gold template selected blue while purple was absent, leaving visible ready chests despite flow pass. Saved two-role positives0.957-1, busy negatives0.839/0.852 and completed negatives0.607/0.738, threshold0.91. New live dispatch and timer/counter proof pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -1497,7 +1497,7 @@
       "name": "open-spot-0",
       "action": "click",
       "image_target": {
-        "template": "treasure-gold",
+        "template": "treasure-ready",
         "bounds": [
           100,
           175,
@@ -1505,7 +1505,7 @@
           960
         ],
         "mode": "grayscale",
-        "min_score": 0.88
+        "min_score": 0.91
       },
       "before": {
         "all": [
@@ -1520,7 +1520,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-gold",
+            "template": "treasure-ready",
             "bounds": [
               100,
               175,
@@ -1528,7 +1528,7 @@
               960
             ],
             "mode": "grayscale",
-            "min_score": 0.88
+            "min_score": 0.91
           }
         ]
       },
@@ -1556,7 +1556,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-gold",
+            "template": "treasure-ready",
             "bounds": [
               100,
               175,
@@ -1564,7 +1564,7 @@
               960
             ],
             "mode": "grayscale",
-            "min_score": 0.88,
+            "min_score": 0.91,
             "present": false
           }
         ]
@@ -1817,7 +1817,7 @@
       "name": "open-spot-1",
       "action": "click",
       "image_target": {
-        "template": "treasure-blue",
+        "template": "treasure-ready",
         "bounds": [
           100,
           175,
@@ -1825,7 +1825,7 @@
           960
         ],
         "mode": "grayscale",
-        "min_score": 0.88
+        "min_score": 0.91
       },
       "before": {
         "all": [
@@ -1840,7 +1840,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-blue",
+            "template": "treasure-ready",
             "bounds": [
               100,
               175,
@@ -1848,7 +1848,7 @@
               960
             ],
             "mode": "grayscale",
-            "min_score": 0.88
+            "min_score": 0.91
           }
         ]
       },
@@ -1876,7 +1876,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-blue",
+            "template": "treasure-ready",
             "bounds": [
               100,
               175,
@@ -1884,7 +1884,7 @@
               960
             ],
             "mode": "grayscale",
-            "min_score": 0.88,
+            "min_score": 0.91,
             "present": false
           }
         ]
@@ -2137,7 +2137,7 @@
       "name": "open-spot-2",
       "action": "click",
       "image_target": {
-        "template": "treasure-blue",
+        "template": "treasure-ready",
         "bounds": [
           100,
           175,
@@ -2145,7 +2145,7 @@
           960
         ],
         "mode": "grayscale",
-        "min_score": 0.88
+        "min_score": 0.91
       },
       "before": {
         "all": [
@@ -2160,7 +2160,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-blue",
+            "template": "treasure-ready",
             "bounds": [
               100,
               175,
@@ -2168,7 +2168,7 @@
               960
             ],
             "mode": "grayscale",
-            "min_score": 0.88
+            "min_score": 0.91
           }
         ]
       },
@@ -2196,7 +2196,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-blue",
+            "template": "treasure-ready",
             "bounds": [
               100,
               175,
@@ -2204,7 +2204,7 @@
               960
             ],
             "mode": "grayscale",
-            "min_score": 0.88,
+            "min_score": 0.91,
             "present": false
           }
         ]
