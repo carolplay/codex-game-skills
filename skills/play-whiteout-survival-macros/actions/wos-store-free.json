@@ -1,13 +1,13 @@
 {
   "action_id": "wos-store-free",
-  "action_version": "0.1.21",
+  "action_version": "0.1.22",
   "name": "WOS store_free",
   "reference_size": [
     788,
     1079
   ],
   "status": "candidate",
-  "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.17 adds actual dailydeal free-box branch at left: explicit free label, reward, samebox cooldown, city. Standard store branch unchanged. Mainagent100diamonds actualclaimed, oldmacrofailure retained. Savedfree/cooldown/city cases validated; newmacro claim pending, cooldown livepending.;0.1.21: actualmainshoptitle奇货自选 usesexistingtopright可领取chest; addexacttitletoexistingknownshopconditions/exit andtitlepattern, no newcoordinates orcashinteraction. Savedframeclaimpreconditionpassed; livepending.",
+  "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.17 adds actual dailydeal free-box branch at left: explicit free label, reward, samebox cooldown, city. Standard store branch unchanged. Mainagent100diamonds actualclaimed, oldmacrofailure retained. Savedfree/cooldown/city cases validated; newmacro claim pending, cooldown livepending.;0.1.21: actualmainshoptitle奇货自选 usesexistingtopright可领取chest; addexacttitletoexistingknownshopconditions/exit andtitlepattern, no newcoordinates orcashinteraction. Savedframeclaimpreconditionpassed; livepending.; 0.1.22 adds separate Frost Supply Station left freechest branch, observed500diamonds and6daycooldown byagent. Saved positive claim/cooldown frame conditions and schema pass; new macro replay pending. Legacy store branches retained. This event/weekly cooldown is not claimed to be a daily freebox.",
   "steps": [
     {
       "name": "01-check-city",
@@ -139,7 +139,8 @@
           "每日特惠",
           "火晶微粒周卡",
           "火晶周卡",
-          "奇货自选"
+          "奇货自选",
+          "寒霜补给站"
         ],
         "none": [
           "获得奖励",
@@ -164,6 +165,372 @@
         ]
       },
       "observe_attempts": 8
+    },
+    {
+      "name": "frost-free-chest",
+      "action": "click",
+      "point": [
+        182,
+        335
+      ],
+      "before": {
+        "all": [
+          "寒霜补给站"
+        ],
+        "none": [
+          "领取成功",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              120,
+              330,
+              255,
+              395
+            ],
+            "pattern": "可领取",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": [
+        "领取成功",
+        "点击任意位置退出"
+      ],
+      "skip_if_any": [
+        {
+          "any": [
+            "储值中心",
+            "领主体力礼包",
+            "战地医生礼包",
+            "萌宠定制礼包",
+            "工匠的宝库",
+            "曙光市集",
+            "匠心自选",
+            "曙光智慧",
+            "武备自选",
+            "每日特惠",
+            "火晶微粒周卡",
+            "火晶周卡",
+            "奇货自选"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击空白",
+            "点击任意",
+            "点击屏幕",
+            "寒霜补给站"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              30,
+              330,
+              100
+            ],
+            [
+              120,
+              190,
+              460,
+              285
+            ]
+          ]
+        },
+        {
+          "all": [
+            "寒霜补给站"
+          ],
+          "none": [
+            "领取成功",
+            "点击任意位置退出"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                120,
+                330,
+                255,
+                395
+              ],
+              "pattern": ".*\\d{1,2}:\\d{2}:\\d{2}.*",
+              "crop_ocr": true,
+              "prefer_frame_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        }
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "frost-close-reward",
+      "action": "click",
+      "point": [
+        393,
+        997
+      ],
+      "before": [
+        "领取成功",
+        "点击任意位置退出"
+      ],
+      "after": {
+        "all": [
+          "寒霜补给站"
+        ],
+        "none": [
+          "领取成功",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              120,
+              330,
+              255,
+              395
+            ],
+            "pattern": ".*\\d{1,2}:\\d{2}:\\d{2}.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "frost-free-chest",
+      "observe_attempts": 5
+    },
+    {
+      "name": "frost-verify-cooldown",
+      "action": "observe",
+      "before": {
+        "all": [
+          "寒霜补给站"
+        ],
+        "none": [
+          "领取成功",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              120,
+              330,
+              255,
+              395
+            ],
+            "pattern": ".*\\d{1,2}:\\d{2}:\\d{2}.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if": {
+        "any": [
+          "储值中心",
+          "领主体力礼包",
+          "战地医生礼包",
+          "萌宠定制礼包",
+          "工匠的宝库",
+          "曙光市集",
+          "匠心自选",
+          "曙光智慧",
+          "武备自选",
+          "每日特惠",
+          "火晶微粒周卡",
+          "火晶周卡",
+          "奇货自选"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕",
+          "寒霜补给站"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            30,
+            330,
+            100
+          ],
+          [
+            120,
+            190,
+            460,
+            285
+          ]
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "frost-exit-store",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "寒霜补给站"
+        ],
+        "none": [
+          "领取成功",
+          "点击任意位置退出"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              120,
+              330,
+              255,
+              395
+            ],
+            "pattern": ".*\\d{1,2}:\\d{2}:\\d{2}.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "any": [
+          "储值中心",
+          "领主体力礼包",
+          "战地医生礼包",
+          "萌宠定制礼包",
+          "工匠的宝库",
+          "曙光市集",
+          "匠心自选",
+          "曙光智慧",
+          "武备自选",
+          "每日特惠",
+          "火晶微粒周卡",
+          "火晶周卡",
+          "奇货自选"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕",
+          "寒霜补给站"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            30,
+            330,
+            100
+          ],
+          [
+            120,
+            190,
+            460,
+            285
+          ]
+        ]
+      },
+      "observe_attempts": 4
+    },
+    {
+      "name": "frost-finished-or-legacy-store",
+      "action": "observe",
+      "before": {
+        "any": [
+          "储值中心",
+          "领主体力礼包",
+          "战地医生礼包",
+          "萌宠定制礼包",
+          "工匠的宝库",
+          "曙光市集",
+          "匠心自选",
+          "曙光智慧",
+          "武备自选",
+          "每日特惠",
+          "火晶微粒周卡",
+          "火晶周卡",
+          "奇货自选"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击空白",
+          "点击任意",
+          "点击屏幕",
+          "寒霜补给站"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            30,
+            330,
+            100
+          ],
+          [
+            120,
+            190,
+            460,
+            285
+          ]
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
     },
     {
       "name": "normalize-weekcard-dailydeal-tab",
@@ -1664,7 +2031,8 @@
             "匠心自选",
             "曙光智慧",
             "武备自选",
-            "奇货自选"
+            "奇货自选",
+            "寒霜补给站"
           ],
           "none": [
             "获得奖励",
@@ -1695,7 +2063,7 @@
                 400,
                 245
               ],
-              "pattern": ".*(?:工匠的宝库|奇货自选|曙光市集|匠心自选|曙光智慧|武备自选).*",
+              "pattern": ".*(?:工匠的宝库|奇货自选|寒霜补给站|曙光市集|匠心自选|曙光智慧|武备自选).*",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -1723,7 +2091,8 @@
             "科技风暴礼包",
             "武备自选",
             "冰原旅者",
-            "奇货自选"
+            "奇货自选",
+            "寒霜补给站"
           ],
           "none": [
             "获得奖励",

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-coal",
-  "action_version": "0.1.16",
+  "action_version": "0.1.17",
   "name": "WOS gather_coal",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.",
+  "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -191,7 +191,8 @@
             ],
             "pattern": "([1-6])/\\1",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
