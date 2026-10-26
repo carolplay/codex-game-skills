@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.76",
-  "package_version": "0.12.76",
+  "macro_version": "0.12.77",
+  "package_version": "0.12.77",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -212,8 +212,8 @@
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.5",
-          "sha256": "641d4898058f131ffb8ed462c512b45fbc778f5c2de92c9b1446afd031fc9d1d"
+          "action_version": "0.1.6",
+          "sha256": "92b1390de0684d7641f77547d58d282eb4d23680859f58dee107cb360f45cc05"
         },
         {
           "task": "academy",
@@ -477,8 +477,8 @@
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.5",
-          "sha256": "641d4898058f131ffb8ed462c512b45fbc778f5c2de92c9b1446afd031fc9d1d"
+          "action_version": "0.1.6",
+          "sha256": "92b1390de0684d7641f77547d58d282eb4d23680859f58dee107cb360f45cc05"
         },
         {
           "task": "academy",
@@ -706,8 +706,8 @@
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.5",
-          "sha256": "641d4898058f131ffb8ed462c512b45fbc778f5c2de92c9b1446afd031fc9d1d"
+          "action_version": "0.1.6",
+          "sha256": "92b1390de0684d7641f77547d58d282eb4d23680859f58dee107cb360f45cc05"
         },
         {
           "task": "island",

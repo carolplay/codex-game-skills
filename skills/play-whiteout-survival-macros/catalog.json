@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.76",
+  "package_version": "0.12.77",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -333,11 +333,11 @@
     "healing": {
       "path": "actions/wos-healing.json",
       "action_id": "wos-healing",
-      "action_version": "0.1.5",
-      "sha256": "641d4898058f131ffb8ed462c512b45fbc778f5c2de92c9b1446afd031fc9d1d",
+      "action_version": "0.1.6",
+      "sha256": "92b1390de0684d7641f77547d58d282eb4d23680859f58dee107cb360f45cc05",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.3: existing treatment queue page had same title as empty selection; quickselect clicked cancel treatment. Add existingqueue predicate to both business clicks and bounded cancel-confirm dismissal. Agent recovery and savedframe checks separate from pending macro replay. 0.1.4 hospital radial-menu anchor uses visible details/treatment-or-accelerate/upgrade labels; does not click upgrade. Full hospital title was occluded in saved Main frame. Treatment-page and queue checks unchanged; live pending. 0.1.5 does not require Upgrade menu item during hospital timer; details+treatment/speed context retained. Explicit hospital radial-menu exit and anchor exclusion prevent accepting visible detail menu as bare city. SavedMain/Y menu positives and city negative; new exit point pending live."
+      "verification_scope": "0.1.3: existing treatment queue page had same title as empty selection; quickselect clicked cancel treatment. Add existingqueue predicate to both business clicks and bounded cancel-confirm dismissal. Agent recovery and savedframe checks separate from pending macro replay.; Candidate0.1.6 adjusts only overview research-row arrow offset from270,50 to244,44; actual failure resolved457,707 missed arrowcenter431,701. Hospital radialmenu point remains unchanged pending separate evidence. Saved frame resolves431,701; livepending."
     },
     "enlistment": {
       "path": "actions/wos-enlistment.json",
