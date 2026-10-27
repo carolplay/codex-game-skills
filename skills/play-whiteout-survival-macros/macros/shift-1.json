@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.77",
-  "package_version": "0.12.77",
+  "macro_version": "0.12.78",
+  "package_version": "0.12.78",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -242,8 +242,8 @@
         {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
-          "action_version": "0.1.7",
-          "sha256": "c229352a2cb24139a5f397193675f6833fb809a9de85b3955956df4d4c00c270"
+          "action_version": "0.1.8",
+          "sha256": "2bca738ed94d213ac305d7e191083c37bc4ffaf02084ed02af167ba0765f61dc"
         },
         {
           "task": "refined",
@@ -507,8 +507,8 @@
         {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
-          "action_version": "0.1.7",
-          "sha256": "c229352a2cb24139a5f397193675f6833fb809a9de85b3955956df4d4c00c270"
+          "action_version": "0.1.8",
+          "sha256": "2bca738ed94d213ac305d7e191083c37bc4ffaf02084ed02af167ba0765f61dc"
         },
         {
           "task": "refined",
@@ -718,8 +718,8 @@
         {
           "task": "alliance_incentive",
           "action_id": "wos-alliance-incentive",
-          "action_version": "0.1.7",
-          "sha256": "c229352a2cb24139a5f397193675f6833fb809a9de85b3955956df4d4c00c270"
+          "action_version": "0.1.8",
+          "sha256": "2bca738ed94d213ac305d7e191083c37bc4ffaf02084ed02af167ba0765f61dc"
         },
         {
           "task": "store_free",
