@@ -1,6 +1,6 @@
 {
   "action_id": "wos-pet-treasure-dispatch",
-  "action_version": "0.1.9",
+  "action_version": "0.1.10",
   "name": "WOS pet_treasure_dispatch",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 300,
   "status": "candidate",
-  "verification_scope": "Original mature role stopped because开始 was read开姶 beforetreasurestart; exit also depended on samebuttontext. Agent separately startedone4hsearch andreturnedcity.0.1.7 keeps title/list andexact10stamina checks, localizes observed始/姶glyph for businessbutton; selectionexit usesunambiguous title+petlist withoutbuttonliteral. Savedselection positive anddetailnegative offline checks; new fullreplaypending.; 0.1.8 detail predicates use personal/alliance treasure + dispatch/running states, independent of OCR-confused rare title 藏→蒹. Actual second dispatch pending.; Candidate0.1.9: one clean-ready alias covers gold, blue and purple chests in all three dispatch iterations. Earlier grayscale gold template selected blue while purple was absent, leaving visible ready chests despite flow pass. Saved two-role positives0.957-1, busy negatives0.839/0.852 and completed negatives0.607/0.738, threshold0.91. New live dispatch and timer/counter proof pending.",
+  "verification_scope": "0.1.10 adds a fourth ready-purple pulse template at unchanged0.91 threshold. Prior0.1.9 passed while actual3/4 and visible ready chest scored0.893. New alias treasure-ready-v2 includes existing gold/blue/purple plus purple-pulse. Saved positive1.0,busy0.857,city0.465; live finaldispatch pending. Keep actual remaining-count and detail/pet/stamina/timer checks.",
   "steps": [
     {
       "name": "01-check-city",
@@ -1497,7 +1497,7 @@
       "name": "open-spot-0",
       "action": "click",
       "image_target": {
-        "template": "treasure-ready",
+        "template": "treasure-ready-v2",
         "bounds": [
           100,
           175,
@@ -1520,7 +1520,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready",
+            "template": "treasure-ready-v2",
             "bounds": [
               100,
               175,
@@ -1556,7 +1556,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready",
+            "template": "treasure-ready-v2",
             "bounds": [
               100,
               175,
@@ -1817,7 +1817,7 @@
       "name": "open-spot-1",
       "action": "click",
       "image_target": {
-        "template": "treasure-ready",
+        "template": "treasure-ready-v2",
         "bounds": [
           100,
           175,
@@ -1840,7 +1840,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready",
+            "template": "treasure-ready-v2",
             "bounds": [
               100,
               175,
@@ -1876,7 +1876,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready",
+            "template": "treasure-ready-v2",
             "bounds": [
               100,
               175,
@@ -2137,7 +2137,7 @@
       "name": "open-spot-2",
       "action": "click",
       "image_target": {
-        "template": "treasure-ready",
+        "template": "treasure-ready-v2",
         "bounds": [
           100,
           175,
@@ -2160,7 +2160,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready",
+            "template": "treasure-ready-v2",
             "bounds": [
               100,
               175,
@@ -2196,7 +2196,7 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready",
+            "template": "treasure-ready-v2",
             "bounds": [
               100,
               175,
