@@ -83,5 +83,14 @@ class ReportListTests(unittest.TestCase):
         for target in ['猎熊陷阱', 'Other', '未知野兽']:
             self.assertEqual([], self.extract(['Example集结攻击'+target+'获胜', '2026-10-2721:35:50']))
 
+    def test_verified_guild_tag_tolerates_closing_bracket_ocr(self):
+        data={'lines':[{'text':'［ABCJExample集结攻击4级剑齿虎获胜'}, {'text':'2026-10-2721:35:50'}]}
+        events=m.events_from_report_list(data,own_name='Example',own_tag='ABC',role='role',local_timezone='America/Vancouver',evidence='saved-ocr.json')
+        self.assertEqual(1,len(events))
+
+    def test_tag_tolerance_cannot_swallow_another_players_name(self):
+        for row in ['[ABC]AnotherExample集结攻击4级剑齿虎获胜','[XYZJExample集结攻击4级剑齿虎获胜']:
+            data={'lines':[{'text':row},{'text':'2026-10-2721:35:50'}]}
+            self.assertEqual([],m.events_from_report_list(data,own_name='Example',own_tag='ABC',role='role',local_timezone='America/Vancouver',evidence='saved-ocr.json'))
 
 if __name__ == '__main__': unittest.main()

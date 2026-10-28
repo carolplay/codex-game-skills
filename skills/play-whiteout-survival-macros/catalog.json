@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.82",
+  "package_version": "0.12.83",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -477,12 +477,12 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.9",
-      "sha256": "4833631ab1d6862a5c88e6b2599354d92fb369e28e99a0afee316d6dcddc7360",
+      "action_version": "0.1.10",
+      "sha256": "6303131d93bb40e26ffc1c43ab28980b576381612b7decbeaeb7347a1ba95228",
       "period": "shift",
       "utility": false,
       "include_in_daily": true,
-      "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending.",
+      "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending. 0.1.10 adds optional configured zero-gauge glyph template before numeric OCR: Apple Vision omitted a sampled single0. Template source stays private, matching an empty gauge and rejecting sampled nonempty gauges. Missing alias falls through to existing numeric gate; it does not enable dispatch. Live zero-skip pending.",
       "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger."
     },
     "vip_calendar": {

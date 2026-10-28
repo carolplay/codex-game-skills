@@ -5,6 +5,8 @@ meaning and daily scope; it cannot authenticate screenshots or certify a run.
 """
 from datetime import datetime, timezone
 
+LEDGER_VERSION = "0.1.1"
+
 
 def utc_day(timestamp):
     value = datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
@@ -46,14 +48,14 @@ def summarize(events, *, day, role, target=10):
             seen.add(event_id)
     settled = {e['start_event_id'] for e in victories.values() if e.get('start_event_id')}
     pending = [key for key in starts if key not in settled]
-    return {'day': day, 'role': role, 'target': target,
+    return {'ledger_version': LEDGER_VERSION, 'day': day, 'role': role, 'target': target,
             'actual_starts': len(starts), 'confirmed_own_victories': len(victories),
             'pending_start_ids': pending, 'remaining_victories': max(0, target - len(victories)),
             'quota_completed': len(victories) >= target, 'rejected_events': rejected,
             'verification_boundary': 'Caller evidence flags are not screenshot authentication.'}
 
 
-def events_from_report_list(ocr, *, own_name, role, local_timezone, evidence):
+def events_from_report_list(ocr, *, own_name, role, local_timezone, evidence, own_tag=None):
     """Extract explicit own-initiator victories from a saved report-list OCR.
 
     The caller supplies the verified current role name and UI timezone. Target
@@ -73,7 +75,12 @@ def events_from_report_list(ocr, *, own_name, role, local_timezone, evidence):
     if not name or not evidence:
         raise ValueError('Verified own name and saved evidence are required')
     lines = [compact(line['text']) for line in ocr['lines']]
-    pattern = re.compile(r'(?:\[[^\]]+\])?' + re.escape(name) + r'集结攻击(\d+级(?:剑齿虎|深渊龙龟))获胜')
+    prefix = r'(?:\[[^\]]+\])?'
+    if own_tag:
+        # Tolerate only sampled closing-bracket OCR glyphs after the exact
+        # caller-verified guild tag; do not turn a partial player name into an owner.
+        prefix = r'(?:\[' + re.escape(compact(own_tag)) + r'(?:\]|J|I|1)?)?'
+    pattern = re.compile(prefix + re.escape(name) + r'集结攻击(\d+级(?:剑齿虎|深渊龙龟))获胜')
     zone = ZoneInfo(local_timezone)
     events = []
     for i, line in enumerate(lines):

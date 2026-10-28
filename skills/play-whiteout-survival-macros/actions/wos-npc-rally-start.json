@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.9",
+  "action_version": "0.1.10",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending.",
+  "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending. 0.1.10 adds optional configured zero-gauge glyph template before numeric OCR: Apple Vision omitted a sampled single0. Template source stays private, matching an empty gauge and rejecting sampled nonempty gauges. Missing alias falls through to existing numeric gate; it does not enable dispatch. Live zero-skip pending.",
   "business_dependencies": [
     "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
     "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
@@ -103,6 +103,73 @@
             690,
             1079
           ]
+        ]
+      }
+    },
+    {
+      "name": "npc-check-zero-stamina",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "stamina-zero",
+            "bounds": [
+              124,
+              105,
+              170,
+              128
+            ],
+            "mode": "white-glyph",
+            "min_score": 0.99
+          }
         ]
       }
     },
