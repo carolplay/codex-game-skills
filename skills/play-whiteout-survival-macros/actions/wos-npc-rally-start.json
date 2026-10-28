@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.4",
+  "action_version": "0.1.8",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,12 +8,12 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.1.1 a mature role search page recognized; category text_target used shortened label but retained default exact match (whole-frame OCR also inconsistent), no dispatch. Independent exit-search and exit-world restored city in2steps.0.1.2 enables bounded crop OCR and explicit prefix matching for category target; live replay pending. Development sample separately proved one actual level4Sabertooth initiated victory. Daily10counter/result reconciliation and level normalization still pending; default shifts exclude component.",
+  "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label.",
   "business_dependencies": [
-    "Only NPC level4Sabertooth currentlysampled; failbeforeinput ifleveldiffers",
-    "Keep at leastone marchslot; existingrally busy finish is no_action, not newdispatch",
-    "Do not repeat thiscomponent until actual battle result is verified and daily successfulinitiatorcount is known",
-    "Never treat autojoin/member50rewards as initiator10; special reward random absence is not defeat"
+    "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
+    "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
+    "The component is one attempt, not daily10 completion. Campaign caller reconciles actual dispatch and own-initiator victory evidence by UTC game day.",
+    "Gather after battle slots are no longer required; this component returns to fixed city anchor."
   ],
   "steps": [
     {
@@ -164,6 +164,52 @@
       "observe_attempts": 5
     },
     {
+      "name": "npc-check-march-capacity",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "行军"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              190,
+              320,
+              250
+            ],
+            "pattern": "([1-6])/\\1",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      }
+    },
+    {
       "name": "open-npc-search",
       "action": "click",
       "before": {
@@ -194,20 +240,6 @@
         747
       ],
       "observe_attempts": 10,
-      "finish_if": {
-        "all": [
-          "集结中"
-        ],
-        "page_text_only": true,
-        "page_text_regions": [
-          [
-            100,
-            220,
-            310,
-            280
-          ]
-        ]
-      },
       "after": {
         "all": [
           "搜索",
@@ -299,20 +331,22 @@
             690,
             1065
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              175,
+              840,
+              245,
+              880
+            ],
+            "pattern": "4级",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
         ]
-      },
-      "budget_checks": [
-        {
-          "bounds": [
-            548,
-            872,
-            660,
-            917
-          ],
-          "min": 1,
-          "max_config": "max_npc_rally_level"
-        }
-      ]
+      }
     },
     {
       "name": "search-npc",
@@ -336,14 +370,15 @@
         "text_regions": [
           {
             "bounds": [
-              548,
-              872,
-              660,
-              917
+              175,
+              840,
+              245,
+              880
             ],
-            "pattern": "4",
+            "pattern": "4级",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -354,10 +389,9 @@
       "observe_attempts": 20,
       "after": {
         "all": [
-          "等级4",
+          "等级",
           "剑齿虎",
-          "推荐实力",
-          "集结"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -371,6 +405,17 @@
             565,
             470
           ]
+        ],
+        "red_regions": [
+          {
+            "bounds": [
+              310,
+              410,
+              480,
+              450
+            ],
+            "min": 0.6
+          }
         ]
       }
     },
@@ -379,10 +424,9 @@
       "action": "click",
       "before": {
         "all": [
-          "等级4",
+          "等级",
           "剑齿虎",
-          "推荐实力",
-          "集结"
+          "推荐实力"
         ],
         "none": [
           "侦察",
@@ -396,6 +440,17 @@
             565,
             470
           ]
+        ],
+        "red_regions": [
+          {
+            "bounds": [
+              310,
+              410,
+              480,
+              450
+            ],
+            "min": 0.6
+          }
         ]
       },
       "point": [
@@ -485,14 +540,13 @@
       "observe_attempts": 8,
       "after": {
         "all": [
-          "目标",
-          "剑齿虎",
           "出征",
           "士兵比例"
         ],
         "none": [
           "暂无空闲队列",
-          "兵力不足"
+          "兵力不足",
+          "体力不足"
         ]
       }
     },
@@ -501,14 +555,13 @@
       "action": "click",
       "before": {
         "all": [
-          "目标",
-          "剑齿虎",
           "出征",
           "士兵比例"
         ],
         "none": [
           "暂无空闲队列",
-          "兵力不足"
+          "兵力不足",
+          "体力不足"
         ]
       },
       "point": [
@@ -536,12 +589,18 @@
           "背包",
           "城镇"
         ],
+        "none": [
+          "暂无空闲队列",
+          "体力不足",
+          "兵力不足",
+          "无法发起"
+        ],
         "page_text_regions": [
           [
             100,
             180,
             310,
-            280
+            520
           ],
           [
             100,
@@ -549,17 +608,7 @@
             690,
             1079
           ]
-        ],
-        "timer_seconds": {
-          "bounds": [
-            145,
-            247,
-            255,
-            271
-          ],
-          "min": 1,
-          "max": 180
-        }
+        ]
       }
     },
     {
@@ -573,12 +622,18 @@
           "背包",
           "城镇"
         ],
+        "none": [
+          "暂无空闲队列",
+          "体力不足",
+          "兵力不足",
+          "无法发起"
+        ],
         "page_text_regions": [
           [
             100,
             180,
             310,
-            280
+            520
           ],
           [
             100,
@@ -586,17 +641,7 @@
             690,
             1079
           ]
-        ],
-        "timer_seconds": {
-          "bounds": [
-            145,
-            247,
-            255,
-            271
-          ],
-          "min": 1,
-          "max": 180
-        }
+        ]
       }
     }
   ],
@@ -663,14 +708,13 @@
         "action": "click",
         "before": {
           "all": [
-            "目标",
-            "剑齿虎",
             "出征",
             "士兵比例"
           ],
           "none": [
             "暂无空闲队列",
-            "兵力不足"
+            "兵力不足",
+            "体力不足"
           ]
         },
         "point": [
@@ -708,26 +752,10 @@
         ],
         "observe_attempts": 5,
         "after": {
-          "all": [
-            "英雄",
-            "背包",
-            "城镇"
-          ],
-          "none": [
+          "any": [
             "搜索",
-            "采集者",
-            "小队设置",
-            "出征",
-            "获得奖励",
-            "提示"
-          ],
-          "page_text_regions": [
-            [
-              100,
-              995,
-              690,
-              1079
-            ]
+            "推荐实力",
+            "城镇"
           ]
         }
       },
@@ -736,10 +764,9 @@
         "action": "click",
         "before": {
           "all": [
-            "等级4",
+            "等级",
             "剑齿虎",
-            "推荐实力",
-            "集结"
+            "推荐实力"
           ],
           "none": [
             "侦察",
@@ -753,6 +780,17 @@
               565,
               470
             ]
+          ],
+          "red_regions": [
+            {
+              "bounds": [
+                310,
+                410,
+                480,
+                450
+              ],
+              "min": 0.6
+            }
           ]
         },
         "point": [
@@ -761,26 +799,10 @@
         ],
         "observe_attempts": 5,
         "after": {
-          "all": [
-            "英雄",
-            "背包",
-            "城镇"
-          ],
-          "none": [
+          "any": [
             "搜索",
-            "采集者",
-            "小队设置",
-            "出征",
-            "获得奖励",
-            "提示"
-          ],
-          "page_text_regions": [
-            [
-              100,
-              995,
-              690,
-              1079
-            ]
+            "推荐实力",
+            "城镇"
           ]
         }
       },
@@ -790,10 +812,12 @@
         "before": {
           "all": [
             "搜索",
-            "自动狩猎"
+            "冰原巨"
           ],
           "none": [
-            "出征"
+            "出征",
+            "推荐实力",
+            "发起集结"
           ],
           "page_text_only": true,
           "page_text_regions": [
@@ -891,7 +915,8 @@
           ]
         }
       }
-    ]
+    ],
+    "recovery_timeout_seconds": 120
   },
   "overview_footer_compatibility": "Stable prefix supports both旧完成任务后是否隐藏 and新版完成任务后隐藏; only page-anchor semantics changed, not game strategy. Nextrole live pending."
 }

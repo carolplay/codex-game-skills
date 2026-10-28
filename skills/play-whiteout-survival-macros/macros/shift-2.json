@@ -1,12 +1,13 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.78",
-  "package_version": "0.12.78",
+  "macro_version": "0.12.79",
+  "package_version": "0.12.79",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
     "intel_cycle": "Game execute-all for ordinary intel; repeat after claim. Event firebeast separate; meal lighthouse step before intelligence.",
-    "execution_order": "Stable core first; new/repaired or unresolved exit/branch actions in tail, preserving business dependencies. daily remains final progress claim. Tail position does not make an action validated."
+    "execution_order": "Stable core first; new/repaired or unresolved exit/branch actions in tail, preserving business dependencies. daily remains final progress claim. Tail position does not make an action validated.",
+    "npc_rally_start": "One explicit visit attempt before gathering; daily target10 own-initiator victories is tracked by campaign evidence, not by macro pass or autojoin. Additional bounded attempts may interleave daily chunks."
   },
   "profiles": {
     "main": {
@@ -132,6 +133,12 @@
           "sha256": "37043c38168d965d1e9f406528d32d2637e1ca33ccc54027cd8ef917e49560af"
         },
         {
+          "action_id": "wos-npc-rally-start",
+          "action_version": "0.1.8",
+          "sha256": "9983ae3ec3470af18219bbe8e34d7d7494ecc5952f7e7ca8f458f00a46c6da53",
+          "task": "npc_rally_start"
+        },
+        {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
           "action_version": "0.1.11",
@@ -265,8 +272,7 @@
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "npc_rally_start": "开发单次发起组件，尚非每日10次闭环；战斗结果和当日计数待接，不重复默认执行。"
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
       }
     },
     "mature-test": {
@@ -392,6 +398,12 @@
           "sha256": "37043c38168d965d1e9f406528d32d2637e1ca33ccc54027cd8ef917e49560af"
         },
         {
+          "action_id": "wos-npc-rally-start",
+          "action_version": "0.1.8",
+          "sha256": "9983ae3ec3470af18219bbe8e34d7d7494ecc5952f7e7ca8f458f00a46c6da53",
+          "task": "npc_rally_start"
+        },
+        {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
           "action_version": "0.1.11",
@@ -525,8 +537,7 @@
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "npc_rally_start": "开发单次发起组件，尚非每日10次闭环；战斗结果和当日计数待接，不重复默认执行。"
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
       }
     },
     "under30-test": {
@@ -620,6 +631,12 @@
           "action_id": "wos-intel-cycle",
           "action_version": "0.2.12",
           "sha256": "37043c38168d965d1e9f406528d32d2637e1ca33ccc54027cd8ef917e49560af"
+        },
+        {
+          "action_id": "wos-npc-rally-start",
+          "action_version": "0.1.8",
+          "sha256": "9983ae3ec3470af18219bbe8e34d7d7494ecc5952f7e7ca8f458f00a46c6da53",
+          "task": "npc_rally_start"
         },
         {
           "task": "gather_meat",
@@ -735,8 +752,7 @@
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "npc_rally_start": "开发单次发起组件，尚非每日10次闭环；战斗结果和当日计数待接，不重复默认执行。"
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
       }
     }
   }

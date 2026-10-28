@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.78",
+  "package_version": "0.12.79",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -477,12 +477,12 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.4",
-      "sha256": "56479a1dd051a671d19ce1ad5d1938ec4103badfa9deaaabcd3fd282e84cb573",
+      "action_version": "0.1.8",
+      "sha256": "9983ae3ec3470af18219bbe8e34d7d7494ecc5952f7e7ca8f458f00a46c6da53",
       "period": "day",
       "utility": false,
-      "include_in_daily": false,
-      "verification_scope": "0.1.1 a mature role search page recognized; category text_target used shortened label but retained default exact match (whole-frame OCR also inconsistent), no dispatch. Independent exit-search and exit-world restored city in2steps.0.1.2 enables bounded crop OCR and explicit prefix matching for category target; live replay pending. Development sample separately proved one actual level4Sabertooth initiated victory. Daily10counter/result reconciliation and level normalization still pending; default shifts exclude component."
+      "include_in_daily": true,
+      "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label."
     },
     "vip_calendar": {
       "path": "actions/wos-vip-calendar.json",
@@ -533,6 +533,6 @@
     "alliance_incentive": "personal daily only; weekly settlement missing",
     "travel": "50existing supplies actual macrostart and later actual completedclaim/city exit on one mature role. Empty branch on another. Running/no-supplies branches pending.",
     "war_academy_commission": "FireCrystalDeepExploration free earned rows/milestones candidate; no exchange/research/upgrade or paid extension. New-role replay pending.",
-    "npc_rally": "Single-start developmentcomponent; actual victory/reward reconciliation and daily10quota pending. Excluded defaultshifts."
+    "npc_rally": "One explicit attempt per shift plus bounded campaign interleaving. Main level4 start/stamina/city exit verified; own-victory OCR ledger added. Daily10 closure and other-role branches require separate evidence; autojoin is not a launch."
   }
 }
