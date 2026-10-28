@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.88",
+  "package_version": "0.12.91",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -297,8 +297,8 @@
     "gather_meat": {
       "path": "actions/wos-gather-meat.json",
       "action_id": "wos-gather-meat",
-      "action_version": "0.1.11",
-      "sha256": "e421ff159c854b7bc0437a37151892024371d0c896c1e88233b37089e165016a",
+      "action_version": "0.1.12",
+      "sha256": "2ddde6321b6f146890816e3698f02011087dfc050174a75c92c0fc45fb68a0fd",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending.;0.1.10: mainUTCday26searchfound freefullmeat8node butfullOCRmissed采集者; reusewood/coal/iron calibratedsitepagecrop225345565475 withunchanged无人check andnohero troopdispatch. Savedfailedframepositive locallyverified; livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending."
@@ -306,8 +306,8 @@
     "gather_wood": {
       "path": "actions/wos-gather-wood.json",
       "action_id": "wos-gather-wood",
-      "action_version": "0.1.14",
-      "sha256": "f8d52228956175efc5518673eba679b7755a84a2187c589388788210202bc268",
+      "action_version": "0.1.15",
+      "sha256": "02bcea33d2d0175d07c93ce4f5a96117d969db92e8dd43ac7f73a7016e4e25de",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending."
@@ -315,8 +315,8 @@
     "gather_coal": {
       "path": "actions/wos-gather-coal.json",
       "action_id": "wos-gather-coal",
-      "action_version": "0.1.17",
-      "sha256": "5fc8632403f26a78aad31c73e8669a0b25bb44b0c6c0724a80f1d7804fff38aa",
+      "action_version": "0.1.18",
+      "sha256": "3f556170ebfb50667db10a4ca035e15dd83d4e8bbbe2c87ad0f8a19c3fb1817d",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending."
@@ -324,8 +324,8 @@
     "gather_iron": {
       "path": "actions/wos-gather-iron.json",
       "action_id": "wos-gather-iron",
-      "action_version": "0.1.17",
-      "sha256": "0e680fdc0c91f2d6c70424173d69305ba420ca1e3d4d9cf3603ebeff6d37ea13",
+      "action_version": "0.1.18",
+      "sha256": "238eb68f62ad4296bfeac2feeed2679c1d023be80697251f63a5645688a69bff",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending."
@@ -333,8 +333,8 @@
     "healing": {
       "path": "actions/wos-healing.json",
       "action_id": "wos-healing",
-      "action_version": "0.1.4",
-      "sha256": "f2816686a90c7f24010f49364a16c37c6d32e477139f3c850885fb91158581ce",
+      "action_version": "0.1.7",
+      "sha256": "92e597a4f42a65d4d1088825eddf3071884d90b0ed11463935f381b51c8074e5",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.1.3 main navigation clicked23px left of research-row arrow and stayed in overview; bounded overview exit restored city and later tasks continued. 0.1.4 reuses enlistment validated[270,50] text-label offset. Stored old407,700 miss/new433,706 arrow hit verified. Actual next-role healing replay pending; no research/upgrade operation added."

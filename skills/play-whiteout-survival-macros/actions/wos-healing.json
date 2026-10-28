@@ -1,6 +1,6 @@
 {
   "action_id": "wos-healing",
-  "action_version": "0.1.4",
+  "action_version": "0.1.7",
   "name": "WOS healing",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.1.3 main navigation clicked23px left of research-row arrow and stayed in overview; bounded overview exit restored city and later tasks continued. 0.1.4 reuses enlistment validated[270,50] text-label offset. Stored old407,700 miss/new433,706 arrow hit verified. Actual next-role healing replay pending; no research/upgrade operation added.",
+  "verification_scope": "0.1.4 ordinary healing passed main; Y overview header OCR center shifted24px horizontally, old relative offset resolved457 instead of arrow432. 0.1.5 uses executor0.4.11 fixed_x432 with OCR-relative y+50. Original Ydeviation retained, bounded exit restoredcity. Saved realframes and structural checks precede next-role validation; no upgrade action.; Release-lineage check found historical private0.1.6 already existed before current public0.1.4. Retire interim candidate0.1.5 to avoid reusing historical number; fixedcolumn candidate is0.1.7, package0.12.91. No field/live-result backfill.",
   "steps": [
     {
       "name": "01-check-city",
@@ -434,11 +434,12 @@
           740
         ],
         "offset": [
-          270,
+          0,
           50
         ],
         "min_confidence": 0.3,
-        "exact": false
+        "exact": false,
+        "fixed_x": 432
       },
       "before": [
         "科技研究"
