@@ -5,7 +5,7 @@ meaning and daily scope; it cannot authenticate screenshots or certify a run.
 """
 from datetime import datetime, timezone
 
-LEDGER_VERSION = "0.1.1"
+LEDGER_VERSION = "0.1.2"
 
 
 def utc_day(timestamp):
@@ -79,7 +79,7 @@ def events_from_report_list(ocr, *, own_name, role, local_timezone, evidence, ow
     if own_tag:
         # Tolerate only sampled closing-bracket OCR glyphs after the exact
         # caller-verified guild tag; do not turn a partial player name into an owner.
-        prefix = r'(?:\[' + re.escape(compact(own_tag)) + r'(?:\]|J|I|1)?)?'
+        prefix = r'(?:\[' + re.escape(compact(own_tag)) + r'(?:\]|J|j|I|1)?)?'
     pattern = re.compile(prefix + re.escape(name) + r'集结攻击(\d+级(?:剑齿虎|深渊龙龟))获胜')
     zone = ZoneInfo(local_timezone)
     events = []

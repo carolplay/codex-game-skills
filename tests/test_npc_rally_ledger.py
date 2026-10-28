@@ -88,6 +88,12 @@ class ReportListTests(unittest.TestCase):
         events=m.events_from_report_list(data,own_name='Example',own_tag='ABC',role='role',local_timezone='America/Vancouver',evidence='saved-ocr.json')
         self.assertEqual(1,len(events))
 
+    def test_verified_tag_accepts_lowercase_bracket_glyph_without_name_fuzzing(self):
+        for suffix,expected in [('Example',1),('AnotherExample',0),('example',0)]:
+            data={'lines':[{'text':'[ABCj'+suffix+'集结攻击4级剑齿虎获胜'}, {'text':'2026-10-2721:35:50'}]}
+            found=m.events_from_report_list(data,own_name='Example',own_tag='ABC',role='role',local_timezone='America/Vancouver',evidence='saved-ocr.json')
+            self.assertEqual(expected,len(found))
+
     def test_tag_tolerance_cannot_swallow_another_players_name(self):
         for row in ['[ABC]AnotherExample集结攻击4级剑齿虎获胜','[XYZJExample集结攻击4级剑齿虎获胜']:
             data={'lines':[{'text':row},{'text':'2026-10-2721:35:50'}]}
