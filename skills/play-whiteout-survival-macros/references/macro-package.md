@@ -2,9 +2,11 @@
 
 当前包版本与哈希只读catalog.json和所选班次manifest；执行器版本读实际运行summary中的suite身份。下列带版本的说明是历史验收记录，不是当前运行快照。包级校验与执行器结构校验均须通过，发布版本不代表所有角色或分支已经现场验收。
 
-## 寻宝模板部署（0.12.92）
+## 寻宝模板部署（0.12.95）
 
-派遣action0.1.10使用`treasure-ready-v2`别名：将assets中的`treasure-ready-gold.png`、`treasure-ready-blue.png`、`treasure-ready-purple.png`、`treasure-ready-purple-pulse.png`映射为四条本地绝对路径。旧别名保留给旧版本快照。阈值仍为0.91，追加的是紫色光效变体；保存帧正例1.0、运行点0.857、主城0.465。今日剩余次数为0仍提前结束，不能以额外图案绕过次数/宠物选择/倒计时断言。现场范围见当前运行报告。
+派遣action0.1.13使用`treasure-ready-v3`别名：将assets中的`treasure-ready-gold.png`、`treasure-ready-blue-current.png`、`treasure-ready-purple.png`、`treasure-ready-purple-pulse.png`映射为四条本地绝对路径。旧别名保留给旧版本快照。当前仍用灰度匹配、阈值0.91；0.1.12的独立轮廓分支已撤回。
+
+实际全图匹配框为`[100,150,688,980]`：旧上沿175截掉了顶部蓝色图案的像素，旧下沿960使底部紫色模板无法完整放入。局部小框正例没有验证真实扫描范围，不能当作整项通过。修订后按action实际image_target在完整失败帧回归：蓝色0.995、其他已知可派帧0.984–1.0、主城0.420；本轮三点全运行画面最高0.880。日剩余为0提前结束，详情/宠物/体力/计时断言保持；控制流passed仍需任务面板次数对账。各版本现场范围读本地报告，不推断全部皮肤通过。
 
 ## 历史迭代记录
 

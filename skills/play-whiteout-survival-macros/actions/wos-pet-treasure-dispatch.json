@@ -1,6 +1,6 @@
 {
   "action_id": "wos-pet-treasure-dispatch",
-  "action_version": "0.1.10",
+  "action_version": "0.1.13",
   "name": "WOS pet_treasure_dispatch",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 300,
   "status": "candidate",
-  "verification_scope": "0.1.10 adds a fourth ready-purple pulse template at unchanged0.91 threshold. Prior0.1.9 passed while actual3/4 and visible ready chest scored0.893. New alias treasure-ready-v2 includes existing gold/blue/purple plus purple-pulse. Saved positive1.0,busy0.857,city0.465; live finaldispatch pending. Keep actual remaining-count and detail/pet/stamina/timer checks.",
+  "verification_scope": "0.1.13 fixes actual whole-map ROI to[100,150,688,980]: blue ready template top172 was clipped by old175; bottompurple needed980. Full actualmap blue score0.995 afterboundsfix vs0.892 before. Restores one grayscale opener periteration, removes unneeded0.1.12 outline branch. Alias treasure-ready-v3 retains gold/currentblue/purple/purplepulse. Threshold0.91, remainingcount/detail/pet/stamina/timer checks unchanged. Savedframe and live acceptance scopes recorded separately.",
   "steps": [
     {
       "name": "01-check-city",
@@ -1497,12 +1497,12 @@
       "name": "open-spot-0",
       "action": "click",
       "image_target": {
-        "template": "treasure-ready-v2",
+        "template": "treasure-ready-v3",
         "bounds": [
           100,
-          175,
+          150,
           688,
-          960
+          980
         ],
         "mode": "grayscale",
         "min_score": 0.91
@@ -1520,12 +1520,12 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready-v2",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
             "min_score": 0.91
@@ -1556,12 +1556,12 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready-v2",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
             "min_score": 0.91,
@@ -1817,12 +1817,12 @@
       "name": "open-spot-1",
       "action": "click",
       "image_target": {
-        "template": "treasure-ready-v2",
+        "template": "treasure-ready-v3",
         "bounds": [
           100,
-          175,
+          150,
           688,
-          960
+          980
         ],
         "mode": "grayscale",
         "min_score": 0.91
@@ -1840,12 +1840,12 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready-v2",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
             "min_score": 0.91
@@ -1876,12 +1876,12 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready-v2",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
             "min_score": 0.91,
@@ -2137,12 +2137,12 @@
       "name": "open-spot-2",
       "action": "click",
       "image_target": {
-        "template": "treasure-ready-v2",
+        "template": "treasure-ready-v3",
         "bounds": [
           100,
-          175,
+          150,
           688,
-          960
+          980
         ],
         "mode": "grayscale",
         "min_score": 0.91
@@ -2160,12 +2160,12 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready-v2",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
             "min_score": 0.91
@@ -2196,12 +2196,12 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-ready-v2",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
             "min_score": 0.91,
