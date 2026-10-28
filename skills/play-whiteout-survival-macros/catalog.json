@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.80",
+  "package_version": "0.12.81",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -477,12 +477,12 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.8",
-      "sha256": "9983ae3ec3470af18219bbe8e34d7d7494ecc5952f7e7ca8f458f00a46c6da53",
+      "action_version": "0.1.9",
+      "sha256": "4833631ab1d6862a5c88e6b2599354d92fb369e28e99a0afee316d6dcddc7360",
       "period": "day",
       "utility": false,
       "include_in_daily": true,
-      "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label."
+      "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending."
     },
     "vip_calendar": {
       "path": "actions/wos-vip-calendar.json",
