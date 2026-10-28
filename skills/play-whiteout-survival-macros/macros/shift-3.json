@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.85",
-  "package_version": "0.12.85",
+  "macro_version": "0.12.86",
+  "package_version": "0.12.86",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -27,8 +27,8 @@
         {
           "task": "feast",
           "action_id": "wos-stamina-meal",
-          "action_version": "0.2.1",
-          "sha256": "68e7db6b39871bfffe605286b00708079f2cb5e8428fd9248cb9d38610416575"
+          "action_version": "0.2.2",
+          "sha256": "7dac40999a36be0853e44ae8c59a594009f07a65c22f2ccd042b77d714cb3ac6"
         },
         {
           "task": "alliance",
@@ -292,8 +292,8 @@
         {
           "task": "feast",
           "action_id": "wos-stamina-meal",
-          "action_version": "0.2.1",
-          "sha256": "68e7db6b39871bfffe605286b00708079f2cb5e8428fd9248cb9d38610416575"
+          "action_version": "0.2.2",
+          "sha256": "7dac40999a36be0853e44ae8c59a594009f07a65c22f2ccd042b77d714cb3ac6"
         },
         {
           "task": "alliance",
@@ -557,8 +557,8 @@
         {
           "task": "feast",
           "action_id": "wos-stamina-meal",
-          "action_version": "0.2.1",
-          "sha256": "68e7db6b39871bfffe605286b00708079f2cb5e8428fd9248cb9d38610416575"
+          "action_version": "0.2.2",
+          "sha256": "7dac40999a36be0853e44ae8c59a594009f07a65c22f2ccd042b77d714cb3ac6"
         },
         {
           "task": "alliance",
