@@ -1,6 +1,6 @@
 {
   "action_id": "wos-travel-idle-claim",
-  "action_version": "0.1.7",
+  "action_version": "0.1.8",
   "name": "WOS travel_idle_claim",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. 0.1.7: Y/R settlement shows reward first then expert affinity automatically; accept either positive settlement subpage with title and exit, not a persistent reward label. Saved Y transition and city negative checked; next live replay pending.",
+  "verification_scope": "0.1.7 main actual settlement closed into new-expert introduction (unlock CTA and blank-to-exit instruction), so root assertion/exit failed. Agent dismissed overlay and returnedcity. 0.1.8 adds bounded introduction dismissal; saved popup positive and city negative verified. Normal no-popup and new automatic exit need next-role live evidence.",
   "steps": [
     {
       "name": "01-check-city",
@@ -361,26 +361,13 @@
         "点击任意位置退出"
       ],
       "after": {
-        "all": [
+        "any": [
           "挂机",
-          "自动"
+          "解锁入驻"
         ],
         "none": [
           "游历挂机",
           "游历结束"
-        ],
-        "template_regions": [
-          {
-            "template": "experts-list-icon",
-            "bounds": [
-              580,
-              100,
-              690,
-              175
-            ],
-            "mode": "grayscale",
-            "min_score": 0.9
-          }
         ]
       },
       "observe_attempts": 5,
@@ -430,6 +417,58 @@
         ],
         "page_text_only": true
       }
+    },
+    {
+      "name": "close-new-expert-introduction",
+      "action": "click",
+      "point": [
+        394,
+        1029
+      ],
+      "before": {
+        "all": [
+          "解锁入驻",
+          "点击任意空白位置退出"
+        ],
+        "none": [
+          "游历挂机",
+          "游历结束"
+        ]
+      },
+      "only_if": {
+        "all": [
+          "解锁入驻",
+          "点击任意空白位置退出"
+        ],
+        "none": [
+          "游历挂机",
+          "游历结束"
+        ]
+      },
+      "after": {
+        "all": [
+          "挂机",
+          "自动"
+        ],
+        "none": [
+          "游历挂机",
+          "游历结束"
+        ],
+        "template_regions": [
+          {
+            "template": "experts-list-icon",
+            "bounds": [
+              580,
+              100,
+              690,
+              175
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
+        ]
+      },
+      "observe_attempts": 5
     },
     {
       "name": "exit-travel",
@@ -746,16 +785,22 @@
         "observe_attempts": 5
       },
       {
-        "name": "close-travel-summary",
+        "name": "close-new-expert-introduction",
         "action": "click",
         "point": [
-          395,
-          1053
+          394,
+          1029
         ],
-        "before": [
-          "游历结束",
-          "点击任意位置退出"
-        ],
+        "before": {
+          "all": [
+            "解锁入驻",
+            "点击任意空白位置退出"
+          ],
+          "none": [
+            "游历挂机",
+            "游历结束"
+          ]
+        },
         "after": {
           "all": [
             "挂机",
@@ -777,6 +822,29 @@
               "mode": "grayscale",
               "min_score": 0.9
             }
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "close-travel-summary",
+        "action": "click",
+        "point": [
+          395,
+          1053
+        ],
+        "before": [
+          "游历结束",
+          "点击任意位置退出"
+        ],
+        "after": {
+          "any": [
+            "挂机",
+            "解锁入驻"
+          ],
+          "none": [
+            "游历挂机",
+            "游历结束"
           ]
         },
         "observe_attempts": 5
@@ -948,7 +1016,8 @@
           ]
         }
       }
-    ]
+    ],
+    "recovery_timeout_seconds": 120
   },
   "overview_footer_compatibility": "Stable prefix supports both旧完成任务后是否隐藏 and新版完成任务后隐藏; only page-anchor semantics changed, not game strategy. Nextrole live pending."
 }

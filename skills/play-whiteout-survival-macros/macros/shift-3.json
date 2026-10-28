@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.79",
-  "package_version": "0.12.79",
+  "macro_version": "0.12.80",
+  "package_version": "0.12.80",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -189,8 +189,8 @@
         {
           "task": "travel_idle_claim",
           "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.7",
-          "sha256": "58367217d914f237211c6c85172b0d7b230bf598d55248038c2ebe94eb759502"
+          "action_version": "0.1.8",
+          "sha256": "169993968533c21fc9d362477f25a81a9162577e297679abc26197430ffe9860"
         },
         {
           "task": "enlistment",
@@ -454,8 +454,8 @@
         {
           "task": "travel_idle_claim",
           "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.7",
-          "sha256": "58367217d914f237211c6c85172b0d7b230bf598d55248038c2ebe94eb759502"
+          "action_version": "0.1.8",
+          "sha256": "169993968533c21fc9d362477f25a81a9162577e297679abc26197430ffe9860"
         },
         {
           "task": "enlistment",
