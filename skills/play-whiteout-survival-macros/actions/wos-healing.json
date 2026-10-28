@@ -1,6 +1,6 @@
 {
   "action_id": "wos-healing",
-  "action_version": "0.1.6",
+  "action_version": "0.1.4",
   "name": "WOS healing",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.1.3: existing treatment queue page had same title as empty selection; quickselect clicked cancel treatment. Add existingqueue predicate to both business clicks and bounded cancel-confirm dismissal. Agent recovery and savedframe checks separate from pending macro replay.; Candidate0.1.6 adjusts only overview research-row arrow offset from270,50 to244,44; actual failure resolved457,707 missed arrowcenter431,701. Hospital radialmenu point remains unchanged pending separate evidence. Saved frame resolves431,701; livepending.",
+  "verification_scope": "0.1.3 main navigation clicked23px left of research-row arrow and stayed in overview; bounded overview exit restored city and later tasks continued. 0.1.4 reuses enlistment validated[270,50] text-label offset. Stored old407,700 miss/new433,706 arrow hit verified. Actual next-role healing replay pending; no research/upgrade operation added.",
   "steps": [
     {
       "name": "01-check-city",
@@ -434,8 +434,8 @@
           740
         ],
         "offset": [
-          244,
-          44
+          270,
+          50
         ],
         "min_confidence": 0.3,
         "exact": false
