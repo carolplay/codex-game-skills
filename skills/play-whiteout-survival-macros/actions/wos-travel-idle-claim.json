@@ -1,6 +1,6 @@
 {
   "action_id": "wos-travel-idle-claim",
-  "action_version": "0.1.8",
+  "action_version": "0.1.9",
   "name": "WOS travel_idle_claim",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.1.7 main actual settlement closed into new-expert introduction (unlock CTA and blank-to-exit instruction), so root assertion/exit failed. Agent dismissed overlay and returnedcity. 0.1.8 adds bounded introduction dismissal; saved popup positive and city negative verified. Normal no-popup and new automatic exit need next-role live evidence.",
+  "verification_scope": "0.1.7 main actual settlement closed into new-expert introduction (unlock CTA and blank-to-exit instruction), so root assertion/exit failed. Agent dismissed overlay and returnedcity. 0.1.8 adds bounded introduction dismissal; saved popup positive and city negative verified. Normal no-popup and new automatic exit need next-role live evidence. 0.1.9: introduction dismissal is conditional. A second mature role normally returned to expert-list page after actual settlement;0.1.8 incorrectly required an introduction. Skip only recognized expert-list or city anchors, retain unknown-page deviation. Stored normal-page skip verified, next-role live replay pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -468,7 +468,63 @@
           }
         ]
       },
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "挂机",
+            "自动"
+          ],
+          "none": [
+            "游历挂机",
+            "游历结束"
+          ],
+          "template_regions": [
+            {
+              "template": "experts-list-icon",
+              "bounds": [
+                580,
+                100,
+                690,
+                175
+              ],
+              "mode": "grayscale",
+              "min_score": 0.9
+            }
+          ]
+        },
+        {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "完成任务后"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
+            ]
+          ]
+        }
+      ]
     },
     {
       "name": "exit-travel",
