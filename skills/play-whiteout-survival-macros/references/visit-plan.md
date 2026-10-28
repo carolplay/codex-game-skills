@@ -70,7 +70,7 @@ status只表示实现与验证进度，不表示今天已完成。已验证必�
 |海岛盟友照料|没做|日|与自身树和产出分别记录，不发消息|
 |签到/活动免费档|没做|日/特定活动|从红点发现，核对标题和免费档；活动实例、结束时间单列|
 |雪原游历挂机|已验证|班/补给|一个成熟角色50份现有补给由宏启动、稍后结算奖励及完整回城通过；另一角色无任务跳过通过。进行中与零补给启动仍待验；不把已启动当已结算|
-|NPC巨兽集结奖励|已做|日|0.1.8将已现场验证的0.1.7按钮颜色与NPC卡片语义分支纳入包0.12.79，三个班次均显式安排一次主动发起尝试，位于采集之前；不再只运行自动参团。已验证成熟角色4级剑齿虎真实发起、25体力净消耗及回主城。开发组合可在日常小段之间追加有界尝试，按UTC游戏日分别对账实际发起、本人发起获胜和奖励实领；十次闭环与跨角色范围仍需证据，不把单次通过、队列忙跳过或参团当十次完成。0.1.5白色数字OCR/搜索退出失败及0.1.6按钮文字漏读失败均保留，当前用4级标签及橙红按钮像素；细节见npc-rally.md|
+|NPC巨兽集结奖励|已做|日目标／每班推进|当前组件0.1.10、包0.12.83，三个班次均安排主动发起尝试，频率为shift，位于采集之前；不以自动参团替代。成熟角色的4级剑齿虎真实发起、派出时体力扣减及回主城已有现场证据，第二成熟角色正在当前版本交错执行。开发组合按实际体力和队列在日常小段间追加有界尝试，UTC日分别记录本人发起、本人发起获胜与报告奖励实领；目标十次，不把单次通过、忙碌/体力少跳过或参团当日内完成。按钮采用NPC卡片语义加橙红像素，空体力可用本地模板辅助；其余等级与完整跨角色十次闭环仍需独立证据，见npc-rally.md|
 |钥匙收入来源与数量对账|没做|日/来源刷新|用户持续反馈钥匙领不够；逐项记录钥匙类型、来源、可领数量、实际增量、当日证据与缺口。具体来源待反馈/实操确认，不能用免费招募通过或消耗现有钥匙掩盖漏领|
 |VIP右上日历奖励|已验证|日/活动实例|0.1.4使用VIP页头锚点，成熟角色及24级角色开日历→关日历→红点消失→回城已有宏证据。旧实际400经验增长采样独立保留；不是每日VIP免费礼包，也不把红点消失推断成其他奖励全领|
 |无尽试炼|没做|日/活动|属于必须覆盖日常，可拆分或简化；依据当前任务和开放窗口执行|
@@ -147,7 +147,10 @@ UTC2026-10-20一班续跑验证：竞技场0.1.4新标题在低等级及两个�
 
 第三班成熟角色默认顺序（稳定段→开发/修复末段→daily；动作适用范围未减少）：
 
-mail → idle → feast → alliance → help → expert → bank → shield → lancer → donate → pet_wolf → pet_badger → pet_deer → arena → orders → npc_autojoin → travel_idle → recruit → marksman → intel_cycle → gather_meat → gather_wood → gather_coal → gather_iron → pet_treasure_claim → pet_treasure_dispatch → pet_alliance_treasure → labyrinth → travel_idle_claim → enlistment → vip_calendar → store_free → warehouse → healing → academy → island → war_academy_commission → crystal → alliance_incentive → refined → daily。
+mail → idle → feast → alliance → help → expert → bank → shield → lancer → donate → pet_wolf → pet_badger → pet_deer → arena → orders → npc_autojoin → vip → travel_idle → recruit → marksman → intel_cycle → npc_rally_start → gather_meat → gather_wood → gather_coal → gather_iron → pet_treasure_claim → pet_treasure_dispatch → pet_alliance_treasure → labyrinth → travel_idle_claim → enlistment → vip_calendar → warehouse → healing → academy → island → war_academy_commission → crystal → alliance_incentive → refined → store_free → daily。
+
+此线性列表由当前一班成熟profile的manifest生成；低等级排除以实际解锁为准。交错开发组合可以显式将采集后置、在核心小段间多次尝试巨兽，必须另记组合版本与完整顺序，不能把一次默认组件运行视为每日十次。
+
 
 每个动作统一从主城进入并返回主城，实际步骤与有界退出见对应JSON。每日任务领奖置尾，NPC自动加入/采集的行军位依赖显式维护。界面可组合不等于资源效果严格交换律。
 
