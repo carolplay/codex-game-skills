@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.86",
+  "package_version": "0.12.87",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -477,12 +477,12 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.11",
-      "sha256": "e0d96e276e9712cc7a479d743ea9c764e109f0457ce028d9ef21352b7a36953c",
+      "action_version": "0.1.12",
+      "sha256": "0ec717f8178e8810d2ec6e07a2e06e28c19c124665a9bdd77fa9f1e33b5416de",
       "period": "shift",
       "utility": false,
       "include_in_daily": true,
-      "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending. 0.1.10 adds optional configured zero-gauge glyph template before numeric OCR: Apple Vision omitted a sampled single0. Template source stays private, matching an empty gauge and rejecting sampled nonempty gauges. Missing alias falls through to existing numeric gate; it does not enable dispatch. Live zero-skip pending. 0.1.11: another mature role physically dispatched, but active-row OCR read集结中 as業結中; city exit succeeded. Use stable simplified/traditional suffix within march-row scope. New actual dispatch still requires independent caller evidence, not this label alone. Stored world positive/city negative passed; next-role replay pending.",
+      "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending. 0.1.10 adds optional configured zero-gauge glyph template before numeric OCR: Apple Vision omitted a sampled single0. Template source stays private, matching an empty gauge and rejecting sampled nonempty gauges. Missing alias falls through to existing numeric gate; it does not enable dispatch. Live zero-skip pending. 0.1.11: another mature role physically dispatched, but active-row OCR read集结中 as業結中; city exit succeeded. Use stable simplified/traditional suffix within march-row scope. New actual dispatch still requires independent caller evidence, not this label alone. Stored world positive/city negative passed; next-role replay pending. 0.1.12: low-level role reached empty army with troops still outside; old士兵比例 predicate and exit did not cover this page, stopping later tasks. Empty army is now an explicit defer with one back-to-world exit. Original failure retained; saved empty/normal army checks and manually observed world exit verified; new deferred macro branch live pending.",
       "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger."
     },
     "vip_calendar": {
