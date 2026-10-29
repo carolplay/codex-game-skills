@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.99",
+  "package_version": "0.12.101",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -353,18 +353,18 @@
       "action_id": "wos-pet-treasure-claim",
       "action_version": "0.1.4",
       "sha256": "33109ef0d1bf5acc42d2e2efd8f66a35c903e6a7a279bfc34b5a56d002d86f4d",
-      "period": "day",
+      "period": "shift",
       "utility": false,
-      "verification_scope": "Two completed boxes captured in prior run. Up to4 completion badges, no fresh dispatch yet; new-role replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Shift3 candidate: lowrole actual2completedchests proves featureunlocked, subsequent dispatch/alliedentry missed remembered list. Normalize upward only while targetabsent, then bounded singlekey scans with same-frame labelcrop; old5keysperstep could pass target without observation. No unlock exclusion or repeated treasure action. Nextmature role remaining-first attempt pending."
+      "verification_scope": "Two completed boxes captured in prior run. Up to4 completion badges, no fresh dispatch yet; new-role replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Shift3 candidate: lowrole actual2completedchests proves featureunlocked, subsequent dispatch/alliedentry missed remembered list. Normalize upward only while targetabsent, then bounded singlekey scans with same-frame labelcrop; old5keysperstep could pass target without observation. No unlock exclusion or repeated treasure action. Nextmature role remaining-first attempt pending. Cadence correction: recheck each shift because personal timed expeditions and alliance shares can mature later the same UTCday. A prior empty or successful claim is not day-unique completion evidence."
     },
     "pet_alliance_treasure": {
       "path": "actions/wos-pet-alliance-treasure.json",
       "action_id": "wos-pet-alliance-treasure",
       "action_version": "0.1.4",
       "sha256": "5bb9542ae858ad0a4b3b9656de16a3e1c37bcd55bf6eae6c9860b9ed2a2c50de",
-      "period": "day",
+      "period": "shift",
       "utility": false,
-      "verification_scope": "Prior actual5 free shares batch claimed to0, no messaging/sharing action. Current replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Shift3 candidate: lowrole actual2completedchests proves featureunlocked, subsequent dispatch/alliedentry missed remembered list. Normalize upward only while targetabsent, then bounded singlekey scans with same-frame labelcrop; old5keysperstep could pass target without observation. No unlock exclusion or repeated treasure action. Nextmature role remaining-first attempt pending."
+      "verification_scope": "Prior actual5 free shares batch claimed to0, no messaging/sharing action. Current replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Shift3 candidate: lowrole actual2completedchests proves featureunlocked, subsequent dispatch/alliedentry missed remembered list. Normalize upward only while targetabsent, then bounded singlekey scans with same-frame labelcrop; old5keysperstep could pass target without observation. No unlock exclusion or repeated treasure action. Nextmature role remaining-first attempt pending. Cadence correction: recheck each shift because personal timed expeditions and alliance shares can mature later the same UTCday. A prior empty or successful claim is not day-unique completion evidence."
     },
     "alliance_incentive": {
       "path": "actions/wos-alliance-incentive.json",
@@ -437,8 +437,8 @@
     "pet_treasure_dispatch": {
       "path": "actions/wos-pet-treasure-dispatch.json",
       "action_id": "wos-pet-treasure-dispatch",
-      "action_version": "0.1.14",
-      "sha256": "16348cb1222dba89a1539acd7c4bf0796ac539929634fab0cfb6c813fb9f50e5",
+      "action_version": "0.1.16",
+      "sha256": "61abfba1ebf197180906ea89ed1e3d47b77f350d8d614f6caa1967efb5fae553",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.1.13 fixes actual whole-map ROI to[100,150,688,980]: blue ready template top172 was clipped by old175; bottompurple needed980. Full actualmap blue score0.995 afterboundsfix vs0.892 before. Restores one grayscale opener periteration, removes unneeded0.1.12 outline branch. Alias treasure-ready-v3 retains gold/currentblue/purple/purplepulse. Threshold0.91, remainingcount/detail/pet/stamina/timer checks unchanged. Savedframe and live acceptance scopes recorded separately. 0.1.14: previous component made at most three dispatches although the known daily target is four. Add one identical fourth guarded iteration; ready-template, selected-pet, remaining-count and running-timer checks remain. All-busy state still skips. Schema validated; next-role four-slot live acceptance pending."

@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.99",
-  "package_version": "0.12.99",
+  "macro_version": "0.12.101",
+  "package_version": "0.12.101",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -172,8 +172,8 @@
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.14",
-          "sha256": "16348cb1222dba89a1539acd7c4bf0796ac539929634fab0cfb6c813fb9f50e5"
+          "action_version": "0.1.16",
+          "sha256": "61abfba1ebf197180906ea89ed1e3d47b77f350d8d614f6caa1967efb5fae553"
         },
         {
           "task": "pet_alliance_treasure",
@@ -437,8 +437,8 @@
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.14",
-          "sha256": "16348cb1222dba89a1539acd7c4bf0796ac539929634fab0cfb6c813fb9f50e5"
+          "action_version": "0.1.16",
+          "sha256": "61abfba1ebf197180906ea89ed1e3d47b77f350d8d614f6caa1967efb5fae553"
         },
         {
           "task": "pet_alliance_treasure",
@@ -672,8 +672,8 @@
         {
           "task": "pet_treasure_dispatch",
           "action_id": "wos-pet-treasure-dispatch",
-          "action_version": "0.1.14",
-          "sha256": "16348cb1222dba89a1539acd7c4bf0796ac539929634fab0cfb6c813fb9f50e5"
+          "action_version": "0.1.16",
+          "sha256": "61abfba1ebf197180906ea89ed1e3d47b77f350d8d614f6caa1967efb5fae553"
         },
         {
           "task": "pet_alliance_treasure",

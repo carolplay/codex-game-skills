@@ -1,6 +1,6 @@
 {
   "action_id": "wos-pet-treasure-dispatch",
-  "action_version": "0.1.14",
+  "action_version": "0.1.16",
   "name": "WOS pet_treasure_dispatch",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 300,
   "status": "candidate",
-  "verification_scope": "0.1.13 fixes actual whole-map ROI to[100,150,688,980]: blue ready template top172 was clipped by old175; bottompurple needed980. Full actualmap blue score0.995 afterboundsfix vs0.892 before. Restores one grayscale opener periteration, removes unneeded0.1.12 outline branch. Alias treasure-ready-v3 retains gold/currentblue/purple/purplepulse. Threshold0.91, remainingcount/detail/pet/stamina/timer checks unchanged. Savedframe and live acceptance scopes recorded separately. 0.1.14: previous component made at most three dispatches although the known daily target is four. Add one identical fourth guarded iteration; ready-template, selected-pet, remaining-count and running-timer checks remain. All-busy state still skips. Schema validated; next-role four-slot live acceptance pending.",
+  "verification_scope": "0.1.13 fixes actual whole-map ROI to[100,150,688,980]: blue ready template top172 was clipped by old175; bottompurple needed980. Full actualmap blue score0.995 afterboundsfix vs0.892 before. Restores one grayscale opener periteration, removes unneeded0.1.12 outline branch. Alias treasure-ready-v3 retains gold/currentblue/purple/purplepulse. Threshold0.91, remainingcount/detail/pet/stamina/timer checks unchanged. Savedframe and live acceptance scopes recorded separately. 0.1.14: previous component made at most three dispatches although the known daily target is four. Add one identical fourth guarded iteration; ready-template, selected-pet, remaining-count and running-timer checks remain. All-busy state still skips. Schema validated; next-role four-slot live acceptance pending. 0.1.15 added the obtain-more stamina popup close→pet selection→unstarted detail→map→city bounded exit after a real low-stamina dispatch deviation. Original failure and agent inventory-refill recovery remain private. Actual failure predicate passed offline; repaired exit replay remains pending. 0.1.16 is a documentation-only scope cleanup before publication; functional exit is unchanged from0.1.15, whose private frozen replay keeps its original source hash.",
   "steps": [
     {
       "name": "01-check-city",
@@ -2862,6 +2862,26 @@
     },
     "max_exit_steps": 5,
     "exits": [
+      {
+        "name": "close-insufficient-stamina-supply",
+        "action": "click",
+        "point": [
+          646,
+          137
+        ],
+        "before": {
+          "all": [
+            "获取更多",
+            "领主体力",
+            "丰盛的招待"
+          ]
+        },
+        "after": [
+          "寻宝派遣",
+          "宠物列表"
+        ],
+        "observe_attempts": 5
+      },
       {
         "name": "exit-profile",
         "action": "click",
