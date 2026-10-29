@@ -99,4 +99,17 @@ class ReportListTests(unittest.TestCase):
             data={'lines':[{'text':row},{'text':'2026-10-2721:35:50'}]}
             self.assertEqual([],m.events_from_report_list(data,own_name='Example',own_tag='ABC',role='role',local_timezone='America/Vancouver',evidence='saved-ocr.json'))
 
+    def test_sampled_chinese_glyphs_and_brackets_keep_stable_report_key(self):
+        def extract(row):
+            return m.events_from_report_list(
+                {'lines': [{'text': row}, {'text': '2026-10-2903:46:38'}]},
+                own_name='测试黄鸟', own_tag='ABC', role='role',
+                local_timezone='America/Vancouver', evidence='saved-ocr.json')
+        plain = extract('[ABC]测试黄鸟集结攻击4级剑齿虎获胜')
+        sampled = extract('【ABC］测试黃鸟集结攻击4级劍齿虎获胜')
+        self.assertEqual(1, len(sampled))
+        self.assertEqual(plain[0]['event_id'], sampled[0]['event_id'])
+        self.assertEqual([], extract('【ABC］另一测试黃鸟集结攻击4级劍齿虎获胜'))
+        self.assertEqual([], extract('【XYZ］测试黃鸟集结攻击4级劍齿虎获胜'))
+
 if __name__ == '__main__': unittest.main()

@@ -5,7 +5,7 @@ meaning and daily scope; it cannot authenticate screenshots or certify a run.
 """
 from datetime import datetime, timezone
 
-LEDGER_VERSION = "0.1.2"
+LEDGER_VERSION = "0.1.3"
 
 
 def utc_day(timestamp):
@@ -69,7 +69,11 @@ def events_from_report_list(ocr, *, own_name, role, local_timezone, evidence, ow
     from zoneinfo import ZoneInfo
 
     def compact(text):
-        return ''.join(unicodedata.normalize('NFKC', text).split())
+        # Exact full-row matching remains required. These sampled glyph forms
+        # occur in the same verified role/target across adjacent report rows;
+        # do not use substring ownership or general fuzzy name matching.
+        glyphs = str.maketrans({'【': '[', '】': ']', '黃': '黄', '劍': '剑'})
+        return ''.join(unicodedata.normalize('NFKC', text).translate(glyphs).split())
 
     name = compact(own_name)
     if not name or not evidence:
