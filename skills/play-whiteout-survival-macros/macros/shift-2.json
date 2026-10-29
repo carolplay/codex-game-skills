@@ -1,13 +1,14 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.95",
-  "package_version": "0.12.95",
+  "macro_version": "0.12.97",
+  "package_version": "0.12.97",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
     "intel_cycle": "Game execute-all for ordinary intel; repeat after claim. Event firebeast separate; meal lighthouse step before intelligence.",
     "execution_order": "Stable core first; new/repaired or unresolved exit/branch actions in tail, preserving business dependencies. daily remains final progress claim. Tail position does not make an action validated.",
-    "npc_rally_start": "One explicit visit attempt before gathering; daily target10 own-initiator victories is tracked by campaign evidence, not by macro pass or autojoin. Additional bounded attempts may interleave daily chunks."
+    "npc_rally_start": "One explicit visit attempt before gathering; daily target10 own-initiator victories is tracked by campaign evidence, not by macro pass or autojoin. Additional bounded attempts may interleave daily chunks.",
+    "academy": "Settle completed travel immediately before academy supply; a still-running trip is only closed, never ended early."
   },
   "profiles": {
     "main": {
@@ -134,8 +135,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.12",
-          "sha256": "0ec717f8178e8810d2ec6e07a2e06e28c19c124665a9bdd77fa9f1e33b5416de",
+          "action_version": "0.1.13",
+          "sha256": "0eeae412fbd45b14e0bb9dff69b20f149adae8c7d22af5defc522e7188a1774e",
           "task": "npc_rally_start"
         },
         {
@@ -187,12 +188,6 @@
           "sha256": "1cf4b30679a3da2ff86aeb05823b64636e0f36722e7d7fee4e865f1341f70d00"
         },
         {
-          "task": "travel_idle_claim",
-          "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.9",
-          "sha256": "94681c2f8e187f36f48c8c1c29015041b12bc5895ceb749b546020d2dc972991"
-        },
-        {
           "task": "enlistment",
           "action_id": "wos-enlistment",
           "action_version": "0.1.5",
@@ -215,6 +210,12 @@
           "action_id": "wos-healing",
           "action_version": "0.1.7",
           "sha256": "92e597a4f42a65d4d1088825eddf3071884d90b0ed11463935f381b51c8074e5"
+        },
+        {
+          "task": "travel_idle_claim",
+          "action_id": "wos-travel-idle-claim",
+          "action_version": "0.1.10",
+          "sha256": "febb1045c5beef67afd5ab64f8c649571c9b3e6ee8302b197b556f667bd5c7e0"
         },
         {
           "task": "academy",
@@ -399,8 +400,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.12",
-          "sha256": "0ec717f8178e8810d2ec6e07a2e06e28c19c124665a9bdd77fa9f1e33b5416de",
+          "action_version": "0.1.13",
+          "sha256": "0eeae412fbd45b14e0bb9dff69b20f149adae8c7d22af5defc522e7188a1774e",
           "task": "npc_rally_start"
         },
         {
@@ -452,12 +453,6 @@
           "sha256": "1cf4b30679a3da2ff86aeb05823b64636e0f36722e7d7fee4e865f1341f70d00"
         },
         {
-          "task": "travel_idle_claim",
-          "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.9",
-          "sha256": "94681c2f8e187f36f48c8c1c29015041b12bc5895ceb749b546020d2dc972991"
-        },
-        {
           "task": "enlistment",
           "action_id": "wos-enlistment",
           "action_version": "0.1.5",
@@ -480,6 +475,12 @@
           "action_id": "wos-healing",
           "action_version": "0.1.7",
           "sha256": "92e597a4f42a65d4d1088825eddf3071884d90b0ed11463935f381b51c8074e5"
+        },
+        {
+          "task": "travel_idle_claim",
+          "action_id": "wos-travel-idle-claim",
+          "action_version": "0.1.10",
+          "sha256": "febb1045c5beef67afd5ab64f8c649571c9b3e6ee8302b197b556f667bd5c7e0"
         },
         {
           "task": "academy",
@@ -634,8 +635,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.12",
-          "sha256": "0ec717f8178e8810d2ec6e07a2e06e28c19c124665a9bdd77fa9f1e33b5416de",
+          "action_version": "0.1.13",
+          "sha256": "0eeae412fbd45b14e0bb9dff69b20f149adae8c7d22af5defc522e7188a1774e",
           "task": "npc_rally_start"
         },
         {

@@ -80,6 +80,10 @@ V1离线追踪继续按正式run_id报告收尾，缺正式报告进入followups
 
 官方说明：[Computer Use与Locked use](https://learn.chatgpt.com/docs/computer-use)将锁定使用限定为当前可信Computer Use回合中的短时解锁；普通本地进程不会继承该能力。[Apple CGWindowListCopyWindowInfo](https://developer.apple.com/documentation/coregraphics/cgwindowlistcopywindowinfo(_:_:))区分无匹配窗口的空数组和不在GUI会话/无WindowServer时的NULL。[窗口筛选选项](https://developer.apple.com/documentation/coregraphics/window-list-option-constants)也限定为当前用户会话。凌晨/早晨锁屏预检仍需单独验证官方解锁链，不能把一次正常重开验收称为锁屏问题根治。
 
+## 独立后端启动环境（2026-10-29）
+
+运行环境补充（2026-10-29）：本机受限终端两次启动独立 CUA 子进程均报 `trusted Node process exited unexpectedly`，没有发送游戏输入；同一既有后端在正常本机执行环境下启动并读取画面成功，关闭离线弹窗、核验身份和主城后恢复了宏。保留两类原始证据。这是当前机器的启动诊断，不能把它解释成锁屏、TCC 或自动审批已解决，也不能通过更换执行环境重试被平台明确拒绝的动作。后续遇到同类进程崩溃，先区分终端执行环境与真实平台拒绝，不重复要求用户解锁。
+
 ## 主动巨兽的班间连续计数（2026-10-28）
 
 `npc_rally_start`是每班可再次尝试的组件，catalog频率为shift；每日目标按UTC游戏日另记本人发起且获胜十次。不能把一次组件通过（包括队列满/体力少于25的早退）、自动参团开启或已发车当日内唯一项目采用，从而省略后两班。核验当前日已确认获胜、已发起待结果和可用体力后，按实际缺口追加有界尝试；可用定版组合在其他日常小段之间串行执行，不要求每一步经模型。派出之后产生的报告奖励在角色收尾再次领取，避免只跑开头邮件而遗漏新战报收入。当前日真实证据留本地；不以目录/版本已发布代替十次闭环验收。

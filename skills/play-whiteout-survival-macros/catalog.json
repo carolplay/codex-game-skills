@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.95",
+  "package_version": "0.12.97",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -427,11 +427,11 @@
     "travel_idle_claim": {
       "path": "actions/wos-travel-idle-claim.json",
       "action_id": "wos-travel-idle-claim",
-      "action_version": "0.1.9",
-      "sha256": "94681c2f8e187f36f48c8c1c29015041b12bc5895ceb749b546020d2dc972991",
+      "action_version": "0.1.10",
+      "sha256": "febb1045c5beef67afd5ab64f8c649571c9b3e6ee8302b197b556f667bd5c7e0",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.7 main actual settlement closed into new-expert introduction (unlock CTA and blank-to-exit instruction), so root assertion/exit failed. Agent dismissed overlay and returnedcity. 0.1.8 adds bounded introduction dismissal; saved popup positive and city negative verified. Normal no-popup and new automatic exit need next-role live evidence. 0.1.9: introduction dismissal is conditional. A second mature role normally returned to expert-list page after actual settlement;0.1.8 incorrectly required an introduction. Skip only recognized expert-list or city anchors, retain unknown-page deviation. Stored normal-page skip verified, next-role live replay pending."
+      "verification_scope": "0.1.7 main actual settlement closed into new-expert introduction (unlock CTA and blank-to-exit instruction), so root assertion/exit failed. Agent dismissed overlay and returnedcity. 0.1.8 adds bounded introduction dismissal; saved popup positive and city negative verified. Normal no-popup and new automatic exit need next-role live evidence. 0.1.9: introduction dismissal is conditional. A second mature role normally returned to expert-list page after actual settlement;0.1.8 incorrectly required an introduction. Skip only recognized expert-list or city anchors, retain unknown-page deviation. Stored normal-page skip verified, next-role live replay pending. 0.1.10: current main running57/60 was incorrectly treated as completed-only. Add bounded close of explicitly running popup without ending it, then skip settlement steps only on verified city. Saved running frame and negative completed condition checked; next-role live acceptance pending."
     },
     "pet_treasure_dispatch": {
       "path": "actions/wos-pet-treasure-dispatch.json",
@@ -477,12 +477,12 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.12",
-      "sha256": "0ec717f8178e8810d2ec6e07a2e06e28c19c124665a9bdd77fa9f1e33b5416de",
+      "action_version": "0.1.13",
+      "sha256": "0eeae412fbd45b14e0bb9dff69b20f149adae8c7d22af5defc522e7188a1774e",
       "period": "shift",
       "utility": false,
       "include_in_daily": true,
-      "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending. 0.1.10 adds optional configured zero-gauge glyph template before numeric OCR: Apple Vision omitted a sampled single0. Template source stays private, matching an empty gauge and rejecting sampled nonempty gauges. Missing alias falls through to existing numeric gate; it does not enable dispatch. Live zero-skip pending. 0.1.11: another mature role physically dispatched, but active-row OCR read集结中 as業結中; city exit succeeded. Use stable simplified/traditional suffix within march-row scope. New actual dispatch still requires independent caller evidence, not this label alone. Stored world positive/city negative passed; next-role replay pending. 0.1.12: low-level role reached empty army with troops still outside; old士兵比例 predicate and exit did not cover this page, stopping later tasks. Empty army is now an explicit defer with one back-to-world exit. Original failure retained; saved empty/normal army checks and manually observed world exit verified; new deferred macro branch live pending.",
+      "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending. 0.1.10 adds optional configured zero-gauge glyph template before numeric OCR: Apple Vision omitted a sampled single0. Template source stays private, matching an empty gauge and rejecting sampled nonempty gauges. Missing alias falls through to existing numeric gate; it does not enable dispatch. Live zero-skip pending. 0.1.11: another mature role physically dispatched, but active-row OCR read集结中 as業結中; city exit succeeded. Use stable simplified/traditional suffix within march-row scope. New actual dispatch still requires independent caller evidence, not this label alone. Stored world positive/city negative passed; next-role replay pending. 0.1.12: low-level role reached empty army with troops still outside; old士兵比例 predicate and exit did not cover this page, stopping later tasks. Empty army is now an explicit defer with one back-to-world exit. Original failure retained; saved empty/normal army checks and manually observed world exit verified; new deferred macro branch live pending. 0.1.13: mature-role army page full-frame OCR omitted visible出征, so both dispatch and old exit failed. Add scoped header/bottom OCR to the known NPC army page for dispatch and exit; retain stamina budget and no-empty-army guards. Saved failure frame positive and city negative checked; next batch live pending.",
       "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger."
     },
     "vip_calendar": {
