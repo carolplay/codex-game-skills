@@ -1,6 +1,6 @@
 {
   "action_id": "wos-stamina-inventory-refill",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS refill below-capacity stamina from owned items",
   "reference_size": [
     788,
@@ -369,20 +369,6 @@
           "领主体力",
           "丰盛的招待"
         ],
-        "text_regions": [
-          {
-            "bounds": [
-              350,
-              548,
-              472,
-              605
-            ],
-            "pattern": "^[xX×]?(?:[1-9]|1[0-9])$",
-            "crop_ocr": true,
-            "prefer_frame_ocr": true,
-            "min_confidence": 0.3
-          }
-        ],
         "green_regions": [
           {
             "bounds": [
@@ -391,7 +377,16 @@
               472,
               605
             ],
-            "min": 0.12
+            "min": 0.65
+          },
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.65
           }
         ]
       },
@@ -1035,5 +1030,5 @@
       }
     ]
   },
-  "verification_scope": "On-demand utility for a caller-observed below-capacity stamina deficit. Owned use row and its green fill shortcut sampled through current-conversation UI. First local macro replay pending. It uses one owned10-stamina item, then only the observed1–19-item green shortcut if capacity remains unfilled; no purchase row or real payment. Source stock before/after is recorded privately. Less than sufficient owned stock or unknown shortcut is a business deviation with bounded return, not inferred success. Already-at-capacity city observation ends without inventory use; on-demand calls remain separately logged from manifest component counts."
+  "verification_scope": "0.1.0 actual owned-item consumption succeeded, but x3 shortcut OCR read colon3 and bounded exit recovered city. 0.1.1 uses calibrated paired green controls on the already-verified inventory supply page; final capacity and stock observation unchanged. Saved failed-frame positive and city/purchase-row negative checks required; next fixed batch live pending."
 }

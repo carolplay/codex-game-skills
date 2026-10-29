@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.106",
+  "package_version": "0.12.108",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -418,11 +418,11 @@
     "travel_idle": {
       "path": "actions/wos-travel-idle.json",
       "action_id": "wos-travel-idle",
-      "action_version": "0.1.10",
-      "sha256": "6b05141cec36f941794ba1a59b1d1d714a017f890be4f4b6c894abffe490ceab",
+      "action_version": "0.1.11",
+      "sha256": "6688c904265163cbcad2d0d7a9ea30a5cb5ac8d10f542aa1823a31bcb027a73a",
       "period": "shift",
       "utility": false,
-      "verification_scope": "First settle old completed job if any, then use only existing1..100 Trek supplies; never purchases. Existing running job is left intact with deviation. Separate claim near visit end settles newly finished job. All new branches pending live replay. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. mature role cost image was OCR as$40 because bag icon included; no supplies spent. Remove redundant numeric gate: known existing-supplies modal and actual running counter remain required; no purchase control used. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Shift2 saved launch frame explicitly shows game started-idle toast; tiny progress fraction OCR reads ONO. Verify launch by explicit game toast plus city anchor rather than unreadable tiny fraction; no repeated start. Next role pending. 0.1.7 launch toast verification passed on next role but final city observation duplicated obsolete tiny fraction assertion. Remove only duplicate fraction from final city check; explicit start toast and all city anchor checks remain. Next role pending, no repeat launch on current role. 0.1.8 secondshift: yellow actual launch toast and full city exit passed. Login may automatically show completed settlement; preparation evidence separate. Shift3 candidate: root uses both large travel signposts instead of tiny decorative title; travel page requires idle/auto controls plus calibrated expert-hat icon instead of unreliable small label. Saved correct travel1.0 versus rootnegative.425; nextrole livepending."
+      "verification_scope": "0.1.10 actual start returned city with travel bubble1/10; regional OCR read1/1O, causing deviation with city already restored. 0.1.11 retains city+calibrated travel-bubble image as start proof, removes tiny fraction assertion. This is start only, never settlement or completed quota. Actual failed-frame positive/city-without-bubble negative checked; new live start pending."
     },
     "travel_idle_claim": {
       "path": "actions/wos-travel-idle-claim.json",
@@ -518,11 +518,11 @@
     "stamina_inventory_refill": {
       "path": "actions/wos-stamina-inventory-refill.json",
       "action_id": "wos-stamina-inventory-refill",
-      "action_version": "0.1.0",
-      "sha256": "188e7bf3750bcd6839395df32a75c597ccc868f5841afd56cee93c1b5f87d77c",
+      "action_version": "0.1.1",
+      "sha256": "353fc5fbdb9786c8baa49cc84bd08e860765ac8395c21703866c129414111ce7",
       "period": "on-demand",
       "utility": true,
-      "verification_scope": "On-demand utility for a caller-observed below-capacity stamina deficit. Owned use row and its green fill shortcut sampled through current-conversation UI. First local macro replay pending. It uses one owned10-stamina item, then only the observed1–19-item green shortcut if capacity remains unfilled; no purchase row or real payment. Source stock before/after is recorded privately. Less than sufficient owned stock or unknown shortcut is a business deviation with bounded return, not inferred success. Already-at-capacity city observation ends without inventory use; on-demand calls remain separately logged from manifest component counts."
+      "verification_scope": "0.1.0 actual owned-item consumption succeeded, but x3 shortcut OCR read colon3 and bounded exit recovered city. 0.1.1 uses calibrated paired green controls on the already-verified inventory supply page; final capacity and stock observation unchanged. Saved failed-frame positive and city/purchase-row negative checks required; next fixed batch live pending."
     }
   },
   "not_implemented": [

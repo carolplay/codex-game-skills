@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.106",
-  "package_version": "0.12.106",
+  "macro_version": "0.12.108",
+  "package_version": "0.12.108",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -112,8 +112,8 @@
         {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.10",
-          "sha256": "6b05141cec36f941794ba1a59b1d1d714a017f890be4f4b6c894abffe490ceab"
+          "action_version": "0.1.11",
+          "sha256": "6688c904265163cbcad2d0d7a9ea30a5cb5ac8d10f542aa1823a31bcb027a73a"
         },
         {
           "task": "recruit",
@@ -377,8 +377,8 @@
         {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.10",
-          "sha256": "6b05141cec36f941794ba1a59b1d1d714a017f890be4f4b6c894abffe490ceab"
+          "action_version": "0.1.11",
+          "sha256": "6688c904265163cbcad2d0d7a9ea30a5cb5ac8d10f542aa1823a31bcb027a73a"
         },
         {
           "task": "recruit",
