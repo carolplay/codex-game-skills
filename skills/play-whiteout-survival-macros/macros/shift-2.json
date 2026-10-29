@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.98",
-  "package_version": "0.12.98",
+  "macro_version": "0.12.99",
+  "package_version": "0.12.99",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -135,8 +135,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.13",
-          "sha256": "0eeae412fbd45b14e0bb9dff69b20f149adae8c7d22af5defc522e7188a1774e",
+          "action_version": "0.1.14",
+          "sha256": "b28c6a11ec0db3d5c9035ba35e7d4bd7a1fb9b7ef122928ea1de11e182d72250",
           "task": "npc_rally_start"
         },
         {
@@ -400,8 +400,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.13",
-          "sha256": "0eeae412fbd45b14e0bb9dff69b20f149adae8c7d22af5defc522e7188a1774e",
+          "action_version": "0.1.14",
+          "sha256": "b28c6a11ec0db3d5c9035ba35e7d4bd7a1fb9b7ef122928ea1de11e182d72250",
           "task": "npc_rally_start"
         },
         {
@@ -635,8 +635,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.13",
-          "sha256": "0eeae412fbd45b14e0bb9dff69b20f149adae8c7d22af5defc522e7188a1774e",
+          "action_version": "0.1.14",
+          "sha256": "b28c6a11ec0db3d5c9035ba35e7d4bd7a1fb9b7ef122928ea1de11e182d72250",
           "task": "npc_rally_start"
         },
         {

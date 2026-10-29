@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.13",
+  "action_version": "0.1.14",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending. 0.1.10 adds optional configured zero-gauge glyph template before numeric OCR: Apple Vision omitted a sampled single0. Template source stays private, matching an empty gauge and rejecting sampled nonempty gauges. Missing alias falls through to existing numeric gate; it does not enable dispatch. Live zero-skip pending. 0.1.11: another mature role physically dispatched, but active-row OCR read集结中 as業結中; city exit succeeded. Use stable simplified/traditional suffix within march-row scope. New actual dispatch still requires independent caller evidence, not this label alone. Stored world positive/city negative passed; next-role replay pending. 0.1.12: low-level role reached empty army with troops still outside; old士兵比例 predicate and exit did not cover this page, stopping later tasks. Empty army is now an explicit defer with one back-to-world exit. Original failure retained; saved empty/normal army checks and manually observed world exit verified; new deferred macro branch live pending. 0.1.13: mature-role army page full-frame OCR omitted visible出征, so both dispatch and old exit failed. Add scoped header/bottom OCR to the known NPC army page for dispatch and exit; retain stamina budget and no-empty-army guards. Saved failure frame positive and city negative checked; next batch live pending.",
+  "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending. 0.1.10 adds optional configured zero-gauge glyph template before numeric OCR: Apple Vision omitted a sampled single0. Template source stays private, matching an empty gauge and rejecting sampled nonempty gauges. Missing alias falls through to existing numeric gate; it does not enable dispatch. Live zero-skip pending. 0.1.11: another mature role physically dispatched, but active-row OCR read集结中 as業結中; city exit succeeded. Use stable simplified/traditional suffix within march-row scope. New actual dispatch still requires independent caller evidence, not this label alone. Stored world positive/city negative passed; next-role replay pending. 0.1.12: low-level role reached empty army with troops still outside; old士兵比例 predicate and exit did not cover this page, stopping later tasks. Empty army is now an explicit defer with one back-to-world exit. Original failure retained; saved empty/normal army checks and manually observed world exit verified; new deferred macro branch live pending. 0.1.13: mature-role army page full-frame OCR omitted visible出征, so both dispatch and old exit failed. Add scoped header/bottom OCR to the known NPC army page for dispatch and exit; retain stamina budget and no-empty-army guards. Saved failure frame positive and city negative checked; next batch live pending. 0.1.14: next mature-role attempt had fullframe114 confidence0.5 inside the calibrated stamina region, while forced crop OCR returned nothing. Prefer a unique confident in-bounds frame match before same-frame crop for both high/low stamina predicates. No threshold or stamina budget removed. Actual failed114 frame positive checked; live next-role acceptance pending.",
   "business_dependencies": [
     "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
     "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
@@ -210,7 +210,8 @@
             ],
             "crop_ocr": true,
             "min_confidence": 0.3,
-            "pattern": "(?:2[5-9]|[3-9][0-9]|[1-9][0-9]{2,})"
+            "pattern": "(?:2[5-9]|[3-9][0-9]|[1-9][0-9]{2,})",
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -248,7 +249,8 @@
             ],
             "crop_ocr": true,
             "min_confidence": 0.3,
-            "pattern": "(?:[0-9]|1[0-9]|2[0-4])"
+            "pattern": "(?:[0-9]|1[0-9]|2[0-4])",
+            "prefer_frame_ocr": true
           }
         ]
       }
