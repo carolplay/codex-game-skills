@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.14",
+  "action_version": "0.1.16",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending. 0.1.10 adds optional configured zero-gauge glyph template before numeric OCR: Apple Vision omitted a sampled single0. Template source stays private, matching an empty gauge and rejecting sampled nonempty gauges. Missing alias falls through to existing numeric gate; it does not enable dispatch. Live zero-skip pending. 0.1.11: another mature role physically dispatched, but active-row OCR read集结中 as業結中; city exit succeeded. Use stable simplified/traditional suffix within march-row scope. New actual dispatch still requires independent caller evidence, not this label alone. Stored world positive/city negative passed; next-role replay pending. 0.1.12: low-level role reached empty army with troops still outside; old士兵比例 predicate and exit did not cover this page, stopping later tasks. Empty army is now an explicit defer with one back-to-world exit. Original failure retained; saved empty/normal army checks and manually observed world exit verified; new deferred macro branch live pending. 0.1.13: mature-role army page full-frame OCR omitted visible出征, so both dispatch and old exit failed. Add scoped header/bottom OCR to the known NPC army page for dispatch and exit; retain stamina budget and no-empty-army guards. Saved failure frame positive and city negative checked; next batch live pending. 0.1.14: next mature-role attempt had fullframe114 confidence0.5 inside the calibrated stamina region, while forced crop OCR returned nothing. Prefer a unique confident in-bounds frame match before same-frame crop for both high/low stamina predicates. No threshold or stamina budget removed. Actual failed114 frame positive checked; live next-role acceptance pending.",
+  "verification_scope": "0.1.7 mature role level4 Sabertooth actual macro start, 25 stamina net decrease and bounded return-to-city verified. Orange-red button pixels plus NPC card semantics handle sampled missing button-text OCR. Full-slot skip, other roles and the daily10 victory closure remain separately audited. 0.1.5 unreadable white numeric field/search-exit failure is retained; current level uses scoped4级 label. 0.1.9 adds isolated same-frame city stamina check: below25 skips without dispatch; unreadable amount deviates at city. Necessary for default manifest after intelligence; caller-level check alone was insufficient. Stored low/high frames passed; live skip pending. 0.1.10 adds optional configured zero-gauge glyph template before numeric OCR: Apple Vision omitted a sampled single0. Template source stays private, matching an empty gauge and rejecting sampled nonempty gauges. Missing alias falls through to existing numeric gate; it does not enable dispatch. Live zero-skip pending. 0.1.11: another mature role physically dispatched, but active-row OCR read集结中 as業結中; city exit succeeded. Use stable simplified/traditional suffix within march-row scope. New actual dispatch still requires independent caller evidence, not this label alone. Stored world positive/city negative passed; next-role replay pending. 0.1.12: low-level role reached empty army with troops still outside; old士兵比例 predicate and exit did not cover this page, stopping later tasks. Empty army is now an explicit defer with one back-to-world exit. Original failure retained; saved empty/normal army checks and manually observed world exit verified; new deferred macro branch live pending. 0.1.13: mature-role army page full-frame OCR omitted visible出征, so both dispatch and old exit failed. Add scoped header/bottom OCR to the known NPC army page for dispatch and exit; retain stamina budget and no-empty-army guards. Saved failure frame positive and city negative checked; next batch live pending. 0.1.14: next mature-role attempt had fullframe114 confidence0.5 inside the calibrated stamina region, while forced crop OCR returned nothing. Prefer a unique confident in-bounds frame match before same-frame crop for both high/low stamina predicates. No threshold or stamina budget removed. Actual failed114 frame positive checked; live next-role acceptance pending. 0.1.15: selected search-tab text was visibly correct but OCR read the final glyphs differently. Search-menu predicates/target use the unique冰原 prefix, retaining exact sampled level and the later actual NPC species/title/red-level assertions before rally. No fuzzy ownership or relaxed army budget. Failed selected-tab frame positive and city negative checked offline; next live replay pending. 0.1.16: an actual remembered iron search put the Ice tab partly outside the viewport. Opening accepts the calibrated search pane, then only when Ice is absent it selects visible food, closes/reopens to center the remembered category, and selects Ice. Search exit recognizes all sampled NPC/resource categories rather than requiring Ice. Exact NPC level/species and deployment guards remain unchanged. Saved remembered-iron entry/exit/food-target geometry checked; new live branch pending.",
   "business_dependencies": [
     "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
     "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
@@ -391,12 +391,23 @@
       "observe_attempts": 10,
       "after": {
         "all": [
-          "搜索",
-          "冰原巨"
+          "搜索"
+        ],
+        "any": [
+          "冰原",
+          "野兽",
+          "收割者",
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
         ],
         "none": [
-          "出征"
+          "出征",
+          "推荐实力",
+          "发起集结"
         ],
+        "page_text_only": true,
         "page_text_regions": [
           [
             100,
@@ -408,12 +419,255 @@
       }
     },
     {
+      "name": "npc-recenter-select-food-if-needed",
+      "action": "click",
+      "text_target": {
+        "text": "生肉",
+        "bounds": [
+          100,
+          760,
+          690,
+          835
+        ],
+        "offset": [
+          0,
+          -25
+        ],
+        "exact": true,
+        "crop_ocr": true,
+        "prefer_frame_ocr": true,
+        "min_confidence": 0.3
+      },
+      "before": {
+        "all": [
+          "搜索",
+          "生肉"
+        ],
+        "any": [
+          "冰原",
+          "野兽",
+          "收割者",
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征",
+          "推荐实力",
+          "发起集结"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "冰原",
+          "野兽",
+          "收割者",
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征",
+          "推荐实力",
+          "发起集结"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "搜索",
+          "冰原"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "npc-recenter-close-food",
+      "action": "click",
+      "point": [
+        394,
+        400
+      ],
+      "before": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "冰原",
+          "野兽",
+          "收割者",
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征",
+          "推荐实力",
+          "发起集结"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "搜索",
+          "冰原"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "npc-recenter-reopen-food",
+      "action": "click",
+      "point": [
+        135,
+        747
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "搜索",
+          "冰原"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "搜索",
+          "冰原"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
       "name": "select-polar-terror",
       "action": "click",
       "before": {
         "all": [
           "搜索",
-          "冰原巨"
+          "冰原"
         ],
         "none": [
           "出征"
@@ -428,7 +682,7 @@
         ]
       },
       "text_target": {
-        "text": "冰原巨",
+        "text": "冰原",
         "bounds": [
           98,
           750,
@@ -447,7 +701,7 @@
       "after": {
         "all": [
           "搜索",
-          "冰原巨"
+          "冰原"
         ],
         "none": [
           "出征"
@@ -468,7 +722,7 @@
       "before": {
         "all": [
           "搜索",
-          "冰原巨"
+          "冰原"
         ],
         "none": [
           "出征"
@@ -503,7 +757,7 @@
       "before": {
         "all": [
           "搜索",
-          "冰原巨"
+          "冰原"
         ],
         "none": [
           "出征"
@@ -1059,8 +1313,16 @@
         "action": "click",
         "before": {
           "all": [
-            "搜索",
-            "冰原巨"
+            "搜索"
+          ],
+          "any": [
+            "冰原",
+            "野兽",
+            "收割者",
+            "生肉",
+            "木材",
+            "煤矿",
+            "铁矿"
           ],
           "none": [
             "出征",

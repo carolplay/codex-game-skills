@@ -1,0 +1,1039 @@
+{
+  "action_id": "wos-stamina-inventory-refill",
+  "action_version": "0.1.0",
+  "name": "WOS refill below-capacity stamina from owned items",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "status": "candidate",
+  "execution_timeout_seconds": 180,
+  "steps": [
+    {
+      "name": "01-check-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "02-open-profile",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": [
+        "领主档案"
+      ]
+    },
+    {
+      "name": "03-verify-identity",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true
+    },
+    {
+      "name": "04-return-city",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      }
+    },
+    {
+      "name": "inventory-refill-demand-below-capacity",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              124,
+              105,
+              170,
+              128
+            ],
+            "pattern": "^(?:0|[1-9][0-9]?|1[0-9]{2})$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              124,
+              105,
+              170,
+              128
+            ],
+            "pattern": "^(?:[2-9][0-9]{2}|[1-9][0-9]{3,})$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "enter-world",
+      "action": "click",
+      "point": [
+        640,
+        1022
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-intel",
+      "action": "click",
+      "point": [
+        644,
+        738
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "feast-open-from-lighthouse",
+      "action": "click",
+      "point": [
+        665,
+        62
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": [
+        "获取更多",
+        "丰盛的招待"
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "use-one-owned-stamina-item",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "pattern": "^使用$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "remember_numbers": [
+        {
+          "name": "owned_stamina_stock_before",
+          "bounds": [
+            175,
+            590,
+            225,
+            616
+          ],
+          "min_confidence": 0.3
+        }
+      ],
+      "observe_attempts": 5
+    },
+    {
+      "name": "use-owned-fill-shortcut",
+      "action": "click",
+      "point": [
+        412,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              350,
+              548,
+              472,
+              605
+            ],
+            "pattern": "^[xX×]?(?:[1-9]|1[0-9])$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              350,
+              548,
+              472,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "record-filled-capacity-and-stock",
+      "action": "observe",
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "remember_numbers": [
+        {
+          "name": "owned_stamina_stock_after",
+          "bounds": [
+            175,
+            590,
+            225,
+            616
+          ],
+          "min_confidence": 0.3
+        }
+      ],
+      "observe_attempts": 5,
+      "observe_interval_seconds": 1
+    },
+    {
+      "name": "feast-close",
+      "action": "click",
+      "point": [
+        645,
+        137
+      ],
+      "before": [
+        "丰盛的招待"
+      ],
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "exit-intel-map",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "exit-world",
+      "action": "click",
+      "point": [
+        640,
+        1022
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "city",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 5,
+    "exits": [
+      {
+        "name": "exit-feast",
+        "action": "click",
+        "point": [
+          645,
+          137
+        ],
+        "before": [
+          "获取更多",
+          "丰盛的招待"
+        ],
+        "after": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 3
+      },
+      {
+        "name": "exit-profile",
+        "action": "click",
+        "point": [
+          132,
+          59
+        ],
+        "before": [
+          "领主档案"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3,
+        "verify_identity": true
+      },
+      {
+        "name": "exit-intel-reward",
+        "action": "click",
+        "point": [
+          394,
+          880
+        ],
+        "before": {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        },
+        "after": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-intel-detail",
+        "action": "click",
+        "point": [
+          394,
+          900
+        ],
+        "before": {
+          "all": [
+            "情报失效",
+            "前往查看"
+          ]
+        },
+        "after": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-intel-map",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-world",
+        "action": "click",
+        "point": [
+          640,
+          1022
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-battle",
+        "action": "click",
+        "point": [
+          394,
+          965
+        ],
+        "before": {
+          "any": [
+            "胜利",
+            "失败",
+            "战败"
+          ],
+          "all": [
+            "点击任意位置退出"
+          ],
+          "page_text_regions": [
+            [
+              200,
+              930,
+              590,
+              1055
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-formation",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": [
+          "小队设置",
+          "战斗",
+          "一键上阵"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-deployment",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": [
+          "出征",
+          "士兵比例"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-world-npc-detail",
+        "action": "click",
+        "point": [
+          600,
+          650
+        ],
+        "before": {
+          "all": [
+            "城镇",
+            "奖励"
+          ],
+          "any": [
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力"
+          ],
+          "none": [
+            "前往查看"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-empty-deployment",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "出征",
+            "训练士兵"
+          ],
+          "none": [
+            "士兵比例"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  },
+  "verification_scope": "On-demand utility for a caller-observed below-capacity stamina deficit. Owned use row and its green fill shortcut sampled through current-conversation UI. First local macro replay pending. It uses one owned10-stamina item, then only the observed1–19-item green shortcut if capacity remains unfilled; no purchase row or real payment. Source stock before/after is recorded privately. Less than sufficient owned stock or unknown shortcut is a business deviation with bounded return, not inferred success. Already-at-capacity city observation ends without inventory use; on-demand calls remain separately logged from manifest component counts."
+}
