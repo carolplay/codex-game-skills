@@ -1,14 +1,15 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.111",
-  "package_version": "0.12.111",
+  "macro_version": "0.12.116",
+  "package_version": "0.12.116",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
     "intel_cycle": "Game execute-all for ordinary intel; repeat after claim. Event firebeast separate; meal lighthouse step before intelligence.",
     "execution_order": "Stable core first; new/repaired or unresolved exit/branch actions in tail, preserving business dependencies. daily remains final progress claim. Tail position does not make an action validated.",
     "npc_rally_start": "One explicit visit attempt before gathering; daily target10 own-initiator victories is tracked by campaign evidence, not by macro pass or autojoin. Additional bounded attempts may interleave daily chunks.",
-    "academy": "Settle completed travel immediately before academy supply; a still-running trip is only closed, never ended early."
+    "academy": "Settle completed travel immediately before academy supply; a still-running trip is only closed, never ended early.",
+    "enlistment": "Repaired hospital entry moved to development tail, before daily; no dependency on research/construction upgrades. Partial batch recovery continues untouched tasks rather than repeating earlier components."
   },
   "profiles": {
     "main": {
@@ -118,8 +119,8 @@
         {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.11",
-          "sha256": "6688c904265163cbcad2d0d7a9ea30a5cb5ac8d10f542aa1823a31bcb027a73a"
+          "action_version": "0.1.12",
+          "sha256": "0cdec4e16c5a61eef5bcf0203bc03df0cac6baf2bbdff8912dd99d7101ea38c5"
         },
         {
           "task": "recruit",
@@ -194,12 +195,6 @@
           "sha256": "1cf4b30679a3da2ff86aeb05823b64636e0f36722e7d7fee4e865f1341f70d00"
         },
         {
-          "task": "enlistment",
-          "action_id": "wos-enlistment",
-          "action_version": "0.1.5",
-          "sha256": "106d565ed43ae70b63043ae49507dbfa09839ec8936e2b1963fe4ebd5b3004e8"
-        },
-        {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
           "action_version": "0.1.4",
@@ -214,14 +209,14 @@
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.7",
-          "sha256": "92e597a4f42a65d4d1088825eddf3071884d90b0ed11463935f381b51c8074e5"
+          "action_version": "0.1.8",
+          "sha256": "70e8792e819e8c33ddf8196ad3e9661c9d8e2157c51965503a282857975972b5"
         },
         {
           "task": "travel_idle_claim",
           "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.10",
-          "sha256": "febb1045c5beef67afd5ab64f8c649571c9b3e6ee8302b197b556f667bd5c7e0"
+          "action_version": "0.1.11",
+          "sha256": "5a1e691cee9f7b9e8ecc57bf46df3bcc1234ef5512972a4b145076008c4a5d53"
         },
         {
           "task": "academy",
@@ -264,6 +259,12 @@
           "action_id": "wos-store-free",
           "action_version": "0.1.22",
           "sha256": "d20995595e1d07ded8e8c5e7ab1bb1c80f30ea749e015a653919cdd8daf61d7d"
+        },
+        {
+          "task": "enlistment",
+          "action_id": "wos-enlistment",
+          "action_version": "0.1.6",
+          "sha256": "52b556dc6fe0d5c4b4113465ea2a2c86d988739dfc1c31e06542f1030f8d402a"
         },
         {
           "task": "daily",
@@ -389,8 +390,8 @@
         {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.11",
-          "sha256": "6688c904265163cbcad2d0d7a9ea30a5cb5ac8d10f542aa1823a31bcb027a73a"
+          "action_version": "0.1.12",
+          "sha256": "0cdec4e16c5a61eef5bcf0203bc03df0cac6baf2bbdff8912dd99d7101ea38c5"
         },
         {
           "task": "recruit",
@@ -465,12 +466,6 @@
           "sha256": "1cf4b30679a3da2ff86aeb05823b64636e0f36722e7d7fee4e865f1341f70d00"
         },
         {
-          "task": "enlistment",
-          "action_id": "wos-enlistment",
-          "action_version": "0.1.5",
-          "sha256": "106d565ed43ae70b63043ae49507dbfa09839ec8936e2b1963fe4ebd5b3004e8"
-        },
-        {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
           "action_version": "0.1.4",
@@ -485,14 +480,14 @@
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.7",
-          "sha256": "92e597a4f42a65d4d1088825eddf3071884d90b0ed11463935f381b51c8074e5"
+          "action_version": "0.1.8",
+          "sha256": "70e8792e819e8c33ddf8196ad3e9661c9d8e2157c51965503a282857975972b5"
         },
         {
           "task": "travel_idle_claim",
           "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.10",
-          "sha256": "febb1045c5beef67afd5ab64f8c649571c9b3e6ee8302b197b556f667bd5c7e0"
+          "action_version": "0.1.11",
+          "sha256": "5a1e691cee9f7b9e8ecc57bf46df3bcc1234ef5512972a4b145076008c4a5d53"
         },
         {
           "task": "academy",
@@ -535,6 +530,12 @@
           "action_id": "wos-store-free",
           "action_version": "0.1.22",
           "sha256": "d20995595e1d07ded8e8c5e7ab1bb1c80f30ea749e015a653919cdd8daf61d7d"
+        },
+        {
+          "task": "enlistment",
+          "action_id": "wos-enlistment",
+          "action_version": "0.1.6",
+          "sha256": "52b556dc6fe0d5c4b4113465ea2a2c86d988739dfc1c31e06542f1030f8d402a"
         },
         {
           "task": "daily",
@@ -706,12 +707,6 @@
           "sha256": "1cf4b30679a3da2ff86aeb05823b64636e0f36722e7d7fee4e865f1341f70d00"
         },
         {
-          "task": "enlistment",
-          "action_id": "wos-enlistment",
-          "action_version": "0.1.5",
-          "sha256": "106d565ed43ae70b63043ae49507dbfa09839ec8936e2b1963fe4ebd5b3004e8"
-        },
-        {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
           "action_version": "0.1.4",
@@ -726,8 +721,8 @@
         {
           "task": "healing",
           "action_id": "wos-healing",
-          "action_version": "0.1.7",
-          "sha256": "92e597a4f42a65d4d1088825eddf3071884d90b0ed11463935f381b51c8074e5"
+          "action_version": "0.1.8",
+          "sha256": "70e8792e819e8c33ddf8196ad3e9661c9d8e2157c51965503a282857975972b5"
         },
         {
           "task": "island",
@@ -746,6 +741,12 @@
           "action_id": "wos-store-free",
           "action_version": "0.1.22",
           "sha256": "d20995595e1d07ded8e8c5e7ab1bb1c80f30ea749e015a653919cdd8daf61d7d"
+        },
+        {
+          "task": "enlistment",
+          "action_id": "wos-enlistment",
+          "action_version": "0.1.6",
+          "sha256": "52b556dc6fe0d5c4b4113465ea2a2c86d988739dfc1c31e06542f1030f8d402a"
         },
         {
           "task": "daily",

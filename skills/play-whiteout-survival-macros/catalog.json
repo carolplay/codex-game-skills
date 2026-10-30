@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.111",
+  "package_version": "0.12.116",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -333,20 +333,20 @@
     "healing": {
       "path": "actions/wos-healing.json",
       "action_id": "wos-healing",
-      "action_version": "0.1.7",
-      "sha256": "92e597a4f42a65d4d1088825eddf3071884d90b0ed11463935f381b51c8074e5",
+      "action_version": "0.1.8",
+      "sha256": "70e8792e819e8c33ddf8196ad3e9661c9d8e2157c51965503a282857975972b5",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.3 main navigation clicked23px left of research-row arrow and stayed in overview; bounded overview exit restored city and later tasks continued. 0.1.4 reuses enlistment validated[270,50] text-label offset. Stored old407,700 miss/new433,706 arrow hit verified. Actual next-role healing replay pending; no research/upgrade operation added."
+      "verification_scope": "0.1.7 reused the same right-side hospital point as enlistment and hit a seasonal cash popup on a mature role. Agent closed it, selected left roof, opened normal healing and started an actual timer; original failure preserved. 0.1.8 uses that left roof and known cash-popup close exit. Next-role full macro replay pending."
     },
     "enlistment": {
       "path": "actions/wos-enlistment.json",
       "action_id": "wos-enlistment",
-      "action_version": "0.1.5",
-      "sha256": "106d565ed43ae70b63043ae49507dbfa09839ec8936e2b1963fe4ebd5b3004e8",
+      "action_version": "0.1.6",
+      "sha256": "52b556dc6fe0d5c4b4113465ea2a2c86d988739dfc1c31e06542f1030f8d402a",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Reserve-empty and city exits replayed on mature and low-level roles.0.1.3 adds independent Romulus reward-bubble claim after normal enlistment exit, including emptyreserve. Manual known-portrait claim showed reward and bubble cleared; saved before/after template scores pass positive/negative. New automated image-claim branch pending live. Absent portrait is not fresh reward; no fixed currency gain. 0.1.4: Rselectedhospital actual治疗 controlpresent; title军医所 dropped insettle frame. Replace hospitalnamerepeat withcityfooter+scoped治疗 control; no changedinput, actualenlistmenttitle+loyalty stillrequired. Savedfailedframepositive andplaincitynegativepassed; nexttargetlivepending.; 0.1.5 hospital treatment crop extends left to450 to retain full 治疗 label on2944 normalmenu (old490crop clippedfirstglyph). Target enlistment postcondition unchanged."
+      "verification_scope": "0.1.5 hospital normalization point hit a seasonal cash-gift icon, leaving an unhandled popup and later tasks unexecuted. Agent closed it, then selected the visible left hospital roof, reached enlistment empty state, returned and claimed Romulus bubble; these are agent samples, not old macro passes. 0.1.6 moves only that hospital point left and adds the observed cash-popup bounded exit. Fresh full macro branch awaits next role."
     },
     "pet_treasure_claim": {
       "path": "actions/wos-pet-treasure-claim.json",
@@ -418,20 +418,20 @@
     "travel_idle": {
       "path": "actions/wos-travel-idle.json",
       "action_id": "wos-travel-idle",
-      "action_version": "0.1.11",
-      "sha256": "6688c904265163cbcad2d0d7a9ea30a5cb5ac8d10f542aa1823a31bcb027a73a",
+      "action_version": "0.1.12",
+      "sha256": "0cdec4e16c5a61eef5bcf0203bc03df0cac6baf2bbdff8912dd99d7101ea38c5",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.10 actual start returned city with travel bubble1/10; regional OCR read1/1O, causing deviation with city already restored. 0.1.11 retains city+calibrated travel-bubble image as start proof, removes tiny fraction assertion. This is start only, never settlement or completed quota. Actual failed-frame positive/city-without-bubble negative checked; new live start pending."
+      "verification_scope": "0.1.11 mature-role fresh start and city return passed. Another mature role reached the real travel progress overlay, but OCR missed/stylized its red-banner title; both postcondition and known exit failed, stopping later components. Agent closed the explicit blank-close footer and city recovered. 0.1.12 uses the two correctly read distinctive end-idle button and blank-close footer in progress postcondition/normal close/known exit; no click on end-idle. Saved failure frames and city negative checked; fresh changed branch awaits live replay."
     },
     "travel_idle_claim": {
       "path": "actions/wos-travel-idle-claim.json",
       "action_id": "wos-travel-idle-claim",
-      "action_version": "0.1.10",
-      "sha256": "febb1045c5beef67afd5ab64f8c649571c9b3e6ee8302b197b556f667bd5c7e0",
+      "action_version": "0.1.11",
+      "sha256": "5a1e691cee9f7b9e8ecc57bf46df3bcc1234ef5512972a4b145076008c4a5d53",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.7 main actual settlement closed into new-expert introduction (unlock CTA and blank-to-exit instruction), so root assertion/exit failed. Agent dismissed overlay and returnedcity. 0.1.8 adds bounded introduction dismissal; saved popup positive and city negative verified. Normal no-popup and new automatic exit need next-role live evidence. 0.1.9: introduction dismissal is conditional. A second mature role normally returned to expert-list page after actual settlement;0.1.8 incorrectly required an introduction. Skip only recognized expert-list or city anchors, retain unknown-page deviation. Stored normal-page skip verified, next-role live replay pending. 0.1.10: current main running57/60 was incorrectly treated as completed-only. Add bounded close of explicitly running popup without ending it, then skip settlement steps only on verified city. Saved running frame and negative completed condition checked; next-role live acceptance pending.",
+      "verification_scope": "0.1.11 applies the saved-frame-verified progress blank-close exit guard to settlement too, avoiding the same unread red-banner title. Settlement business conditions still distinguish completed vs running; no early end allowed by this revision. Business steps unchanged; new exit live trigger pending.",
       "current_evidence_note": "0.1.10 completed-trip settlement and cityreturn passed on a mature testrole; still-running close only savedframe tested. Moving settlement immediately before academy then produced actual free supply claim and cityreturn. Original main deviations retained."
     },
     "pet_treasure_dispatch": {
@@ -441,7 +441,7 @@
       "sha256": "61abfba1ebf197180906ea89ed1e3d47b77f350d8d614f6caa1967efb5fae553",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.13 fixes actual whole-map ROI to[100,150,688,980]: blue ready template top172 was clipped by old175; bottompurple needed980. Full actualmap blue score0.995 afterboundsfix vs0.892 before. Restores one grayscale opener periteration, removes unneeded0.1.12 outline branch. Alias treasure-ready-v3 retains gold/currentblue/purple/purplepulse. Threshold0.91, remainingcount/detail/pet/stamina/timer checks unchanged. Savedframe and live acceptance scopes recorded separately. 0.1.14: previous component made at most three dispatches although the known daily target is four. Add one identical fourth guarded iteration; ready-template, selected-pet, remaining-count and running-timer checks remain. All-busy state still skips. Schema validated; next-role four-slot live acceptance pending."
+      "verification_scope": "0.1.13 fixes actual whole-map ROI to[100,150,688,980]: blue ready template top172 was clipped by old175; bottompurple needed980. Full actualmap blue score0.995 afterboundsfix vs0.892 before. Restores one grayscale opener periteration, removes unneeded0.1.12 outline branch. Alias treasure-ready-v3 retains gold/currentblue/purple/purplepulse. Threshold0.91, remainingcount/detail/pet/stamina/timer checks unchanged. Savedframe and live acceptance scopes recorded separately. 0.1.14: previous component made at most three dispatches although the known daily target is four. Add one identical fourth guarded iteration; ready-template, selected-pet, remaining-count and running-timer checks remain. All-busy state still skips. Schema validated; next-role four-slot live acceptance pending. 0.1.16 live mature-role insufficient-stamina recovery passed through supply→selection→unstarted detail→map→city after two real dispatches; subsequent resource gathering continued. Original dispatch deviation remains, not four daily dispatches. Full sites require claim then redispatch after actual completion."
     },
     "war_academy_commission": {
       "path": "actions/wos-war-academy-commission.json",
@@ -518,11 +518,11 @@
     "stamina_inventory_refill": {
       "path": "actions/wos-stamina-inventory-refill.json",
       "action_id": "wos-stamina-inventory-refill",
-      "action_version": "0.1.1",
-      "sha256": "353fc5fbdb9786c8baa49cc84bd08e860765ac8395c21703866c129414111ce7",
+      "action_version": "0.1.2",
+      "sha256": "b7e5a8880cf81f0eee394cd873b9bb67d81220086c8147598611a844f6ec2e5e",
       "period": "on-demand",
       "utility": true,
-      "verification_scope": "0.1.0 actual owned-item consumption succeeded, but x3 shortcut OCR read colon3 and bounded exit recovered city. 0.1.1 uses calibrated paired green controls on the already-verified inventory supply page; final capacity and stock observation unchanged. Saved failed-frame positive and city/purchase-row negative checks required; next fixed batch live pending."
+      "verification_scope": "0.1.1 actual owned single-item use reached capacity, but saved stock was OCR-read with punctuation; old narrow crop rejected it and known exit restored city. 0.1.2 widens only calibrated inventory-number bounds; existing engine reads the saved before/after integer correctly. New crop live replay pending; business clicks and capacity/stock checks unchanged. Full0.1.2 owned refill and city return passed on a mature role with a three-digit stock count; exact four-digit punctuation failure shape remains saved-frame validation."
     },
     "labyrinth_challenge": {
       "path": "actions/wos-labyrinth-single-challenge.json",

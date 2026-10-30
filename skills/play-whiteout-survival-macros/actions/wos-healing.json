@@ -1,6 +1,6 @@
 {
   "action_id": "wos-healing",
-  "action_version": "0.1.7",
+  "action_version": "0.1.8",
   "name": "WOS healing",
   "reference_size": [
     788,
@@ -530,8 +530,8 @@
       "name": "open-hospital-menu",
       "action": "click",
       "point": [
-        555,
-        391
+        479,
+        365
       ],
       "before": {
         "all": [
@@ -1066,6 +1066,48 @@
           ]
         },
         "observe_attempts": 5
+      },
+      {
+        "name": "close-known-night-cash-popup",
+        "action": "click",
+        "point": [
+          600,
+          171
+        ],
+        "before": {
+          "all": [
+            "幻夜惊梦礼包",
+            "活动期间剩余"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "详情",
+            "治疗伤兵",
+            "重伤单位"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3
       }
     ]
   },

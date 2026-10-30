@@ -1,6 +1,6 @@
 {
   "action_id": "wos-travel-idle-claim",
-  "action_version": "0.1.10",
+  "action_version": "0.1.11",
   "name": "WOS travel_idle_claim",
   "reference_size": [
     788,
@@ -944,7 +944,6 @@
           1053
         ],
         "before": [
-          "游历挂机",
           "结束挂机",
           "点击任意位置关闭"
         ],

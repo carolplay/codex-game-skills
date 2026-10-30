@@ -1,6 +1,6 @@
 {
   "action_id": "wos-stamina-inventory-refill",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS refill below-capacity stamina from owned items",
   "reference_size": [
     788,
@@ -346,10 +346,10 @@
         {
           "name": "owned_stamina_stock_before",
           "bounds": [
-            175,
+            165,
             590,
-            225,
-            616
+            235,
+            622
           ],
           "min_confidence": 0.3
         }
@@ -446,10 +446,10 @@
         {
           "name": "owned_stamina_stock_after",
           "bounds": [
-            175,
+            165,
             590,
-            225,
-            616
+            235,
+            622
           ],
           "min_confidence": 0.3
         }
