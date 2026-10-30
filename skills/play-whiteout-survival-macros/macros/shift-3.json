@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.108",
-  "package_version": "0.12.108",
+  "macro_version": "0.12.111",
+  "package_version": "0.12.111",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -258,6 +258,12 @@
           "action_id": "wos-store-free",
           "action_version": "0.1.22",
           "sha256": "d20995595e1d07ded8e8c5e7ab1bb1c80f30ea749e015a653919cdd8daf61d7d"
+        },
+        {
+          "task": "labyrinth_challenge",
+          "action_id": "wos-labyrinth-single-challenge",
+          "action_version": "0.1.1",
+          "sha256": "dd8e45515b178947aad21a0388cd14654cafe8eb8d96cf4b56ec747db49f90c5"
         },
         {
           "task": "daily",
@@ -525,6 +531,12 @@
           "sha256": "d20995595e1d07ded8e8c5e7ab1bb1c80f30ea749e015a653919cdd8daf61d7d"
         },
         {
+          "task": "labyrinth_challenge",
+          "action_id": "wos-labyrinth-single-challenge",
+          "action_version": "0.1.1",
+          "sha256": "dd8e45515b178947aad21a0388cd14654cafe8eb8d96cf4b56ec747db49f90c5"
+        },
+        {
           "task": "daily",
           "action_id": "wos-daily-earned",
           "action_version": "0.1.2",
@@ -728,6 +740,12 @@
           "action_id": "wos-store-free",
           "action_version": "0.1.22",
           "sha256": "d20995595e1d07ded8e8c5e7ab1bb1c80f30ea749e015a653919cdd8daf61d7d"
+        },
+        {
+          "task": "labyrinth_challenge",
+          "action_id": "wos-labyrinth-single-challenge",
+          "action_version": "0.1.1",
+          "sha256": "dd8e45515b178947aad21a0388cd14654cafe8eb8d96cf4b56ec747db49f90c5"
         },
         {
           "task": "daily",

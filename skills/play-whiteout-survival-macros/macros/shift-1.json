@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.108",
-  "package_version": "0.12.108",
+  "macro_version": "0.12.111",
+  "package_version": "0.12.111",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -278,7 +278,8 @@
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "labyrinth_challenge": "Daily single challenge assigned to third shift; earlier targeted quota catchup uses actual current UTC-day evidence. Other calendar layouts remain partial."
       }
     },
     "mature-test": {
@@ -548,7 +549,8 @@
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "labyrinth_challenge": "Daily single challenge assigned to third shift; earlier targeted quota catchup uses actual current UTC-day evidence. Other calendar layouts remain partial."
       }
     },
     "under30-test": {
@@ -768,7 +770,8 @@
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_beast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
-        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行"
+        "intel_firebeast": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
+        "labyrinth_challenge": "Daily single challenge assigned to third shift; earlier targeted quota catchup uses actual current UTC-day evidence. Other calendar layouts remain partial."
       }
     }
   }
