@@ -1,6 +1,6 @@
 {
   "action_id": "wos-travel-idle",
-  "action_version": "0.1.12",
+  "action_version": "0.1.13",
   "name": "WOS travel_idle",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 300,
   "status": "candidate",
-  "verification_scope": "0.1.10 actual start returned city with travel bubble1/10; regional OCR read1/1O, causing deviation with city already restored. 0.1.11 retains city+calibrated travel-bubble image as start proof, removes tiny fraction assertion. This is start only, never settlement or completed quota. Actual failed-frame positive/city-without-bubble negative checked; new live start pending.",
+  "verification_scope": "Candidate: city side bubble shifts vertically with active event icons. Same calibrated image searches bounded right-side column; clicks resolve its actual image center; existing progress panel confirms running/settlement separately. Old fixed840..935 region failed saved active0/20 bubble at811; new650..935 matches without changing threshold. Live targeted verification pending. Running queue is opened, closed without settlement, then ends through city+same bubble finish condition; completed and no-queue branches continue separately.",
   "steps": [
     {
       "name": "01-check-city",
@@ -123,10 +123,6 @@
     {
       "name": "open-travel-progress",
       "action": "click",
-      "point": [
-        555,
-        887
-      ],
       "before": {
         "all": [
           "英雄",
@@ -161,7 +157,7 @@
           {
             "bounds": [
               520,
-              900,
+              700,
               600,
               940
             ],
@@ -196,7 +192,7 @@
           ],
           [
             510,
-            840,
+            650,
             610,
             940
           ],
@@ -212,7 +208,7 @@
             "template": "travel-idle-bubble",
             "bounds": [
               510,
-              840,
+              650,
               610,
               935
             ],
@@ -222,7 +218,109 @@
           }
         ],
         "page_text_only": true
+      },
+      "image_target": {
+        "template": "travel-idle-bubble",
+        "bounds": [
+          510,
+          650,
+          610,
+          935
+        ],
+        "mode": "grayscale",
+        "min_score": 0.85
       }
+    },
+    {
+      "name": "close-running-idle-without-settlement",
+      "action": "click",
+      "point": [
+        394,
+        1053
+      ],
+      "before": {
+        "all": [
+          "游历挂机中",
+          "结束挂机",
+          "点击任意位置关闭"
+        ],
+        "none": [
+          "游历挂机已完成",
+          "游历结束"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "完成任务后"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
+            ]
+          ]
+        },
+        {
+          "all": [
+            "游历挂机已完成",
+            "结束挂机",
+            "点击任意位置关闭"
+          ]
+        }
+      ],
+      "observe_attempts": 5
     },
     {
       "name": "finish-completed-idle",
@@ -259,7 +357,7 @@
           ],
           [
             510,
-            840,
+            650,
             610,
             940
           ],
@@ -275,7 +373,7 @@
             "template": "travel-idle-bubble",
             "bounds": [
               510,
-              840,
+              650,
               610,
               935
             ],
@@ -285,6 +383,50 @@
           }
         ],
         "page_text_only": true
+      },
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ],
+        "template_regions": [
+          {
+            "template": "travel-idle-bubble",
+            "bounds": [
+              510,
+              650,
+              610,
+              935
+            ],
+            "mode": "grayscale",
+            "min_score": 0.85
+          }
+        ]
       }
     },
     {
@@ -314,7 +456,7 @@
           ],
           [
             510,
-            840,
+            650,
             610,
             940
           ],
@@ -330,7 +472,7 @@
             "template": "travel-idle-bubble",
             "bounds": [
               510,
-              840,
+              650,
               610,
               935
             ],
@@ -396,7 +538,7 @@
           ],
           [
             510,
-            840,
+            650,
             610,
             940
           ],
@@ -412,7 +554,7 @@
             "template": "travel-idle-bubble",
             "bounds": [
               510,
-              840,
+              650,
               610,
               935
             ],
@@ -484,7 +626,7 @@
           ],
           [
             510,
-            840,
+            650,
             610,
             940
           ],
@@ -500,7 +642,7 @@
             "template": "travel-idle-bubble",
             "bounds": [
               510,
-              840,
+              650,
               610,
               935
             ],
@@ -1675,7 +1817,7 @@
             "template": "travel-idle-bubble",
             "bounds": [
               510,
-              840,
+              650,
               610,
               935
             ],
@@ -1689,10 +1831,6 @@
     {
       "name": "verify-new-travel-progress",
       "action": "click",
-      "point": [
-        555,
-        887
-      ],
       "before": {
         "all": [
           "英雄",
@@ -1727,7 +1865,7 @@
           {
             "bounds": [
               520,
-              900,
+              700,
               600,
               940
             ],
@@ -1741,7 +1879,7 @@
             "template": "travel-idle-bubble",
             "bounds": [
               510,
-              840,
+              650,
               610,
               935
             ],
@@ -1754,7 +1892,18 @@
         "结束挂机",
         "点击任意位置关闭"
       ],
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "image_target": {
+        "template": "travel-idle-bubble",
+        "bounds": [
+          510,
+          650,
+          610,
+          935
+        ],
+        "mode": "grayscale",
+        "min_score": 0.85
+      }
     },
     {
       "name": "close-new-travel-progress",
@@ -1801,7 +1950,7 @@
           {
             "bounds": [
               520,
-              900,
+              700,
               600,
               940
             ],
@@ -1815,7 +1964,7 @@
             "template": "travel-idle-bubble",
             "bounds": [
               510,
-              840,
+              650,
               610,
               935
             ],

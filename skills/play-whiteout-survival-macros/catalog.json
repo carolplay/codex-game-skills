@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.118",
+  "package_version": "0.12.120",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -76,8 +76,8 @@
     "recruit": {
       "path": "actions/wos-free-recruit.json",
       "action_id": "wos-free-recruit",
-      "action_version": "0.1.8",
-      "sha256": "48dcd6068370edde3f070d1bad514fbbd4e0f9f26ae40d1fb947c1e00e6416ce",
+      "action_version": "0.1.9",
+      "sha256": "9c2a9efbd56e3449a90b0c10620676de0c8cd80783dea193f51a027d848a0a9c",
       "period": "day",
       "utility": false,
       "verification_scope": "Advanced free draw and unchanged silver/gold inventory replayed on a mature role in0.1.6. Silver-key narrow integer check accepts confidence0.3; saved failure reproduces old rejection and correct integer read, without decimal coercion. Epic cooldown passed; other epic/free/newhero states keep prior evidence only. Metadata-only patch relative to0.1.6; private balances excluded.",
@@ -418,8 +418,8 @@
     "travel_idle": {
       "path": "actions/wos-travel-idle.json",
       "action_id": "wos-travel-idle",
-      "action_version": "0.1.12",
-      "sha256": "0cdec4e16c5a61eef5bcf0203bc03df0cac6baf2bbdff8912dd99d7101ea38c5",
+      "action_version": "0.1.13",
+      "sha256": "6df0a4019f86876eaf51940ae67b06098f0f42c303e558353dba72f48c4ad09e",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.1.11 mature-role fresh start and city return passed. Another mature role reached the real travel progress overlay, but OCR missed/stylized its red-banner title; both postcondition and known exit failed, stopping later components. Agent closed the explicit blank-close footer and city recovered. 0.1.12 uses the two correctly read distinctive end-idle button and blank-close footer in progress postcondition/normal close/known exit; no click on end-idle. Saved failure frames and city negative checked; fresh changed branch awaits live replay."
@@ -427,8 +427,8 @@
     "travel_idle_claim": {
       "path": "actions/wos-travel-idle-claim.json",
       "action_id": "wos-travel-idle-claim",
-      "action_version": "0.1.11",
-      "sha256": "5a1e691cee9f7b9e8ecc57bf46df3bcc1234ef5512972a4b145076008c4a5d53",
+      "action_version": "0.1.12",
+      "sha256": "659b45d39f87b69600762ba9e182149c6b0785f1ea490cec81dc3e4c433b16fa",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.1.11 applies the saved-frame-verified progress blank-close exit guard to settlement too, avoiding the same unread red-banner title. Settlement business conditions still distinguish completed vs running; no early end allowed by this revision. Business steps unchanged; new exit live trigger pending.",

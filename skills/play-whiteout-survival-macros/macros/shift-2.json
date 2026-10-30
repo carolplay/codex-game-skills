@@ -1,15 +1,16 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.118",
-  "package_version": "0.12.118",
+  "macro_version": "0.12.120",
+  "package_version": "0.12.120",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
     "intel_cycle": "Game execute-all for ordinary intel; repeat after claim. Event firebeast separate; meal lighthouse step before intelligence.",
     "execution_order": "Stable core first; new/repaired or unresolved exit/branch actions in tail, preserving business dependencies. daily remains final progress claim. Tail position does not make an action validated.",
     "npc_rally_start": "One explicit visit attempt before gathering; daily target10 own-initiator victories is tracked by campaign evidence, not by macro pass or autojoin. Additional bounded attempts may interleave daily chunks.",
-    "academy": "Settle completed travel immediately before academy supply; a still-running trip is only closed, never ended early.",
-    "enlistment": "Repaired hospital entry moved to development tail, before daily; no dependency on research/construction upgrades. Partial batch recovery continues untouched tasks rather than repeating earlier components."
+    "academy": "Current live free Trek Supplies at UTC08/20, ten each. Settle completed travel before claiming supply; then start idle travel with available stock. A running trip is closed, never ended early.",
+    "enlistment": "Repaired hospital entry moved to development tail, before daily; no dependency on research/construction upgrades. Partial batch recovery continues untouched tasks rather than repeating earlier components.",
+    "travel_idle": "When all three are eligible, travel_idle_claim → academy → travel_idle. Supply collection precedes a fresh start; neither a running queue nor a zero-stock skip proves completed trips."
   },
   "profiles": {
     "main": {
@@ -111,16 +112,28 @@
           "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73"
         },
         {
+          "task": "travel_idle_claim",
+          "action_id": "wos-travel-idle-claim",
+          "action_version": "0.1.12",
+          "sha256": "659b45d39f87b69600762ba9e182149c6b0785f1ea490cec81dc3e4c433b16fa"
+        },
+        {
+          "task": "academy",
+          "action_id": "wos-academy-supply",
+          "action_version": "0.1.5",
+          "sha256": "4f54cf07bb6cd69931c0dd216b6a713502f2dca7383c7bf72f0df7f8129b2076"
+        },
+        {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.12",
-          "sha256": "0cdec4e16c5a61eef5bcf0203bc03df0cac6baf2bbdff8912dd99d7101ea38c5"
+          "action_version": "0.1.13",
+          "sha256": "6df0a4019f86876eaf51940ae67b06098f0f42c303e558353dba72f48c4ad09e"
         },
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.8",
-          "sha256": "48dcd6068370edde3f070d1bad514fbbd4e0f9f26ae40d1fb947c1e00e6416ce"
+          "action_version": "0.1.9",
+          "sha256": "9c2a9efbd56e3449a90b0c10620676de0c8cd80783dea193f51a027d848a0a9c"
         },
         {
           "task": "marksman",
@@ -205,18 +218,6 @@
           "action_id": "wos-healing",
           "action_version": "0.1.8",
           "sha256": "70e8792e819e8c33ddf8196ad3e9661c9d8e2157c51965503a282857975972b5"
-        },
-        {
-          "task": "travel_idle_claim",
-          "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.11",
-          "sha256": "5a1e691cee9f7b9e8ecc57bf46df3bcc1234ef5512972a4b145076008c4a5d53"
-        },
-        {
-          "task": "academy",
-          "action_id": "wos-academy-supply",
-          "action_version": "0.1.5",
-          "sha256": "4f54cf07bb6cd69931c0dd216b6a713502f2dca7383c7bf72f0df7f8129b2076"
         },
         {
           "task": "island",
@@ -377,16 +378,28 @@
           "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73"
         },
         {
+          "task": "travel_idle_claim",
+          "action_id": "wos-travel-idle-claim",
+          "action_version": "0.1.12",
+          "sha256": "659b45d39f87b69600762ba9e182149c6b0785f1ea490cec81dc3e4c433b16fa"
+        },
+        {
+          "task": "academy",
+          "action_id": "wos-academy-supply",
+          "action_version": "0.1.5",
+          "sha256": "4f54cf07bb6cd69931c0dd216b6a713502f2dca7383c7bf72f0df7f8129b2076"
+        },
+        {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.12",
-          "sha256": "0cdec4e16c5a61eef5bcf0203bc03df0cac6baf2bbdff8912dd99d7101ea38c5"
+          "action_version": "0.1.13",
+          "sha256": "6df0a4019f86876eaf51940ae67b06098f0f42c303e558353dba72f48c4ad09e"
         },
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.8",
-          "sha256": "48dcd6068370edde3f070d1bad514fbbd4e0f9f26ae40d1fb947c1e00e6416ce"
+          "action_version": "0.1.9",
+          "sha256": "9c2a9efbd56e3449a90b0c10620676de0c8cd80783dea193f51a027d848a0a9c"
         },
         {
           "task": "marksman",
@@ -471,18 +484,6 @@
           "action_id": "wos-healing",
           "action_version": "0.1.8",
           "sha256": "70e8792e819e8c33ddf8196ad3e9661c9d8e2157c51965503a282857975972b5"
-        },
-        {
-          "task": "travel_idle_claim",
-          "action_id": "wos-travel-idle-claim",
-          "action_version": "0.1.11",
-          "sha256": "5a1e691cee9f7b9e8ecc57bf46df3bcc1234ef5512972a4b145076008c4a5d53"
-        },
-        {
-          "task": "academy",
-          "action_id": "wos-academy-supply",
-          "action_version": "0.1.5",
-          "sha256": "4f54cf07bb6cd69931c0dd216b6a713502f2dca7383c7bf72f0df7f8129b2076"
         },
         {
           "task": "island",
@@ -621,8 +622,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.8",
-          "sha256": "48dcd6068370edde3f070d1bad514fbbd4e0f9f26ae40d1fb947c1e00e6416ce"
+          "action_version": "0.1.9",
+          "sha256": "9c2a9efbd56e3449a90b0c10620676de0c8cd80783dea193f51a027d848a0a9c"
         },
         {
           "task": "marksman",
