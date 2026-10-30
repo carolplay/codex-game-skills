@@ -34,6 +34,9 @@ def build_legacy(flows):
 def build(flows):
  """New game-owned bulk execution; keep the event-only firebeast path."""
  legacy=build_legacy(flows)
+ # Preserve the published mixed cycle's bounded exit budget when regenerating.
+ # Components have their own budgets; copying the hero contract omits this one.
+ legacy['task_contract']['recovery_timeout_seconds']=120
  level_page={'all':['探照灯升级','情报品质','最大情报刷新数量','点击任意位置继续'],'page_text_regions':[[200,180,590,270]]}
  legacy['task_contract']['exits'].insert(0,{'name':'exit-lighthouse-level-up','action':'click','point':[394,985],'before':copy.deepcopy(level_page),'after':{'all':['情报','下次刷新'],'none':['探照灯升级','前往查看']},'observe_attempts':5})
  legacy['task_contract']['exits'].insert(0,{'name':'exit-intel-stamina-supply','action':'click','point':[645,137],'before':['获取更多','领主体力','丰盛的招待'],'after':{'all':['情报','下次刷新'],'none':['获取更多','前往查看']},'observe_attempts':5})

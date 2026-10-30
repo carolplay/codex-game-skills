@@ -1,6 +1,6 @@
 {
   "action_id": "wos-pet-treasure-dispatch",
-  "action_version": "0.1.8",
+  "action_version": "0.1.16",
   "name": "WOS pet_treasure_dispatch",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 300,
   "status": "candidate",
-  "verification_scope": "Original mature role stopped because开始 was read开姶 beforetreasurestart; exit also depended on samebuttontext. Agent separately startedone4hsearch andreturnedcity.0.1.7 keeps title/list andexact10stamina checks, localizes observed始/姶glyph for businessbutton; selectionexit usesunambiguous title+petlist withoutbuttonliteral. Savedselection positive anddetailnegative offline checks; new fullreplaypending.; 0.1.8 detail predicates use personal/alliance treasure + dispatch/running states, independent of OCR-confused rare title 藏→蒹. Actual second dispatch pending.",
+  "verification_scope": "0.1.13 fixes actual whole-map ROI to[100,150,688,980]: blue ready template top172 was clipped by old175; bottompurple needed980. Full actualmap blue score0.995 afterboundsfix vs0.892 before. Restores one grayscale opener periteration, removes unneeded0.1.12 outline branch. Alias treasure-ready-v3 retains gold/currentblue/purple/purplepulse. Threshold0.91, remainingcount/detail/pet/stamina/timer checks unchanged. Savedframe and live acceptance scopes recorded separately. 0.1.14: previous component made at most three dispatches although the known daily target is four. Add one identical fourth guarded iteration; ready-template, selected-pet, remaining-count and running-timer checks remain. All-busy state still skips. Schema validated; next-role four-slot live acceptance pending. 0.1.15 added the obtain-more stamina popup close→pet selection→unstarted detail→map→city bounded exit after a real low-stamina dispatch deviation. Original failure and agent inventory-refill recovery remain private. Actual failure predicate passed offline; repaired exit replay remains pending. 0.1.16 is a documentation-only scope cleanup before publication; functional exit is unchanged from0.1.15, whose private frozen replay keeps its original source hash.",
   "steps": [
     {
       "name": "01-check-city",
@@ -1497,15 +1497,15 @@
       "name": "open-spot-0",
       "action": "click",
       "image_target": {
-        "template": "treasure-gold",
+        "template": "treasure-ready-v3",
         "bounds": [
           100,
-          175,
+          150,
           688,
-          960
+          980
         ],
         "mode": "grayscale",
-        "min_score": 0.88
+        "min_score": 0.91
       },
       "before": {
         "all": [
@@ -1520,15 +1520,15 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-gold",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
-            "min_score": 0.88
+            "min_score": 0.91
           }
         ]
       },
@@ -1556,15 +1556,15 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-gold",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
-            "min_score": 0.88,
+            "min_score": 0.91,
             "present": false
           }
         ]
@@ -1817,15 +1817,15 @@
       "name": "open-spot-1",
       "action": "click",
       "image_target": {
-        "template": "treasure-blue",
+        "template": "treasure-ready-v3",
         "bounds": [
           100,
-          175,
+          150,
           688,
-          960
+          980
         ],
         "mode": "grayscale",
-        "min_score": 0.88
+        "min_score": 0.91
       },
       "before": {
         "all": [
@@ -1840,15 +1840,15 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-blue",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
-            "min_score": 0.88
+            "min_score": 0.91
           }
         ]
       },
@@ -1876,15 +1876,15 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-blue",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
-            "min_score": 0.88,
+            "min_score": 0.91,
             "present": false
           }
         ]
@@ -2137,15 +2137,15 @@
       "name": "open-spot-2",
       "action": "click",
       "image_target": {
-        "template": "treasure-blue",
+        "template": "treasure-ready-v3",
         "bounds": [
           100,
-          175,
+          150,
           688,
-          960
+          980
         ],
         "mode": "grayscale",
-        "min_score": 0.88
+        "min_score": 0.91
       },
       "before": {
         "all": [
@@ -2160,15 +2160,15 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-blue",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
-            "min_score": 0.88
+            "min_score": 0.91
           }
         ]
       },
@@ -2196,15 +2196,15 @@
         ],
         "template_regions": [
           {
-            "template": "treasure-blue",
+            "template": "treasure-ready-v3",
             "bounds": [
               100,
-              175,
+              150,
               688,
-              960
+              980
             ],
             "mode": "grayscale",
-            "min_score": 0.88,
+            "min_score": 0.91,
             "present": false
           }
         ]
@@ -2454,6 +2454,326 @@
       }
     },
     {
+      "name": "open-spot-3",
+      "action": "click",
+      "image_target": {
+        "template": "treasure-ready-v3",
+        "bounds": [
+          100,
+          150,
+          688,
+          980
+        ],
+        "mode": "grayscale",
+        "min_score": 0.91
+      },
+      "before": {
+        "all": [
+          "宠物寻宝",
+          "今日剩余寻宝次数"
+        ],
+        "none": [
+          "藏宝点",
+          "寻宝派遣",
+          "获得奖励",
+          "个人宝藏"
+        ],
+        "template_regions": [
+          {
+            "template": "treasure-ready-v3",
+            "bounds": [
+              100,
+              150,
+              688,
+              980
+            ],
+            "mode": "grayscale",
+            "min_score": 0.91
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "个人宝藏",
+          "联盟宝藏"
+        ],
+        "any": [
+          "寻宝派遣",
+          "寻宝中"
+        ]
+      },
+      "observe_attempts": 8,
+      "skip_if": {
+        "all": [
+          "宠物寻宝",
+          "今日剩余寻宝次数"
+        ],
+        "none": [
+          "藏宝点",
+          "寻宝派遣",
+          "获得奖励",
+          "个人宝藏"
+        ],
+        "template_regions": [
+          {
+            "template": "treasure-ready-v3",
+            "bounds": [
+              100,
+              150,
+              688,
+              980
+            ],
+            "mode": "grayscale",
+            "min_score": 0.91,
+            "present": false
+          }
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "宠物寻宝",
+          "今日剩余寻宝次数"
+        ],
+        "none": [
+          "藏宝点",
+          "寻宝派遣",
+          "获得奖励",
+          "个人宝藏"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              275,
+              110,
+              525,
+              165
+            ],
+            "pattern": "今日剩余寻宝次数[:：]?0",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "open-pet-selection-3",
+      "action": "click",
+      "point": [
+        394,
+        888
+      ],
+      "before": {
+        "all": [
+          "寻宝派遣",
+          "个人宝藏",
+          "联盟宝藏"
+        ],
+        "none": [
+          "寻宝中",
+          "寻宝完成"
+        ]
+      },
+      "after": {
+        "all": [
+          "寻宝派遣",
+          "宠物列表"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              375,
+              850,
+              440,
+              887
+            ],
+            "pattern": "10",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              320,
+              815,
+              480,
+              855
+            ],
+            "pattern": "开[始姶]寻宝",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "宠物寻宝",
+            "今日剩余寻宝次数"
+          ],
+          "none": [
+            "藏宝点",
+            "寻宝派遣",
+            "获得奖励",
+            "个人宝藏"
+          ]
+        },
+        {
+          "all": [
+            "寻宝中",
+            "个人宝藏",
+            "联盟宝藏"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              195,
+              477,
+              592,
+              520
+            ],
+            "min": 1,
+            "max": 18000
+          }
+        }
+      ]
+    },
+    {
+      "name": "start-treasure-3",
+      "action": "click",
+      "point": [
+        394,
+        855
+      ],
+      "before": {
+        "all": [
+          "寻宝派遣",
+          "宠物列表"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              375,
+              850,
+              440,
+              887
+            ],
+            "pattern": "10",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              320,
+              815,
+              480,
+              855
+            ],
+            "pattern": "开[始姶]寻宝",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "寻宝中",
+          "个人宝藏",
+          "联盟宝藏"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            195,
+            477,
+            592,
+            520
+          ],
+          "min": 1,
+          "max": 18000
+        }
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "宠物寻宝",
+            "今日剩余寻宝次数"
+          ],
+          "none": [
+            "藏宝点",
+            "寻宝派遣",
+            "获得奖励",
+            "个人宝藏"
+          ]
+        },
+        {
+          "all": [
+            "寻宝中",
+            "个人宝藏",
+            "联盟宝藏"
+          ],
+          "timer_seconds": {
+            "bounds": [
+              195,
+              477,
+              592,
+              520
+            ],
+            "min": 1,
+            "max": 18000
+          }
+        }
+      ]
+    },
+    {
+      "name": "close-running-3",
+      "action": "click",
+      "point": [
+        625,
+        249
+      ],
+      "before": {
+        "all": [
+          "寻宝中",
+          "个人宝藏",
+          "联盟宝藏"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            195,
+            477,
+            592,
+            520
+          ],
+          "min": 1,
+          "max": 18000
+        }
+      },
+      "after": {
+        "all": [
+          "宠物寻宝",
+          "今日剩余寻宝次数"
+        ],
+        "none": [
+          "藏宝点",
+          "寻宝派遣",
+          "获得奖励",
+          "个人宝藏"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "宠物寻宝",
+          "今日剩余寻宝次数"
+        ],
+        "none": [
+          "藏宝点",
+          "寻宝派遣",
+          "获得奖励",
+          "个人宝藏"
+        ]
+      }
+    },
+    {
       "name": "exit-pet-map",
       "action": "click",
       "point": [
@@ -2542,6 +2862,26 @@
     },
     "max_exit_steps": 5,
     "exits": [
+      {
+        "name": "close-insufficient-stamina-supply",
+        "action": "click",
+        "point": [
+          646,
+          137
+        ],
+        "before": {
+          "all": [
+            "获取更多",
+            "领主体力",
+            "丰盛的招待"
+          ]
+        },
+        "after": [
+          "寻宝派遣",
+          "宠物列表"
+        ],
+        "observe_attempts": 5
+      },
       {
         "name": "exit-profile",
         "action": "click",

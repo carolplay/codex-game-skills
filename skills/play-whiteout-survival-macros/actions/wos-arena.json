@@ -1,14 +1,14 @@
 {
   "action_id": "wos-arena",
-  "action_version": "0.1.4",
+  "action_version": "0.1.6",
   "name": "WOS arena",
   "reference_size": [
     788,
     1079
   ],
-  "execution_timeout_seconds": 600,
+  "execution_timeout_seconds": 900,
   "status": "candidate",
-  "verification_scope": "Post-update actual header changed to optional exploration qualifier; bounded header OCR accepts both titles and excludes city overview. Old main failed entry and exit preserved; nextrole pending.",
+  "verification_scope": "0.1.5 adds independent five-challenge chest after free attempts; five-of-five and already-claimed countdown branches are distinct. Development agent actually claimed100arena coins and observed timer; fixed macro branch live pending next role. Prior arena battles preserved. 0.1.5 low-level fourth battle still visibly animating at last observation, result arrived during bounded exit; original deviation retained. 0.1.6 uses separate bounded observation-only result wait with30 attempts and3second intervals, overall bounded900s; final result conditions and single dispatch unchanged. Live long-battle branch pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -1184,6 +1184,46 @@
       ],
       "after": {
         "any": [
+          "VS",
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-0"
+    },
+    {
+      "name": "wait-result-0",
+      "action": "observe",
+      "before": {
+        "any": [
           "胜利",
           "失败",
           "战败"
@@ -1201,6 +1241,7 @@
         ]
       },
       "observe_attempts": 30,
+      "observe_interval_seconds": 3,
       "skip_if": {
         "all": [
           "挑战列表",
@@ -1377,6 +1418,46 @@
       ],
       "after": {
         "any": [
+          "VS",
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-1"
+    },
+    {
+      "name": "wait-result-1",
+      "action": "observe",
+      "before": {
+        "any": [
           "胜利",
           "失败",
           "战败"
@@ -1394,6 +1475,7 @@
         ]
       },
       "observe_attempts": 30,
+      "observe_interval_seconds": 3,
       "skip_if": {
         "all": [
           "挑战列表",
@@ -1570,6 +1652,46 @@
       ],
       "after": {
         "any": [
+          "VS",
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-2"
+    },
+    {
+      "name": "wait-result-2",
+      "action": "observe",
+      "before": {
+        "any": [
           "胜利",
           "失败",
           "战败"
@@ -1587,6 +1709,7 @@
         ]
       },
       "observe_attempts": 30,
+      "observe_interval_seconds": 3,
       "skip_if": {
         "all": [
           "挑战列表",
@@ -1763,6 +1886,46 @@
       ],
       "after": {
         "any": [
+          "VS",
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-3"
+    },
+    {
+      "name": "wait-result-3",
+      "action": "observe",
+      "before": {
+        "any": [
           "胜利",
           "失败",
           "战败"
@@ -1780,6 +1943,7 @@
         ]
       },
       "observe_attempts": 30,
+      "observe_interval_seconds": 3,
       "skip_if": {
         "all": [
           "挑战列表",
@@ -1956,6 +2120,46 @@
       ],
       "after": {
         "any": [
+          "VS",
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if_step_skipped": "choose-4"
+    },
+    {
+      "name": "wait-result-4",
+      "action": "observe",
+      "before": {
+        "any": [
           "胜利",
           "失败",
           "战败"
@@ -1973,6 +2177,7 @@
         ]
       },
       "observe_attempts": 30,
+      "observe_interval_seconds": 3,
       "skip_if": {
         "all": [
           "挑战列表",
@@ -2098,6 +2303,143 @@
           }
         ]
       }
+    },
+    {
+      "name": "claim-five-challenge-reward",
+      "action": "click",
+      "point": [
+        191,
+        855
+      ],
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              145,
+              899,
+              250,
+              934
+            ],
+            "pattern": "5\\s*/\\s*5",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": [
+        "获得奖励"
+      ],
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            145,
+            899,
+            250,
+            934
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "dismiss-five-challenge-reward",
+      "action": "click",
+      "point": [
+        518,
+        990
+      ],
+      "before": {
+        "all": [
+          "获得奖励",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "after": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            145,
+            899,
+            250,
+            934
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "skip_if_step_skipped": "claim-five-challenge-reward",
+      "observe_attempts": 5
+    },
+    {
+      "name": "verify-five-challenge-reward-cooldown",
+      "action": "observe",
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            145,
+            899,
+            250,
+            934
+          ],
+          "min": 1,
+          "max": 86400
+        }
+      },
+      "observe_attempts": 5
     },
     {
       "name": "close-list",
@@ -2247,6 +2589,40 @@
     },
     "max_exit_steps": 5,
     "exits": [
+      {
+        "name": "exit-five-challenge-reward",
+        "action": "click",
+        "point": [
+          518,
+          990
+        ],
+        "before": {
+          "all": [
+            "获得奖励",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        },
+        "after": {
+          "all": [
+            "挑战列表",
+            "今日剩余挑战次数"
+          ],
+          "page_text_regions": [
+            [
+              245,
+              800,
+              470,
+              850
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
       {
         "name": "exit-profile",
         "action": "click",

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.11",
+  "action_version": "0.2.12",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -5080,7 +5080,8 @@
         },
         "observe_attempts": 5
       }
-    ]
+    ],
+    "recovery_timeout_seconds": 120
   },
   "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback. 0.2.8: mainbulkexecute8 completed but firstclaimclick had no effect; allow unchanged claimpage only asintermediate, one explicitfreshgreen retry, strictrewardpostcondition preserved. Retryskips reward/disabled; no unboundedclickloop. Savedfailureframepositive; nextrolelivepending. Retryusesknownmap+leftbutton+greenregion, notcursoroccluded rightbuttonlabel.",
   "business_dependencies": [

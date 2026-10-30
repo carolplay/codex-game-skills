@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-coal",
-  "action_version": "0.1.15",
+  "action_version": "0.1.18",
   "name": "WOS gather_coal",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending.",
+  "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending.; Candidate: Y defaultbeast carousel hidesfullresource labels, oldentry failed4tasks. Known NPCsearch pane→visible partialmeaticon679779→close/reopen centersmeat, agent actualnavigation verified. Macro positivebranch pending; normalresource layout skips normalization. No dispatch/sample claimed as macro pass.",
   "steps": [
     {
       "name": "01-check-city",
@@ -191,7 +191,8 @@
             ],
             "pattern": "([1-6])/\\1",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       }
@@ -234,7 +235,8 @@
           "生肉",
           "木材",
           "煤矿",
-          "铁矿"
+          "铁矿",
+          "最高可挑战"
         ],
         "none": [
           "出征"
@@ -285,6 +287,177 @@
           }
         ]
       }
+    },
+    {
+      "name": "normalize-npc-resource-tab",
+      "action": "click",
+      "point": [
+        679,
+        779
+      ],
+      "before": {
+        "all": [
+          "搜索",
+          "最高可挑战",
+          "自动狩猎"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            700,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            700,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "搜索",
+          "资源点"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            700,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "normalize-npc-resource-close",
+      "action": "click",
+      "point": [
+        394,
+        400
+      ],
+      "before": {
+        "all": [
+          "搜索",
+          "资源点"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            700,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if_step_skipped": "normalize-npc-resource-tab",
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "normalize-npc-resource-reopen",
+      "action": "click",
+      "point": [
+        135,
+        747
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "搜索",
+          "采集者",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if_step_skipped": "normalize-npc-resource-tab",
+      "after": {
+        "all": [
+          "搜索"
+        ],
+        "any": [
+          "生肉",
+          "木材",
+          "煤矿",
+          "铁矿"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            700,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
     },
     {
       "name": "recenter-select-生肉",
@@ -750,6 +923,14 @@
             "crop_ocr": true,
             "min_confidence": 0.3
           }
+        ],
+        "page_text_regions": [
+          [
+            225,
+            345,
+            565,
+            475
+          ]
         ]
       },
       "observe_attempts": 5
@@ -779,6 +960,14 @@
             "crop_ocr": true,
             "min_confidence": 0.3
           }
+        ],
+        "page_text_regions": [
+          [
+            225,
+            345,
+            565,
+            475
+          ]
         ]
       },
       "after": {
