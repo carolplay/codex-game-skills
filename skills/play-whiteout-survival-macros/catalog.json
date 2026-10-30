@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.120",
+  "package_version": "0.12.121",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -527,8 +527,8 @@
     "labyrinth_challenge": {
       "path": "actions/wos-labyrinth-single-challenge.json",
       "action_id": "wos-labyrinth-single-challenge",
-      "action_version": "0.1.1",
-      "sha256": "dd8e45515b178947aad21a0388cd14654cafe8eb8d96cf4b56ec747db49f90c5",
+      "action_version": "0.1.2",
+      "sha256": "939c3535514481c78313f1dabbabdfcf782e4477c1ed7b31938715e8b451af85",
       "period": "day",
       "utility": false,
       "verification_scope": "0.1.0 full victorious replay and city return passed on a lower-level role. Mature-role underfilled confirmation proceeded to defeat; original missing-footer deviation and agent recovery preserved. 0.1.1 full replay on that mature role verified defeat-specific close, zone/root/city return, then recruit/daily continuation. Victory branch in0.1.1 and other calendar cave layouts await fresh live coverage; one challenge attempt satisfies daily challenge counter even on defeat."

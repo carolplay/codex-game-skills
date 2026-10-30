@@ -1,13 +1,13 @@
 {
   "action_id": "wos-labyrinth-single-challenge",
-  "action_version": "0.1.1",
+  "action_version": "0.1.2",
   "name": "WOS one actual beast-cave challenge, distinct from free sweep",
   "status": "candidate",
   "reference_size": [
     788,
     1079
   ],
-  "execution_timeout_seconds": 240,
+  "execution_timeout_seconds": 420,
   "steps": [
     {
       "name": "01-check-city",
@@ -1068,34 +1068,19 @@
       }
     },
     {
-      "name": "open-beast-cave-once",
+      "name": "open-visible-known-domain-once",
       "action": "click",
-      "point": [
-        270,
-        347
-      ],
       "before": {
         "all": [
           "地心探险"
         ],
-        "text_regions": [
-          {
-            "bounds": [
-              145,
-              395,
-              380,
-              465
-            ],
-            "pattern": "群兽洞窟",
-            "crop_ocr": true,
-            "prefer_frame_ocr": true,
-            "min_confidence": 0.3
-          }
+        "none": [
+          "在此战斗",
+          "领取"
         ]
       },
       "after": {
         "all": [
-          "群兽洞窟",
           "在此战斗",
           "首胜奖励"
         ],
@@ -1103,9 +1088,32 @@
           "地心探险",
           "点击任意位置关闭",
           "士兵比例"
+        ],
+        "any": [
+          "群兽洞窟",
+          "地下科研所",
+          "装备锻炉"
         ]
       },
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "text_target": {
+        "text": "群兽洞窟|地下科研所|装备锻炉",
+        "regex": true,
+        "bounds": [
+          145,
+          290,
+          620,
+          815
+        ],
+        "offset": [
+          0,
+          -70
+        ],
+        "min_confidence": 0.3,
+        "crop_ocr": true,
+        "prefer_frame_ocr": true,
+        "select": "top-left"
+      }
     },
     {
       "name": "open-single-challenge-army",
@@ -1116,7 +1124,6 @@
       ],
       "before": {
         "all": [
-          "群兽洞窟",
           "在此战斗",
           "首胜奖励"
         ],
@@ -1149,11 +1156,15 @@
             ],
             "min": 0.35
           }
+        ],
+        "any": [
+          "群兽洞窟",
+          "地下科研所",
+          "装备锻炉"
         ]
       },
       "after": {
         "all": [
-          "群兽洞窟",
           "士兵比例",
           "出征"
         ],
@@ -1168,6 +1179,11 @@
             680,
             1079
           ]
+        ],
+        "any": [
+          "群兽洞窟",
+          "地下科研所",
+          "装备锻炉"
         ]
       },
       "observe_attempts": 5
@@ -1181,7 +1197,6 @@
       ],
       "before": {
         "all": [
-          "群兽洞窟",
           "士兵比例",
           "出征"
         ],
@@ -1196,6 +1211,11 @@
             680,
             1079
           ]
+        ],
+        "any": [
+          "群兽洞窟",
+          "地下科研所",
+          "装备锻炉"
         ]
       },
       "after": {
@@ -1248,7 +1268,6 @@
         {
           "all": [
             "失败",
-            "提升宠物实力",
             "调整士兵比例",
             "今日剩余失败次数",
             "查看战报",
@@ -1294,7 +1313,6 @@
       },
       "after": {
         "all": [
-          "群兽洞窟",
           "在此战斗",
           "首胜奖励"
         ],
@@ -1302,13 +1320,17 @@
           "地心探险",
           "点击任意位置关闭",
           "士兵比例"
+        ],
+        "any": [
+          "群兽洞窟",
+          "地下科研所",
+          "装备锻炉"
         ]
       },
       "observe_attempts": 5,
       "skip_if": {
         "all": [
           "失败",
-          "提升宠物实力",
           "调整士兵比例",
           "今日剩余失败次数",
           "查看战报",
@@ -1329,7 +1351,6 @@
       "before": {
         "all": [
           "失败",
-          "提升宠物实力",
           "调整士兵比例",
           "今日剩余失败次数",
           "查看战报",
@@ -1341,7 +1362,6 @@
       },
       "after": {
         "all": [
-          "群兽洞窟",
           "在此战斗",
           "首胜奖励"
         ],
@@ -1349,12 +1369,16 @@
           "地心探险",
           "点击任意位置关闭",
           "士兵比例"
+        ],
+        "any": [
+          "群兽洞窟",
+          "地下科研所",
+          "装备锻炉"
         ]
       },
       "observe_attempts": 5,
       "skip_if": {
         "all": [
-          "群兽洞窟",
           "在此战斗",
           "首胜奖励"
         ],
@@ -1362,6 +1386,11 @@
           "地心探险",
           "点击任意位置关闭",
           "士兵比例"
+        ],
+        "any": [
+          "群兽洞窟",
+          "地下科研所",
+          "装备锻炉"
         ]
       }
     },
@@ -1374,7 +1403,6 @@
       ],
       "before": {
         "all": [
-          "群兽洞窟",
           "在此战斗",
           "首胜奖励"
         ],
@@ -1382,6 +1410,11 @@
           "地心探险",
           "点击任意位置关闭",
           "士兵比例"
+        ],
+        "any": [
+          "群兽洞窟",
+          "地下科研所",
+          "装备锻炉"
         ]
       },
       "after": {
@@ -1610,7 +1643,6 @@
         },
         "after": {
           "all": [
-            "群兽洞窟",
             "在此战斗",
             "首胜奖励"
           ],
@@ -1618,6 +1650,11 @@
             "地心探险",
             "点击任意位置关闭",
             "士兵比例"
+          ],
+          "any": [
+            "群兽洞窟",
+            "地下科研所",
+            "装备锻炉"
           ]
         },
         "observe_attempts": 5
@@ -1632,7 +1669,6 @@
         "before": {
           "all": [
             "失败",
-            "提升宠物实力",
             "调整士兵比例",
             "今日剩余失败次数",
             "查看战报",
@@ -1644,7 +1680,6 @@
         },
         "after": {
           "all": [
-            "群兽洞窟",
             "在此战斗",
             "首胜奖励"
           ],
@@ -1652,6 +1687,11 @@
             "地心探险",
             "点击任意位置关闭",
             "士兵比例"
+          ],
+          "any": [
+            "群兽洞窟",
+            "地下科研所",
+            "装备锻炉"
           ]
         },
         "observe_attempts": 5
@@ -1672,7 +1712,6 @@
         },
         "after": {
           "all": [
-            "群兽洞窟",
             "士兵比例",
             "出征"
           ],
@@ -1687,6 +1726,11 @@
               680,
               1079
             ]
+          ],
+          "any": [
+            "群兽洞窟",
+            "地下科研所",
+            "装备锻炉"
           ]
         },
         "observe_attempts": 5
@@ -1700,7 +1744,6 @@
         ],
         "before": {
           "all": [
-            "群兽洞窟",
             "士兵比例",
             "出征"
           ],
@@ -1715,11 +1758,15 @@
               680,
               1079
             ]
+          ],
+          "any": [
+            "群兽洞窟",
+            "地下科研所",
+            "装备锻炉"
           ]
         },
         "after": {
           "all": [
-            "群兽洞窟",
             "在此战斗",
             "首胜奖励"
           ],
@@ -1727,6 +1774,11 @@
             "地心探险",
             "点击任意位置关闭",
             "士兵比例"
+          ],
+          "any": [
+            "群兽洞窟",
+            "地下科研所",
+            "装备锻炉"
           ]
         },
         "observe_attempts": 5
@@ -1740,7 +1792,6 @@
         ],
         "before": {
           "all": [
-            "群兽洞窟",
             "在此战斗",
             "首胜奖励"
           ],
@@ -1748,6 +1799,11 @@
             "地心探险",
             "点击任意位置关闭",
             "士兵比例"
+          ],
+          "any": [
+            "群兽洞窟",
+            "地下科研所",
+            "装备锻炉"
           ]
         },
         "after": {
@@ -1814,5 +1870,5 @@
       }
     ]
   },
-  "verification_scope": "0.1.0 full victorious replay and city return passed on a lower-level role; mature-role underfilled confirmation proceeded to an actual defeat, whose footerless page was not recognized. Original deviation and normal agent blank-close→zone→root→city preserved. 0.1.1 explicitly separates victory/footer and defeat/retry contexts, closes without retrying the battle. New defeat macro exit awaits targeted replay; other cave/calendar layouts remain partial."
+  "verification_scope": "Candidate: choose one actually visible known domain label rather than hardcoded Cave of Monsters. Supported labels Cave, Earthlab, Forge; after-entry title and battle controls still required. Result/attempt/daily progress checked separately. Remove pet-only defeat hint while retaining failure/result/remaining-attempt controls. No claim that all six domains are covered."
 }
