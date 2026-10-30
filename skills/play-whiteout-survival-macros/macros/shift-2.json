@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.116",
-  "package_version": "0.12.116",
+  "macro_version": "0.12.117",
+  "package_version": "0.12.117",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -95,8 +95,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.5",
-          "sha256": "568147d3749b6c763e262b544c90c78ead9ef67fe629585818063c1a3298d8a9"
+          "action_version": "0.1.6",
+          "sha256": "931919ef1d52ba131e257a4d388d21f7ad2db4cd257c91e26e95a58c46941845"
         },
         {
           "task": "orders",
@@ -361,8 +361,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.5",
-          "sha256": "568147d3749b6c763e262b544c90c78ead9ef67fe629585818063c1a3298d8a9"
+          "action_version": "0.1.6",
+          "sha256": "931919ef1d52ba131e257a4d388d21f7ad2db4cd257c91e26e95a58c46941845"
         },
         {
           "task": "orders",
@@ -609,8 +609,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.5",
-          "sha256": "568147d3749b6c763e262b544c90c78ead9ef67fe629585818063c1a3298d8a9"
+          "action_version": "0.1.6",
+          "sha256": "931919ef1d52ba131e257a4d388d21f7ad2db4cd257c91e26e95a58c46941845"
         },
         {
           "task": "npc_autojoin",
