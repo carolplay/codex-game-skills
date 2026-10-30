@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.12",
+  "action_version": "0.1.13",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -1427,12 +1427,13 @@
       "name": "verify-tree-gain",
       "action": "observe",
       "before": {
-        "all": [
-          "我的海岛"
-        ],
         "none": [
           "生命之树等级",
           "升级"
+        ],
+        "any": [
+          "我的海岛",
+          "我的海鸟"
         ]
       },
       "increased_numbers": [

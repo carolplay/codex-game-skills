@@ -243,6 +243,10 @@ VIP日历0.1.3只核验左上VIP页面标题，不再依赖无关的“每日免
 
 NPC0.1.17低等级实际满兵发起、局部集结行及主城后验通过，随后独立己方胜利战报补齐当天十胜。当前四角色同UTC日十胜均有去重证据；原战败及旧版后置断言失败保留。主号三类训练原队列跨过末班时间，使用库存训练加速后实际任务均到30/30，原宏的“已有队列”通过不改写成早先已完成日常；射手库存加速另有本地原型回放，尚未注册为默认日常action。
 
+### 0.12.122：海岛收益观察的精确OCR别名
+
+海岛0.1.13仅在生命树收益增长的观察步骤接受实测“我的海鸟”OCR别名，保留“我的海岛”以及升级页排除条件，仍要求库存实际增长；不增加点击、不以收益动画替代余额。保存帧正例及错误页面/升级页负例通过。低等级旧版领取后显示收益动画，但验证在误读标题时提前失败，有限出口正常回城；原偏差保留。新版一个成熟角色只到无需领取分支，随后退出被窗口输入错误阻断；真实增长与完整退出尚未现场验收，不能标为修复全通过。
+
 ### 0.12.66 live scope
 
 Warehouse0.1.7 completed a mature-profile replay: four new claims, day total5/5,95 inherited skips without another observation. The20-to1 measurement applies only to an already-found search fragment, not total action speed. Hospital0.1.5 passed the ongoing-treatment branch and normal city exit; its new radial-menu recovery point remains unexercised. Academy0.1.5 has an actual free-claim replay. Store weekcard-to-DailyDeal normalization still needs a live branch test; another cash-store layout remains unresolved. Island inventory OCR passed one mature profile and failed another. Native screen/input permission and WOS acceptance remain pending; all live results here use the existing device channel.
