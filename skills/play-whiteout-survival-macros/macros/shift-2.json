@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.122",
-  "package_version": "0.12.122",
+  "macro_version": "0.12.123",
+  "package_version": "0.12.123",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -223,8 +223,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.13",
-          "sha256": "4b48feda9ebdadd5c3fcb32a6d37ca3c6109a2d6bb70c208f0cdce9b12e45ed1"
+          "action_version": "0.1.14",
+          "sha256": "852bde9cabf36e068cf3e8823d72ddbb41eeda418c69ab1f20bc112c6dc47bf1"
         },
         {
           "task": "war_academy_commission",
@@ -489,8 +489,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.13",
-          "sha256": "4b48feda9ebdadd5c3fcb32a6d37ca3c6109a2d6bb70c208f0cdce9b12e45ed1"
+          "action_version": "0.1.14",
+          "sha256": "852bde9cabf36e068cf3e8823d72ddbb41eeda418c69ab1f20bc112c6dc47bf1"
         },
         {
           "task": "war_academy_commission",
@@ -713,8 +713,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.13",
-          "sha256": "4b48feda9ebdadd5c3fcb32a6d37ca3c6109a2d6bb70c208f0cdce9b12e45ed1"
+          "action_version": "0.1.14",
+          "sha256": "852bde9cabf36e068cf3e8823d72ddbb41eeda418c69ab1f20bc112c6dc47bf1"
         },
         {
           "task": "alliance_incentive",

@@ -247,6 +247,10 @@ NPC0.1.17低等级实际满兵发起、局部集结行及主城后验通过，�
 
 海岛0.1.13仅在生命树收益增长的观察步骤接受实测“我的海鸟”OCR别名，保留“我的海岛”以及升级页排除条件，仍要求库存实际增长；不增加点击、不以收益动画替代余额。保存帧正例及错误页面/升级页负例通过。低等级旧版领取后显示收益动画，但验证在误读标题时提前失败，有限出口正常回城；原偏差保留。新版一个成熟角色只到无需领取分支，随后退出被窗口输入错误阻断；真实增长与完整退出尚未现场验收，不能标为修复全通过。
 
+### 0.12.123：海岛手指指引与产出图案
+
+海岛0.1.14新增已确认海岛页面中的手指指引图案分支：局部模板匹配后点击，必须读到生命结晶库存增长。原绿色判定和普通领取路径保留；普通产出补充实际归一画布中的三个图案别名，保持原阈值。三张保存帧的指引/普通产出正例和无指引负例通过。新版随后在一个成熟角色完成普通生命树实际领取（库存增加5,040）及海岛→主城退出；手指指引不存在时正确跳过新增点击。手指指引存在的正分支仍待现场验收，不将普通路径成功扩为全部图案/岛屿布局通过。入口未找到仍是明确偏差，不以入口缺失推断今天已领取；不将旧版通过或奖励动画改写成新版余额验证。
+
 ### 0.12.66 live scope
 
 Warehouse0.1.7 completed a mature-profile replay: four new claims, day total5/5,95 inherited skips without another observation. The20-to1 measurement applies only to an already-found search fragment, not total action speed. Hospital0.1.5 passed the ongoing-treatment branch and normal city exit; its new radial-menu recovery point remains unexercised. Academy0.1.5 has an actual free-claim replay. Store weekcard-to-DailyDeal normalization still needs a live branch test; another cash-store layout remains unresolved. Island inventory OCR passed one mature profile and failed another. Native screen/input permission and WOS acceptance remain pending; all live results here use the existing device channel.

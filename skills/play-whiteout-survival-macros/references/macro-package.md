@@ -238,3 +238,6 @@ NPC发起组件0.1.8把成熟角色现场通过的0.1.7步骤发布到正式目�
 
 
 包0.12.91：发布前对照历史动作快照，发现医院曾有私有0.1.6，而当前公开0.1.4比它更旧。将本轮固定列修订的临时候选0.1.5退役，正式候选升为0.1.7，避免同版本异内容；业务步骤不变。0.12.90运行快照不改写；锁屏在新治疗和采集分支之前停止，仍无新版现场通过证据。其余50动作对照已存历史最高版本未发现版本回退。
+
+
+0.12.123／海岛0.1.14模板部署：`image_templates.island-tree-guide`绑定`assets/island-tree-guided-a.png`、`assets/island-tree-guided-b.png`、`assets/island-tree-guided-c.png`三个完整文件名，指引阈值0.9，搜索仅限生命树区域。`image_templates.island-life-bubble`绑定原`assets/island-life-bubble.png`以及`assets/island-life-mature-a.png`、`assets/island-life-mature-b.png`、`assets/island-life-mature-c.png`共四个完整路径，普通产出阈值仍0.88。别名上限四张不变，角色身份与完整截图不进入assets。新增分支必须取得实际库存增长与回城证据；入口定位和指引分支分别验收。

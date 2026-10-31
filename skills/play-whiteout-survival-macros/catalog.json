@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.122",
+  "package_version": "0.12.123",
   "executor_min_version": "0.4.9",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -242,11 +242,11 @@
     "island": {
       "path": "actions/wos-island.json",
       "action_id": "wos-island",
-      "action_version": "0.1.13",
-      "sha256": "4b48feda9ebdadd5c3fcb32a6d37ca3c6109a2d6bb70c208f0cdce9b12e45ed1",
+      "action_version": "0.1.14",
+      "sha256": "852bde9cabf36e068cf3e8823d72ddbb41eeda418c69ab1f20bc112c6dc47bf1",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.13: tree-gain observation accepts the exact observed OCR alias 我的海鸟 as well as 我的海岛, preserving upgrade exclusions and requiring actual inventory increase. Failed-frame positive and wrong-page/upgrade negative checks passed; fresh live acceptance recorded per role. No new business clicks."
+      "verification_scope": "Guided-tree local template branch plus existing strict inventory gain; three recorded guide-positive frames and guide-absent negative passed. Output leaf aliases retain threshold. New branch live replay pending. Entry lookup failure remains explicit; do not infer hidden entry complete."
     },
     "orders": {
       "path": "actions/wos-orders.json",

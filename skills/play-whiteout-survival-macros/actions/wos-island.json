@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.13",
+  "action_version": "0.1.14",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -1364,6 +1364,107 @@
           "min_confidence": 0.3
         }
       ]
+    },
+    {
+      "name": "collect-guided-tree",
+      "action": "click",
+      "image_target": {
+        "template": "island-tree-guide",
+        "bounds": [
+          315,
+          245,
+          480,
+          410
+        ],
+        "min_score": 0.9,
+        "mode": "grayscale"
+      },
+      "before": {
+        "any": [
+          "我的海岛",
+          "我的海鸟"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ],
+        "template_regions": [
+          {
+            "template": "island-tree-guide",
+            "bounds": [
+              315,
+              245,
+              480,
+              410
+            ],
+            "min_score": 0.9,
+            "mode": "grayscale"
+          }
+        ]
+      },
+      "skip_if": {
+        "any": [
+          "我的海岛",
+          "我的海鸟"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ],
+        "template_regions": [
+          {
+            "template": "island-tree-guide",
+            "bounds": [
+              315,
+              245,
+              480,
+              410
+            ],
+            "min_score": 0.9,
+            "mode": "grayscale",
+            "present": false
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "我的海岛",
+          "我的海鸟"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "verify-guided-tree-gain",
+      "action": "observe",
+      "before": {
+        "any": [
+          "我的海岛",
+          "我的海鸟"
+        ],
+        "none": [
+          "生命之树等级",
+          "升级"
+        ]
+      },
+      "increased_numbers": [
+        {
+          "name": "life",
+          "bounds": [
+            580,
+            39,
+            653,
+            78
+          ],
+          "min_confidence": 0.3
+        }
+      ],
+      "skip_if_step_skipped": "collect-guided-tree",
+      "observe_attempts": 30
     },
     {
       "name": "collect-tree",
