@@ -1,13 +1,13 @@
 {
   "action_id": "wos-stamina-inventory-refill",
-  "action_version": "0.1.2",
+  "action_version": "0.1.3",
   "name": "WOS refill below-capacity stamina from owned items",
   "reference_size": [
     788,
     1079
   ],
   "status": "candidate",
-  "execution_timeout_seconds": 180,
+  "execution_timeout_seconds": 240,
   "steps": [
     {
       "name": "01-check-city",
@@ -297,7 +297,7 @@
       "observe_attempts": 5
     },
     {
-      "name": "use-one-owned-stamina-item",
+      "name": "use-owned-stamina-item-01",
       "action": "click",
       "point": [
         575,
@@ -308,20 +308,6 @@
           "获取更多",
           "领主体力",
           "丰盛的招待"
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              530,
-              548,
-              625,
-              605
-            ],
-            "pattern": "^使用$",
-            "crop_ocr": true,
-            "prefer_frame_ocr": true,
-            "min_confidence": 0.3
-          }
         ],
         "green_regions": [
           {
@@ -354,49 +340,7 @@
           "min_confidence": 0.3
         }
       ],
-      "observe_attempts": 5
-    },
-    {
-      "name": "use-owned-fill-shortcut",
-      "action": "click",
-      "point": [
-        412,
-        573
-      ],
-      "before": {
-        "all": [
-          "获取更多",
-          "领主体力",
-          "丰盛的招待"
-        ],
-        "green_regions": [
-          {
-            "bounds": [
-              350,
-              548,
-              472,
-              605
-            ],
-            "min": 0.65
-          },
-          {
-            "bounds": [
-              530,
-              548,
-              625,
-              605
-            ],
-            "min": 0.65
-          }
-        ]
-      },
-      "after": {
-        "all": [
-          "获取更多",
-          "领主体力",
-          "丰盛的招待"
-        ]
-      },
+      "observe_attempts": 5,
       "skip_if": {
         "all": [
           "获取更多",
@@ -412,12 +356,1056 @@
             ],
             "pattern": "^20[0-9]/200$",
             "crop_ocr": true,
-            "prefer_frame_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "use-owned-stamina-item-02",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
             "min_confidence": 0.3
           }
         ]
       },
-      "observe_attempts": 5
+      "skip_if_step_skipped": "use-owned-stamina-item-01"
+    },
+    {
+      "name": "use-owned-stamina-item-03",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-02"
+    },
+    {
+      "name": "use-owned-stamina-item-04",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-03"
+    },
+    {
+      "name": "use-owned-stamina-item-05",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-04"
+    },
+    {
+      "name": "use-owned-stamina-item-06",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-05"
+    },
+    {
+      "name": "use-owned-stamina-item-07",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-06"
+    },
+    {
+      "name": "use-owned-stamina-item-08",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-07"
+    },
+    {
+      "name": "use-owned-stamina-item-09",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-08"
+    },
+    {
+      "name": "use-owned-stamina-item-10",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-09"
+    },
+    {
+      "name": "use-owned-stamina-item-11",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-10"
+    },
+    {
+      "name": "use-owned-stamina-item-12",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-11"
+    },
+    {
+      "name": "use-owned-stamina-item-13",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-12"
+    },
+    {
+      "name": "use-owned-stamina-item-14",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-13"
+    },
+    {
+      "name": "use-owned-stamina-item-15",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-14"
+    },
+    {
+      "name": "use-owned-stamina-item-16",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-15"
+    },
+    {
+      "name": "use-owned-stamina-item-17",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-16"
+    },
+    {
+      "name": "use-owned-stamina-item-18",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-17"
+    },
+    {
+      "name": "use-owned-stamina-item-19",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-18"
+    },
+    {
+      "name": "use-owned-stamina-item-20",
+      "action": "click",
+      "point": [
+        575,
+        573
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              530,
+              548,
+              625,
+              605
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "获取更多",
+          "领主体力",
+          "丰盛的招待"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "领主体力"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              370,
+              235,
+              475,
+              272
+            ],
+            "pattern": "^20[0-9]/200$",
+            "crop_ocr": true,
+            "prefer_frame_ocr": false,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if_step_skipped": "use-owned-stamina-item-19"
     },
     {
       "name": "record-filled-capacity-and-stock",
@@ -437,7 +1425,7 @@
             ],
             "pattern": "^20[0-9]/200$",
             "crop_ocr": true,
-            "prefer_frame_ocr": true,
+            "prefer_frame_ocr": false,
             "min_confidence": 0.3
           }
         ]
@@ -1030,5 +2018,5 @@
       }
     ]
   },
-  "verification_scope": "0.1.0 actual owned-item consumption succeeded, but x3 shortcut OCR read colon3 and bounded exit recovered city. 0.1.1 uses calibrated paired green controls on the already-verified inventory supply page; final capacity and stock observation unchanged. Saved failed-frame positive and city/purchase-row negative checks required; next fixed batch live pending."
+  "verification_scope": "Replace nonexistent left fill shortcut with up to20 guarded existing-owned ten-stamina uses at the observed right button. Same-frame capacity stops at200-209; observed below-capacity state and owned row remain required. No purchase input. Saved frame/control-flow fixtures first; actual replay pending. Owned-use target uses knownpage/ownedrow/greenbutton without redundant glowing button-label OCR. No orange purchase input; livepending."
 }
