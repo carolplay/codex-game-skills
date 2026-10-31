@@ -99,6 +99,15 @@ class ReportListTests(unittest.TestCase):
             data={'lines':[{'text':row},{'text':'2026-10-2721:35:50'}]}
             self.assertEqual([],m.events_from_report_list(data,own_name='Example',own_tag='ABC',role='role',local_timezone='America/Vancouver',evidence='saved-ocr.json'))
 
+    def test_sampled_opening_bracket_glyph_keeps_exact_tag_and_full_name(self):
+        for prefix,name,expected in [('IABCj','Example',1),('IABC]','Example',1),
+                                     ('IXYZj','Example',0),('IABCDj','Example',0),
+                                     ('IABCj','AnotherExample',0),('IABCj','ExampleSuffix',0)]:
+            data={'lines':[{'text':prefix+name+'集结攻击4级剑齿虎获胜'},
+                           {'text':'2026-10-2721:35:50'}]}
+            self.assertEqual(expected,len(m.events_from_report_list(data,own_name='Example',
+                own_tag='ABC',role='role',local_timezone='America/Vancouver',evidence='saved-ocr.json')))
+
     def test_sampled_chinese_glyphs_and_brackets_keep_stable_report_key(self):
         def extract(row):
             return m.events_from_report_list(

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-enlistment",
-  "action_version": "0.1.6",
+  "action_version": "0.1.7",
   "name": "WOS enlistment",
   "reference_size": [
     788,
@@ -559,7 +559,8 @@
             ],
             "pattern": ".*治疗.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -596,7 +597,8 @@
             ],
             "pattern": ".*治疗.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -633,7 +635,8 @@
             ],
             "pattern": ".*治疗.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -674,7 +677,8 @@
             ],
             "pattern": ".*治疗.*",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
