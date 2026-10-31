@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-lancer",
-  "action_version": "0.3.8",
+  "action_version": "0.3.10",
   "name": "WOS — 矛兵 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -165,12 +165,132 @@
           ]
         ]
       },
+      "observe_attempts": 5,
+      "after": {
+        "any": [
+          "城镇",
+          "野外",
+          "盾兵"
+        ],
+        "none": [
+          "领主档案"
+        ]
+      }
+    },
+    {
+      "name": "training-reopen-after-interruption",
+      "action": "click",
+      "point": [
+        109,
+        482
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建造队列",
+          "游历补给"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "野外"
+        ],
+        "any": [
+          "日常",
+          "城镇",
+          "部队训练",
+          "建造队列",
+          "建筑队列"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            220,
+            480,
+            275
+          ]
+        ]
+      },
+      "observe_attempts": 4,
+      "skip_if_any": [
+        [
+          "盾兵",
+          "矛兵",
+          "射手"
+        ],
+        {
+          "all": [
+            "野外"
+          ],
+          "any": [
+            "日常",
+            "城镇",
+            "部队训练",
+            "建造队列",
+            "建筑队列"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              220,
+              480,
+              275
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "training-reselect-town-after-interruption",
+      "action": "click",
+      "point": [
+        161,
+        249
+      ],
+      "before": {
+        "all": [
+          "野外"
+        ],
+        "any": [
+          "日常",
+          "城镇",
+          "部队训练",
+          "建造队列",
+          "建筑队列"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            220,
+            480,
+            275
+          ]
+        ]
+      },
       "after": [
         "盾兵",
         "矛兵",
         "射手"
       ],
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "skip_if": [
+        "盾兵",
+        "矛兵",
+        "射手"
+      ]
     },
     {
       "name": "training-locate",

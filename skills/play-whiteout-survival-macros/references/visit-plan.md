@@ -251,6 +251,14 @@ NPC0.1.17低等级实际满兵发起、局部集结行及主城后验通过，�
 
 海岛0.1.14新增已确认海岛页面中的手指指引图案分支：局部模板匹配后点击，必须读到生命结晶库存增长。原绿色判定和普通领取路径保留；普通产出补充实际归一画布中的三个图案别名，保持原阈值。三张保存帧的指引/普通产出正例和无指引负例通过。新版随后在一个成熟角色完成普通生命树实际领取（库存增加5,040）及海岛→主城退出；手指指引不存在时正确跳过新增点击。手指指引存在的正分支仍待现场验收，不将普通路径成功扩为全部图案/岛屿布局通过。入口未找到仍是明确偏差，不以入口缺失推断今天已领取；不将旧版通过或奖励动画改写成新版余额验证。
 
+### 0.12.124：训练概览被打断后的单次恢复
+
+盾兵/矛兵0.3.9、射手0.3.8在定位训练项之前增加有限恢复：仅当概览消失且主城锚点重新成立，重开一次概览并重选城镇。原训练项列表已可见则跳过新增输入，不重复点击训练开始。实际失败主城帧正例、原成功概览帧负例及反向条件通过；恢复触发分支尚待现场验收。原矛兵偏差保留，后续回放另记版本和结果。
+
+### 0.12.125：让训练恢复分支真正可达
+
+0.12.124定向矛兵回放在首次城镇页签的旧后置断言就停止，尚未到新增恢复步骤；原失败如实保留。0.12.125将该位置改为紧接着分辨已见训练列表、仍在概览、或已回主城：列表已见跳过；概览仍在则仅重选一次城镇；回主城则先重开概览。最后仍严格要求三类兵种列表，不对未知页面继续点击，不重试训练开始。新增可达路径待下一角色验证。
+
 ### 0.12.66 live scope
 
 Warehouse0.1.7 completed a mature-profile replay: four new claims, day total5/5,95 inherited skips without another observation. The20-to1 measurement applies only to an already-found search fragment, not total action speed. Hospital0.1.5 passed the ongoing-treatment branch and normal city exit; its new radial-menu recovery point remains unexercised. Academy0.1.5 has an actual free-claim replay. Store weekcard-to-DailyDeal normalization still needs a live branch test; another cash-store layout remains unresolved. Island inventory OCR passed one mature profile and failed another. Native screen/input permission and WOS acceptance remain pending; all live results here use the existing device channel.
