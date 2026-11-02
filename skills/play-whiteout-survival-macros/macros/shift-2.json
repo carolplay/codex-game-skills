@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.135",
-  "package_version": "0.12.135",
+  "macro_version": "0.12.137",
+  "package_version": "0.12.137",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -133,8 +133,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.12",
-          "sha256": "37043c38168d965d1e9f406528d32d2637e1ca33ccc54027cd8ef917e49560af"
+          "action_version": "0.2.13",
+          "sha256": "8eaaa57bfa965aa1f525a7a4dd9d7a4ef653f0721eeb9a9cf2a933020ae032bf"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -399,8 +399,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.12",
-          "sha256": "37043c38168d965d1e9f406528d32d2637e1ca33ccc54027cd8ef917e49560af"
+          "action_version": "0.2.13",
+          "sha256": "8eaaa57bfa965aa1f525a7a4dd9d7a4ef653f0721eeb9a9cf2a933020ae032bf"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -623,8 +623,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.12",
-          "sha256": "37043c38168d965d1e9f406528d32d2637e1ca33ccc54027cd8ef917e49560af"
+          "action_version": "0.2.13",
+          "sha256": "8eaaa57bfa965aa1f525a7a4dd9d7a4ef653f0721eeb9a9cf2a933020ae032bf"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -743,7 +743,7 @@
       ],
       "excluded": {
         "vip": "每日首班核验VIP，本班不重复稳定检查",
-        "academy": "未解锁或等级界面尚未验证，不假定成熟号流程适用",
+        "academy": "当前低等级角色已到25级，雪原游历入口及免费补给模型实领10已确认；成熟宏首次引导/标题仍待适配，不再按未解锁解释此覆盖缺口",
         "crystal": "未解锁或等级界面尚未验证，不假定成熟号流程适用",
         "refined": "未解锁或等级界面尚未验证，不假定成熟号流程适用",
         "expert": "当前低等级专家奖励入口尚未采样；这是待核验覆盖缺口，不把它推定为未解锁",
@@ -752,8 +752,8 @@
         "orders": "当前低等级指令页尚未采样；此次被用户接管中断，不把未执行记为未解锁",
         "research": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
         "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
-        "travel_idle": "当前低等级绑定角色未到25级，学院/游历尚未解锁；后续按实际解锁更新",
-        "travel_idle_claim": "当前低等级绑定角色未到25级，学院/游历尚未解锁；后续按实际解锁更新",
+        "travel_idle": "当前25级雪原游历阶段已开放，但挂机/自动按钮现场仍带锁；按实际功能锁定排除，后续检查解锁",
+        "travel_idle_claim": "当前25级游历尚无挂机队列，挂机按钮仍带锁；定向空队列检查通过，后续按实际功能解锁更新",
         "war_academy_commission": "战争学院尚未解锁，按实际等级排除",
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",

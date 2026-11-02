@@ -31,6 +31,21 @@ def build_legacy(flows):
    for v in x:strengthen(v)
  strengthen(steps)
  return {'action_id':'wos-intel-cycle','action_version':'0.1.0','name':'WOS local mixed intelligence cycle','reference_size':[788,1079],'status':'candidate','execution_timeout_seconds':1800,'repeat_from':'cycle-0-empty-check','steps':steps,'task_contract':copy.deepcopy(flows['hero']['task_contract']),'verification_scope':'Repeat mixed tasks until registered markers are absent; no task-count cap, 1800s watchdog; unknownskins and bounty not inferredcomplete. Standalone ordinarycomponents and Firebeast paths were sampled; fullcycle livepending.','business_dependencies':['Fixedcityentry andexit; local map must be re-observed before every selection','Firebeast/ordinarybeast/rescue/hero may reveal more queued tasks afterclaim; repeatuntil allknownmarkers absent or1800s watchdog','Absence of registered glyphs is not proof that unknownskins/bounties are done; final auditrecords deviations'],'component_versions':{k:{'action_id':v['action_id'],'action_version':v['action_version'],'sha256':hashlib.sha256(json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()} for k,v in flows.items()}}
+def apply_bulk_lock_layout(flow):
+ """A visible bulk label can be locked below lighthouse20; use legacy then."""
+ flow=copy.deepcopy(flow)
+ spec={'template':'intel-bulk-locked','bounds':[359,955,405,1012],'mode':'white-glyph','min_score':.94}
+ locked={'all':['情报','下次刷新','全部执行'],'page_text_regions':[[110,970,680,1060]],'template_regions':[spec]}
+ for step in flow['steps']:
+  name=step['name']
+  if name in ('batch-mode','event-firebeast-select'):step.setdefault('skip_if_any',[]).append(copy.deepcopy(locked))
+  if name=='legacy-mode':step['skip_if']['template_regions']=[{**spec,'present':False}]
+  if name=='legacy-empty-check':step['finish_if']['none']=[label for label in step['finish_if'].get('none',[]) if label!='全部执行']
+  if name.startswith('legacy-'):
+   for condition in step.get('skip_if_any',[]):
+    if '全部执行' in condition.get('all',[]):condition['template_regions']=[{**spec,'present':False}]
+ return flow
+
 def build(flows):
  """New game-owned bulk execution; keep the event-only firebeast path."""
  legacy=build_legacy(flows)
@@ -114,7 +129,7 @@ def build(flows):
     expanded.extend([s,follow]);continue
   expanded.append(s)
  steps=expanded
- return {**legacy,'name':'WOS bulk intelligence execution plus event firebeast','steps':steps,'repeat_from':'batch-round-anchor','verification_scope':'0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.','business_dependencies':['City entry and exit; stamina meal uses lighthouse plus before this action','Game execute-all handles ordinary intel; repeat after claim reveals queued tasks','Event firebeast remains separate; no claim that bulk clears event tasks','Explicit zero execute/claim counts, disabled buttons, not executing and no firebeast required for bulk completion','If bulk button absent, use fixed local legacy branches; actual UI determines availability']}
+ return apply_bulk_lock_layout({**legacy,'name':'WOS bulk intelligence execution plus event firebeast','steps':steps,'repeat_from':'batch-round-anchor','verification_scope':'0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.','business_dependencies':['City entry and exit; stamina meal uses lighthouse plus before this action','Game execute-all handles ordinary intel; repeat after claim reveals queued tasks','Event firebeast remains separate; no claim that bulk clears event tasks','Explicit zero execute/claim counts, disabled buttons, not executing and no firebeast required for bulk completion','If bulk button absent or visibly locked, use fixed local legacy branches; actual UI determines availability']})
 
 if __name__=='__main__':
  import argparse
