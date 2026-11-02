@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.17",
+  "action_version": "0.1.20",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -425,9 +425,9 @@
         "text": "生肉",
         "bounds": [
           100,
-          760,
+          740,
           690,
-          835
+          1065
         ],
         "offset": [
           0,
@@ -684,10 +684,10 @@
       "text_target": {
         "text": "冰原",
         "bounds": [
-          98,
-          750,
+          100,
+          740,
           690,
-          835
+          1065
         ],
         "offset": [
           0,
@@ -695,7 +695,8 @@
         ],
         "min_confidence": 0.3,
         "crop_ocr": true,
-        "exact": false
+        "exact": false,
+        "prefer_frame_ocr": true
       },
       "observe_attempts": 5,
       "after": {

@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.128",
-  "package_version": "0.12.128",
+  "macro_version": "0.12.135",
+  "package_version": "0.12.135",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -89,12 +89,6 @@
           "sha256": "ab58b3477433b667871a25d5f726db2cffb2d57a3c79e76843a5c2157d2ad543"
         },
         {
-          "task": "arena",
-          "action_id": "wos-arena",
-          "action_version": "0.1.6",
-          "sha256": "931919ef1d52ba131e257a4d388d21f7ad2db4cd257c91e26e95a58c46941845"
-        },
-        {
           "task": "orders",
           "action_id": "wos-orders",
           "action_version": "0.1.6",
@@ -144,8 +138,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.17",
-          "sha256": "6eeac52e5aded231e6b96ac64908cfc13a2c460028f9eca7fb0bb21d7279665f",
+          "action_version": "0.1.20",
+          "sha256": "cedd17e886c4144a95989171990bb26770238653d58d32279f2924dc48586534",
           "task": "npc_rally_start"
         },
         {
@@ -199,8 +193,8 @@
         {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
-          "action_version": "0.1.4",
-          "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05"
+          "action_version": "0.1.5",
+          "sha256": "366b3e3cff3a52c601d2c7962a387717af33f7af9c16f097eabbacef3f2504ef"
         },
         {
           "task": "warehouse",
@@ -247,8 +241,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.22",
-          "sha256": "d20995595e1d07ded8e8c5e7ab1bb1c80f30ea749e015a653919cdd8daf61d7d"
+          "action_version": "0.1.23",
+          "sha256": "3f9d5ff67b2470ef7a28856b5b2e89430fe25b462df06f415e245b41582e9b19"
         },
         {
           "task": "labyrinth_challenge",
@@ -267,6 +261,12 @@
           "action_id": "wos-alliance-donate",
           "action_version": "0.1.9",
           "sha256": "b5afa35220a40e46e5822c3db7865edb3be8e2dfc451304a55e7028d9b023d6a"
+        },
+        {
+          "task": "arena",
+          "action_id": "wos-arena",
+          "action_version": "0.1.9",
+          "sha256": "ac78d0bdabdd8ea846bd61292a3b6afa054d013291133f41f273917053a554d2"
         },
         {
           "task": "daily",
@@ -360,12 +360,6 @@
           "sha256": "ab58b3477433b667871a25d5f726db2cffb2d57a3c79e76843a5c2157d2ad543"
         },
         {
-          "task": "arena",
-          "action_id": "wos-arena",
-          "action_version": "0.1.6",
-          "sha256": "931919ef1d52ba131e257a4d388d21f7ad2db4cd257c91e26e95a58c46941845"
-        },
-        {
           "task": "orders",
           "action_id": "wos-orders",
           "action_version": "0.1.6",
@@ -415,8 +409,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.17",
-          "sha256": "6eeac52e5aded231e6b96ac64908cfc13a2c460028f9eca7fb0bb21d7279665f",
+          "action_version": "0.1.20",
+          "sha256": "cedd17e886c4144a95989171990bb26770238653d58d32279f2924dc48586534",
           "task": "npc_rally_start"
         },
         {
@@ -470,8 +464,8 @@
         {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
-          "action_version": "0.1.4",
-          "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05"
+          "action_version": "0.1.5",
+          "sha256": "366b3e3cff3a52c601d2c7962a387717af33f7af9c16f097eabbacef3f2504ef"
         },
         {
           "task": "warehouse",
@@ -518,8 +512,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.22",
-          "sha256": "d20995595e1d07ded8e8c5e7ab1bb1c80f30ea749e015a653919cdd8daf61d7d"
+          "action_version": "0.1.23",
+          "sha256": "3f9d5ff67b2470ef7a28856b5b2e89430fe25b462df06f415e245b41582e9b19"
         },
         {
           "task": "labyrinth_challenge",
@@ -538,6 +532,12 @@
           "action_id": "wos-alliance-donate",
           "action_version": "0.1.9",
           "sha256": "b5afa35220a40e46e5822c3db7865edb3be8e2dfc451304a55e7028d9b023d6a"
+        },
+        {
+          "task": "arena",
+          "action_id": "wos-arena",
+          "action_version": "0.1.9",
+          "sha256": "ac78d0bdabdd8ea846bd61292a3b6afa054d013291133f41f273917053a554d2"
         },
         {
           "task": "daily",
@@ -613,12 +613,6 @@
           "sha256": "1ef15f4e96f2e73137b14058c3af281479bf913de7e09031321b0f43060eb2c8"
         },
         {
-          "task": "arena",
-          "action_id": "wos-arena",
-          "action_version": "0.1.6",
-          "sha256": "931919ef1d52ba131e257a4d388d21f7ad2db4cd257c91e26e95a58c46941845"
-        },
-        {
           "task": "npc_autojoin",
           "action_id": "wos-npc-autojoin",
           "action_version": "0.1.4",
@@ -644,8 +638,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.17",
-          "sha256": "6eeac52e5aded231e6b96ac64908cfc13a2c460028f9eca7fb0bb21d7279665f",
+          "action_version": "0.1.20",
+          "sha256": "cedd17e886c4144a95989171990bb26770238653d58d32279f2924dc48586534",
           "task": "npc_rally_start"
         },
         {
@@ -699,8 +693,8 @@
         {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
-          "action_version": "0.1.4",
-          "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05"
+          "action_version": "0.1.5",
+          "sha256": "366b3e3cff3a52c601d2c7962a387717af33f7af9c16f097eabbacef3f2504ef"
         },
         {
           "task": "warehouse",
@@ -729,8 +723,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.22",
-          "sha256": "d20995595e1d07ded8e8c5e7ab1bb1c80f30ea749e015a653919cdd8daf61d7d"
+          "action_version": "0.1.23",
+          "sha256": "3f9d5ff67b2470ef7a28856b5b2e89430fe25b462df06f415e245b41582e9b19"
         },
         {
           "task": "labyrinth_challenge",
@@ -749,6 +743,12 @@
           "action_id": "wos-alliance-donate",
           "action_version": "0.1.9",
           "sha256": "b5afa35220a40e46e5822c3db7865edb3be8e2dfc451304a55e7028d9b023d6a"
+        },
+        {
+          "task": "arena",
+          "action_id": "wos-arena",
+          "action_version": "0.1.9",
+          "sha256": "ac78d0bdabdd8ea846bd61292a3b6afa054d013291133f41f273917053a554d2"
         },
         {
           "task": "daily",

@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.128",
+  "package_version": "0.12.135",
   "executor_min_version": "0.4.12",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -224,8 +224,8 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.22",
-      "sha256": "d20995595e1d07ded8e8c5e7ab1bb1c80f30ea749e015a653919cdd8daf61d7d",
+      "action_version": "0.1.23",
+      "sha256": "3f9d5ff67b2470ef7a28856b5b2e89430fe25b462df06f415e245b41582e9b19",
       "period": "day",
       "utility": false,
       "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.17 adds actual dailydeal free-box branch at left: explicit free label, reward, samebox cooldown, city. Standard store branch unchanged. Mainagent100diamonds actualclaimed, oldmacrofailure retained. Savedfree/cooldown/city cases validated; newmacro claim pending, cooldown livepending.;0.1.21: actualmainshoptitle奇货自选 usesexistingtopright可领取chest; addexacttitletoexistingknownshopconditions/exit andtitlepattern, no newcoordinates orcashinteraction. Savedframeclaimpreconditionpassed; livepending.; 0.1.22 adds separate Frost Supply Station left freechest branch, observed500diamonds and6daycooldown byagent. Saved positive claim/cooldown frame conditions and schema pass; new macro replay pending. Legacy store branches retained. This event/weekly cooldown is not claimed to be a daily freebox."
@@ -233,8 +233,8 @@
     "arena": {
       "path": "actions/wos-arena.json",
       "action_id": "wos-arena",
-      "action_version": "0.1.6",
-      "sha256": "931919ef1d52ba131e257a4d388d21f7ad2db4cd257c91e26e95a58c46941845",
+      "action_version": "0.1.9",
+      "sha256": "ac78d0bdabdd8ea846bd61292a3b6afa054d013291133f41f273917053a554d2",
       "period": "day",
       "utility": false,
       "verification_scope": "Post-update actual header changed to optional exploration qualifier; bounded header OCR accepts both titles and excludes city overview. Old main failed entry and exit preserved; nextrole pending."
@@ -478,8 +478,8 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.17",
-      "sha256": "6eeac52e5aded231e6b96ac64908cfc13a2c460028f9eca7fb0bb21d7279665f",
+      "action_version": "0.1.20",
+      "sha256": "cedd17e886c4144a95989171990bb26770238653d58d32279f2924dc48586534",
       "period": "shift",
       "utility": false,
       "include_in_daily": true,
@@ -492,8 +492,8 @@
       "period": "day",
       "utility": false,
       "action_id": "wos-vip-calendar",
-      "action_version": "0.1.4",
-      "sha256": "b0b04c58bc48c24ce4309a67afe2496dde10b256ed264765edda2d84f3efed05",
+      "action_version": "0.1.5",
+      "sha256": "366b3e3cff3a52c601d2c7962a387717af33f7af9c16f097eabbacef3f2504ef",
       "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1. 0.1.3: VIPcalendar neednotread dailygifttext; RgiftOCR每圓 causedvip-open failure. Replaceunrelatedgiftcondition withscopedupperleftVIPheader, preservescalendarred/controlstates. ActualfailedVIPpositive+citybadge negative offline passed; nexttargetedreplaypending.; 0.1.4 remove illegal empty page_text_regions left by0.1.3; consistent cropped header across followup and exits. Earlier schema-check acceptance did not catch executor schema error; live pending."
     },
     "warehouse": {

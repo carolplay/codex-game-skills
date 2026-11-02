@@ -1,6 +1,6 @@
 {
   "action_id": "wos-store-free",
-  "action_version": "0.1.22",
+  "action_version": "0.1.23",
   "name": "WOS store_free",
   "reference_size": [
     788,
@@ -1978,7 +1978,7 @@
         ]
       ]
     },
-    "max_exit_steps": 4,
+    "max_exit_steps": 8,
     "exits": [
       {
         "name": "exit-profile",
@@ -2009,6 +2009,28 @@
         "verify_identity": true
       },
       {
+        "name": "exit-upgraded-weekcard-introduction",
+        "action": "click",
+        "point": [
+          394,
+          991
+        ],
+        "before": {
+          "all": [
+            "奖励升级",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "any": [
+            "奖励升级",
+            "储值中心",
+            "火晶微粒周卡"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
         "name": "exit-store-reward",
         "action": "click",
         "point": [
@@ -2022,6 +2044,9 @@
             "点击空白",
             "点击任意",
             "点击屏幕"
+          ],
+          "none": [
+            "奖励升级"
           ]
         },
         "after": {

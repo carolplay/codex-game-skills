@@ -1,6 +1,6 @@
 {
   "action_id": "wos-arena",
-  "action_version": "0.1.6",
+  "action_version": "0.1.9",
   "name": "WOS arena",
   "reference_size": [
     788,
@@ -1049,7 +1049,7 @@
               685,
               110
             ],
-            "pattern": "万国(?:探险)?竞技场",
+            "pattern": "万国(?:(?:探险|远征))?竞技场",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -1082,7 +1082,7 @@
               685,
               110
             ],
-            "pattern": "万国(?:探险)?竞技场",
+            "pattern": "万国(?:(?:探险|远征))?竞技场",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -1137,11 +1137,18 @@
           }
         ]
       },
-      "after": [
-        "小队设置",
-        "战斗",
-        "一键上阵"
-      ],
+      "after": {
+        "all": [
+          "战斗"
+        ],
+        "any": [
+          "小队设置",
+          "进攻阵容配置"
+        ],
+        "none": [
+          "防守阵容配置"
+        ]
+      },
       "observe_attempts": 5,
       "skip_if": {
         "all": [
@@ -1177,11 +1184,18 @@
         530,
         1016
       ],
-      "before": [
-        "小队设置",
-        "战斗",
-        "一键上阵"
-      ],
+      "before": {
+        "all": [
+          "战斗"
+        ],
+        "any": [
+          "小队设置",
+          "进攻阵容配置"
+        ],
+        "none": [
+          "防守阵容配置"
+        ]
+      },
       "after": {
         "any": [
           "VS",
@@ -1371,11 +1385,18 @@
           }
         ]
       },
-      "after": [
-        "小队设置",
-        "战斗",
-        "一键上阵"
-      ],
+      "after": {
+        "all": [
+          "战斗"
+        ],
+        "any": [
+          "小队设置",
+          "进攻阵容配置"
+        ],
+        "none": [
+          "防守阵容配置"
+        ]
+      },
       "observe_attempts": 5,
       "skip_if": {
         "all": [
@@ -1411,11 +1432,18 @@
         530,
         1016
       ],
-      "before": [
-        "小队设置",
-        "战斗",
-        "一键上阵"
-      ],
+      "before": {
+        "all": [
+          "战斗"
+        ],
+        "any": [
+          "小队设置",
+          "进攻阵容配置"
+        ],
+        "none": [
+          "防守阵容配置"
+        ]
+      },
       "after": {
         "any": [
           "VS",
@@ -1605,11 +1633,18 @@
           }
         ]
       },
-      "after": [
-        "小队设置",
-        "战斗",
-        "一键上阵"
-      ],
+      "after": {
+        "all": [
+          "战斗"
+        ],
+        "any": [
+          "小队设置",
+          "进攻阵容配置"
+        ],
+        "none": [
+          "防守阵容配置"
+        ]
+      },
       "observe_attempts": 5,
       "skip_if": {
         "all": [
@@ -1645,11 +1680,18 @@
         530,
         1016
       ],
-      "before": [
-        "小队设置",
-        "战斗",
-        "一键上阵"
-      ],
+      "before": {
+        "all": [
+          "战斗"
+        ],
+        "any": [
+          "小队设置",
+          "进攻阵容配置"
+        ],
+        "none": [
+          "防守阵容配置"
+        ]
+      },
       "after": {
         "any": [
           "VS",
@@ -1839,11 +1881,18 @@
           }
         ]
       },
-      "after": [
-        "小队设置",
-        "战斗",
-        "一键上阵"
-      ],
+      "after": {
+        "all": [
+          "战斗"
+        ],
+        "any": [
+          "小队设置",
+          "进攻阵容配置"
+        ],
+        "none": [
+          "防守阵容配置"
+        ]
+      },
       "observe_attempts": 5,
       "skip_if": {
         "all": [
@@ -1879,11 +1928,18 @@
         530,
         1016
       ],
-      "before": [
-        "小队设置",
-        "战斗",
-        "一键上阵"
-      ],
+      "before": {
+        "all": [
+          "战斗"
+        ],
+        "any": [
+          "小队设置",
+          "进攻阵容配置"
+        ],
+        "none": [
+          "防守阵容配置"
+        ]
+      },
       "after": {
         "any": [
           "VS",
@@ -2073,11 +2129,18 @@
           }
         ]
       },
-      "after": [
-        "小队设置",
-        "战斗",
-        "一键上阵"
-      ],
+      "after": {
+        "all": [
+          "战斗"
+        ],
+        "any": [
+          "小队设置",
+          "进攻阵容配置"
+        ],
+        "none": [
+          "防守阵容配置"
+        ]
+      },
       "observe_attempts": 5,
       "skip_if": {
         "all": [
@@ -2113,11 +2176,18 @@
         530,
         1016
       ],
-      "before": [
-        "小队设置",
-        "战斗",
-        "一键上阵"
-      ],
+      "before": {
+        "all": [
+          "战斗"
+        ],
+        "any": [
+          "小队设置",
+          "进攻阵容配置"
+        ],
+        "none": [
+          "防守阵容配置"
+        ]
+      },
       "after": {
         "any": [
           "VS",
@@ -2305,6 +2375,75 @@
       }
     },
     {
+      "name": "check-expedition-reward-already-open",
+      "action": "observe",
+      "before": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ],
+        "template_regions": [
+          {
+            "template": "arena-expedition-claimed-chest",
+            "bounds": [
+              140,
+              800,
+              248,
+              882
+            ],
+            "mode": "grayscale",
+            "min_score": 0.93
+          }
+        ]
+      }
+    },
+    {
       "name": "claim-five-challenge-reward",
       "action": "click",
       "point": [
@@ -2365,7 +2504,8 @@
           "max": 86400
         }
       },
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "check-expedition-reward-already-open"
     },
     {
       "name": "dismiss-five-challenge-reward",
@@ -2398,16 +2538,18 @@
             850
           ]
         ],
-        "timer_seconds": {
-          "bounds": [
-            145,
-            899,
-            250,
-            934
-          ],
-          "min": 1,
-          "max": 86400
-        }
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ]
       },
       "skip_if_step_skipped": "claim-five-challenge-reward",
       "observe_attempts": 5
@@ -2439,7 +2581,46 @@
           "max": 86400
         }
       },
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "挑战列表",
+          "今日剩余挑战次数"
+        ],
+        "page_text_regions": [
+          [
+            245,
+            800,
+            470,
+            850
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              260,
+              803,
+              470,
+              845
+            ],
+            "pattern": "今日剩余挑战次数[:：]?0",
+            "crop_ocr": true
+          }
+        ],
+        "template_regions": [
+          {
+            "template": "arena-expedition-claimed-chest",
+            "bounds": [
+              140,
+              800,
+              248,
+              882
+            ],
+            "mode": "grayscale",
+            "min_score": 0.93
+          }
+        ]
+      }
     },
     {
       "name": "close-list",
@@ -2480,7 +2661,7 @@
               685,
               110
             ],
-            "pattern": "万国(?:探险)?竞技场",
+            "pattern": "万国(?:(?:探险|远征))?竞技场",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -2513,7 +2694,7 @@
               685,
               110
             ],
-            "pattern": "万国(?:探险)?竞技场",
+            "pattern": "万国(?:(?:探险|远征))?竞技场",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -2812,7 +2993,7 @@
                 685,
                 110
               ],
-              "pattern": "万国(?:探险)?竞技场",
+              "pattern": "万国(?:(?:探险|远征))?竞技场",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -2827,11 +3008,18 @@
           133,
           59
         ],
-        "before": [
-          "小队设置",
-          "战斗",
-          "一键上阵"
-        ],
+        "before": {
+          "all": [
+            "战斗"
+          ],
+          "any": [
+            "小队设置",
+            "进攻阵容配置"
+          ],
+          "none": [
+            "防守阵容配置"
+          ]
+        },
         "after": {
           "all": [
             "挑战列表",
@@ -2873,7 +3061,7 @@
                 685,
                 110
               ],
-              "pattern": "万国(?:探险)?竞技场",
+              "pattern": "万国(?:(?:探险|远征))?竞技场",
               "crop_ocr": true,
               "min_confidence": 0.3
             }

@@ -2,6 +2,10 @@
 
 当前包版本与哈希只读catalog.json和所选班次manifest；执行器版本读实际运行summary中的suite身份。下列带版本的说明是历史验收记录，不是当前运行快照。包级校验与执行器结构校验均须通过，发布版本不代表所有角色或分支已经现场验收。
 
+## 竞技场新界面模板部署（0.12.135）
+
+arena0.1.9兼容“万国远征竞技场”新标题与进攻阵容页。私有配置的`image_templates`新增`arena-expedition-claimed-chest`，绑定本skill的`assets/arena-expedition-claimed-chest.png`本机绝对路径；限定框`[140,800,248,882]`、灰度阈值0.93。新界面已开箱仍显示5/5、没有旧倒计时，必须用开箱图案区分，不能只靠5/5。已开正例1.0、未开负例0.482；一个成熟角色实际零次数/已开箱跳过及正常回城通过；随后另一成熟角色0.1.9五次免费挑战、宝箱领取、关闭奖励及回城完整通过。首次进入需要完成引导并保存防守阵容，这仍是现场开发步骤，不伪称已自动化。
+
 ## 寻宝模板部署（0.12.95）
 
 派遣action0.1.13使用`treasure-ready-v3`别名：将assets中的`treasure-ready-gold.png`、`treasure-ready-blue-current.png`、`treasure-ready-purple.png`、`treasure-ready-purple-pulse.png`映射为四条本地绝对路径。旧别名保留给旧版本快照。当前仍用灰度匹配、阈值0.91；0.1.12的独立轮廓分支已撤回。

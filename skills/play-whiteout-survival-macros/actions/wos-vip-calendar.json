@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-calendar",
-  "action_version": "0.1.4",
+  "action_version": "0.1.5",
   "name": "VIP consecutive login calendar daily reward",
   "reference_size": [
     788,
@@ -398,6 +398,39 @@
         "verify_identity": true
       },
       {
+        "name": "exit-frozen-login-calendar",
+        "action": "click",
+        "point": [
+          621,
+          233
+        ],
+        "before": {
+          "all": [
+            "连续登录保护",
+            "恢复剩余时间"
+          ]
+        },
+        "after": {
+          "all": [
+            "VIP"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                150,
+                35,
+                260,
+                90
+              ],
+              "pattern": ".*VIP.*",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
         "name": "exit-calendar",
         "action": "click",
         "point": [
@@ -408,6 +441,9 @@
           "any": [
             "连续登录",
             "累计登录"
+          ],
+          "none": [
+            "连续登录保护"
           ]
         },
         "after": {
