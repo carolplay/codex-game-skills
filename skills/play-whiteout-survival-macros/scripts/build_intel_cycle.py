@@ -31,6 +31,28 @@ def build_legacy(flows):
    for v in x:strengthen(v)
  strengthen(steps)
  return {'action_id':'wos-intel-cycle','action_version':'0.1.0','name':'WOS local mixed intelligence cycle','reference_size':[788,1079],'status':'candidate','execution_timeout_seconds':1800,'repeat_from':'cycle-0-empty-check','steps':steps,'task_contract':copy.deepcopy(flows['hero']['task_contract']),'verification_scope':'Repeat mixed tasks until registered markers are absent; no task-count cap, 1800s watchdog; unknownskins and bounty not inferredcomplete. Standalone ordinarycomponents and Firebeast paths were sampled; fullcycle livepending.','business_dependencies':['Fixedcityentry andexit; local map must be re-observed before every selection','Firebeast/ordinarybeast/rescue/hero may reveal more queued tasks afterclaim; repeatuntil allknownmarkers absent or1800s watchdog','Absence of registered glyphs is not proof that unknownskins/bounties are done; final auditrecords deviations'],'component_versions':{k:{'action_id':v['action_id'],'action_version':v['action_version'],'sha256':hashlib.sha256(json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()} for k,v in flows.items()}}
+def add_two_button_claims(flow):
+ """Visible but locked execute-all still has the new right-hand claim button."""
+ flow=copy.deepcopy(flow);steps=flow['steps']
+ if any(step['name']=='pre-layout-claim-existing' for step in steps):return flow
+ old_layout={'all':['情报','下次刷新'],'none':['全部执行'],'page_text_regions':[[110,970,680,1060]]}
+ reward={'any':['获得奖励','恭喜获得','点击任意位置退出'],'none':['胜利','失败','战败']}
+ initial=[]
+ for old,new in [('batch-claim-existing','pre-layout-claim-existing'),('batch-claim-existing-retry','pre-layout-claim-existing-retry'),('batch-dismiss-existing','pre-layout-dismiss-existing'),('batch-dismiss-existing-level-up','pre-layout-dismiss-existing-level-up')]:
+  item=copy.deepcopy(next(x for x in steps if x['name']==old));item['name']=new;item.pop('skip_if_step_skipped',None)
+  item.setdefault('skip_if_any',[]).append(copy.deepcopy(old_layout));initial.append(item)
+ at=next(i for i,x in enumerate(steps) if x['name']=='batch-mode');steps[at:at]=initial
+ result=[]
+ for item in steps:
+  if item['name'].startswith('legacy-') and item['name'].endswith('-claim') and item.get('action')=='click' and item.get('point')==[394,1017]:
+   right=copy.deepcopy(item);right['name']+='-two-button';right['point']=[532,1017]
+   right['before']['all']+=['全部执行','一键领取'];right['before']['page_text_regions']=[[110,970,680,1060]];right['before']['green_regions']=[{'bounds':[425,1000,650,1040],'min':.12}]
+   right['skip_if']['green_regions']=[{'bounds':[425,1000,650,1040],'max':.08}];right.setdefault('skip_if_any',[]).append(copy.deepcopy(old_layout));result.append(right)
+   item.setdefault('skip_if_any',[]).append(copy.deepcopy(reward))
+  result.append(item)
+ flow['steps']=result
+ return flow
+
 def apply_bulk_lock_layout(flow):
  """A visible bulk label can be locked below lighthouse20; use legacy then."""
  flow=copy.deepcopy(flow)
@@ -44,7 +66,7 @@ def apply_bulk_lock_layout(flow):
   if name.startswith('legacy-'):
    for condition in step.get('skip_if_any',[]):
     if '全部执行' in condition.get('all',[]):condition['template_regions']=[{**spec,'present':False}]
- return flow
+ return add_two_button_claims(flow)
 
 def build(flows):
  """New game-owned bulk execution; keep the event-only firebeast path."""
@@ -99,7 +121,9 @@ def build(flows):
  for s in group:
   if s['name']=='event-firebeast-claim':
    new=claim(s['name']);new['skip_if_step_skipped']=group[0]['name'];s.clear();s.update(new)
-  if s['name']=='event-firebeast-wait-complete':s['before']['green_regions']=[{'bounds':green_box,'min':.12}]
+  if s['name']=='event-firebeast-wait-complete':
+   s['before']['green_regions']=[{'bounds':green_box,'min':.12}]
+   s['observe_attempts']=30;s['observe_interval_seconds']=5
  steps.extend(group)
  # Roles without the game's bulk button retain the previous local components;
  # the UI selects the branch, never the agent or an assumed account level.

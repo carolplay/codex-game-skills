@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.137",
-  "package_version": "0.12.137",
+  "macro_version": "0.12.142",
+  "package_version": "0.12.142",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -133,13 +133,13 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.13",
-          "sha256": "8eaaa57bfa965aa1f525a7a4dd9d7a4ef653f0721eeb9a9cf2a933020ae032bf"
+          "action_version": "0.2.15",
+          "sha256": "d2b5bfcd3ea4d0e5c3b7b937d1caef230bd412d8917c88074551ece032c4881b"
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.20",
-          "sha256": "cedd17e886c4144a95989171990bb26770238653d58d32279f2924dc48586534",
+          "action_version": "0.1.21",
+          "sha256": "f560267547472c3ed10b92c976e2239df3fffddea1f6b6c7f56c12063611d3db",
           "task": "npc_rally_start"
         },
         {
@@ -193,8 +193,8 @@
         {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
-          "action_version": "0.1.5",
-          "sha256": "366b3e3cff3a52c601d2c7962a387717af33f7af9c16f097eabbacef3f2504ef"
+          "action_version": "0.1.7",
+          "sha256": "c6c2e223b7e10a74360089005a671246a3d0b2d28cf969e178cc0ecc2f69cd54"
         },
         {
           "task": "warehouse",
@@ -404,13 +404,13 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.13",
-          "sha256": "8eaaa57bfa965aa1f525a7a4dd9d7a4ef653f0721eeb9a9cf2a933020ae032bf"
+          "action_version": "0.2.15",
+          "sha256": "d2b5bfcd3ea4d0e5c3b7b937d1caef230bd412d8917c88074551ece032c4881b"
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.20",
-          "sha256": "cedd17e886c4144a95989171990bb26770238653d58d32279f2924dc48586534",
+          "action_version": "0.1.21",
+          "sha256": "f560267547472c3ed10b92c976e2239df3fffddea1f6b6c7f56c12063611d3db",
           "task": "npc_rally_start"
         },
         {
@@ -464,8 +464,8 @@
         {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
-          "action_version": "0.1.5",
-          "sha256": "366b3e3cff3a52c601d2c7962a387717af33f7af9c16f097eabbacef3f2504ef"
+          "action_version": "0.1.7",
+          "sha256": "c6c2e223b7e10a74360089005a671246a3d0b2d28cf969e178cc0ecc2f69cd54"
         },
         {
           "task": "warehouse",
@@ -633,13 +633,13 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.13",
-          "sha256": "8eaaa57bfa965aa1f525a7a4dd9d7a4ef653f0721eeb9a9cf2a933020ae032bf"
+          "action_version": "0.2.15",
+          "sha256": "d2b5bfcd3ea4d0e5c3b7b937d1caef230bd412d8917c88074551ece032c4881b"
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.20",
-          "sha256": "cedd17e886c4144a95989171990bb26770238653d58d32279f2924dc48586534",
+          "action_version": "0.1.21",
+          "sha256": "f560267547472c3ed10b92c976e2239df3fffddea1f6b6c7f56c12063611d3db",
           "task": "npc_rally_start"
         },
         {
@@ -693,8 +693,8 @@
         {
           "task": "vip_calendar",
           "action_id": "wos-vip-calendar",
-          "action_version": "0.1.5",
-          "sha256": "366b3e3cff3a52c601d2c7962a387717af33f7af9c16f097eabbacef3f2504ef"
+          "action_version": "0.1.7",
+          "sha256": "c6c2e223b7e10a74360089005a671246a3d0b2d28cf969e178cc0ecc2f69cd54"
         },
         {
           "task": "warehouse",
