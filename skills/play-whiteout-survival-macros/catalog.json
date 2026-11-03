@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.148",
+  "package_version": "0.12.153",
   "executor_min_version": "0.4.12",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -224,11 +224,11 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.23",
-      "sha256": "3f9d5ff67b2470ef7a28856b5b2e89430fe25b462df06f415e245b41582e9b19",
+      "action_version": "0.1.26",
+      "sha256": "c777e7d044cc1094b39e0a056ffb12f7ee3d1dcc0bdd10a37c75653c06ab8e70",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.17 adds actual dailydeal free-box branch at left: explicit free label, reward, samebox cooldown, city. Standard store branch unchanged. Mainagent100diamonds actualclaimed, oldmacrofailure retained. Savedfree/cooldown/city cases validated; newmacro claim pending, cooldown livepending.;0.1.21: actualmainshoptitle奇货自选 usesexistingtopright可领取chest; addexacttitletoexistingknownshopconditions/exit andtitlepattern, no newcoordinates orcashinteraction. Savedframeclaimpreconditionpassed; livepending.; 0.1.22 adds separate Frost Supply Station left freechest branch, observed500diamonds and6daycooldown byagent. Saved positive claim/cooldown frame conditions and schema pass; new macro replay pending. Legacy store branches retained. This event/weekly cooldown is not claimed to be a daily freebox."
+      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.17 adds actual dailydeal free-box branch at left: explicit free label, reward, samebox cooldown, city. Standard store branch unchanged. Mainagent100diamonds actualclaimed, oldmacrofailure retained. Savedfree/cooldown/city cases validated; newmacro claim pending, cooldown livepending.;0.1.21: actualmainshoptitle奇货自选 usesexistingtopright可领取chest; addexacttitletoexistingknownshopconditions/exit andtitlepattern, no newcoordinates orcashinteraction. Savedframeclaimpreconditionpassed; livepending.; 0.1.22 adds separate Frost Supply Station left freechest branch, observed500diamonds and6daycooldown byagent. Saved positive claim/cooldown frame conditions and schema pass; new macro replay pending. Legacy store branches retained. This event/weekly cooldown is not claimed to be a daily freebox. 0.1.24: On stored secondshift failure, 每日特惠 tab is visible at upperrow while selected paid promotion is outside known rotating titles. Select that exact visible tab before existing DailyDeal free/cooldown logic. Existing title/free-button/timer assertions and city exit remain. Offline realframe resolves unique tab; city negative rejected; live pending. 0.1.24 experimental local replay failed on a known rotating store without the DailyDeal tab: unsupported when was ignored by old executor. 0.1.25 uses supported skip_if_any to preserve that existing branch and selects DailyDeal only when its bounded tab label is present. Executor0.4.14 rejects unsupported when before backend observation/input. Original149 failure retained; nextrole live pending. 0.1.26: A real selected DailyDeal page contained both 储值中心 header and an explicitly免费chest. Legacygeneric-store skipmatchedheader andincorrectlyskippedthefree/cooldown/return branch. Thosefourgeneric skips nowexclude每日特惠; selectedtabheading andfree/cooldownguards remain. OriginalR150failure retained. Nextrole livepending."
     },
     "arena": {
       "path": "actions/wos-arena.json",
@@ -418,11 +418,11 @@
     "travel_idle": {
       "path": "actions/wos-travel-idle.json",
       "action_id": "wos-travel-idle",
-      "action_version": "0.1.13",
-      "sha256": "6df0a4019f86876eaf51940ae67b06098f0f42c303e558353dba72f48c4ad09e",
+      "action_version": "0.1.14",
+      "sha256": "26e335741645b18912fd2f33a2a19f670166b9d5ab2fa6a53422d10496b9002f",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.1.11 mature-role fresh start and city return passed. Another mature role reached the real travel progress overlay, but OCR missed/stylized its red-banner title; both postcondition and known exit failed, stopping later components. Agent closed the explicit blank-close footer and city recovered. 0.1.12 uses the two correctly read distinctive end-idle button and blank-close footer in progress postcondition/normal close/known exit; no click on end-idle. Saved failure frames and city negative checked; fresh changed branch awaits live replay."
+      "verification_scope": "Candidate: city side bubble shifts vertically with active event icons. Same calibrated image searches bounded right-side column; clicks resolve its actual image center; existing progress panel confirms running/settlement separately. Old fixed840..935 region failed saved active0/20 bubble at811; new650..935 matches without changing threshold. Live targeted verification pending. Running queue is opened, closed without settlement, then ends through city+same bubble finish condition; completed and no-queue branches continue separately. 0.1.14: A new idlequeue was launched and bubble template scored0.993, but partiallyoverlapped0/10citycounter OCR blocked opening its progress. Reuse claim action visual city/bubble anchor for existingprogress; remove only redundantcounterOCR from opening/closing newprogress. Keep strongbubbletemplate, cityanchor, and detail结束挂机 assertions. No change tosupplies orstart. Mainoverview-entryfailure separate andunfixed. Actualnew gate replay pending."
     },
     "travel_idle_claim": {
       "path": "actions/wos-travel-idle-claim.json",
@@ -466,11 +466,11 @@
     "intel_cycle": {
       "path": "actions/wos-intel-cycle.json",
       "action_id": "wos-intel-cycle",
-      "action_version": "0.2.16",
-      "sha256": "fdb438254067710d21ba1fed711f82c706e82003c23c7acd9152a2d31d0640c0",
+      "action_version": "0.2.17",
+      "sha256": "fefa56ee22d61ced404eac476e2c04de131c9fe7a404965e27b99f6d4a96a06f",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.2.16 separates legacy-firebeast single/two-button wait layouts, uses actual right-hand claim region for two-button UI, and adds5s observation spacing within30attempts. Old wait used center-only crop and rapid30reads, causing falsefailure afteractualeventdispatch on under20intel. Originalfailure retained; offline layout/disablednegative checks and schemas passed; new live wait/claim branch pending. Other ordinary/event actions unchanged.",
+      "verification_scope": "0.2.16 separates legacy-firebeast single/two-button wait layouts, uses actual right-hand claim region for two-button UI, and adds5s observation spacing within30attempts. Old wait used center-only crop and rapid30reads, causing falsefailure afteractualeventdispatch on under20intel. Originalfailure retained; offline layout/disablednegative checks and schemas passed; new live wait/claim branch pending. Other ordinary/event actions unchanged. 0.2.17: Add boundedcloseX exit for observed行军队列/额外队列/VIPactivation/purchase information dialog reached during legacyNPCnavigation. It doesnotprovequeuesfull anddoesnotclickresearch,activation,or purchase. Require footer anddialogabsence beforeexistingworld-to-city exit. OriginalLowunrecoveredfailure retained; live exitbranch pending.",
       "rescue_world_anchor_revision": "Saved low-role rescue-world screenshot whole OCR drops城镇, footer crop reads it. Preserve exact title/button/next-state assertions and bounded exits. Live replay pending.",
       "layout_gate_revision": "2827 rawtrace legacy-mode skipped but beastselector stillclicked when fullOCR omittedbulktext. Legacyselectors now explicitly inherit legacy-mode skip; prevents oldcenterclaim onbulkUI. Eventfirebeast retainsseparatebranch. Livepending.",
       "level_up_revision": "Lowactualrescueclaim triggeredlighthouse17overlay. Addstrictoptionalleveldismiss afterrewardclose, preserveoriginalmapassertion; boundedknownexit alsoadded. Livepending."

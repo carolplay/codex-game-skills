@@ -1,13 +1,13 @@
 {
   "action_id": "wos-store-free",
-  "action_version": "0.1.23",
+  "action_version": "0.1.26",
   "name": "WOS store_free",
   "reference_size": [
     788,
     1079
   ],
   "status": "candidate",
-  "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.17 adds actual dailydeal free-box branch at left: explicit free label, reward, samebox cooldown, city. Standard store branch unchanged. Mainagent100diamonds actualclaimed, oldmacrofailure retained. Savedfree/cooldown/city cases validated; newmacro claim pending, cooldown livepending.;0.1.21: actualmainshoptitle奇货自选 usesexistingtopright可领取chest; addexacttitletoexistingknownshopconditions/exit andtitlepattern, no newcoordinates orcashinteraction. Savedframeclaimpreconditionpassed; livepending.; 0.1.22 adds separate Frost Supply Station left freechest branch, observed500diamonds and6daycooldown byagent. Saved positive claim/cooldown frame conditions and schema pass; new macro replay pending. Legacy store branches retained. This event/weekly cooldown is not claimed to be a daily freebox.",
+  "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.17 adds actual dailydeal free-box branch at left: explicit free label, reward, samebox cooldown, city. Standard store branch unchanged. Mainagent100diamonds actualclaimed, oldmacrofailure retained. Savedfree/cooldown/city cases validated; newmacro claim pending, cooldown livepending.;0.1.21: actualmainshoptitle奇货自选 usesexistingtopright可领取chest; addexacttitletoexistingknownshopconditions/exit andtitlepattern, no newcoordinates orcashinteraction. Savedframeclaimpreconditionpassed; livepending.; 0.1.22 adds separate Frost Supply Station left freechest branch, observed500diamonds and6daycooldown byagent. Saved positive claim/cooldown frame conditions and schema pass; new macro replay pending. Legacy store branches retained. This event/weekly cooldown is not claimed to be a daily freebox. 0.1.24: On stored secondshift failure, 每日特惠 tab is visible at upperrow while selected paid promotion is outside known rotating titles. Select that exact visible tab before existing DailyDeal free/cooldown logic. Existing title/free-button/timer assertions and city exit remain. Offline realframe resolves unique tab; city negative rejected; live pending. 0.1.24 experimental local replay failed on a known rotating store without the DailyDeal tab: unsupported when was ignored by old executor. 0.1.25 uses supported skip_if_any to preserve that existing branch and selects DailyDeal only when its bounded tab label is present. Executor0.4.14 rejects unsupported when before backend observation/input. Original149 failure retained; nextrole live pending. 0.1.26: A real selected DailyDeal page contained both 储值中心 header and an explicitly免费chest. Legacygeneric-store skipmatchedheader andincorrectlyskippedthefree/cooldown/return branch. Thosefourgeneric skips nowexclude每日特惠; selectedtabheading andfree/cooldownguards remain. OriginalR150failure retained. Nextrole livepending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -533,6 +533,159 @@
       }
     },
     {
+      "name": "select-visible-dailydeal-tab",
+      "action": "click",
+      "text_target": {
+        "text": "每日特惠",
+        "bounds": [
+          100,
+          105,
+          680,
+          190
+        ],
+        "min_confidence": 0.5,
+        "crop_ocr": true,
+        "prefer_frame_ocr": true
+      },
+      "before": {
+        "all": [
+          "每日特惠"
+        ],
+        "none": [
+          "获得奖励",
+          "领取成功",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              105,
+              680,
+              190
+            ],
+            "pattern": "每日特惠",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.5
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "每日特惠"
+        ],
+        "none": [
+          "领取成功",
+          "点击任意"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              120,
+              190,
+              360,
+              245
+            ],
+            "pattern": ".*每日特惠.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 6,
+      "skip_if_any": [
+        {
+          "all": [
+            "每日特惠"
+          ],
+          "none": [
+            "领取成功",
+            "点击任意"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                120,
+                190,
+                360,
+                245
+              ],
+              "pattern": ".*每日特惠.*",
+              "crop_ocr": true,
+              "prefer_frame_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        },
+        {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        {
+          "any": [
+            "储值中心",
+            "领主体力礼包",
+            "战地医生礼包",
+            "萌宠定制礼包",
+            "工匠的宝库",
+            "曙光市集",
+            "匠心自选",
+            "曙光智慧",
+            "武备自选",
+            "每日特惠",
+            "火晶微粒周卡",
+            "火晶周卡",
+            "奇货自选"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击空白",
+            "点击任意",
+            "点击屏幕",
+            "寒霜补给站",
+            "每日特惠"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              30,
+              330,
+              100
+            ],
+            [
+              120,
+              190,
+              460,
+              285
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "name": "normalize-weekcard-dailydeal-tab",
       "action": "click",
       "point": [
@@ -594,7 +747,8 @@
             "恭喜获得",
             "点击空白",
             "点击任意",
-            "点击屏幕"
+            "点击屏幕",
+            "每日特惠"
           ],
           "page_text_regions": [
             [
@@ -696,7 +850,8 @@
             "恭喜获得",
             "点击空白",
             "点击任意",
-            "点击屏幕"
+            "点击屏幕",
+            "每日特惠"
           ],
           "page_text_regions": [
             [
@@ -847,7 +1002,8 @@
           "恭喜获得",
           "点击空白",
           "点击任意",
-          "点击屏幕"
+          "点击屏幕",
+          "每日特惠"
         ],
         "page_text_regions": [
           [
@@ -947,7 +1103,8 @@
           "恭喜获得",
           "点击空白",
           "点击任意",
-          "点击屏幕"
+          "点击屏幕",
+          "每日特惠"
         ],
         "page_text_regions": [
           [

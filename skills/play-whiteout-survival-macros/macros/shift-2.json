@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.148",
-  "package_version": "0.12.148",
+  "macro_version": "0.12.153",
+  "package_version": "0.12.153",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -115,8 +115,8 @@
         {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.13",
-          "sha256": "6df0a4019f86876eaf51940ae67b06098f0f42c303e558353dba72f48c4ad09e"
+          "action_version": "0.1.14",
+          "sha256": "26e335741645b18912fd2f33a2a19f670166b9d5ab2fa6a53422d10496b9002f"
         },
         {
           "task": "recruit",
@@ -133,8 +133,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.16",
-          "sha256": "fdb438254067710d21ba1fed711f82c706e82003c23c7acd9152a2d31d0640c0"
+          "action_version": "0.2.17",
+          "sha256": "fefa56ee22d61ced404eac476e2c04de131c9fe7a404965e27b99f6d4a96a06f"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -241,8 +241,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.23",
-          "sha256": "3f9d5ff67b2470ef7a28856b5b2e89430fe25b462df06f415e245b41582e9b19"
+          "action_version": "0.1.26",
+          "sha256": "c777e7d044cc1094b39e0a056ffb12f7ee3d1dcc0bdd10a37c75653c06ab8e70"
         },
         {
           "task": "enlistment",
@@ -381,8 +381,8 @@
         {
           "task": "travel_idle",
           "action_id": "wos-travel-idle",
-          "action_version": "0.1.13",
-          "sha256": "6df0a4019f86876eaf51940ae67b06098f0f42c303e558353dba72f48c4ad09e"
+          "action_version": "0.1.14",
+          "sha256": "26e335741645b18912fd2f33a2a19f670166b9d5ab2fa6a53422d10496b9002f"
         },
         {
           "task": "recruit",
@@ -399,8 +399,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.16",
-          "sha256": "fdb438254067710d21ba1fed711f82c706e82003c23c7acd9152a2d31d0640c0"
+          "action_version": "0.2.17",
+          "sha256": "fefa56ee22d61ced404eac476e2c04de131c9fe7a404965e27b99f6d4a96a06f"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -507,8 +507,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.23",
-          "sha256": "3f9d5ff67b2470ef7a28856b5b2e89430fe25b462df06f415e245b41582e9b19"
+          "action_version": "0.1.26",
+          "sha256": "c777e7d044cc1094b39e0a056ffb12f7ee3d1dcc0bdd10a37c75653c06ab8e70"
         },
         {
           "task": "enlistment",
@@ -623,8 +623,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.16",
-          "sha256": "fdb438254067710d21ba1fed711f82c706e82003c23c7acd9152a2d31d0640c0"
+          "action_version": "0.2.17",
+          "sha256": "fefa56ee22d61ced404eac476e2c04de131c9fe7a404965e27b99f6d4a96a06f"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -713,8 +713,8 @@
         {
           "task": "store_free",
           "action_id": "wos-store-free",
-          "action_version": "0.1.23",
-          "sha256": "3f9d5ff67b2470ef7a28856b5b2e89430fe25b462df06f415e245b41582e9b19"
+          "action_version": "0.1.26",
+          "sha256": "c777e7d044cc1094b39e0a056ffb12f7ee3d1dcc0bdd10a37c75653c06ab8e70"
         },
         {
           "task": "enlistment",

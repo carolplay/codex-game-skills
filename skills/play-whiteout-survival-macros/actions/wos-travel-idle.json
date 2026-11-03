@@ -1,6 +1,6 @@
 {
   "action_id": "wos-travel-idle",
-  "action_version": "0.1.13",
+  "action_version": "0.1.14",
   "name": "WOS travel_idle",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 300,
   "status": "candidate",
-  "verification_scope": "Candidate: city side bubble shifts vertically with active event icons. Same calibrated image searches bounded right-side column; clicks resolve its actual image center; existing progress panel confirms running/settlement separately. Old fixed840..935 region failed saved active0/20 bubble at811; new650..935 matches without changing threshold. Live targeted verification pending. Running queue is opened, closed without settlement, then ends through city+same bubble finish condition; completed and no-queue branches continue separately.",
+  "verification_scope": "Candidate: city side bubble shifts vertically with active event icons. Same calibrated image searches bounded right-side column; clicks resolve its actual image center; existing progress panel confirms running/settlement separately. Old fixed840..935 region failed saved active0/20 bubble at811; new650..935 matches without changing threshold. Live targeted verification pending. Running queue is opened, closed without settlement, then ends through city+same bubble finish condition; completed and no-queue branches continue separately. 0.1.14: A new idlequeue was launched and bubble template scored0.993, but partiallyoverlapped0/10citycounter OCR blocked opening its progress. Reuse claim action visual city/bubble anchor for existingprogress; remove only redundantcounterOCR from opening/closing newprogress. Keep strongbubbletemplate, cityanchor, and detail结束挂机 assertions. No change tosupplies orstart. Mainoverview-entryfailure separate andunfixed. Actualnew gate replay pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -153,17 +153,17 @@
             800
           ]
         ],
-        "text_regions": [
+        "template_regions": [
           {
+            "template": "travel-idle-bubble",
             "bounds": [
-              520,
-              700,
-              600,
-              940
+              510,
+              650,
+              610,
+              935
             ],
-            "pattern": "[0-9]{1,3}/[1-9][0-9]{0,2}",
-            "crop_ocr": true,
-            "min_confidence": 0.3
+            "mode": "grayscale",
+            "min_score": 0.85
           }
         ]
       },
@@ -1861,19 +1861,6 @@
             800
           ]
         ],
-        "text_regions": [
-          {
-            "bounds": [
-              520,
-              700,
-              600,
-              940
-            ],
-            "pattern": "[0-9]{1,3}/[1-9][0-9]{0,2}",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
-        ],
         "template_regions": [
           {
             "template": "travel-idle-bubble",
@@ -1945,19 +1932,6 @@
             450,
             800
           ]
-        ],
-        "text_regions": [
-          {
-            "bounds": [
-              520,
-              700,
-              600,
-              940
-            ],
-            "pattern": "[0-9]{1,3}/[1-9][0-9]{0,2}",
-            "crop_ocr": true,
-            "min_confidence": 0.3
-          }
         ],
         "template_regions": [
           {

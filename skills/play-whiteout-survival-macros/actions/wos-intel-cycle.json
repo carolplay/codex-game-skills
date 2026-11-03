@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.16",
+  "action_version": "0.2.17",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -5706,6 +5706,59 @@
     "max_exit_steps": 5,
     "exits": [
       {
+        "name": "exit-march-capacity-info",
+        "action": "click",
+        "point": [
+          625,
+          306
+        ],
+        "before": {
+          "all": [
+            "行军队列",
+            "额外队列",
+            "激活VIP",
+            "前往购买"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                300,
+                280,
+                500,
+                335
+              ],
+              "pattern": "行军队列",
+              "crop_ocr": true,
+              "prefer_frame_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包"
+          ],
+          "any": [
+            "城镇",
+            "野外"
+          ],
+          "none": [
+            "额外队列",
+            "前往激活"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
         "name": "exit-intel-stamina-supply",
         "action": "click",
         "point": [
@@ -6203,7 +6256,7 @@
     ],
     "recovery_timeout_seconds": 120
   },
-  "verification_scope": "0.2.16 separates legacy-firebeast single/two-button wait layouts, uses actual right-hand claim region for two-button UI, and adds5s observation spacing within30attempts. Old wait used center-only crop and rapid30reads, causing falsefailure afteractualeventdispatch on under20intel. Originalfailure retained; offline layout/disablednegative checks and schemas passed; new live wait/claim branch pending. Other ordinary/event actions unchanged.",
+  "verification_scope": "0.2.16 separates legacy-firebeast single/two-button wait layouts, uses actual right-hand claim region for two-button UI, and adds5s observation spacing within30attempts. Old wait used center-only crop and rapid30reads, causing falsefailure afteractualeventdispatch on under20intel. Originalfailure retained; offline layout/disablednegative checks and schemas passed; new live wait/claim branch pending. Other ordinary/event actions unchanged. 0.2.17: Add boundedcloseX exit for observed行军队列/额外队列/VIPactivation/purchase information dialog reached during legacyNPCnavigation. It doesnotprovequeuesfull anddoesnotclickresearch,activation,or purchase. Require footer anddialogabsence beforeexistingworld-to-city exit. OriginalLowunrecoveredfailure retained; live exitbranch pending.",
   "business_dependencies": [
     "City entry and exit; stamina meal uses lighthouse plus before this action",
     "Game execute-all handles ordinary intel; repeat after claim reveals queued tasks",

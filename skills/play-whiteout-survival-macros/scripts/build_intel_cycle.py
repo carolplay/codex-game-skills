@@ -92,6 +92,7 @@ def build(flows):
  level_page={'all':['探照灯升级','情报品质','最大情报刷新数量','点击任意位置继续'],'page_text_regions':[[200,180,590,270]]}
  legacy['task_contract']['exits'].insert(0,{'name':'exit-lighthouse-level-up','action':'click','point':[394,985],'before':copy.deepcopy(level_page),'after':{'all':['情报','下次刷新'],'none':['探照灯升级','前往查看']},'observe_attempts':5})
  legacy['task_contract']['exits'].insert(0,{'name':'exit-intel-stamina-supply','action':'click','point':[645,137],'before':['获取更多','领主体力','丰盛的招待'],'after':{'all':['情报','下次刷新'],'none':['获取更多','前往查看']},'observe_attempts':5})
+ legacy['task_contract']['exits'].insert(0,{'name': 'exit-march-capacity-info', 'action': 'click', 'point': [625, 306], 'before': {'all': ['行军队列', '额外队列', '激活VIP', '前往购买'], 'text_regions': [{'bounds': [300, 280, 500, 335], 'pattern': '行军队列', 'crop_ocr': True, 'prefer_frame_ocr': True, 'min_confidence': 0.3}]}, 'after': {'all': ['英雄', '背包'], 'any': ['城镇', '野外'], 'none': ['额外队列', '前往激活'], 'page_text_regions': [[100, 995, 690, 1079]]}, 'observe_attempts': 5})
  map_page={'all':['情报','下次刷新'],'none':['前往查看','获得奖励','恭喜获得','点击任意位置退出']}
  left=[125,980,380,1047];right=[410,980,665,1047]
  def counter(bounds,pattern):return {'bounds':bounds,'pattern':pattern,'crop_ocr':True,'min_confidence':.3}
