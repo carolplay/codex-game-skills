@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.146",
+  "package_version": "0.12.147",
   "executor_min_version": "0.4.12",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -156,11 +156,11 @@
     "refined": {
       "path": "actions/wos-crystal-half-price.json",
       "action_id": "wos-crystal-half-price",
-      "action_version": "0.1.8",
-      "sha256": "d6305029ebd8cff836ccc332986eccd9b9487f80e240e23d947555ca3c9b913f",
+      "action_version": "0.1.9",
+      "sha256": "e9fff5cfbe31da54b579287271803e79e92f7d2f9ffd191b09488e77a2675f7e",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。0.12.26 candidate reuses ordinarycrystal localized实验[室窒].?提炼 locator, oldhalfprice stillglobalexact causedmiss. Currentfailedframe resolvesuniquely; actualhalfpricebudget/dailyoperationguard unchanged; livepending.",
+      "verification_scope": "0.1.9 adds observed FC10 first-discount50->regular100 cost; before stillrequires每日特惠, after/skip forbid it; once_per_game_day retained. Exact main50/-50% screenshot positive; same still-discounted frame fails after andskip. Old10/25 profiles retained; new main50consumption livepending.",
       "current_evidence_note": "第三班成熟试验角色A概览勾选隐藏已完成，实验室行不见；旧anchor将这种底部面板误认主城。0.1.2加有界开关及footer排除/退出，下一班验收；不因入口缺失推断已完成。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },

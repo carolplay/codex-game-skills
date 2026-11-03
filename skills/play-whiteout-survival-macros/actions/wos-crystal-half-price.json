@@ -1,6 +1,6 @@
 {
   "action_id": "wos-crystal-half-price",
-  "action_version": "0.1.8",
+  "action_version": "0.1.9",
   "name": "WOS — first daily half-price super refinement only",
   "reference_size": [
     788,
@@ -1307,7 +1307,7 @@
               270,
               830
             ],
-            "pattern": "(?:10|25)",
+            "pattern": "(?:10|25|50)",
             "crop_ocr": true,
             "prefer_frame_ocr": true
           }
@@ -1329,7 +1329,7 @@
               270,
               830
             ],
-            "pattern": "(?:20|50)",
+            "pattern": "(?:20|50|100)",
             "crop_ocr": true,
             "prefer_frame_ocr": true
           }
@@ -1352,7 +1352,7 @@
               270,
               830
             ],
-            "pattern": "(?:20|50)",
+            "pattern": "(?:20|50|100)",
             "crop_ocr": true,
             "prefer_frame_ocr": true
           }
@@ -1613,7 +1613,7 @@
       }
     ]
   },
-  "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。0.12.26 candidate reuses ordinarycrystal localized实验[室窒].?提炼 locator, oldhalfprice stillglobalexact causedmiss. Currentfailedframe resolvesuniquely; actualhalfpricebudget/dailyoperationguard unchanged; livepending. 0.1.7 adds bounded exit from observed travel fork after overview key gesture detour; both labeled route signs must match; main agent normal back returned city. Saved failurepositive and citynegative checked. Macro exit live pending; lab entry notfixed. Moved refined near tail in shift manifests.;0.1.8: Yactual10 fullframeOCRconfidence1 while croppedOCRreads19/.3. Prefer exactlyone fullframeprice within samebounds before localcrop fallback; patterns10|25 and20|50 unchanged. Agentoneactualdiscount recordedseparately; macropositive livepending.",
+  "verification_scope": "0.1.9 adds observed FC10 first-discount50->regular100 cost; before stillrequires每日特惠, after/skip forbid it; once_per_game_day retained. Exact main50/-50% screenshot positive; same still-discounted frame fails after andskip. Old10/25 profiles retained; new main50consumption livepending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
   "overview_footer_compatibility": "Stable prefix supports both旧完成任务后是否隐藏 and新版完成任务后隐藏; only page-anchor semantics changed, not game strategy. Nextrole live pending."
 }
