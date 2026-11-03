@@ -1,6 +1,6 @@
 {
   "action_id": "wos-labyrinth-single-challenge",
-  "action_version": "0.1.4",
+  "action_version": "0.1.6",
   "name": "WOS one actual beast-cave challenge, distinct from free sweep",
   "status": "candidate",
   "reference_size": [
@@ -1199,7 +1199,6 @@
         "all": [
           "部队配置",
           "修改编队",
-          "一键上阵",
           "出征"
         ],
         "none": [
@@ -1220,20 +1219,27 @@
         "all": [
           "部队配置",
           "修改编队",
-          "一键上阵",
           "出征"
         ],
         "none": [
           "重新配置所有已解锁部队"
+        ],
+        "blue_regions": [
+          {
+            "bounds": [
+              150,
+              990,
+              365,
+              1035
+            ],
+            "min": 0.35
+          }
         ]
       },
       "after": {
         "any": [
           "重新配置所有已解锁部队",
           "修改编队"
-        ],
-        "all": [
-          "一键上阵"
         ]
       },
       "observe_attempts": 5,
@@ -1257,7 +1263,6 @@
         "all": [
           "部队配置",
           "修改编队",
-          "一键上阵",
           "出征"
         ],
         "none": [
@@ -1280,7 +1285,6 @@
         "all": [
           "部队配置",
           "修改编队",
-          "一键上阵",
           "出征"
         ],
         "none": [
@@ -1311,7 +1315,6 @@
         "all": [
           "部队配置",
           "修改编队",
-          "一键上阵",
           "出征"
         ],
         "none": [
@@ -1335,7 +1338,6 @@
           "失败"
         ],
         "none": [
-          "首胜奖励",
           "部队配置",
           "在此战斗",
           "修改编队"
@@ -1357,7 +1359,7 @@
           "点击任意位置关闭"
         ],
         "none": [
-          "首胜奖励"
+          "在此战斗"
         ]
       },
       "after": {
@@ -2048,7 +2050,6 @@
           "all": [
             "部队配置",
             "修改编队",
-            "一键上阵",
             "出征"
           ],
           "none": [
@@ -2068,7 +2069,6 @@
           "all": [
             "部队配置",
             "修改编队",
-            "一键上阵",
             "出征"
           ],
           "none": [
@@ -2476,5 +2476,5 @@
       }
     ]
   },
-  "verification_scope": "Candidate: choose one actually visible known domain label rather than hardcoded Cave of Monsters. Supported labels Cave, Earthlab, Forge; after-entry title and battle controls still required. Result/attempt/daily progress checked separately. Remove pet-only defeat hint while retaining failure/result/remaining-attempt controls. No claim that all six domains are covered. 0.1.3 adds sampled active Hero domain before legacy troop domains: exact scoped Hero label+pure countdown+purple/blue banner, open formation, native one-key lineup with optional popup, one challenge only, victory/defeat close, domain/root/city exit. Hero failure is a completed attempt, not victory. Existing three-domain branch preserved when Hero inactive. Agent actual Hero28-7 auto-lineup and single defeat sampled; no production macro pass yet. New inactive-banner skip and victory branch remain limited to offline/legacy evidence. 0.1.4 merges identical Hero/legacy result-overlay recovery into existing shared defeat/victory exits, then validates actual returned domain title. Avoids two matching exits on the sampled defeat page. Main current0.1.3 snapshot remains unchanged; nextrole uses0.1.4. New Hero primary steps unchanged."
+  "verification_scope": "Candidate: choose one actually visible known domain label rather than hardcoded Cave of Monsters. Supported labels Cave, Earthlab, Forge; after-entry title and battle controls still required. Result/attempt/daily progress checked separately. Remove pet-only defeat hint while retaining failure/result/remaining-attempt controls. No claim that all six domains are covered. 0.1.3 adds sampled active Hero domain before legacy troop domains: exact scoped Hero label+pure countdown+purple/blue banner, open formation, native one-key lineup with optional popup, one challenge only, victory/defeat close, domain/root/city exit. Hero failure is a completed attempt, not victory. Existing three-domain branch preserved when Hero inactive. Agent actual Hero28-7 auto-lineup and single defeat sampled; no production macro pass yet. New inactive-banner skip and victory branch remain limited to offline/legacy evidence. 0.1.4 merges identical Hero/legacy result-overlay recovery into existing shared defeat/victory exits, then validates actual returned domain title. Avoids two matching exits on the sampled defeat page. Main current0.1.3 snapshot remains unchanged; nextrole uses0.1.4. New Hero primary steps unchanged. 0.1.5: Y tutorial hand intermittently occludes 一键上阵 text although same formationpage and bluebutton visible. Formation page/exit nowuse 部队配置+修改编队+出征 without bottomlabel, lineup click additionally requires blueleftbutton. Modal retains exactonekey text; dispatch still requires blueenabledrightbutton. Y firstattempt stopped beforelineup/dispatch, agentbackto city. Actualoccludedframe positive andcitynegative checked; changedbranch livepending. 0.1.6: Y0.1.5 actuallywon, but dispatchafter incorrectlyforbade 首胜奖励 (victorypage containsit). Shared recoveryclosedvictory/zone/root andrestoredcity, actualrewardretained, oldcomponentdeviationpreserved. Allowrewardtext in result; retain result胜利/失败 and excludeformation/in-zonebody. Victoryclose reuses alreadylive sharedresult predicate, no nextstage/autochallenge input. Actualvictory+defeat positives andHerozone negative validated; newprimarywinbranch livepending."
 }

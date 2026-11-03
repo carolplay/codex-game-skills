@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.158",
-  "package_version": "0.12.158",
+  "macro_version": "0.12.162",
+  "package_version": "0.12.162",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -217,8 +217,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.14",
-          "sha256": "852bde9cabf36e068cf3e8823d72ddbb41eeda418c69ab1f20bc112c6dc47bf1"
+          "action_version": "0.1.15",
+          "sha256": "50abe9643193c0c0fab44a4866e813bb33135e441263c163bf35df6b03ceeeb3"
         },
         {
           "task": "war_academy_commission",
@@ -253,8 +253,8 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.7",
-          "sha256": "08da6a6f13877add8a203bdc34f2861e8f1c80129119fe93a8a58f74c3879c38"
+          "action_version": "0.1.8",
+          "sha256": "af1155300f3a4d6749d060c6a0bdb12a2948b6365b7228b8907bd644927c1199"
         },
         {
           "task": "donate",
@@ -488,8 +488,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.14",
-          "sha256": "852bde9cabf36e068cf3e8823d72ddbb41eeda418c69ab1f20bc112c6dc47bf1"
+          "action_version": "0.1.15",
+          "sha256": "50abe9643193c0c0fab44a4866e813bb33135e441263c163bf35df6b03ceeeb3"
         },
         {
           "task": "war_academy_commission",
@@ -524,8 +524,8 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.7",
-          "sha256": "08da6a6f13877add8a203bdc34f2861e8f1c80129119fe93a8a58f74c3879c38"
+          "action_version": "0.1.8",
+          "sha256": "af1155300f3a4d6749d060c6a0bdb12a2948b6365b7228b8907bd644927c1199"
         },
         {
           "task": "donate",
@@ -717,8 +717,8 @@
         {
           "task": "island",
           "action_id": "wos-island",
-          "action_version": "0.1.14",
-          "sha256": "852bde9cabf36e068cf3e8823d72ddbb41eeda418c69ab1f20bc112c6dc47bf1"
+          "action_version": "0.1.15",
+          "sha256": "50abe9643193c0c0fab44a4866e813bb33135e441263c163bf35df6b03ceeeb3"
         },
         {
           "task": "alliance_incentive",
@@ -735,8 +735,8 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.7",
-          "sha256": "08da6a6f13877add8a203bdc34f2861e8f1c80129119fe93a8a58f74c3879c38"
+          "action_version": "0.1.8",
+          "sha256": "af1155300f3a4d6749d060c6a0bdb12a2948b6365b7228b8907bd644927c1199"
         },
         {
           "task": "donate",

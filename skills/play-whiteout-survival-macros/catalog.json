@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.158",
+  "package_version": "0.12.162",
   "executor_min_version": "0.4.12",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -242,8 +242,8 @@
     "island": {
       "path": "actions/wos-island.json",
       "action_id": "wos-island",
-      "action_version": "0.1.14",
-      "sha256": "852bde9cabf36e068cf3e8823d72ddbb41eeda418c69ab1f20bc112c6dc47bf1",
+      "action_version": "0.1.15",
+      "sha256": "50abe9643193c0c0fab44a4866e813bb33135e441263c163bf35df6b03ceeeb3",
       "period": "shift",
       "utility": false,
       "verification_scope": "Guided-tree local template branch plus existing strict inventory gain; three recorded guide-positive frames and guide-absent negative passed. Output leaf aliases retain threshold. New branch live replay pending. Entry lookup failure remains explicit; do not infer hidden entry complete."
@@ -342,8 +342,8 @@
     "enlistment": {
       "path": "actions/wos-enlistment.json",
       "action_id": "wos-enlistment",
-      "action_version": "0.1.7",
-      "sha256": "08da6a6f13877add8a203bdc34f2861e8f1c80129119fe93a8a58f74c3879c38",
+      "action_version": "0.1.8",
+      "sha256": "af1155300f3a4d6749d060c6a0bdb12a2948b6365b7228b8907bd644927c1199",
       "period": "shift",
       "utility": false,
       "verification_scope": "0.1.7: lower-level hospital radial label was correct in full-frame OCR but cropped read changed one glyph, so settle observation failed; bounded exit returnedcity. The four existing same-region treatment-label predicates now prefer a unique in-bounds fullframe match and retain crop fallback. Clicks and exits unchanged. Saved failed frame positive and unrelated city negative passed; live new branch pending."
@@ -527,8 +527,8 @@
     "labyrinth_challenge": {
       "path": "actions/wos-labyrinth-single-challenge.json",
       "action_id": "wos-labyrinth-single-challenge",
-      "action_version": "0.1.4",
-      "sha256": "661508550e3c8bb9dd191fb1f93ff3ca351dbb08c4fbef31ae60ffa7ce5597bc",
+      "action_version": "0.1.6",
+      "sha256": "a1f9e32bd3864692e12b9512ff20dbedddb3eac657620c70657c8b30616030e6",
       "period": "day",
       "utility": false,
       "verification_scope": "0.1.0 full victorious replay and city return passed on a lower-level role. Mature-role underfilled confirmation proceeded to defeat; original missing-footer deviation and agent recovery preserved. 0.1.1 full replay on that mature role verified defeat-specific close, zone/root/city return, then recruit/daily continuation. Victory branch in0.1.1 and other calendar cave layouts await fresh live coverage; one challenge attempt satisfies daily challenge counter even on defeat."

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-island",
-  "action_version": "0.1.14",
+  "action_version": "0.1.15",
   "name": "WOS island",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 360,
   "status": "candidate",
-  "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit. Adds bounded normalback from observed experttravel root (expertlist/nextstation/idle/auto); savedfailure andcitynegative checked, agentbackcityactual. Doesnotclaimislandentryfixed. Newexit macrolivepending. 0.1.12 aligns existing labyrinth-root bounded exit for rotating zone labels after Y2944 detour; actual agent back returned city. Saved labyrinth positive/city negative checked; macro exit live pending; island entry still unreliable.",
+  "verification_scope": "0.1.10 adds bounded exit for an observed accidental labyrinth root during overview normalization. Root back to city manually verified; normalization cause and new macro exit replay pending. No reward claim in this exit. Adds bounded normalback from observed experttravel root (expertlist/nextstation/idle/auto); savedfailure andcitynegative checked, agentbackcityactual. Doesnotclaimislandentryfixed. Newexit macrolivepending. 0.1.12 aligns existing labyrinth-root bounded exit for rotating zone labels after Y2944 detour; actual agent back returned city. Saved labyrinth positive/city negative checked; macro exit live pending; island entry still unreliable. 0.1.15: Y label at736 visible butarrow746 hiddenunderfooter; seekskip andentry requirebounded LifeTree label<=700, thenfixedarrowx432 andsamey+10. Actualpartialrow negative andMainfullrow positive, newscrollbranch pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -819,6 +819,20 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              180,
+              280,
+              380,
+              700
+            ],
+            "pattern": ".*生命之树.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -886,6 +900,20 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              180,
+              280,
+              380,
+              700
+            ],
+            "pattern": ".*生命之树.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -953,6 +981,20 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              180,
+              280,
+              380,
+              700
+            ],
+            "pattern": ".*生命之树.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -1020,6 +1062,20 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              180,
+              280,
+              380,
+              700
+            ],
+            "pattern": ".*生命之树.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -1087,6 +1143,20 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              180,
+              280,
+              380,
+              700
+            ],
+            "pattern": ".*生命之树.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -1154,6 +1224,20 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              180,
+              280,
+              380,
+              700
+            ],
+            "pattern": ".*生命之树.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -1221,6 +1305,20 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              180,
+              280,
+              380,
+              700
+            ],
+            "pattern": ".*生命之树.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -1288,6 +1386,20 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              180,
+              280,
+              380,
+              700
+            ],
+            "pattern": ".*生命之树.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       }
     },
@@ -1301,13 +1413,16 @@
           180,
           280,
           380,
-          740
+          700
         ],
         "offset": [
-          150,
+          0,
           10
         ],
-        "min_confidence": 0.3
+        "min_confidence": 0.3,
+        "fixed_x": 432,
+        "crop_ocr": true,
+        "prefer_frame_ocr": true
       },
       "before": {
         "all": [
@@ -1327,6 +1442,20 @@
             450,
             800
           ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              180,
+              280,
+              380,
+              700
+            ],
+            "pattern": ".*生命之树.*",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
+          }
         ]
       },
       "after": {
