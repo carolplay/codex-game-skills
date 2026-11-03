@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.153",
-  "package_version": "0.12.153",
+  "macro_version": "0.12.155",
+  "package_version": "0.12.155",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -61,8 +61,8 @@
         {
           "task": "shield",
           "action_id": "wos-training-shield",
-          "action_version": "0.3.10",
-          "sha256": "681e7affb62c93aca4a7a6f746e700b67d83409843077788e090304724fbbe29"
+          "action_version": "0.3.11",
+          "sha256": "f425baaddbcdb3d2442a4240f48089476ac89f27930e2809a467eb426f4d7b83"
         },
         {
           "task": "lancer",
@@ -127,8 +127,8 @@
         {
           "task": "marksman",
           "action_id": "wos-training-marksman",
-          "action_version": "0.3.9",
-          "sha256": "97d83fdcbba841f5fcc5a01ca6e47161cfbde460b6f06ae037d53742454fe036"
+          "action_version": "0.3.10",
+          "sha256": "5c8519e146418f3e0d25bd25c701e83ef4679222cd3cfabcdb669fef13044e14"
         },
         {
           "task": "intel_cycle",
@@ -217,8 +217,8 @@
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.12",
-          "sha256": "efa15f9b80d9567a9d1534ea23c4533998aaee5df9fd2d0e883521c6e7c70bb9"
+          "action_version": "0.1.13",
+          "sha256": "59703bca50b29f47bd257e6fad7c092682ad0733fbefdf7e89ad460bc134d5d2"
         },
         {
           "task": "crystal",
@@ -327,8 +327,8 @@
         {
           "task": "shield",
           "action_id": "wos-training-shield",
-          "action_version": "0.3.10",
-          "sha256": "681e7affb62c93aca4a7a6f746e700b67d83409843077788e090304724fbbe29"
+          "action_version": "0.3.11",
+          "sha256": "f425baaddbcdb3d2442a4240f48089476ac89f27930e2809a467eb426f4d7b83"
         },
         {
           "task": "lancer",
@@ -393,8 +393,8 @@
         {
           "task": "marksman",
           "action_id": "wos-training-marksman",
-          "action_version": "0.3.9",
-          "sha256": "97d83fdcbba841f5fcc5a01ca6e47161cfbde460b6f06ae037d53742454fe036"
+          "action_version": "0.3.10",
+          "sha256": "5c8519e146418f3e0d25bd25c701e83ef4679222cd3cfabcdb669fef13044e14"
         },
         {
           "task": "intel_cycle",
@@ -483,8 +483,8 @@
         {
           "task": "war_academy_commission",
           "action_id": "wos-war-academy-commission",
-          "action_version": "0.1.12",
-          "sha256": "efa15f9b80d9567a9d1534ea23c4533998aaee5df9fd2d0e883521c6e7c70bb9"
+          "action_version": "0.1.13",
+          "sha256": "59703bca50b29f47bd257e6fad7c092682ad0733fbefdf7e89ad460bc134d5d2"
         },
         {
           "task": "crystal",
@@ -587,8 +587,8 @@
         {
           "task": "shield",
           "action_id": "wos-training-shield",
-          "action_version": "0.3.10",
-          "sha256": "681e7affb62c93aca4a7a6f746e700b67d83409843077788e090304724fbbe29"
+          "action_version": "0.3.11",
+          "sha256": "f425baaddbcdb3d2442a4240f48089476ac89f27930e2809a467eb426f4d7b83"
         },
         {
           "task": "lancer",
@@ -617,8 +617,8 @@
         {
           "task": "marksman",
           "action_id": "wos-training-marksman",
-          "action_version": "0.3.9",
-          "sha256": "97d83fdcbba841f5fcc5a01ca6e47161cfbde460b6f06ae037d53742454fe036"
+          "action_version": "0.3.10",
+          "sha256": "5c8519e146418f3e0d25bd25c701e83ef4679222cd3cfabcdb669fef13044e14"
         },
         {
           "task": "intel_cycle",

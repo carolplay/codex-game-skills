@@ -1,6 +1,6 @@
 {
   "action_id": "wos-training-marksman",
-  "action_version": "0.3.9",
+  "action_version": "0.3.10",
   "name": "WOS — 射手 collect and ordinary-resource training (trial)",
   "reference_size": [
     788,
@@ -664,7 +664,9 @@
         "any": [
           "盾兵营",
           "矛兵营",
-          "射手营"
+          "射手营",
+          "火晶等级提升",
+          "所有射手升级完成"
         ],
         "none": [
           "提示",
@@ -701,6 +703,73 @@
         ],
         "min_confidence": 0.3
       }
+    },
+    {
+      "name": "training-dismiss-completed-upgrade",
+      "action": "click",
+      "point": [
+        394,
+        1008
+      ],
+      "before": {
+        "all": [
+          "所有射手升级完成",
+          "点击任意位置退出"
+        ]
+      },
+      "after": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "skip_if": {
+        "any": [
+          "盾兵营",
+          "矛兵营",
+          "射手营"
+        ],
+        "none": [
+          "提示",
+          "获得奖励",
+          "资源不足",
+          "确认晋升"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              110,
+              1000,
+              300,
+              1079
+            ],
+            "pattern": "盾兵.",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 5
     },
     {
       "name": "select-explicit-camp",
@@ -1173,6 +1242,47 @@
     "max_exit_steps": 4,
     "exits": [
       {
+        "name": "exit-completed-camp-upgrade",
+        "action": "click",
+        "point": [
+          394,
+          1008
+        ],
+        "before": {
+          "all": [
+            "所有射手升级完成",
+            "点击任意位置退出"
+          ]
+        },
+        "after": {
+          "any": [
+            "盾兵营",
+            "矛兵营",
+            "射手营"
+          ],
+          "none": [
+            "提示",
+            "获得奖励",
+            "资源不足",
+            "确认晋升"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                110,
+                1000,
+                300,
+                1079
+              ],
+              "pattern": "盾兵.",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
         "name": "exit-resource-shortage-sheet",
         "action": "click",
         "point": [
@@ -1346,7 +1456,7 @@
       }
     ]
   },
-  "verification_scope": "Existing positive-queue exit passed on a mature role in0.3.3. Overview-tab candidate passes original low-level missing日常 frame and rejects city; other camp/tier branches bounded by actual local reports.0.3.4 businesssteps unchanged and metadata sanitized.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.; 0.12.74 adds sampled resource-shortage sheet exit only; actual topup+training was agent recovery, not this macro passing. Saved-frame positive/city negative passed; live auto-exit pending.",
+  "verification_scope": "Existing positive-queue exit passed on a mature role in0.3.3. Overview-tab candidate passes original low-level missing日常 frame and rejects city; other camp/tier branches bounded by actual local reports.0.3.4 businesssteps unchanged and metadata sanitized.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.; 0.12.74 adds sampled resource-shortage sheet exit only; actual topup+training was agent recovery, not this macro passing. Saved-frame positive/city negative passed; live auto-exit pending. 0.3.10: known existing 射手 camp fire-crystal completion overlay after entering training is closed via the already sampled lancer pattern; same footer and normal training assertions retained. This is notification dismissal, not building upgrade. Shield actual failure and agent dismissal sampled; macro overlay branch pending. Marksman branch inferred shared layout, pending live.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
   "business_dependencies": [
     "Always select and verify expected camp footer before ordinary training input",

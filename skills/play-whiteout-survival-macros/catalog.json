@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.153",
+  "package_version": "0.12.155",
   "executor_min_version": "0.4.12",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -109,8 +109,8 @@
     "shield": {
       "path": "actions/wos-training-shield.json",
       "action_id": "wos-training-shield",
-      "action_version": "0.3.10",
-      "sha256": "681e7affb62c93aca4a7a6f746e700b67d83409843077788e090304724fbbe29",
+      "action_version": "0.3.11",
+      "sha256": "f425baaddbcdb3d2442a4240f48089476ac89f27930e2809a467eb426f4d7b83",
       "period": "day",
       "utility": false,
       "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained. 0.3.7 fullframe uniqueinbounds trooplabel preferred before sameframe crop, with unchanged0.5confidence/scope/offset andcropfallback. SavedMainframe oldcropmissing whilefullframecorrect; oldreject/newpoint432487 andcityfullframe negativechecked; livebranchpending. 0.3.7 full workflow passed one mature-role third batch using full-frame-preferred432487; not native input validation. Package0.12.124: reopen overview once only after valid city interruption, then reselect town. Existing visible roster skips both added inputs. Recorded failed-city positive and open-roster negative/inverse guards checked; live interruption branch pending. Original failures remain. 0.12.124 targeted lancer still failed at initial town-tab postcondition before reaching recovery. 0.12.125 removes that premature assertion; immediately branches on known roster, known overview, or validated city, then allows one guarded town-tab reselection and strict roster assertion. Unknown pages still fail; no training-start retry. Live new branch pending.",
@@ -133,8 +133,8 @@
     "marksman": {
       "path": "actions/wos-training-marksman.json",
       "action_id": "wos-training-marksman",
-      "action_version": "0.3.9",
-      "sha256": "97d83fdcbba841f5fcc5a01ca6e47161cfbde460b6f06ae037d53742454fe036",
+      "action_version": "0.3.10",
+      "sha256": "5c8519e146418f3e0d25bd25c701e83ef4679222cd3cfabcdb669fef13044e14",
       "period": "day",
       "utility": false,
       "verification_scope": "Existing positive-queue exit passed on a mature role in0.3.3. Overview-tab candidate passes original low-level missing日常 frame and rejects city; other camp/tier branches bounded by actual local reports.0.3.4 businesssteps unchanged and metadata sanitized.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained. Package0.12.124: reopen overview once only after valid city interruption, then reselect town. Existing visible roster skips both added inputs. Recorded failed-city positive and open-roster negative/inverse guards checked; live interruption branch pending. Original failures remain. 0.12.124 targeted lancer still failed at initial town-tab postcondition before reaching recovery. 0.12.125 removes that premature assertion; immediately branches on known roster, known overview, or validated city, then allows one guarded town-tab reselection and strict roster assertion. Unknown pages still fail; no training-start retry. Live new branch pending.",
@@ -446,8 +446,8 @@
     "war_academy_commission": {
       "path": "actions/wos-war-academy-commission.json",
       "action_id": "wos-war-academy-commission",
-      "action_version": "0.1.12",
-      "sha256": "efa15f9b80d9567a9d1534ea23c4533998aaee5df9fd2d0e883521c6e7c70bb9",
+      "action_version": "0.1.13",
+      "sha256": "59703bca50b29f47bd257e6fad7c092682ad0733fbefdf7e89ad460bc134d5d2",
       "period": "event",
       "utility": false,
       "verification_scope": "Main navigation via town战争学院研究→firetech→委托 sampled. Free checkedrows and4checked milestones observed; yellow locked继续领取 is paid and excluded. PriorV1 knowledge says exact green领取 batches earned free rows.12boundedscroll scans, claim2/4/6/8 only earned. No research, upgrade, exchange or purchase. Actual new-role replay pending. a mature role actualfree task claim7→8, then8milestone blockedby unreadable ornamentalcounter; allboundedexits restoredcity and nextdaily ran. Revision useslocalprogressbar filltemplates; threshold8 positive8 and negative7 calibrated; lowerthreshold emptybranches pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending. Batched row gestures split into at most5 per JS call after two20-gesture calls exceeded runtime. Offline candidate; no live recovery claim. 0.1.6 still spends excessive time on 220 short scroll gestures. Candidate replaces each 20x100ms scan with2x600ms and per-gesture observations, keeping per-section reward checks, finite11sections and predefined exits. Next role replay pending; does not assert all free rewards claimed. 0.1.11: saved main/othermature cropped title firstglyph misreads戈/我/成, stable争学院 suffix retained within same bounded title and详情page. Onlytitlepredicate revised; navigation unchanged. Savedpositive+unrelatednegative offline; livepending."
