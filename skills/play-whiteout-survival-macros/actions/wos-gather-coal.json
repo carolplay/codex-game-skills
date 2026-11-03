@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-coal",
-  "action_version": "0.1.18",
+  "action_version": "0.1.19",
   "name": "WOS gather_coal",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending.; Candidate: Y defaultbeast carousel hidesfullresource labels, oldentry failed4tasks. Known NPCsearch pane→visible partialmeaticon679779→close/reopen centersmeat, agent actualnavigation verified. Macro positivebranch pending; normalresource layout skips normalization. No dispatch/sample claimed as macro pass.",
+  "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending.; Candidate: Y defaultbeast carousel hidesfullresource labels, oldentry failed4tasks. Known NPCsearch pane→visible partialmeaticon679779→close/reopen centersmeat, agent actualnavigation verified. Macro positivebranch pending; normalresource layout skips normalization. No dispatch/sample claimed as macro pass. 0.1.19: recheck the same existing fullmarch predicate at 2 visible-world recenter-reopen seams. Actual iron trace changed5/6 at initial admission to6/6 before final search, so initial check alone became stale during autojoin. No queueconfig, heroallocation or resource spending change; finish at fullqueue uses existing world-to-city exit. Actual5/6 negative andlater6/6 positive frame geometry saved; late-gate live trigger pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -629,7 +629,26 @@
           ]
         ]
       },
-      "observe_attempts": 4
+      "observe_attempts": 4,
+      "finish_if": {
+        "all": [
+          "行军"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              190,
+              320,
+              250
+            ],
+            "pattern": "([1-6])/\\1",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      }
     },
     {
       "name": "recenter-select-木材",
@@ -814,7 +833,26 @@
           ]
         ]
       },
-      "observe_attempts": 4
+      "observe_attempts": 4,
+      "finish_if": {
+        "all": [
+          "行军"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              100,
+              190,
+              320,
+              250
+            ],
+            "pattern": "([1-6])/\\1",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      }
     },
     {
       "name": "select-resource",
