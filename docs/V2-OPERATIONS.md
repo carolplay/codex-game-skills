@@ -58,7 +58,7 @@ V1离线追踪继续按正式run_id报告收尾，缺正式报告进入followups
 
 ## 双日猎熊与采集英雄
 
-2026-10-21用户指定普通采集不带英雄，保留战斗编队可用。双日猎熊America/Vancouver17:55准备、18:00开始，具体锚点与排程记录local-data/orchestration/bear-hunt-recurring.json；不替代三班。仅用现有Bea开5分钟集结，回城后继续；只要界面允许直接开，不按剩余时间计算跳过末轮。用户确认最近一场末轮赶上，与模型未刷到第四条战报分别记录。规格见skills/play-whiteout-survival-macros/references/bear-hunt.md。
+2026-10-21用户指定普通采集不带英雄，保留战斗编队可用。双日猎熊按2026-11-02修订为America/Vancouver18:00唤醒并开始；提前几分钟则在当前轮次准备并等到开场，不直接退出漏场。具体锚点与排程记录local-data/orchestration/bear-hunt-recurring.json；不替代三班。仅用现有Bea开5分钟集结，回城后继续；只要界面允许直接开，不按剩余时间计算跳过末轮。用户确认最近一场末轮赶上，与模型未刷到第四条战报分别记录。规格见skills/play-whiteout-survival-macros/references/bear-hunt.md。
 
 ## 2026-10-25：按拒绝范围隔离补班
 
