@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.142",
+  "package_version": "0.12.144",
   "executor_min_version": "0.4.12",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -121,8 +121,8 @@
     "lancer": {
       "path": "actions/wos-training-lancer.json",
       "action_id": "wos-training-lancer",
-      "action_version": "0.3.10",
-      "sha256": "d5b6f30913f7bcef0e0bfc72ccbfc1811671cd325671a231102c3370a97f1092",
+      "action_version": "0.3.11",
+      "sha256": "b40b7d6ef11333dcbba334f96da45fae619117bf4098020038efc4c36d185993",
       "period": "day",
       "utility": false,
       "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained. Package0.12.124: reopen overview once only after valid city interruption, then reselect town. Existing visible roster skips both added inputs. Recorded failed-city positive and open-roster negative/inverse guards checked; live interruption branch pending. Original failures remain. 0.12.124 targeted lancer still failed at initial town-tab postcondition before reaching recovery. 0.12.125 removes that premature assertion; immediately branches on known roster, known overview, or validated city, then allows one guarded town-tab reselection and strict roster assertion. Unknown pages still fail; no training-start retry. Live new branch pending.",
@@ -478,8 +478,8 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.21",
-      "sha256": "f560267547472c3ed10b92c976e2239df3fffddea1f6b6c7f56c12063611d3db",
+      "action_version": "0.1.22",
+      "sha256": "4d3a462ae4773d00517f57f5ec083cad8518cb1053b515e83430bffade40cfe2",
       "period": "shift",
       "utility": false,
       "include_in_daily": true,

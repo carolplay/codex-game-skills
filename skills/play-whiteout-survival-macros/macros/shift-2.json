@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.142",
-  "package_version": "0.12.142",
+  "macro_version": "0.12.144",
+  "package_version": "0.12.144",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -67,8 +67,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.10",
-          "sha256": "d5b6f30913f7bcef0e0bfc72ccbfc1811671cd325671a231102c3370a97f1092"
+          "action_version": "0.3.11",
+          "sha256": "b40b7d6ef11333dcbba334f96da45fae619117bf4098020038efc4c36d185993"
         },
         {
           "task": "pet_wolf",
@@ -138,8 +138,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.21",
-          "sha256": "f560267547472c3ed10b92c976e2239df3fffddea1f6b6c7f56c12063611d3db",
+          "action_version": "0.1.22",
+          "sha256": "4d3a462ae4773d00517f57f5ec083cad8518cb1053b515e83430bffade40cfe2",
           "task": "npc_rally_start"
         },
         {
@@ -333,8 +333,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.10",
-          "sha256": "d5b6f30913f7bcef0e0bfc72ccbfc1811671cd325671a231102c3370a97f1092"
+          "action_version": "0.3.11",
+          "sha256": "b40b7d6ef11333dcbba334f96da45fae619117bf4098020038efc4c36d185993"
         },
         {
           "task": "pet_wolf",
@@ -404,8 +404,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.21",
-          "sha256": "f560267547472c3ed10b92c976e2239df3fffddea1f6b6c7f56c12063611d3db",
+          "action_version": "0.1.22",
+          "sha256": "4d3a462ae4773d00517f57f5ec083cad8518cb1053b515e83430bffade40cfe2",
           "task": "npc_rally_start"
         },
         {
@@ -593,8 +593,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.10",
-          "sha256": "d5b6f30913f7bcef0e0bfc72ccbfc1811671cd325671a231102c3370a97f1092"
+          "action_version": "0.3.11",
+          "sha256": "b40b7d6ef11333dcbba334f96da45fae619117bf4098020038efc4c36d185993"
         },
         {
           "task": "pet_wolf",
@@ -628,8 +628,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.21",
-          "sha256": "f560267547472c3ed10b92c976e2239df3fffddea1f6b6c7f56c12063611d3db",
+          "action_version": "0.1.22",
+          "sha256": "4d3a462ae4773d00517f57f5ec083cad8518cb1053b515e83430bffade40cfe2",
           "task": "npc_rally_start"
         },
         {
