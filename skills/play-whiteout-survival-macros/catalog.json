@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.147",
+  "package_version": "0.12.148",
   "executor_min_version": "0.4.12",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -121,11 +121,11 @@
     "lancer": {
       "path": "actions/wos-training-lancer.json",
       "action_id": "wos-training-lancer",
-      "action_version": "0.3.11",
-      "sha256": "b40b7d6ef11333dcbba334f96da45fae619117bf4098020038efc4c36d185993",
+      "action_version": "0.3.12",
+      "sha256": "37e8c2cfd0c1dd8938c653f2f48e1c125054c6b7d1d032e19e040f0e88830f87",
       "period": "day",
       "utility": false,
-      "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained. Package0.12.124: reopen overview once only after valid city interruption, then reselect town. Existing visible roster skips both added inputs. Recorded failed-city positive and open-roster negative/inverse guards checked; live interruption branch pending. Original failures remain. 0.12.124 targeted lancer still failed at initial town-tab postcondition before reaching recovery. 0.12.125 removes that premature assertion; immediately branches on known roster, known overview, or validated city, then allows one guarded town-tab reselection and strict roster assertion. Unknown pages still fail; no training-start retry. Live new branch pending.",
+      "verification_scope": "New training and existing positive-queue exits have prior role-scoped evidence.0.3.3 adds localized overview tabs to replace missing full-frame日常; saved low-level failure positive and city negative pass, mature-role live branches recorded locally.0.3.4 businesssteps unchanged; metadata sanitized. No implication that every troop tier and campupgrade state passed.;0.3.5 existingqueue/idlebranch uses sameframe croppedcamptitle, avoids fullOCR miss routing normalidle into加速 requirement. Lanceractualfailure saved; livefix pending. Existing timers andtrainingstart checks retained.;0.3.7: Lowemptycamp radial title cropactuallyreads予兵营 withconfidence.5; acceptknownfontvariant矛/予 onlybefore兵营. Existingidle/train,active/timer,explicitcamp andcityexit checks unchanged. Savedfailedframecandidatepositive andshieldnegativeverified; livepending.; 0.12.74 adds sampled resource-shortage sheet exit only; actual topup+training was agent recovery, not this macro passing. Saved-frame positive/city negative passed; live auto-exit pending. 0.3.11: first entry after a previously completed camp FireCrystal upgrade opened a full-screen ceremony instead of normal training. Keep training-open as intermediate navigation, recognize that known completed-only popup, dismiss it and require the original footer/page condition before further input. Same bounded recovery exit added. No upgrade initiation or construction action added. Original failure retained; agent dismissal then back-to-city was observed. New optional branch and normal replay scope recorded separately. 0.3.12: Secondshift blizzardoverlay crop target missing while fullframe contains confident矛兵. Prefer same-frame unique fullframe label within existingbounds beforecrop fallback. Frozen147failure retained; savedframe resolves432,547. Newlivebranch pending.",
       "current_evidence_note": "失败原图显示教程手指覆盖训练按钮文字。下一版保留三兵营页签、未训练中、数字数量及启动后队列验证，移除被手指遮挡的重复按钮文字断言；坐标仍为右侧普通训练，未触碰左侧钻石立即完成。新增分支未现场回放，不同班重试失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
       "overview_revision": "Traininglocate uses localcrop samebounds/offset/confidence. Knownoverviewexit adds tabs/trainingrow crops; savedmainpositive andcitynegative required. Livepending."

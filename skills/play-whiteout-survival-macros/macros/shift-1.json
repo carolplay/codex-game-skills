@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.147",
-  "package_version": "0.12.147",
+  "macro_version": "0.12.148",
+  "package_version": "0.12.148",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -67,8 +67,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.11",
-          "sha256": "b40b7d6ef11333dcbba334f96da45fae619117bf4098020038efc4c36d185993"
+          "action_version": "0.3.12",
+          "sha256": "37e8c2cfd0c1dd8938c653f2f48e1c125054c6b7d1d032e19e040f0e88830f87"
         },
         {
           "task": "pet_wolf",
@@ -338,8 +338,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.11",
-          "sha256": "b40b7d6ef11333dcbba334f96da45fae619117bf4098020038efc4c36d185993"
+          "action_version": "0.3.12",
+          "sha256": "37e8c2cfd0c1dd8938c653f2f48e1c125054c6b7d1d032e19e040f0e88830f87"
         },
         {
           "task": "pet_wolf",
@@ -603,8 +603,8 @@
         {
           "task": "lancer",
           "action_id": "wos-training-lancer",
-          "action_version": "0.3.11",
-          "sha256": "b40b7d6ef11333dcbba334f96da45fae619117bf4098020038efc4c36d185993"
+          "action_version": "0.3.12",
+          "sha256": "37e8c2cfd0c1dd8938c653f2f48e1c125054c6b7d1d032e19e040f0e88830f87"
         },
         {
           "task": "pet_wolf",
