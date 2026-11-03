@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.155",
-  "package_version": "0.12.155",
+  "macro_version": "0.12.157",
+  "package_version": "0.12.157",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -247,8 +247,8 @@
         {
           "task": "labyrinth_challenge",
           "action_id": "wos-labyrinth-single-challenge",
-          "action_version": "0.1.2",
-          "sha256": "939c3535514481c78313f1dabbabdfcf782e4477c1ed7b31938715e8b451af85"
+          "action_version": "0.1.4",
+          "sha256": "661508550e3c8bb9dd191fb1f93ff3ca351dbb08c4fbef31ae60ffa7ce5597bc"
         },
         {
           "task": "enlistment",
@@ -518,8 +518,8 @@
         {
           "task": "labyrinth_challenge",
           "action_id": "wos-labyrinth-single-challenge",
-          "action_version": "0.1.2",
-          "sha256": "939c3535514481c78313f1dabbabdfcf782e4477c1ed7b31938715e8b451af85"
+          "action_version": "0.1.4",
+          "sha256": "661508550e3c8bb9dd191fb1f93ff3ca351dbb08c4fbef31ae60ffa7ce5597bc"
         },
         {
           "task": "enlistment",
@@ -729,8 +729,8 @@
         {
           "task": "labyrinth_challenge",
           "action_id": "wos-labyrinth-single-challenge",
-          "action_version": "0.1.2",
-          "sha256": "939c3535514481c78313f1dabbabdfcf782e4477c1ed7b31938715e8b451af85"
+          "action_version": "0.1.4",
+          "sha256": "661508550e3c8bb9dd191fb1f93ff3ca351dbb08c4fbef31ae60ffa7ce5597bc"
         },
         {
           "task": "enlistment",

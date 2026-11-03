@@ -1,13 +1,13 @@
 {
   "action_id": "wos-labyrinth-single-challenge",
-  "action_version": "0.1.2",
+  "action_version": "0.1.4",
   "name": "WOS one actual beast-cave challenge, distinct from free sweep",
   "status": "candidate",
   "reference_size": [
     788,
     1079
   ],
-  "execution_timeout_seconds": 420,
+  "execution_timeout_seconds": 480,
   "steps": [
     {
       "name": "01-check-city",
@@ -1068,6 +1068,520 @@
       }
     },
     {
+      "name": "hero-open-active-domain",
+      "action": "click",
+      "before": {
+        "all": [
+          "地心探险"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              390,
+              270,
+              590,
+              310
+            ],
+            "pattern": "英雄之地",
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              390,
+              305,
+              590,
+              340
+            ],
+            "pattern": "[0-9]{2}:[0-9]{2}:[0-9]{2}",
+            "min_confidence": 0.3
+          }
+        ],
+        "blue_regions": [
+          {
+            "bounds": [
+              390,
+              280,
+              565,
+              330
+            ],
+            "min": 0.35
+          }
+        ]
+      },
+      "text_target": {
+        "text": "英雄之地",
+        "exact": true,
+        "bounds": [
+          375,
+          250,
+          590,
+          340
+        ],
+        "offset": [
+          0,
+          -70
+        ],
+        "min_confidence": 0.3,
+        "crop_ocr": true,
+        "prefer_frame_ocr": true
+      },
+      "after": {
+        "all": [
+          "英雄之地",
+          "首胜奖励",
+          "挑战"
+        ],
+        "none": [
+          "地心探险",
+          "部队配置",
+          "查看战报"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "地心探险"
+          ],
+          "none": [
+            "英雄之地"
+          ]
+        },
+        {
+          "all": [
+            "地心探险"
+          ],
+          "blue_regions": [
+            {
+              "bounds": [
+                390,
+                280,
+                565,
+                330
+              ],
+              "max": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hero-open-formation",
+      "action": "click",
+      "point": [
+        394,
+        1022
+      ],
+      "before": {
+        "all": [
+          "英雄之地",
+          "首胜奖励",
+          "挑战"
+        ],
+        "none": [
+          "地心探险",
+          "部队配置",
+          "查看战报"
+        ],
+        "blue_regions": [
+          {
+            "bounds": [
+              285,
+              1000,
+              505,
+              1045
+            ],
+            "min": 0.35
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "部队配置",
+          "修改编队",
+          "一键上阵",
+          "出征"
+        ],
+        "none": [
+          "重新配置所有已解锁部队"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "hero-open-active-domain"
+    },
+    {
+      "name": "hero-onekey-lineup",
+      "action": "click",
+      "point": [
+        263,
+        1008
+      ],
+      "before": {
+        "all": [
+          "部队配置",
+          "修改编队",
+          "一键上阵",
+          "出征"
+        ],
+        "none": [
+          "重新配置所有已解锁部队"
+        ]
+      },
+      "after": {
+        "any": [
+          "重新配置所有已解锁部队",
+          "修改编队"
+        ],
+        "all": [
+          "一键上阵"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "hero-open-active-domain"
+    },
+    {
+      "name": "hero-confirm-onekey-if-shown",
+      "action": "click",
+      "point": [
+        520,
+        676
+      ],
+      "before": {
+        "all": [
+          "一键上阵",
+          "重新配置所有已解锁部队",
+          "取消"
+        ]
+      },
+      "after": {
+        "all": [
+          "部队配置",
+          "修改编队",
+          "一键上阵",
+          "出征"
+        ],
+        "none": [
+          "重新配置所有已解锁部队"
+        ],
+        "blue_regions": [
+          {
+            "bounds": [
+              425,
+              990,
+              640,
+              1035
+            ],
+            "min": 0.35
+          }
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "部队配置",
+          "修改编队",
+          "一键上阵",
+          "出征"
+        ],
+        "none": [
+          "重新配置所有已解锁部队"
+        ],
+        "blue_regions": [
+          {
+            "bounds": [
+              425,
+              990,
+              640,
+              1035
+            ],
+            "min": 0.35
+          }
+        ]
+      },
+      "skip_if_step_skipped": "hero-open-active-domain"
+    },
+    {
+      "name": "hero-dispatch-single-challenge",
+      "action": "click",
+      "point": [
+        530,
+        1008
+      ],
+      "before": {
+        "all": [
+          "部队配置",
+          "修改编队",
+          "一键上阵",
+          "出征"
+        ],
+        "none": [
+          "重新配置所有已解锁部队"
+        ],
+        "blue_regions": [
+          {
+            "bounds": [
+              425,
+              990,
+              640,
+              1035
+            ],
+            "min": 0.35
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "胜利",
+          "失败"
+        ],
+        "none": [
+          "首胜奖励",
+          "部队配置",
+          "在此战斗",
+          "修改编队"
+        ]
+      },
+      "observe_attempts": 30,
+      "skip_if_step_skipped": "hero-open-active-domain"
+    },
+    {
+      "name": "hero-close-victory",
+      "action": "click",
+      "point": [
+        394,
+        1008
+      ],
+      "before": {
+        "all": [
+          "胜利",
+          "点击任意位置关闭"
+        ],
+        "none": [
+          "首胜奖励"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄之地",
+          "首胜奖励",
+          "挑战"
+        ],
+        "none": [
+          "地心探险",
+          "部队配置",
+          "查看战报"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "失败",
+          "今日剩余失败次数",
+          "查看战报",
+          "重试"
+        ],
+        "none": [
+          "首胜奖励"
+        ]
+      },
+      "skip_if_step_skipped": "hero-open-active-domain"
+    },
+    {
+      "name": "hero-close-defeat",
+      "action": "click",
+      "point": [
+        394,
+        1008
+      ],
+      "before": {
+        "all": [
+          "失败",
+          "今日剩余失败次数",
+          "查看战报",
+          "重试"
+        ],
+        "none": [
+          "首胜奖励"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄之地",
+          "首胜奖励",
+          "挑战"
+        ],
+        "none": [
+          "地心探险",
+          "部队配置",
+          "查看战报"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "英雄之地",
+          "首胜奖励",
+          "挑战"
+        ],
+        "none": [
+          "地心探险",
+          "部队配置",
+          "查看战报"
+        ]
+      },
+      "skip_if_step_skipped": "hero-open-active-domain"
+    },
+    {
+      "name": "hero-leave-domain",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "英雄之地",
+          "首胜奖励",
+          "挑战"
+        ],
+        "none": [
+          "地心探险",
+          "部队配置",
+          "查看战报"
+        ]
+      },
+      "after": {
+        "all": [
+          "地心探险"
+        ],
+        "none": [
+          "在此战斗",
+          "领取",
+          "继续出征"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "hero-open-active-domain"
+    },
+    {
+      "name": "hero-leave-root",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "地心探险"
+        ],
+        "none": [
+          "在此战斗",
+          "领取",
+          "继续出征"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "hero-open-active-domain"
+    },
+    {
+      "name": "hero-finish-returned-city",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "skip_if_step_skipped": "hero-open-active-domain"
+    },
+    {
       "name": "open-visible-known-domain-once",
       "action": "click",
       "before": {
@@ -1517,6 +2031,96 @@
     "max_exit_steps": 6,
     "exits": [
       {
+        "name": "exit-hero-onekey-popup",
+        "action": "click",
+        "point": [
+          621,
+          394
+        ],
+        "before": {
+          "all": [
+            "一键上阵",
+            "重新配置所有已解锁部队",
+            "取消"
+          ]
+        },
+        "after": {
+          "all": [
+            "部队配置",
+            "修改编队",
+            "一键上阵",
+            "出征"
+          ],
+          "none": [
+            "重新配置所有已解锁部队"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-hero-formation",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "部队配置",
+            "修改编队",
+            "一键上阵",
+            "出征"
+          ],
+          "none": [
+            "重新配置所有已解锁部队"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄之地",
+            "首胜奖励",
+            "挑战"
+          ],
+          "none": [
+            "地心探险",
+            "部队配置",
+            "查看战报"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-hero-zone",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "英雄之地",
+            "首胜奖励",
+            "挑战"
+          ],
+          "none": [
+            "地心探险",
+            "部队配置",
+            "查看战报"
+          ]
+        },
+        "after": {
+          "all": [
+            "地心探险"
+          ],
+          "none": [
+            "在此战斗",
+            "领取",
+            "继续出征"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
         "name": "exit-profile",
         "action": "click",
         "point": [
@@ -1654,7 +2258,8 @@
           "any": [
             "群兽洞窟",
             "地下科研所",
-            "装备锻炉"
+            "装备锻炉",
+            "英雄之地"
           ]
         },
         "observe_attempts": 5
@@ -1691,7 +2296,8 @@
           "any": [
             "群兽洞窟",
             "地下科研所",
-            "装备锻炉"
+            "装备锻炉",
+            "英雄之地"
           ]
         },
         "observe_attempts": 5
@@ -1870,5 +2476,5 @@
       }
     ]
   },
-  "verification_scope": "Candidate: choose one actually visible known domain label rather than hardcoded Cave of Monsters. Supported labels Cave, Earthlab, Forge; after-entry title and battle controls still required. Result/attempt/daily progress checked separately. Remove pet-only defeat hint while retaining failure/result/remaining-attempt controls. No claim that all six domains are covered."
+  "verification_scope": "Candidate: choose one actually visible known domain label rather than hardcoded Cave of Monsters. Supported labels Cave, Earthlab, Forge; after-entry title and battle controls still required. Result/attempt/daily progress checked separately. Remove pet-only defeat hint while retaining failure/result/remaining-attempt controls. No claim that all six domains are covered. 0.1.3 adds sampled active Hero domain before legacy troop domains: exact scoped Hero label+pure countdown+purple/blue banner, open formation, native one-key lineup with optional popup, one challenge only, victory/defeat close, domain/root/city exit. Hero failure is a completed attempt, not victory. Existing three-domain branch preserved when Hero inactive. Agent actual Hero28-7 auto-lineup and single defeat sampled; no production macro pass yet. New inactive-banner skip and victory branch remain limited to offline/legacy evidence. 0.1.4 merges identical Hero/legacy result-overlay recovery into existing shared defeat/victory exits, then validates actual returned domain title. Avoids two matching exits on the sampled defeat page. Main current0.1.3 snapshot remains unchanged; nextrole uses0.1.4. New Hero primary steps unchanged."
 }
