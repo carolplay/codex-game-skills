@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.145",
+  "package_version": "0.12.146",
   "executor_min_version": "0.4.12",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -466,11 +466,11 @@
     "intel_cycle": {
       "path": "actions/wos-intel-cycle.json",
       "action_id": "wos-intel-cycle",
-      "action_version": "0.2.15",
-      "sha256": "d2b5bfcd3ea4d0e5c3b7b937d1caef230bd412d8917c88074551ece032c4881b",
+      "action_version": "0.2.16",
+      "sha256": "fdb438254067710d21ba1fed711f82c706e82003c23c7acd9152a2d31d0640c0",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback. 0.2.8: mainbulkexecute8 completed but firstclaimclick had no effect; allow unchanged claimpage only asintermediate, one explicitfreshgreen retry, strictrewardpostcondition preserved. Retryskips reward/disabled; no unboundedclickloop. Savedfailureframepositive; nextrolelivepending. Retryusesknownmap+leftbutton+greenregion, notcursoroccluded rightbuttonlabel. 0.2.12: one shared bounded120s recovery budget for up to5 declared page exits; main0.2.11 early-completion map/world exit reachedcity but final verification exceeded default60s (rawfailure retained). No new business clicks, no timeout retries. Candidate livepending.",
+      "verification_scope": "0.2.16 separates legacy-firebeast single/two-button wait layouts, uses actual right-hand claim region for two-button UI, and adds5s observation spacing within30attempts. Old wait used center-only crop and rapid30reads, causing falsefailure afteractualeventdispatch on under20intel. Originalfailure retained; offline layout/disablednegative checks and schemas passed; new live wait/claim branch pending. Other ordinary/event actions unchanged.",
       "rescue_world_anchor_revision": "Saved low-role rescue-world screenshot whole OCR drops城镇, footer crop reads it. Preserve exact title/button/next-state assertions and bounded exits. Live replay pending.",
       "layout_gate_revision": "2827 rawtrace legacy-mode skipped but beastselector stillclicked when fullOCR omittedbulktext. Legacyselectors now explicitly inherit legacy-mode skip; prevents oldcenterclaim onbulkUI. Eventfirebeast retainsseparatebranch. Livepending.",
       "level_up_revision": "Lowactualrescueclaim triggeredlighthouse17overlay. Addstrictoptionalleveldismiss afterrewardclose, preserveoriginalmapassertion; boundedknownexit alsoadded. Livepending."

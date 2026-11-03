@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.145",
-  "package_version": "0.12.145",
+  "macro_version": "0.12.146",
+  "package_version": "0.12.146",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -133,8 +133,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.15",
-          "sha256": "d2b5bfcd3ea4d0e5c3b7b937d1caef230bd412d8917c88074551ece032c4881b"
+          "action_version": "0.2.16",
+          "sha256": "fdb438254067710d21ba1fed711f82c706e82003c23c7acd9152a2d31d0640c0"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -399,8 +399,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.15",
-          "sha256": "d2b5bfcd3ea4d0e5c3b7b937d1caef230bd412d8917c88074551ece032c4881b"
+          "action_version": "0.2.16",
+          "sha256": "fdb438254067710d21ba1fed711f82c706e82003c23c7acd9152a2d31d0640c0"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -623,8 +623,8 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.15",
-          "sha256": "d2b5bfcd3ea4d0e5c3b7b937d1caef230bd412d8917c88074551ece032c4881b"
+          "action_version": "0.2.16",
+          "sha256": "fdb438254067710d21ba1fed711f82c706e82003c23c7acd9152a2d31d0640c0"
         },
         {
           "action_id": "wos-npc-rally-start",

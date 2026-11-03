@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.15",
+  "action_version": "0.2.16",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -3039,7 +3039,81 @@
         ]
       },
       "observe_attempts": 30,
-      "skip_if_step_skipped": "legacy-cycle-0-firebeast-select"
+      "skip_if_step_skipped": "legacy-cycle-0-firebeast-select",
+      "observe_interval_seconds": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ]
+      }
+    },
+    {
+      "name": "legacy-cycle-0-firebeast-wait-two-button",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "observe_attempts": 30,
+      "skip_if_step_skipped": "legacy-cycle-0-firebeast-select",
+      "observe_interval_seconds": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "全部执行"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ]
+      }
     },
     {
       "name": "legacy-cycle-0-firebeast-claim-two-button",
@@ -6129,7 +6203,7 @@
     ],
     "recovery_timeout_seconds": 120
   },
-  "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback. 0.2.8: mainbulkexecute8 completed but firstclaimclick had no effect; allow unchanged claimpage only asintermediate, one explicitfreshgreen retry, strictrewardpostcondition preserved. Retryskips reward/disabled; no unboundedclickloop. Savedfailureframepositive; nextrolelivepending. Retryusesknownmap+leftbutton+greenregion, notcursoroccluded rightbuttonlabel. 0.2.13 distinguishes visible locked bulk button from unlocked bulk UI using a bounded lock glyph; locked level19 takes legacy component branch. Saved positive and mature negative frames pass; live replay pending. 0.2.14 adds pending new-layout claims before layout selection and right-hand legacy claim after locked bulk dispatch. Original center-button layout retained. Saved failure addressed; live thirdshift pending. 0.2.15: mature-role event Firebeast actually dispatched and returned to intel, but30 rapid observations expired while timer still1:46. Add5second pure-observation intervals, matching existing legacy wait; no additional input or relaxed completion predicate. Original failure retained; next role live pending.",
+  "verification_scope": "0.2.16 separates legacy-firebeast single/two-button wait layouts, uses actual right-hand claim region for two-button UI, and adds5s observation spacing within30attempts. Old wait used center-only crop and rapid30reads, causing falsefailure afteractualeventdispatch on under20intel. Originalfailure retained; offline layout/disablednegative checks and schemas passed; new live wait/claim branch pending. Other ordinary/event actions unchanged.",
   "business_dependencies": [
     "City entry and exit; stamina meal uses lighthouse plus before this action",
     "Game execute-all handles ordinary intel; repeat after claim reveals queued tasks",

@@ -53,6 +53,21 @@ def add_two_button_claims(flow):
  flow['steps']=result
  return flow
 
+def add_firebeast_layout_waits(flow):
+ """The locked two-button layout still claims on the right, after real travel."""
+ flow=copy.deepcopy(flow);result=[]
+ layout={'all':['情报','下次刷新','全部执行','一键领取'],'page_text_regions':[[110,970,680,1060]]}
+ for step in flow['steps']:
+  if step['name']=='legacy-cycle-0-firebeast-wait-complete':
+   step['observe_interval_seconds']=5;step['skip_if']=copy.deepcopy(layout);result.append(step)
+   other=copy.deepcopy(step);other['name']='legacy-cycle-0-firebeast-wait-two-button';other.pop('skip_if')
+   other['before']=copy.deepcopy(layout);other['before']['none']=['前往查看','获得奖励','恭喜获得','点击任意位置退出']
+   other['before']['green_regions']=[{'bounds':[425,1000,650,1040],'min':.12}]
+   other['skip_if']={'all':['情报','下次刷新'],'none':['全部执行'],'page_text_regions':[[110,970,680,1060]]};result.append(other)
+  else:result.append(step)
+ flow['steps']=result
+ return flow
+
 def apply_bulk_lock_layout(flow):
  """A visible bulk label can be locked below lighthouse20; use legacy then."""
  flow=copy.deepcopy(flow)
@@ -66,7 +81,7 @@ def apply_bulk_lock_layout(flow):
   if name.startswith('legacy-'):
    for condition in step.get('skip_if_any',[]):
     if '全部执行' in condition.get('all',[]):condition['template_regions']=[{**spec,'present':False}]
- return add_two_button_claims(flow)
+ return add_firebeast_layout_waits(add_two_button_claims(flow))
 
 def build(flows):
  """New game-owned bulk execution; keep the event-only firebeast path."""
