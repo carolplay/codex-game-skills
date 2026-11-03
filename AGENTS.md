@@ -3,6 +3,7 @@
 - Public, reusable game skills live in `skills/`.
 - Machine-local account settings, execution records and experiments live in `local-data/`, which is Git-ignored. Never commit that directory or copy private account data into public skills.
 - Read `local-data/README.md` for local paths and operating state when the directory exists.
+- Screenshot retention: keep all run images from the last72hours and all non-image logs. Archive failure keyframes, actual action-version/branch samples and explicit report/fixture references in Git-ignored `local-data/macro-materials/` before expiring other old run images. Use `scripts/retain_macro_screenshots.py` (dry-run default, `--apply` to execute); acquire the real visit.lock and skip if busy. Never let maintenance start gameplay or alter pause/schedule state. Policy and archive index live in the material library README.
 - V3 follows the user-confirmed three-layer architecture: general execution backend + game-specific capability packages + MCP interface. Prove it with WOS first, then expand to Uncharted Waters Online and WoW; see `docs/WOS-V3-NATIVE-RUNTIME.md`. Native permissions and target acceptance precede production migration; MCP is an optional Agent entry, not a per-step model loop.
 - The CrossMacro source repository is a separate project folder. Runtime dependencies and machine-specific launcher configuration live outside Git.
 - Preserve the existing pause state; filesystem maintenance does not authorize game actions or resuming schedules.

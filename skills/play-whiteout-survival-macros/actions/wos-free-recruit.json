@@ -1,6 +1,6 @@
 {
   "action_id": "wos-free-recruit",
-  "action_version": "0.1.8",
+  "action_version": "0.1.9",
   "name": "WOS — free advanced and epic recruitment, never spend keys",
   "reference_size": [
     788,
@@ -265,9 +265,28 @@
       },
       "after": {
         "all": [
-          "奖励"
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            220,
+            945,
+            580,
+            1010
+          ]
         ],
         "text_regions": [
+          {
+            "bounds": [
+              270,
+              880,
+              520,
+              925
+            ],
+            "pattern": "招募[1lI]?次",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
           {
             "bounds": [
               220,
@@ -299,9 +318,28 @@
       ],
       "before": {
         "all": [
-          "奖励"
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            220,
+            945,
+            580,
+            1010
+          ]
         ],
         "text_regions": [
+          {
+            "bounds": [
+              270,
+              880,
+              520,
+              925
+            ],
+            "pattern": "招募[1lI]?次",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
           {
             "bounds": [
               220,
@@ -346,9 +384,28 @@
       ],
       "before": {
         "all": [
-          "奖励"
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            220,
+            945,
+            580,
+            1010
+          ]
         ],
         "text_regions": [
+          {
+            "bounds": [
+              270,
+              880,
+              520,
+              925
+            ],
+            "pattern": "招募[1lI]?次",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
           {
             "bounds": [
               220,
@@ -475,9 +532,28 @@
       },
       "after": {
         "all": [
-          "奖励"
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            220,
+            945,
+            580,
+            1010
+          ]
         ],
         "text_regions": [
+          {
+            "bounds": [
+              270,
+              880,
+              520,
+              925
+            ],
+            "pattern": "招募[1lI]?次",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
           {
             "bounds": [
               220,
@@ -509,9 +585,28 @@
       ],
       "before": {
         "all": [
-          "奖励"
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            220,
+            945,
+            580,
+            1010
+          ]
         ],
         "text_regions": [
+          {
+            "bounds": [
+              270,
+              880,
+              520,
+              925
+            ],
+            "pattern": "招募[1lI]?次",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
           {
             "bounds": [
               220,
@@ -556,9 +651,28 @@
       ],
       "before": {
         "all": [
-          "奖励"
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            220,
+            945,
+            580,
+            1010
+          ]
         ],
         "text_regions": [
+          {
+            "bounds": [
+              270,
+              880,
+              520,
+              925
+            ],
+            "pattern": "招募[1lI]?次",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
           {
             "bounds": [
               220,
@@ -740,9 +854,28 @@
         },
         "after": {
           "all": [
-            "奖励"
+            "点击任意位置退出"
+          ],
+          "page_text_regions": [
+            [
+              220,
+              945,
+              580,
+              1010
+            ]
           ],
           "text_regions": [
+            {
+              "bounds": [
+                270,
+                880,
+                520,
+                925
+              ],
+              "pattern": "招募[1lI]?次",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            },
             {
               "bounds": [
                 220,
@@ -767,9 +900,28 @@
         ],
         "before": {
           "all": [
-            "奖励"
+            "点击任意位置退出"
+          ],
+          "page_text_regions": [
+            [
+              220,
+              945,
+              580,
+              1010
+            ]
           ],
           "text_regions": [
+            {
+              "bounds": [
+                270,
+                880,
+                520,
+                925
+              ],
+              "pattern": "招募[1lI]?次",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            },
             {
               "bounds": [
                 220,
@@ -952,6 +1104,6 @@
     ]
   },
   "status": "partial_verified",
-  "verification_scope": "Advanced free draw and unchanged silver/gold inventory replayed on a mature role in0.1.6. Silver-key narrow integer check accepts confidence0.3; saved failure reproduces old rejection and correct integer read, without decimal coercion. Epic cooldown passed; other epic/free/newhero states keep prior evidence only. Metadata-only patch relative to0.1.6; private balances excluded.",
+  "verification_scope": "Localized single-draw button plus unique dismiss footer jointly identify reward page even when an alliance banner covers its title; saved failure reproduces old title rejection and passes new conditions; recruit-list negative rejected. Live next free/cooldown branches pending; original0.1.8 failure retained.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

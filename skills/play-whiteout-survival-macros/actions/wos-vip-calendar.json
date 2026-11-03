@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-calendar",
-  "action_version": "0.1.4",
+  "action_version": "0.1.7",
   "name": "VIP consecutive login calendar daily reward",
   "reference_size": [
     788,
@@ -231,6 +231,137 @@
       "observe_attempts": 5
     },
     {
+      "name": "frozen-calendar-mode",
+      "action": "observe",
+      "before": {
+        "all": [
+          "连续登录保护",
+          "恢复剩余时间"
+        ]
+      },
+      "skip_if": {
+        "any": [
+          "连续登录",
+          "累计登录"
+        ],
+        "none": [
+          "连续登录保护"
+        ]
+      }
+    },
+    {
+      "name": "calendar-close-frozen",
+      "action": "click",
+      "point": [
+        621,
+        233
+      ],
+      "before": {
+        "all": [
+          "连续登录保护",
+          "恢复剩余时间"
+        ]
+      },
+      "after": {
+        "all": [
+          "VIP"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              150,
+              35,
+              260,
+              90
+            ],
+            "pattern": ".*VIP.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "frozen-calendar-mode"
+    },
+    {
+      "name": "frozen-calendar-return-city",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": {
+        "all": [
+          "VIP"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              150,
+              35,
+              260,
+              90
+            ],
+            "pattern": ".*VIP.*",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "frozen-calendar-mode"
+    },
+    {
+      "name": "frozen-calendar-finished",
+      "action": "observe",
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "skip_if_step_skipped": "frozen-calendar-mode"
+    },
+    {
       "name": "calendar-close",
       "action": "click",
       "point": [
@@ -398,6 +529,39 @@
         "verify_identity": true
       },
       {
+        "name": "exit-frozen-login-calendar",
+        "action": "click",
+        "point": [
+          621,
+          233
+        ],
+        "before": {
+          "all": [
+            "连续登录保护",
+            "恢复剩余时间"
+          ]
+        },
+        "after": {
+          "all": [
+            "VIP"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                150,
+                35,
+                260,
+                90
+              ],
+              "pattern": ".*VIP.*",
+              "crop_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
         "name": "exit-calendar",
         "action": "click",
         "point": [
@@ -408,6 +572,9 @@
           "any": [
             "连续登录",
             "累计登录"
+          ],
+          "none": [
+            "连续登录保护"
           ]
         },
         "after": {
@@ -575,5 +742,5 @@
     ]
   },
   "status": "candidate",
-  "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1. 0.1.3: VIPcalendar neednotread dailygifttext; RgiftOCR每圓 causedvip-open failure. Replaceunrelatedgiftcondition withscopedupperleftVIPheader, preservescalendarred/controlstates. ActualfailedVIPpositive+citybadge negative offline passed; nexttargetedreplaypending.; 0.1.4 remove illegal empty page_text_regions left by0.1.3; consistent cropped header across followup and exits. Earlier schema-check acceptance did not catch executor schema error; live pending."
+  "verification_scope": "Daily-calendar open/close actually awarded VIP experience on one mature role; initial red check falsely included calendarhinge and old failure retained. Dot-only region passes saved positive/negative frames from two role types. Fresh full corrected replay scope is in local run reports. No-red early completion is not a fresh reward. This patch only sanitizes verification metadata; business steps match0.1.1. 0.1.3: VIPcalendar neednotread dailygifttext; RgiftOCR每圓 causedvip-open failure. Replaceunrelatedgiftcondition withscopedupperleftVIPheader, preservescalendarred/controlstates. ActualfailedVIPpositive+citybadge negative offline passed; nexttargetedreplaypending.; 0.1.4 remove illegal empty page_text_regions left by0.1.3; consistent cropped header across followup and exits. Earlier schema-check acceptance did not catch executor schema error; live pending. 0.1.6: frozen login calendar tall layout has X at621,233; old main path269 missed it although bounded recovery already used the correct coordinate. Promote that sampled recovery into an explicit frozen-calendar branch returning to city. Normal reward/red-clear branch unchanged; frozen exit is no reward and does not claim a restored streak. Actual failed frame and next targeted replay recorded locally. 0.1.6 first targeted replay stopped before input because a negative-only skip predicate is invalid in the runtime despite generic schema passing. 0.1.7 adds the positive calendar assertion to that skip; original failed result retained. Actual frozen positive and ordinary-calendar skip regression must distinguish a forbidden-text failure from invalid predicate errors."
 }

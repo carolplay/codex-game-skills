@@ -1,6 +1,6 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.11",
+  "action_version": "0.2.17",
   "name": "WOS bulk intelligence execution plus event firebeast",
   "reference_size": [
     788,
@@ -301,6 +301,369 @@
       "observe_attempts": 10
     },
     {
+      "name": "pre-layout-claim-existing",
+      "action": "click",
+      "point": [
+        532,
+        1017
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出",
+          "情报"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "max": 0.08
+          }
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if_any": [
+        {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pre-layout-claim-existing-retry",
+      "action": "click",
+      "point": [
+        532,
+        1017
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if_any": [
+        {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        },
+        {
+          "all": [
+            "情报",
+            "下次刷新",
+            "全部执行",
+            "一键领取"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                425,
+                1000,
+                650,
+                1040
+              ],
+              "max": 0.08
+            }
+          ]
+        },
+        {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pre-layout-dismiss-existing",
+      "action": "click",
+      "point": [
+        394,
+        960
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "after": {
+        "any": [
+          "下次刷新",
+          "探照灯升级"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 10,
+      "skip_if_any": [
+        {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pre-layout-dismiss-existing-level-up",
+      "action": "click",
+      "point": [
+        394,
+        985
+      ],
+      "before": {
+        "all": [
+          "探照灯升级",
+          "情报品质",
+          "最大情报刷新数量",
+          "点击任意位置继续"
+        ],
+        "page_text_regions": [
+          [
+            200,
+            180,
+            590,
+            270
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_any": [
+        {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "name": "batch-mode",
       "action": "observe",
       "before": {
@@ -331,7 +694,37 @@
             1060
           ]
         ]
-      }
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "情报",
+            "下次刷新",
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ],
+          "template_regions": [
+            {
+              "template": "intel-bulk-locked",
+              "bounds": [
+                359,
+                955,
+                405,
+                1012
+              ],
+              "mode": "white-glyph",
+              "min_score": 0.94
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "batch-claim-existing",
@@ -1150,6 +1543,34 @@
           "none": [
             "全部执行"
           ]
+        },
+        {
+          "all": [
+            "情报",
+            "下次刷新",
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ],
+          "template_regions": [
+            {
+              "template": "intel-bulk-locked",
+              "bounds": [
+                359,
+                955,
+                405,
+                1012
+              ],
+              "mode": "white-glyph",
+              "min_score": 0.94
+            }
+          ]
         }
       ]
     },
@@ -1507,7 +1928,8 @@
         ]
       },
       "observe_attempts": 30,
-      "skip_if_step_skipped": "event-firebeast-select"
+      "skip_if_step_skipped": "event-firebeast-select",
+      "observe_interval_seconds": 5
     },
     {
       "name": "event-firebeast-claim",
@@ -1746,8 +2168,119 @@
             680,
             1060
           ]
+        ],
+        "template_regions": [
+          {
+            "template": "intel-bulk-locked",
+            "bounds": [
+              359,
+              955,
+              405,
+              1012
+            ],
+            "mode": "white-glyph",
+            "min_score": 0.94,
+            "present": false
+          }
         ]
       }
+    },
+    {
+      "name": "legacy-initial-claim-two-button",
+      "action": "click",
+      "point": [
+        532,
+        1017
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "max": 0.08
+          }
+        ]
+      },
+      "skip_if_step_skipped": "legacy-mode",
+      "skip_if_any": [
+        {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ]
+        }
+      ]
     },
     {
       "name": "legacy-initial-claim",
@@ -1815,7 +2348,21 @@
           }
         ]
       },
-      "skip_if_step_skipped": "legacy-mode"
+      "skip_if_step_skipped": "legacy-mode",
+      "skip_if_any": [
+        {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        }
+      ]
     },
     {
       "name": "legacy-initial-close-reward",
@@ -1962,8 +2509,7 @@
           "前往查看",
           "获得奖励",
           "恭喜获得",
-          "点击任意位置退出",
-          "全部执行"
+          "点击任意位置退出"
         ],
         "template_regions": [
           {
@@ -2097,6 +2643,20 @@
               680,
               1060
             ]
+          ],
+          "template_regions": [
+            {
+              "template": "intel-bulk-locked",
+              "bounds": [
+                359,
+                955,
+                405,
+                1012
+              ],
+              "mode": "white-glyph",
+              "min_score": 0.94,
+              "present": false
+            }
           ]
         }
       ]
@@ -2479,7 +3039,178 @@
         ]
       },
       "observe_attempts": 30,
-      "skip_if_step_skipped": "legacy-cycle-0-firebeast-select"
+      "skip_if_step_skipped": "legacy-cycle-0-firebeast-select",
+      "observe_interval_seconds": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ]
+      }
+    },
+    {
+      "name": "legacy-cycle-0-firebeast-wait-two-button",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ]
+      },
+      "observe_attempts": 30,
+      "skip_if_step_skipped": "legacy-cycle-0-firebeast-select",
+      "observe_interval_seconds": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "全部执行"
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ]
+      }
+    },
+    {
+      "name": "legacy-cycle-0-firebeast-claim-two-button",
+      "action": "click",
+      "point": [
+        532,
+        1017
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "max": 0.08
+          }
+        ]
+      },
+      "skip_if_step_skipped": "legacy-cycle-0-firebeast-select",
+      "skip_if_any": [
+        {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ]
+        }
+      ]
     },
     {
       "name": "legacy-cycle-0-firebeast-claim",
@@ -2547,7 +3278,21 @@
           }
         ]
       },
-      "skip_if_step_skipped": "legacy-cycle-0-firebeast-select"
+      "skip_if_step_skipped": "legacy-cycle-0-firebeast-select",
+      "skip_if_any": [
+        {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        }
+      ]
     },
     {
       "name": "legacy-cycle-0-firebeast-close-reward",
@@ -2753,6 +3498,20 @@
               680,
               1060
             ]
+          ],
+          "template_regions": [
+            {
+              "template": "intel-bulk-locked",
+              "bounds": [
+                359,
+                955,
+                405,
+                1012
+              ],
+              "mode": "white-glyph",
+              "min_score": 0.94,
+              "present": false
+            }
           ]
         }
       ]
@@ -3121,6 +3880,103 @@
       "skip_if_step_skipped": "legacy-cycle-0-beast-select"
     },
     {
+      "name": "legacy-cycle-0-beast-claim-two-button",
+      "action": "click",
+      "point": [
+        532,
+        1017
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "max": 0.08
+          }
+        ]
+      },
+      "skip_if_step_skipped": "legacy-cycle-0-beast-select",
+      "skip_if_any": [
+        {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "name": "legacy-cycle-0-beast-claim",
       "action": "click",
       "point": [
@@ -3186,7 +4042,21 @@
           }
         ]
       },
-      "skip_if_step_skipped": "legacy-cycle-0-beast-select"
+      "skip_if_step_skipped": "legacy-cycle-0-beast-select",
+      "skip_if_any": [
+        {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        }
+      ]
     },
     {
       "name": "legacy-cycle-0-beast-close-reward",
@@ -3392,6 +4262,20 @@
               680,
               1060
             ]
+          ],
+          "template_regions": [
+            {
+              "template": "intel-bulk-locked",
+              "bounds": [
+                359,
+                955,
+                405,
+                1012
+              ],
+              "mode": "white-glyph",
+              "min_score": 0.94,
+              "present": false
+            }
           ]
         }
       ]
@@ -3711,6 +4595,103 @@
       "skip_if_step_skipped": "legacy-cycle-0-rescue-select"
     },
     {
+      "name": "legacy-cycle-0-rescue-claim-two-button",
+      "action": "click",
+      "point": [
+        532,
+        1017
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "max": 0.08
+          }
+        ]
+      },
+      "skip_if_step_skipped": "legacy-cycle-0-rescue-select",
+      "skip_if_any": [
+        {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "name": "legacy-cycle-0-rescue-claim",
       "action": "click",
       "point": [
@@ -3776,7 +4757,21 @@
           }
         ]
       },
-      "skip_if_step_skipped": "legacy-cycle-0-rescue-select"
+      "skip_if_step_skipped": "legacy-cycle-0-rescue-select",
+      "skip_if_any": [
+        {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        }
+      ]
     },
     {
       "name": "legacy-cycle-0-rescue-close-reward",
@@ -3982,6 +4977,20 @@
               680,
               1060
             ]
+          ],
+          "template_regions": [
+            {
+              "template": "intel-bulk-locked",
+              "bounds": [
+                359,
+                955,
+                405,
+                1012
+              ],
+              "mode": "white-glyph",
+              "min_score": 0.94,
+              "present": false
+            }
           ]
         }
       ]
@@ -4367,6 +5376,103 @@
       "skip_if_step_skipped": "legacy-cycle-0-hero-select"
     },
     {
+      "name": "legacy-cycle-0-hero-claim-two-button",
+      "action": "click",
+      "point": [
+        532,
+        1017
+      ],
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新",
+          "全部执行",
+          "一键领取"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "min": 0.12
+          }
+        ],
+        "page_text_regions": [
+          [
+            110,
+            970,
+            680,
+            1060
+          ]
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "none": [
+          "胜利",
+          "失败",
+          "战败"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              425,
+              1000,
+              650,
+              1040
+            ],
+            "max": 0.08
+          }
+        ]
+      },
+      "skip_if_step_skipped": "legacy-cycle-0-hero-select",
+      "skip_if_any": [
+        {
+          "all": [
+            "情报",
+            "下次刷新"
+          ],
+          "none": [
+            "全部执行"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "name": "legacy-cycle-0-hero-claim",
       "action": "click",
       "point": [
@@ -4432,7 +5538,21 @@
           }
         ]
       },
-      "skip_if_step_skipped": "legacy-cycle-0-hero-select"
+      "skip_if_step_skipped": "legacy-cycle-0-hero-select",
+      "skip_if_any": [
+        {
+          "any": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "none": [
+            "胜利",
+            "失败",
+            "战败"
+          ]
+        }
+      ]
     },
     {
       "name": "legacy-cycle-0-hero-close-reward",
@@ -4585,6 +5705,59 @@
     },
     "max_exit_steps": 5,
     "exits": [
+      {
+        "name": "exit-march-capacity-info",
+        "action": "click",
+        "point": [
+          625,
+          306
+        ],
+        "before": {
+          "all": [
+            "行军队列",
+            "额外队列",
+            "激活VIP",
+            "前往购买"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                300,
+                280,
+                500,
+                335
+              ],
+              "pattern": "行军队列",
+              "crop_ocr": true,
+              "prefer_frame_ocr": true,
+              "min_confidence": 0.3
+            }
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包"
+          ],
+          "any": [
+            "城镇",
+            "野外"
+          ],
+          "none": [
+            "额外队列",
+            "前往激活"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
       {
         "name": "exit-intel-stamina-supply",
         "action": "click",
@@ -5080,9 +6253,10 @@
         },
         "observe_attempts": 5
       }
-    ]
+    ],
+    "recovery_timeout_seconds": 120
   },
-  "verification_scope": "0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback. 0.2.8: mainbulkexecute8 completed but firstclaimclick had no effect; allow unchanged claimpage only asintermediate, one explicitfreshgreen retry, strictrewardpostcondition preserved. Retryskips reward/disabled; no unboundedclickloop. Savedfailureframepositive; nextrolelivepending. Retryusesknownmap+leftbutton+greenregion, notcursoroccluded rightbuttonlabel.",
+  "verification_scope": "0.2.16 separates legacy-firebeast single/two-button wait layouts, uses actual right-hand claim region for two-button UI, and adds5s observation spacing within30attempts. Old wait used center-only crop and rapid30reads, causing falsefailure afteractualeventdispatch on under20intel. Originalfailure retained; offline layout/disablednegative checks and schemas passed; new live wait/claim branch pending. Other ordinary/event actions unchanged. 0.2.17: Add boundedcloseX exit for observed行军队列/额外队列/VIPactivation/purchase information dialog reached during legacyNPCnavigation. It doesnotprovequeuesfull anddoesnotclickresearch,activation,or purchase. Require footer anddialogabsence beforeexistingworld-to-city exit. OriginalLowunrecoveredfailure retained; live exitbranch pending.",
   "business_dependencies": [
     "City entry and exit; stamina meal uses lighthouse plus before this action",
     "Game execute-all handles ordinary intel; repeat after claim reveals queued tasks",

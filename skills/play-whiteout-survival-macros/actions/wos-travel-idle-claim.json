@@ -1,6 +1,6 @@
 {
   "action_id": "wos-travel-idle-claim",
-  "action_version": "0.1.6",
+  "action_version": "0.1.12",
   "name": "WOS travel_idle_claim",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior complete20/20 settlement and icon sampled. No job positively identified by absent calibrated icon; running state fails then closes known modal without ending. Complete new-role replay pending. Main manually started50existing supplies, reached50/50 while doing other tasks; completed bubble color changes, so positive counter is authoritative, absence requires both no icon and no slash in bounded OCR. Complete claim macro replay pending. Main50/50 actual macro end/rewards observed; returning from direct overview scene goes straight to city rather than academy root. Added both known exits; nextrole replay pending. 0.9.8overview revision: scoped fixed footer replaces cursor-occluded daily-tab label; city excludes same footer. Saved failure calibration and nextrole replay required; prior branch evidence preserved, not full newversion acceptance. Generic overview conditions retain both town/daily tabs with a fresh narrow tab crop, because either current tab can be cursor-occluded. Target-specific daily entry checks still use footer. Waracademy town-tab failure frame calibrated; nextrole replaypending.",
+  "verification_scope": "Candidate: city side bubble shifts vertically with active event icons. Same calibrated image searches bounded right-side column; clicks resolve its actual image center; existing progress panel confirms running/settlement separately. Old fixed840..935 region failed saved active0/20 bubble at811; new650..935 matches without changing threshold. Live targeted verification pending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -123,10 +123,6 @@
     {
       "name": "open-travel-progress",
       "action": "click",
-      "point": [
-        555,
-        887
-      ],
       "before": {
         "all": [
           "英雄",
@@ -162,7 +158,7 @@
             "template": "travel-idle-bubble",
             "bounds": [
               510,
-              840,
+              650,
               610,
               935
             ],
@@ -196,7 +192,7 @@
           ],
           [
             510,
-            840,
+            650,
             610,
             940
           ],
@@ -212,7 +208,7 @@
             "template": "travel-idle-bubble",
             "bounds": [
               510,
-              840,
+              650,
               610,
               935
             ],
@@ -222,7 +218,109 @@
           }
         ],
         "page_text_only": true
+      },
+      "image_target": {
+        "template": "travel-idle-bubble",
+        "bounds": [
+          510,
+          650,
+          610,
+          935
+        ],
+        "mode": "grayscale",
+        "min_score": 0.85
       }
+    },
+    {
+      "name": "close-running-idle-without-settlement",
+      "action": "click",
+      "point": [
+        394,
+        1053
+      ],
+      "before": {
+        "all": [
+          "游历挂机中",
+          "结束挂机",
+          "点击任意位置关闭"
+        ],
+        "none": [
+          "游历挂机已完成",
+          "游历结束"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "完成任务后"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ],
+            [
+              160,
+              745,
+              450,
+              800
+            ]
+          ]
+        },
+        {
+          "all": [
+            "游历挂机已完成",
+            "结束挂机",
+            "点击任意位置关闭"
+          ]
+        }
+      ],
+      "observe_attempts": 5
     },
     {
       "name": "finish-completed-idle",
@@ -247,7 +345,13 @@
           "野外"
         ],
         "none": [
-          "/",
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
           "完成任务后"
         ],
         "page_text_regions": [
@@ -258,42 +362,27 @@
             1079
           ],
           [
-            510,
-            840,
-            610,
-            940
-          ],
-          [
             160,
             745,
             450,
             800
           ]
-        ],
-        "template_regions": [
-          {
-            "template": "travel-idle-bubble",
-            "bounds": [
-              510,
-              840,
-              610,
-              935
-            ],
-            "mode": "grayscale",
-            "min_score": 0.85,
-            "present": false
-          }
-        ],
-        "page_text_only": true
+        ]
       }
     },
     {
       "name": "observe-travel-rewards",
       "action": "observe",
-      "before": [
-        "游历结束",
-        "奖励"
-      ],
+      "before": {
+        "all": [
+          "游历结束",
+          "点击任意位置退出"
+        ],
+        "any": [
+          "奖励",
+          "专家好感度"
+        ]
+      },
       "observe_attempts": 8,
       "skip_if": {
         "all": [
@@ -302,7 +391,13 @@
           "野外"
         ],
         "none": [
-          "/",
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
           "完成任务后"
         ],
         "page_text_regions": [
@@ -313,34 +408,14 @@
             1079
           ],
           [
-            510,
-            840,
-            610,
-            940
-          ],
-          [
             160,
             745,
             450,
             800
           ]
-        ],
-        "template_regions": [
-          {
-            "template": "travel-idle-bubble",
-            "bounds": [
-              510,
-              840,
-              610,
-              935
-            ],
-            "mode": "grayscale",
-            "min_score": 0.85,
-            "present": false
-          }
-        ],
-        "page_text_only": true
-      }
+        ]
+      },
+      "observe_interval_seconds": 1
     },
     {
       "name": "close-travel-summary",
@@ -353,6 +428,76 @@
         "游历结束",
         "点击任意位置退出"
       ],
+      "after": {
+        "any": [
+          "挂机",
+          "解锁入驻"
+        ],
+        "none": [
+          "游历挂机",
+          "游历结束"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "完成任务后"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            160,
+            745,
+            450,
+            800
+          ]
+        ]
+      }
+    },
+    {
+      "name": "close-new-expert-introduction",
+      "action": "click",
+      "point": [
+        394,
+        1029
+      ],
+      "before": {
+        "all": [
+          "解锁入驻",
+          "点击任意空白位置退出"
+        ],
+        "none": [
+          "游历挂机",
+          "游历结束"
+        ]
+      },
+      "only_if": {
+        "all": [
+          "解锁入驻",
+          "点击任意空白位置退出"
+        ],
+        "none": [
+          "游历挂机",
+          "游历结束"
+        ]
+      },
       "after": {
         "all": [
           "挂机",
@@ -377,52 +522,62 @@
         ]
       },
       "observe_attempts": 5,
-      "skip_if": {
-        "all": [
-          "英雄",
-          "背包",
-          "野外"
-        ],
-        "none": [
-          "/",
-          "完成任务后"
-        ],
-        "page_text_regions": [
-          [
-            100,
-            995,
-            690,
-            1079
+      "skip_if_any": [
+        {
+          "all": [
+            "挂机",
+            "自动"
           ],
-          [
-            510,
-            840,
-            610,
-            940
+          "none": [
+            "游历挂机",
+            "游历结束"
           ],
-          [
-            160,
-            745,
-            450,
-            800
+          "template_regions": [
+            {
+              "template": "experts-list-icon",
+              "bounds": [
+                580,
+                100,
+                690,
+                175
+              ],
+              "mode": "grayscale",
+              "min_score": 0.9
+            }
           ]
-        ],
-        "template_regions": [
-          {
-            "template": "travel-idle-bubble",
-            "bounds": [
-              510,
-              840,
-              610,
-              935
+        },
+        {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "完成任务后"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
             ],
-            "mode": "grayscale",
-            "min_score": 0.85,
-            "present": false
-          }
-        ],
-        "page_text_only": true
-      }
+            [
+              160,
+              745,
+              450,
+              800
+            ]
+          ]
+        }
+      ]
     },
     {
       "name": "exit-travel",
@@ -472,7 +627,13 @@
           "野外"
         ],
         "none": [
-          "/",
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
           "完成任务后"
         ],
         "page_text_regions": [
@@ -483,33 +644,12 @@
             1079
           ],
           [
-            510,
-            840,
-            610,
-            940
-          ],
-          [
             160,
             745,
             450,
             800
           ]
-        ],
-        "template_regions": [
-          {
-            "template": "travel-idle-bubble",
-            "bounds": [
-              510,
-              840,
-              610,
-              935
-            ],
-            "mode": "grayscale",
-            "min_score": 0.85,
-            "present": false
-          }
-        ],
-        "page_text_only": true
+        ]
       }
     },
     {
@@ -739,16 +879,22 @@
         "observe_attempts": 5
       },
       {
-        "name": "close-travel-summary",
+        "name": "close-new-expert-introduction",
         "action": "click",
         "point": [
-          395,
-          1053
+          394,
+          1029
         ],
-        "before": [
-          "游历结束",
-          "点击任意位置退出"
-        ],
+        "before": {
+          "all": [
+            "解锁入驻",
+            "点击任意空白位置退出"
+          ],
+          "none": [
+            "游历挂机",
+            "游历结束"
+          ]
+        },
         "after": {
           "all": [
             "挂机",
@@ -775,6 +921,29 @@
         "observe_attempts": 5
       },
       {
+        "name": "close-travel-summary",
+        "action": "click",
+        "point": [
+          395,
+          1053
+        ],
+        "before": [
+          "游历结束",
+          "点击任意位置退出"
+        ],
+        "after": {
+          "any": [
+            "挂机",
+            "解锁入驻"
+          ],
+          "none": [
+            "游历挂机",
+            "游历结束"
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
         "name": "close-travel-progress",
         "action": "click",
         "point": [
@@ -782,7 +951,6 @@
           1053
         ],
         "before": [
-          "游历挂机",
           "结束挂机",
           "点击任意位置关闭"
         ],
@@ -941,7 +1109,8 @@
           ]
         }
       }
-    ]
+    ],
+    "recovery_timeout_seconds": 120
   },
   "overview_footer_compatibility": "Stable prefix supports both旧完成任务后是否隐藏 and新版完成任务后隐藏; only page-anchor semantics changed, not game strategy. Nextrole live pending."
 }

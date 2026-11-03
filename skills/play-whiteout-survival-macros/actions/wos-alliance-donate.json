@@ -1,6 +1,6 @@
 {
   "action_id": "wos-alliance-donate",
-  "action_version": "0.1.8",
+  "action_version": "0.1.10",
   "name": "WOS — recommended alliance tech, at most25 ordinary-resource donations (1250 or10000), no gems",
   "reference_size": [
     788,
@@ -187,7 +187,8 @@
             660,
             80
           ],
-          "min_confidence": 0.3
+          "min_confidence": 0.3,
+          "crop_ocr": true
         }
       ]
     },
@@ -1377,7 +1378,8 @@
             660,
             80
           ],
-          "min_confidence": 0.3
+          "min_confidence": 0.3,
+          "crop_ocr": true
         }
       ],
       "observe_attempts": 5
@@ -1482,6 +1484,28 @@
     "max_exit_steps": 4,
     "exits": [
       {
+        "name": "close-fully-funded-alliance-research-detail",
+        "action": "click",
+        "point": [
+          624,
+          190
+        ],
+        "before": {
+          "all": [
+            "研究消耗",
+            "等级",
+            "研究"
+          ],
+          "none": [
+            "捐献奖励"
+          ]
+        },
+        "after": [
+          "联盟科技"
+        ],
+        "observe_attempts": 5
+      },
+      {
         "name": "exit-donation",
         "action": "click",
         "point": [
@@ -1507,12 +1531,18 @@
           133,
           59
         ],
-        "before": [
-          "联盟科技",
-          "发展",
-          "领地",
-          "战斗"
-        ],
+        "before": {
+          "all": [
+            "联盟科技",
+            "发展",
+            "领地",
+            "战斗"
+          ],
+          "none": [
+            "研究消耗",
+            "捐献奖励"
+          ]
+        },
         "after": [
           "联盟",
           "联盟科技",
@@ -1636,7 +1666,7 @@
     ]
   },
   "status": "partial_verified",
-  "verification_scope": "0.1.8 candidate: known donation page + fixed right ordinary-resource blue/gray button controls bounded25clicks. Ignore sticky longpress tooltip; counter OCR logged once at completion rather than gating every click. Final ordinary button disabled and gems unchanged required; disabled may also mean resource shortage, so actual daily count needs audit. Saved frames validated, live pending.",
+  "verification_scope": "0.1.8 candidate: known donation page + fixed right ordinary-resource blue/gray button controls bounded25clicks. Ignore sticky longpress tooltip; counter OCR logged once at completion rather than gating every click. Final ordinary button disabled and gems unchanged required; disabled may also mean resource shortage, so actual daily count needs audit. Saved frames validated, live pending. 0.1.10: Lowordinarydonation filled an alliance-tech target; nextpage was guild researchcost/detail, not donationreward. Originalcomponentstopped, no researchstarted. Add onlyknown X-close researchdetail ->alliancetech exit, then existingcityrecovery, no research/upgrade input. Actualmodal positive anddonationpage negative tested; agent recovery separate, macroexit pending.",
   "execution_timeout_seconds": 240,
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

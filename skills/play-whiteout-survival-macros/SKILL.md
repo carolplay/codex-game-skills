@@ -19,4 +19,6 @@ description: 开发、执行和迭代Whiteout Survival本地宏，结合模型�
 
 按需读取[流程卡](references/recording-cards.md)、[visit-plan任务backlog](references/visit-plan.md)和[任务组合设计](../../docs/WOS-V2-TASK-DESIGN.md)。以最新授权为准，不把旧版本中的“本轮不补做/不复测”历史记录重新当作禁令。
 
+主动巨兽与自动参团分开执行；每日对账与当前单次组件范围见[巨兽说明](references/npc-rally.md)。默认清单的一次尝试不能代替每日十次获胜，组合追加的尝试须记录实际派出、体力变化与本人发起胜利证据。
+
 声音仅捕获目标游戏进程。真实支付交用户本人；平台系统权限、外部通信授权及私有数据管理仍有效。V1保持暂停，三班America/Vancouver 21:00/03:00/09:00沿用现有排程。科研/建筑是独立升级能力，不计日常；训练/治疗仍属日常。

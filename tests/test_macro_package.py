@@ -11,6 +11,20 @@ pkg = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(pkg)
 
 class PackageTests(unittest.TestCase):
+    def test_observation_predicates_include_positive_page_assertions(self):
+        # The runtime rejects negative-only predicates before sending input.
+        # A frozen-calendar skip once passed package hashes but failed live.
+        _, flows = pkg.load_actions()
+        for task, flow in flows.items():
+            steps = flow['steps'] + flow.get('task_contract', {}).get('exits', [])
+            for step in steps:
+                conditions = [step[key] for key in ('before', 'after', 'skip_if', 'finish_if') if key in step]
+                conditions += step.get('skip_if_any', [])
+                for condition in conditions:
+                    if isinstance(condition, dict):
+                        with self.subTest(task=task, step=step['name'], condition=condition):
+                            self.assertTrue(condition.get('all') or condition.get('any'))
+
     def test_all_published_profiles_validate(self):
         for path in (ROOT / 'macros').glob('*.json'):
             for profile in pkg.read(path)['profiles']:

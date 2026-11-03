@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "refresh_utc_hours": [
     0,
     8,
@@ -15,129 +15,111 @@
   "tasks": [
     {
       "task": "身份",
-      "status": "已验证",
       "period": "班"
     },
     {
       "task": "邮件",
-      "status": "已验证",
       "period": "班"
     },
     {
       "task": "VIP",
-      "status": "已做",
       "period": "日"
     },
     {
       "task": "探索挂机",
-      "status": "已验证",
       "period": "班"
     },
     {
       "task": "情报",
-      "status": "没做",
       "period": "班"
     },
     {
       "task": "免费体力餐",
-      "status": "已做",
       "period": "班/冷却"
     },
     {
       "task": "训练/治疗/研究/建造",
-      "status": "已做",
       "period": "班/队列"
     },
     {
       "task": "联盟帮助/礼物",
-      "status": "已验证",
       "period": "班"
     },
     {
       "task": "联盟普通资源捐献",
-      "status": "已做",
       "period": "班/恢复次数"
     },
     {
       "task": "免费招募",
-      "status": "已做",
       "period": "日/免费冷却"
     },
     {
       "task": "每日任务宝箱",
-      "status": "已做",
       "period": "班检查/日结算"
     },
     {
       "task": "竞技场",
-      "status": "没做",
       "period": "日"
     },
     {
       "task": "宠物产出技能",
-      "status": "没做",
       "period": "日/实际冷却"
     },
     {
       "task": "曙光学院补给",
-      "status": "已做",
-      "period": "班（二、三班）"
+      "period": "班（一、二班对应UTC20/08窗口；三班仅补漏）",
+      "refresh_utc_hours": [
+        8,
+        20
+      ],
+      "quantity_each": 10
     },
     {
       "task": "商店免费箱/活动免费档",
-      "status": "没做",
       "period": "日/特定活动"
     },
     {
       "task": "采集",
-      "status": "没做",
       "period": "班/队列"
     },
     {
       "task": "战争学院委托",
-      "status": "没做",
       "period": "日/特定活动"
     },
     {
       "task": "炼晶实验室",
-      "status": "已做",
       "period": "日"
     },
     {
       "task": "募兵所",
-      "status": "没做",
       "period": "班/日"
     },
     {
       "task": "律令所/领主指令",
-      "status": "没做",
       "period": "日/实际冷却"
     },
     {
       "task": "专家收益",
-      "status": "已做",
       "period": "日/触发收益"
     },
     {
       "task": "海岛生命树/产出",
-      "status": "没做",
       "period": "班/库存"
     },
     {
       "task": "储值中心免费箱",
-      "status": "没做",
       "period": "日"
     },
     {
       "task": "银行",
-      "status": "没做",
       "period": "日（一天存期）"
     },
     {
       "task": "无尽关卡/周期活动",
-      "status": "没做",
       "period": "日/特定活动"
     }
   ],
-  "note": "Planning metadata only; visit-plan status and execution evidence determine readiness. No automatic game input."
+  "note": "Planning metadata only; visit-plan status and execution evidence determine readiness. No automatic game input.",
+  "refresh_utc_hours_scope": "Ordinary intel refresh baseline; task-specific refresh hours below take precedence.",
+  "development_status_source": "visit-plan.md is the current development backlog; duplicated stale status snapshots are removed here."
 }

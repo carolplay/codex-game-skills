@@ -31,12 +31,68 @@ def build_legacy(flows):
    for v in x:strengthen(v)
  strengthen(steps)
  return {'action_id':'wos-intel-cycle','action_version':'0.1.0','name':'WOS local mixed intelligence cycle','reference_size':[788,1079],'status':'candidate','execution_timeout_seconds':1800,'repeat_from':'cycle-0-empty-check','steps':steps,'task_contract':copy.deepcopy(flows['hero']['task_contract']),'verification_scope':'Repeat mixed tasks until registered markers are absent; no task-count cap, 1800s watchdog; unknownskins and bounty not inferredcomplete. Standalone ordinarycomponents and Firebeast paths were sampled; fullcycle livepending.','business_dependencies':['Fixedcityentry andexit; local map must be re-observed before every selection','Firebeast/ordinarybeast/rescue/hero may reveal more queued tasks afterclaim; repeatuntil allknownmarkers absent or1800s watchdog','Absence of registered glyphs is not proof that unknownskins/bounties are done; final auditrecords deviations'],'component_versions':{k:{'action_id':v['action_id'],'action_version':v['action_version'],'sha256':hashlib.sha256(json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()} for k,v in flows.items()}}
+def add_two_button_claims(flow):
+ """Visible but locked execute-all still has the new right-hand claim button."""
+ flow=copy.deepcopy(flow);steps=flow['steps']
+ if any(step['name']=='pre-layout-claim-existing' for step in steps):return flow
+ old_layout={'all':['情报','下次刷新'],'none':['全部执行'],'page_text_regions':[[110,970,680,1060]]}
+ reward={'any':['获得奖励','恭喜获得','点击任意位置退出'],'none':['胜利','失败','战败']}
+ initial=[]
+ for old,new in [('batch-claim-existing','pre-layout-claim-existing'),('batch-claim-existing-retry','pre-layout-claim-existing-retry'),('batch-dismiss-existing','pre-layout-dismiss-existing'),('batch-dismiss-existing-level-up','pre-layout-dismiss-existing-level-up')]:
+  item=copy.deepcopy(next(x for x in steps if x['name']==old));item['name']=new;item.pop('skip_if_step_skipped',None)
+  item.setdefault('skip_if_any',[]).append(copy.deepcopy(old_layout));initial.append(item)
+ at=next(i for i,x in enumerate(steps) if x['name']=='batch-mode');steps[at:at]=initial
+ result=[]
+ for item in steps:
+  if item['name'].startswith('legacy-') and item['name'].endswith('-claim') and item.get('action')=='click' and item.get('point')==[394,1017]:
+   right=copy.deepcopy(item);right['name']+='-two-button';right['point']=[532,1017]
+   right['before']['all']+=['全部执行','一键领取'];right['before']['page_text_regions']=[[110,970,680,1060]];right['before']['green_regions']=[{'bounds':[425,1000,650,1040],'min':.12}]
+   right['skip_if']['green_regions']=[{'bounds':[425,1000,650,1040],'max':.08}];right.setdefault('skip_if_any',[]).append(copy.deepcopy(old_layout));result.append(right)
+   item.setdefault('skip_if_any',[]).append(copy.deepcopy(reward))
+  result.append(item)
+ flow['steps']=result
+ return flow
+
+def add_firebeast_layout_waits(flow):
+ """The locked two-button layout still claims on the right, after real travel."""
+ flow=copy.deepcopy(flow);result=[]
+ layout={'all':['情报','下次刷新','全部执行','一键领取'],'page_text_regions':[[110,970,680,1060]]}
+ for step in flow['steps']:
+  if step['name']=='legacy-cycle-0-firebeast-wait-complete':
+   step['observe_interval_seconds']=5;step['skip_if']=copy.deepcopy(layout);result.append(step)
+   other=copy.deepcopy(step);other['name']='legacy-cycle-0-firebeast-wait-two-button';other.pop('skip_if')
+   other['before']=copy.deepcopy(layout);other['before']['none']=['前往查看','获得奖励','恭喜获得','点击任意位置退出']
+   other['before']['green_regions']=[{'bounds':[425,1000,650,1040],'min':.12}]
+   other['skip_if']={'all':['情报','下次刷新'],'none':['全部执行'],'page_text_regions':[[110,970,680,1060]]};result.append(other)
+  else:result.append(step)
+ flow['steps']=result
+ return flow
+
+def apply_bulk_lock_layout(flow):
+ """A visible bulk label can be locked below lighthouse20; use legacy then."""
+ flow=copy.deepcopy(flow)
+ spec={'template':'intel-bulk-locked','bounds':[359,955,405,1012],'mode':'white-glyph','min_score':.94}
+ locked={'all':['情报','下次刷新','全部执行'],'page_text_regions':[[110,970,680,1060]],'template_regions':[spec]}
+ for step in flow['steps']:
+  name=step['name']
+  if name in ('batch-mode','event-firebeast-select'):step.setdefault('skip_if_any',[]).append(copy.deepcopy(locked))
+  if name=='legacy-mode':step['skip_if']['template_regions']=[{**spec,'present':False}]
+  if name=='legacy-empty-check':step['finish_if']['none']=[label for label in step['finish_if'].get('none',[]) if label!='全部执行']
+  if name.startswith('legacy-'):
+   for condition in step.get('skip_if_any',[]):
+    if '全部执行' in condition.get('all',[]):condition['template_regions']=[{**spec,'present':False}]
+ return add_firebeast_layout_waits(add_two_button_claims(flow))
+
 def build(flows):
  """New game-owned bulk execution; keep the event-only firebeast path."""
  legacy=build_legacy(flows)
+ # Preserve the published mixed cycle's bounded exit budget when regenerating.
+ # Components have their own budgets; copying the hero contract omits this one.
+ legacy['task_contract']['recovery_timeout_seconds']=120
  level_page={'all':['探照灯升级','情报品质','最大情报刷新数量','点击任意位置继续'],'page_text_regions':[[200,180,590,270]]}
  legacy['task_contract']['exits'].insert(0,{'name':'exit-lighthouse-level-up','action':'click','point':[394,985],'before':copy.deepcopy(level_page),'after':{'all':['情报','下次刷新'],'none':['探照灯升级','前往查看']},'observe_attempts':5})
  legacy['task_contract']['exits'].insert(0,{'name':'exit-intel-stamina-supply','action':'click','point':[645,137],'before':['获取更多','领主体力','丰盛的招待'],'after':{'all':['情报','下次刷新'],'none':['获取更多','前往查看']},'observe_attempts':5})
+ legacy['task_contract']['exits'].insert(0,{'name': 'exit-march-capacity-info', 'action': 'click', 'point': [625, 306], 'before': {'all': ['行军队列', '额外队列', '激活VIP', '前往购买'], 'text_regions': [{'bounds': [300, 280, 500, 335], 'pattern': '行军队列', 'crop_ocr': True, 'prefer_frame_ocr': True, 'min_confidence': 0.3}]}, 'after': {'all': ['英雄', '背包'], 'any': ['城镇', '野外'], 'none': ['额外队列', '前往激活'], 'page_text_regions': [[100, 995, 690, 1079]]}, 'observe_attempts': 5})
  map_page={'all':['情报','下次刷新'],'none':['前往查看','获得奖励','恭喜获得','点击任意位置退出']}
  left=[125,980,380,1047];right=[410,980,665,1047]
  def counter(bounds,pattern):return {'bounds':bounds,'pattern':pattern,'crop_ocr':True,'min_confidence':.3}
@@ -81,7 +137,9 @@ def build(flows):
  for s in group:
   if s['name']=='event-firebeast-claim':
    new=claim(s['name']);new['skip_if_step_skipped']=group[0]['name'];s.clear();s.update(new)
-  if s['name']=='event-firebeast-wait-complete':s['before']['green_regions']=[{'bounds':green_box,'min':.12}]
+  if s['name']=='event-firebeast-wait-complete':
+   s['before']['green_regions']=[{'bounds':green_box,'min':.12}]
+   s['observe_attempts']=30;s['observe_interval_seconds']=5
  steps.extend(group)
  # Roles without the game's bulk button retain the previous local components;
  # the UI selects the branch, never the agent or an assumed account level.
@@ -111,7 +169,7 @@ def build(flows):
     expanded.extend([s,follow]);continue
   expanded.append(s)
  steps=expanded
- return {**legacy,'name':'WOS bulk intelligence execution plus event firebeast','steps':steps,'repeat_from':'batch-round-anchor','verification_scope':'0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.','business_dependencies':['City entry and exit; stamina meal uses lighthouse plus before this action','Game execute-all handles ordinary intel; repeat after claim reveals queued tasks','Event firebeast remains separate; no claim that bulk clears event tasks','Explicit zero execute/claim counts, disabled buttons, not executing and no firebeast required for bulk completion','If bulk button absent, use fixed local legacy branches; actual UI determines availability']}
+ return apply_bulk_lock_layout({**legacy,'name':'WOS bulk intelligence execution plus event firebeast','steps':steps,'repeat_from':'batch-round-anchor','verification_scope':'0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.','business_dependencies':['City entry and exit; stamina meal uses lighthouse plus before this action','Game execute-all handles ordinary intel; repeat after claim reveals queued tasks','Event firebeast remains separate; no claim that bulk clears event tasks','Explicit zero execute/claim counts, disabled buttons, not executing and no firebeast required for bulk completion','If bulk button absent or visibly locked, use fixed local legacy branches; actual UI determines availability']})
 
 if __name__=='__main__':
  import argparse

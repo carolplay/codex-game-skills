@@ -1,6 +1,6 @@
 {
   "action_id": "wos-stamina-meal",
-  "action_version": "0.2.1",
+  "action_version": "0.2.2",
   "name": "WOS free stamina meal via lighthouse",
   "reference_size": [
     788,
@@ -251,9 +251,7 @@
       },
       "after": {
         "all": [
-          "获取更多",
-          "丰盛的招待",
-          "下次补给"
+          "获取更多"
         ],
         "green_regions": [
           {
@@ -884,6 +882,6 @@
       }
     ]
   },
-  "verification_scope": "0.2.1 retries the observe-only postclaim cooldown check for reward animation occlusion. Prior actual160stamina increase and claim confirmation succeeded; next frame title was obscured. Input and reward predicates unchanged; live postanimation branch pending.",
+  "verification_scope": "0.2.1 retries the observe-only postclaim cooldown check for reward animation occlusion. Prior actual160stamina increase and claim confirmation succeeded; next frame title was obscured. Input and reward predicates unchanged; live postanimation branch pending. 0.2.2: actual stamina meal succeeded, but transient+160 receipt obscured labels and exhausted the immediate click assertion. Immediate postcondition now checks same obtain-more page and claimed gray button; existing final feast-check still waits up to10 observations with1second interval for full meal/cooldown labels. Saved receipt-overlay and settled-cooldown frames verified. Next-role replay pending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
 }

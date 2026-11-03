@@ -1,6 +1,6 @@
 {
   "action_id": "wos-healing",
-  "action_version": "0.1.2",
+  "action_version": "0.1.8",
   "name": "WOS healing",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.1.2 candidate: overview small daily tab misread; town aftercondition uses actual three camp labels, general overview accepts known queue headers. Saved failedframe positive and citynegative checked. No research/building upgrade input; live nextrole pending.",
+  "verification_scope": "0.1.4 ordinary healing passed main; Y overview header OCR center shifted24px horizontally, old relative offset resolved457 instead of arrow432. 0.1.5 uses executor0.4.11 fixed_x432 with OCR-relative y+50. Original Ydeviation retained, bounded exit restoredcity. Saved realframes and structural checks precede next-role validation; no upgrade action.; Release-lineage check found historical private0.1.6 already existed before current public0.1.4. Retire interim candidate0.1.5 to avoid reusing historical number; fixedcolumn candidate is0.1.7, package0.12.91. No field/live-result backfill.",
   "steps": [
     {
       "name": "01-check-city",
@@ -434,11 +434,12 @@
           740
         ],
         "offset": [
-          270,
+          0,
           50
         ],
         "min_confidence": 0.3,
-        "exact": false
+        "exact": false,
+        "fixed_x": 432
       },
       "before": [
         "科技研究"
@@ -529,8 +530,8 @@
       "name": "open-hospital-menu",
       "action": "click",
       "point": [
-        555,
-        391
+        479,
+        365
       ],
       "before": {
         "all": [
@@ -557,12 +558,12 @@
         ]
       },
       "after": {
-        "all": [
-          "军医所"
-        ],
         "any": [
           "治疗",
           "加速"
+        ],
+        "all": [
+          "详情"
         ]
       },
       "observe_attempts": 5
@@ -585,12 +586,12 @@
         "min_confidence": 0.3
       },
       "before": {
-        "all": [
-          "军医所"
-        ],
         "any": [
           "治疗",
           "加速"
+        ],
+        "all": [
+          "详情"
         ]
       },
       "after": [
@@ -641,7 +642,30 @@
             "min_confidence": 0.3
           }
         ]
-      }
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "治疗伤兵",
+            "重伤单位",
+            "治疗中"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              30,
+              680,
+              230
+            ],
+            [
+              125,
+              865,
+              660,
+              960
+            ]
+          ]
+        }
+      ]
     },
     {
       "name": "ordinary-heal",
@@ -721,7 +745,30 @@
             "min_confidence": 0.3
           }
         ]
-      }
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "治疗伤兵",
+            "重伤单位",
+            "治疗中"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              30,
+              680,
+              230
+            ],
+            [
+              125,
+              865,
+              660,
+              960
+            ]
+          ]
+        }
+      ]
     },
     {
       "name": "exit-empty-treatment",
@@ -801,7 +848,10 @@
         "部队训练",
         "技能学习",
         "超级提炼优惠",
-        "提炼次数"
+        "提炼次数",
+        "详情",
+        "治疗伤兵",
+        "重伤单位"
       ],
       "page_text_regions": [
         [
@@ -814,6 +864,33 @@
     },
     "max_exit_steps": 5,
     "exits": [
+      {
+        "name": "dismiss-cancel-treatment-confirm",
+        "action": "click",
+        "point": [
+          272,
+          678
+        ],
+        "before": {
+          "all": [
+            "取消治疗",
+            "资源将全数返还"
+          ],
+          "page_text_regions": [
+            [
+              140,
+              360,
+              650,
+              740
+            ]
+          ]
+        },
+        "after": [
+          "治疗伤兵",
+          "重伤单位"
+        ],
+        "observe_attempts": 3
+      },
       {
         "name": "exit-profile",
         "action": "click",
@@ -906,10 +983,15 @@
           133,
           59
         ],
-        "before": [
-          "治疗伤兵",
-          "重伤单位"
-        ],
+        "before": {
+          "all": [
+            "治疗伤兵",
+            "重伤单位"
+          ],
+          "none": [
+            "您确定要取消治疗吗"
+          ]
+        },
         "after": {
           "all": [
             "英雄",
@@ -935,6 +1017,97 @@
           ]
         },
         "observe_attempts": 5
+      },
+      {
+        "name": "exit-hospital-radial-menu",
+        "action": "click",
+        "point": [
+          500,
+          200
+        ],
+        "before": {
+          "all": [
+            "详情"
+          ],
+          "any": [
+            "治疗",
+            "加速"
+          ],
+          "none": [
+            "治疗伤兵",
+            "重伤单位"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "详情",
+            "治疗伤兵",
+            "重伤单位"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "close-known-night-cash-popup",
+        "action": "click",
+        "point": [
+          600,
+          171
+        ],
+        "before": {
+          "all": [
+            "幻夜惊梦礼包",
+            "活动期间剩余"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数",
+            "详情",
+            "治疗伤兵",
+            "重伤单位"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 3
       }
     ]
   },
