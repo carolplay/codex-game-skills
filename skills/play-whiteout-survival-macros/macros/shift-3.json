@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.168",
-  "package_version": "0.12.168",
+  "macro_version": "0.12.169",
+  "package_version": "0.12.169",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -121,8 +121,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.9",
-          "sha256": "9c2a9efbd56e3449a90b0c10620676de0c8cd80783dea193f51a027d848a0a9c"
+          "action_version": "0.1.10",
+          "sha256": "48db2acb8bfda9a7b34044d366ef2ca43544600a628c52579364a163ecd39ac9"
         },
         {
           "task": "marksman",
@@ -138,8 +138,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.23",
-          "sha256": "54dff006d23d579ae62c2bd60b952e45c1ed0659e9b570c3a2b502667f0fc673",
+          "action_version": "0.1.24",
+          "sha256": "f76564a3843bcf41e2a876c7a6a2d69a753128f2d361d72d597874fa6a9934d3",
           "task": "npc_rally_start"
         },
         {
@@ -392,8 +392,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.9",
-          "sha256": "9c2a9efbd56e3449a90b0c10620676de0c8cd80783dea193f51a027d848a0a9c"
+          "action_version": "0.1.10",
+          "sha256": "48db2acb8bfda9a7b34044d366ef2ca43544600a628c52579364a163ecd39ac9"
         },
         {
           "task": "marksman",
@@ -409,8 +409,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.23",
-          "sha256": "54dff006d23d579ae62c2bd60b952e45c1ed0659e9b570c3a2b502667f0fc673",
+          "action_version": "0.1.24",
+          "sha256": "f76564a3843bcf41e2a876c7a6a2d69a753128f2d361d72d597874fa6a9934d3",
           "task": "npc_rally_start"
         },
         {
@@ -633,8 +633,8 @@
         {
           "task": "recruit",
           "action_id": "wos-free-recruit",
-          "action_version": "0.1.9",
-          "sha256": "9c2a9efbd56e3449a90b0c10620676de0c8cd80783dea193f51a027d848a0a9c"
+          "action_version": "0.1.10",
+          "sha256": "48db2acb8bfda9a7b34044d366ef2ca43544600a628c52579364a163ecd39ac9"
         },
         {
           "task": "marksman",
@@ -650,8 +650,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.23",
-          "sha256": "54dff006d23d579ae62c2bd60b952e45c1ed0659e9b570c3a2b502667f0fc673",
+          "action_version": "0.1.24",
+          "sha256": "f76564a3843bcf41e2a876c7a6a2d69a753128f2d361d72d597874fa6a9934d3",
           "task": "npc_rally_start"
         },
         {

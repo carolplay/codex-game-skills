@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.168",
+  "package_version": "0.12.169",
   "executor_min_version": "0.4.15",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -76,11 +76,11 @@
     "recruit": {
       "path": "actions/wos-free-recruit.json",
       "action_id": "wos-free-recruit",
-      "action_version": "0.1.9",
-      "sha256": "9c2a9efbd56e3449a90b0c10620676de0c8cd80783dea193f51a027d848a0a9c",
+      "action_version": "0.1.10",
+      "sha256": "48db2acb8bfda9a7b34044d366ef2ca43544600a628c52579364a163ecd39ac9",
       "period": "day",
       "utility": false,
-      "verification_scope": "Advanced free draw and unchanged silver/gold inventory replayed on a mature role in0.1.6. Silver-key narrow integer check accepts confidence0.3; saved failure reproduces old rejection and correct integer read, without decimal coercion. Epic cooldown passed; other epic/free/newhero states keep prior evidence only. Metadata-only patch relative to0.1.6; private balances excluded.",
+      "verification_scope": "0.1.10 keeps crop-verified 招募1次 button and 点击.*退出 footer plus explicit rewardtitle, removes redundant exactfullfooter requirement that rejected real saved OCR促意/漏任. Paid single-drawbutton neverclicked; freebutton and keyinventoryguards unchanged. Currentactualfreeadvanced/epic drawsalreadyperformed by0.1.9, exit-onlyrepair sampledseparately; newfullreplaypending.",
       "current_evidence_note": "成熟试验角色A英雄网格页全图OCR乱码，停止后续；同一失败图的标题和底部独立裁剪能明确读到英雄列表/英雄招募。0.1.1加入有界局部OCR，下一试验号验证，不重试成熟试验角色A失败项。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
       "reward_exit_revision": "ActualYreward stayedafterfirstblankclick; oneconditionalfresh reward-only retry, finalrootassertion retained. Modelsecondblankexitactualpassed; newmacroretry livepending."
@@ -478,12 +478,12 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.23",
-      "sha256": "54dff006d23d579ae62c2bd60b952e45c1ed0659e9b570c3a2b502667f0fc673",
+      "action_version": "0.1.24",
+      "sha256": "f76564a3843bcf41e2a876c7a6a2d69a753128f2d361d72d597874fa6a9934d3",
       "period": "shift",
       "utility": false,
       "include_in_daily": true,
-      "verification_scope": "0.1.23 accepts1..6 same-state labels inside the existing march panel, retaining confidence0.3 and required world/footer guards. Exact two-rally cached-OCR regression passes, zero-label still fails. Requires executor0.4.13; local-observation retries retained. New live repeated-label branch pending; no extra dispatch input retry.",
+      "verification_scope": "0.1.24 keeps target, level, stamina, army, world anchors and failureguards. Active-rally regional text accepts prefix集结中 plus up to6 adjoining statuscharacters, because actualY shows集结中未出征 mergedwith OCRsuffixerrors. Previousexact3glyph fullmatch causedpostdispatchdeviation despite25staminadelta. Newprefix stillrequires explicitrallystate, no victoryinference. Cachedpositive/negativechecks and nextnaturalnewdispatch acceptance recordedseparately.",
       "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger.",
       "current_evidence_note": "0.1.13 mature testrole actual dispatch, measured stamina decrease and cityreturn passed. Interrupted army-page exit predicate savedframe tested only; not triggered live. Original0.1.12 army-page OCR failure retained."
     },

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.23",
+  "action_version": "0.1.24",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.1.23 accepts1..6 same-state labels inside the existing march panel, retaining confidence0.3 and required world/footer guards. Exact two-rally cached-OCR regression passes, zero-label still fails. Requires executor0.4.13; local-observation retries retained. New live repeated-label branch pending; no extra dispatch input retry.",
+  "verification_scope": "0.1.24 keeps target, level, stamina, army, world anchors and failureguards. Active-rally regional text accepts prefix集结中 plus up to6 adjoining statuscharacters, because actualY shows集结中未出征 mergedwith OCRsuffixerrors. Previousexact3glyph fullmatch causedpostdispatchdeviation despite25staminadelta. Newprefix stillrequires explicitrallystate, no victoryinference. Cachedpositive/negativechecks and nextnaturalnewdispatch acceptance recordedseparately.",
   "business_dependencies": [
     "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
     "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
@@ -1055,7 +1055,7 @@
               225,
               560
             ],
-            "pattern": "集[结結]中",
+            "pattern": "集[结結]中.{0,6}",
             "crop_ocr": true,
             "min_confidence": 0.3,
             "max_matches": 6
@@ -1101,7 +1101,7 @@
               225,
               560
             ],
-            "pattern": "集[结結]中",
+            "pattern": "集[结結]中.{0,6}",
             "crop_ocr": true,
             "min_confidence": 0.3,
             "max_matches": 6
