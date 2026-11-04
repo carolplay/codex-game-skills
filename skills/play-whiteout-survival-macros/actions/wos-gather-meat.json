@@ -1,6 +1,6 @@
 {
   "action_id": "wos-gather-meat",
-  "action_version": "0.1.12",
+  "action_version": "0.1.13",
   "name": "WOS gather_meat",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending.;0.1.10: mainUTCday26searchfound freefullmeat8node butfullOCRmissed采集者; reusewood/coal/iron calibratedsitepagecrop225345565475 withunchanged无人check andnohero troopdispatch. Savedfailedframepositive locallyverified; livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending.; Candidate: Y defaultbeast carousel hidesfullresource labels, oldentry failed4tasks. Known NPCsearch pane→visible partialmeaticon679779→close/reopen centersmeat, agent actualnavigation verified. Macro positivebranch pending; normalresource layout skips normalization. No dispatch/sample claimed as macro pass.",
+  "verification_scope": "Known717centered frame reachedgatherarmybutfullOCRmissed出征; same-framefootercropaddedtoarmyguardsandboundedbackexit. Existingidentity,emptytarget,nohero,troop,dispatchguards unchanged. Cachedpositive/negative andnewrevisionlivepending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -626,6 +626,14 @@
           "全部撤回",
           "平均配置",
           "比例分配"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "observe_attempts": 5
@@ -657,6 +665,14 @@
             ],
             "min": 0.5
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "skip_if": {
@@ -679,6 +695,14 @@
             ],
             "max": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "after": {
@@ -701,6 +725,14 @@
             ],
             "max": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "observe_attempts": 5
@@ -732,6 +764,14 @@
             ],
             "min": 0.5
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "skip_if": {
@@ -754,6 +794,14 @@
             ],
             "max": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "after": {
@@ -776,6 +824,14 @@
             ],
             "max": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "observe_attempts": 5
@@ -807,6 +863,14 @@
             ],
             "min": 0.5
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "skip_if": {
@@ -829,6 +893,14 @@
             ],
             "max": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "after": {
@@ -851,6 +923,14 @@
             ],
             "max": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "observe_attempts": 5
@@ -925,6 +1005,14 @@
             ],
             "max": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       }
     },
@@ -973,6 +1061,14 @@
             ],
             "max": 0.05
           }
+        ],
+        "page_text_regions": [
+          [
+            100,
+            885,
+            680,
+            1079
+          ]
         ]
       },
       "after": {
@@ -1228,10 +1324,20 @@
           133,
           59
         ],
-        "before": [
-          "出征",
-          "士兵比例"
-        ],
+        "before": {
+          "all": [
+            "出征",
+            "士兵比例"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              885,
+              680,
+              1079
+            ]
+          ]
+        },
         "after": {
           "all": [
             "城镇",

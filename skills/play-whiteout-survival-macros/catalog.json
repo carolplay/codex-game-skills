@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.171",
+  "package_version": "0.12.172",
   "executor_min_version": "0.4.15",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -297,38 +297,38 @@
     "gather_meat": {
       "path": "actions/wos-gather-meat.json",
       "action_id": "wos-gather-meat",
-      "action_version": "0.1.12",
-      "sha256": "2ddde6321b6f146890816e3698f02011087dfc050174a75c92c0fc45fb68a0fd",
+      "action_version": "0.1.13",
+      "sha256": "6bc444c15251f6ce898108fafcce834b59cb301ebf629782d057147d8b20f91d",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending.;0.1.10: mainUTCday26searchfound freefullmeat8node butfullOCRmissed采集者; reusewood/coal/iron calibratedsitepagecrop225345565475 withunchanged无人check andnohero troopdispatch. Savedfailedframepositive locallyverified; livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending."
+      "verification_scope": "Known717centered frame reachedgatherarmybutfullOCRmissed出征; same-framefootercropaddedtoarmyguardsandboundedbackexit. Existingidentity,emptytarget,nohero,troop,dispatchguards unchanged. Cachedpositive/negative andnewrevisionlivepending."
     },
     "gather_wood": {
       "path": "actions/wos-gather-wood.json",
       "action_id": "wos-gather-wood",
-      "action_version": "0.1.16",
-      "sha256": "280e4c5fb767153c31197eaf32b3ee1ff6222891efabf2f84b495301b585c77b",
+      "action_version": "0.1.17",
+      "sha256": "5fc0c1d54933b5cffb2ba9baa080c71d38c24ae9b361d1666649269e64b0c167",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending."
+      "verification_scope": "Known717centered frame reachedgatherarmybutfullOCRmissed出征; same-framefootercropaddedtoarmyguardsandboundedbackexit. Existingidentity,emptytarget,nohero,troop,dispatchguards unchanged. Cachedpositive/negative andnewrevisionlivepending."
     },
     "gather_coal": {
       "path": "actions/wos-gather-coal.json",
       "action_id": "wos-gather-coal",
-      "action_version": "0.1.19",
-      "sha256": "c116cb8c6d6213096b47bfe30c8965af77fc7ee2b1874d23dbc5e0bd630ebe6f",
+      "action_version": "0.1.20",
+      "sha256": "666a6b6a108324cd3b30f35a53a0172caf0e3497d877ca52d495a1caa47fcc31",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending."
+      "verification_scope": "Known717centered frame reachedgatherarmybutfullOCRmissed出征; same-framefootercropaddedtoarmyguardsandboundedbackexit. Existingidentity,emptytarget,nohero,troop,dispatchguards unchanged. Cachedpositive/negative andnewrevisionlivepending."
     },
     "gather_iron": {
       "path": "actions/wos-gather-iron.json",
       "action_id": "wos-gather-iron",
-      "action_version": "0.1.19",
-      "sha256": "1f55f8036570c4bd4ff28a725f1dbc91c0c501ad58b6a5738dc2383909ec2a67",
+      "action_version": "0.1.20",
+      "sha256": "518c35af38a73115ee4a1ead790f9887686df74f77ea170a5fb12bdb89697ce0",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.12.31 candidate moves Equalize AFTER hero removal and BEFORE no-hero validation/dispatch. Low0.12.30 selected14189 then hero removal refilled28700; wood/coal consumedrest, ironempty. Fixed order livepending; originalfailure retained. New: Ymarchfull6/6; failedresourceentry thenworldblankexit selecteddeer. Exitviafixedavatar→profile→world→city, manuallysampled. Explicitfullmarch1/1..6/6 branch endswithoutdispatch andreturns city; skip isnotnewgather. Nextrolelivepending. Same-frame collectorlabel crop for lowcontrast resourcecard aftersearch andbeforedeploy; threeactual failureframes positive andcitynegative passed. Resource title, none-collector region, hero removal anddispatch unchanged; newmacro livepending.; 0.12.75: march capacity prefers unique high-confidence same-frame count before crop fallback. Saved full6/6 and nonfull5/6 checks pass; full-queue live skip pending."
+      "verification_scope": "Known717centered frame reachedgatherarmybutfullOCRmissed出征; same-framefootercropaddedtoarmyguardsandboundedbackexit. Existingidentity,emptytarget,nohero,troop,dispatchguards unchanged. Cachedpositive/negative andnewrevisionlivepending."
     },
     "healing": {
       "path": "actions/wos-healing.json",
@@ -509,11 +509,11 @@
     "vip_activate_inventory": {
       "path": "actions/wos-vip-activate-inventory.json",
       "action_id": "wos-vip-activate-inventory",
-      "action_version": "0.1.3",
-      "sha256": "111835b06b455bdd96ab6d4076cc8b49341372e0b13ebfc15fe372d97966084f",
+      "action_version": "0.1.4",
+      "sha256": "0b8d8d308447ef51de3eb66328c5073f76de822a14650e1b733799fc14a063ab",
       "period": "on-demand",
       "utility": true,
-      "verification_scope": "NewsampleinactiveVIP4 crop reads购买井使用; boundedbuttonpattern accepts observed glyph whileexactone-day1000price,budgetandconfirmation remain. Cachedpositive/negative andlivepending. Saved-framepositive/negative checks passed; new revision livepending. Earlieractual runs andfailures retained."
+      "verification_scope": "Buttonlabelguard013 passed live; numericbudget croppedprice atoldbounds hadconfidence0.3. 014pads priceROI, keepingdefaultnumericconfidenceand1000cap. Savednew717/old788 framebudgetchecks andlivepending."
     },
     "stamina_inventory_refill": {
       "path": "actions/wos-stamina-inventory-refill.json",

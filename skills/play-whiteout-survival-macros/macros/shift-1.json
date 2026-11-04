@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.171",
-  "package_version": "0.12.171",
+  "macro_version": "0.12.172",
+  "package_version": "0.12.172",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -145,26 +145,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.12",
-          "sha256": "2ddde6321b6f146890816e3698f02011087dfc050174a75c92c0fc45fb68a0fd"
+          "action_version": "0.1.13",
+          "sha256": "6bc444c15251f6ce898108fafcce834b59cb301ebf629782d057147d8b20f91d"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.16",
-          "sha256": "280e4c5fb767153c31197eaf32b3ee1ff6222891efabf2f84b495301b585c77b"
+          "action_version": "0.1.17",
+          "sha256": "5fc0c1d54933b5cffb2ba9baa080c71d38c24ae9b361d1666649269e64b0c167"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.19",
-          "sha256": "c116cb8c6d6213096b47bfe30c8965af77fc7ee2b1874d23dbc5e0bd630ebe6f"
+          "action_version": "0.1.20",
+          "sha256": "666a6b6a108324cd3b30f35a53a0172caf0e3497d877ca52d495a1caa47fcc31"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.19",
-          "sha256": "1f55f8036570c4bd4ff28a725f1dbc91c0c501ad58b6a5738dc2383909ec2a67"
+          "action_version": "0.1.20",
+          "sha256": "518c35af38a73115ee4a1ead790f9887686df74f77ea170a5fb12bdb89697ce0"
         },
         {
           "task": "pet_treasure_claim",
@@ -416,26 +416,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.12",
-          "sha256": "2ddde6321b6f146890816e3698f02011087dfc050174a75c92c0fc45fb68a0fd"
+          "action_version": "0.1.13",
+          "sha256": "6bc444c15251f6ce898108fafcce834b59cb301ebf629782d057147d8b20f91d"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.16",
-          "sha256": "280e4c5fb767153c31197eaf32b3ee1ff6222891efabf2f84b495301b585c77b"
+          "action_version": "0.1.17",
+          "sha256": "5fc0c1d54933b5cffb2ba9baa080c71d38c24ae9b361d1666649269e64b0c167"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.19",
-          "sha256": "c116cb8c6d6213096b47bfe30c8965af77fc7ee2b1874d23dbc5e0bd630ebe6f"
+          "action_version": "0.1.20",
+          "sha256": "666a6b6a108324cd3b30f35a53a0172caf0e3497d877ca52d495a1caa47fcc31"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.19",
-          "sha256": "1f55f8036570c4bd4ff28a725f1dbc91c0c501ad58b6a5738dc2383909ec2a67"
+          "action_version": "0.1.20",
+          "sha256": "518c35af38a73115ee4a1ead790f9887686df74f77ea170a5fb12bdb89697ce0"
         },
         {
           "task": "pet_treasure_claim",
@@ -657,26 +657,26 @@
         {
           "task": "gather_meat",
           "action_id": "wos-gather-meat",
-          "action_version": "0.1.12",
-          "sha256": "2ddde6321b6f146890816e3698f02011087dfc050174a75c92c0fc45fb68a0fd"
+          "action_version": "0.1.13",
+          "sha256": "6bc444c15251f6ce898108fafcce834b59cb301ebf629782d057147d8b20f91d"
         },
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.16",
-          "sha256": "280e4c5fb767153c31197eaf32b3ee1ff6222891efabf2f84b495301b585c77b"
+          "action_version": "0.1.17",
+          "sha256": "5fc0c1d54933b5cffb2ba9baa080c71d38c24ae9b361d1666649269e64b0c167"
         },
         {
           "task": "gather_coal",
           "action_id": "wos-gather-coal",
-          "action_version": "0.1.19",
-          "sha256": "c116cb8c6d6213096b47bfe30c8965af77fc7ee2b1874d23dbc5e0bd630ebe6f"
+          "action_version": "0.1.20",
+          "sha256": "666a6b6a108324cd3b30f35a53a0172caf0e3497d877ca52d495a1caa47fcc31"
         },
         {
           "task": "gather_iron",
           "action_id": "wos-gather-iron",
-          "action_version": "0.1.19",
-          "sha256": "1f55f8036570c4bd4ff28a725f1dbc91c0c501ad58b6a5738dc2383909ec2a67"
+          "action_version": "0.1.20",
+          "sha256": "518c35af38a73115ee4a1ead790f9887686df74f77ea170a5fb12bdb89697ce0"
         },
         {
           "task": "pet_treasure_claim",
