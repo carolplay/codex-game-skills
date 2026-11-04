@@ -1,0 +1,126 @@
+{
+  "scope": "Historical worktree snapshots before instruction cleanup; not active policy, source links inside snapshots are historical",
+  "date": "2026-11-03",
+  "files": [
+    {
+      "source": "AGENTS.md",
+      "sha256": "a3d74dc43c3ad4dc5ad3666c49aab6b474d2e02b7d296b2f0931da62101a81f0",
+      "bytes": 6593,
+      "lines": 35,
+      "archive_path": "AGENTS.snapshot.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "docs/PROJECT-CONTEXT.md",
+      "sha256": "1c4b0dec3b1f56a158e5e6237898cd42d3c91aee7e5de77c168ad38d4ba259c9",
+      "bytes": 4734,
+      "lines": 33,
+      "archive_path": "docs/PROJECT-CONTEXT.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "docs/V2-OPERATIONS.md",
+      "sha256": "29b3485c8010d31a815da9e99b12835574494e208a1a67d6b00701c712d5979d",
+      "bytes": 14646,
+      "lines": 91,
+      "archive_path": "docs/V2-OPERATIONS.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "docs/WOS-V2-TASK-DESIGN.md",
+      "sha256": "a8742b71daa8db93979478d38c8c8efef818cd4bdee4bc6485a10d5a7eeb5efe",
+      "bytes": 7288,
+      "lines": 76,
+      "archive_path": "docs/WOS-V2-TASK-DESIGN.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "docs/WOS-AUTOMATION-V2.md",
+      "sha256": "85bb56848c745944c7a15f812a4fdd8eda0ec830cf4611f53acedf1cd89e83c7",
+      "bytes": 5043,
+      "lines": 64,
+      "archive_path": "docs/WOS-AUTOMATION-V2.md",
+      "snapshot_kind": "committed baseline bb0c4af; unrelated worktree additions preserved outside this public snapshot"
+    },
+    {
+      "source": "skills/play-whiteout-survival-macros/SKILL.md",
+      "sha256": "a7edbf41aa2dfde4d8857046546bc57834b82cb76bbf67ecd2a3543ee699ed3b",
+      "bytes": 3505,
+      "lines": 26,
+      "archive_path": "skills/play-whiteout-survival-macros/SKILL.snapshot.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "skills/play-whiteout-survival-macros/references/visit-plan.md",
+      "sha256": "23609ed21e12ef6750b14d6f7970ec2183abb928917a210d43d78bfbf07343cd",
+      "bytes": 78172,
+      "lines": 364,
+      "archive_path": "skills/play-whiteout-survival-macros/references/visit-plan.md",
+      "snapshot_kind": "committed baseline bb0c4af; unrelated worktree additions preserved outside this public snapshot"
+    },
+    {
+      "source": "skills/play-whiteout-survival-macros/references/macro-package.md",
+      "sha256": "76353b9c049bc458fcb7709747573e4588297a29f22438bdbfc372b42f01bdd7",
+      "bytes": 45442,
+      "lines": 251,
+      "archive_path": "skills/play-whiteout-survival-macros/references/macro-package.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "skills/play-whiteout-survival-macros/references/recording-cards.md",
+      "sha256": "74ec8688e7f212dd130245c9c483cd45170c8fdfee1145a23cd05d2d920575eb",
+      "bytes": 13036,
+      "lines": 125,
+      "archive_path": "skills/play-whiteout-survival-macros/references/recording-cards.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "skills/play-whiteout-survival-macros/references/bear-hunt.md",
+      "sha256": "bba4a3cfab022c48f478cbc71fb59589787dbc4fa712f2c28b66deeeeacbd041",
+      "bytes": 5217,
+      "lines": 35,
+      "archive_path": "skills/play-whiteout-survival-macros/references/bear-hunt.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "skills/play-whiteout-survival/SKILL.md",
+      "sha256": "1b9e4b9e8d9a85d32b5daa04de7dc8f0696f889d8f09832d34306197b4c00891",
+      "bytes": 2391,
+      "lines": 24,
+      "archive_path": "skills/play-whiteout-survival/SKILL.snapshot.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "skills/play-whiteout-survival/references/macos-orchestration.md",
+      "sha256": "4aba9687bc57ee93251e7b915dcd65434a310eee4993e36466c9f2d26cbca69a",
+      "bytes": 5622,
+      "lines": 46,
+      "archive_path": "skills/play-whiteout-survival/references/macos-orchestration.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "skills/play-whiteout-survival/references/account-goals.md",
+      "sha256": "e408d3663a09572bf7cfa2b718a43eedb7aa52c7a2bcc0bc2c225716b3f355a4",
+      "bytes": 2253,
+      "lines": 21,
+      "archive_path": "skills/play-whiteout-survival/references/account-goals.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "skills/play-whiteout-survival/references/game-dailies.md",
+      "sha256": "05e2d1d52692b39789df6840d8d99e53d2aef77d540f4cdcfa150403d949f5f1",
+      "bytes": 3173,
+      "lines": 25,
+      "archive_path": "skills/play-whiteout-survival/references/game-dailies.md",
+      "snapshot_kind": "pre-cleanup source"
+    },
+    {
+      "source": "skills/play-whiteout-survival/references/progression-and-coordination.md",
+      "sha256": "e167b7e1a8b6cb31fab4da322659be56f5e483c053e42b13919f59e21a6704ad",
+      "bytes": 3400,
+      "lines": 33,
+      "archive_path": "skills/play-whiteout-survival/references/progression-and-coordination.md",
+      "snapshot_kind": "pre-cleanup source"
+    }
+  ]
+}

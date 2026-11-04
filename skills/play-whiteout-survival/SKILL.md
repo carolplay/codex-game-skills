@@ -1,24 +1,18 @@
 ---
 name: play-whiteout-survival
-description: 通过 macOS 本地 Whiteout Survival 应用执行角色日常、领取收益和维护队列，或协调既有多角色任务；将游戏流程、账号目标与设备调度分开处理。
+description: 查询Whiteout Survival玩法与界面经验，或在调用方已授权范围内操作原生游戏UI；本工作区生产调度与宏开发使用play-whiteout-survival-macros。
 ---
 
-# Whiteout Survival：三层工作约定
+# Whiteout Survival玩法与UI知识
 
-先从调用线程读取目标王国/角色/ID、等级、账号目标、资源预算、时限、日志位置和既有设备/调度授权。个人信息与授权保留在调用方本地，公开技能不内置账号、时区、排程或机器路径。未明确字段仅在影响下一步时询问；已有用户授权不重复请求。
+本工作区把V1作为按需知识补充，既有V1排程仍暂停。当前授权、角色范围、机器时段和恢复流程读[PROJECT-CONTEXT](../../docs/PROJECT-CONTEXT.md)及[V2-OPERATIONS](../../docs/V2-OPERATIONS.md)；V1旧预算、角色优先级或协调方式不作为额外限制，不重建旧角色会话。
 
-按问题只读所需层，不每次加载全部历史：
+按问题选择参考，不加载全部历史：
 
-1. **游戏日常**：[references/game-dailies.md](references/game-dailies.md)——任务顺序、领奖、灯塔、队列与完成核验。具体收益入口读 [references/free-rewards.md](references/free-rewards.md)，可选玩法读 [references/optional-dailies.md](references/optional-dailies.md)，界面细节读 [references/ui-workflows.md](references/ui-workflows.md)。
-2. **账号目标与优先级**：[references/account-goals.md](references/account-goals.md)——主号、小号、试验号如何分配资源与试验预算，避免把谨慎误作拒绝执行已授权任务。
-3. **macOS、iCloud与调度**：[references/macos-orchestration.md](references/macos-orchestration.md)——原生输入、单实例串行、主协调调配、重连、设备暂停与审批错误分类。
+- [game-dailies](references/game-dailies.md)：日常类别与业务完成证据。
+- [free-rewards](references/free-rewards.md)、[optional-dailies](references/optional-dailies.md)、[ui-workflows](references/ui-workflows.md)：相关入口和玩法经验；名称为optional不代表本项目可省略，实际范围以当前清单为准。
+- [account-goals](references/account-goals.md)：理解调用方策略，避免从账号称呼推断授权。
+- [macos-orchestration](references/macos-orchestration.md)：UI与设备故障分层。
+- [progression-and-coordination](references/progression-and-coordination.md)：仅在研究成长或用量时读取，不作为生产调度器。
 
-等级/任务频率和用量研究按需读 [references/progression-and-coordination.md](references/progression-and-coordination.md)。
-
-## 最小共同约定
-
-- 先核验目标身份，仅操作指定角色。共享同一iCloud/游戏实例时执行权唯一。
-- 只通过当前环境支持的原生UI工具操作；不因技能存在而推断可使用游戏后台协议或内存控制。
-- 遵守调用方原deadline，查询、等待恢复、记录均计时；未指定单次时限默认30分钟，至少提前2分钟收尾，多角色按调用方预留时间。
-- 不现金购买、不野外攻击玩家、不发送聊天。授权的竞技场和NPC集结按账号策略执行；资源预算依用户配置，不把普通消耗都升级成审批事项。
-- 记录完成证据、未完成项、队列、任务与设备错误分类、耗时及实际可读用量。未知token/credit不估算为精确成本。
+操作前核验指定角色与实际页面，使用当前受支持的UI接口。具体任务、预算和显式deadline由调用方提供，已有授权不重复询问；未指定时限不自行增加30分钟硬截止。记录真实结果、证据及未知项，不用旧攻略数字或示例坐标代替当前界面。
