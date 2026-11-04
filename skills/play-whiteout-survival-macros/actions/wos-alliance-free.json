@@ -1,6 +1,6 @@
 {
   "action_id": "wos-alliance-free",
-  "action_version": "0.1.2",
+  "action_version": "0.1.4",
   "name": "wos-alliance-free (trial)",
   "reference_size": [
     788,
@@ -814,6 +814,1014 @@
       }
     },
     {
+      "name": "members-individual-claim-0",
+      "action": "click",
+      "before": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              535,
+              500,
+              655,
+              945
+            ],
+            "min": 0.025
+          }
+        ]
+      },
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "bounds": [
+          535,
+          500,
+          655,
+          945
+        ],
+        "min_confidence": 0.3,
+        "select": "top-left"
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "联盟宝箱",
+            "盟友赠礼",
+            "购买含有盟友赠礼"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                535,
+                500,
+                655,
+                945
+              ],
+              "max": 0.015
+            }
+          ]
+        },
+        {
+          "all": [
+            "联盟宝箱",
+            "战利品宝箱",
+            "盟友赠礼"
+          ],
+          "none": [
+            "购买含有盟友赠礼",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        }
+      ],
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "联盟宝箱"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "members-individual-dismiss-0",
+      "action": "click",
+      "point": [
+        394,
+        997
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if_step_skipped": "members-individual-claim-0",
+      "after": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "members-individual-claim-1",
+      "action": "click",
+      "before": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              535,
+              500,
+              655,
+              945
+            ],
+            "min": 0.025
+          }
+        ]
+      },
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "bounds": [
+          535,
+          500,
+          655,
+          945
+        ],
+        "min_confidence": 0.3,
+        "select": "top-left"
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "联盟宝箱",
+            "盟友赠礼",
+            "购买含有盟友赠礼"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                535,
+                500,
+                655,
+                945
+              ],
+              "max": 0.015
+            }
+          ]
+        },
+        {
+          "all": [
+            "联盟宝箱",
+            "战利品宝箱",
+            "盟友赠礼"
+          ],
+          "none": [
+            "购买含有盟友赠礼",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        }
+      ],
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "联盟宝箱"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "members-individual-dismiss-1",
+      "action": "click",
+      "point": [
+        394,
+        997
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if_step_skipped": "members-individual-claim-1",
+      "after": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "members-individual-claim-2",
+      "action": "click",
+      "before": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              535,
+              500,
+              655,
+              945
+            ],
+            "min": 0.025
+          }
+        ]
+      },
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "bounds": [
+          535,
+          500,
+          655,
+          945
+        ],
+        "min_confidence": 0.3,
+        "select": "top-left"
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "联盟宝箱",
+            "盟友赠礼",
+            "购买含有盟友赠礼"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                535,
+                500,
+                655,
+                945
+              ],
+              "max": 0.015
+            }
+          ]
+        },
+        {
+          "all": [
+            "联盟宝箱",
+            "战利品宝箱",
+            "盟友赠礼"
+          ],
+          "none": [
+            "购买含有盟友赠礼",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        }
+      ],
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "联盟宝箱"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "members-individual-dismiss-2",
+      "action": "click",
+      "point": [
+        394,
+        997
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if_step_skipped": "members-individual-claim-2",
+      "after": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "members-individual-claim-3",
+      "action": "click",
+      "before": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              535,
+              500,
+              655,
+              945
+            ],
+            "min": 0.025
+          }
+        ]
+      },
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "bounds": [
+          535,
+          500,
+          655,
+          945
+        ],
+        "min_confidence": 0.3,
+        "select": "top-left"
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "联盟宝箱",
+            "盟友赠礼",
+            "购买含有盟友赠礼"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                535,
+                500,
+                655,
+                945
+              ],
+              "max": 0.015
+            }
+          ]
+        },
+        {
+          "all": [
+            "联盟宝箱",
+            "战利品宝箱",
+            "盟友赠礼"
+          ],
+          "none": [
+            "购买含有盟友赠礼",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        }
+      ],
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "联盟宝箱"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "members-individual-dismiss-3",
+      "action": "click",
+      "point": [
+        394,
+        997
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if_step_skipped": "members-individual-claim-3",
+      "after": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "members-individual-claim-4",
+      "action": "click",
+      "before": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              535,
+              500,
+              655,
+              945
+            ],
+            "min": 0.025
+          }
+        ]
+      },
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "bounds": [
+          535,
+          500,
+          655,
+          945
+        ],
+        "min_confidence": 0.3,
+        "select": "top-left"
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "联盟宝箱",
+            "盟友赠礼",
+            "购买含有盟友赠礼"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                535,
+                500,
+                655,
+                945
+              ],
+              "max": 0.015
+            }
+          ]
+        },
+        {
+          "all": [
+            "联盟宝箱",
+            "战利品宝箱",
+            "盟友赠礼"
+          ],
+          "none": [
+            "购买含有盟友赠礼",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        }
+      ],
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "联盟宝箱"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "members-individual-dismiss-4",
+      "action": "click",
+      "point": [
+        394,
+        997
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if_step_skipped": "members-individual-claim-4",
+      "after": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "members-individual-claim-5",
+      "action": "click",
+      "before": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              535,
+              500,
+              655,
+              945
+            ],
+            "min": 0.025
+          }
+        ]
+      },
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "bounds": [
+          535,
+          500,
+          655,
+          945
+        ],
+        "min_confidence": 0.3,
+        "select": "top-left"
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "联盟宝箱",
+            "盟友赠礼",
+            "购买含有盟友赠礼"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                535,
+                500,
+                655,
+                945
+              ],
+              "max": 0.015
+            }
+          ]
+        },
+        {
+          "all": [
+            "联盟宝箱",
+            "战利品宝箱",
+            "盟友赠礼"
+          ],
+          "none": [
+            "购买含有盟友赠礼",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        }
+      ],
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "联盟宝箱"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "members-individual-dismiss-5",
+      "action": "click",
+      "point": [
+        394,
+        997
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if_step_skipped": "members-individual-claim-5",
+      "after": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "members-individual-claim-6",
+      "action": "click",
+      "before": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              535,
+              500,
+              655,
+              945
+            ],
+            "min": 0.025
+          }
+        ]
+      },
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "bounds": [
+          535,
+          500,
+          655,
+          945
+        ],
+        "min_confidence": 0.3,
+        "select": "top-left"
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "联盟宝箱",
+            "盟友赠礼",
+            "购买含有盟友赠礼"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                535,
+                500,
+                655,
+                945
+              ],
+              "max": 0.015
+            }
+          ]
+        },
+        {
+          "all": [
+            "联盟宝箱",
+            "战利品宝箱",
+            "盟友赠礼"
+          ],
+          "none": [
+            "购买含有盟友赠礼",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        }
+      ],
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "联盟宝箱"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "members-individual-dismiss-6",
+      "action": "click",
+      "point": [
+        394,
+        997
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if_step_skipped": "members-individual-claim-6",
+      "after": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "members-individual-claim-7",
+      "action": "click",
+      "before": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              535,
+              500,
+              655,
+              945
+            ],
+            "min": 0.025
+          }
+        ]
+      },
+      "text_target": {
+        "text": "领取",
+        "exact": true,
+        "bounds": [
+          535,
+          500,
+          655,
+          945
+        ],
+        "min_confidence": 0.3,
+        "select": "top-left"
+      },
+      "skip_if_any": [
+        {
+          "all": [
+            "联盟宝箱",
+            "盟友赠礼",
+            "购买含有盟友赠礼"
+          ],
+          "none": [
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ],
+          "green_regions": [
+            {
+              "bounds": [
+                535,
+                500,
+                655,
+                945
+              ],
+              "max": 0.015
+            }
+          ]
+        },
+        {
+          "all": [
+            "联盟宝箱",
+            "战利品宝箱",
+            "盟友赠礼"
+          ],
+          "none": [
+            "购买含有盟友赠礼",
+            "获得奖励",
+            "恭喜获得",
+            "点击任意位置退出"
+          ]
+        }
+      ],
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "联盟宝箱"
+        ]
+      },
+      "observe_attempts": 3
+    },
+    {
+      "name": "members-individual-dismiss-7",
+      "action": "click",
+      "point": [
+        394,
+        997
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if_step_skipped": "members-individual-claim-7",
+      "after": {
+        "all": [
+          "联盟宝箱",
+          "盟友赠礼",
+          "购买含有盟友赠礼"
+        ],
+        "none": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
       "name": "members-availability-after-bounded-claims",
       "action": "observe",
       "before": {
@@ -1107,7 +2115,7 @@
       }
     ]
   },
-  "verification_scope": "Loot actual claim and empty rewards replayed; this workflow only inspects help, use separate help workflow for requests. 0.1.2: a new own-rally loot chest arrived while the prior reward was dismissed. Each loot/member tab now performs up to3 guarded claim/dismiss pairs; dismiss only verifies return to that tab, not permanent button emptiness. Final availability is captured and logged for review; incoming rewards may still remain after the bounded pass. Original failure and agent-free city recovery retained privately; next targeted replay pending.",
+  "verification_scope": "0.1.4 metadata-only publication revision of behavior-identical0.1.3: no private counters in publicpackage. Retains batchloot/member branches and adds up to8 exact visible green individual allygift rows. Mature-role0.1.3 replay actuallyclaimed3remainingrows, skipped已领取 and returnedcity; a separateagent sample confirmed counterdecrement andalliancechest keyprogress. No modal on sampled layout. Bounded8rows doesnot prove allincominggifts cleared; alliancechest keyprogress is distinct from hero recruitmentkeys.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
-  "execution_timeout_seconds": 180
+  "execution_timeout_seconds": 240
 }
