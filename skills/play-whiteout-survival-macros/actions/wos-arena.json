@@ -1,6 +1,6 @@
 {
   "action_id": "wos-arena",
-  "action_version": "0.1.10",
+  "action_version": "0.1.11",
   "name": "WOS arena",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 900,
   "status": "candidate",
-  "verification_scope": "0.1.10 claimed chest threshold0.85: current main actually completed5 free battles and claimed reward, then opened chest scores0.869 rather than prior0.93 requirement. Cached original open1.0/closed0.482 and current open/closed/city cross-checks. Does not infer claim from remaining0 alone; all existing reward and count guards remain. New target-role live replay pending.",
+  "verification_scope": "0.1.11 retains0.85threshold andall actualclaim/countguards. Claimed-chest alias must bind original plus variant2 asset; current mature-role openedchest scored0.681 againstoldvariant. Seven original saved cases pass two-variant classification:3opened positive,3closed andcitynegative. Actualfivebattles andreceipt alreadyconfirmed separately; oldtechnicaldeviationretained, nextrole liveverification pending.",
   "steps": [
     {
       "name": "01-check-city",

@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-2",
-  "macro_version": "0.12.167",
-  "package_version": "0.12.167",
+  "macro_version": "0.12.168",
+  "package_version": "0.12.168",
   "refresh_utc_hour": 8,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -259,8 +259,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.10",
-          "sha256": "b12425cb18f4b5497585d81302cc61a23f6f69c9268dda8e60548a0f3be3f424"
+          "action_version": "0.1.11",
+          "sha256": "97620fa7d9251c7c53166cf9e8db025d8d18a1d8a439354dcc35219894cf43c2"
         },
         {
           "task": "daily",
@@ -525,8 +525,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.10",
-          "sha256": "b12425cb18f4b5497585d81302cc61a23f6f69c9268dda8e60548a0f3be3f424"
+          "action_version": "0.1.11",
+          "sha256": "97620fa7d9251c7c53166cf9e8db025d8d18a1d8a439354dcc35219894cf43c2"
         },
         {
           "task": "daily",
@@ -743,8 +743,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.10",
-          "sha256": "b12425cb18f4b5497585d81302cc61a23f6f69c9268dda8e60548a0f3be3f424"
+          "action_version": "0.1.11",
+          "sha256": "97620fa7d9251c7c53166cf9e8db025d8d18a1d8a439354dcc35219894cf43c2"
         },
         {
           "task": "daily",

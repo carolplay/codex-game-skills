@@ -30,7 +30,7 @@ python3 scripts/run_visit.py \
 | 别名 | 用途与注意事项 |
 |---|---|
 | `intel-bulk-locked` | 低等级情报站虽显示全部执行文字，仍可能带锁；绑定锁图案并按action分流，不能仅凭文字走批量。 |
-| `arena-expedition-claimed-chest` | 新竞技场已开箱仍显示5/5，区别未开箱；领取、零剩余与图案分别核验，当前阈值只读action。 |
+| `arena-expedition-claimed-chest` | 新竞技场已开箱仍显示5/5，区别未开箱；领取、零剩余与图案分别核验，绑定`assets/arena-expedition-claimed-chest.png`与`arena-expedition-claimed-chest-variant2.png`两条绝对路径列表，当前阈值只读action。 |
 | `treasure-ready-v3`／`treasure-complete` | 寻宝可派和已完成图案是不同状态；绑定当前配色变体，检查实际整图搜索范围，不以裁区匹配代替完整扫描验收。 |
 | `island-tree-guide`／`island-life-bubble` | 指引和普通产出气泡分开绑定；入口、点击与库存增长分开验收。 |
 | `stamina-zero` | 可选的本机空体力字形模板；缺绑定不假定体力为零或足够，保留本地数字读回。 |
