@@ -1,5 +1,8 @@
 # WOS agent bot workspace
 
+- 三班时间是用户为机器安排的自动运行时段，不是游戏强制的刷新或任务截止时间；UTC游戏日和活动开放时间另行核验。时段内按检查点执行，不能因普通登录提示自行取消本班。
+- “账号在其他设备/其他地方登录”是用户正常使用账号导致的预期游戏断线，不代表用户要求接手或暂停。在已安排的机器运行时段内直接正常重连，重新核验身份与窗口后续跑，不再询问是否接手；只有用户明确暂停或指定手动占用才让出。持续掉线按技术偏差有界处理，不设置无限期接管确认。此规则不改变系统锁屏、系统权限或平台明确拒绝的处理。
+
 - Public, reusable game skills live in `skills/`.
 - Machine-local account settings, execution records and experiments live in `local-data/`, which is Git-ignored. Never commit that directory or copy private account data into public skills.
 - Read `local-data/README.md` for local paths and operating state when the directory exists.
