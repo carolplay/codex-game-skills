@@ -1,6 +1,6 @@
 {
   "action_id": "wos-warehouse-supply",
-  "action_version": "0.1.11",
+  "action_version": "0.1.12",
   "name": "WOS warehouse daily package chain",
   "reference_size": [
     788,
@@ -3909,7 +3909,44 @@
         ]
       },
       "observe_attempts": 30,
-      "observe_interval_seconds": 5
+      "observe_interval_seconds": 5,
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "每日任务",
+          "成长任务",
+          "距离下个包裹"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            335,
+            535,
+            460,
+            590
+          ],
+          "min": 1,
+          "max": 300
+        }
+      }
     },
     {
       "name": "package-1-wait-actual-ready",
@@ -3955,7 +3992,44 @@
         ]
       },
       "observe_attempts": 30,
-      "observe_interval_seconds": 5
+      "observe_interval_seconds": 5,
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "每日任务",
+          "成长任务",
+          "距离下个包裹"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            335,
+            535,
+            460,
+            590
+          ],
+          "min": 1,
+          "max": 300
+        }
+      }
     },
     {
       "name": "package-1-claim-package",
@@ -4099,7 +4173,44 @@
         ]
       },
       "observe_attempts": 30,
-      "observe_interval_seconds": 5
+      "observe_interval_seconds": 5,
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "每日任务",
+          "成长任务",
+          "距离下个包裹"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            335,
+            535,
+            460,
+            590
+          ],
+          "min": 1,
+          "max": 300
+        }
+      }
     },
     {
       "name": "package-2-claim-package",
@@ -4243,7 +4354,44 @@
         ]
       },
       "observe_attempts": 30,
-      "observe_interval_seconds": 5
+      "observe_interval_seconds": 5,
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "每日任务",
+          "成长任务",
+          "距离下个包裹"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            335,
+            535,
+            460,
+            590
+          ],
+          "min": 1,
+          "max": 300
+        }
+      }
     },
     {
       "name": "package-3-claim-package",
@@ -4387,7 +4535,44 @@
         ]
       },
       "observe_attempts": 30,
-      "observe_interval_seconds": 5
+      "observe_interval_seconds": 5,
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "每日任务",
+          "成长任务",
+          "距离下个包裹"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            335,
+            535,
+            460,
+            590
+          ],
+          "min": 1,
+          "max": 300
+        }
+      }
     },
     {
       "name": "package-4-claim-package",
@@ -4531,7 +4716,44 @@
         ]
       },
       "observe_attempts": 30,
-      "observe_interval_seconds": 5
+      "observe_interval_seconds": 5,
+      "finish_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数",
+          "每日任务",
+          "成长任务",
+          "距离下个包裹"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "timer_seconds": {
+          "bounds": [
+            335,
+            535,
+            460,
+            590
+          ],
+          "min": 1,
+          "max": 300
+        }
+      }
     },
     {
       "name": "package-5-claim-package",
@@ -4861,12 +5083,12 @@
       }
     ]
   },
-  "verification_scope": "Candidate: retain identity and initial daily guided camera; once bubble located, claim five actual ready packages using existing image target and cooldown evidence, without repeated daily-sidebar search between claims. Each wait30x5sec, wholeaction900sec. Saved original a mature profile at0.1.9 reachedcamera then failed repeatedsidebarsearch beforeanycrateclaim. Candidate schema and existingtemplatefixtures only; no live replay yet.; Undeployed candidate adds bounded reverse search after forward list exhausted, preserving found-chain skips; intended for entry overshoot states. No live replay.",
+  "verification_scope": "0.1.12 observed next warehouse package cooldown is five minutes. Earlier30x5second wait expired with1:58 remaining after an actual receipt. At the established guided warehouse camera, a scoped positive countdown now finishes in city as cooling, never as a new receipt or all5 completion. Ready template remains mandatory for all claims. Driver may revisit after real cooldown while doing other tasks. Cached cooldown/ready/other-city checks; new early finish live pending.",
   "business_dependencies": [
     "Cityentry/exit andfreshroleidentity; no research/construction",
     "Dailyearnedclaim precedes readingwarehouse nexttier 1→3→5",
     "Guidedcityentry centers warehouse; calibratedtemplate mustappear beforeclaim; actualcooldownexpires beforefurtherclaim",
-    "Repeatuntilactual5/5 or900s budget; points325 notcompletionevidence",
-    "Initialdailyguide+template establishescamera; later dailyoverlays neverpan city. Closepanelthenverifycrate beforeinput; no repeated前往 whilecooldown."
+    "Initialdailyguide+template establishescamera; later dailyoverlays neverpan city. Closepanelthenverifycrate beforeinput; no repeated前往 whilecooldown.",
+    "Knownpositive next-package city countdown defers to other work; one visit pass is not five daily receipts. Followup uses actual elapsed cooldown and final task audit."
   ]
 }

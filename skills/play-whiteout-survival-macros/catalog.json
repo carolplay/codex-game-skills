@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.164",
+  "package_version": "0.12.165",
   "executor_min_version": "0.4.12",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -233,8 +233,8 @@
     "arena": {
       "path": "actions/wos-arena.json",
       "action_id": "wos-arena",
-      "action_version": "0.1.9",
-      "sha256": "ac78d0bdabdd8ea846bd61292a3b6afa054d013291133f41f273917053a554d2",
+      "action_version": "0.1.10",
+      "sha256": "b12425cb18f4b5497585d81302cc61a23f6f69c9268dda8e60548a0f3be3f424",
       "period": "day",
       "utility": false,
       "verification_scope": "Post-update actual header changed to optional exploration qualifier; bounded header OCR accepts both titles and excludes city overview. Old main failed entry and exit preserved; nextrole pending."
@@ -499,8 +499,8 @@
     "warehouse": {
       "path": "actions/wos-warehouse-supply.json",
       "action_id": "wos-warehouse-supply",
-      "action_version": "0.1.11",
-      "sha256": "ca0e08adbcff7d23c47bd523a85db0c442a22840622b3fdec2eb5b193c52615e",
+      "action_version": "0.1.12",
+      "sha256": "b8e2740a48a8f3b34b6453ac6dec4812576e934ac273f3b8db9288b491228ea4",
       "period": "day",
       "utility": false,
       "verification_scope": "Candidate: retain identity and initial daily guided camera; once bubble located, claim five actual ready packages using existing image target and cooldown evidence, without repeated daily-sidebar search between claims. Each wait30x5sec, wholeaction900sec. Saved original a mature profile at0.1.9 reachedcamera then failed repeatedsidebarsearch beforeanycrateclaim. Candidate schema and existingtemplatefixtures only; no live replay yet.; Undeployed candidate adds bounded reverse search after forward list exhausted, preserving found-chain skips; intended for entry overshoot states. No live replay.",
@@ -509,8 +509,8 @@
     "vip_activate_inventory": {
       "path": "actions/wos-vip-activate-inventory.json",
       "action_id": "wos-vip-activate-inventory",
-      "action_version": "0.1.0",
-      "sha256": "d02b8194da1191c1b226c64190db90789e0da492ae218828a75d911d379d709a",
+      "action_version": "0.1.1",
+      "sha256": "a5fa6fcd9b86d0b922f11ea64b61b9bd74bc898ebd8297c74a4742561a944343",
       "period": "on-demand",
       "utility": true,
       "verification_scope": "Development agent actually used one owned24hour card and observed activated timer plus inventory decrement. Saved inactive/active/modal/activated images validate new conditions. New macro active-skip live test pending; inactive consumption branch not yet replayed by this macro, cannot be called fully verified. Natural-expired state now replayed: one owned24h card, positive remaining duration, city return; separate VIP free-gift action then actually claimed and confirmed cooldown. Underlying0.1.0 source is unchanged; already-active/no-owned branches retain their separate prior scope."

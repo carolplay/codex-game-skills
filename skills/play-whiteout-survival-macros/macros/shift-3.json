@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.164",
-  "package_version": "0.12.164",
+  "macro_version": "0.12.165",
+  "package_version": "0.12.165",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -199,8 +199,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.11",
-          "sha256": "ca0e08adbcff7d23c47bd523a85db0c442a22840622b3fdec2eb5b193c52615e"
+          "action_version": "0.1.12",
+          "sha256": "b8e2740a48a8f3b34b6453ac6dec4812576e934ac273f3b8db9288b491228ea4"
         },
         {
           "task": "healing",
@@ -265,8 +265,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.9",
-          "sha256": "ac78d0bdabdd8ea846bd61292a3b6afa054d013291133f41f273917053a554d2"
+          "action_version": "0.1.10",
+          "sha256": "b12425cb18f4b5497585d81302cc61a23f6f69c9268dda8e60548a0f3be3f424"
         },
         {
           "task": "daily",
@@ -470,8 +470,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.11",
-          "sha256": "ca0e08adbcff7d23c47bd523a85db0c442a22840622b3fdec2eb5b193c52615e"
+          "action_version": "0.1.12",
+          "sha256": "b8e2740a48a8f3b34b6453ac6dec4812576e934ac273f3b8db9288b491228ea4"
         },
         {
           "task": "healing",
@@ -536,8 +536,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.9",
-          "sha256": "ac78d0bdabdd8ea846bd61292a3b6afa054d013291133f41f273917053a554d2"
+          "action_version": "0.1.10",
+          "sha256": "b12425cb18f4b5497585d81302cc61a23f6f69c9268dda8e60548a0f3be3f424"
         },
         {
           "task": "daily",
@@ -711,8 +711,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.11",
-          "sha256": "ca0e08adbcff7d23c47bd523a85db0c442a22840622b3fdec2eb5b193c52615e"
+          "action_version": "0.1.12",
+          "sha256": "b8e2740a48a8f3b34b6453ac6dec4812576e934ac273f3b8db9288b491228ea4"
         },
         {
           "task": "healing",
@@ -759,8 +759,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.9",
-          "sha256": "ac78d0bdabdd8ea846bd61292a3b6afa054d013291133f41f273917053a554d2"
+          "action_version": "0.1.10",
+          "sha256": "b12425cb18f4b5497585d81302cc61a23f6f69c9268dda8e60548a0f3be3f424"
         },
         {
           "task": "daily",

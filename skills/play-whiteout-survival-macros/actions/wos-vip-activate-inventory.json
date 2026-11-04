@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-activate-inventory",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS VIP activation from an owned24hour item",
   "reference_size": [
     788,
@@ -160,16 +160,31 @@
           "获取更多",
           "未激活"
         ],
-        "timer_seconds": {
-          "bounds": [
-            275,
-            980,
-            525,
-            1045
-          ],
-          "min": 1,
-          "max": 315360000
-        }
+        "text_regions": [
+          {
+            "bounds": [
+              275,
+              980,
+              525,
+              1045
+            ],
+            "pattern": "(?:\\d+d)?\\d{1,2}:\\d{2}:\\d{2,3}",
+            "min_confidence": 0.3,
+            "crop_ocr": true,
+            "prefer_frame_ocr": true
+          }
+        ],
+        "blue_regions": [
+          {
+            "bounds": [
+              280,
+              990,
+              510,
+              1035
+            ],
+            "min": 0.4
+          }
+        ]
       }
     },
     {
@@ -518,5 +533,5 @@
     "Only sampled owned24hour duration card row is implemented. Missing green owned-item row defers; other duration/acquisition branches need separate recording.",
     "One click only while inactive; active countdown skips. Daily gift is a separate vip action after activation."
   ],
-  "verification_scope": "Development agent actually used one owned24hour card and observed activated timer plus inventory decrement. Saved inactive/active/modal/activated images validate new conditions. New macro active-skip live test pending; inactive consumption branch not yet replayed by this macro, cannot be called fully verified."
+  "verification_scope": "0.1.1 active-only early finish uses scoped duration-shaped text and blue duration control. Actual active frame OCR duplicated final seconds into119; exact timer parsing previously missed active state and tried inactive-only step, then safely exited. No duration item is consumed by this early return. Cached active/inactive/city checks; next-role actual replay pending. Other activation/consumption conditions unchanged."
 }
