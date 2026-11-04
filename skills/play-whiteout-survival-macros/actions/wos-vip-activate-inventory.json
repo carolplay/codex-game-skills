@@ -1,13 +1,13 @@
 {
   "action_id": "wos-vip-activate-inventory",
-  "action_version": "0.1.1",
-  "name": "WOS VIP activation from an owned24hour item",
+  "action_version": "0.1.3",
+  "name": "WOS VIP duration: owned legacy card or sampled one-day game-diamond fallback",
   "reference_size": [
     788,
     1079
   ],
-  "execution_timeout_seconds": 120,
-  "status": "candidate",
+  "execution_timeout_seconds": 180,
+  "status": "implemented_unverified_revision",
   "steps": [
     {
       "name": "01-check-city",
@@ -215,7 +215,7 @@
       "observe_attempts": 3
     },
     {
-      "name": "defer-no-owned-vip-item",
+      "name": "defer-unrecorded-no-card-layout",
       "action": "observe",
       "before": {
         "all": [
@@ -240,6 +240,9 @@
             ],
             "max": 0.08
           }
+        ],
+        "none": [
+          "超值月卡"
         ]
       }
     },
@@ -289,7 +292,233 @@
           "max": 86400
         }
       },
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "获取更多",
+          "剩余VIP时间",
+          "超值月卡"
+        ]
+      }
+    },
+    {
+      "name": "finish-after-owned-card",
+      "action": "observe",
+      "before": {
+        "all": [
+          "获取更多",
+          "剩余VIP时间",
+          "24小时VIP时间"
+        ]
+      },
+      "finish_if": {
+        "all": [
+          "获取更多",
+          "剩余VIP时间",
+          "剩余时间"
+        ],
+        "none": [
+          "未激活"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            315,
+            235,
+            470,
+            275
+          ],
+          "min": 85000,
+          "max": 86400
+        }
+      }
+    },
+    {
+      "name": "buy-one-24h-vip-game-diamonds",
+      "action": "click",
+      "point": [
+        574,
+        459
+      ],
+      "before": {
+        "all": [
+          "获取更多",
+          "剩余VIP时间",
+          "未激活",
+          "超值月卡",
+          "24小时VIP时间"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              230,
+              410,
+              500,
+              445
+            ],
+            "pattern": "24小时VIP时间",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              510,
+              428,
+              645,
+              459
+            ],
+            "pattern": "购买[并井]使用",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              540,
+              458,
+              625,
+              486
+            ],
+            "pattern": "1[,.，]?000",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "remember_numbers": [
+        {
+          "name": "game_diamonds_before",
+          "bounds": [
+            570,
+            30,
+            665,
+            80
+          ],
+          "min_confidence": 0.3
+        }
+      ],
+      "budget_checks": [
+        {
+          "bounds": [
+            540,
+            458,
+            625,
+            486
+          ],
+          "min": 1000,
+          "max_config": "max_vip_activation_diamonds"
+        }
+      ],
+      "after": [
+        "购买确认",
+        "钻石"
+      ],
       "observe_attempts": 5
+    },
+    {
+      "name": "confirm-one-day-1000-game-diamonds",
+      "action": "click",
+      "point": [
+        394,
+        677
+      ],
+      "before": {
+        "all": [
+          "购买确认",
+          "钻石"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              250,
+              485,
+              555,
+              545
+            ],
+            "pattern": "您是否要花费1[,.，]?000钻石[?？]?",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          },
+          {
+            "bounds": [
+              365,
+              650,
+              455,
+              705
+            ],
+            "pattern": "1[,.，]?000",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      },
+      "budget_checks": [
+        {
+          "bounds": [
+            365,
+            650,
+            455,
+            705
+          ],
+          "min": 1000,
+          "max_config": "max_vip_activation_diamonds"
+        }
+      ],
+      "after": {
+        "all": [
+          "获取更多",
+          "剩余VIP时间",
+          "剩余时间"
+        ],
+        "none": [
+          "未激活"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            315,
+            235,
+            470,
+            275
+          ],
+          "min": 85000,
+          "max": 86400
+        }
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "record-active-vip-diamond-balance",
+      "action": "observe",
+      "before": {
+        "all": [
+          "获取更多",
+          "剩余VIP时间",
+          "剩余时间"
+        ],
+        "none": [
+          "未激活"
+        ],
+        "timer_seconds": {
+          "bounds": [
+            315,
+            235,
+            470,
+            275
+          ],
+          "min": 85000,
+          "max": 86400
+        }
+      },
+      "remember_numbers": [
+        {
+          "name": "game_diamonds_after",
+          "bounds": [
+            570,
+            30,
+            665,
+            80
+          ],
+          "min_confidence": 0.3
+        }
+      ]
     },
     {
       "name": "close-vip-duration-items",
@@ -426,6 +655,23 @@
     "max_exit_steps": 4,
     "exits": [
       {
+        "name": "cancel-game-diamond-vip-confirmation",
+        "action": "click",
+        "point": [
+          622,
+          395
+        ],
+        "before": [
+          "购买确认",
+          "钻石"
+        ],
+        "after": [
+          "获取更多",
+          "剩余VIP时间"
+        ],
+        "observe_attempts": 5
+      },
+      {
         "name": "exit-profile",
         "action": "click",
         "point": [
@@ -460,10 +706,15 @@
           645,
           137
         ],
-        "before": [
-          "获取更多",
-          "剩余VIP时间"
-        ],
+        "before": {
+          "all": [
+            "获取更多",
+            "剩余VIP时间"
+          ],
+          "none": [
+            "购买确认"
+          ]
+        },
         "after": {
           "all": [
             "VIP",
@@ -493,7 +744,8 @@
             "点击任意",
             "点击空白",
             "点击屏幕",
-            "获取更多"
+            "获取更多",
+            "购买确认"
           ],
           "text_regions": [
             {
@@ -530,8 +782,8 @@
   },
   "business_dependencies": [
     "City entry/exit and own-role identity. Explicit utility; not included in default shift manifests.",
-    "Only sampled owned24hour duration card row is implemented. Missing green owned-item row defers; other duration/acquisition branches need separate recording.",
-    "One click only while inactive; active countdown skips. Daily gift is a separate vip action after activation."
+    "One click only while inactive; active countdown skips. Daily gift is a separate vip action after activation.",
+    "Known legacy owned24h row first; sampled monthcard-layout24h1000 virtual-diamond fallback only whileinactive, explicit local ceiling1000 and exact confirmation. Realpayments are not implemented. Other layouts defer."
   ],
-  "verification_scope": "0.1.1 active-only early finish uses scoped duration-shaped text and blue duration control. Actual active frame OCR duplicated final seconds into119; exact timer parsing previously missed active state and tried inactive-only step, then safely exited. No duration item is consumed by this early return. Cached active/inactive/city checks; next-role actual replay pending. Other activation/consumption conditions unchanged."
+  "verification_scope": "NewsampleinactiveVIP4 crop reads购买井使用; boundedbuttonpattern accepts observed glyph whileexactone-day1000price,budgetandconfirmation remain. Cachedpositive/negative andlivepending. Saved-framepositive/negative checks passed; new revision livepending. Earlieractual runs andfailures retained."
 }
