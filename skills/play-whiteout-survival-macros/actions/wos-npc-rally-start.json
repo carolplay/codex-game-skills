@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.25",
+  "action_version": "0.1.27",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "implemented_unverified_revision",
-  "verification_scope": "Low-level savedselected4level search frame: full/pageOCR missedNPCcaption whilevisible. SamefixedcaptionROI fallback retained withnumeric4level andallotherdispatchguards. Newbranch cached/live pending. Saved-framepositive/negative checks passed; new revision livepending. Earlieractual runs andfailures retained.",
+  "verification_scope": "026fixedselectafter butrepeatedoldROI remainedinverifyguard.027unifiesallmatchingNPC-labelROIs; bothcurrentR/Low savedselectedframes passselect-after,level-verify andsearch-before. Actualdispatchlivepending. Level4,NPCidentity,ownrallyandexitguards unchanged.",
   "business_dependencies": [
     "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
     "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
@@ -717,10 +717,10 @@
         "text_regions": [
           {
             "bounds": [
-              245,
-              790,
-              365,
-              830
+              195,
+              780,
+              350,
+              835
             ],
             "pattern": "冰原巨[兽善]",
             "crop_ocr": true,
@@ -763,10 +763,10 @@
           },
           {
             "bounds": [
-              245,
-              790,
-              365,
-              830
+              195,
+              780,
+              350,
+              835
             ],
             "pattern": "冰原巨[兽善]",
             "crop_ocr": true,
