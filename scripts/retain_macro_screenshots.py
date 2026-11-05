@@ -9,6 +9,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,10 +33,142 @@ def digest(path):
     return h.hexdigest()
 
 
+def emergency_free_space(gib, apply=False):
+    """One-off explicit user override: expire recollectable images, oldest first.
+
+    Unlike normal maintenance this may unpin curated/quoted images, and may reach
+    recent images if needed. Logs, runtime templates and other folders are never
+    candidates. Removed provenance is journaled before unlinking.
+    """
+    if gib <= 0:
+        raise ValueError('Expected a positive free-space target')
+    maintenance = ROOT / 'local-data/maintenance'
+    maintenance.mkdir(parents=True, exist_ok=True)
+    with (ROOT / 'local-data/crossmacro/v2/visit.lock').open('a') as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            return dict(status='skipped_active_executor', input_sent=False)
+        free_before = shutil.disk_usage(ROOT).free
+        target = free_before + int(gib * 1024**3)
+        started = time.time()
+        images, logs = [], {}
+        for folder, dirs, files in os.walk(RUNS, followlinks=False):
+            dirs[:] = [d for d in dirs if not (Path(folder) / d).is_symlink()]
+            for name in files:
+                p = Path(folder) / name
+                if p.is_symlink():
+                    continue
+                st = p.stat()
+                if p.suffix.lower() in IMAGE:
+                    images.append((st.st_mtime_ns, str(p), st.st_size, st.st_ino))
+                else:
+                    logs[p] = (st.st_size, st.st_mtime_ns)
+        images.sort()
+        if not apply:
+            return dict(status='planned', target_gib=gib, candidate_images=len(images),
+                        oldest_first=True, may_expire_curated=True, may_expire_recent=True)
+        index = json.loads((LIBRARY / 'index.json').read_text())
+        references = collections.Counter(x['blob'] for x in index['samples'].values())
+        stamp = dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+        audit = maintenance / ('emergency-screenshot-deletions-' + stamp + '.jsonl')
+        save(maintenance / 'emergency-space-recovery-plan.json', dict(
+            started_unix=started, free_before=free_before, target_free_bytes=target,
+            target_freed_bytes=target-free_before, audit=str(audit.relative_to(ROOT))))
+        removed = blobs = logical = recent = 0
+        error = None
+        try:
+            with audit.open('w') as journal:
+                for mtime_ns, filename, size, inode in images:
+                    if shutil.disk_usage(ROOT).free >= target:
+                        break
+                    p = Path(filename)
+                    now = p.stat()
+                    if (now.st_mtime_ns, now.st_size, now.st_ino) != (mtime_ns, size, inode):
+                        raise RuntimeError('Image changed during cleanup: ' + filename)
+                    ref = str(p.relative_to(ROOT))
+                    sample = index['samples'].get(ref)
+                    blob = None
+                    if sample and references[sample['blob']] == 1:
+                        blob = ROOT / sample['blob']
+                        blob.resolve().relative_to((LIBRARY / 'blobs').resolve())
+                        if blob.is_symlink():
+                            raise ValueError('Symlinked material blob refused')
+                    journal.write(json.dumps(dict(path=ref, bytes=size, mtime_ns=mtime_ns,
+                        reason='user_authorized_oneoff_space_recovery_recollect_later',
+                        removed_material_record=sample,
+                        blob_to_unlink=str(blob.relative_to(ROOT)) if blob else None),
+                        ensure_ascii=False) + '\n')
+                    journal.flush()
+                    p.unlink()
+                    removed += 1
+                    logical += size
+                    recent += mtime_ns / 1e9 >= started - 72 * 3600
+                    if sample:
+                        index['samples'].pop(ref)
+                        references[sample['blob']] -= 1
+                        if blob and blob.exists():
+                            blob.unlink()
+                            blobs += 1
+                    if removed % 2000 == 0:
+                        print(json.dumps(dict(removed_images=removed,
+                            actual_free_bytes=shutil.disk_usage(ROOT).free)), flush=True)
+        except Exception as exc:
+            error = str(exc)
+        # Persist the remaining valid library, even after a partial stop. The
+        # deletion journal preserves all removed index records and old hashes.
+        index.update(updated_unix=time.time(), last_emergency_deletion_audit=str(audit.relative_to(ROOT)))
+        save(LIBRARY / 'index.json', index)
+        groups = collections.defaultdict(dict)
+        for source, sample in index['samples'].items():
+            workflow = sample.get('workflow') or {}
+            action, version = workflow.get('action_id') or 'unclassified', workflow.get('action_version') or 'unknown'
+            safe = re.sub(r'[^A-Za-z0-9._-]', '_', action + '--' + version)
+            groups[safe][source] = sample
+        catalog = ['# 宏素材目录', '', '部分旧截图按用户空间回收要求移除，缺口与原校验值见删除审计。', '',
+                   '| Action / 版本 | 关键帧数 | 素材索引 |', '|---|---:|---|']
+        for p in (LIBRARY / 'actions').glob('*.json'):
+            data = json.loads(p.read_text())
+            data['samples'] = groups.get(p.stem, {})
+            save(p, data)
+            if data['samples']:
+                catalog.append(f'| {p.stem} | {len(data["samples"])} | [打开](actions/{p.name}) |')
+        (LIBRARY / 'CATALOG.md').write_text('\n'.join(catalog) + '\n')
+        resolved = LIBRARY.resolve()
+        if resolved.name == 'legacy-library' and (resolved.parent.parent / 'store.json').is_file():
+            from prepare_macro_material_store import write_portable_manifest
+            portable = write_portable_manifest(resolved, index, resolved.parent / 'assets.jsonl')
+            store_path = resolved.parent.parent / 'store.json'
+            store = json.loads(store_path.read_text())
+            store.update(portable)
+            store.update(content_verified=False, old_report_links_preserved=False,
+                         latest_emergency_audit=str(audit.relative_to(ROOT)), updated_unix=time.time())
+            save(store_path, store)
+        logs_unchanged = all(p.exists() and (p.stat().st_size, p.stat().st_mtime_ns) == signature
+                             for p, signature in logs.items())
+        if not logs_unchanged:
+            error = 'Non-image log changed during cleanup'
+        free_after = shutil.disk_usage(ROOT).free
+        result = dict(status='completed' if free_after >= target and not error else 'partial',
+            started_unix=started, finished_unix=time.time(), target_freed_bytes=target-free_before,
+            free_before=free_before, free_after=free_after, actual_free_increase=free_after-free_before,
+            removed_images=removed, removed_material_blobs=blobs, removed_logical_image_bytes=logical,
+            removed_recent_images=recent, remaining_material_references=len(index['samples']),
+            all_non_image_logs_unchanged=logs_unchanged, input_sent=False, error=error,
+            audit=str(audit.relative_to(ROOT)), oneoff_override=True)
+        save(maintenance / 'emergency-space-recovery-latest.json', result)
+        return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--apply', action='store_true')
+    parser.add_argument('--free-gib', type=float,
+                        help='Explicit one-off override: free this many GiB from recollectable screenshots, oldest first')
     args = parser.parse_args()
+    if args.free_gib is not None:
+        print(json.dumps(emergency_free_space(args.free_gib, args.apply)))
+        return
     started = time.time()
     cutoff = started - 72 * 3600
     maintenance = ROOT / 'local-data/maintenance'
@@ -188,6 +321,13 @@ def main():
             save(LIBRARY / relative, {'action': action, 'version': version, 'samples': samples})
             catalog.append(f'| {action} | {version} | {len(samples)} | [打开]({relative}) |')
         (LIBRARY / 'CATALOG.md').write_text('\n'.join(catalog) + '\n')
+        # A locally separated library keeps its portable manifest current. The
+        # compatibility symlink preserves all historical repo-relative evidence.
+        resolved = LIBRARY.resolve()
+        if resolved.name == 'legacy-library' and (resolved.parent.parent / 'store.json').is_file():
+            from prepare_macro_material_store import write_portable_manifest
+            portable = write_portable_manifest(resolved, index, resolved.parent / 'assets.jsonl')
+            stats['portable_material_store'] = portable
         stamp = dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
         audit = maintenance / ('screenshot-deletions-' + stamp + '.jsonl')
         removed = 0
