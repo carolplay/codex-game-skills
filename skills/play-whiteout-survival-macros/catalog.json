@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.176",
+  "package_version": "0.12.183",
   "executor_min_version": "0.4.17",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -478,14 +478,13 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.28",
-      "sha256": "101302d6dd55e15984fe8d9f51b828e1b1cd718c180d53f7c87e4285102f0346",
+      "action_version": "0.1.35",
+      "sha256": "756d80c0f77867cf935f1f7c3f9af1ce46ffca24994ea8cb08e3f0557eb2e1b3",
       "period": "shift",
       "utility": false,
       "include_in_daily": true,
-      "verification_scope": "028: selected-search label may be left or central; caption-only ROI and observed OCR variants pass nine cached guards across three role layouts. Actual028 dispatch pending;027 had actual mature-role dispatch. NPC detail and level4 required.",
-      "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger.",
-      "current_evidence_note": "0.1.13 mature testrole actual dispatch, measured stamina decrease and cityreturn passed. Interrupted army-page exit predicate savedframe tested only; not triggered live. Original0.1.12 army-page OCR failure retained."
+      "verification_scope": "0.1.35 live mature profile: level4 NPC selected, own3min rally dispatched, stamina decreased25, declared city exit passed. Selected branch and pointer overlap fixes accepted on one role; victory and remaining roles not inferred.",
+      "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger."
     },
     "vip_calendar": {
       "path": "actions/wos-vip-calendar.json",
@@ -509,11 +508,11 @@
     "vip_activate_inventory": {
       "path": "actions/wos-vip-activate-inventory.json",
       "action_id": "wos-vip-activate-inventory",
-      "action_version": "0.1.4",
-      "sha256": "0b8d8d308447ef51de3eb66328c5073f76de822a14650e1b733799fc14a063ab",
+      "action_version": "0.1.5",
+      "sha256": "5e0e94e44a933bd39acc2f89f747775e26d7286d44f524216fbae4452af40243",
       "period": "on-demand",
       "utility": true,
-      "verification_scope": "Buttonlabelguard013 passed live; numericbudget croppedprice atoldbounds hadconfidence0.3. 014pads priceROI, keepingdefaultnumericconfidenceand1000cap. Savednew717/old788 framebudgetchecks andlivepending."
+      "verification_scope": "0.1.5 live mature profile: inactive VIP, no owned24h card, authorized virtual-currency 1day activation and following free VIP gift passed. Decorative caption excluded from page anchors; price/budget/confirmation/timer guards retained. Other states not inferred."
     },
     "stamina_inventory_refill": {
       "path": "actions/wos-stamina-inventory-refill.json",

@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-activate-inventory",
-  "action_version": "0.1.4",
+  "action_version": "0.1.5",
   "name": "WOS VIP duration: owned legacy card or sampled one-day game-diamond fallback",
   "reference_size": [
     788,
@@ -128,8 +128,7 @@
       "after": {
         "all": [
           "VIP",
-          "当前等级",
-          "每日免费礼包"
+          "当前等级"
         ],
         "none": [
           "获取更多"
@@ -143,8 +142,7 @@
       "before": {
         "all": [
           "VIP",
-          "当前等级",
-          "每日免费礼包"
+          "当前等级"
         ],
         "none": [
           "获取更多"
@@ -153,8 +151,7 @@
       "finish_if": {
         "all": [
           "VIP",
-          "当前等级",
-          "每日免费礼包"
+          "当前等级"
         ],
         "none": [
           "获取更多",
@@ -198,7 +195,6 @@
         "all": [
           "VIP",
           "当前等级",
-          "每日免费礼包",
           "未激活"
         ],
         "none": [
@@ -550,8 +546,7 @@
       "after": {
         "all": [
           "VIP",
-          "当前等级",
-          "每日免费礼包"
+          "当前等级"
         ],
         "none": [
           "获取更多",
@@ -580,8 +575,7 @@
       "before": {
         "all": [
           "VIP",
-          "当前等级",
-          "每日免费礼包"
+          "当前等级"
         ],
         "none": [
           "获取更多",
@@ -718,8 +712,7 @@
         "after": {
           "all": [
             "VIP",
-            "当前等级",
-            "每日免费礼包"
+            "当前等级"
           ],
           "none": [
             "获取更多"
@@ -785,5 +778,5 @@
     "One click only while inactive; active countdown skips. Daily gift is a separate vip action after activation.",
     "Known legacy owned24h row first; sampled monthcard-layout24h1000 virtual-diamond fallback only whileinactive, explicit local ceiling1000 and exact confirmation. Realpayments are not implemented. Other layouts defer."
   ],
-  "verification_scope": "Buttonlabelguard013 passed live; numericbudget croppedprice atoldbounds hadconfidence0.3. 014pads priceROI, keepingdefaultnumericconfidenceand1000cap. Savednew717/old788 framebudgetchecks andlivepending."
+  "verification_scope": "CurrentmatureVIP8inactiveentryanddurationmenu observedlive at717x1055. FreegiftdecorativecaptionOCRblockedolderactivationbeforeinput; pageidentitynowVIP/currentlevelplusbranchguards. Duration,1000virtualdiamondbudget,confirmationandtimerverification unchanged. Actualrevisedactivationpending."
 }

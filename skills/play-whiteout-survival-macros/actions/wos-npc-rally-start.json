@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.28",
+  "action_version": "0.1.35",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "implemented_unverified_revision",
-  "verification_scope": "027actualownNPCdispatchpassed onamaturerole; anothermaturerolekeepsselectedNPCatleftedge.028expandsallNPCnameregionsleftwardwithinsearchcarousel, retaininglevel4,NPCdetail,ownrallyandexitguards. Savedframevalidationandlivescope recorded separately. Searchcarouselusesunique冰原巨/冰原回prefixbecause兽glyphisunstableinselectedoutlinedlabel; actualNPCdetailidentityremainsmandatory.",
+  "verification_scope": "035 completes pointer-occlusion correction for post-selection level verification. Icon template only locates before input; selected search caption/level4 and exact NPC target remain verified. Live pending.",
   "business_dependencies": [
     "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
     "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
@@ -519,8 +519,8 @@
       "name": "npc-recenter-close-food",
       "action": "click",
       "point": [
-        394,
-        400
+        138,
+        65
       ],
       "before": {
         "all": [
@@ -550,6 +550,48 @@
           ]
         ]
       },
+      "after": [
+        "领主档案"
+      ],
+      "skip_if": {
+        "all": [
+          "搜索",
+          "冰原"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_only": true,
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "npc-recenter-verify-profile",
+      "action": "observe",
+      "before": [
+        "领主档案"
+      ],
+      "verify_identity": true,
+      "skip_if_step_skipped": "npc-recenter-close-food"
+    },
+    {
+      "name": "npc-recenter-return-world",
+      "action": "click",
+      "point": [
+        138,
+        65
+      ],
+      "before": [
+        "领主档案"
+      ],
       "after": {
         "all": [
           "英雄",
@@ -573,25 +615,8 @@
           ]
         ]
       },
-      "skip_if": {
-        "all": [
-          "搜索",
-          "冰原"
-        ],
-        "none": [
-          "出征"
-        ],
-        "page_text_only": true,
-        "page_text_regions": [
-          [
-            100,
-            740,
-            690,
-            1065
-          ]
-        ]
-      },
-      "observe_attempts": 5
+      "observe_attempts": 3,
+      "skip_if_step_skipped": "npc-recenter-close-food"
     },
     {
       "name": "npc-recenter-reopen-food",
@@ -625,8 +650,7 @@
       },
       "after": {
         "all": [
-          "搜索",
-          "冰原"
+          "搜索"
         ],
         "none": [
           "出征"
@@ -639,6 +663,19 @@
             690,
             1065
           ]
+        ],
+        "template_regions": [
+          {
+            "template": "npc-polar-search-body",
+            "bounds": [
+              100,
+              730,
+              690,
+              825
+            ],
+            "mode": "grayscale",
+            "min_score": 0.9
+          }
         ]
       },
       "skip_if": {
@@ -666,41 +703,6 @@
       "action": "click",
       "before": {
         "all": [
-          "搜索",
-          "冰原"
-        ],
-        "none": [
-          "出征"
-        ],
-        "page_text_regions": [
-          [
-            100,
-            740,
-            690,
-            1065
-          ]
-        ]
-      },
-      "text_target": {
-        "text": "冰原",
-        "bounds": [
-          100,
-          740,
-          690,
-          1065
-        ],
-        "offset": [
-          0,
-          -25
-        ],
-        "min_confidence": 0.3,
-        "crop_ocr": true,
-        "exact": false,
-        "prefer_frame_ocr": true
-      },
-      "observe_attempts": 5,
-      "after": {
-        "all": [
           "搜索"
         ],
         "none": [
@@ -714,20 +716,48 @@
             1065
           ]
         ],
-        "text_regions": [
+        "template_regions": [
           {
+            "template": "npc-polar-search-body",
             "bounds": [
               100,
-              790,
-              350,
+              730,
+              690,
               825
             ],
-            "pattern": "冰原[巨回][兽善醬]",
-            "crop_ocr": true,
-            "prefer_frame_ocr": true,
-            "min_confidence": 0.3
+            "mode": "grayscale",
+            "min_score": 0.9
           }
         ]
+      },
+      "observe_attempts": 5,
+      "after": {
+        "all": [
+          "搜索",
+          "自动加入"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            740,
+            690,
+            1065
+          ]
+        ]
+      },
+      "image_target": {
+        "template": "npc-polar-search-body",
+        "bounds": [
+          100,
+          730,
+          690,
+          825
+        ],
+        "mode": "grayscale",
+        "min_score": 0.9
       }
     },
     {
@@ -735,7 +765,8 @@
       "action": "observe",
       "before": {
         "all": [
-          "搜索"
+          "搜索",
+          "冰原"
         ],
         "none": [
           "出征"
@@ -760,18 +791,6 @@
             "crop_ocr": true,
             "min_confidence": 0.3,
             "prefer_frame_ocr": true
-          },
-          {
-            "bounds": [
-              100,
-              790,
-              350,
-              825
-            ],
-            "pattern": "冰原[巨回][兽善醬]",
-            "crop_ocr": true,
-            "prefer_frame_ocr": true,
-            "min_confidence": 0.3
           }
         ]
       }
@@ -887,11 +906,18 @@
       "after": {
         "all": [
           "发起集结",
-          "请设定集结时间",
           "3分钟"
         ],
         "none": [
           "出征"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            450,
+            560,
+            650
+          ]
         ]
       }
     },
@@ -901,11 +927,18 @@
       "before": {
         "all": [
           "发起集结",
-          "请设定集结时间",
           "3分钟"
         ],
         "none": [
           "出征"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            450,
+            560,
+            650
+          ]
         ]
       },
       "point": [
@@ -916,7 +949,6 @@
       "after": {
         "all": [
           "发起集结",
-          "请设定集结时间",
           "3分钟"
         ],
         "none": [
@@ -932,6 +964,14 @@
             ],
             "min": 0.1
           }
+        ],
+        "page_text_regions": [
+          [
+            170,
+            450,
+            560,
+            650
+          ]
         ]
       }
     },
@@ -941,7 +981,6 @@
       "before": {
         "all": [
           "发起集结",
-          "请设定集结时间",
           "3分钟"
         ],
         "none": [
@@ -957,6 +996,14 @@
             ],
             "min": 0.1
           }
+        ],
+        "page_text_regions": [
+          [
+            170,
+            450,
+            560,
+            650
+          ]
         ]
       },
       "point": [
@@ -1167,6 +1214,30 @@
     "max_exit_steps": 8,
     "exits": [
       {
+        "name": "exit-owned-resource-card",
+        "action": "click",
+        "point": [
+          138,
+          65
+        ],
+        "before": {
+          "all": [
+            "采集者",
+            "采集量",
+            "召回",
+            "详情"
+          ],
+          "none": [
+            "出征",
+            "发起集结"
+          ]
+        },
+        "after": [
+          "领主档案"
+        ],
+        "observe_attempts": 3
+      },
+      {
         "name": "exit-world-player-card",
         "action": "click",
         "point": [
@@ -1239,8 +1310,14 @@
         "after": {
           "all": [
             "英雄",
-            "背包",
-            "野外"
+            "背包"
+          ],
+          "any": [
+            "野外",
+            "城镇"
+          ],
+          "none": [
+            "领主档案"
           ],
           "page_text_regions": [
             [
@@ -1342,8 +1419,7 @@
         "action": "click",
         "before": {
           "all": [
-            "发起集结",
-            "请设定集结时间"
+            "发起集结"
           ],
           "any": [
             "3分钟",
@@ -1351,6 +1427,14 @@
           ],
           "none": [
             "出征"
+          ],
+          "page_text_regions": [
+            [
+              170,
+              450,
+              560,
+              650
+            ]
           ]
         },
         "point": [
@@ -1446,33 +1530,13 @@
           ]
         },
         "point": [
-          139,
-          368
+          138,
+          65
         ],
         "observe_attempts": 5,
-        "after": {
-          "all": [
-            "英雄",
-            "背包",
-            "城镇"
-          ],
-          "none": [
-            "搜索",
-            "采集者",
-            "小队设置",
-            "出征",
-            "获得奖励",
-            "提示"
-          ],
-          "page_text_regions": [
-            [
-              100,
-              995,
-              690,
-              1079
-            ]
-          ]
-        }
+        "after": [
+          "领主档案"
+        ]
       },
       {
         "name": "exit-world",
