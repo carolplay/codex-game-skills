@@ -13,6 +13,10 @@ import os
 from pathlib import Path
 import shutil
 import time
+try:
+    from project_storage import project_usage
+except ModuleNotFoundError:
+    from scripts.project_storage import project_usage
 
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE = {'.jpg', '.jpeg', '.png', '.webp'}
@@ -142,6 +146,7 @@ def maintain(root=ROOT, apply=False):
             'non_image_files_deleted':0,'recent_image_exemption':False,
             'non_image_logs_preserved':True,'input_sent':False,
             'free_before':before,'free_after':shutil.disk_usage(root).free,
+            'project_storage':project_usage(root),
             'journal':str(journal.relative_to(root)) if apply else None,
             'ended_unix':time.time()}
         if apply:
@@ -153,7 +158,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--apply',action='store_true')
     args = parser.parse_args()
-    print(json.dumps(maintain(apply=args.apply),ensure_ascii=False,indent=2))
+    result = maintain(apply=args.apply)
+    print(json.dumps(result,ensure_ascii=False,indent=2))
+    if not result.get('project_storage', {}).get('allow_new_batch', True):
+        raise SystemExit(2)
 
 
 if __name__ == '__main__':
