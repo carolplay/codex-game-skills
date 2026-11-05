@@ -103,23 +103,11 @@ def prepare(root, apply=False):
                       old_report_links_preserved=True, input_sent=False,
                       retention_policy_changed=False, updated_unix=time.time())
         (store / 'store.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
-        (store / 'README.md').write_text('''# WOS独立本地素材库
-
-本目录可整体迁移到选定的私有存储；当前全部私有，没有上传。
-
-- `private/assets.jsonl`：可迁移清单，文件路径相对于private目录；含SHA256、字节数和动作版本，不依赖技能仓库位置。
-- `private/legacy-library/blobs/`：原图，未重编码、未复制、未删除。
-- `private/legacy-library/index.json`及`actions/`：保留原始来源、历史证据与保留原因；其中旧仓库路径仅用于追溯。
-- `public/`：公开样本候选区域，当前为空；未经脱敏检查的原图不得移入。
-- `store.json`：本地整理结果，不代表已上传或已做公开脱敏。
-
-运行截图和日志仍在原运行目录，兼容入口`local-data/macro-materials`指向这里，旧报告路径不变。当前保留策略见兼容入口README，72小时和全部日志保留规则未改变。本次整理不会释放原图占用的空间。
-
-以后迁移时，先复制整个目录到目标私有存储，逐项验证assets.jsonl中的SHA256及字节数，再切换兼容入口；确认远端完整且可取回后，另行处理本地副本。不能直接删除运行目录中仍被报告引用的硬链接。公开样本、私有原图和必要运行模板分别管理；不将素材目录加入技能Git。
-''')
+        if not (store / 'README.md').exists():
+            (store / 'README.md').write_text('# WOS reusable materials\n\nFollow local-data/macro-materials/README.md for the current consumer whitelist. Migration never expands retention.\n')
         (store / 'public/README.md').write_text('''# 公开样本候选
 
-当前无公开图片，也未上传。候选样本须裁剪并检查角色名、角色ID、联盟、聊天、坐标、余额及文件元数据。生成脱敏副本，原图保持私有；只发布与复现任务相关的少量样本，并附动作版本及校验值。大量样本使用独立素材存储，技能Git只维护索引或必要小型测试图。
+当前无公开图片，也未上传。候选样本须裁剪并检查角色名、角色ID、联盟、聊天、坐标、余额及文件元数据。生成脱敏副本，原图保持私有；只发布与复现任务相关的少量样本，并附动作版本及校验值。只保留明确消费者需要的模板或测试图，不再归档大量运行图片。
 ''')
         return report
 
