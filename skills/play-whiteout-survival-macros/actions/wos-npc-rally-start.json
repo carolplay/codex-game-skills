@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.27",
+  "action_version": "0.1.28",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "implemented_unverified_revision",
-  "verification_scope": "026fixedselectafter butrepeatedoldROI remainedinverifyguard.027unifiesallmatchingNPC-labelROIs; bothcurrentR/Low savedselectedframes passselect-after,level-verify andsearch-before. Actualdispatchlivepending. Level4,NPCidentity,ownrallyandexitguards unchanged.",
+  "verification_scope": "027actualownNPCdispatchpassed onamaturerole; anothermaturerolekeepsselectedNPCatleftedge.028expandsallNPCnameregionsleftwardwithinsearchcarousel, retaininglevel4,NPCdetail,ownrallyandexitguards. Savedframevalidationandlivescope recorded separately. Searchcarouselusesunique冰原巨/冰原回prefixbecause兽glyphisunstableinselectedoutlinedlabel; actualNPCdetailidentityremainsmandatory.",
   "business_dependencies": [
     "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
     "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
@@ -717,12 +717,12 @@
         "text_regions": [
           {
             "bounds": [
-              195,
-              780,
+              100,
+              790,
               350,
-              835
+              825
             ],
-            "pattern": "冰原巨[兽善]",
+            "pattern": "冰原[巨回][兽善醬]",
             "crop_ocr": true,
             "prefer_frame_ocr": true,
             "min_confidence": 0.3
@@ -763,12 +763,12 @@
           },
           {
             "bounds": [
-              195,
-              780,
+              100,
+              790,
               350,
-              835
+              825
             ],
-            "pattern": "冰原巨[兽善]",
+            "pattern": "冰原[巨回][兽善醬]",
             "crop_ocr": true,
             "prefer_frame_ocr": true,
             "min_confidence": 0.3

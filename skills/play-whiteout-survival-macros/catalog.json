@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.174",
+  "package_version": "0.12.175",
   "executor_min_version": "0.4.15",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -478,12 +478,12 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.27",
-      "sha256": "56e3d877367976d12f082190004ae0375cf58991e28f0f94ed866c6c87093a92",
+      "action_version": "0.1.28",
+      "sha256": "101302d6dd55e15984fe8d9f51b828e1b1cd718c180d53f7c87e4285102f0346",
       "period": "shift",
       "utility": false,
       "include_in_daily": true,
-      "verification_scope": "Low-level savedselected4level search frame: full/pageOCR missedNPCcaption whilevisible. SamefixedcaptionROI fallback retained withnumeric4level andallotherdispatchguards. Newbranch cached/live pending. Saved-framepositive/negative checks passed; new revision livepending. Earlieractual runs andfailures retained.",
+      "verification_scope": "028: selected-search label may be left or central; caption-only ROI and observed OCR variants pass nine cached guards across three role layouts. Actual028 dispatch pending;027 had actual mature-role dispatch. NPC detail and level4 required.",
       "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger.",
       "current_evidence_note": "0.1.13 mature testrole actual dispatch, measured stamina decrease and cityreturn passed. Interrupted army-page exit predicate savedframe tested only; not triggered live. Original0.1.12 army-page OCR failure retained."
     },
