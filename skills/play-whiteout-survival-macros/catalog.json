@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.183",
+  "package_version": "0.12.191",
   "executor_min_version": "0.4.17",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -188,11 +188,11 @@
     "bank": {
       "path": "actions/wos-bank-one-day.json",
       "action_id": "wos-bank-one-day",
-      "action_version": "0.1.3",
-      "sha256": "25f06feaaca185fa46acf319cfb47e08bcdf63c4900a0a0b2c075bee11ec97dc",
+      "action_version": "0.1.4",
+      "sha256": "1c2b0590c016f92d7a46e4d1ab7ad6237c569db30f982f1c3adeaa19fc14d125",
       "period": "day",
       "utility": false,
-      "verification_scope": "银行入口与固定退出已宏回放；已到期收益为开发采样取出，非宏证明。0.1.0空存款期数字1漏读天字，提交前停止、0存入；0.1.1用左上格局部OCR确认一天，并修正弹窗退出排他条件，离线失败图验证，存入/活动存款/宏取出均待下一班。 Actual current short-term deposit is23hours, prior1day-only label blocks before new deposit. Saved screenshot confirms same short-term tile and position; accept1day/23hours, retain amount/ROI checks and no other term. Next due role pending. Updated game modal shows 收益率 instead of 日均收益;0.1.3 updates claim checks and bounded modal exits consistently. Short23hour term, maxbudget and once-perday ledger unchanged. Yellow stopped before deposit; nextrole validation pending. 0.1.3 secondshift: low role actual23hour deposit, active deposit and city return passed. Mature yellow old0.1.2 stopped beforedeposit; not retried."
+      "verification_scope": "0.1.4修正23小时弹窗标题OCR为右侧周期值，并移除银行根页出口对收益率文字的错误排除。三个成熟角色本轮均通过已有存款倒计时→跳过重复存入→回主城；014新的提交与失败退出分支尚未触发。under30旧013标题OCR失败由模型完成一次23h存款、原宏失败保留。"
     },
     "pet_wolf": {
       "path": "actions/wos-pet-wolf.json",
@@ -378,11 +378,11 @@
     "npc_autojoin": {
       "path": "actions/wos-npc-autojoin.json",
       "action_id": "wos-npc-autojoin",
-      "action_version": "0.1.4",
-      "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73",
+      "action_version": "0.1.5",
+      "sha256": "b9d9199ecf72f3de4f3da4ac6498ceb8ffc8109dff15ff08759a88a0629bf924",
       "period": "shift",
       "utility": false,
-      "verification_scope": "Prior three named NPC types enabled with one queue for8h; no proactive player war/rally. Existing correct active state retained; wrong quota/types reconfigured. Current replay pending. a mature role enabledonequeue8h actualstate, closepostcondition+exitfailed because集结 OCR㰍结.0.1.1 warpage uses stable联盟战争/单人/活动 labels; no reenabling same role; nextrole pending. 0.1.4: Yactual07:59:55 active but重新开启 OCR重新汗启; require停止 plusrunningtimer foractive predicates, samequeue1/typechecks andnavigation. Savedactiveframeoffline; nextrolelivepending."
+      "verification_scope": "0.1.5把单队列框1兼容I/l字形后，mature-test仍在enable-autojoin前局部文本匹配失败，三层退出均恢复主城；未确认自动参团开启。旧014另两个角色同处失败，均留原证。需现场重新定位数量框，禁止继续猜改并标通过。"
     },
     "labyrinth": {
       "path": "actions/wos-labyrinth-free-sweep.json",
@@ -466,11 +466,11 @@
     "intel_cycle": {
       "path": "actions/wos-intel-cycle.json",
       "action_id": "wos-intel-cycle",
-      "action_version": "0.2.17",
-      "sha256": "fefa56ee22d61ced404eac476e2c04de131c9fe7a404965e27b99f6d4a96a06f",
+      "action_version": "0.2.20",
+      "sha256": "bf1e597f055fcd32fa9726f86cd79f465b80a43ebb53a51178e7a14fe6923d9c",
       "period": "shift",
       "utility": false,
-      "verification_scope": "0.2.16 separates legacy-firebeast single/two-button wait layouts, uses actual right-hand claim region for two-button UI, and adds5s observation spacing within30attempts. Old wait used center-only crop and rapid30reads, causing falsefailure afteractualeventdispatch on under20intel. Originalfailure retained; offline layout/disablednegative checks and schemas passed; new live wait/claim branch pending. Other ordinary/event actions unchanged. 0.2.17: Add boundedcloseX exit for observed行军队列/额外队列/VIPactivation/purchase information dialog reached during legacyNPCnavigation. It doesnotprovequeuesfull anddoesnotclickresearch,activation,or purchase. Require footer anddialogabsence beforeexistingworld-to-city exit. OriginalLowunrecoveredfailure retained; live exitbranch pending.",
+      "verification_scope": "0.2.20已在mature-test实际验证普通双零灰态结束与两步回城，29.22秒；零/O误识精确修订，结束前保留计数及灰态断言。普通批量执行与实领来自旧017/018/019各角色本轮证据，不能回填旧循环失败。终极悬赏独立缺失能力，主号已单次手动出征采样，未证明获胜。实际新待执行→完成→结束的220全链仍待自然任务验收。",
       "rescue_world_anchor_revision": "Saved low-role rescue-world screenshot whole OCR drops城镇, footer crop reads it. Preserve exact title/button/next-state assertions and bounded exits. Live replay pending.",
       "layout_gate_revision": "2827 rawtrace legacy-mode skipped but beastselector stillclicked when fullOCR omittedbulktext. Legacyselectors now explicitly inherit legacy-mode skip; prevents oldcenterclaim onbulkUI. Eventfirebeast retainsseparatebranch. Livepending.",
       "level_up_revision": "Lowactualrescueclaim triggeredlighthouse17overlay. Addstrictoptionalleveldismiss afterrewardclose, preserveoriginalmapassertion; boundedknownexit alsoadded. Livepending."
@@ -478,12 +478,12 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.35",
-      "sha256": "756d80c0f77867cf935f1f7c3f9af1ce46ffca24994ea8cb08e3f0557eb2e1b3",
+      "action_version": "0.1.37",
+      "sha256": "077c8b77f3d9126bbaa66a050d50d9b6ab38a8f7532a6d371273d583457e210f",
       "period": "shift",
       "utility": false,
       "include_in_daily": true,
-      "verification_scope": "0.1.35 live mature profile: level4 NPC selected, own3min rally dispatched, stamina decreased25, declared city exit passed. Selected branch and pointer overlap fixes accepted on one role; victory and remaining roles not inferred.",
+      "verification_scope": "0.1.37保持类别模板0.90、4级与搜索后剑齿虎详情核验，移除搜索栏易遮挡的冰原文字断言；本轮main实际7次、mature-test实际8次派出及出口通过。旧036在under30实际10次、另一mature-test分类OCR失败未发出，旧失败保留；派出不等于获胜。",
       "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger."
     },
     "vip_calendar": {

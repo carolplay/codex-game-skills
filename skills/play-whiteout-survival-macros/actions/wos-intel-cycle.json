@@ -1,7 +1,7 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.17",
-  "name": "WOS bulk intelligence execution plus event firebeast",
+  "action_version": "0.2.20",
+  "name": "WOS ordinary bulk intelligence; legacy firebeast branch separate from expert ultimate bounty",
   "reference_size": [
     788,
     1079
@@ -232,6 +232,12 @@
         ],
         "page_text_regions": [
           [
+            100,
+            30,
+            690,
+            205
+          ],
+          [
             110,
             970,
             680,
@@ -268,7 +274,7 @@
               380,
               1047
             ],
-            "pattern": "全部执行\\(0\\)",
+            "pattern": "全部执行\\([0O〇]\\)",
             "crop_ocr": true,
             "min_confidence": 0.3
           },
@@ -279,22 +285,9 @@
               665,
               1047
             ],
-            "pattern": "一键领取\\(0\\)",
+            "pattern": "一键领取\\([0O〇]\\)",
             "crop_ocr": true,
             "min_confidence": 0.3
-          }
-        ],
-        "template_regions": [
-          {
-            "template": "intel-firebeast",
-            "bounds": [
-              145,
-              230,
-              640,
-              800
-            ],
-            "min_score": 0.79,
-            "present": false
           }
         ]
       },

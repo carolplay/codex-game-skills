@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-autojoin",
-  "action_version": "0.1.4",
+  "action_version": "0.1.5",
   "name": "WOS npc_autojoin",
   "reference_size": [
     788,
@@ -265,7 +265,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -352,7 +352,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -402,7 +402,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -460,7 +460,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -510,7 +510,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -568,7 +568,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -618,7 +618,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -676,7 +676,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -726,7 +726,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -784,7 +784,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -834,7 +834,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -903,7 +903,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -1020,7 +1020,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -1137,7 +1137,7 @@
                 630,
                 540
               ],
-              "pattern": "1",
+              "pattern": "[1Il]",
               "crop_ocr": true,
               "min_confidence": 0.3
             }
@@ -1215,7 +1215,7 @@
               630,
               540
             ],
-            "pattern": "1",
+            "pattern": "[1Il]",
             "crop_ocr": true,
             "min_confidence": 0.3
           }
@@ -1294,7 +1294,7 @@
               630,
               540
             ],
-            "pattern": "1",
+            "pattern": "[1Il]",
             "crop_ocr": true,
             "min_confidence": 0.3
           }

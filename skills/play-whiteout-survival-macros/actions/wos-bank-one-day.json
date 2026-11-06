@@ -1,6 +1,6 @@
 {
   "action_id": "wos-bank-one-day",
-  "action_version": "0.1.3",
+  "action_version": "0.1.4",
   "name": "WOS — mature bank withdrawal and one-day deposit under local cap",
   "reference_size": [
     788,
@@ -467,12 +467,12 @@
         "text_regions": [
           {
             "bounds": [
-              270,
-              300,
               530,
-              355
+              380,
+              630,
+              420
             ],
-            "pattern": "存储周期:?(?:[1Il]天|23小时)",
+            "pattern": "23小时",
             "crop_ocr": true
           }
         ]
@@ -655,7 +655,6 @@
           "none": [
             "最高存储数量",
             "最低存储数量",
-            "收益率",
             "点击任意位置退出"
           ]
         },

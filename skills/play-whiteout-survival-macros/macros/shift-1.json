@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-1",
-  "macro_version": "0.12.183",
-  "package_version": "0.12.183",
+  "macro_version": "0.12.191",
+  "package_version": "0.12.191",
   "refresh_utc_hour": 0,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -49,8 +49,8 @@
         {
           "task": "bank",
           "action_id": "wos-bank-one-day",
-          "action_version": "0.1.3",
-          "sha256": "25f06feaaca185fa46acf319cfb47e08bcdf63c4900a0a0b2c075bee11ec97dc"
+          "action_version": "0.1.4",
+          "sha256": "1c2b0590c016f92d7a46e4d1ab7ad6237c569db30f982f1c3adeaa19fc14d125"
         },
         {
           "task": "shield",
@@ -91,8 +91,8 @@
         {
           "task": "npc_autojoin",
           "action_id": "wos-npc-autojoin",
-          "action_version": "0.1.4",
-          "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73"
+          "action_version": "0.1.5",
+          "sha256": "b9d9199ecf72f3de4f3da4ac6498ceb8ffc8109dff15ff08759a88a0629bf924"
         },
         {
           "task": "vip",
@@ -133,13 +133,13 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.17",
-          "sha256": "fefa56ee22d61ced404eac476e2c04de131c9fe7a404965e27b99f6d4a96a06f"
+          "action_version": "0.2.20",
+          "sha256": "bf1e597f055fcd32fa9726f86cd79f465b80a43ebb53a51178e7a14fe6923d9c"
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.35",
-          "sha256": "756d80c0f77867cf935f1f7c3f9af1ce46ffca24994ea8cb08e3f0557eb2e1b3",
+          "action_version": "0.1.37",
+          "sha256": "077c8b77f3d9126bbaa66a050d50d9b6ab38a8f7532a6d371273d583457e210f",
           "task": "npc_rally_start"
         },
         {
@@ -320,8 +320,8 @@
         {
           "task": "bank",
           "action_id": "wos-bank-one-day",
-          "action_version": "0.1.3",
-          "sha256": "25f06feaaca185fa46acf319cfb47e08bcdf63c4900a0a0b2c075bee11ec97dc"
+          "action_version": "0.1.4",
+          "sha256": "1c2b0590c016f92d7a46e4d1ab7ad6237c569db30f982f1c3adeaa19fc14d125"
         },
         {
           "task": "shield",
@@ -362,8 +362,8 @@
         {
           "task": "npc_autojoin",
           "action_id": "wos-npc-autojoin",
-          "action_version": "0.1.4",
-          "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73"
+          "action_version": "0.1.5",
+          "sha256": "b9d9199ecf72f3de4f3da4ac6498ceb8ffc8109dff15ff08759a88a0629bf924"
         },
         {
           "task": "vip",
@@ -404,13 +404,13 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.17",
-          "sha256": "fefa56ee22d61ced404eac476e2c04de131c9fe7a404965e27b99f6d4a96a06f"
+          "action_version": "0.2.20",
+          "sha256": "bf1e597f055fcd32fa9726f86cd79f465b80a43ebb53a51178e7a14fe6923d9c"
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.35",
-          "sha256": "756d80c0f77867cf935f1f7c3f9af1ce46ffca24994ea8cb08e3f0557eb2e1b3",
+          "action_version": "0.1.37",
+          "sha256": "077c8b77f3d9126bbaa66a050d50d9b6ab38a8f7532a6d371273d583457e210f",
           "task": "npc_rally_start"
         },
         {
@@ -591,8 +591,8 @@
         {
           "task": "bank",
           "action_id": "wos-bank-one-day",
-          "action_version": "0.1.3",
-          "sha256": "25f06feaaca185fa46acf319cfb47e08bcdf63c4900a0a0b2c075bee11ec97dc"
+          "action_version": "0.1.4",
+          "sha256": "1c2b0590c016f92d7a46e4d1ab7ad6237c569db30f982f1c3adeaa19fc14d125"
         },
         {
           "task": "shield",
@@ -621,14 +621,32 @@
         {
           "task": "npc_autojoin",
           "action_id": "wos-npc-autojoin",
-          "action_version": "0.1.4",
-          "sha256": "c147450d7db5046776f19dceec16ed8fa2e25192fe4d47b4d5c41988d5af1c73"
+          "action_version": "0.1.5",
+          "sha256": "b9d9199ecf72f3de4f3da4ac6498ceb8ffc8109dff15ff08759a88a0629bf924"
         },
         {
           "task": "vip",
           "action_id": "wos-vip-inspect",
           "action_version": "0.1.9",
           "sha256": "fe1b417e489ae8075b6de0ebda0cc53b5fd28f85997e3592977cce33cb24fcfb"
+        },
+        {
+          "task": "travel_idle_claim",
+          "action_id": "wos-travel-idle-claim",
+          "action_version": "0.1.12",
+          "sha256": "659b45d39f87b69600762ba9e182149c6b0785f1ea490cec81dc3e4c433b16fa"
+        },
+        {
+          "task": "academy",
+          "action_id": "wos-academy-supply",
+          "action_version": "0.1.5",
+          "sha256": "4f54cf07bb6cd69931c0dd216b6a713502f2dca7383c7bf72f0df7f8129b2076"
+        },
+        {
+          "task": "travel_idle",
+          "action_id": "wos-travel-idle",
+          "action_version": "0.1.14",
+          "sha256": "26e335741645b18912fd2f33a2a19f670166b9d5ab2fa6a53422d10496b9002f"
         },
         {
           "task": "recruit",
@@ -645,13 +663,13 @@
         {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.17",
-          "sha256": "fefa56ee22d61ced404eac476e2c04de131c9fe7a404965e27b99f6d4a96a06f"
+          "action_version": "0.2.20",
+          "sha256": "bf1e597f055fcd32fa9726f86cd79f465b80a43ebb53a51178e7a14fe6923d9c"
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.35",
-          "sha256": "756d80c0f77867cf935f1f7c3f9af1ce46ffca24994ea8cb08e3f0557eb2e1b3",
+          "action_version": "0.1.37",
+          "sha256": "077c8b77f3d9126bbaa66a050d50d9b6ab38a8f7532a6d371273d583457e210f",
           "task": "npc_rally_start"
         },
         {
@@ -770,15 +788,12 @@
         }
       ],
       "excluded": {
-        "academy": "当前低等级角色已到25级，雪原游历入口及免费补给模型实领10已确认；成熟宏首次引导/标题仍待适配，不再按未解锁解释此覆盖缺口",
         "crystal": "未解锁或等级界面尚未验证，不假定成熟号流程适用",
         "refined": "未解锁或等级界面尚未验证，不假定成熟号流程适用",
         "pet_badger": "当前低等级角色巨獾卡片为灰态，按实际未开放排除；狼已实际解锁并加入",
         "pet_deer": "当前低等级角色没有大角鹿卡片，按实际未开放排除",
         "research": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
         "construction": "用户明确分类为升级操作；保留独立action，不纳入三班日常，需单独升级目标调用",
-        "travel_idle": "当前25级雪原游历阶段已开放，但挂机/自动按钮现场仍带锁；按实际功能锁定排除，后续检查解锁",
-        "travel_idle_claim": "当前25级游历尚无挂机队列，挂机按钮仍带锁；定向空队列检查通过，后续按实际功能解锁更新",
         "war_academy_commission": "战争学院尚未解锁，按实际等级排除",
         "intel_rescue": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",
         "intel_hero": "由intel_cycle本地循环覆盖；保留独立动作用于定向开发，不在班次重复执行",

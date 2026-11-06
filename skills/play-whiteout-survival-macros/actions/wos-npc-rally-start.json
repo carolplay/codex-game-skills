@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.35",
+  "action_version": "0.1.37",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "implemented_unverified_revision",
-  "verification_scope": "035 completes pointer-occlusion correction for post-selection level verification. Icon template only locates before input; selected search caption/level4 and exact NPC target remain verified. Live pending.",
+  "verification_scope": "036: Main search option after click did not OCR decorative auto-join caption. Keep icon selection, following selected NPC/level4 verification and exact target card, remove unrelated footer caption from postclick guard. Live verification pending actual daily use.",
   "business_dependencies": [
     "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
     "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
@@ -733,8 +733,7 @@
       "observe_attempts": 5,
       "after": {
         "all": [
-          "搜索",
-          "自动加入"
+          "搜索"
         ],
         "none": [
           "出征"
@@ -765,8 +764,7 @@
       "action": "observe",
       "before": {
         "all": [
-          "搜索",
-          "冰原"
+          "搜索"
         ],
         "none": [
           "出征"
@@ -800,8 +798,7 @@
       "action": "click",
       "before": {
         "all": [
-          "搜索",
-          "冰原"
+          "搜索"
         ],
         "none": [
           "出征"
