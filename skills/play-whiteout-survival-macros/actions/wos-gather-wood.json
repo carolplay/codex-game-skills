@@ -1,12 +1,12 @@
 {
   "action_id": "wos-gather-wood",
-  "action_version": "0.1.17",
+  "action_version": "0.1.18",
   "name": "WOS gather_wood",
   "reference_size": [
     788,
     1079
   ],
-  "execution_timeout_seconds": 240,
+  "execution_timeout_seconds": 360,
   "status": "candidate",
   "verification_scope": "Known717centered frame reachedgatherarmybutfullOCRmissed出征; same-framefootercropaddedtoarmyguardsandboundedbackexit. Existingidentity,emptytarget,nohero,troop,dispatchguards unchanged. Cachedpositive/negative andnewrevisionlivepending.",
   "steps": [

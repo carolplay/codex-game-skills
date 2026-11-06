@@ -1,0 +1,2063 @@
+{
+  "action_id": "wos-endless-trial-activity",
+  "action_version": "0.1.1",
+  "name": "WOS Endless Trial from identified activity; up to three solo hits and daily tier claims",
+  "reference_size": [
+    788,
+    1079
+  ],
+  "status": "candidate",
+  "execution_timeout_seconds": 900,
+  "steps": [
+    {
+      "name": "round-1-needed",
+      "action": "observe",
+      "before": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              145,
+              985,
+              205,
+              1040
+            ],
+            "pattern": "3/3",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "round-1-goto",
+      "action": "click",
+      "point": [
+        394,
+        1000
+      ],
+      "before": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "after": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "observe_attempts": 7,
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-attack",
+      "action": "click",
+      "point": [
+        479,
+        880
+      ],
+      "before": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "after": {
+        "all": [
+          "风吼者",
+          "出征"
+        ],
+        "none": [
+          "集结"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-dispatch",
+      "action": "click",
+      "point": [
+        394,
+        1022
+      ],
+      "before": {
+        "all": [
+          "风吼者",
+          "出征"
+        ],
+        "none": [
+          "集结"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-0",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-1",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-2",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-3",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-4",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-5",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-6",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-7",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-8",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-9",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-10",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-settle-11",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-close-today-best",
+      "action": "click",
+      "point": [
+        394,
+        752
+      ],
+      "before": [
+        "今日最佳",
+        "本次伤害",
+        "确定"
+      ],
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-open-sampled-target",
+      "action": "click",
+      "point": [
+        394,
+        408
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-1-view-activity",
+      "action": "click",
+      "point": [
+        309,
+        942
+      ],
+      "before": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "after": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-1-needed"
+    },
+    {
+      "name": "round-2-needed",
+      "action": "observe",
+      "before": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              145,
+              985,
+              205,
+              1040
+            ],
+            "pattern": "3/3",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "round-2-goto",
+      "action": "click",
+      "point": [
+        394,
+        1000
+      ],
+      "before": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "after": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "observe_attempts": 7,
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-attack",
+      "action": "click",
+      "point": [
+        479,
+        880
+      ],
+      "before": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "after": {
+        "all": [
+          "风吼者",
+          "出征"
+        ],
+        "none": [
+          "集结"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-dispatch",
+      "action": "click",
+      "point": [
+        394,
+        1022
+      ],
+      "before": {
+        "all": [
+          "风吼者",
+          "出征"
+        ],
+        "none": [
+          "集结"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-0",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-1",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-2",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-3",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-4",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-5",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-6",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-7",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-8",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-9",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-10",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-settle-11",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-close-today-best",
+      "action": "click",
+      "point": [
+        394,
+        752
+      ],
+      "before": [
+        "今日最佳",
+        "本次伤害",
+        "确定"
+      ],
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-open-sampled-target",
+      "action": "click",
+      "point": [
+        394,
+        408
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-2-view-activity",
+      "action": "click",
+      "point": [
+        309,
+        942
+      ],
+      "before": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "after": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-2-needed"
+    },
+    {
+      "name": "round-3-needed",
+      "action": "observe",
+      "before": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              145,
+              985,
+              205,
+              1040
+            ],
+            "pattern": "3/3",
+            "crop_ocr": true,
+            "min_confidence": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "round-3-goto",
+      "action": "click",
+      "point": [
+        394,
+        1000
+      ],
+      "before": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "after": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "observe_attempts": 7,
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-attack",
+      "action": "click",
+      "point": [
+        479,
+        880
+      ],
+      "before": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "after": {
+        "all": [
+          "风吼者",
+          "出征"
+        ],
+        "none": [
+          "集结"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-dispatch",
+      "action": "click",
+      "point": [
+        394,
+        1022
+      ],
+      "before": {
+        "all": [
+          "风吼者",
+          "出征"
+        ],
+        "none": [
+          "集结"
+        ]
+      },
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-0",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-1",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-2",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-3",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-4",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-5",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-6",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-7",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-8",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-9",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-10",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-settle-11",
+      "action": "observe",
+      "before": {
+        "any": [
+          "城镇",
+          "今日最佳",
+          "本次伤害"
+        ]
+      },
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-close-today-best",
+      "action": "click",
+      "point": [
+        394,
+        752
+      ],
+      "before": [
+        "今日最佳",
+        "本次伤害",
+        "确定"
+      ],
+      "after": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-open-sampled-target",
+      "action": "click",
+      "point": [
+        394,
+        408
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "前往查看",
+          "营救幸存者",
+          "英雄之旅",
+          "推荐实力",
+          "小队设置",
+          "出征",
+          "获得奖励",
+          "点击任意位置退出",
+          "提示"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            600,
+            1010,
+            689,
+            1079
+          ]
+        ]
+      },
+      "after": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "round-3-view-activity",
+      "action": "click",
+      "point": [
+        309,
+        942
+      ],
+      "before": {
+        "all": [
+          "风吼者",
+          "查看活动",
+          "排行榜",
+          "攻击"
+        ],
+        "none": [
+          "集结",
+          "侦察",
+          "占领"
+        ]
+      },
+      "after": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "observe_attempts": 5,
+      "skip_if_step_skipped": "round-3-needed"
+    },
+    {
+      "name": "open-daily-challenge",
+      "action": "click",
+      "point": [
+        173,
+        1000
+      ],
+      "before": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "claim-tier-1",
+      "action": "click",
+      "point": [
+        564,
+        476
+      ],
+      "before": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              510,
+              454,
+              620,
+              500
+            ],
+            "min": 0.5
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              510,
+              454,
+              620,
+              500
+            ],
+            "max": 0.49
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "每日挑战",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-tier-1-reward",
+      "action": "click",
+      "point": [
+        394,
+        965
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "tier-1-not-claimable",
+      "action": "observe",
+      "before": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              510,
+              454,
+              620,
+              500
+            ],
+            "max": 0.49
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "claim-tier-2",
+      "action": "click",
+      "point": [
+        564,
+        616
+      ],
+      "before": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              510,
+              594,
+              620,
+              640
+            ],
+            "min": 0.5
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              510,
+              594,
+              620,
+              640
+            ],
+            "max": 0.49
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "每日挑战",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-tier-2-reward",
+      "action": "click",
+      "point": [
+        394,
+        965
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "tier-2-not-claimable",
+      "action": "observe",
+      "before": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              510,
+              594,
+              620,
+              640
+            ],
+            "max": 0.49
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "claim-tier-3",
+      "action": "click",
+      "point": [
+        564,
+        754
+      ],
+      "before": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              510,
+              732,
+              620,
+              778
+            ],
+            "min": 0.5
+          }
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              510,
+              732,
+              620,
+              778
+            ],
+            "max": 0.49
+          }
+        ]
+      },
+      "after": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "每日挑战",
+          "点击任意位置退出"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-tier-3-reward",
+      "action": "click",
+      "point": [
+        394,
+        965
+      ],
+      "before": {
+        "any": [
+          "获得奖励",
+          "恭喜获得",
+          "点击任意位置退出"
+        ]
+      },
+      "skip_if": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ]
+      },
+      "after": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "tier-3-not-claimable",
+      "action": "observe",
+      "before": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ],
+        "green_regions": [
+          {
+            "bounds": [
+              510,
+              732,
+              620,
+              778
+            ],
+            "max": 0.49
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-daily",
+      "action": "click",
+      "point": [
+        647,
+        312
+      ],
+      "before": {
+        "all": [
+          "每日挑战",
+          "攻击"
+        ]
+      },
+      "after": {
+        "all": [
+          "常规活动",
+          "无尽试炼",
+          "每日挑战",
+          "每日排行"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "close-activity",
+      "action": "click",
+      "point": [
+        133,
+        59
+      ],
+      "before": [
+        "常规活动",
+        "无尽试炼"
+      ],
+      "after": {
+        "all": [
+          "英雄",
+          "背包"
+        ],
+        "any": [
+          "城镇",
+          "野外"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "observe_attempts": 5
+    }
+  ],
+  "task_contract": {
+    "entry_anchor": "identified-endless-trial-activity",
+    "exit_anchor": "city",
+    "anchor": {
+      "all": [
+        "英雄",
+        "背包",
+        "野外"
+      ],
+      "none": [
+        "日常",
+        "建筑队列",
+        "游历补给",
+        "部队训练",
+        "技能学习",
+        "超级提炼优惠",
+        "提炼次数"
+      ],
+      "page_text_regions": [
+        [
+          100,
+          995,
+          690,
+          1079
+        ]
+      ]
+    },
+    "max_exit_steps": 6,
+    "recovery_timeout_seconds": 120,
+    "exits": [
+      {
+        "name": "exit-trial-best",
+        "action": "click",
+        "point": [
+          394,
+          752
+        ],
+        "before": [
+          "今日最佳",
+          "本次伤害",
+          "确定"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ],
+            [
+              600,
+              1010,
+              689,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 4
+      },
+      {
+        "name": "exit-trial-daily",
+        "action": "click",
+        "point": [
+          647,
+          312
+        ],
+        "before": {
+          "all": [
+            "每日挑战",
+            "攻击"
+          ]
+        },
+        "after": {
+          "all": [
+            "常规活动",
+            "无尽试炼",
+            "每日挑战",
+            "每日排行"
+          ]
+        },
+        "observe_attempts": 4
+      },
+      {
+        "name": "exit-trial-army",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": {
+          "all": [
+            "风吼者",
+            "出征"
+          ],
+          "none": [
+            "集结"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ],
+            [
+              600,
+              1010,
+              689,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-trial-target",
+        "action": "click",
+        "point": [
+          180,
+          650
+        ],
+        "before": {
+          "all": [
+            "风吼者",
+            "查看活动",
+            "排行榜",
+            "攻击"
+          ],
+          "none": [
+            "集结",
+            "侦察",
+            "占领"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ],
+            [
+              600,
+              1010,
+              689,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-trial-activity",
+        "action": "click",
+        "point": [
+          133,
+          59
+        ],
+        "before": [
+          "常规活动",
+          "无尽试炼"
+        ],
+        "after": {
+          "all": [
+            "英雄",
+            "背包"
+          ],
+          "any": [
+            "城镇",
+            "野外"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "exit-world",
+        "action": "click",
+        "point": [
+          640,
+          1022
+        ],
+        "before": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "前往查看",
+            "营救幸存者",
+            "英雄之旅",
+            "推荐实力",
+            "小队设置",
+            "出征",
+            "获得奖励",
+            "点击任意位置退出",
+            "提示"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ],
+            [
+              600,
+              1010,
+              689,
+              1079
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "野外"
+          ],
+          "none": [
+            "日常",
+            "建筑队列",
+            "游历补给",
+            "部队训练",
+            "技能学习",
+            "超级提炼优惠",
+            "提炼次数"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      }
+    ]
+  },
+  "verification_scope": "0.1.0 real first-tier claim succeeded; postclaim check failed because green checkmark fraction.175 vs readybutton.842.0.1.1 separates fullbutton .5 from mark/gray <=.49. Three manual solo hits and first-tier macro claim verified; remaining tier and return replay pending. Activity-entry only; city navigation not accepted."
+}

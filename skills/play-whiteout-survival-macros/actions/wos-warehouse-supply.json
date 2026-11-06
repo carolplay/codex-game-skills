@@ -1,6 +1,6 @@
 {
   "action_id": "wos-warehouse-supply",
-  "action_version": "0.1.12",
+  "action_version": "0.1.13",
   "name": "WOS warehouse daily package chain",
   "reference_size": [
     788,
@@ -3944,7 +3944,7 @@
             590
           ],
           "min": 1,
-          "max": 300
+          "max": 86400
         }
       }
     },
@@ -4027,7 +4027,7 @@
             590
           ],
           "min": 1,
-          "max": 300
+          "max": 86400
         }
       }
     },
@@ -4208,7 +4208,7 @@
             590
           ],
           "min": 1,
-          "max": 300
+          "max": 86400
         }
       }
     },
@@ -4389,7 +4389,7 @@
             590
           ],
           "min": 1,
-          "max": 300
+          "max": 86400
         }
       }
     },
@@ -4570,7 +4570,7 @@
             590
           ],
           "min": 1,
-          "max": 300
+          "max": 86400
         }
       }
     },
@@ -4751,7 +4751,7 @@
             590
           ],
           "min": 1,
-          "max": 300
+          "max": 86400
         }
       }
     },

@@ -1,7 +1,7 @@
 {
   "action_id": "wos-intel-cycle",
-  "action_version": "0.2.20",
-  "name": "WOS ordinary bulk intelligence; legacy firebeast branch separate from expert ultimate bounty",
+  "action_version": "0.2.25",
+  "name": "WOS ordinary bulk intelligence with low-stamina individual fallback",
   "reference_size": [
     788,
     1079
@@ -291,7 +291,8 @@
           }
         ]
       },
-      "observe_attempts": 10
+      "observe_attempts": 10,
+      "partial_completion_note": "Only execute(0)+claim(0) proves ordinary drain; low-stamina-floor is deferred remainder, never all tasks completed."
     },
     {
       "name": "pre-layout-claim-existing",
@@ -715,6 +716,59 @@
               "mode": "white-glyph",
               "min_score": 0.94
             }
+          ]
+        },
+        {
+          "all": [
+            "情报",
+            "下次刷新",
+            "全部执行"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "全部执行中"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ],
+          "red_regions": [
+            {
+              "bounds": [
+                250,
+                1015,
+                315,
+                1045
+              ],
+              "min": 0.02
+            }
+          ]
+        },
+        {
+          "all": [
+            "情报",
+            "下次刷新",
+            "全部执行"
+          ],
+          "none": [
+            "全部执行(",
+            "全部执行中",
+            "前往查看",
+            "获得奖励",
+            "恭喜获得"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
           ]
         }
       ]
@@ -1564,6 +1618,37 @@
               "min_score": 0.94
             }
           ]
+        },
+        {
+          "all": [
+            "情报",
+            "下次刷新",
+            "全部执行"
+          ],
+          "none": [
+            "前往查看",
+            "获得奖励",
+            "全部执行中"
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ],
+          "red_regions": [
+            {
+              "bounds": [
+                250,
+                1015,
+                315,
+                1045
+              ],
+              "min": 0.02
+            }
+          ]
         }
       ]
     },
@@ -2152,7 +2237,7 @@
         "all": [
           "情报",
           "下次刷新",
-          "全部执行"
+          "全部执行("
         ],
         "page_text_regions": [
           [
@@ -2174,6 +2259,17 @@
             "mode": "white-glyph",
             "min_score": 0.94,
             "present": false
+          }
+        ],
+        "red_regions": [
+          {
+            "bounds": [
+              250,
+              1015,
+              315,
+              1045
+            ],
+            "max": 0.019
           }
         ]
       }
@@ -2554,6 +2650,45 @@
       "skip_if_step_skipped": "legacy-mode"
     },
     {
+      "name": "legacy-cycle-0-firebeast-select-stamina-floor",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      },
+      "skip_if_step_skipped": "legacy-mode",
+      "finish_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              590,
+              35,
+              655,
+              82
+            ],
+            "pattern": "^[0-9]$",
+            "crop_ocr": true,
+            "min_confidence": 0.4,
+            "prefer_frame_ocr": true
+          }
+        ]
+      }
+    },
+    {
       "name": "legacy-cycle-0-firebeast-select",
       "action": "click",
       "image_target": {
@@ -2627,7 +2762,47 @@
           "all": [
             "情报",
             "下次刷新",
-            "全部执行"
+            "全部执行("
+          ],
+          "page_text_regions": [
+            [
+              110,
+              970,
+              680,
+              1060
+            ]
+          ],
+          "template_regions": [
+            {
+              "template": "intel-bulk-locked",
+              "bounds": [
+                359,
+                955,
+                405,
+                1012
+              ],
+              "mode": "white-glyph",
+              "min_score": 0.94,
+              "present": false
+            }
+          ],
+          "red_regions": [
+            {
+              "bounds": [
+                250,
+                1015,
+                315,
+                1045
+              ],
+              "max": 0.019
+            }
+          ]
+        },
+        {
+          "all": [
+            "情报",
+            "下次刷新",
+            "全部执行("
           ],
           "page_text_regions": [
             [
@@ -3409,6 +3584,45 @@
       "skip_if_step_skipped": "legacy-cycle-0-firebeast-select"
     },
     {
+      "name": "legacy-cycle-0-beast-select-stamina-floor",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      },
+      "skip_if_step_skipped": "legacy-mode",
+      "finish_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              590,
+              35,
+              655,
+              82
+            ],
+            "pattern": "^[0-9]$",
+            "crop_ocr": true,
+            "min_confidence": 0.4,
+            "prefer_frame_ocr": true
+          }
+        ]
+      }
+    },
+    {
       "name": "legacy-cycle-0-beast-select",
       "action": "click",
       "image_target": {
@@ -3482,7 +3696,7 @@
           "all": [
             "情报",
             "下次刷新",
-            "全部执行"
+            "全部执行("
           ],
           "page_text_regions": [
             [
@@ -3504,6 +3718,17 @@
               "mode": "white-glyph",
               "min_score": 0.94,
               "present": false
+            }
+          ],
+          "red_regions": [
+            {
+              "bounds": [
+                250,
+                1015,
+                315,
+                1045
+              ],
+              "max": 0.019
             }
           ]
         }
@@ -4173,6 +4398,45 @@
       "skip_if_step_skipped": "legacy-cycle-0-beast-select"
     },
     {
+      "name": "legacy-cycle-0-rescue-select-stamina-floor",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      },
+      "skip_if_step_skipped": "legacy-mode",
+      "finish_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              590,
+              35,
+              655,
+              82
+            ],
+            "pattern": "^[0-9]$",
+            "crop_ocr": true,
+            "min_confidence": 0.4,
+            "prefer_frame_ocr": true
+          }
+        ]
+      }
+    },
+    {
       "name": "legacy-cycle-0-rescue-select",
       "action": "click",
       "image_target": {
@@ -4246,7 +4510,7 @@
           "all": [
             "情报",
             "下次刷新",
-            "全部执行"
+            "全部执行("
           ],
           "page_text_regions": [
             [
@@ -4268,6 +4532,17 @@
               "mode": "white-glyph",
               "min_score": 0.94,
               "present": false
+            }
+          ],
+          "red_regions": [
+            {
+              "bounds": [
+                250,
+                1015,
+                315,
+                1045
+              ],
+              "max": 0.019
             }
           ]
         }
@@ -4888,6 +5163,45 @@
       "skip_if_step_skipped": "legacy-cycle-0-rescue-select"
     },
     {
+      "name": "legacy-cycle-0-hero-select-stamina-floor",
+      "action": "observe",
+      "before": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ]
+      },
+      "skip_if_step_skipped": "legacy-mode",
+      "finish_if": {
+        "all": [
+          "情报",
+          "下次刷新"
+        ],
+        "none": [
+          "前往查看",
+          "获得奖励"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              590,
+              35,
+              655,
+              82
+            ],
+            "pattern": "^[0-9]$",
+            "crop_ocr": true,
+            "min_confidence": 0.4,
+            "prefer_frame_ocr": true
+          }
+        ]
+      }
+    },
+    {
       "name": "legacy-cycle-0-hero-select",
       "action": "click",
       "image_target": {
@@ -4961,7 +5275,7 @@
           "all": [
             "情报",
             "下次刷新",
-            "全部执行"
+            "全部执行("
           ],
           "page_text_regions": [
             [
@@ -4983,6 +5297,17 @@
               "mode": "white-glyph",
               "min_score": 0.94,
               "present": false
+            }
+          ],
+          "red_regions": [
+            {
+              "bounds": [
+                250,
+                1015,
+                315,
+                1045
+              ],
+              "max": 0.019
             }
           ]
         }
@@ -5052,8 +5377,7 @@
       },
       "after": [
         "小队设置",
-        "战斗",
-        "一键上阵"
+        "战斗"
       ],
       "observe_attempts": 5,
       "skip_if_step_skipped": "legacy-cycle-0-hero-select"
@@ -5067,8 +5391,7 @@
       ],
       "before": [
         "小队设置",
-        "战斗",
-        "一键上阵"
+        "战斗"
       ],
       "after": {
         "any": [
@@ -5764,13 +6087,15 @@
           "丰盛的招待"
         ],
         "after": {
-          "all": [
+          "any": [
             "情报",
-            "下次刷新"
+            "士兵比例",
+            "城镇"
           ],
           "none": [
             "获取更多",
-            "前往查看"
+            "领主体力",
+            "丰盛的招待"
           ]
         },
         "observe_attempts": 5
@@ -6084,8 +6409,7 @@
         ],
         "before": [
           "小队设置",
-          "战斗",
-          "一键上阵"
+          "战斗"
         ],
         "after": {
           "all": [
@@ -6249,7 +6573,7 @@
     ],
     "recovery_timeout_seconds": 120
   },
-  "verification_scope": "0.2.16 separates legacy-firebeast single/two-button wait layouts, uses actual right-hand claim region for two-button UI, and adds5s observation spacing within30attempts. Old wait used center-only crop and rapid30reads, causing falsefailure afteractualeventdispatch on under20intel. Originalfailure retained; offline layout/disablednegative checks and schemas passed; new live wait/claim branch pending. Other ordinary/event actions unchanged. 0.2.17: Add boundedcloseX exit for observed行军队列/额外队列/VIPactivation/purchase information dialog reached during legacyNPCnavigation. It doesnotprovequeuesfull anddoesnotclickresearch,activation,or purchase. Require footer anddialogabsence beforeexistingworld-to-city exit. OriginalLowunrecoveredfailure retained; live exitbranch pending.",
+  "verification_scope": "0.2.24: low-level individual fallback completed rewards and city exit; mature deficit branch completed hero/rescue/beasts then stopped at stamina4. 0.2.25 prefers full-frame single-digit stamina; supply popup may return to map, deployment or world, followed by declared exits. New low-stamina exit pending live.",
   "business_dependencies": [
     "City entry and exit; stamina meal uses lighthouse plus before this action",
     "Game execute-all handles ordinary intel; repeat after claim reveals queued tasks",

@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.191",
-  "package_version": "0.12.191",
+  "macro_version": "0.12.201",
+  "package_version": "0.12.201",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -11,7 +11,8 @@
     "academy": "Current live free Trek Supplies at UTC08/20, ten each. Settle completed travel before claiming supply; then start idle travel with available stock. A running trip is closed, never ended early.",
     "enlistment": "Repaired hospital entry moved to development tail, before daily; no dependency on research/construction upgrades. Partial batch recovery continues untouched tasks rather than repeating earlier components.",
     "travel_idle": "When all three are eligible, travel_idle_claim → academy → travel_idle. Supply collection precedes a fresh start; neither a running queue nor a zero-stock skip proves completed trips.",
-    "labyrinth_challenge": "Daily challenge is independent of raids. Select one actually visible known domain label and verify its battle page; never assume Cave of Monsters is open all week. Known labels Cave, Earthlab, Forge; unsupported domains remain explicit coverage gaps."
+    "labyrinth_challenge": "Daily challenge is independent of raids. Select one actually visible known domain label and verify its battle page; never assume Cave of Monsters is open all week. Known labels Cave, Earthlab, Forge; unsupported domains remain explicit coverage gaps.",
+    "intel_expert": "Activate available Agnes extra tasks before intel_cycle; skill activation is separate from dispatch and reward."
   },
   "profiles": {
     "main": {
@@ -91,8 +92,8 @@
         {
           "task": "npc_autojoin",
           "action_id": "wos-npc-autojoin",
-          "action_version": "0.1.5",
-          "sha256": "b9d9199ecf72f3de4f3da4ac6498ceb8ffc8109dff15ff08759a88a0629bf924"
+          "action_version": "0.1.17",
+          "sha256": "a6471d22261f1eb4efda7dc98fde9c102e1f897702e86460a6bf46f94b58e442"
         },
         {
           "task": "travel_idle_claim",
@@ -103,8 +104,8 @@
         {
           "task": "academy",
           "action_id": "wos-academy-supply",
-          "action_version": "0.1.5",
-          "sha256": "4f54cf07bb6cd69931c0dd216b6a713502f2dca7383c7bf72f0df7f8129b2076"
+          "action_version": "0.1.6",
+          "sha256": "be7c3532ae261ac9cb23388bf9d80f88639f11f7433e1883de9fb7c3ae8d3ffc"
         },
         {
           "task": "travel_idle",
@@ -125,10 +126,16 @@
           "sha256": "5c8519e146418f3e0d25bd25c701e83ef4679222cd3cfabcdb669fef13044e14"
         },
         {
+          "task": "intel_expert",
+          "action_id": "wos-intel-expert",
+          "action_version": "0.1.0",
+          "sha256": "b985c3e56b2e9780f7f046cef52349a567dc49392fb526255bf6ed99338db143"
+        },
+        {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.20",
-          "sha256": "bf1e597f055fcd32fa9726f86cd79f465b80a43ebb53a51178e7a14fe6923d9c"
+          "action_version": "0.2.25",
+          "sha256": "e2d292850b760361bcd4b7d2af65c01bede76655ff5584a3a48efe35baaccec6"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -145,8 +152,8 @@
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.17",
-          "sha256": "5fc0c1d54933b5cffb2ba9baa080c71d38c24ae9b361d1666649269e64b0c167"
+          "action_version": "0.1.18",
+          "sha256": "23890fc312c943bd4d4dd815d1589793fe5c57f777bc7b8fa3b79fb11cc5323d"
         },
         {
           "task": "gather_coal",
@@ -193,8 +200,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.12",
-          "sha256": "b8e2740a48a8f3b34b6453ac6dec4812576e934ac273f3b8db9288b491228ea4"
+          "action_version": "0.1.13",
+          "sha256": "7ffa2359fa2857972caf7905bc1dcdd005f03839980cb663016f7cb4658acb56"
         },
         {
           "task": "healing",
@@ -217,8 +224,8 @@
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.7",
-          "sha256": "87db26ae555959d1cc555d4ba06d47d4e7a353a425dcfa367e4f71185a12d9f7"
+          "action_version": "0.1.9",
+          "sha256": "5a7d94a50bcbcfbcc5d42e198519b4c9ffe666dd8cd6a634686cee8b1b9cb7a5"
         },
         {
           "task": "alliance_incentive",
@@ -247,8 +254,8 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.8",
-          "sha256": "af1155300f3a4d6749d060c6a0bdb12a2948b6365b7228b8907bd644927c1199"
+          "action_version": "0.1.9",
+          "sha256": "6b4041a879f39cbb300920d66e01c3615bf6cbdfd50500c64d5cde81f788213d"
         },
         {
           "task": "donate",
@@ -259,8 +266,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.11",
-          "sha256": "97620fa7d9251c7c53166cf9e8db025d8d18a1d8a439354dcc35219894cf43c2"
+          "action_version": "0.1.12",
+          "sha256": "62fa94796434785374bf25b71cb0d490f78063b5c40672aaab76a9cf773da028"
         },
         {
           "task": "expert",
@@ -362,8 +369,8 @@
         {
           "task": "npc_autojoin",
           "action_id": "wos-npc-autojoin",
-          "action_version": "0.1.5",
-          "sha256": "b9d9199ecf72f3de4f3da4ac6498ceb8ffc8109dff15ff08759a88a0629bf924"
+          "action_version": "0.1.17",
+          "sha256": "a6471d22261f1eb4efda7dc98fde9c102e1f897702e86460a6bf46f94b58e442"
         },
         {
           "task": "travel_idle_claim",
@@ -374,8 +381,8 @@
         {
           "task": "academy",
           "action_id": "wos-academy-supply",
-          "action_version": "0.1.5",
-          "sha256": "4f54cf07bb6cd69931c0dd216b6a713502f2dca7383c7bf72f0df7f8129b2076"
+          "action_version": "0.1.6",
+          "sha256": "be7c3532ae261ac9cb23388bf9d80f88639f11f7433e1883de9fb7c3ae8d3ffc"
         },
         {
           "task": "travel_idle",
@@ -396,10 +403,16 @@
           "sha256": "5c8519e146418f3e0d25bd25c701e83ef4679222cd3cfabcdb669fef13044e14"
         },
         {
+          "task": "intel_expert",
+          "action_id": "wos-intel-expert",
+          "action_version": "0.1.0",
+          "sha256": "b985c3e56b2e9780f7f046cef52349a567dc49392fb526255bf6ed99338db143"
+        },
+        {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.20",
-          "sha256": "bf1e597f055fcd32fa9726f86cd79f465b80a43ebb53a51178e7a14fe6923d9c"
+          "action_version": "0.2.25",
+          "sha256": "e2d292850b760361bcd4b7d2af65c01bede76655ff5584a3a48efe35baaccec6"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -416,8 +429,8 @@
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.17",
-          "sha256": "5fc0c1d54933b5cffb2ba9baa080c71d38c24ae9b361d1666649269e64b0c167"
+          "action_version": "0.1.18",
+          "sha256": "23890fc312c943bd4d4dd815d1589793fe5c57f777bc7b8fa3b79fb11cc5323d"
         },
         {
           "task": "gather_coal",
@@ -464,8 +477,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.12",
-          "sha256": "b8e2740a48a8f3b34b6453ac6dec4812576e934ac273f3b8db9288b491228ea4"
+          "action_version": "0.1.13",
+          "sha256": "7ffa2359fa2857972caf7905bc1dcdd005f03839980cb663016f7cb4658acb56"
         },
         {
           "task": "healing",
@@ -488,8 +501,8 @@
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.7",
-          "sha256": "87db26ae555959d1cc555d4ba06d47d4e7a353a425dcfa367e4f71185a12d9f7"
+          "action_version": "0.1.9",
+          "sha256": "5a7d94a50bcbcfbcc5d42e198519b4c9ffe666dd8cd6a634686cee8b1b9cb7a5"
         },
         {
           "task": "alliance_incentive",
@@ -518,8 +531,8 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.8",
-          "sha256": "af1155300f3a4d6749d060c6a0bdb12a2948b6365b7228b8907bd644927c1199"
+          "action_version": "0.1.9",
+          "sha256": "6b4041a879f39cbb300920d66e01c3615bf6cbdfd50500c64d5cde81f788213d"
         },
         {
           "task": "donate",
@@ -530,8 +543,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.11",
-          "sha256": "97620fa7d9251c7c53166cf9e8db025d8d18a1d8a439354dcc35219894cf43c2"
+          "action_version": "0.1.12",
+          "sha256": "62fa94796434785374bf25b71cb0d490f78063b5c40672aaab76a9cf773da028"
         },
         {
           "task": "expert",
@@ -621,8 +634,8 @@
         {
           "task": "npc_autojoin",
           "action_id": "wos-npc-autojoin",
-          "action_version": "0.1.5",
-          "sha256": "b9d9199ecf72f3de4f3da4ac6498ceb8ffc8109dff15ff08759a88a0629bf924"
+          "action_version": "0.1.17",
+          "sha256": "a6471d22261f1eb4efda7dc98fde9c102e1f897702e86460a6bf46f94b58e442"
         },
         {
           "task": "travel_idle_claim",
@@ -633,8 +646,8 @@
         {
           "task": "academy",
           "action_id": "wos-academy-supply",
-          "action_version": "0.1.5",
-          "sha256": "4f54cf07bb6cd69931c0dd216b6a713502f2dca7383c7bf72f0df7f8129b2076"
+          "action_version": "0.1.6",
+          "sha256": "be7c3532ae261ac9cb23388bf9d80f88639f11f7433e1883de9fb7c3ae8d3ffc"
         },
         {
           "task": "travel_idle",
@@ -655,10 +668,16 @@
           "sha256": "5c8519e146418f3e0d25bd25c701e83ef4679222cd3cfabcdb669fef13044e14"
         },
         {
+          "task": "intel_expert",
+          "action_id": "wos-intel-expert",
+          "action_version": "0.1.0",
+          "sha256": "b985c3e56b2e9780f7f046cef52349a567dc49392fb526255bf6ed99338db143"
+        },
+        {
           "task": "intel_cycle",
           "action_id": "wos-intel-cycle",
-          "action_version": "0.2.20",
-          "sha256": "bf1e597f055fcd32fa9726f86cd79f465b80a43ebb53a51178e7a14fe6923d9c"
+          "action_version": "0.2.25",
+          "sha256": "e2d292850b760361bcd4b7d2af65c01bede76655ff5584a3a48efe35baaccec6"
         },
         {
           "action_id": "wos-npc-rally-start",
@@ -675,8 +694,8 @@
         {
           "task": "gather_wood",
           "action_id": "wos-gather-wood",
-          "action_version": "0.1.17",
-          "sha256": "5fc0c1d54933b5cffb2ba9baa080c71d38c24ae9b361d1666649269e64b0c167"
+          "action_version": "0.1.18",
+          "sha256": "23890fc312c943bd4d4dd815d1589793fe5c57f777bc7b8fa3b79fb11cc5323d"
         },
         {
           "task": "gather_coal",
@@ -723,8 +742,8 @@
         {
           "task": "warehouse",
           "action_id": "wos-warehouse-supply",
-          "action_version": "0.1.12",
-          "sha256": "b8e2740a48a8f3b34b6453ac6dec4812576e934ac273f3b8db9288b491228ea4"
+          "action_version": "0.1.13",
+          "sha256": "7ffa2359fa2857972caf7905bc1dcdd005f03839980cb663016f7cb4658acb56"
         },
         {
           "task": "healing",
@@ -759,8 +778,8 @@
         {
           "task": "enlistment",
           "action_id": "wos-enlistment",
-          "action_version": "0.1.8",
-          "sha256": "af1155300f3a4d6749d060c6a0bdb12a2948b6365b7228b8907bd644927c1199"
+          "action_version": "0.1.9",
+          "sha256": "6b4041a879f39cbb300920d66e01c3615bf6cbdfd50500c64d5cde81f788213d"
         },
         {
           "task": "donate",
@@ -771,8 +790,8 @@
         {
           "task": "arena",
           "action_id": "wos-arena",
-          "action_version": "0.1.11",
-          "sha256": "97620fa7d9251c7c53166cf9e8db025d8d18a1d8a439354dcc35219894cf43c2"
+          "action_version": "0.1.12",
+          "sha256": "62fa94796434785374bf25b71cb0d490f78063b5c40672aaab76a9cf773da028"
         },
         {
           "task": "expert",

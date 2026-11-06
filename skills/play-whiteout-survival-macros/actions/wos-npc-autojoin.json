@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-autojoin",
-  "action_version": "0.1.5",
+  "action_version": "0.1.17",
   "name": "WOS npc_autojoin",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Prior three named NPC types enabled with one queue for8h; no proactive player war/rally. Existing correct active state retained; wrong quota/types reconfigured. Current replay pending. a mature role enabledonequeue8h actualstate, closepostcondition+exitfailed because集结 OCR㰍结.0.1.1 warpage uses stable联盟战争/单人/活动 labels; no reenabling same role; nextrole pending. 0.1.4: Yactual07:59:55 active but重新开启 OCR重新汗启; require停止 plusrunningtimer foractive predicates, samequeue1/typechecks andnavigation. Savedactiveframeoffline; nextrolelivepending.",
+  "verification_scope": "0.1.16 queue1 enable, cooldown and city exit live verified on mature and low-level roles. 0.1.17 allows one retry only while still at city after missed first alliance click; unknown pages remain failures. Pending main/R live replay.",
   "steps": [
     {
       "name": "01-check-city",
@@ -127,6 +127,49 @@
         ]
       },
       "after": {
+        "any": [
+          "联盟宝箱",
+          "野外"
+        ],
+        "none": [
+          "当前暂无战事",
+          "加入类型"
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "open-alliance-confirm-or-retry-once",
+      "action": "click",
+      "point": [
+        539,
+        1027
+      ],
+      "before": {
+        "all": [
+          "英雄",
+          "背包",
+          "野外"
+        ],
+        "none": [
+          "日常",
+          "建筑队列",
+          "游历补给",
+          "部队训练",
+          "技能学习",
+          "超级提炼优惠",
+          "提炼次数"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ]
+      },
+      "after": {
         "all": [
           "联盟宝箱",
           "联盟科技",
@@ -137,7 +180,18 @@
           "加入类型"
         ]
       },
-      "observe_attempts": 5
+      "observe_attempts": 5,
+      "skip_if": {
+        "all": [
+          "联盟宝箱",
+          "联盟科技",
+          "联盟互助"
+        ],
+        "none": [
+          "当前暂无战事",
+          "加入类型"
+        ]
+      }
     },
     {
       "name": "open-war",
@@ -265,9 +319,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ],
           "green_regions": [
@@ -352,9 +407,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ],
           "green_regions": [
@@ -402,9 +458,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ]
         }
@@ -460,9 +517,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ],
           "green_regions": [
@@ -510,9 +568,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ]
         }
@@ -568,9 +627,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ],
           "green_regions": [
@@ -618,9 +678,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ]
         }
@@ -676,9 +737,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ],
           "green_regions": [
@@ -726,9 +788,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ]
         }
@@ -784,9 +847,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ],
           "green_regions": [
@@ -834,9 +898,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ]
         }
@@ -903,9 +968,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ],
           "green_regions": [
@@ -1020,9 +1086,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ],
           "green_regions": [
@@ -1137,9 +1204,10 @@
                 630,
                 540
               ],
-              "pattern": "[1Il]",
+              "pattern": "[1Iil]",
               "crop_ocr": true,
-              "min_confidence": 0.3
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
             }
           ],
           "green_regions": [
@@ -1215,9 +1283,10 @@
               630,
               540
             ],
-            "pattern": "[1Il]",
+            "pattern": "[1Iil]",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ],
         "green_regions": [
@@ -1294,9 +1363,10 @@
               630,
               540
             ],
-            "pattern": "[1Il]",
+            "pattern": "[1Iil]",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ],
         "green_regions": [
