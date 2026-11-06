@@ -27,7 +27,7 @@ python3 scripts/run_visit.py \
 
 执行器0.4.18提供`current_turn_backend.py`与`current_turn_controller.mjs`。`run_visit.py`默认选择`current-turn`，不带`--execute`仍只校验；执行时必须提供未使用过的桥目录和本地lease。引擎持真实锁，控制器只在当前对话官方`cua_repl`运行，使用本轮明确绑定的应用；普通本地进程不获得或继承官方锁屏权限。
 
-启动引擎后，在官方工具中导入控制器，调用`pump({root, app, appPath, allowedRoot, milliseconds:12000})`，其中`app`是本轮官方`cua.getApp`返回的对象，`root`为本批私有桥目录，`allowedRoot`为启动者明确指定的私有父目录。每片段完成后尽快继续，直到`closed.json`或`stopped.json`；不要把“已启动进程”当完成。控制器只有绑定、观察、点击和白名单按键，读取请求数据而不执行其中的代码。截图仅在私有目录暂存，OCR消费后删除；报告记录传输版本及源码哈希。
+启动引擎后，在官方工具中导入控制器，调用`pump({root, app, appPath, allowedRoot, milliseconds:45000})`，其中`app`是本轮官方`cua.getApp`返回的对象，`root`为本批私有桥目录，`allowedRoot`为启动者明确指定的私有父目录。控制器0.1.2默认及上限为45秒，每次工具调用留足返回余量。每片段完成后尽快继续，直到`closed.json`或`stopped.json`；不要把“已启动进程”当完成。控制器只有绑定、观察、点击和白名单按键，读取请求数据而不执行其中的代码。截图仅在私有目录暂存，OCR消费后删除；报告记录传输版本及源码哈希。
 
 请求先认领再输入，超时、过期、重复ID、平台拒绝或无法确定输入效果都会停止，不自动重发或切后端。长批次的宏业务预算继续有效，当前对话控制器需要及时接续；它还不是脱离对话的无人值守服务。旧通道必须显式`--backend legacy-cua`，仅供既有兼容诊断。
 
