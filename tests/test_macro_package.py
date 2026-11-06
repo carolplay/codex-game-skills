@@ -125,7 +125,7 @@ class RunnerTests(unittest.TestCase):
         modules = {'window_macro':executor, 'task_batch':batch, 'check_run':checker, 'workflow_versions':version_module}
         with tempfile.TemporaryDirectory() as directory:
             folder = Path(directory); config = folder / 'config.json'; config.write_text('{}')
-            args = ['run_visit.py','--executor-dir',str(folder),'--config',str(config),
+            args = ['run_visit.py','--backend','legacy-cua','--executor-dir',str(folder),'--config',str(config),
                     '--manifest',str(ROOT / 'macros/shift-3.json'),'--profile','main',
                     '--log-root',str(folder / 'runs'),'--lock-file',str(folder / 'lock'),
                     '--guard-script',str(folder / 'guard.py'),'--execute']
@@ -137,3 +137,30 @@ class RunnerTests(unittest.TestCase):
             self.assertEqual(['pinned-fixture'],report['versions']['actions'])
             self.assertIn('locked startup fixture',report['startup_or_batch_error'])
             batch.run_batch.assert_not_called(); executor.CuaMcp.return_value.close.assert_called_once()
+
+    def test_current_turn_denial_releases_lease_without_legacy_fallback(self):
+        import sys
+        from unittest.mock import Mock, patch
+        sys.path.insert(0, str(ROOT / 'scripts'))
+        import run_visit
+        executor = Mock(); batch = Mock(); checker = Mock()
+        checker.check.return_value = {'status':'passed','issues':[]}
+        versions = Mock(); versions.SUITE_VERSION='0.4.18'; versions.suite_identity.return_value={'suite_version':'0.4.18'}
+        transport=Mock(); transport.BRIDGE_VERSION='0.1.1'
+        transport.CurrentTurnBackend.return_value.start.side_effect=RuntimeError('official platform denial fixture')
+        modules={'window_macro':executor,'task_batch':batch,'check_run':checker,'workflow_versions':versions,'current_turn_backend':transport}
+        with tempfile.TemporaryDirectory() as directory:
+            folder=Path(directory);config=folder/'config.json';config.write_text('{}')
+            lease=folder/'lease.json';lease.write_text('{"owner":null}')
+            for name in ['current_turn_backend.py','current_turn_controller.mjs']:(folder/name).write_text('fixture')
+            args=['run_visit.py','--executor-dir',str(folder),'--config',str(config),'--tasks','help',
+                  '--log-root',str(folder/'runs'),'--lock-file',str(folder/'lock'),'--guard-script',str(folder/'guard.py'),
+                  '--bridge-root',str(folder/'bridge'),'--lease-file',str(lease),'--execute']
+            with patch.object(sys,'argv',args),patch.object(run_visit.importlib,'import_module',side_effect=modules.__getitem__):
+                self.assertEqual(1,run_visit.main())
+            self.assertIsNone(pkg.read(lease)['owner']);self.assertEqual('released',pkg.read(lease)['phase'])
+            executor.CuaMcp.assert_not_called();batch.run_batch.assert_not_called()
+            transport.CurrentTurnBackend.return_value.close.assert_called_once()
+            report=pkg.read(next((folder/'runs').glob('*/summary.json')))
+            self.assertEqual('current-turn',report['device_backend']);self.assertFalse(report['locked_execution_accepted'])
+            self.assertIn('official platform denial fixture',report['startup_or_batch_error'])
