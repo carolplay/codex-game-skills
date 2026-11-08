@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start",
-  "action_version": "0.1.37",
+  "action_version": "0.1.40",
   "name": "WOS single NPC rally start component",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "implemented_unverified_revision",
-  "verification_scope": "036: Main search option after click did not OCR decorative auto-join caption. Keep icon selection, following selected NPC/level4 verification and exact target card, remove unrelated footer caption from postclick guard. Live verification pending actual daily use.",
+  "verification_scope": "036: Main search option after click did not OCR decorative auto-join caption. Keep icon selection, following selected NPC/level4 verification and exact target card, remove unrelated footer caption from postclick guard. Live verification pending actual daily use.; Added sampled duplicate-target cancel exit; prevents unknown-modal abort, no retry of dispatch; macro modal exit pending live.; Y dispatch masked by sampled 曙光印记礼包; model close restoredworld,ownrally+25stamina delta verified. Added exact-title fixedclose exit; new macro popup exit replay pending.",
   "business_dependencies": [
     "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
     "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
@@ -158,17 +158,18 @@
             1079
           ]
         ],
-        "template_regions": [
+        "text_regions": [
           {
-            "template": "stamina-zero",
             "bounds": [
               124,
               105,
               170,
               128
             ],
-            "mode": "white-glyph",
-            "min_score": 0.99
+            "pattern": "0",
+            "crop_ocr": true,
+            "prefer_frame_ocr": true,
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1210,6 +1211,72 @@
     },
     "max_exit_steps": 8,
     "exits": [
+      {
+        "name": "close-dawn-imprint-cash-offer",
+        "action": "click",
+        "point": [
+          600,
+          134
+        ],
+        "before": {
+          "all": [
+            "曙光印记礼包",
+            "活动期间剩余"
+          ]
+        },
+        "after": {
+          "all": [
+            "英雄",
+            "背包",
+            "城镇"
+          ],
+          "none": [
+            "曙光印记礼包"
+          ],
+          "page_text_regions": [
+            [
+              100,
+              995,
+              690,
+              1079
+            ]
+          ]
+        },
+        "observe_attempts": 5
+      },
+      {
+        "name": "cancel-duplicate-target-confirm",
+        "action": "click",
+        "point": [
+          270,
+          678
+        ],
+        "before": {
+          "all": [
+            "出征目标相同",
+            "依然要发兵"
+          ],
+          "page_text_regions": [
+            [
+              150,
+              430,
+              650,
+              740
+            ]
+          ]
+        },
+        "after": {
+          "all": [
+            "目标",
+            "剑齿虎"
+          ],
+          "any": [
+            "士兵比例",
+            "暂无可出征士兵"
+          ]
+        },
+        "observe_attempts": 3
+      },
       {
         "name": "exit-owned-resource-card",
         "action": "click",

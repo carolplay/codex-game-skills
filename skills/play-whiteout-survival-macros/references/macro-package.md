@@ -21,6 +21,8 @@ python3 scripts/run_visit.py \
 
 `run_visit.py`执行所选manifest，不自动实现每个日内多次目标。现有本地交错组合可在核心小段之间推进巨兽、免费招募及仓库冷却恢复；组合自身须版本化、冻结源码与配置，记录完整顺序和额外尝试。角色切换及准备交接按[V2-OPERATIONS](../../../docs/V2-OPERATIONS.md)，不需要操作CrossMacro编辑器。
 
+角色策略可以在私有组合中明确选择已登记的utility变体，记录实际action与源码哈希，不能用默认manifest的版本冒充实际回放。`npc_rally_start_level8`要求预先核验8级搜索；`healing_three_hour`用于单独授权的三小时治疗安排，保留预先选定人数，点击前读取时长且不得超过10800秒，不快速全选伤兵。人数失效或时长超过上限时退出并交模型调整；已在预选人数保留的现场分支通过时长检查、实际开始和队列计时验证；它不是自动计算人数的能力，也不改变其他角色的常规治疗。
+
 修订action时递增其版本，重算catalog内容哈希，并同步所有相关manifest的包／组合版本和pin。先做包级校验、执行器schema及相关正负样本检查，再用自然适用角色定向验证；不重复已完成的日内唯一收益来刷通过。
 
 ## 当前对话CUA执行通道
@@ -45,7 +47,7 @@ python3 scripts/run_visit.py \
 | `arena-expedition-claimed-chest` | 新竞技场已开箱仍显示5/5，区别未开箱；领取、零剩余与图案分别核验，绑定`assets/arena-expedition-claimed-chest.png`与`arena-expedition-claimed-chest-variant2.png`两条绝对路径列表，当前阈值只读action。 |
 | `treasure-ready-v3`／`treasure-complete` | 寻宝可派和已完成图案是不同状态；绑定当前配色变体，检查实际整图搜索范围，不以裁区匹配代替完整扫描验收。 |
 | `island-tree-guide`／`island-life-bubble` | 指引和普通产出气泡分开绑定；入口、点击与库存增长分开验收。 |
-| `stamina-zero` | 可选的本机空体力字形模板；缺绑定不假定体力为零或足够，保留本地数字读回。 |
+| `stamina-zero` | 仅兼容历史快照；当前巨兽零值退出匹配完整数字，单个0字形不能区分0与130。 |
 
 其他模板按选中action实际引用部署；缺失模板是配置缺口，不是已领取或未解锁。旧别名仍被历史快照使用时保留兼容，不能在运行中悄悄替换其含义。
 

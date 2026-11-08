@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.201",
-  "package_version": "0.12.201",
+  "macro_version": "0.12.207",
+  "package_version": "0.12.207",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -139,8 +139,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.37",
-          "sha256": "077c8b77f3d9126bbaa66a050d50d9b6ab38a8f7532a6d371273d583457e210f",
+          "action_version": "0.1.40",
+          "sha256": "75d9b832c775a4f3338c42d7a807d890dbe3de2471d62201b937a471939df804",
           "task": "npc_rally_start"
         },
         {
@@ -224,8 +224,8 @@
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.9",
-          "sha256": "5a7d94a50bcbcfbcc5d42e198519b4c9ffe666dd8cd6a634686cee8b1b9cb7a5"
+          "action_version": "0.1.10",
+          "sha256": "1ff72239aada624bf7375d05b284cfe13836a126e530563ab75c308da1487c98"
         },
         {
           "task": "alliance_incentive",
@@ -416,8 +416,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.37",
-          "sha256": "077c8b77f3d9126bbaa66a050d50d9b6ab38a8f7532a6d371273d583457e210f",
+          "action_version": "0.1.40",
+          "sha256": "75d9b832c775a4f3338c42d7a807d890dbe3de2471d62201b937a471939df804",
           "task": "npc_rally_start"
         },
         {
@@ -501,8 +501,8 @@
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.9",
-          "sha256": "5a7d94a50bcbcfbcc5d42e198519b4c9ffe666dd8cd6a634686cee8b1b9cb7a5"
+          "action_version": "0.1.10",
+          "sha256": "1ff72239aada624bf7375d05b284cfe13836a126e530563ab75c308da1487c98"
         },
         {
           "task": "alliance_incentive",
@@ -681,8 +681,8 @@
         },
         {
           "action_id": "wos-npc-rally-start",
-          "action_version": "0.1.37",
-          "sha256": "077c8b77f3d9126bbaa66a050d50d9b6ab38a8f7532a6d371273d583457e210f",
+          "action_version": "0.1.40",
+          "sha256": "75d9b832c775a4f3338c42d7a807d890dbe3de2471d62201b937a471939df804",
           "task": "npc_rally_start"
         },
         {

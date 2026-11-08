@@ -83,6 +83,44 @@ def apply_bulk_lock_layout(flow):
     if '全部执行' in condition.get('all',[]):condition['template_regions']=[{**spec,'present':False}]
  return add_firebeast_layout_waits(add_two_button_claims(flow))
 
+def apply_partial_stamina_policy(flow):
+ """Regenerate the published partial-dispatch and current hero-page behavior."""
+ flow=copy.deepcopy(flow)
+ red={'bounds':[250,1015,315,1045],'min':.02}
+ low={'all':['情报','下次刷新','全部执行'],'none':['前往查看','获得奖励','全部执行中'],'page_text_regions':[[110,970,680,1060]],'red_regions':[red]}
+ legacy_skip=copy.deepcopy(next(s for s in flow['steps'] if s['name']=='legacy-mode')['skip_if'])
+ legacy_skip['all']=['情报','下次刷新','全部执行(']
+ normal=copy.deepcopy(legacy_skip)
+ legacy_skip['red_regions']=[{'bounds':[250,1015,315,1045],'max':.019}]
+ floor={'all':['情报','下次刷新'],'none':['前往查看','获得奖励'],'text_regions':[{'bounds':[590,35,655,82],'pattern':r'^[0-9]$','crop_ocr':True,'min_confidence':.4,'prefer_frame_ocr':True}]}
+ result=[]
+ for step in flow['steps']:
+  name=step['name']
+  if name=='batch-round-anchor':
+   done=step['finish_if'];done.pop('template_regions',None)
+   done['page_text_regions']=[[100,30,690,205],[110,970,680,1060]]
+   done['text_regions'][0]['pattern']=r'全部执行\([0O〇]\)'
+   done['text_regions'][1]['pattern']=r'一键领取\([0O〇]\)'
+   step['partial_completion_note']='Only execute(0)+claim(0) proves ordinary drain; low-stamina-floor is deferred remainder, never all tasks completed.'
+  if name in ('batch-mode','event-firebeast-select'):
+   step.setdefault('skip_if_any',[]).append(copy.deepcopy(low))
+  if name=='batch-mode':
+   step['skip_if_any'].append({'all':['情报','下次刷新','全部执行'],'none':['全部执行(','全部执行中','前往查看','获得奖励','恭喜获得'],'page_text_regions':[[110,970,680,1060]]})
+  if name=='legacy-mode':step['skip_if']=copy.deepcopy(legacy_skip)
+  if name in [f'legacy-cycle-0-{key}-select' for key in ('firebeast','beast','rescue','hero')]:
+   before=copy.deepcopy(floor);before.pop('text_regions')
+   result.append({'name':name+'-stamina-floor','action':'observe','before':before,'skip_if_step_skipped':'legacy-mode','finish_if':copy.deepcopy(floor)})
+   step['skip_if_any']=[copy.deepcopy(legacy_skip)]
+   if name=='legacy-cycle-0-firebeast-select':step['skip_if_any'].append(copy.deepcopy(normal))
+  if name=='legacy-cycle-0-hero-explore':step['after']=['小队设置','战斗']
+  if name=='legacy-cycle-0-hero-fight':step['before']=['小队设置','战斗']
+  result.append(step)
+ flow['steps']=result
+ for step in flow['task_contract']['exits']:
+  if step['name']=='exit-formation':step['before']=['小队设置','战斗']
+  if step['name']=='exit-intel-stamina-supply':step['after']={'any':['情报','士兵比例','城镇'],'none':['获取更多','领主体力','丰盛的招待']}
+ return flow
+
 def build(flows):
  """New game-owned bulk execution; keep the event-only firebeast path."""
  legacy=build_legacy(flows)
@@ -169,7 +207,7 @@ def build(flows):
     expanded.extend([s,follow]);continue
   expanded.append(s)
  steps=expanded
- return apply_bulk_lock_layout({**legacy,'name':'WOS bulk intelligence execution plus event firebeast','steps':steps,'repeat_from':'batch-round-anchor','verification_scope':'0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.','business_dependencies':['City entry and exit; stamina meal uses lighthouse plus before this action','Game execute-all handles ordinary intel; repeat after claim reveals queued tasks','Event firebeast remains separate; no claim that bulk clears event tasks','Explicit zero execute/claim counts, disabled buttons, not executing and no firebeast required for bulk completion','If bulk button absent or visibly locked, use fixed local legacy branches; actual UI determines availability']})
+ return apply_partial_stamina_policy(apply_bulk_lock_layout({**legacy,'name':'WOS bulk intelligence execution plus event firebeast','steps':steps,'repeat_from':'batch-round-anchor','verification_scope':'0.2.3 scoped button OCR and lower execute click avoid cursor hiding zero-count label; prior role bulk9 completed but wait predicate failed before claim. Development bulk9 actual claim; next mature role0.2.1 bulk execution/wait/claim passed, firebeast dispatched but wait checked old claim region and bounded exit restored city.0.2.2 fixes event wait crop, requires explicit zero counts before completion to distinguish insufficient stamina, and retains prior local components only when bulk UI absent. New patch live pending; never agent fallback.','business_dependencies':['City entry and exit; stamina meal uses lighthouse plus before this action','Game execute-all handles ordinary intel; repeat after claim reveals queued tasks','Event firebeast remains separate; no claim that bulk clears event tasks','Explicit zero execute/claim counts, disabled buttons, not executing and no firebeast required for bulk completion','If bulk button absent or visibly locked, use fixed local legacy branches; actual UI determines availability']}))
 
 if __name__=='__main__':
  import argparse

@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.201",
+  "package_version": "0.12.207",
   "executor_min_version": "0.4.17",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -145,11 +145,11 @@
     "crystal": {
       "path": "actions/wos-crystal-ordinary.json",
       "action_id": "wos-crystal-ordinary",
-      "action_version": "0.1.9",
-      "sha256": "5a7d94a50bcbcfbcc5d42e198519b4c9ffe666dd8cd6a634686cee8b1b9cb7a5",
+      "action_version": "0.1.10",
+      "sha256": "1ff72239aada624bf7375d05b284cfe13836a126e530563ab75c308da1487c98",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。; 0.1.6 bounded exit for observed accidentaltravelroot duringoverviewkeysearch. Actualagentbackarrow recoveredcity; newexit macro validationpending. Navigationrootcause remains, no falseclaim ofrefiningfix.",
+      "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。; 0.1.6 bounded exit for observed accidentaltravelroot duringoverviewkeysearch. Actualagentbackarrow recoveredcity; newexit macro validationpending. Navigationrootcause remains, no falseclaim ofrefiningfix. SameframeOCR remaining0/8 reads0日 on two mature roles; accept observedzero-dayglyph variant only in existingremainingcounter region for exhaustion skip; no extra refine click. Live pending.",
       "current_evidence_note": "第三班成熟试验角色A概览勾选隐藏已完成，实验室行不见；旧anchor将这种底部面板误认主城。0.1.2加有界开关及footer排除/退出，下一班验收；不因入口缺失推断已完成。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -478,12 +478,12 @@
     "npc_rally_start": {
       "path": "actions/wos-npc-rally-start.json",
       "action_id": "wos-npc-rally-start",
-      "action_version": "0.1.37",
-      "sha256": "077c8b77f3d9126bbaa66a050d50d9b6ab38a8f7532a6d371273d583457e210f",
+      "action_version": "0.1.40",
+      "sha256": "75d9b832c775a4f3338c42d7a807d890dbe3de2471d62201b937a471939df804",
       "period": "shift",
       "utility": false,
       "include_in_daily": true,
-      "verification_scope": "0.1.37保持类别模板0.90、4级与搜索后剑齿虎详情核验，移除搜索栏易遮挡的冰原文字断言；本轮main实际7次、mature-test实际8次派出及出口通过。旧036在under30实际10次、另一mature-test分类OCR失败未发出，旧失败保留；派出不等于获胜。",
+      "verification_scope": "0.1.37保持类别模板0.90、4级与搜索后剑齿虎详情核验，移除搜索栏易遮挡的冰原文字断言；本轮main实际7次、mature-test实际8次派出及出口通过。旧036在under30实际10次、另一mature-test分类OCR失败未发出，旧失败保留；派出不等于获胜。 Exactzero OCR token replaces substring glyph matching: zero glyph falsely matched 130 in current main secondshift; schema checked, live nextbatch pending.",
       "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger."
     },
     "vip_calendar": {
@@ -549,6 +549,26 @@
       "period": "day",
       "utility": true,
       "verification_scope": "0.1.0 real first-tier claim succeeded; postclaim check failed because green checkmark fraction.175 vs readybutton.842.0.1.1 separates fullbutton .5 from mark/gray <=.49. Three manual solo hits and first-tier macro claim verified; remaining tier and return replay pending. Activity-entry only; city navigation not accepted."
+    },
+    "npc_rally_start_level8": {
+      "path": "actions/wos-npc-rally-start-level8.json",
+      "action_id": "wos-npc-rally-start-level8",
+      "action_version": "0.1.3",
+      "sha256": "12cdeb3460e99f46b7f158bd928cfc61171d923f2f1e589d96aa337710495e1e",
+      "period": "shift",
+      "utility": true,
+      "include_in_daily": true,
+      "verification_scope": "0.1.37保持类别模板0.90、4级与搜索后剑齿虎详情核验，移除搜索栏易遮挡的冰原文字断言；本轮main实际7次、mature-test实际8次派出及出口通过。旧036在under30实际10次、另一mature-test分类OCR失败未发出，旧失败保留；派出不等于获胜。 Exactzero OCR token replaces substring glyph matching: zero glyph falsely matched 130 in current main secondshift; schema checked, live nextbatch pending.",
+      "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger."
+    },
+    "healing_three_hour": {
+      "path": "actions/wos-healing-three-hour.json",
+      "action_id": "wos-healing-three-hour",
+      "action_version": "0.1.0",
+      "sha256": "fcfe6301185c0184d71caf4ac96ea7fae53e9bd537a97ddddb15360457b97a83",
+      "period": "shift",
+      "utility": true,
+      "verification_scope": "0.1.7 reused the same right-side hospital point as enlistment and hit a seasonal cash popup on a mature role. Agent closed it, selected left roof, opened normal healing and started an actual timer; original failure preserved. 0.1.8 uses that left roof and known cash-popup close exit. Next-role full macro replay pending."
     }
   },
   "not_implemented": [
