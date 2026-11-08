@@ -1,6 +1,6 @@
 {
   "action_id": "wos-healing-three-hour",
-  "action_version": "0.1.0",
+  "action_version": "0.1.1",
   "name": "WOS three-hour healing from preserved selection",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "candidate",
-  "verification_scope": "Manual live sample:4837wounded selected,exact03:00:00,actualcitytimer and later4837reduction confirmed; second3hbatch started. Macro retained-selection timing guard pending replay; no automatic quantity setter. Dedicated optional utility,not universal daily healing policy.",
+  "verification_scope": "Specialpreselected3hhealing only; ordinaryheal duration<=10800 and actualqueue readback retained. 0.1.1 camera settle replaces footer背包 OCR (observed消包) with equallylocated联盟, retaining英雄/野外 and footerregion; no input changed. Originalfailure beforehospitalinput preserved. Newbranch livepending.",
   "steps": [
     {
       "name": "01-check-city",
@@ -476,7 +476,7 @@
       "before": {
         "all": [
           "英雄",
-          "背包",
+          "联盟",
           "野外"
         ],
         "none": [
@@ -504,7 +504,7 @@
       "before": {
         "all": [
           "英雄",
-          "背包",
+          "联盟",
           "野外"
         ],
         "none": [

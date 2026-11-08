@@ -1,6 +1,6 @@
 {
   "action_id": "wos-crystal-ordinary",
-  "action_version": "0.1.10",
+  "action_version": "0.1.13",
   "name": "WOS — ordinary fire crystal refinements (up to8)",
   "reference_size": [
     788,
@@ -1333,7 +1333,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[1-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[1-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1350,7 +1351,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[0-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[0-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1368,7 +1370,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1393,7 +1396,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[1-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[1-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1410,7 +1414,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[0-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[0-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1428,7 +1433,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1453,7 +1459,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[1-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[1-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1470,7 +1477,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[0-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[0-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1488,7 +1496,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1513,7 +1522,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[1-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[1-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1530,7 +1540,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[0-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[0-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1548,7 +1559,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1573,7 +1585,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[1-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[1-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1590,7 +1603,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[0-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[0-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1608,7 +1622,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1633,7 +1648,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[1-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[1-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1650,7 +1666,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[0-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[0-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1668,7 +1685,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1693,7 +1711,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[1-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[1-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1710,7 +1729,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[0-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[0-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1728,7 +1748,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1753,7 +1774,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[1-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[1-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1770,7 +1792,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*[0-8](?:\\s*[/／]\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*[0-8](?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -1788,7 +1811,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       }
@@ -1809,7 +1833,8 @@
               525,
               535
             ],
-            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?"
+            "pattern": "今日剩余次数[:：]\\s*0(?:日|\\s*[/／]?\\s*8)?",
+            "min_confidence": 0.3
           }
         ]
       },
@@ -2021,7 +2046,7 @@
       }
     ]
   },
-  "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。; 0.1.6 bounded exit for observed accidentaltravelroot duringoverviewkeysearch. Actualagentbackarrow recoveredcity; newexit macro validationpending. Navigationrootcause remains, no falseclaim ofrefiningfix. 0.1.7 retains bounded8 attempts and zero skip, increases total budget120to240 after main longentry used most budget and only5 actualrefines completed. Agent completedremaining3 separately; next macro livepending.",
+  "verification_scope": "0.1.13 accepts observed circled denominator8 OCR2⑧ (NFKC28) within existing unique regional ordinary counter, as prior zero rule already allowed missing slash. Keeps firstdigit0..8, fixeddenominator8, minconfidence0.3, bothlabtitles andmax8ordinaryattempts. 0.1.12 actualfiveclicks left2; no input replay. Actualruntime structuredOCR regression passes andinvalid9/17/138 reject. Finalremainingtwo livepending.",
   "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。",
   "overview_footer_compatibility": "Stable prefix supports both旧完成任务后是否隐藏 and新版完成任务后隐藏; only page-anchor semantics changed, not game strategy. Nextrole live pending.",
   "execution_timeout_seconds": 240

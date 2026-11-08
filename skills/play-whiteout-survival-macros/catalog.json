@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.207",
+  "package_version": "0.12.212",
   "executor_min_version": "0.4.17",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -145,11 +145,11 @@
     "crystal": {
       "path": "actions/wos-crystal-ordinary.json",
       "action_id": "wos-crystal-ordinary",
-      "action_version": "0.1.10",
-      "sha256": "1ff72239aada624bf7375d05b284cfe13836a126e530563ab75c308da1487c98",
+      "action_version": "0.1.13",
+      "sha256": "02fd2f04b3d6300653a3c8ef873533f1495ae6eb592ef071b73a116e0c4d0142",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.1实际提炼证据保留。0.1.2新增识别日常概览隐藏已完成项目开关，已勾选才关闭；主城锚点排除该面板，有限退出能以固定页脚识别。仅失败截图离线验收，新增点击分支待下一班试验，不在本班重试失败任务。; 0.1.6 bounded exit for observed accidentaltravelroot duringoverviewkeysearch. Actualagentbackarrow recoveredcity; newexit macro validationpending. Navigationrootcause remains, no falseclaim ofrefiningfix. SameframeOCR remaining0/8 reads0日 on two mature roles; accept observedzero-dayglyph variant only in existingremainingcounter region for exhaustion skip; no extra refine click. Live pending.",
+      "verification_scope": "0.1.13 accepts observed circled denominator8 OCR2⑧ (NFKC28) within existing unique regional ordinary counter, as prior zero rule already allowed missing slash. Keeps firstdigit0..8, fixeddenominator8, minconfidence0.3, bothlabtitles andmax8ordinaryattempts. 0.1.12 actualfiveclicks left2; no input replay. Actualruntime structuredOCR regression passes andinvalid9/17/138 reject. Finalremainingtwo livepending.",
       "current_evidence_note": "第三班成熟试验角色A概览勾选隐藏已完成，实验室行不见；旧anchor将这种底部面板误认主城。0.1.2加有界开关及footer排除/退出，下一班验收；不因入口缺失推断已完成。",
       "page_anchor_revision": "主城条件补充同张截图底栏局部OCR，处理低等级城镇全图OCR漏读背包；只增强观察，不增加业务点击。失败截图离线验收，完整各action新版本现场范围另记。"
     },
@@ -526,11 +526,11 @@
     "labyrinth_challenge": {
       "path": "actions/wos-labyrinth-single-challenge.json",
       "action_id": "wos-labyrinth-single-challenge",
-      "action_version": "0.1.6",
-      "sha256": "a1f9e32bd3864692e12b9512ff20dbedddb3eac657620c70657c8b30616030e6",
+      "action_version": "0.1.7",
+      "sha256": "5b8c47ff70bcc46548589fc4bb0a788e5055131021d7da207817381d781be4a0",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.0 full victorious replay and city return passed on a lower-level role. Mature-role underfilled confirmation proceeded to defeat; original missing-footer deviation and agent recovery preserved. 0.1.1 full replay on that mature role verified defeat-specific close, zone/root/city return, then recruit/daily continuation. Victory branch in0.1.1 and other calendar cave layouts await fresh live coverage; one challenge attempt satisfies daily challenge counter even on defeat."
+      "verification_scope": "0.1.7 adds active大地之心 branch, separately from hero/cave/forge/research. ActualmodelUI: rootlabel+plainremainingtimer, three-squad部队配置, onekeyconfirmation, PvEbattle, defeat5→4, blankdismiss, domain/root/cityexit. Onechallengeperinvocation; no proof of allstageprogress or allfailures exhausted. Live macrobranch pending nextapplicablerole. Existinghero andotherdomainpaths unchanged; rootnot-yet-open label skipped."
     },
     "intel_expert": {
       "path": "actions/wos-intel-expert.json",
@@ -564,11 +564,11 @@
     "healing_three_hour": {
       "path": "actions/wos-healing-three-hour.json",
       "action_id": "wos-healing-three-hour",
-      "action_version": "0.1.0",
-      "sha256": "fcfe6301185c0184d71caf4ac96ea7fae53e9bd537a97ddddb15360457b97a83",
+      "action_version": "0.1.1",
+      "sha256": "bcbe0b1bc5bbaffc1b8b98b1aaa3337afae6453ce8974f53e8518b79f41f0889",
       "period": "shift",
       "utility": true,
-      "verification_scope": "0.1.7 reused the same right-side hospital point as enlistment and hit a seasonal cash popup on a mature role. Agent closed it, selected left roof, opened normal healing and started an actual timer; original failure preserved. 0.1.8 uses that left roof and known cash-popup close exit. Next-role full macro replay pending."
+      "verification_scope": "Specialpreselected3hhealing only; ordinaryheal duration<=10800 and actualqueue readback retained. 0.1.1 camera settle replaces footer背包 OCR (observed消包) with equallylocated联盟, retaining英雄/野外 and footerregion; no input changed. Originalfailure beforehospitalinput preserved. Newbranch livepending."
     }
   },
   "not_implemented": [

@@ -1,7 +1,7 @@
 {
   "macro_id": "wos-shift-3",
-  "macro_version": "0.12.207",
-  "package_version": "0.12.207",
+  "macro_version": "0.12.212",
+  "package_version": "0.12.212",
   "refresh_utc_hour": 16,
   "dependencies": {
     "daily": "last: claims newly completed tasks from earlier actions",
@@ -11,7 +11,7 @@
     "academy": "Current live free Trek Supplies at UTC08/20, ten each. Settle completed travel before claiming supply; then start idle travel with available stock. A running trip is closed, never ended early.",
     "enlistment": "Repaired hospital entry moved to development tail, before daily; no dependency on research/construction upgrades. Partial batch recovery continues untouched tasks rather than repeating earlier components.",
     "travel_idle": "When all three are eligible, travel_idle_claim → academy → travel_idle. Supply collection precedes a fresh start; neither a running queue nor a zero-stock skip proves completed trips.",
-    "labyrinth_challenge": "Daily challenge is independent of raids. Select one actually visible known domain label and verify its battle page; never assume Cave of Monsters is open all week. Known labels Cave, Earthlab, Forge; unsupported domains remain explicit coverage gaps.",
+    "labyrinth_challenge": "One actualchallenge in visible active domain; GaiaHeart uses its own three-squad branch. Closed labels skipped; unsupportedzones explicitgaps. Raids andstageprogress remain separate.",
     "intel_expert": "Activate available Agnes extra tasks before intel_cycle; skill activation is separate from dispatch and reward."
   },
   "profiles": {
@@ -224,8 +224,8 @@
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.10",
-          "sha256": "1ff72239aada624bf7375d05b284cfe13836a126e530563ab75c308da1487c98"
+          "action_version": "0.1.13",
+          "sha256": "02fd2f04b3d6300653a3c8ef873533f1495ae6eb592ef071b73a116e0c4d0142"
         },
         {
           "task": "alliance_incentive",
@@ -248,8 +248,8 @@
         {
           "task": "labyrinth_challenge",
           "action_id": "wos-labyrinth-single-challenge",
-          "action_version": "0.1.6",
-          "sha256": "a1f9e32bd3864692e12b9512ff20dbedddb3eac657620c70657c8b30616030e6"
+          "action_version": "0.1.7",
+          "sha256": "5b8c47ff70bcc46548589fc4bb0a788e5055131021d7da207817381d781be4a0"
         },
         {
           "task": "enlistment",
@@ -501,8 +501,8 @@
         {
           "task": "crystal",
           "action_id": "wos-crystal-ordinary",
-          "action_version": "0.1.10",
-          "sha256": "1ff72239aada624bf7375d05b284cfe13836a126e530563ab75c308da1487c98"
+          "action_version": "0.1.13",
+          "sha256": "02fd2f04b3d6300653a3c8ef873533f1495ae6eb592ef071b73a116e0c4d0142"
         },
         {
           "task": "alliance_incentive",
@@ -525,8 +525,8 @@
         {
           "task": "labyrinth_challenge",
           "action_id": "wos-labyrinth-single-challenge",
-          "action_version": "0.1.6",
-          "sha256": "a1f9e32bd3864692e12b9512ff20dbedddb3eac657620c70657c8b30616030e6"
+          "action_version": "0.1.7",
+          "sha256": "5b8c47ff70bcc46548589fc4bb0a788e5055131021d7da207817381d781be4a0"
         },
         {
           "task": "enlistment",
@@ -772,8 +772,8 @@
         {
           "task": "labyrinth_challenge",
           "action_id": "wos-labyrinth-single-challenge",
-          "action_version": "0.1.6",
-          "sha256": "a1f9e32bd3864692e12b9512ff20dbedddb3eac657620c70657c8b30616030e6"
+          "action_version": "0.1.7",
+          "sha256": "5b8c47ff70bcc46548589fc4bb0a788e5055131021d7da207817381d781be4a0"
         },
         {
           "task": "enlistment",
