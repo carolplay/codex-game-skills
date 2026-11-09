@@ -1,6 +1,6 @@
 {
   "action_id": "wos-vip-activate-inventory",
-  "action_version": "0.1.5",
+  "action_version": "0.1.6",
   "name": "WOS VIP duration: owned legacy card or sampled one-day game-diamond fallback",
   "reference_size": [
     788,
@@ -403,22 +403,8 @@
           "max_config": "max_vip_activation_diamonds"
         }
       ],
-      "after": [
-        "购买确认",
-        "钻石"
-      ],
-      "observe_attempts": 5
-    },
-    {
-      "name": "confirm-one-day-1000-game-diamonds",
-      "action": "click",
-      "point": [
-        394,
-        677
-      ],
-      "before": {
+      "after": {
         "all": [
-          "购买确认",
           "钻石"
         ],
         "text_regions": [
@@ -431,7 +417,8 @@
             ],
             "pattern": "您是否要花费1[,.，]?000钻石[?？]?",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           },
           {
             "bounds": [
@@ -442,7 +429,48 @@
             ],
             "pattern": "1[,.，]?000",
             "crop_ocr": true,
-            "min_confidence": 0.3
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          }
+        ]
+      },
+      "observe_attempts": 5
+    },
+    {
+      "name": "confirm-one-day-1000-game-diamonds",
+      "action": "click",
+      "point": [
+        394,
+        677
+      ],
+      "before": {
+        "all": [
+          "钻石"
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              250,
+              485,
+              555,
+              545
+            ],
+            "pattern": "您是否要花费1[,.，]?000钻石[?？]?",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
+          },
+          {
+            "bounds": [
+              365,
+              650,
+              455,
+              705
+            ],
+            "pattern": "1[,.，]?000",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "prefer_frame_ocr": true
           }
         ]
       },
@@ -655,10 +683,37 @@
           622,
           395
         ],
-        "before": [
-          "购买确认",
-          "钻石"
-        ],
+        "before": {
+          "all": [
+            "钻石"
+          ],
+          "text_regions": [
+            {
+              "bounds": [
+                250,
+                485,
+                555,
+                545
+              ],
+              "pattern": "您是否要花费1[,.，]?000钻石[?？]?",
+              "crop_ocr": true,
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
+            },
+            {
+              "bounds": [
+                365,
+                650,
+                455,
+                705
+              ],
+              "pattern": "1[,.，]?000",
+              "crop_ocr": true,
+              "min_confidence": 0.3,
+              "prefer_frame_ocr": true
+            }
+          ]
+        },
         "after": [
           "获取更多",
           "剩余VIP时间"
@@ -778,5 +833,5 @@
     "One click only while inactive; active countdown skips. Daily gift is a separate vip action after activation.",
     "Known legacy owned24h row first; sampled monthcard-layout24h1000 virtual-diamond fallback only whileinactive, explicit local ceiling1000 and exact confirmation. Realpayments are not implemented. Other layouts defer."
   ],
-  "verification_scope": "CurrentmatureVIP8inactiveentryanddurationmenu observedlive at717x1055. FreegiftdecorativecaptionOCRblockedolderactivationbeforeinput; pageidentitynowVIP/currentlevelplusbranchguards. Duration,1000virtualdiamondbudget,confirmationandtimerverification unchanged. Actualrevisedactivationpending."
+  "verification_scope": "0.1.6 handles confirmation title omitted by full-frameOCR: exact1000diamondquestion inregionalbody and1000button arebothrequired, withsame1000localceiling, pre-VIPidentity/inactive24hrow andpostactivationtimer. Samegate permitsboundedcancelrecovery. OriginalLow0.1.5failedbeforeconfirmationinput; canceledmodelnoconsumption. ActualruntimeoriginalstructuredOCRpositive+2000/gold/10000negativespassed; newlivebranchpending."
 }

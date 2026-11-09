@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.212",
+  "package_version": "0.12.213",
   "executor_min_version": "0.4.17",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -508,11 +508,11 @@
     "vip_activate_inventory": {
       "path": "actions/wos-vip-activate-inventory.json",
       "action_id": "wos-vip-activate-inventory",
-      "action_version": "0.1.5",
-      "sha256": "5e0e94e44a933bd39acc2f89f747775e26d7286d44f524216fbae4452af40243",
+      "action_version": "0.1.6",
+      "sha256": "4307f4c01a6c74a03c69fe139063738cb0dbc34ba978a1e47d36f6b4980b5b75",
       "period": "on-demand",
       "utility": true,
-      "verification_scope": "0.1.5 live mature profile: inactive VIP, no owned24h card, authorized virtual-currency 1day activation and following free VIP gift passed. Decorative caption excluded from page anchors; price/budget/confirmation/timer guards retained. Other states not inferred."
+      "verification_scope": "0.1.6 handles confirmation title omitted by full-frameOCR: exact1000diamondquestion inregionalbody and1000button arebothrequired, withsame1000localceiling, pre-VIPidentity/inactive24hrow andpostactivationtimer. Samegate permitsboundedcancelrecovery. OriginalLow0.1.5failedbeforeconfirmationinput; canceledmodelnoconsumption. ActualruntimeoriginalstructuredOCRpositive+2000/gold/10000negativespassed; newlivebranchpending."
     },
     "stamina_inventory_refill": {
       "path": "actions/wos-stamina-inventory-refill.json",
