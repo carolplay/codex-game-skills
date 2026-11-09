@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.213",
+  "package_version": "0.12.214",
   "executor_min_version": "0.4.17",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -224,11 +224,11 @@
     "store_free": {
       "path": "actions/wos-store-free.json",
       "action_id": "wos-store-free",
-      "action_version": "0.1.26",
-      "sha256": "c777e7d044cc1094b39e0a056ffb12f7ee3d1dcc0bdd10a37c75653c06ab8e70",
+      "action_version": "0.1.27",
+      "sha256": "20a23f85ebf45f80b010dbc376159e4d843ad7a33800942c70ffac6bf0326fc0",
       "period": "day",
       "utility": false,
-      "verification_scope": "0.1.15 adds observed technology-storm paid-pack exit only. Normal back to city manually verified; unknown paid-page navigation/free-tab coverage not fixed. Existing free-claim path unchanged. New exit live pending. 0.1.16: savedmaturestore screenshotshows武备自选 and actual可领取 atcalibratedupperchest; acceptthis observedtitle alongsideknownones, preserveclaimlabel/cooldown/rewardguard andfiniteexit. Candidateoffline only; no newclaimcredit. Mainnew冰原旅者 paidpage observed; normalbackcity agentpassed; addonlyknownexit, notfreeclaimeligibility. 0.1.17 adds actual dailydeal free-box branch at left: explicit free label, reward, samebox cooldown, city. Standard store branch unchanged. Mainagent100diamonds actualclaimed, oldmacrofailure retained. Savedfree/cooldown/city cases validated; newmacro claim pending, cooldown livepending.;0.1.21: actualmainshoptitle奇货自选 usesexistingtopright可领取chest; addexacttitletoexistingknownshopconditions/exit andtitlepattern, no newcoordinates orcashinteraction. Savedframeclaimpreconditionpassed; livepending.; 0.1.22 adds separate Frost Supply Station left freechest branch, observed500diamonds and6daycooldown byagent. Saved positive claim/cooldown frame conditions and schema pass; new macro replay pending. Legacy store branches retained. This event/weekly cooldown is not claimed to be a daily freebox. 0.1.24: On stored secondshift failure, 每日特惠 tab is visible at upperrow while selected paid promotion is outside known rotating titles. Select that exact visible tab before existing DailyDeal free/cooldown logic. Existing title/free-button/timer assertions and city exit remain. Offline realframe resolves unique tab; city negative rejected; live pending. 0.1.24 experimental local replay failed on a known rotating store without the DailyDeal tab: unsupported when was ignored by old executor. 0.1.25 uses supported skip_if_any to preserve that existing branch and selects DailyDeal only when its bounded tab label is present. Executor0.4.14 rejects unsupported when before backend observation/input. Original149 failure retained; nextrole live pending. 0.1.26: A real selected DailyDeal page contained both 储值中心 header and an explicitly免费chest. Legacygeneric-store skipmatchedheader andincorrectlyskippedthefree/cooldown/return branch. Thosefourgeneric skips nowexclude每日特惠; selectedtabheading andfree/cooldownguards remain. OriginalR150failure retained. Nextrole livepending."
+      "verification_scope": "Current free-store branches include rotating daily chests, DailyDeal and Frost Supply Station weekly/event free chest. 0.1.27 handles observed first-entry Frost explanation overlay before probing the chest and in bounded recovery. Prior third-shift failure preserved; model claimed 500 diamonds and verified six-day cooldown plus city return. New macro overlay dismissal pending next applicable role; model reward is not macro pass."
     },
     "arena": {
       "path": "actions/wos-arena.json",
