@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start-level8",
-  "action_version": "0.1.4",
+  "action_version": "0.1.8",
   "name": "WOS level8 NPC rally start",
   "reference_size": [
     788,
@@ -846,20 +846,9 @@
           [
             225,
             225,
-            565,
-            470
+            660,
+            540
           ]
-        ],
-        "red_regions": [
-          {
-            "bounds": [
-              310,
-              410,
-              480,
-              450
-            ],
-            "min": 0.6
-          }
         ]
       }
     },
@@ -880,8 +869,8 @@
           [
             225,
             225,
-            565,
-            470
+            660,
+            540
           ]
         ],
         "red_regions": [
@@ -896,12 +885,111 @@
           }
         ]
       },
+      "observe_attempts": 8,
+      "after": {
+        "all": [
+          "发起集结",
+          "3分钟"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            450,
+            560,
+            650
+          ]
+        ]
+      },
       "point": [
         395,
         430
       ],
+      "skip_if": {
+        "red_regions": [
+          {
+            "bounds": [
+              370,
+              460,
+              540,
+              495
+            ],
+            "min": 0.6
+          }
+        ],
+        "all": [
+          "等级",
+          "深渊龙龟",
+          "推荐实力"
+        ],
+        "page_text_regions": [
+          [
+            225,
+            225,
+            660,
+            540
+          ]
+        ]
+      }
+    },
+    {
+      "name": "open-rally-time-shifted-card",
+      "action": "click",
+      "before": {
+        "all": [
+          "等级",
+          "深渊龙龟",
+          "推荐实力"
+        ],
+        "none": [
+          "侦察",
+          "援助"
+        ],
+        "page_text_regions": [
+          [
+            225,
+            225,
+            660,
+            540
+          ]
+        ],
+        "red_regions": [
+          {
+            "bounds": [
+              370,
+              460,
+              540,
+              495
+            ],
+            "min": 0.6
+          }
+        ]
+      },
       "observe_attempts": 8,
       "after": {
+        "all": [
+          "发起集结",
+          "3分钟"
+        ],
+        "none": [
+          "出征"
+        ],
+        "page_text_regions": [
+          [
+            170,
+            450,
+            560,
+            650
+          ]
+        ]
+      },
+      "point": [
+        455,
+        476
+      ],
+      "skip_if": {
         "all": [
           "发起集结",
           "3分钟"

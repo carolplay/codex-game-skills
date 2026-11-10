@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.215",
+  "package_version": "0.12.220",
   "executor_min_version": "0.4.17",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -553,12 +553,12 @@
     "npc_rally_start_level8": {
       "path": "actions/wos-npc-rally-start-level8.json",
       "action_id": "wos-npc-rally-start-level8",
-      "action_version": "0.1.4",
-      "sha256": "94f5314faafca3687c6d90ba0a92eaa45defa8ef2ee859e509ebbc9d0ce95539",
+      "action_version": "0.1.8",
+      "sha256": "b948e0a8f4db57d8bf17a55856471343da28ad9f2e252715999ddd74289a5626",
       "period": "shift",
       "utility": true,
       "include_in_daily": true,
-      "verification_scope": "Level8 detail cost25 and own-rally dispatch already validated on mature roles; currentpatch handles sampled same-target confirmation. First-shift0.1.3 clicked dispatch then encountered explicit other-army same-target confirmation, no stamina debit.0.1.4 conditionally confirms only that exact message, then retains original rally-active check and separate stamina/report accounting. New confirmation branch live pending; original failure remains recorded.",
+      "verification_scope": "0.1.8: six actual stamina-debit dispatches in targeted replay; standard-card color branch passed. Shifted-card color branch remains pending. One duplicate-target confirm precondition raced with active-rally state; original failure retained, no blind confirm replay. Own victory evidence is separate.0.1.5-7 tiny-label OCR failures retained. Exact NPC title, two sampled red-button layouts, full dialog and active-march checks retained.",
       "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger."
     },
     "healing_three_hour": {
