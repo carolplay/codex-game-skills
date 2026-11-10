@@ -1,6 +1,6 @@
 {
   "action_id": "wos-npc-rally-start-level8",
-  "action_version": "0.1.3",
+  "action_version": "0.1.4",
   "name": "WOS level8 NPC rally start",
   "reference_size": [
     788,
@@ -8,7 +8,7 @@
   ],
   "execution_timeout_seconds": 240,
   "status": "implemented_unverified_revision",
-  "verification_scope": "Level8 search and NPC card sampled on mature role: 深渊龙龟,25stamina. Dispatch replay pending. Separate utility variant selected by private preferred_npc_rally_level8; level4 action unchanged.; Duplicate-target modal sampled; model cancellation returned deployment then world/city. Added same explicit bounded exit; macro modal branch pending live. Level8 prior0.1.0 actual dispatch+city exit passed two mature roles; victories not yet audited.; Y dispatch masked by sampled 曙光印记礼包; model close restoredworld,ownrally+25stamina delta verified. Added exact-title fixedclose exit; new macro popup exit replay pending.",
+  "verification_scope": "Level8 detail cost25 and own-rally dispatch already validated on mature roles; currentpatch handles sampled same-target confirmation. First-shift0.1.3 clicked dispatch then encountered explicit other-army same-target confirmation, no stamina debit.0.1.4 conditionally confirms only that exact message, then retains original rally-active check and separate stamina/report accounting. New confirmation branch live pending; original failure remains recorded.",
   "business_dependencies": [
     "Only sampled level4 selection; explicit4级 label and NPC recommendation card required; other levels require normalization before replay.",
     "Full march slots defer the attempt; autojoin/member queues do not prove an own launch.",
@@ -1090,6 +1090,60 @@
         }
       ],
       "after": {
+        "any": [
+          "城镇",
+          "有其他队伍与您的出征目标相同"
+        ],
+        "none": [
+          "暂无空闲队列",
+          "体力不足",
+          "兵力不足",
+          "无法发起"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            995,
+            690,
+            1079
+          ],
+          [
+            150,
+            460,
+            650,
+            580
+          ]
+        ]
+      }
+    },
+    {
+      "name": "confirm-same-target-rally",
+      "action": "click",
+      "point": [
+        518,
+        676
+      ],
+      "before": {
+        "all": [
+          "确认",
+          "有其他队伍与您的出征目标相同",
+          "取消",
+          "确定"
+        ],
+        "none": [
+          "购买",
+          "钻石不足"
+        ],
+        "page_text_regions": [
+          [
+            150,
+            360,
+            650,
+            730
+          ]
+        ]
+      },
+      "after": {
         "all": [
           "行军",
           "英雄",
@@ -1130,7 +1184,50 @@
             "max_matches": 6
           }
         ]
-      }
+      },
+      "skip_if": {
+        "all": [
+          "行军",
+          "英雄",
+          "背包",
+          "城镇"
+        ],
+        "none": [
+          "暂无空闲队列",
+          "体力不足",
+          "兵力不足",
+          "无法发起"
+        ],
+        "page_text_regions": [
+          [
+            100,
+            180,
+            310,
+            520
+          ],
+          [
+            100,
+            995,
+            690,
+            1079
+          ]
+        ],
+        "text_regions": [
+          {
+            "bounds": [
+              145,
+              235,
+              225,
+              560
+            ],
+            "pattern": "集[结結]中.{0,6}",
+            "crop_ocr": true,
+            "min_confidence": 0.3,
+            "max_matches": 6
+          }
+        ]
+      },
+      "observe_attempts": 6
     },
     {
       "name": "verify-rally-active",

@@ -1,5 +1,5 @@
 {
-  "package_version": "0.12.214",
+  "package_version": "0.12.215",
   "executor_min_version": "0.4.17",
   "source_policy": "These files are authoritative. Action embedded verification labels describe their original recording; current evidence notes and visit-plan bound acceptance. Private identities and budgets stay outside Git.",
   "actions": {
@@ -553,12 +553,12 @@
     "npc_rally_start_level8": {
       "path": "actions/wos-npc-rally-start-level8.json",
       "action_id": "wos-npc-rally-start-level8",
-      "action_version": "0.1.3",
-      "sha256": "12cdeb3460e99f46b7f158bd928cfc61171d923f2f1e589d96aa337710495e1e",
+      "action_version": "0.1.4",
+      "sha256": "94f5314faafca3687c6d90ba0a92eaa45defa8ef2ee859e509ebbc9d0ce95539",
       "period": "shift",
       "utility": true,
       "include_in_daily": true,
-      "verification_scope": "0.1.37保持类别模板0.90、4级与搜索后剑齿虎详情核验，移除搜索栏易遮挡的冰原文字断言；本轮main实际7次、mature-test实际8次派出及出口通过。旧036在under30实际10次、另一mature-test分类OCR失败未发出，旧失败保留；派出不等于获胜。 Exactzero OCR token replaces substring glyph matching: zero glyph falsely matched 130 in current main secondshift; schema checked, live nextbatch pending.",
+      "verification_scope": "Level8 detail cost25 and own-rally dispatch already validated on mature roles; currentpatch handles sampled same-target confirmation. First-shift0.1.3 clicked dispatch then encountered explicit other-army same-target confirmation, no stamina debit.0.1.4 conditionally confirms only that exact message, then retains original rally-active check and separate stamina/report accounting. New confirmation branch live pending; original failure remains recorded.",
       "quota_policy": "Daily UTC target10 verified own-initiator victories. A single passed start component (including busy/low-stamina skip) is not daily completion and must not suppress later-shift attempts. Read local evidence ledger."
     },
     "healing_three_hour": {
